@@ -17,7 +17,7 @@
 	int iLocal_15 = 0;
 	var uLocal_16 = 0;
 	var uLocal_17 = 0;
-	char* sLocal_18 = NULL;
+	char* sLocal_18 = 0;
 	float fLocal_19 = 0f;
 	var uLocal_20 = 0;
 	var uLocal_21 = 0;
@@ -59,16 +59,16 @@
 	var uLocal_57 = 0;
 	var uLocal_58 = 0;
 	var uLocal_59 = 0;
-	struct<3> Local_60 = { 0, 0, 0 } ;
-	struct<3> Local_61 = { 0, 0, 0 } ;
-	int iLocal_62 = 0;
+	var uLocal_60 = 0;
+	var uLocal_61 = 0;
+	var uLocal_62 = 0;
 	var uLocal_63 = 0;
 	var uLocal_64 = 0;
-	var uLocal_65 = 10;
-	var uLocal_66 = 0;
+	var uLocal_65 = 0;
+	int iLocal_66 = 0;
 	var uLocal_67 = 0;
 	var uLocal_68 = 0;
-	var uLocal_69 = 0;
+	var uLocal_69 = 10;
 	var uLocal_70 = 0;
 	var uLocal_71 = 0;
 	var uLocal_72 = 0;
@@ -106,13 +106,13 @@
 	var uLocal_104 = 0;
 	var uLocal_105 = 0;
 	var uLocal_106 = 0;
-	int iLocal_107 = 0;
-	int iLocal_108 = 0;
-	var uLocal_109 = 16;
+	var uLocal_107 = 0;
+	var uLocal_108 = 0;
+	var uLocal_109 = 0;
 	var uLocal_110 = 0;
-	var uLocal_111 = 0;
-	var uLocal_112 = 0;
-	var uLocal_113 = 0;
+	int iLocal_111 = 0;
+	int iLocal_112 = 0;
+	var uLocal_113 = 16;
 	var uLocal_114 = 0;
 	var uLocal_115 = 0;
 	var uLocal_116 = 0;
@@ -273,54 +273,54 @@
 	var uLocal_271 = 0;
 	var uLocal_272 = 0;
 	var uLocal_273 = 0;
-	int iLocal_274 = 0;
-	int iLocal_275[2] = { 0, 0 };
-	int iLocal_276[2] = { 0, 0 };
-	int iLocal_277[2] = { 0, 0 };
+	var uLocal_274 = 0;
+	var uLocal_275 = 0;
+	var uLocal_276 = 0;
+	var uLocal_277 = 0;
 	int iLocal_278 = 0;
-	var uLocal_279[2] = { 0, 0 };
-	int iLocal_280[2] = { 0, 0 };
-	int iLocal_281[2] = { 0, 0 };
-	struct<3> Local_282 = { 0, 0, 0 } ;
-	float fLocal_283 = 0f;
-	struct<3> Local_284[2];
-	float fLocal_285[2] = { 0f, 0f };
-	struct<3> Local_286[1];
-	struct<3> Local_287[1];
-	float fLocal_288[1] = { 0f };
-	char* sLocal_289 = NULL;
+	int iLocal_279 = 2;
+	var uLocal_280 = 0;
+	var uLocal_281 = 0;
+	var uLocal_282 = 2;
+	var uLocal_283 = 0;
+	var uLocal_284 = 0;
+	int iLocal_285 = 2;
+	var uLocal_286 = 0;
+	var uLocal_287 = 0;
+	Hash hLocal_288 = 0;
+	var uLocal_289 = 2;
 	var uLocal_290 = 0;
 	var uLocal_291 = 0;
-	var uLocal_292 = 0;
+	var uLocal_292 = 2;
 	var uLocal_293 = 0;
 	var uLocal_294 = 0;
-	var uLocal_295 = 0;
+	var uLocal_295 = 2;
 	var uLocal_296 = 0;
 	var uLocal_297 = 0;
 	var uLocal_298 = 0;
 	var uLocal_299 = 0;
 	var uLocal_300 = 0;
-	var uLocal_301 = 0;
-	var uLocal_302 = 0;
+	float fLocal_301 = 0f;
+	var uLocal_302 = 2;
 	var uLocal_303 = 0;
 	var uLocal_304 = 0;
-	char[] cLocal_305[8] = 0;
+	var uLocal_305 = 0;
 	var uLocal_306 = 0;
 	var uLocal_307 = 0;
 	var uLocal_308 = 0;
-	var uLocal_309 = 0;
+	var uLocal_309 = 2;
 	var uLocal_310 = 0;
 	var uLocal_311 = 0;
-	var uLocal_312 = 0;
+	var uLocal_312 = 1;
 	var uLocal_313 = 0;
 	var uLocal_314 = 0;
 	var uLocal_315 = 0;
-	var uLocal_316 = 0;
+	var uLocal_316 = 1;
 	var uLocal_317 = 0;
 	var uLocal_318 = 0;
 	var uLocal_319 = 0;
-	var uLocal_320 = 0;
-	char[] cLocal_321[8] = 0;
+	var uLocal_320 = 1;
+	var uLocal_321 = 0;
 	var uLocal_322 = 0;
 	var uLocal_323 = 0;
 	var uLocal_324 = 0;
@@ -336,7 +336,7 @@
 	var uLocal_334 = 0;
 	var uLocal_335 = 0;
 	var uLocal_336 = 0;
-	char cLocal_337[64] = "";
+	var uLocal_337 = 0;
 	var uLocal_338 = 0;
 	var uLocal_339 = 0;
 	var uLocal_340 = 0;
@@ -345,24 +345,165 @@
 	var uLocal_343 = 0;
 	var uLocal_344 = 0;
 	var uLocal_345 = 0;
-	struct<16> Local_346[2];
-	struct<16> Local_347[2];
-	struct<16> Local_348[2];
-	int iLocal_349[2] = { 0, 0 };
-	struct<2> Local_350 = { 0, 0 } ;
+	var uLocal_346 = 0;
+	var uLocal_347 = 0;
+	var uLocal_348 = 0;
+	var uLocal_349 = 0;
+	var uLocal_350 = 0;
 	var uLocal_351 = 0;
 	var uLocal_352 = 0;
-	struct<2> Local_353 = { 0, 0 } ;
+	var uLocal_353 = 0;
 	var uLocal_354 = 0;
 	var uLocal_355 = 0;
-	struct<2> Local_356 = { 0, 0 } ;
+	var uLocal_356 = 0;
 	var uLocal_357 = 0;
 	var uLocal_358 = 0;
-	float fLocal_359 = 0f;
-	int iLocal_360 = 0;
+	var uLocal_359 = 0;
+	var uLocal_360 = 0;
+	var uLocal_361 = 0;
+	var uLocal_362 = 0;
+	var uLocal_363 = 0;
+	var uLocal_364 = 0;
+	var uLocal_365 = 0;
+	var uLocal_366 = 0;
+	var uLocal_367 = 0;
+	var uLocal_368 = 0;
+	var uLocal_369 = 0;
+	var uLocal_370 = 0;
+	var uLocal_371 = 0;
+	var uLocal_372 = 0;
+	var uLocal_373 = 0;
+	var uLocal_374 = 0;
+	var uLocal_375 = 0;
+	var uLocal_376 = 0;
+	var uLocal_377 = 0;
+	var uLocal_378 = 0;
+	var uLocal_379 = 0;
+	var uLocal_380 = 0;
+	var uLocal_381 = 0;
+	var uLocal_382 = 0;
+	var uLocal_383 = 0;
+	var uLocal_384 = 0;
+	var uLocal_385 = 0;
+	var uLocal_386 = 2;
+	var uLocal_387 = 0;
+	var uLocal_388 = 0;
+	var uLocal_389 = 0;
+	var uLocal_390 = 0;
+	var uLocal_391 = 0;
+	var uLocal_392 = 0;
+	var uLocal_393 = 0;
+	var uLocal_394 = 0;
+	var uLocal_395 = 0;
+	var uLocal_396 = 0;
+	var uLocal_397 = 0;
+	var uLocal_398 = 0;
+	var uLocal_399 = 0;
+	var uLocal_400 = 0;
+	var uLocal_401 = 0;
+	var uLocal_402 = 0;
+	var uLocal_403 = 0;
+	var uLocal_404 = 0;
+	var uLocal_405 = 0;
+	var uLocal_406 = 0;
+	var uLocal_407 = 0;
+	var uLocal_408 = 0;
+	var uLocal_409 = 0;
+	var uLocal_410 = 0;
+	var uLocal_411 = 0;
+	var uLocal_412 = 0;
+	var uLocal_413 = 0;
+	var uLocal_414 = 0;
+	var uLocal_415 = 0;
+	var uLocal_416 = 0;
+	var uLocal_417 = 0;
+	var uLocal_418 = 0;
+	var uLocal_419 = 2;
+	var uLocal_420 = 0;
+	var uLocal_421 = 0;
+	var uLocal_422 = 0;
+	var uLocal_423 = 0;
+	var uLocal_424 = 0;
+	var uLocal_425 = 0;
+	var uLocal_426 = 0;
+	var uLocal_427 = 0;
+	var uLocal_428 = 0;
+	var uLocal_429 = 0;
+	var uLocal_430 = 0;
+	var uLocal_431 = 0;
+	var uLocal_432 = 0;
+	var uLocal_433 = 0;
+	var uLocal_434 = 0;
+	var uLocal_435 = 0;
+	var uLocal_436 = 0;
+	var uLocal_437 = 0;
+	var uLocal_438 = 0;
+	var uLocal_439 = 0;
+	var uLocal_440 = 0;
+	var uLocal_441 = 0;
+	var uLocal_442 = 0;
+	var uLocal_443 = 0;
+	var uLocal_444 = 0;
+	var uLocal_445 = 0;
+	var uLocal_446 = 0;
+	var uLocal_447 = 0;
+	var uLocal_448 = 0;
+	var uLocal_449 = 0;
+	var uLocal_450 = 0;
+	var uLocal_451 = 0;
+	var uLocal_452 = 2;
+	var uLocal_453 = 0;
+	var uLocal_454 = 0;
+	var uLocal_455 = 0;
+	var uLocal_456 = 0;
+	var uLocal_457 = 0;
+	var uLocal_458 = 0;
+	var uLocal_459 = 0;
+	var uLocal_460 = 0;
+	var uLocal_461 = 0;
+	var uLocal_462 = 0;
+	var uLocal_463 = 0;
+	var uLocal_464 = 0;
+	var uLocal_465 = 0;
+	var uLocal_466 = 0;
+	var uLocal_467 = 0;
+	var uLocal_468 = 0;
+	var uLocal_469 = 0;
+	var uLocal_470 = 0;
+	var uLocal_471 = 0;
+	var uLocal_472 = 0;
+	var uLocal_473 = 0;
+	var uLocal_474 = 0;
+	var uLocal_475 = 0;
+	var uLocal_476 = 0;
+	var uLocal_477 = 0;
+	var uLocal_478 = 0;
+	var uLocal_479 = 0;
+	var uLocal_480 = 0;
+	var uLocal_481 = 0;
+	var uLocal_482 = 0;
+	var uLocal_483 = 0;
+	var uLocal_484 = 0;
+	var uLocal_485 = 2;
+	var uLocal_486 = 0;
+	var uLocal_487 = 0;
+	var uLocal_488 = 0;
+	var uLocal_489 = 0;
+	var uLocal_490 = 0;
+	var uLocal_491 = 0;
+	var uLocal_492 = 0;
+	var uLocal_493 = 0;
+	var uLocal_494 = 0;
+	var uLocal_495 = 0;
+	var uLocal_496 = 0;
+	var uLocal_497 = 0;
+	var uLocal_498 = 0;
+	var uLocal_499 = 0;
+	float fLocal_500 = 0f;
+	BOOL bLocal_501 = 0;
 #endregion
 
-void __EntryFunction__()
+void main() // Position - 0x0
 {
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -374,12 +515,12 @@ void __EntryFunction__()
 	iLocal_9 = 1;
 	iLocal_10 = 12;
 	iLocal_11 = 12;
-	fLocal_12 = 0,001f;
+	fLocal_12 = 0.001f;
 	iLocal_15 = -1;
 	sLocal_18 = "NULL";
 	fLocal_19 = 0f;
-	fLocal_23 = -0,0375f;
-	fLocal_24 = 0,17f;
+	fLocal_23 = -0.0375f;
+	fLocal_24 = 0.17f;
 	iLocal_26 = 3;
 	fLocal_29 = 80f;
 	fLocal_30 = 140f;
@@ -388,121 +529,114 @@ void __EntryFunction__()
 	iLocal_38 = 65;
 	iLocal_39 = 49;
 	iLocal_40 = 64;
-	Local_60 = { 0f, 0f, 0f };
-	Local_61 = { 0f, 0f, 0f };
-	iLocal_62 = -1;
-	iLocal_108 = 318;
-	iLocal_274 = 1;
-	StringCopy(&Local_350, "", 16);
-	StringCopy(&Local_353, "", 16);
-	StringCopy(&Local_356, "", 16);
-	fLocal_359 = 0f;
-	if (unk_0x96CFB880BAC634CE(3))
-	{
+	uLocal_60 = { 0f, 0f, 0f };
+	uLocal_63 = { 0f, 0f, 0f };
+	iLocal_66 = -1;
+	iLocal_112 = 318;
+	iLocal_278 = 1;
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_488, "", 16);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_492, "", 16);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_496, "", 16);
+	fLocal_500 = 0f;
+
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 		func_68();
-	}
-	system::wait(0);
+
+	SYSTEM::WAIT(0);
 	func_57();
 	func_56();
 	func_52();
-	while (iLocal_274 && func_48(5, 0))
+
+	while (iLocal_278 && func_48(5, 0))
 	{
 		if (func_46())
-		{
 			func_68();
-		}
-		if (!unk_0x3555462DB47B7AB1())
-		{
-			if (iLocal_108 == 258 && func_45(13) == 2)
-			{
+	
+		if (!STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS())
+			if (iLocal_112 == 258 && func_45(13) == 2)
 				func_68();
-			}
-		}
-		system::wait(0);
-		switch (iLocal_107)
+	
+		SYSTEM::WAIT(0);
+	
+		switch (iLocal_111)
 		{
 			case 0:
 				if (func_43())
-				{
-					iLocal_107 = 1;
-				}
+					iLocal_111 = 1;
 				break;
-			
+		
 			case 1:
 				if (func_2())
-				{
-					iLocal_107 = 2;
-				}
+					iLocal_111 = 2;
 				break;
-			
+		
 			case 2:
 				func_1();
 				break;
 		}
 	}
+
 	func_68();
+	return;
 }
 
-void func_1()
+void func_1() // Position - 0x145
 {
-	iLocal_274 = 0;
+	iLocal_278 = 0;
+	return;
 }
 
-int func_2()
+BOOL func_2() // Position - 0x151
 {
-	float fVar0;
-	int iVar1;
-	
-	func_28(&iLocal_275, &iLocal_276);
-	if (unk_0x5266F1D2AEF6F73A(Global_98843))
+	float synchronizedScenePhase;
+	eCharacter character;
+
+	func_28(&iLocal_279, &uLocal_282);
+
+	if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(Global_98843))
 	{
-		fVar0 = unk_0xBD3B265153D3BA2D(Global_98843);
-		iVar1 = func_27();
-		if (func_26(iVar1))
+		synchronizedScenePhase = PED::GET_SYNCHRONIZED_SCENE_PHASE(Global_98843);
+		character = _GET_CURRENT_PLAYER_CHARACTER_0();
+	
+		if (func_26(character))
 		{
-			if (!unk_0xD6F9DEE4765092A9(&Local_356))
+			if (!MISC::IS_STRING_NULL_OR_EMPTY(&uLocal_496))
 			{
-				if (!iLocal_360)
+				if (!bLocal_501)
 				{
-					if (fVar0 < fLocal_359)
+					if (synchronizedScenePhase < fLocal_500)
 					{
 					}
 					else
 					{
-						if (!unk_0xD6F9DEE4765092A9(&Local_350))
-						{
-							func_20(&uLocal_109, func_21(), unk_0x4A8C381C258A124D(), &Local_350, 0, 1);
-						}
-						if (!unk_0xD6F9DEE4765092A9(&Local_353))
-						{
-							func_20(&uLocal_109, 4, iLocal_275[0], &Local_353, 0, 1);
-						}
-						if (func_3(&uLocal_109, "PRSAUD", &Local_356, 3, 0, 0, 0))
-						{
-							iLocal_360 = 1;
-						}
+						if (!MISC::IS_STRING_NULL_OR_EMPTY(&uLocal_488))
+							_CONVERSATION_INITIALIZE_ACTOR(&uLocal_113, _GET_CURRENT_PLAYER_CHARACTER(), PLAYER::PLAYER_PED_ID(), &uLocal_488, 0, 1);
+					
+						if (!MISC::IS_STRING_NULL_OR_EMPTY(&uLocal_492))
+							_CONVERSATION_INITIALIZE_ACTOR(&uLocal_113, CHAR_ALL_PLAYERS_CONF, iLocal_279[0], &uLocal_492, 0, 1);
+					
+						if (_CONVERSATION_ADD_LINE(&uLocal_113, "PRSAUD", &uLocal_496, 3, 0, 0, 0))
+							bLocal_501 = true;
 					}
 				}
 			}
 		}
 	}
-	if (system::vdist(unk_0xD1A6A821F5AC81DB(unk_0x4A8C381C258A124D(), 1), Local_282) > 100f)
-	{
-		return 1;
-	}
-	return 0;
+
+	if (SYSTEM::VDIST(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), uLocal_298) > 100f)
+		return true;
+
+	return false;
 }
 
-bool func_3(var uParam0, char* sParam1, char* sParam2, int iParam3, int iParam4, int iParam5, int iParam6)
+BOOL _CONVERSATION_ADD_LINE(var uParam0, char* sParam1, char* sParam2, int iParam3, int iParam4, int iParam5, int iParam6) // Position - 0x217
 {
 	func_19(uParam0, 145, sParam1, iParam4, iParam5, iParam6);
+
 	if (iParam3 > 7)
-	{
 		if (iParam3 < 12)
-		{
 			iParam3 = 7;
-		}
-	}
+
 	Global_22293 = 0;
 	Global_22295 = 0;
 	Global_22300 = 0;
@@ -510,12 +644,13 @@ bool func_3(var uParam0, char* sParam1, char* sParam2, int iParam3, int iParam4,
 	Global_23279 = 0;
 	Global_23283 = 0;
 	Global_2883585 = 0;
-	return func_4(sParam2, iParam3, 0);
+	return func_4(sParam2, iParam3, false);
 }
 
-int func_4(char* sParam0, int iParam1, bool bParam2)
+BOOL func_4(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x265
 {
 	Global_22287 = 0;
+
 	if (Global_22286 == 0 || Global_22288 == 2)
 	{
 		if (Global_22286 != 0)
@@ -524,7 +659,7 @@ int func_4(char* sParam0, int iParam1, bool bParam2)
 			{
 				if (Global_22293 == 0)
 				{
-					unk_0x0F15249D24BC5ADA(0);
+					AUDIO::STOP_SCRIPTED_CONVERSATION(false);
 					Global_20930.f_1 = 3;
 					Global_22286 = 0;
 					Global_22287 = 1;
@@ -532,7 +667,7 @@ int func_4(char* sParam0, int iParam1, bool bParam2)
 					Global_22282 = 0;
 					Global_22283 = 0;
 					Global_22297 = 0;
-					Global_22296 = 0;
+					Global_22296 = false;
 					Global_20929 = 0;
 				}
 				else
@@ -546,14 +681,13 @@ int func_4(char* sParam0, int iParam1, bool bParam2)
 				return 0;
 			}
 		}
-		if (unk_0x1F9EB85925C3ECD7())
-		{
+	
+		if (AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 			return 0;
-		}
+	
 		if (func_17(8, -1))
-		{
 			return 0;
-		}
+	
 		Global_22362 = { Global_22356 };
 		func_16();
 		Global_21575 = { Global_21740 };
@@ -571,14 +705,17 @@ int func_4(char* sParam0, int iParam1, bool bParam2)
 		Global_21905.f_368 = Global_23273;
 		Global_21905.f_369 = Global_23274;
 		Global_22282 = Global_22283;
+	
 		if (Global_22292)
 		{
-			unk_0x8744D2E3FC95740E(&Global_8800, 20);
-			unk_0x8744D2E3FC95740E(&Global_8801, 17);
-			unk_0x8744D2E3FC95740E(&Global_8802, 0);
+			MISC::CLEAR_BIT(&Global_8800, 20);
+			MISC::CLEAR_BIT(&Global_8801, 17);
+			MISC::CLEAR_BIT(&Global_8802, 0);
+		
 			if (bParam2)
 			{
-				func_14();
+				_UPDATE_CURRENT_PLAYER_CHARACTER();
+			
 				if (Global_9605[Global_20930 /*2811*/][0 /*281*/].f_259 == 2)
 				{
 					if (iParam1 == 13)
@@ -589,61 +726,50 @@ int func_4(char* sParam0, int iParam1, bool bParam2)
 						return 0;
 					}
 				}
+			
 				if (Global_20930.f_1 > 3)
-				{
 					return 0;
-				}
 			}
+		
 			if (Global_20896 == 1)
-			{
 				return 0;
-			}
-			if (unk_0x75EAB09F5E974116(unk_0x259BE71D8A81D4FA()))
+		
+			if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 			{
-				if (unk_0xFFAC548682B3D56E(unk_0x4A8C381C258A124D()))
-				{
+				if (PED::IS_PED_IN_MELEE_COMBAT(PLAYER::PLAYER_PED_ID()))
 					return 0;
-				}
+			
 				if (func_13())
-				{
 					return 0;
-				}
-				if (unk_0x6F21822F60DC0945(unk_0x4A8C381C258A124D()))
-				{
+			
+				if (TASK::IS_PED_SPRINTING(PLAYER::PLAYER_PED_ID()))
 					return 0;
-				}
-				if (unk_0x8BF5256C439DF778(unk_0x4A8C381C258A124D()))
-				{
+			
+				if (PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()))
 					return 0;
-				}
-				if (unk_0x333554781C7582D7(unk_0x4A8C381C258A124D()))
-				{
+			
+				if (PED::IS_PED_IN_PARACHUTE_FREE_FALL(PLAYER::PLAYER_PED_ID()))
 					return 0;
-				}
-				if (unk_0x08DAD6B08438A17C(unk_0x4A8C381C258A124D(), joaat("gadget_parachute")))
-				{
+			
+				if (WEAPON::GET_IS_PED_GADGET_EQUIPPED(PLAYER::PLAYER_PED_ID(), -72657034))
 					return 0;
-				}
+			
 				if (!Global_79389)
 				{
-					if (unk_0x69799E0840A34AFB(unk_0x4A8C381C258A124D()))
-					{
+					if (ENTITY::IS_ENTITY_IN_WATER(PLAYER::PLAYER_PED_ID()))
 						return 0;
-					}
-					if (unk_0xB96BD3A32937D44E(unk_0x259BE71D8A81D4FA()))
-					{
+				
+					if (PLAYER::IS_PLAYER_CLIMBING(PLAYER::PLAYER_ID()))
 						return 0;
-					}
-					if (unk_0x74CD4FE549433E92(unk_0x4A8C381C258A124D()))
-					{
+				
+					if (PED::IS_PED_PLANTING_BOMB(PLAYER::PLAYER_PED_ID()))
 						return 0;
-					}
-					if (unk_0xFD2D7766E325A3B2(unk_0x259BE71D8A81D4FA(), 0))
-					{
+				
+					if (PLAYER::IS_SPECIAL_ABILITY_ACTIVE(PLAYER::PLAYER_ID(), 0))
 						return 0;
-					}
 				}
 			}
+		
 			if (func_12())
 			{
 				return 0;
@@ -654,44 +780,42 @@ int func_4(char* sParam0, int iParam1, bool bParam2)
 				{
 					case 7:
 						return 0;
-						break;
-					
+				
 					case 8:
 						return 0;
-						break;
-					
+				
 					case 9:
 						break;
-					
+				
 					case 10:
 						break;
-					
+				
 					default:
 						break;
 				}
-				if (BitTest(Global_8800, 9))
-				{
+			
+				if (IS_BIT_SET(Global_8800, 9))
 					return 0;
-				}
 			}
+		
 			func_11();
 			Global_22296 = bParam2;
 		}
+	
 		Global_22288 = iParam1;
-		StringCopy(&Global_21905, sParam0, 24);
+		TEXT_LABEL_ASSIGN_STRING(&Global_21905, sParam0, 24);
 		Global_21152 = 0;
 		func_10();
 		func_5();
 		return 1;
 	}
+
 	if (Global_22286 == 5)
-	{
 		return 0;
-	}
+
 	if (iParam1 < Global_22288 || iParam1 == Global_22288)
-	{
 		return 0;
-	}
+
 	if (iParam1 == 2)
 	{
 	}
@@ -699,82 +823,78 @@ int func_4(char* sParam0, int iParam1, bool bParam2)
 	{
 		func_18();
 	}
+
 	return 0;
 }
 
-void func_5()
+void func_5() // Position - 0x533
 {
 	if (!func_6())
-	{
 		return;
-	}
+
 	if (Global_22292)
 	{
-		MemCopy(&(Global_1971465.f_1), {Global_21905}, 4);
+		TEXT_LABEL_COPY(&(Global_1971465.f_1), { Global_21905 }, 4);
 		Global_1971465 = Global_8115;
 		Global_1971465.f_6 = Global_22296;
 	}
+
+	return;
 }
 
-int func_6()
+BOOL func_6() // Position - 0x56A
 {
 	if (!Global_262145.f_28397)
-	{
-		return 0;
-	}
+		return false;
+
 	if (!Global_79389)
-	{
-		return 0;
-	}
-	if (unk_0x259BE71D8A81D4FA() == func_9())
-	{
-		return 0;
-	}
-	if (func_7(unk_0x259BE71D8A81D4FA()))
-	{
-		return 0;
-	}
-	if (BitTest(Global_1887305[unk_0x259BE71D8A81D4FA() /*610*/].f_1, 7))
-	{
-		return 0;
-	}
-	if (unk_0x834C960822A4683F())
-	{
-		return 0;
-	}
-	return 1;
+		return false;
+
+	if (PLAYER::PLAYER_ID() == _INVALID_PLAYER_INDEX())
+		return false;
+
+	if (func_7(PLAYER::PLAYER_ID()))
+		return false;
+
+	if (IS_BIT_SET(Global_1887305[PLAYER::PLAYER_ID() /*610*/].f_1, 7))
+		return false;
+
+	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION())
+		return false;
+
+	return true;
 }
 
-bool func_7(int iParam0)
+BOOL func_7(Player plParam0) // Position - 0x5CD
 {
-	return func_8(iParam0, 20);
+	return func_8(plParam0, 20);
 }
 
-var func_8(int iParam0, int iParam1)
+BOOL func_8(Player plParam0, int iParam1) // Position - 0x5DD
 {
-	return BitTest(Global_1887305[iParam0 /*610*/].f_10.f_4, iParam1);
+	return IS_BIT_SET(Global_1887305[plParam0 /*610*/].f_10.f_4, iParam1);
 }
 
-int func_9()
+Player _INVALID_PLAYER_INDEX() // Position - 0x5F5
 {
 	return -1;
 }
 
-void func_10()
+void func_10() // Position - 0x5FE
 {
-	int iVar0;
-	
-	iVar0 = 0;
-	while (iVar0 <= 69)
+	int i;
+
+	for (i = 0; i <= 69; i = i + 1)
 	{
-		StringCopy(&(Global_21154[iVar0 /*6*/]), "", 24);
-		iVar0++;
+		TEXT_LABEL_ASSIGN_STRING(&Global_21154[i /*6*/], "", 24);
 	}
-	unk_0x0F15249D24BC5ADA(0);
+
+	AUDIO::STOP_SCRIPTED_CONVERSATION(false);
 	Global_22286 = 1;
+	return;
 }
 
-void func_11()
+void func_11() // Position - 0x62E
 {
 	Global_22339 = Global_22338;
 	Global_22333 = Global_22334;
@@ -794,160 +914,143 @@ void func_11()
 	Global_23302 = 0;
 	Global_22335 = 0;
 	Global_22336 = 0;
-	unk_0x8744D2E3FC95740E(&Global_8801, 16);
+	MISC::CLEAR_BIT(&Global_8801, 16);
+	return;
 }
 
-int func_12()
+BOOL func_12() // Position - 0x6C3
 {
 	if (Global_20930.f_1 == 1 || Global_20930.f_1 == 0)
-	{
-		return 1;
-	}
-	return 0;
+		return true;
+
+	return false;
 }
 
-int func_13()
+BOOL func_13() // Position - 0x6EA
 {
-	int iVar0;
-	int iVar1;
-	
+	int num;
+	int weaponHash;
+
 	if (Global_79389)
 	{
-		iVar0 = 0;
-		unk_0x23B29877D0BE9547(unk_0x4A8C381C258A124D(), &iVar1, 1);
-		if (unk_0x75EAB09F5E974116(unk_0x259BE71D8A81D4FA()))
-		{
-			if ((iVar1 == joaat("weapon_sniperrifle") || iVar1 == joaat("weapon_heavysniper")) || iVar1 == joaat("weapon_remotesniper"))
-			{
-				iVar0 = 1;
-			}
-		}
-		if (unk_0x196704C916969409() && iVar0 == 1)
-		{
-			return 1;
-		}
+		num = 0;
+		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &weaponHash, true);
+	
+		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
+			if (weaponHash == 100416529 || weaponHash == 205991906 || weaponHash == 856002082)
+				num = 1;
+	
+		if (CAM::IS_AIM_CAM_ACTIVE() && num == 1)
+			return true;
 		else
-		{
-			return 0;
-		}
+			return false;
 	}
-	if (unk_0x75EAB09F5E974116(unk_0x259BE71D8A81D4FA()))
-	{
-		if (unk_0x49F8918E2DC5FFBC(unk_0x4A8C381C258A124D(), 78, 1))
-		{
-			return 1;
-		}
+
+	if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
+		if (PED::GET_PED_CONFIG_FLAG(PLAYER::PLAYER_PED_ID(), 78, true))
+			return true;
 		else
-		{
-			return 0;
-		}
-	}
-	return 1;
+			return false;
+
+	return true;
 }
 
-void func_14()
+void _UPDATE_CURRENT_PLAYER_CHARACTER() // Position - 0x783
 {
 	if (func_15(14))
 	{
-		if (!unk_0x1C2F771CDC87A3A5(unk_0x4A8C381C258A124D(), 0))
-		{
-			if (unk_0x4B423FAA24E8ABF0(unk_0x4A8C381C258A124D()) == Global_113969.f_28054[0 /*29*/])
-			{
-				Global_20930 = 0;
-			}
-			else if (unk_0x4B423FAA24E8ABF0(unk_0x4A8C381C258A124D()) == Global_113969.f_28054[1 /*29*/])
-			{
-				Global_20930 = 1;
-			}
-			else if (unk_0x4B423FAA24E8ABF0(unk_0x4A8C381C258A124D()) == Global_113969.f_28054[2 /*29*/])
-			{
-				Global_20930 = 2;
-			}
+		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
+			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_113969.f_28054[0 /*29*/])
+				Global_20930 = CHAR_MICHAEL;
+			else if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_113969.f_28054[1 /*29*/])
+				Global_20930 = CHAR_FRANKLIN;
+			else if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_113969.f_28054[2 /*29*/])
+				Global_20930 = CHAR_TREVOR;
 			else
-			{
-				Global_20930 = 0;
-			}
-		}
+				Global_20930 = CHAR_MICHAEL;
 	}
 	else
 	{
-		Global_20930 = func_27();
-		if (Global_20930 == 145)
-		{
-			Global_20930 = 3;
-		}
+		Global_20930 = _GET_CURRENT_PLAYER_CHARACTER_0();
+	
+		if (Global_20930 == _CHAR_NULL)
+			Global_20930 = CHAR_MULTIPLAYER;
+	
 		if (Global_79389)
-		{
-			Global_20930 = 3;
-		}
-		if (Global_20930 > 3)
-		{
-			Global_20930 = 3;
-		}
+			Global_20930 = CHAR_MULTIPLAYER;
+	
+		if (Global_20930 > CHAR_MULTIPLAYER)
+			Global_20930 = CHAR_MULTIPLAYER;
 	}
+
+	return;
 }
 
-bool func_15(int iParam0)
+BOOL func_15(int iParam0) // Position - 0x825
 {
 	return Global_44042 == iParam0;
 }
 
-void func_16()
+void func_16() // Position - 0x833
 {
-	int iVar0;
-	
-	iVar0 = 0;
-	while (iVar0 <= 15)
+	int i;
+
+	for (i = 0; i <= 15; i = i + 1)
 	{
-		Global_21575[iVar0 /*10*/] = 0;
-		StringCopy(&(Global_21575[iVar0 /*10*/].f_1), "", 24);
-		Global_21575[iVar0 /*10*/].f_7 = 0;
-		Global_21575[iVar0 /*10*/].f_8 = 0;
-		iVar0++;
+		Global_21575[i /*10*/] = 0;
+		TEXT_LABEL_ASSIGN_STRING(&(Global_21575[i /*10*/].f_1), "", 24);
+		Global_21575[i /*10*/].f_7 = 0;
+		Global_21575[i /*10*/].f_8 = 0;
 	}
+
 	Global_21575.f_161 = -99;
 	Global_21575.f_162 = { 0f, 0f, 0f };
+	return;
 }
 
-bool func_17(int iParam0, int iParam1)
+BOOL func_17(int iParam0, int iParam1) // Position - 0x889
 {
 	switch (iParam0)
 	{
 		case 5:
 			if (iParam1 > -1)
-			{
 				return Global_1668667.f_203[iParam1];
-			}
 			break;
 	}
-	return BitTest(Global_1668667.f_1048, iParam0);
+
+	return IS_BIT_SET(Global_1668667.f_1048, iParam0);
 }
 
-void func_18()
+void func_18() // Position - 0x8C1
 {
-	unk_0xC78B293A5F4EACF9();
+	AUDIO::RESTART_SCRIPTED_CONVERSATION();
 	Global_23297 = 0;
-	if ((unk_0xE87F28FD4128D063() || Global_20930.f_1 == 9) || Global_20929 == 1)
+
+	if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING() || Global_20930.f_1 == 9 || Global_20929 == 1)
 	{
-		unk_0x0F15249D24BC5ADA(0);
+		AUDIO::STOP_SCRIPTED_CONVERSATION(false);
 		Global_22286 = 6;
 		Global_20930.f_1 = 3;
 		return;
 	}
-	if (unk_0x1F9EB85925C3ECD7())
+
+	if (AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 	{
-		unk_0x0F15249D24BC5ADA(1);
+		AUDIO::STOP_SCRIPTED_CONVERSATION(true);
 		Global_22286 = 6;
 		return;
 	}
+
+	return;
 }
 
-void func_19(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, var uParam5)
+void func_19(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x918
 {
 	Global_21740 = { *uParam0 };
 	Global_8116 = iParam1;
-	StringCopy(&Global_22356, sParam2, 24);
-	Global_23275 = uParam5;
+	TEXT_LABEL_ASSIGN_STRING(&Global_22356, sParam2, 24);
+	Global_23275 = iParam5;
+
 	if (iParam3 == 0)
 	{
 		Global_23273 = 1;
@@ -958,6 +1061,7 @@ void func_19(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, 
 		Global_23273 = 0;
 		Global_23271 = 1;
 	}
+
 	if (iParam4 == 0)
 	{
 		Global_23274 = 1;
@@ -968,2321 +1072,2125 @@ void func_19(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, 
 		Global_23274 = 0;
 		Global_23272 = 1;
 	}
+
+	return;
 }
 
-void func_20(var uParam0, int iParam1, var uParam2, char* sParam3, int iParam4, int iParam5)
+void _CONVERSATION_INITIALIZE_ACTOR(var uParam0, eCharacter echParam1, Ped pedParam2, char* sParam3, int iParam4, int iParam5) // Position - 0x96E
 {
-	if ((uParam0[iParam1 /*10*/])->f_7 == 1)
-	{
-	}
-	(*uParam0)[iParam1 /*10*/] = uParam2;
-	StringCopy(&((uParam0[iParam1 /*10*/])->f_1), sParam3, 24);
-	(uParam0[iParam1 /*10*/])->f_7 = 1;
-	(uParam0[iParam1 /*10*/])->f_8 = iParam4;
-	(uParam0[iParam1 /*10*/])->f_9 = iParam5;
+	uParam0->[echParam1 /*10*/].f_7 == 1;
+	uParam0->[echParam1 /*10*/] = pedParam2;
+	TEXT_LABEL_ASSIGN_STRING(&(uParam0->[echParam1 /*10*/].f_1), sParam3, 24);
+	uParam0->[echParam1 /*10*/].f_7 = 1;
+	uParam0->[echParam1 /*10*/].f_8 = iParam4;
+	uParam0->[echParam1 /*10*/].f_9 = iParam5;
+
 	if (!Global_79389)
 	{
-		if (!unk_0x4FAFF4BCB7633475(uParam2))
-		{
-			if ((uParam0[iParam1 /*10*/])->f_8 == 0)
-			{
-				unk_0xC1BC1B8A5AA67C6B(uParam2, 0);
-			}
+		if (!PED::IS_PED_INJURED(pedParam2))
+			if (uParam0->[echParam1 /*10*/].f_8 == 0)
+				PED::SET_PED_CAN_PLAY_AMBIENT_ANIMS(pedParam2, false);
 			else
-			{
-				unk_0xC1BC1B8A5AA67C6B(uParam2, 1);
-			}
-		}
-		if (!unk_0x4FAFF4BCB7633475(uParam2))
-		{
-			if ((uParam0[iParam1 /*10*/])->f_9 == 0)
-			{
-				unk_0x26C12212366CBF6E(uParam2, 0);
-			}
+				PED::SET_PED_CAN_PLAY_AMBIENT_ANIMS(pedParam2, true);
+	
+		if (!PED::IS_PED_INJURED(pedParam2))
+			if (uParam0->[echParam1 /*10*/].f_9 == 0)
+				PED::SET_PED_CAN_USE_AUTO_CONVERSATION_LOOKAT(pedParam2, false);
 			else
-			{
-				unk_0x26C12212366CBF6E(uParam2, 1);
-			}
-		}
+				PED::SET_PED_CAN_USE_AUTO_CONVERSATION_LOOKAT(pedParam2, true);
 	}
+
+	return;
 }
 
-int func_21()
+eCharacter _GET_CURRENT_PLAYER_CHARACTER() // Position - 0xA09
 {
 	func_22();
 	return Global_113969.f_2366.f_539.f_4321;
 }
 
-void func_22()
+void func_22() // Position - 0xA22
 {
-	int iVar0;
-	
-	if (unk_0xFC8BFE4B41177C22(unk_0x4A8C381C258A124D()))
+	eCharacter character;
+
+	if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 	{
-		if (func_24(Global_113969.f_2366.f_539.f_4321) != unk_0x4B423FAA24E8ABF0(unk_0x4A8C381C258A124D()))
+		if (_GET_CHARACTER_MODEL(Global_113969.f_2366.f_539.f_4321) != ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()))
 		{
-			iVar0 = func_23(unk_0x4A8C381C258A124D());
-			if (func_26(iVar0) && (!func_15(14) || Global_112917))
+			character = _GET_PLAYER_CHARACTER_FROM_PED(PLAYER::PLAYER_PED_ID());
+		
+			if (func_26(character) && !func_15(14) || Global_112917)
 			{
-				if (Global_113969.f_2366.f_539.f_4321 != iVar0 && func_26(Global_113969.f_2366.f_539.f_4321))
-				{
+				if (Global_113969.f_2366.f_539.f_4321 != character && func_26(Global_113969.f_2366.f_539.f_4321))
 					Global_113969.f_2366.f_539.f_4322 = Global_113969.f_2366.f_539.f_4321;
-				}
-				Global_113969.f_2366.f_539.f_4323 = iVar0;
-				Global_113969.f_2366.f_539.f_4321 = iVar0;
+			
+				Global_113969.f_2366.f_539.f_4323 = character;
+				Global_113969.f_2366.f_539.f_4321 = character;
 				return;
 			}
 		}
 		else
 		{
-			if (Global_113969.f_2366.f_539.f_4321 != 145)
-			{
+			if (Global_113969.f_2366.f_539.f_4321 != _CHAR_NULL)
 				Global_113969.f_2366.f_539.f_4323 = Global_113969.f_2366.f_539.f_4321;
-			}
+		
 			return;
 		}
 	}
+
 	Global_113969.f_2366.f_539.f_4321 = 145;
+	return;
 }
 
-int func_23(var uParam0)
+eCharacter _GET_PLAYER_CHARACTER_FROM_PED(Ped pedParam0) // Position - 0xB1F
 {
-	int iVar0;
-	int iVar1;
-	
-	if (unk_0xFC8BFE4B41177C22(uParam0))
+	eCharacter i;
+	Hash entityModel;
+
+	if (ENTITY::DOES_ENTITY_EXIST(pedParam0))
 	{
-		iVar1 = unk_0x4B423FAA24E8ABF0(uParam0);
-		iVar0 = 0;
-		while (iVar0 <= 2)
+		entityModel = ENTITY::GET_ENTITY_MODEL(pedParam0);
+	
+		for (i = CHAR_MICHAEL; i <= CHAR_TREVOR; i = i + 1)
 		{
-			if (func_24(iVar0) == iVar1)
-			{
-				return iVar0;
-			}
-			iVar0++;
+			if (_GET_CHARACTER_MODEL(i) == entityModel)
+				return i;
 		}
 	}
-	return 145;
+
+	return _CHAR_NULL;
 }
 
-int func_24(int iParam0)
+Hash _GET_CHARACTER_MODEL(eCharacter character) // Position - 0xB5C
 {
-	if (func_26(iParam0))
-	{
-		return func_25(iParam0);
-	}
-	else if (iParam0 != 145)
-	{
-	}
+	if (func_26(character))
+		return func_25(character);
+	else
+		character != _CHAR_NULL;
+
 	return 0;
 }
 
-var func_25(int iParam0)
+Hash func_25(eCharacter echParam0) // Position - 0xB81
 {
-	return Global_2169[iParam0 /*29*/];
+	return Global_2169[echParam0 /*29*/];
 }
 
-bool func_26(int iParam0)
+BOOL func_26(eCharacter echParam0) // Position - 0xB90
 {
-	return iParam0 < 3;
+	return echParam0 < CHAR_MULTIPLAYER;
 }
 
-var func_27()
+eCharacter _GET_CURRENT_PLAYER_CHARACTER_0() // Position - 0xB9C
 {
 	func_22();
 	return Global_113969.f_2366.f_539.f_4321;
 }
 
-int func_28(int iParam0, int iParam1)
+int func_28(var uParam0, var uParam1) // Position - 0xBB5
 {
-	int iVar0;
-	char* sVar1;
-	float fVar2;
-	float fVar3;
-	char* sVar4;
-	char* sVar5;
-	float fVar6;
-	float fVar7;
-	struct<3> Var8;
-	struct<3> Var9;
-	float fVar10;
-	float fVar11;
-	float fVar12;
-	float fVar13;
-	struct<3> Var14;
-	struct<3> Var15;
-	float fVar16;
-	int iVar17;
-	int iVar18;
-	int iVar19;
-	
-	iVar0 = 0;
-	while (iVar0 < *iParam0)
+	int i;
+	char* str;
+	float num;
+	float num2;
+	char* animDict;
+	char* str2;
+	float num3;
+	float num4;
+	Vector3 entityCoords;
+	Vector3 vector;
+	float num5;
+	float entityHeading;
+	float heading;
+	float num6;
+	Vector3 entityCoords2;
+	Vector3 vector2;
+	float num7;
+	int j;
+	BOOL playEnterAnim;
+	int k;
+
+	for (i = 0; i < *uParam0; i = i + 1)
 	{
-		if (!unk_0x4FAFF4BCB7633475((*iParam0)[iVar0]))
+		if (!PED::IS_PED_INJURED(uParam0->[i]))
 		{
-			switch ((*iParam1)[iVar0])
+			switch (uParam1->[i])
 			{
 				case 100:
-					if (unk_0x5266F1D2AEF6F73A(Global_98842))
+					if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(Global_98842))
 					{
-						unk_0x3DA436E63AB0F541((*iParam0)[iVar0], Global_98842, &cLocal_337, &(Local_346[iVar0 /*16*/]), 8f, -1000f, 0, 0, 1148846080, 0);
-						(*iParam1)[iVar0] = 101;
+						TASK::TASK_SYNCHRONIZED_SCENE(uParam0->[i], Global_98842, &uLocal_370, &uLocal_386[i /*16*/], 8f, -1000f, 0, 0, 1148846080, 0);
+						uParam1->[i] = 101;
 					}
-					else if (unk_0x5266F1D2AEF6F73A(Global_98843))
+					else if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(Global_98843))
 					{
-						unk_0x007DF2AFED58568A(Global_98843);
-						(*iParam1)[iVar0] = 101;
+						PED::TAKE_OWNERSHIP_OF_SYNCHRONIZED_SCENE(Global_98843);
+						uParam1->[i] = 101;
 					}
 					break;
-				
+			
 				case 101:
-					if (unk_0x5266F1D2AEF6F73A(Global_98843))
+					if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(Global_98843))
 					{
-						unk_0x3DA436E63AB0F541((*iParam0)[iVar0], Global_98843, &cLocal_337, &(Local_347[iVar0 /*16*/]), 8f, -1000f, 0, 0, 1148846080, 0);
-						unk_0x80813AC549A1E8AE(&cLocal_337);
-						(*iParam1)[iVar0] = 102;
+						TASK::TASK_SYNCHRONIZED_SCENE(uParam0->[i], Global_98843, &uLocal_370, &uLocal_419[i /*16*/], 8f, -1000f, 0, 0, 1148846080, 0);
+						STREAMING::REQUEST_ANIM_DICT(&uLocal_370);
+						uParam1->[i] = 102;
 					}
 					break;
-				
+			
 				case 102:
-					if (unk_0xE100DD4F82A51BDE(&cLocal_337) && unk_0x13CCB1AD131C1082((*iParam0)[iVar0], &cLocal_337, &(Local_347[iVar0 /*16*/]), 2))
+					if (STREAMING::HAS_ANIM_DICT_LOADED(&uLocal_370) && ENTITY::IS_ENTITY_PLAYING_ANIM(uParam0->[i], &uLocal_370, &uLocal_419[i /*16*/], 2))
 					{
-						sVar1 = "victim_fall";
-						fVar2 = -1f;
-						fVar3 = -1f;
-						if (unk_0xA2A6AE50772C4FDB(&cLocal_337, &(Local_347[iVar0 /*16*/]), sVar1, &fVar2, &fVar3))
+						str = "victim_fall";
+						num = -1f;
+						num2 = -1f;
+					
+						if (ENTITY::FIND_ANIM_EVENT_PHASE(&uLocal_370, &uLocal_419[i /*16*/], str, &num, &num2))
 						{
-							if (fVar2 < unk_0xBD3B265153D3BA2D(Global_98843))
+							if (num < PED::GET_SYNCHRONIZED_SCENE_PHASE(Global_98843))
 							{
-								if (!unk_0x86521C678E8AA3FF((*iParam0)[iVar0]))
+								if (!PED::IS_PED_RUNNING_RAGDOLL_TASK(uParam0->[i]))
 								{
-									unk_0x974022927CB47E68((*iParam0)[iVar0]);
-									unk_0x52B67D4C57E4BF4B((*iParam0)[iVar0], 1000, 3000, 4, unk_0x90D0E0397D3F7690((*iParam0)[iVar0]), 100f, 0f, 0f, 0f, 0f, 0f, 0f);
-									unk_0x0428AFDCAA63B06E((*iParam0)[iVar0], 137, 1);
+									TASK::CLEAR_PED_TASKS(uParam0->[i]);
+									PED::SET_PED_TO_RAGDOLL_WITH_FALL(uParam0->[i], 1000, 3000, 4, ENTITY::GET_ENTITY_FORWARD_VECTOR(uParam0->[i]), 100f, 0f, 0f, 0f, 0f, 0f, 0f);
+									PED::SET_PED_CONFIG_FLAG(uParam0->[i], 137, true);
 								}
 							}
 						}
-						if (iLocal_108 == 165)
+					
+						if (iLocal_112 == 165)
 						{
-							if (!unk_0xD6F9DEE4765092A9(&(Local_348[iVar0 /*16*/])))
+							if (!MISC::IS_STRING_NULL_OR_EMPTY(&uLocal_452[i /*16*/]))
 							{
-								sVar4 = "AMB@WORLD_HUMAN_CLIPBOARD@MALE@BASE";
-								unk_0x80813AC549A1E8AE(sVar4);
-								if (0,95f < unk_0xBD3B265153D3BA2D(Global_98843))
+								animDict = "AMB@WORLD_HUMAN_CLIPBOARD@MALE@BASE";
+								STREAMING::REQUEST_ANIM_DICT(animDict);
+							
+								if (0.95f < PED::GET_SYNCHRONIZED_SCENE_PHASE(Global_98843))
 								{
-									if (unk_0xE100DD4F82A51BDE(sVar4))
+									if (STREAMING::HAS_ANIM_DICT_LOADED(animDict))
 									{
-										unk_0x21B9EFA4B4AA3A5B((*iParam0)[iVar0], &(Local_348[iVar0 /*16*/]), 0, 0);
-										unk_0xD8ED11B32DF72E0B((*iParam0)[iVar0], 0, 0);
-										system::wait(0);
-										iLocal_349[iVar0] = -1;
-										(*iParam1)[iVar0] = 5;
+										TASK::TASK_START_SCENARIO_IN_PLACE(uParam0->[i], &uLocal_452[i /*16*/], 0, false);
+										PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(uParam0->[i], false, false);
+										SYSTEM::WAIT(0);
+										uLocal_485[i] = -1;
+										uParam1->[i] = 5;
 										break;
 									}
 								}
 							}
 						}
-						if (iLocal_108 == 259)
+					
+						if (iLocal_112 == 259)
 						{
-							if (0,95f < unk_0xBD3B265153D3BA2D(Global_98843))
+							if (0.95f < PED::GET_SYNCHRONIZED_SCENE_PHASE(Global_98843))
 							{
-								unk_0x849ABF0CBD8EE0D6((*iParam0)[iVar0], unk_0x4A8C381C258A124D(), 0f, -1f, 0f, 0);
-								unk_0xD8ED11B32DF72E0B((*iParam0)[iVar0], 0, 0);
-								system::wait(0);
-								(*iParam1)[iVar0] = 10;
+								TASK::TASK_PUT_PED_DIRECTLY_INTO_MELEE(uParam0->[i], PLAYER::PLAYER_PED_ID(), 0f, -1f, 0f, 0);
+								PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(uParam0->[i], false, false);
+								SYSTEM::WAIT(0);
+								uParam1->[i] = 10;
 								break;
 							}
 						}
-						if (iLocal_108 == 246 && iVar0 == 0)
+					
+						if (iLocal_112 == 246 && i == 0)
 						{
-							if (0,95f < unk_0xBD3B265153D3BA2D(Global_98843))
+							if (0.95f < PED::GET_SYNCHRONIZED_SCENE_PHASE(Global_98843))
 							{
-								unk_0x849ABF0CBD8EE0D6((*iParam0)[iVar0], unk_0x4A8C381C258A124D(), 0f, -1f, 0f, 0);
-								unk_0xD8ED11B32DF72E0B((*iParam0)[iVar0], 0, 0);
-								system::wait(0);
-								if (!unk_0x4FAFF4BCB7633475((*iParam0)[iVar0]))
+								TASK::TASK_PUT_PED_DIRECTLY_INTO_MELEE(uParam0->[i], PLAYER::PLAYER_PED_ID(), 0f, -1f, 0f, 0);
+								PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(uParam0->[i], false, false);
+								SYSTEM::WAIT(0);
+							
+								if (!PED::IS_PED_INJURED(uParam0->[i]))
 								{
-									unk_0x849ABF0CBD8EE0D6(unk_0x4A8C381C258A124D(), (*iParam0)[iVar0], 0f, -1f, 0f, 0);
-									system::wait(0);
+									TASK::TASK_PUT_PED_DIRECTLY_INTO_MELEE(PLAYER::PLAYER_PED_ID(), uParam0->[i], 0f, -1f, 0f, 0);
+									SYSTEM::WAIT(0);
 								}
-								(*iParam1)[iVar0] = 10;
+							
+								uParam1->[i] = 10;
 								break;
 							}
 						}
 					}
 					else
 					{
-						(*iParam1)[iVar0] = 1;
+						uParam1->[i] = 1;
 					}
 					break;
-				
+			
 				case 200:
-					if (unk_0x5266F1D2AEF6F73A(Global_98842))
+					if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(Global_98842))
 					{
-						unk_0x10425721983AE158((*iParam0)[iVar0], &cLocal_337, &(Local_346[iVar0 /*16*/]), 8f, -1000f, -1, 0, 0, 0, 0, 0);
-						(*iParam1)[iVar0] = 201;
+						TASK::TASK_PLAY_ANIM(uParam0->[i], &uLocal_370, &uLocal_386[i /*16*/], 8f, -1000f, -1, 0, 0, false, false, false);
+						uParam1->[i] = 201;
 					}
-					else if (unk_0x5266F1D2AEF6F73A(Global_98843))
+					else if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(Global_98843))
 					{
-						(*iParam1)[iVar0] = 201;
+						uParam1->[i] = 201;
 					}
 					break;
-				
+			
 				case 201:
-					if (unk_0x5266F1D2AEF6F73A(Global_98843))
+					if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(Global_98843))
 					{
-						unk_0x10425721983AE158((*iParam0)[iVar0], &cLocal_337, &(Local_347[iVar0 /*16*/]), 8f, -1,5f, -1, 32768, 0, 0, 0, 0);
-						unk_0xE67051907958B5EB((*iParam0)[iVar0], unk_0x4A8C381C258A124D(), -1, 0, 2);
-						unk_0x80813AC549A1E8AE(&cLocal_337);
-						(*iParam1)[iVar0] = 202;
+						TASK::TASK_PLAY_ANIM(uParam0->[i], &uLocal_370, &uLocal_419[i /*16*/], 8f, -1.5f, -1, 32768, 0, false, false, false);
+						TASK::TASK_LOOK_AT_ENTITY(uParam0->[i], PLAYER::PLAYER_PED_ID(), -1, 0, 2);
+						STREAMING::REQUEST_ANIM_DICT(&uLocal_370);
+						uParam1->[i] = 202;
 					}
 					break;
-				
+			
 				case 202:
-					if (unk_0xE100DD4F82A51BDE(&cLocal_337) && unk_0x13CCB1AD131C1082((*iParam0)[iVar0], &cLocal_337, &(Local_347[iVar0 /*16*/]), 1))
+					if (STREAMING::HAS_ANIM_DICT_LOADED(&uLocal_370) && ENTITY::IS_ENTITY_PLAYING_ANIM(uParam0->[i], &uLocal_370, &uLocal_419[i /*16*/], 1))
 					{
-						sVar5 = "victim_fall";
-						fVar6 = -1f;
-						fVar7 = -1f;
-						if (unk_0xA2A6AE50772C4FDB(&cLocal_337, &(Local_347[iVar0 /*16*/]), sVar5, &fVar6, &fVar7))
+						str2 = "victim_fall";
+						num3 = -1f;
+						num4 = -1f;
+					
+						if (ENTITY::FIND_ANIM_EVENT_PHASE(&uLocal_370, &uLocal_419[i /*16*/], str2, &num3, &num4))
 						{
-							if (fVar6 < unk_0x82E64DE58A6B84A8((*iParam0)[iVar0], &cLocal_337, &(Local_347[iVar0 /*16*/])))
+							if (num3 < ENTITY::GET_ENTITY_ANIM_CURRENT_TIME(uParam0->[i], &uLocal_370, &uLocal_419[i /*16*/]))
 							{
-								if (!unk_0x86521C678E8AA3FF((*iParam0)[iVar0]))
+								if (!PED::IS_PED_RUNNING_RAGDOLL_TASK(uParam0->[i]))
 								{
-									unk_0x974022927CB47E68((*iParam0)[iVar0]);
-									unk_0x52B67D4C57E4BF4B((*iParam0)[iVar0], 1000, 3000, 4, unk_0x90D0E0397D3F7690((*iParam0)[iVar0]), 100f, 0f, 0f, 0f, 0f, 0f, 0f);
-									unk_0x0428AFDCAA63B06E((*iParam0)[iVar0], 137, 1);
+									TASK::CLEAR_PED_TASKS(uParam0->[i]);
+									PED::SET_PED_TO_RAGDOLL_WITH_FALL(uParam0->[i], 1000, 3000, 4, ENTITY::GET_ENTITY_FORWARD_VECTOR(uParam0->[i]), 100f, 0f, 0f, 0f, 0f, 0f, 0f);
+									PED::SET_PED_CONFIG_FLAG(uParam0->[i], 137, true);
 								}
 							}
 						}
-						if (iLocal_108 == 108 || iLocal_108 == 109)
+					
+						if (iLocal_112 == 108 || iLocal_112 == 109)
 						{
-							if (unk_0x82E64DE58A6B84A8((*iParam0)[iVar0], &cLocal_337, &(Local_347[iVar0 /*16*/])) > 0,954f)
+							if (ENTITY::GET_ENTITY_ANIM_CURRENT_TIME(uParam0->[i], &uLocal_370, &uLocal_419[i /*16*/]) > 0.954f)
 							{
-								if (iLocal_108 == 108)
-								{
-									Local_284[iVar0 /*3*/] = { Vector(224,5948f, 1213,466f, 199,6328f) - Local_282 };
-								}
-								else if (iLocal_108 == 109)
-								{
-									Local_284[iVar0 /*3*/] = { Vector(5,9049f, -717,1404f, -1908,287f) - Local_282 };
-								}
-								unk_0xA966E518B752B92A((*iParam0)[iVar0], Local_282 + Local_284[iVar0 /*3*/], 1f, -1, 1048576000, 0, 1193033728);
-								unk_0x717804C8C8DA67BF((*iParam0)[iVar0], joaat("MotionState_Walk"), 0, 0, 0);
-								unk_0x84B06A81C98DA4B8((*iParam0)[iVar0]);
-								system::wait(0);
-								(*iParam1)[iVar0] = 1;
+								if (iLocal_112 == 108)
+									uLocal_302[i /*3*/] = { { 224.5948f, 1213.4664f, 199.6328f } - uLocal_298 };
+								else if (iLocal_112 == 109)
+									uLocal_302[i /*3*/] = { { 5.9049f, -717.1404f, -1908.2874f } - uLocal_298 };
+							
+								TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(uParam0->[i], uLocal_298 + uLocal_302[i /*3*/], 1f, -1, 1048576000, 0, 1193033728);
+								PED::FORCE_PED_MOTION_STATE(uParam0->[i], -668482597, false, 0, false);
+								TASK::TASK_CLEAR_LOOK_AT(uParam0->[i]);
+								SYSTEM::WAIT(0);
+								uParam1->[i] = 1;
 							}
 						}
 					}
 					else
 					{
-						if (iLocal_108 == 108)
-						{
-							Local_284[iVar0 /*3*/] = { Vector(224,5948f, 1213,466f, 199,6328f) - Local_282 };
-						}
-						else if (iLocal_108 == 109)
-						{
-							Local_284[iVar0 /*3*/] = { Vector(5,9049f, -717,1404f, -1908,287f) - Local_282 };
-						}
-						unk_0x84B06A81C98DA4B8((*iParam0)[iVar0]);
-						(*iParam1)[iVar0] = 1;
+						if (iLocal_112 == 108)
+							uLocal_302[i /*3*/] = { { 224.5948f, 1213.4664f, 199.6328f } - uLocal_298 };
+						else if (iLocal_112 == 109)
+							uLocal_302[i /*3*/] = { { 5.9049f, -717.1404f, -1908.2874f } - uLocal_298 };
+					
+						TASK::TASK_CLEAR_LOOK_AT(uParam0->[i]);
+						uParam1->[i] = 1;
 					}
 					break;
-				
+			
 				case 0:
-					Var8 = { unk_0xD1A6A821F5AC81DB((*iParam0)[iVar0], 1) };
-					Var9 = { Local_282 + Local_284[iVar0 /*3*/] + Vector(1f, 0f, 0f) };
-					fVar10 = system::vdist(Var8, Var9);
-					if (func_32((*iParam0)[iVar0]))
+					entityCoords = { ENTITY::GET_ENTITY_COORDS(uParam0->[i], true) };
+					vector = { uLocal_298 + uLocal_302[i /*3*/] + { 1f, 0f, 0f } };
+					num5 = SYSTEM::VDIST(entityCoords, vector);
+				
+					if (func_32(uParam0->[i]))
 					{
-						(*iParam1)[iVar0] = 10;
+						uParam1->[i] = 10;
 						break;
 					}
-					if (fVar10 >= 1f)
+				
+					if (num5 >= 1f)
 					{
-						(*iParam1)[iVar0] = 1;
+						uParam1->[i] = 1;
 						break;
 					}
-					fVar11 = unk_0xCFC0C995455A6204((*iParam0)[iVar0]);
-					fVar12 = (fLocal_283 + fLocal_285[iVar0]);
-					if (fVar12 < 0f)
+				
+					entityHeading = ENTITY::GET_ENTITY_HEADING(uParam0->[i]);
+					heading = fLocal_301 + uLocal_309[i];
+				
+					if (heading < 0f)
+						heading = heading + 360f;
+					else if (heading > 360f)
+						heading = heading - 360f;
+				
+					num6 = MISC::ABSF(entityHeading - heading);
+				
+					if (num6 > 45f)
 					{
-						fVar12 = (fVar12 + 360f);
-					}
-					else if (fVar12 > 360f)
-					{
-						fVar12 = (fVar12 - 360f);
-					}
-					fVar13 = unk_0x1D5CD3EAAA7422B0((fVar11 - fVar12));
-					if (fVar13 > 45f)
-					{
-						if (!unk_0x9B5C1660CCDF7189((*iParam0)[iVar0], joaat("script_task_achieve_heading")) == 1)
-						{
-							unk_0x2280392018BC0DD3((*iParam0)[iVar0], fVar12, 0);
-						}
+						if (!(TASK::GET_SCRIPT_TASK_STATUS(uParam0->[i], SCRIPT_TASK_ACHIEVE_HEADING) == 1))
+							TASK::TASK_ACHIEVE_HEADING(uParam0->[i], heading, 0);
+					
 						break;
 					}
-					if (!unk_0xD6F9DEE4765092A9(&(Local_348[iVar0 /*16*/])))
+				
+					if (!MISC::IS_STRING_NULL_OR_EMPTY(&uLocal_452[i /*16*/]))
 					{
-						iLocal_349[iVar0] = -1;
-						(*iParam1)[iVar0] = 5;
+						uLocal_485[i] = -1;
+						uParam1->[i] = 5;
 						break;
 					}
 					break;
-				
+			
 				case 1:
-					Var14 = { unk_0xD1A6A821F5AC81DB((*iParam0)[iVar0], 1) };
-					Var15 = { Local_282 + Local_284[iVar0 /*3*/] + Vector(1f, 0f, 0f) };
-					fVar16 = system::vdist(Var14, Var15);
-					if (fVar16 <= 0,5f)
+					entityCoords2 = { ENTITY::GET_ENTITY_COORDS(uParam0->[i], true) };
+					vector2 = { uLocal_298 + uLocal_302[i /*3*/] + { 1f, 0f, 0f } };
+					num7 = SYSTEM::VDIST(entityCoords2, vector2);
+				
+					if (num7 <= 0.5f)
 					{
-						(*iParam1)[iVar0] = 0;
+						uParam1->[i] = 0;
 						break;
 					}
-					if (func_32((*iParam0)[iVar0]))
+				
+					if (func_32(uParam0->[i]))
 					{
-						(*iParam1)[iVar0] = 10;
+						uParam1->[i] = 10;
 						break;
 					}
-					if (!unk_0x9B5C1660CCDF7189((*iParam0)[iVar0], joaat("script_task_follow_nav_mesh_to_coord")) == 1 && !unk_0x9B5C1660CCDF7189((*iParam0)[iVar0], joaat("script_task_follow_nav_mesh_to_coord")) == 0)
+				
+					if (!(TASK::GET_SCRIPT_TASK_STATUS(uParam0->[i], SCRIPT_TASK_FOLLOW_NAV_MESH_TO_COORD) == 1) && !(TASK::GET_SCRIPT_TASK_STATUS(uParam0->[i], SCRIPT_TASK_FOLLOW_NAV_MESH_TO_COORD) == 0))
 					{
-						unk_0xA966E518B752B92A((*iParam0)[iVar0], Var15, 0,5f, -1, 1048576000, 0, 1193033728);
+						TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(uParam0->[i], vector2, 0.5f, -1, 1048576000, 0, 1193033728);
 						break;
 					}
 					break;
-				
+			
 				case 10:
-					if (unk_0x9B5C1660CCDF7189((*iParam0)[iVar0], joaat("script_task_put_ped_directly_into_melee")) == 7 || unk_0x9B5C1660CCDF7189((*iParam0)[iVar0], joaat("script_task_put_ped_directly_into_melee")) == 1)
+					if (TASK::GET_SCRIPT_TASK_STATUS(uParam0->[i], SCRIPT_TASK_PUT_PED_DIRECTLY_INTO_MELEE) == 7 || TASK::GET_SCRIPT_TASK_STATUS(uParam0->[i], SCRIPT_TASK_PUT_PED_DIRECTLY_INTO_MELEE) == 1)
 					{
-						iVar17 = 0;
-						while (iVar17 < *iParam0)
+						for (j = 0; j < *uParam0; j = j + 1)
 						{
-							if (iVar0 != iVar17)
-							{
-								if ((*iParam1)[iVar17] < 10)
-								{
-									(*iParam1)[iVar17] = 10;
-								}
-							}
-							iVar17++;
+							if (i != j)
+								if (uParam1->[j] < 10)
+									uParam1->[j] = 10;
 						}
-						unk_0xD414C47AFF81382A(5, iLocal_278, joaat("player"));
-						unk_0xD414C47AFF81382A(5, joaat("player"), iLocal_278);
-						unk_0x1D006DA9CB2B79B2((*iParam0)[iVar0], 25f, -1, 0);
-						unk_0x44FB298D6382876D((*iParam0)[iVar0], 1);
-						unk_0xE4DC7B3DD712372B((*iParam0)[iVar0]);
-						(*iParam1)[iVar0] = 11;
+					
+						PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, hLocal_288, 1862763509);
+						PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, hLocal_288);
+						TASK::TASK_COMBAT_HATED_TARGETS_AROUND_PED_TIMED(uParam0->[i], 25f, -1, 0);
+						PED::SET_PED_KEEP_TASK(uParam0->[i], true);
+						ENTITY::CLEAR_ENTITY_LAST_DAMAGE_ENTITY(uParam0->[i]);
+						uParam1->[i] = 11;
 					}
 					break;
-				
+			
 				case 11:
-					if (system::vdist(unk_0xD1A6A821F5AC81DB(unk_0x4A8C381C258A124D(), 1), Local_282) > 50f && system::vdist(unk_0xD1A6A821F5AC81DB(unk_0x4A8C381C258A124D(), 1), unk_0xD1A6A821F5AC81DB((*iParam0)[iVar0], 1)) > 50f)
+					if (SYSTEM::VDIST(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), uLocal_298) > 50f && SYSTEM::VDIST(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(uParam0->[i], true)) > 50f)
 					{
-						unk_0xD414C47AFF81382A(2, iLocal_278, joaat("player"));
-						unk_0xD414C47AFF81382A(2, joaat("player"), iLocal_278);
-						unk_0x974022927CB47E68((*iParam0)[iVar0]);
-						unk_0xA966E518B752B92A((*iParam0)[iVar0], Local_282 + Local_284[iVar0 /*3*/], 0,5f, -1, 1048576000, 0, 1193033728);
-						(*iParam1)[iVar0] = 1;
+						PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, hLocal_288, 1862763509);
+						PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, 1862763509, hLocal_288);
+						TASK::CLEAR_PED_TASKS(uParam0->[i]);
+						TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(uParam0->[i], uLocal_298 + uLocal_302[i /*3*/], 0.5f, -1, 1048576000, 0, 1193033728);
+						uParam1->[i] = 1;
 					}
-					if (func_29((*iParam0)[iVar0], 15f))
+				
+					if (func_29(uParam0->[i], 15f))
 					{
-						unk_0xD414C47AFF81382A(2, iLocal_278, joaat("player"));
-						unk_0xD414C47AFF81382A(2, joaat("player"), iLocal_278);
-						unk_0x974022927CB47E68((*iParam0)[iVar0]);
-						unk_0xA966E518B752B92A((*iParam0)[iVar0], Local_282 + Local_284[iVar0 /*3*/], 0,5f, -1, 1048576000, 0, 1193033728);
-						(*iParam1)[iVar0] = 1;
+						PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, hLocal_288, 1862763509);
+						PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, 1862763509, hLocal_288);
+						TASK::CLEAR_PED_TASKS(uParam0->[i]);
+						TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(uParam0->[i], uLocal_298 + uLocal_302[i /*3*/], 0.5f, -1, 1048576000, 0, 1193033728);
+						uParam1->[i] = 1;
 					}
 					break;
-				
+			
 				case 5:
-					if (func_32((*iParam0)[iVar0]))
+					if (func_32(uParam0->[i]))
 					{
-						if (unk_0xFC8BFE4B41177C22(uLocal_279[iVar0]))
+						if (ENTITY::DOES_ENTITY_EXIST(uLocal_289[i]))
 						{
-							unk_0x51C8BEA2005931AB(&(uLocal_279[iVar0]));
-							unk_0xB3B56385ECA230B4(&(uLocal_279[iVar0]));
+							OBJECT::DELETE_OBJECT(&uLocal_289[i]);
+							ENTITY::SET_OBJECT_AS_NO_LONGER_NEEDED(&uLocal_289[i]);
 						}
-						unk_0x974022927CB47E68((*iParam0)[iVar0]);
-						unk_0x895CE77855F9AFD2((*iParam0)[iVar0]);
-						(*iParam1)[iVar0] = 10;
+					
+						TASK::CLEAR_PED_TASKS(uParam0->[i]);
+						PED::SET_PED_SHOULD_PLAY_IMMEDIATE_SCENARIO_EXIT(uParam0->[i]);
+						uParam1->[i] = 10;
 						break;
 					}
-					if (!unk_0x1FF4AE189014B73E((*iParam0)[iVar0]))
+				
+					if (!TASK::PED_HAS_USE_SCENARIO_TASK(uParam0->[i]))
 					{
-						if (unk_0x1B79E937E91F40C3(&(Local_348[iVar0 /*16*/]), "any"))
+						if (MISC::ARE_STRINGS_EQUAL(&uLocal_452[i /*16*/], "any"))
 						{
-							if (unk_0x81E5E9AE1379B068(Local_282 + Local_284[iVar0 /*3*/], 20f, 1))
+							if (TASK::DOES_SCENARIO_EXIST_IN_AREA(uLocal_298 + uLocal_302[i /*3*/], 20f, true))
 							{
-								unk_0xFC8E18D52935E5EB((*iParam0)[iVar0], Local_282 + Local_284[iVar0 /*3*/], 20f, 0);
-								iLocal_349[iVar0] = unk_0x1DD05E817C89C737();
+								TASK::TASK_USE_NEAREST_SCENARIO_TO_COORD(uParam0->[i], uLocal_298 + uLocal_302[i /*3*/], 20f, 0);
+								uLocal_485[i] = MISC::GET_GAME_TIMER();
 							}
 						}
 						else
 						{
-							iVar18 = 1;
-							if (iLocal_108 == 165)
-							{
-								iVar18 = 0;
-							}
-							unk_0x21B9EFA4B4AA3A5B((*iParam0)[iVar0], &(Local_348[iVar0 /*16*/]), 0, iVar18);
-							iLocal_349[iVar0] = unk_0x1DD05E817C89C737();
+							playEnterAnim = true;
+						
+							if (iLocal_112 == 165)
+								playEnterAnim = false;
+						
+							TASK::TASK_START_SCENARIO_IN_PLACE(uParam0->[i], &uLocal_452[i /*16*/], 0, playEnterAnim);
+							uLocal_485[i] = MISC::GET_GAME_TIMER();
 						}
 					}
-					else if (unk_0xFC8BFE4B41177C22(uLocal_279[iVar0]))
+					else if (ENTITY::DOES_ENTITY_EXIST(uLocal_289[i]))
 					{
-						if (iLocal_349[iVar0] > 0)
+						if (uLocal_485[i] > 0)
 						{
-							if (unk_0x1DD05E817C89C737() > iLocal_349[iVar0] + 1000)
+							if (MISC::GET_GAME_TIMER() > uLocal_485[i] + 1000)
 							{
-								unk_0x51C8BEA2005931AB(&(uLocal_279[iVar0]));
-								unk_0xB3B56385ECA230B4(&(uLocal_279[iVar0]));
+								OBJECT::DELETE_OBJECT(&uLocal_289[i]);
+								ENTITY::SET_OBJECT_AS_NO_LONGER_NEEDED(&uLocal_289[i]);
 							}
 						}
 					}
 					break;
-				
+			
 				default:
 					break;
 			}
 		}
-		else if (unk_0xFC8BFE4B41177C22((*iParam0)[iVar0]))
+		else if (ENTITY::DOES_ENTITY_EXIST(uParam0->[i]))
 		{
-			if ((*iParam1)[iVar0] != -1)
+			if (uParam1->[i] != -1)
 			{
-				iVar19 = 0;
-				while (iVar19 < *iParam0)
+				for (k = 0; k < *uParam0; k = k + 1)
 				{
-					if (iVar0 != iVar19)
-					{
-						if ((*iParam1)[iVar19] != -1 && (*iParam1)[iVar19] < 10)
-						{
-							(*iParam1)[iVar19] = 10;
-						}
-					}
-					iVar19++;
+					if (i != k)
+						if (uParam1->[k] != -1 && uParam1->[k] < 10)
+							uParam1->[k] = 10;
 				}
-				(*iParam1)[iVar0] = -1;
+			
+				uParam1->[i] = -1;
 			}
-			if (unk_0xFC8BFE4B41177C22(uLocal_279[iVar0]))
+		
+			if (ENTITY::DOES_ENTITY_EXIST(uLocal_289[i]))
 			{
-				if (iLocal_349[iVar0] > 0)
+				if (uLocal_485[i] > 0)
 				{
-					unk_0x51C8BEA2005931AB(&(uLocal_279[iVar0]));
-					unk_0xB3B56385ECA230B4(&(uLocal_279[iVar0]));
+					OBJECT::DELETE_OBJECT(&uLocal_289[i]);
+					ENTITY::SET_OBJECT_AS_NO_LONGER_NEEDED(&uLocal_289[i]);
 				}
 			}
 		}
-		iVar0++;
 	}
+
 	return 0;
 }
 
-int func_29(var uParam0, float fParam1)
+BOOL func_29(Entity eParam0, float fParam1) // Position - 0x1637
 {
-	int iVar0;
-	struct<3> Var1;
-	int iVar2;
-	int iVar3;
-	struct<3> Var4;
-	
-	iVar0 = 0;
-	while (iVar0 < 263)
+	int i;
+	Vector3 vector;
+	int j;
+	int num;
+	Vector3 vector2;
+
+	for (i = 0; i < 263; i = i + 1)
 	{
-		if (BitTest(Global_33328[iVar0 /*23*/].f_11, 0))
+		if (IS_BIT_SET(Global_33328[i /*23*/].f_11, 0))
 		{
-			if (Global_33328[iVar0 /*23*/].f_16 == 9)
+			if (Global_33328[i /*23*/].f_16 == 9)
 			{
 			}
 			else
 			{
-				Var1 = { func_31(iVar0, 0) };
-				if (system::vdist2(unk_0xD1A6A821F5AC81DB(uParam0, 1), Var1) < (fParam1 * fParam1))
+				vector = { func_31(i, 0) };
+			
+				if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(eParam0, true), vector) < fParam1 * fParam1)
+					return true;
+			
+				if (IS_BIT_SET(Global_33328[i /*23*/].f_11, 19))
 				{
-					return 1;
-				}
-				if (BitTest(Global_33328[iVar0 /*23*/].f_11, 19))
-				{
-					iVar3 = 3;
-					iVar2 = 0;
-					while (iVar2 < iVar3)
+					num = 3;
+				
+					for (j = 0; j < num; j = j + 1)
 					{
-						Var4 = { func_31(iVar0, iVar2) };
-						if (!func_30(Var4))
-						{
-							if (system::vdist2(unk_0xD1A6A821F5AC81DB(uParam0, 1), Var4) < (fParam1 * fParam1))
-							{
-								return 1;
-							}
-						}
-						iVar2++;
+						vector2 = { func_31(i, j) };
+					
+						if (!_IS_NULL_VECTOR(vector2))
+							if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(eParam0, true), vector2) < fParam1 * fParam1)
+								return true;
 					}
 				}
 			}
 		}
-		iVar0++;
 	}
-	return 0;
+
+	return false;
 }
 
-int func_30(struct<3> Param0)
+BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x16F3
 {
-	if ((Param0.f_0 == 0f && Param0.f_1 == 0f) && Param0.f_2 == 0f)
-	{
-		return 1;
-	}
-	return 0;
+	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
+		return true;
+
+	return false;
 }
 
-Vector3 func_31(int iParam0, int iParam1)
+Vector3 func_31(int iParam0, int iParam1) // Position - 0x171D
 {
-	int iVar0;
-	
-	iVar0 = iParam0;
-	if ((iVar0 < 0 || iVar0 >= 263) || iParam0 == 263)
-	{
+	int num;
+
+	num = iParam0;
+
+	if (num < 0 || num >= 263 || iParam0 == 263)
 		return 0f, 0f, 0f;
-	}
-	return Global_33328[iVar0 /*23*/][iParam1 /*3*/];
+
+	return Global_33328[num /*23*/][iParam1 /*3*/];
 }
 
-int func_32(int iParam0)
+BOOL func_32(Ped pedParam0) // Position - 0x175B
 {
-	int iVar0;
-	int iVar1;
-	float fVar2;
-	
-	if (unk_0x9B3D4335E0EDB0BE(iParam0, unk_0x4A8C381C258A124D(), 1))
+	int i;
+	int j;
+	float angle;
+
+	if (ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(pedParam0, PLAYER::PLAYER_PED_ID(), true))
+		return true;
+
+	if (PLAYER::IS_PLAYER_TARGETTING_ENTITY(PLAYER::PLAYER_ID(), pedParam0) || PLAYER::IS_PLAYER_FREE_AIMING_AT_ENTITY(PLAYER::PLAYER_ID(), pedParam0))
+		return true;
+
+	if (PED::IS_PED_IN_COMBAT(pedParam0, PLAYER::PLAYER_PED_ID()))
+		return true;
+
+	if (func_35(pedParam0, true, false, false, false))
+		return true;
+
+	if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(pedParam0, true), 15f))
+		return true;
+
+	if (PED::HAS_PED_RECEIVED_EVENT(pedParam0, 73))
+		return true;
+
+	for (i = 0; i < iLocal_279; i = i + 1)
 	{
-		return 1;
+		if (pedParam0 != iLocal_279[i])
+			if (uLocal_282[i] < 0)
+				return true;
 	}
-	if (unk_0x41754DC6001F6313(unk_0x259BE71D8A81D4FA(), iParam0) || unk_0xE5D813FA6F741B01(unk_0x259BE71D8A81D4FA(), iParam0))
+
+	for (j = 0; j < 1; j = j + 1)
 	{
-		return 1;
-	}
-	if (unk_0x1B32E388988DD296(iParam0, unk_0x4A8C381C258A124D()))
-	{
-		return 1;
-	}
-	if (func_35(iParam0, 1, 0, 0, 0))
-	{
-		return 1;
-	}
-	if (unk_0x8764A5B95AE1F967(-1, unk_0xD1A6A821F5AC81DB(iParam0, 1), 15f))
-	{
-		return 1;
-	}
-	if (unk_0x613F3705BEA060B4(iParam0, 73))
-	{
-		return 1;
-	}
-	iVar0 = 0;
-	while (iVar0 < iLocal_275)
-	{
-		if (iParam0 != iLocal_275[iVar0])
+		if (!func_34(uLocal_316[j /*3*/], 0f, 0f, 0f, false))
 		{
-			if (iLocal_276[iVar0] < 0)
+			if (func_33(PLAYER::PLAYER_PED_ID(), uLocal_298 + uLocal_312[j /*3*/], uLocal_316[j /*3*/], fLocal_301 + uLocal_320[j], false, true, 0))
 			{
-				return 1;
+				angle = 50f;
+			
+				if (PED::IS_PED_FACING_PED(pedParam0, PLAYER::PLAYER_PED_ID(), angle))
+					return true;
 			}
 		}
-		iVar0++;
 	}
-	iVar1 = 0;
-	while (iVar1 < 1)
-	{
-		if (!func_34(Local_287[iVar1 /*3*/], 0f, 0f, 0f, 0))
-		{
-			if (func_33(unk_0x4A8C381C258A124D(), Local_282 + Local_286[iVar1 /*3*/], Local_287[iVar1 /*3*/], (fLocal_283 + fLocal_288[iVar1]), 0, 1, 0))
-			{
-				fVar2 = 50f;
-				if (unk_0x3644984C9D7B57EF(iParam0, unk_0x4A8C381C258A124D(), fVar2))
-				{
-					return 1;
-				}
-			}
-		}
-		iVar1++;
-	}
-	return 0;
+
+	return false;
 }
 
-int func_33(var uParam0, struct<3> Param1, struct<3> Param2, float fParam3, int iParam4, int iParam5, int iParam6)
+BOOL func_33(Ped pedParam0, float fParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, float fParam7, BOOL bParam8, BOOL bParam9, int iParam10) // Position - 0x1881
 {
-	struct<3> Var0;
-	struct<3> Var1;
-	
-	Var0.f_0 = (Param1.f_0 - (system::cos(fParam3) * Param2.f_0));
-	Var0.f_1 = (Param1.f_1 - (system::sin(fParam3) * Param2.f_0));
-	Var0.f_2 = (Param1.f_2 - Param2.f_2);
-	Var1.f_0 = (Param1.f_0 + (system::cos(fParam3) * Param2.f_0));
-	Var1.f_1 = (Param1.f_1 + (system::sin(fParam3) * Param2.f_0));
-	Var1.f_2 = (Param1.f_2 + Param2.f_2);
-	if (unk_0x5105BE70DEF1F5FB(uParam0, Var0, Var1, (Param2.f_1 * 2f), iParam4, iParam5, iParam6))
-	{
-		return 1;
-	}
-	return 0;
+	float num;
+	float num2;
+
+	num = fParam1 - (SYSTEM::COS(fParam7) * uParam4);
+	num.f_1 = fParam1.f_1 - (SYSTEM::SIN(fParam7) * uParam4);
+	num.f_2 = fParam1.f_2 - uParam4.f_2;
+	num2 = fParam1 + (SYSTEM::COS(fParam7) * uParam4);
+	num2.f_1 = fParam1.f_1 + (SYSTEM::SIN(fParam7) * uParam4);
+	num2.f_2 = fParam1.f_2 + uParam4.f_2;
+
+	if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(pedParam0, num, num2, uParam4.f_1 * 2f, bParam8, bParam9, iParam10))
+		return true;
+
+	return false;
 }
 
-bool func_34(struct<3> Param0, struct<3> Param1, bool bParam2)
+BOOL func_34(float fParam0, var uParam1, var uParam2, float fParam3, float fParam4, float fParam5, BOOL bParam6) // Position - 0x1905
 {
+	if (bParam6)
+		return fParam0 == fParam3 && fParam0.f_1 == fParam3.f_1;
+
+	return fParam0 == fParam3 && fParam0.f_1 == fParam3.f_1 && fParam0.f_2 == fParam3.f_2;
+}
+
+BOOL func_35(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4) // Position - 0x194C
+{
+	float radius;
+	float num;
+	int weaponHash;
+
+	radius = 8f;
+	num = 15f;
+
+	if (bParam1 == false)
+	{
+		radius = 1.86f;
+		num = 1.86f;
+	}
+
 	if (bParam2)
-	{
-		return (Param0.f_0 == Param1.f_0 && Param0.f_1 == Param1.f_1);
-	}
-	return ((Param0.f_0 == Param1.f_0 && Param0.f_1 == Param1.f_1) && Param0.f_2 == Param1.f_2);
-}
+		radius = 2f;
 
-int func_35(int iParam0, bool bParam1, bool bParam2, bool bParam3, bool bParam4)
-{
-	float fVar0;
-	float fVar1;
-	int iVar2;
+	if (_DOES_ENTITY_EXIST_AND_IS_ALIVE(PLAYER::PLAYER_PED_ID()) && _DOES_ENTITY_EXIST_AND_IS_ALIVE(pedParam0))
+	{
+		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &weaponHash, true);
 	
-	fVar0 = 8f;
-	fVar1 = 15f;
-	if (bParam1 == 0)
-	{
-		fVar0 = 1,86f;
-		fVar1 = 1,86f;
-	}
-	if (bParam2)
-	{
-		fVar0 = 2f;
-	}
-	if (func_42(unk_0x4A8C381C258A124D()) && func_42(uParam0))
-	{
-		unk_0x23B29877D0BE9547(unk_0x4A8C381C258A124D(), &iVar2, 1);
-		if (iVar2 == joaat("weapon_petrolcan"))
+		if (weaponHash == 883325847)
 		{
-			fVar0 = 3f;
-			fVar1 = 3f;
+			radius = 3f;
+			num = 3f;
 		}
+	
 		if (!bParam2)
 		{
-			if (func_41(uParam0, bParam1, fVar0, fVar1))
-			{
-				return 1;
-			}
-			if (func_36(uParam0, fVar1, bParam3, bParam4))
-			{
-				return 1;
-			}
+			if (func_41(pedParam0, bParam1, radius, num))
+				return true;
+		
+			if (func_36(pedParam0, num, bParam3, bParam4))
+				return true;
 		}
 		else
 		{
-			if (unk_0x3C2402675D8FFADA(unk_0x4A8C381C258A124D()))
+			if (WEAPON::IS_PED_CURRENT_WEAPON_SILENCED(PLAYER::PLAYER_PED_ID()))
 			{
-				if (unk_0x65F146FF416F109F(unk_0x4A8C381C258A124D()))
-				{
-					if (unk_0x398315D0C90DE6F6(unk_0xD1A6A821F5AC81DB(uParam0, 1), fVar0, 1))
-					{
-						return 1;
-					}
-				}
+				if (PED::IS_PED_SHOOTING(PLAYER::PLAYER_PED_ID()))
+					if (MISC::IS_BULLET_IN_AREA(ENTITY::GET_ENTITY_COORDS(pedParam0, true), radius, true))
+						return true;
 			}
 			else
 			{
 				if (bParam1)
 				{
-					fVar0 = 1,86f;
-					fVar1 = 1,86f;
+					radius = 1.86f;
+					num = 1.86f;
 				}
-				if (func_41(iParam0, bParam1, fVar0, fVar1))
-				{
-					return 1;
-				}
+			
+				if (func_41(pedParam0, bParam1, radius, num))
+					return true;
 			}
-			if (func_36(iParam0, fVar1, bParam3, bParam4))
-			{
-				return 1;
-			}
+		
+			if (func_36(pedParam0, num, bParam3, bParam4))
+				return true;
 		}
 	}
-	return 0;
+
+	return false;
 }
 
-int func_36(int iParam0, float fParam1, bool bParam2, bool bParam3)
+BOOL func_36(Ped pedParam0, float fParam1, BOOL bParam2, BOOL bParam3) // Position - 0x1A47
 {
-	struct<3> Var0;
-	struct<3> Var1;
-	
-	Var0 = { unk_0xD1A6A821F5AC81DB(uParam0, 1) };
-	Var1 = { Var0 };
-	Var0.f_0 = (Var0.f_0 - fParam1);
-	Var0.f_1 = (Var0.f_1 - fParam1);
-	Var0.f_2 = (Var0.f_2 - fParam1);
-	Var1.f_0 = (Var1.f_0 + fParam1);
-	Var1.f_1 = (Var1.f_1 + fParam1);
-	Var1.f_2 = (Var1.f_2 + fParam1);
+	float entityCoords;
+	float num;
+
+	entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, true) };
+	num = { entityCoords };
+	entityCoords = entityCoords - fParam1;
+	entityCoords.f_1 = entityCoords.f_1 - fParam1;
+	entityCoords.f_2 = entityCoords.f_2 - fParam1;
+	num = num + fParam1;
+	num.f_1 = num.f_1 + fParam1;
+	num.f_2 = num.f_2 + fParam1;
+
 	if (bParam2)
 	{
-		if (((unk_0x8EC0BB480F11446F(unk_0xD1A6A821F5AC81DB(iParam0, 1), joaat("weapon_grenade"), fParam1, 1) || unk_0x8EC0BB480F11446F(unk_0xD1A6A821F5AC81DB(iParam0, 1), joaat("weapon_molotov"), fParam1, 1)) || unk_0x8EC0BB480F11446F(unk_0xD1A6A821F5AC81DB(iParam0, 1), joaat("weapon_smokegrenade"), fParam1, 1)) || unk_0x8EC0BB480F11446F(unk_0xD1A6A821F5AC81DB(iParam0, 1), joaat("weapon_stickybomb"), 5f, 1))
+		if (MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(pedParam0, true), -1813897027, fParam1, true) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(pedParam0, true), 615608432, fParam1, true) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(pedParam0, true), -37975472, fParam1, true) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(ENTITY::GET_ENTITY_COORDS(pedParam0, true), 741814745, 5f, true))
 		{
 			if (bParam3)
-			{
-				if (func_37(iParam0, fParam1))
-				{
-					return 1;
-				}
+				if (func_37(pedParam0, fParam1))
+					return true;
 				else
-				{
-					return 0;
-				}
-			}
-			return 1;
+					return false;
+		
+			return true;
 		}
 	}
 	else
 	{
 		if (bParam3)
-		{
-			if (func_37(iParam0, fParam1))
-			{
-				return 1;
-			}
+			if (func_37(pedParam0, fParam1))
+				return true;
 			else
-			{
-				return 0;
-			}
-		}
-		if (unk_0xE94C7FA27FEB00DD(Var0, Var1, 1))
-		{
-			return 1;
-		}
+				return false;
+	
+		if (MISC::IS_PROJECTILE_IN_AREA(entityCoords, num, true))
+			return true;
 	}
-	return 0;
+
+	return false;
 }
 
-int func_37(var uParam0, float fParam1)
+BOOL func_37(Ped pedParam0, float fParam1) // Position - 0x1B53
 {
-	var uVar0;
-	struct<3> Var1;
-	
-	if ((((unk_0xF67924A428A734EC(uParam0, joaat("weapon_grenade"), fParam1, &Var1, &uVar0, 0) || unk_0xF67924A428A734EC(uParam0, joaat("weapon_smokegrenade"), fParam1, &Var1, &uVar0, 0)) || unk_0xF67924A428A734EC(uParam0, joaat("weapon_bzgas"), fParam1, &Var1, &uVar0, 0)) || unk_0xF67924A428A734EC(uParam0, joaat("weapon_stickybomb"), fParam1, &Var1, &uVar0, 0)) || unk_0xF67924A428A734EC(uParam0, joaat("weapon_molotov"), fParam1, &Var1, &uVar0, 0))
-	{
-		if (func_38(uParam0, Var1, 90f, 0))
-		{
-			return 1;
-		}
-	}
-	return 0;
+	var outProjectile;
+	var outCoords;
+
+	if (MISC::GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(pedParam0, -1813897027, fParam1, &outCoords, &outProjectile, false) || MISC::GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(pedParam0, -37975472, fParam1, &outCoords, &outProjectile, false) || MISC::GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(pedParam0, -1600701090, fParam1, &outCoords, &outProjectile, false) || MISC::GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(pedParam0, 741814745, fParam1, &outCoords, &outProjectile, false) || MISC::GET_PROJECTILE_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(pedParam0, 615608432, fParam1, &outCoords, &outProjectile, false))
+		if (func_38(pedParam0, outCoords, 90f, 0))
+			return true;
+
+	return false;
 }
 
-int func_38(int iParam0, struct<3> Param1, float fParam2, int iParam3)
+BOOL func_38(Ped pedParam0, var uParam1, var uParam2, var uParam3, float fParam4, int iParam5) // Position - 0x1BE8
 {
-	struct<3> Var0;
-	struct<3> Var1;
-	float fVar2;
-	
-	Var0 = { func_40(Param1 - unk_0xD1A6A821F5AC81DB(uParam0, 1)) };
-	if (fParam2 < 0,1f || fParam2 > 360f)
+	var unk;
+	var entityForwardVector;
+	float num;
+
+	unk = { func_40(uParam1 - ENTITY::GET_ENTITY_COORDS(pedParam0, true)) };
+
+	if (fParam4 < 0.1f || fParam4 > 360f)
+		return true;
+
+	if (iParam5 == 0)
+		entityForwardVector = { ENTITY::GET_ENTITY_FORWARD_VECTOR(pedParam0) };
+	else
+		entityForwardVector = { func_40(PED::GET_PED_BONE_COORDS(pedParam0, 31086, 0f, 5f, 0f) - PED::GET_PED_BONE_COORDS(pedParam0, 31086, 0f, 0f, 0f)) };
+
+	num = func_39(entityForwardVector, unk);
+
+	if (num <= SYSTEM::COS(fParam4 / 2f))
+		return false;
+
+	return true;
+}
+
+float func_39(float fParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5) // Position - 0x1C76
+{
+	return (fParam0 * uParam3) + (fParam0.f_1 * uParam3.f_1) + (fParam0.f_2 * uParam3.f_2);
+}
+
+Vector3 func_40(float fParam0, var uParam1, var uParam2) // Position - 0x1C97
+{
+	float num;
+	float num2;
+
+	num = SYSTEM::VMAG(fParam0);
+
+	if (num != 0f)
 	{
-		return 1;
-	}
-	if (iParam3 == 0)
-	{
-		Var1 = { unk_0x90D0E0397D3F7690(iParam0) };
+		num2 = 1f / num;
+		fParam0 = { fParam0 * { num2, num2, num2 } };
 	}
 	else
 	{
-		Var1 = { func_40(unk_0x83FDC027F0BEA202(iParam0, 31086, 0f, 5f, 0f) - unk_0x83FDC027F0BEA202(iParam0, 31086, 0f, 0f, 0f)) };
+		fParam0 = 0f;
+		fParam0.f_1 = 0f;
+		fParam0.f_2 = 0f;
 	}
-	fVar2 = func_39(Var1, Var0);
-	if (fVar2 <= system::cos((fParam2 / 2f)))
-	{
-		return 0;
-	}
-	return 1;
+
+	return fParam0;
 }
 
-float func_39(struct<3> Param0, struct<3> Param1)
-{
-	return (((Param0.f_0 * Param1.f_0) + (Param0.f_1 * Param1.f_1)) + (Param0.f_2 * Param1.f_2));
-}
-
-Vector3 func_40(struct<3> Param0)
-{
-	float fVar0;
-	float fVar1;
-	
-	fVar0 = system::vmag(Param0);
-	if (fVar0 != 0f)
-	{
-		fVar1 = (1f / fVar0);
-		Param0 = { Param0 * Vector(fVar1, fVar1, fVar1) };
-	}
-	else
-	{
-		Param0.f_0 = 0f;
-		Param0.f_1 = 0f;
-		Param0.f_2 = 0f;
-	}
-	return Param0;
-}
-
-int func_41(int iParam0, bool bParam1, float fParam2, float fParam3)
+BOOL func_41(Ped pedParam0, BOOL bParam1, float fParam2, float fParam3) // Position - 0x1CD6
 {
 	if (bParam1)
-	{
-		if (unk_0x65F146FF416F109F(unk_0x4A8C381C258A124D()))
-		{
-			if (unk_0xFAA48325A90263BE(unk_0x4A8C381C258A124D(), uParam0, fParam3, fParam3, fParam3, 0, 1, 0))
-			{
-				return 1;
-			}
-		}
-	}
-	if (unk_0x398315D0C90DE6F6(unk_0xD1A6A821F5AC81DB(uParam0, 1), fParam2, 1))
-	{
-		return 1;
-	}
-	return 0;
+		if (PED::IS_PED_SHOOTING(PLAYER::PLAYER_PED_ID()))
+			if (ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), pedParam0, fParam3, fParam3, fParam3, false, true, 0))
+				return true;
+
+	if (MISC::IS_BULLET_IN_AREA(ENTITY::GET_ENTITY_COORDS(pedParam0, true), fParam2, true))
+		return true;
+
+	return false;
 }
 
-int func_42(var uParam0)
+int _DOES_ENTITY_EXIST_AND_IS_ALIVE(Ped pedParam0) // Position - 0x1D1E
 {
-	if (unk_0xFC8BFE4B41177C22(uParam0))
-	{
-		if (!unk_0x1C2F771CDC87A3A5(uParam0, 0))
-		{
+	if (ENTITY::DOES_ENTITY_EXIST(pedParam0))
+		if (!ENTITY::IS_ENTITY_DEAD(pedParam0, false))
 			return 1;
-		}
-	}
+
 	return 0;
 }
 
-int func_43()
+BOOL func_43() // Position - 0x1D3F
 {
-	func_28(&iLocal_275, &iLocal_276);
+	func_28(&iLocal_279, &uLocal_282);
+
 	if (!func_44())
-	{
-		return 1;
-	}
-	return 0;
+		return true;
+
+	return false;
 }
 
-int func_44()
+BOOL func_44() // Position - 0x1D5F
 {
-	if (!unk_0x3555462DB47B7AB1() || unk_0x1403FEB4554982F8() == 3)
+	if (!STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS() || STREAMING::GET_PLAYER_SWITCH_TYPE() == 3)
+		return false;
+
+	if (STREAMING::GET_PLAYER_SWITCH_STATE() > 8)
 	{
-		return 0;
+		if (STREAMING::GET_PLAYER_SWITCH_STATE() != 11)
+			return false;
+	
+		if (STREAMING::GET_PLAYER_SWITCH_STATE() == 11)
+			if (STREAMING::GET_PLAYER_SWITCH_INTERP_OUT_DURATION() > 0)
+				if (STREAMING::GET_PLAYER_SWITCH_INTERP_OUT_CURRENT_TIME() > 100)
+					return false;
 	}
-	if (unk_0x6D231A0D52134FC1() > 8)
-	{
-		if (unk_0x6D231A0D52134FC1() != 11)
-		{
-			return 0;
-		}
-		if (unk_0x6D231A0D52134FC1() == 11)
-		{
-			if (unk_0x3F331BE6EB7BAC07() > 0)
-			{
-				if (unk_0xED93D3690FF8AF5F() > 100)
-				{
-					return 0;
-				}
-			}
-		}
-	}
-	return 1;
+
+	return true;
 }
 
-int func_45(int iParam0)
+int func_45(int iParam0) // Position - 0x1DB4
 {
 	return Global_113969.f_24907[iParam0 /*4*/];
 }
 
-int func_46()
+BOOL func_46() // Position - 0x1DC7
 {
-	var uVar0;
-	
+	Vehicle vehiclePedIsIn;
+
 	if (Global_4)
 	{
-		if (!unk_0x4FAFF4BCB7633475(unk_0x4A8C381C258A124D()))
+		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
-			if (unk_0x7F420695E3F776FB(unk_0x4A8C381C258A124D(), 0))
+			if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 			{
-				uVar0 = unk_0x6EF03BE64E058E2F(unk_0x4A8C381C258A124D(), 0);
-				if (unk_0xD9F5E1FEFD1329E4(uVar0, 0))
-				{
-					if (unk_0x050D073F91C5243C(uVar0))
-					{
-						return 0;
-					}
-				}
+				vehiclePedIsIn = PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false);
+			
+				if (VEHICLE::IS_VEHICLE_DRIVEABLE(vehiclePedIsIn, false))
+					if (VEHICLE::IS_PLAYBACK_GOING_ON_FOR_VEHICLE(vehiclePedIsIn))
+						return false;
 			}
 		}
 	}
-	if ((func_15(0) || func_15(3)) || func_15(2))
-	{
-		if (!unk_0x3555462DB47B7AB1() && !func_47())
-		{
-			return 1;
-		}
-	}
+
+	if (func_15(0) || func_15(3) || func_15(2))
+		if (!STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS() && !func_47())
+			return true;
+
 	if (func_17(8, -1))
-	{
-		return 1;
-	}
+		return true;
+
 	if (Global_2672855.f_62)
-	{
-		return 1;
-	}
+		return true;
+
 	if (Global_98991.f_44 == 1)
-	{
 		if (Global_98991.f_46 == 0)
-		{
-			return 1;
-		}
-	}
-	if (unk_0x3555462DB47B7AB1())
-	{
-		if (unk_0x1403FEB4554982F8() != 3)
-		{
-			if (unk_0x6D231A0D52134FC1() <= 2 && unk_0x6D231A0D52134FC1() != 1)
-			{
-				return 1;
-			}
-		}
-	}
-	return 0;
+			return true;
+
+	if (STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS())
+		if (STREAMING::GET_PLAYER_SWITCH_TYPE() != 3)
+			if (STREAMING::GET_PLAYER_SWITCH_STATE() <= 2 && STREAMING::GET_PLAYER_SWITCH_STATE() != 1)
+				return true;
+
+	return false;
 }
 
-int func_47()
+BOOL func_47() // Position - 0x1E9E
 {
-	if (unk_0x486FF5D06E9659F1(joaat("player_timetable_scene")) > 0)
-	{
-		return 1;
-	}
-	return 0;
+	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(-1424752554) > 0)
+		return true;
+
+	return false;
 }
 
-int func_48(int iParam0, int iParam1)
+int func_48(int iParam0, Entity eParam1) // Position - 0x1EB8
 {
-	struct<3> Var0;
-	float fVar1;
-	
-	if (unk_0x3555462DB47B7AB1())
-	{
-		if (unk_0x1403FEB4554982F8() != 3)
-		{
-			if (unk_0x6D231A0D52134FC1() <= 2 && unk_0x6D231A0D52134FC1() != 1)
-			{
+	Vector3 entityCoords;
+	float num;
+
+	if (STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS())
+		if (STREAMING::GET_PLAYER_SWITCH_TYPE() != 3)
+			if (STREAMING::GET_PLAYER_SWITCH_STATE() <= 2 && STREAMING::GET_PLAYER_SWITCH_STATE() != 1)
 				return 1;
-			}
-		}
-	}
-	if (!unk_0x3555462DB47B7AB1())
+
+	if (!STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS())
 	{
 		if (func_15(14))
-		{
 			return 0;
-		}
-		if (unk_0x7B42AC66804829CF())
-		{
+	
+		if (MISC::GET_IS_PLAYER_IN_ANIMAL_FORM())
 			return 0;
-		}
+	
 		if (!func_50(iParam0, func_51()))
-		{
 			return 0;
-		}
-		if (unk_0xFC8BFE4B41177C22(iParam1))
+	
+		if (ENTITY::DOES_ENTITY_EXIST(eParam1))
 		{
-			Var0 = { unk_0xD1A6A821F5AC81DB(iParam1, 0) };
-			fVar1 = system::vdist(unk_0xD1A6A821F5AC81DB(unk_0x4A8C381C258A124D(), 0), Var0);
-			if (fVar1 > 250f)
-			{
-				if (!unk_0x1C2F771CDC87A3A5(iParam1, 0))
-				{
-					if (!unk_0xCB5CAFF0A4A8B74B(iParam1))
-					{
+			entityCoords = { ENTITY::GET_ENTITY_COORDS(eParam1, false) };
+			num = SYSTEM::VDIST(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), entityCoords);
+		
+			if (num > 250f)
+				if (!ENTITY::IS_ENTITY_DEAD(eParam1, false))
+					if (!ENTITY::IS_ENTITY_ON_SCREEN(eParam1))
 						return 0;
-					}
-				}
-				else if (!unk_0x7B780C491DEC834E(Var0, 1,5f))
-				{
+				else if (!CAM::IS_SPHERE_VISIBLE(entityCoords, 1.5f))
 					return 0;
-				}
-			}
 		}
-		else if (iParam1 == func_49(Global_101254) && iParam1 != 0)
+		else if (eParam1 == func_49(Global_101254) && eParam1 != 0)
 		{
 			Global_101254 = 0;
 		}
 	}
+
 	return 1;
 }
 
-int func_49(var uParam0)
+Entity func_49(var uParam0) // Position - 0x1F9C
 {
 	return uParam0;
 }
 
-bool func_50(var uParam0, var uParam1)
+BOOL func_50(int iParam0, int iParam1) // Position - 0x1FA6
 {
-	return (uParam0 && uParam1) != 0;
+	return iParam0 && iParam1 != false;
 }
 
-int func_51()
+int func_51() // Position - 0x1FB5
 {
 	func_22();
+
 	switch (Global_113969.f_2366.f_539.f_4321)
 	{
-		case 0:
+		case CHAR_MICHAEL:
 			return 1;
-			break;
-		
-		case 1:
+	
+		case CHAR_FRANKLIN:
 			return 2;
-			break;
-		
-		case 2:
+	
+		case CHAR_TREVOR:
 			return 4;
-			break;
 	}
+
 	return 0;
 }
 
-void func_52()
+void func_52() // Position - 0x1FFB
 {
-	if (!unk_0x3555462DB47B7AB1())
+	if (!STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS())
 	{
-		if (unk_0x15CCE8886267624F())
-		{
+		if (CAM::IS_SCREEN_FADED_OUT())
 			func_55();
-		}
+	
 		return;
 	}
-	if (unk_0x1403FEB4554982F8() == 3)
+
+	if (STREAMING::GET_PLAYER_SWITCH_TYPE() == 3)
 	{
 		func_55();
 		return;
 	}
+
 	func_53();
+
 	if (Global_101256 > 0)
-	{
 		return;
-	}
-	unk_0x50821CA6BB13D3E4();
+
+	STREAMING::ALLOW_PLAYER_SWITCH_OUTRO();
+	return;
 }
 
-void func_53()
+void func_53() // Position - 0x203B
 {
-	func_54((Global_101256 - 1));
+	func_54(Global_101256 - 1);
+	return;
 }
 
-void func_54(int iParam0)
+void func_54(int iParam0) // Position - 0x204D
 {
 	Global_101256 = iParam0;
+	return;
 }
 
-void func_55()
+void func_55() // Position - 0x205B
 {
 	func_54(0);
+	return;
 }
 
-void func_56()
+void func_56() // Position - 0x2068
 {
-	int iVar0;
-	int iVar1;
-	bool bVar2;
+	int i;
+	int num;
+	BOOL flag;
+
+	num = 0;
+	flag = false;
+
+	while (!flag && num < 400)
+	{
+		flag = true;
 	
-	iVar1 = 0;
-	bVar2 = false;
-	while (!bVar2 && iVar1 < 400)
-	{
-		bVar2 = true;
-		iVar0 = 0;
-		while (iVar0 < iLocal_275)
+		for (i = 0; i < iLocal_279; i = i + 1)
 		{
-			if (iLocal_277[iVar0] != 0)
+			if (iLocal_285[i] != 0)
 			{
-				unk_0xEC9DAA34BBB4658C(iLocal_277[iVar0]);
-				if (!unk_0x6252BC0DD8A320DB(iLocal_277[iVar0]))
+				STREAMING::REQUEST_MODEL(iLocal_285[i]);
+			
+				if (!STREAMING::HAS_MODEL_LOADED(iLocal_285[i]))
 				{
-					bVar2 = false;
-					unk_0xEC9DAA34BBB4658C(iLocal_277[iVar0]);
+					flag = false;
+					STREAMING::REQUEST_MODEL(iLocal_285[i]);
 				}
 			}
-			if (iLocal_280[iVar0] != 0)
+		
+			if (uLocal_292[i] != 0)
 			{
-				unk_0xEC9DAA34BBB4658C(iLocal_280[iVar0]);
-				if (!unk_0x6252BC0DD8A320DB(iLocal_280[iVar0]))
+				STREAMING::REQUEST_MODEL(uLocal_292[i]);
+			
+				if (!STREAMING::HAS_MODEL_LOADED(uLocal_292[i]))
 				{
-					bVar2 = false;
-					unk_0xEC9DAA34BBB4658C(iLocal_280[iVar0]);
+					flag = false;
+					STREAMING::REQUEST_MODEL(uLocal_292[i]);
 				}
 			}
-			iVar0++;
 		}
-		if (!bVar2)
-		{
-			iVar1++;
-		}
-		system::wait(0);
+	
+		if (!flag)
+			num = num + 1;
+	
+		SYSTEM::WAIT(0);
 	}
-	unk_0x06CD913C241C765E("FIGHTERS", &iLocal_278);
-	iVar0 = 0;
-	while (iVar0 < iLocal_275)
+
+	PED::ADD_RELATIONSHIP_GROUP("FIGHTERS", &hLocal_288);
+
+	for (i = 0; i < iLocal_279; i = i + 1)
 	{
-		if (iLocal_277[iVar0] != 0)
+		if (iLocal_285[i] != 0)
 		{
-			iLocal_275[iVar0] = unk_0xB1DBFEB95C0EFB88(26, iLocal_277[iVar0], Local_282 + Local_284[iVar0 /*3*/], 0, 1, 1);
-			unk_0x5C96CEA06531AB03(iLocal_275[iVar0], (fLocal_283 + fLocal_285[iVar0]));
-			unk_0xC6E8E1D693021E9E(iLocal_275[iVar0], 0);
-			if (iLocal_277[iVar0] == joaat("s_m_y_baywatch_01"))
+			iLocal_279[i] = PED::CREATE_PED(PED_TYPE_MISSION, iLocal_285[i], uLocal_298 + uLocal_302[i /*3*/], 0, true, true);
+			ENTITY::SET_ENTITY_HEADING(iLocal_279[i], fLocal_301 + uLocal_309[i]);
+			PED::SET_PED_RANDOM_COMPONENT_VARIATION(iLocal_279[i], 0);
+		
+			if (iLocal_285[i] == 189425762)
+				if (PED::GET_PED_DRAWABLE_VARIATION(iLocal_279[i], PV_COMP_UPPR) == 0)
+					if (PED::GET_PED_DRAWABLE_VARIATION(iLocal_279[i], PV_COMP_DECL) != 1)
+						PED::SET_PED_COMPONENT_VARIATION(iLocal_279[i], PV_COMP_DECL, 1, 0, 0);
+				else if (PED::GET_PED_DRAWABLE_VARIATION(iLocal_279[i], PV_COMP_DECL) == 1)
+					if (PED::GET_PED_DRAWABLE_VARIATION(iLocal_279[i], PV_COMP_DECL) != 0)
+						PED::SET_PED_COMPONENT_VARIATION(iLocal_279[i], PV_COMP_DECL, 0, 0, 0);
+		
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(iLocal_279[i], hLocal_288);
+			TASK::TASK_STAND_STILL(iLocal_279[i], -1);
+		
+			if (iLocal_112 == 285)
 			{
-				if (unk_0xC0120BBCC298EA2F(iLocal_275[iVar0], 3) == 0)
-				{
-					if (unk_0xC0120BBCC298EA2F(iLocal_275[iVar0], 10) != 1)
-					{
-						unk_0xD1C578C204015E1F(iLocal_275[iVar0], 10, 1, 0, 0);
-					}
-				}
-				else if (unk_0xC0120BBCC298EA2F(iLocal_275[iVar0], 10) == 1)
-				{
-					if (unk_0xC0120BBCC298EA2F(iLocal_275[iVar0], 10) != 0)
-					{
-						unk_0xD1C578C204015E1F(iLocal_275[iVar0], 10, 0, 0, 0);
-					}
-				}
-			}
-			unk_0x3CEA1FD137ACE2D9(iLocal_275[iVar0], iLocal_278);
-			unk_0x0FD8B5F4BB15CD71(iLocal_275[iVar0], -1);
-			if (iLocal_108 == 285)
-			{
-				unk_0xF0259D91B002AE9F(iLocal_275[iVar0], 105);
-				unk_0xD25E9BDC14A0B649(iLocal_275[iVar0], 105, 0, 0);
+				ENTITY::SET_ENTITY_MAX_HEALTH(iLocal_279[i], 105);
+				ENTITY::SET_ENTITY_HEALTH(iLocal_279[i], 105, 0, 0);
 			}
 		}
-		if (iLocal_280[iVar0] != 0)
+	
+		if (uLocal_292[i] != 0)
 		{
-			uLocal_279[iVar0] = unk_0x4E55EAB577C13329(iLocal_280[iVar0], Local_282 + Local_284[iVar0 /*3*/], 1, 1, 0);
-			unk_0x5C96CEA06531AB03(uLocal_279[iVar0], (fLocal_283 + fLocal_285[iVar0]));
-			unk_0x4D306DD94DD6FDBA(uLocal_279[iVar0], iLocal_275[iVar0], unk_0x72F7E39FB49FC0BA(iLocal_275[iVar0], iLocal_281[iVar0]), 0f, 0f, 0f, 0f, 0f, 0f, 0, 0, 0, 0, 2, 1, 0);
+			uLocal_289[i] = OBJECT::CREATE_OBJECT(uLocal_292[i], uLocal_298 + uLocal_302[i /*3*/], true, true, false);
+			ENTITY::SET_ENTITY_HEADING(uLocal_289[i], fLocal_301 + uLocal_309[i]);
+			ENTITY::ATTACH_ENTITY_TO_ENTITY(uLocal_289[i], iLocal_279[i], PED::GET_PED_BONE_INDEX(iLocal_279[i], uLocal_295[i]), 0f, 0f, 0f, 0f, 0f, 0f, false, false, false, false, 2, true, 0);
 		}
-		iVar0++;
 	}
-	unk_0xD414C47AFF81382A(2, iLocal_278, joaat("player"));
-	unk_0xD414C47AFF81382A(2, joaat("player"), iLocal_278);
+
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, hLocal_288, 1862763509);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(2, 1862763509, hLocal_288);
+	return;
 }
 
-void func_57()
+void func_57() // Position - 0x22CD
 {
-	char[] cVar0[8];
-	var uVar1;
-	var uVar2;
-	
-	iLocal_108 = Global_100936;
-	func_61(iLocal_108, &Local_282, &fLocal_283, &cVar0);
-	func_59(iLocal_108, &sLocal_289, &cLocal_305, &cLocal_321, &uVar1, &uVar2);
-	Local_286[0 /*3*/] = { 0f, 0f, 0f };
-	Local_287[0 /*3*/] = { 0f, 0f, 0f };
-	fLocal_288[0] = 0f;
-	switch (iLocal_108)
+	var unk;
+	var unk9;
+	var unk10;
+
+	iLocal_112 = Global_100936;
+	func_61(iLocal_112, &uLocal_298, &fLocal_301, &unk);
+	func_59(iLocal_112, &uLocal_322, &uLocal_338, &uLocal_354, &unk9, &unk10);
+	uLocal_312[0 /*3*/] = { 0f, 0f, 0f };
+	uLocal_316[0 /*3*/] = { 0f, 0f, 0f };
+	uLocal_320[0] = 0f;
+
+	switch (iLocal_112)
 	{
 		case 108:
-			Local_284[0 /*3*/] = { -0,88f, 0,8016f, -1f };
-			fLocal_285[0] = -150f;
-			iLocal_277[0] = joaat("s_m_y_ranger_01");
-			iLocal_276[0] = 200;
-			StringCopy(&cLocal_337, "SWITCH@MICHAEL@PARKBENCH_SMOKE_RANGER", 64);
-			StringCopy(&(Local_346[0 /*16*/]), "Ranger_Nervous_Loop", 64);
-			StringCopy(&(Local_347[0 /*16*/]), "PARKBENCH_SMOKE_RANGER_EXIT_RANGER", 64);
-			StringCopy(&(Local_348[0 /*16*/]), "any", 64);
+			uLocal_302[0 /*3*/] = { -0.88f, 0.8016f, -1f };
+			uLocal_309[0] = -150f;
+			iLocal_285[0] = -277793362;
+			uLocal_282[0] = 200;
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_370, "SWITCH@MICHAEL@PARKBENCH_SMOKE_RANGER", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_386[0 /*16*/], "Ranger_Nervous_Loop", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_419[0 /*16*/], "PARKBENCH_SMOKE_RANGER_EXIT_RANGER", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_452[0 /*16*/], "any", 64);
 			break;
-		
+	
 		case 109:
-			Local_284[0 /*3*/] = { -1,1832f, -0,3745f, -1f };
-			fLocal_285[0] = -147f;
-			iLocal_277[0] = joaat("s_m_y_baywatch_01");
-			iLocal_276[0] = 200;
-			StringCopy(&cLocal_337, "SWITCH@MICHAEL@PARKBENCH_SMOKE_RANGER", 64);
-			StringCopy(&(Local_346[0 /*16*/]), "Ranger_Nervous_Loop", 64);
-			StringCopy(&(Local_347[0 /*16*/]), "PARKBENCH_SMOKE_RANGER_EXIT_RANGER", 64);
-			StringCopy(&(Local_348[0 /*16*/]), "any", 64);
+			uLocal_302[0 /*3*/] = { -1.1832f, -0.3745f, -1f };
+			uLocal_309[0] = -147f;
+			iLocal_285[0] = 189425762;
+			uLocal_282[0] = 200;
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_370, "SWITCH@MICHAEL@PARKBENCH_SMOKE_RANGER", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_386[0 /*16*/], "Ranger_Nervous_Loop", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_419[0 /*16*/], "PARKBENCH_SMOKE_RANGER_EXIT_RANGER", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_452[0 /*16*/], "any", 64);
 			break;
-		
+	
 		case 157:
-			Local_284[0 /*3*/] = { -0,8296f, 1,1365f, -0,9999f };
-			fLocal_285[0] = -176,3014f;
-			iLocal_277[0] = joaat("s_m_m_bouncer_01");
-			iLocal_276[0] = 100;
-			StringCopy(&cLocal_337, "SWITCH@MICHAEL@REJECTED_ENTRY", 64);
-			StringCopy(&(Local_346[0 /*16*/]), "001396_01_MICS3_6_REJECTED_ENTRY_IDLE_BOUNCER", 64);
-			StringCopy(&(Local_347[0 /*16*/]), "001396_01_MICS3_6_REJECTED_ENTRY_EXIT_BOUNCER", 64);
-			StringCopy(&(Local_348[0 /*16*/]), "WORLD_HUMAN_GUARD_STAND", 64);
+			uLocal_302[0 /*3*/] = { -0.8296f, 1.1365f, -0.9999f };
+			uLocal_309[0] = -176.3014f;
+			iLocal_285[0] = -1613485779;
+			uLocal_282[0] = 100;
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_370, "SWITCH@MICHAEL@REJECTED_ENTRY", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_386[0 /*16*/], "001396_01_MICS3_6_REJECTED_ENTRY_IDLE_BOUNCER", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_419[0 /*16*/], "001396_01_MICS3_6_REJECTED_ENTRY_EXIT_BOUNCER", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_452[0 /*16*/], "WORLD_HUMAN_GUARD_STAND", 64);
 			break;
-		
+	
 		case 166:
-			Local_284[0 /*3*/] = { Vector(36,037f, -476,663f, -1050,724f) - Local_282 };
-			fLocal_285[0] = unk_0xD2AA6F822D3A55D2(-180f, 180f);
-			iLocal_277[0] = joaat("s_m_m_security_01");
-			iLocal_276[0] = 100;
-			StringCopy(&cLocal_337, "SWITCH@MICHAEL@TALKS_TO_GUARD", 64);
-			StringCopy(&(Local_346[0 /*16*/]), "001393_02_MICS3_3_TALKS_TO_GUARD_IDLE_GUARD", 64);
-			StringCopy(&(Local_347[0 /*16*/]), "001393_02_MICS3_3_TALKS_TO_GUARD_EXIT_GUARD", 64);
-			StringCopy(&(Local_348[0 /*16*/]), "WORLD_HUMAN_CLIPBOARD", 64);
+			uLocal_302[0 /*3*/] = { { 36.037f, -476.663f, -1050.724f } - uLocal_298 };
+			uLocal_309[0] = MISC::GET_RANDOM_FLOAT_IN_RANGE(-180f, 180f);
+			iLocal_285[0] = -681004504;
+			uLocal_282[0] = 100;
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_370, "SWITCH@MICHAEL@TALKS_TO_GUARD", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_386[0 /*16*/], "001393_02_MICS3_3_TALKS_TO_GUARD_IDLE_GUARD", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_419[0 /*16*/], "001393_02_MICS3_3_TALKS_TO_GUARD_EXIT_GUARD", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_452[0 /*16*/], "WORLD_HUMAN_CLIPBOARD", 64);
 			break;
-		
+	
 		case 165:
-			Local_284[0 /*3*/] = { 0,1366f, -1,2192f, -1f };
-			fLocal_285[0] = 85,6329f;
-			iLocal_277[0] = joaat("s_m_y_grip_01");
-			iLocal_276[0] = 100;
-			StringCopy(&cLocal_337, "SWITCH@MICHAEL@BAR_EMPLOYEE_CONVO", 64);
-			StringCopy(&(Local_346[0 /*16*/]), "001387_03_MICS3_2_BAR_EMPLOYEE_CONVO_IDLE_STAFF", 64);
-			StringCopy(&(Local_347[0 /*16*/]), "001387_03_MICS3_2_BAR_EMPLOYEE_CONVO_EXIT_STAFF", 64);
-			StringCopy(&(Local_348[0 /*16*/]), "WORLD_HUMAN_CLIPBOARD", 64);
-			iLocal_280[0] = joaat("p_cs_clipboard");
-			iLocal_281[0] = 60309;
-			StringCopy(&Local_350, "MICHAEL", 16);
-			StringCopy(&Local_353, "PREMPLOYEE", 16);
-			Local_356 = { func_58("MICS3_IG_2", 3) };
-			fLocal_359 = 0,2f;
+			uLocal_302[0 /*3*/] = { 0.1366f, -1.2192f, -1f };
+			uLocal_309[0] = 85.6329f;
+			iLocal_285[0] = 815693290;
+			uLocal_282[0] = 100;
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_370, "SWITCH@MICHAEL@BAR_EMPLOYEE_CONVO", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_386[0 /*16*/], "001387_03_MICS3_2_BAR_EMPLOYEE_CONVO_IDLE_STAFF", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_419[0 /*16*/], "001387_03_MICS3_2_BAR_EMPLOYEE_CONVO_EXIT_STAFF", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_452[0 /*16*/], "WORLD_HUMAN_CLIPBOARD", 64);
+			uLocal_292[0] = 1027109416;
+			uLocal_295[0] = 60309;
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_488, "MICHAEL", 16);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_492, "PREMPLOYEE", 16);
+			uLocal_496 = { func_58("MICS3_IG_2", 3) };
+			fLocal_500 = 0.2f;
 			break;
-		
+	
 		case 246:
-			Local_284[0 /*3*/] = { Vector(4,6f, -1570,924f, -1194,77f) - Local_282 + Vector(-1f, 0f, 0f) };
-			fLocal_285[0] = (0,61f - fLocal_283);
-			Local_284[1 /*3*/] = { -1,3617f, 6,7273f, -1f };
-			fLocal_285[1] = -3,6142f;
-			iLocal_277[0] = joaat("a_m_y_musclbeac_01");
-			iLocal_277[1] = joaat("a_m_y_musclbeac_01");
-			iLocal_276[0] = 100;
-			iLocal_276[1] = 100;
-			StringCopy(&cLocal_337, "SWITCH@TREVOR@PUSHES_BODYBUILDER", 64);
-			StringCopy(&(Local_346[0 /*16*/]), "001426_03_TRVS_5_PUSHES_BODYBUILDER_IDLE_BB1", 64);
-			StringCopy(&(Local_346[1 /*16*/]), "001426_03_TRVS_5_PUSHES_BODYBUILDER_IDLE_BB2", 64);
-			StringCopy(&(Local_347[0 /*16*/]), "001426_03_TRVS_5_PUSHES_BODYBUILDER_EXIT_BB1", 64);
-			StringCopy(&(Local_347[1 /*16*/]), "001426_03_TRVS_5_PUSHES_BODYBUILDER_EXIT_BB2", 64);
-			StringCopy(&(Local_348[0 /*16*/]), "any", 64);
-			StringCopy(&(Local_348[1 /*16*/]), "WORLD_HUMAN_MUSCLE_FREE_WEIGHTS", 64);
+			uLocal_302[0 /*3*/] = { ({ 4.6f, -1570.9237f, -1194.7703f } - uLocal_298) + { -1f, 0f, 0f } };
+			uLocal_309[0] = 0.61f - fLocal_301;
+			uLocal_302[1 /*3*/] = { -1.3617f, 6.7273f, -1f };
+			uLocal_309[1] = -3.6142f;
+			iLocal_285[0] = 1264920838;
+			iLocal_285[1] = 1264920838;
+			uLocal_282[0] = 100;
+			uLocal_282[1] = 100;
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_370, "SWITCH@TREVOR@PUSHES_BODYBUILDER", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_386[0 /*16*/], "001426_03_TRVS_5_PUSHES_BODYBUILDER_IDLE_BB1", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_386[1 /*16*/], "001426_03_TRVS_5_PUSHES_BODYBUILDER_IDLE_BB2", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_419[0 /*16*/], "001426_03_TRVS_5_PUSHES_BODYBUILDER_EXIT_BB1", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_419[1 /*16*/], "001426_03_TRVS_5_PUSHES_BODYBUILDER_EXIT_BB2", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_452[0 /*16*/], "any", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_452[1 /*16*/], "WORLD_HUMAN_MUSCLE_FREE_WEIGHTS", 64);
 			break;
-		
+	
 		case 256:
-			Local_284[0 /*3*/] = { -4,7f, -0,2f, 0f };
-			fLocal_285[0] = 143f;
-			iLocal_277[0] = joaat("a_m_m_business_01");
-			iLocal_276[0] = 0;
-			iLocal_276[1] = 0;
-			Local_286[0 /*3*/] = { -3,65f, -1,2f, 1,5f };
-			Local_287[0 /*3*/] = { 2,5f, 1,25f, 2f };
-			fLocal_288[0] = -12f;
-			StringCopy(&(Local_348[0 /*16*/]), "WORLD_HUMAN_GUARD_STAND", 64);
+			uLocal_302[0 /*3*/] = { -4.7f, -0.2f, 0f };
+			uLocal_309[0] = 143f;
+			iLocal_285[0] = 2120901815;
+			uLocal_282[0] = 0;
+			uLocal_282[1] = 0;
+			uLocal_312[0 /*3*/] = { -3.65f, -1.2f, 1.5f };
+			uLocal_316[0 /*3*/] = { 2.5f, 1.25f, 2f };
+			uLocal_320[0] = -12f;
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_452[0 /*16*/], "WORLD_HUMAN_GUARD_STAND", 64);
 			break;
-		
+	
 		case 257:
-			Local_284[0 /*3*/] = { Vector(7,1578f, -978,6192f, -1666,374f) - Local_282 };
-			fLocal_285[0] = -149,0587f;
-			iLocal_277[0] = joaat("a_m_m_business_01");
-			iLocal_276[0] = 0;
-			iLocal_276[1] = 0;
-			Local_286[0 /*3*/] = { 0,4f, -4,1f, 1,8f };
-			Local_287[0 /*3*/] = { 2,5f, 1,5f, 2f };
-			fLocal_288[0] = 57f;
-			StringCopy(&(Local_348[0 /*16*/]), "WORLD_HUMAN_GUARD_STAND", 64);
+			uLocal_302[0 /*3*/] = { { 7.1578f, -978.6192f, -1666.3738f } - uLocal_298 };
+			uLocal_309[0] = -149.0587f;
+			iLocal_285[0] = 2120901815;
+			uLocal_282[0] = 0;
+			uLocal_282[1] = 0;
+			uLocal_312[0 /*3*/] = { 0.4f, -4.1f, 1.8f };
+			uLocal_316[0 /*3*/] = { 2.5f, 1.5f, 2f };
+			uLocal_320[0] = 57f;
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_452[0 /*16*/], "WORLD_HUMAN_GUARD_STAND", 64);
 			break;
-		
+	
 		case 258:
-			Local_284[0 /*3*/] = { 1,5f, 5,7035f, 0f };
-			Local_284[1 /*3*/] = { 4,2393f, 4,1781f, 0f };
-			fLocal_285[0] = 145,8f;
-			fLocal_285[1] = 130,32f;
-			iLocal_277[0] = joaat("a_m_m_salton_01");
-			iLocal_277[1] = joaat("a_m_m_salton_01");
-			iLocal_276[0] = 0;
-			iLocal_276[1] = 0;
-			Local_286[0 /*3*/] = { 2,1f, 4,3f, 2f };
-			Local_287[0 /*3*/] = { 2,5f, 1,75f, 2f };
-			fLocal_288[0] = 33f;
-			StringCopy(&(Local_348[0 /*16*/]), "WORLD_HUMAN_GUARD_STAND", 64);
-			StringCopy(&(Local_348[1 /*16*/]), "WORLD_HUMAN_GUARD_STAND", 64);
+			uLocal_302[0 /*3*/] = { 1.5f, 5.7035f, 0f };
+			uLocal_302[1 /*3*/] = { 4.2393f, 4.1781f, 0f };
+			uLocal_309[0] = 145.8f;
+			uLocal_309[1] = 130.32f;
+			iLocal_285[0] = 1328415626;
+			iLocal_285[1] = 1328415626;
+			uLocal_282[0] = 0;
+			uLocal_282[1] = 0;
+			uLocal_312[0 /*3*/] = { 2.1f, 4.3f, 2f };
+			uLocal_316[0 /*3*/] = { 2.5f, 1.75f, 2f };
+			uLocal_320[0] = 33f;
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_452[0 /*16*/], "WORLD_HUMAN_GUARD_STAND", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_452[1 /*16*/], "WORLD_HUMAN_GUARD_STAND", 64);
 			break;
-		
+	
 		case 259:
-			Local_284[0 /*3*/] = { unk_0xD2AA6F822D3A55D2(-10f, 10f), unk_0xD2AA6F822D3A55D2(-10f, 10f), 0f };
-			Local_284[1 /*3*/] = { unk_0xD2AA6F822D3A55D2(-10f, 10f), unk_0xD2AA6F822D3A55D2(-10f, 10f), 0f };
-			fLocal_285[0] = unk_0xD2AA6F822D3A55D2(-180f, 180f);
-			fLocal_285[1] = unk_0xD2AA6F822D3A55D2(-180f, 180f);
-			iLocal_277[0] = joaat("a_m_m_malibu_01");
-			iLocal_276[0] = 100;
-			iLocal_276[1] = 100;
-			StringCopy(&cLocal_337, "SWITCH@TREVOR@YELLS_AT_DOORMAN", 64);
-			StringCopy(&(Local_346[0 /*16*/]), "001430_01_TRVS_21_YELLS_AT_DOORMAN_IDLE_DMAN1", 64);
-			StringCopy(&(Local_346[1 /*16*/]), "001430_01_TRVS_21_YELLS_AT_DOORMAN_IDLE_DMAN2", 64);
-			StringCopy(&(Local_347[0 /*16*/]), "001430_01_TRVS_21_YELLS_AT_DOORMAN_EXIT_DMAN1", 64);
-			StringCopy(&(Local_347[1 /*16*/]), "001430_01_TRVS_21_YELLS_AT_DOORMAN_EXIT_DMAN2", 64);
-			StringCopy(&(Local_348[0 /*16*/]), "", 64);
-			StringCopy(&(Local_348[1 /*16*/]), "", 64);
+			uLocal_302[0 /*3*/] = { MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), 0f };
+			uLocal_302[1 /*3*/] = { MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), 0f };
+			uLocal_309[0] = MISC::GET_RANDOM_FLOAT_IN_RANGE(-180f, 180f);
+			uLocal_309[1] = MISC::GET_RANDOM_FLOAT_IN_RANGE(-180f, 180f);
+			iLocal_285[0] = 803106487;
+			uLocal_282[0] = 100;
+			uLocal_282[1] = 100;
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_370, "SWITCH@TREVOR@YELLS_AT_DOORMAN", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_386[0 /*16*/], "001430_01_TRVS_21_YELLS_AT_DOORMAN_IDLE_DMAN1", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_386[1 /*16*/], "001430_01_TRVS_21_YELLS_AT_DOORMAN_IDLE_DMAN2", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_419[0 /*16*/], "001430_01_TRVS_21_YELLS_AT_DOORMAN_EXIT_DMAN1", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_419[1 /*16*/], "001430_01_TRVS_21_YELLS_AT_DOORMAN_EXIT_DMAN2", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_452[0 /*16*/], "", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_452[1 /*16*/], "", 64);
 			break;
-		
+	
 		case 285:
-			Local_284[0 /*3*/] = { -3,264f, -3,7895f, 14,1815f };
-			fLocal_285[0] = 0f;
-			iLocal_277[0] = joaat("g_m_y_lost_01");
-			iLocal_276[0] = 100;
-			StringCopy(&cLocal_337, "SWITCH@TREVOR@BRIDGE", 64);
-			StringCopy(&(Local_346[0 /*16*/]), "HOLD_LOOP_victim", 64);
-			StringCopy(&(Local_347[0 /*16*/]), "THROW_EXIT_victim", 64);
-			StringCopy(&(Local_348[0 /*16*/]), "", 64);
-			StringCopy(&Local_350, "TREVOR", 16);
-			StringCopy(&Local_353, "DropGuy", 16);
-			StringCopy(&Local_356, "TRVS_IG_29G", 16);
-			fLocal_359 = 0,75f;
+			uLocal_302[0 /*3*/] = { -3.264f, -3.7895f, 14.1815f };
+			uLocal_309[0] = 0f;
+			iLocal_285[0] = 1330042375;
+			uLocal_282[0] = 100;
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_370, "SWITCH@TREVOR@BRIDGE", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_386[0 /*16*/], "HOLD_LOOP_victim", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_419[0 /*16*/], "THROW_EXIT_victim", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_452[0 /*16*/], "", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_488, "TREVOR", 16);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_492, "DropGuy", 16);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_496, "TRVS_IG_29G", 16);
+			fLocal_500 = 0.75f;
 			break;
-		
+	
 		case 260:
-			Local_284[0 /*3*/] = { 0,219f, 5,8091f, 0,6f };
-			Local_284[1 /*3*/] = { 2,4f, 4,6336f, 0,6f };
-			fLocal_285[0] = -164,16f;
-			fLocal_285[1] = 166,32f;
-			iLocal_277[0] = joaat("a_m_m_business_01");
-			iLocal_277[1] = joaat("a_m_m_business_01");
-			iLocal_276[0] = 0;
-			iLocal_276[1] = 0;
-			Local_286[0 /*3*/] = { 4f, 8f, 2f };
-			Local_287[0 /*3*/] = { 10,5f, 5,5f, 2f };
-			fLocal_288[0] = 0f;
+			uLocal_302[0 /*3*/] = { 0.219f, 5.8091f, 0.6f };
+			uLocal_302[1 /*3*/] = { 2.4f, 4.6336f, 0.6f };
+			uLocal_309[0] = -164.16f;
+			uLocal_309[1] = 166.32f;
+			iLocal_285[0] = 2120901815;
+			iLocal_285[1] = 2120901815;
+			uLocal_282[0] = 0;
+			uLocal_282[1] = 0;
+			uLocal_312[0 /*3*/] = { 4f, 8f, 2f };
+			uLocal_316[0 /*3*/] = { 10.5f, 5.5f, 2f };
+			uLocal_320[0] = 0f;
 			break;
-		
+	
 		case 261:
-			Local_284[0 /*3*/] = { 3,2998f, -1,8338f, 0,1366f };
-			Local_284[1 /*3*/] = { 2,0737f, -3,6041f, 0,1348f };
-			fLocal_285[0] = -169,9514f;
-			fLocal_285[1] = 156,719f;
-			iLocal_276[0] = 0;
-			iLocal_276[1] = 0;
-			iLocal_277[0] = joaat("s_m_m_bouncer_01");
-			iLocal_277[1] = joaat("s_m_m_bouncer_01");
-			Local_286[0 /*3*/] = { 3f, -3f, 2f };
-			Local_287[0 /*3*/] = { 4,5f, 2,5f, 2f };
-			fLocal_288[0] = 9f;
+			uLocal_302[0 /*3*/] = { 3.2998f, -1.8338f, 0.1366f };
+			uLocal_302[1 /*3*/] = { 2.0737f, -3.6041f, 0.1348f };
+			uLocal_309[0] = -169.9514f;
+			uLocal_309[1] = 156.719f;
+			uLocal_282[0] = 0;
+			uLocal_282[1] = 0;
+			iLocal_285[0] = -1613485779;
+			iLocal_285[1] = -1613485779;
+			uLocal_312[0 /*3*/] = { 3f, -3f, 2f };
+			uLocal_316[0 /*3*/] = { 4.5f, 2.5f, 2f };
+			uLocal_320[0] = 9f;
 			break;
-		
+	
 		case 239:
-			Local_284[0 /*3*/] = { Vector(113,05f, 354,39f, -52,2f) - Local_282 + Vector(-1f, 0f, 0f) };
-			Local_284[1 /*3*/] = { Vector(113,05f, 354,08f, -53,18f) - Local_282 + Vector(-1f, 0f, 0f) };
-			fLocal_285[0] = -100f;
-			fLocal_285[1] = -100f;
-			iLocal_277[0] = joaat("a_m_m_business_01");
-			iLocal_277[1] = joaat("a_m_m_business_01");
-			Local_286[0 /*3*/] = { 1,6187f, -0,82f, 1f };
-			Local_287[0 /*3*/] = { (2,5f + 0,5f), 8f, 2f };
-			fLocal_288[0] = 6f;
-			iLocal_276[0] = 100;
-			iLocal_276[1] = 100;
-			StringCopy(&cLocal_337, "SWITCH@TREVOR@ESCORTED_OUT", 64);
-			StringCopy(&(Local_346[0 /*16*/]), "001215_02_TRVS_12_ESCORTED_OUT_IDLE_GUARD1", 64);
-			StringCopy(&(Local_346[1 /*16*/]), "001215_02_TRVS_12_ESCORTED_OUT_IDLE_GUARD2", 64);
-			StringCopy(&(Local_347[0 /*16*/]), "001215_02_TRVS_12_ESCORTED_OUT_EXIT_GUARD1", 64);
-			StringCopy(&(Local_347[1 /*16*/]), "001215_02_TRVS_12_ESCORTED_OUT_EXIT_GUARD2", 64);
-			StringCopy(&(Local_348[0 /*16*/]), "WORLD_HUMAN_GUARD_STAND", 64);
-			StringCopy(&(Local_348[1 /*16*/]), "WORLD_HUMAN_GUARD_STAND", 64);
+			uLocal_302[0 /*3*/] = { ({ 113.05f, 354.39f, -52.2f } - uLocal_298) + { -1f, 0f, 0f } };
+			uLocal_302[1 /*3*/] = { ({ 113.05f, 354.08f, -53.18f } - uLocal_298) + { -1f, 0f, 0f } };
+			uLocal_309[0] = -100f;
+			uLocal_309[1] = -100f;
+			iLocal_285[0] = 2120901815;
+			iLocal_285[1] = 2120901815;
+			uLocal_312[0 /*3*/] = { 1.6187f, -0.82f, 1f };
+			uLocal_316[0 /*3*/] = { 2.5f + 0.5f, 8f, 2f };
+			uLocal_320[0] = 6f;
+			uLocal_282[0] = 100;
+			uLocal_282[1] = 100;
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_370, "SWITCH@TREVOR@ESCORTED_OUT", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_386[0 /*16*/], "001215_02_TRVS_12_ESCORTED_OUT_IDLE_GUARD1", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_386[1 /*16*/], "001215_02_TRVS_12_ESCORTED_OUT_IDLE_GUARD2", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_419[0 /*16*/], "001215_02_TRVS_12_ESCORTED_OUT_EXIT_GUARD1", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_419[1 /*16*/], "001215_02_TRVS_12_ESCORTED_OUT_EXIT_GUARD2", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_452[0 /*16*/], "WORLD_HUMAN_GUARD_STAND", 64);
+			TEXT_LABEL_ASSIGN_STRING(&uLocal_452[1 /*16*/], "WORLD_HUMAN_GUARD_STAND", 64);
 			break;
-		
+	
 		default:
-			Local_284[0 /*3*/] = { unk_0xD2AA6F822D3A55D2(-10f, 10f), unk_0xD2AA6F822D3A55D2(-10f, 10f), 0f };
-			Local_284[1 /*3*/] = { unk_0xD2AA6F822D3A55D2(-10f, 10f), unk_0xD2AA6F822D3A55D2(-10f, 10f), 0f };
-			fLocal_285[0] = unk_0xD2AA6F822D3A55D2(-180f, 180f);
-			fLocal_285[1] = unk_0xD2AA6F822D3A55D2(-180f, 180f);
-			iLocal_277[0] = joaat("a_m_y_musclbeac_01");
-			iLocal_277[1] = joaat("a_m_y_musclbeac_01");
-			Local_286[0 /*3*/] = { unk_0xD2AA6F822D3A55D2(-10f, 10f), unk_0xD2AA6F822D3A55D2(-10f, 10f), 0f };
-			Local_287[0 /*3*/] = { 1f, 1f, 1f };
-			fLocal_288[0] = unk_0xD2AA6F822D3A55D2(-180f, 180f);
+			uLocal_302[0 /*3*/] = { MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), 0f };
+			uLocal_302[1 /*3*/] = { MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), 0f };
+			uLocal_309[0] = MISC::GET_RANDOM_FLOAT_IN_RANGE(-180f, 180f);
+			uLocal_309[1] = MISC::GET_RANDOM_FLOAT_IN_RANGE(-180f, 180f);
+			iLocal_285[0] = 1264920838;
+			iLocal_285[1] = 1264920838;
+			uLocal_312[0 /*3*/] = { MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), 0f };
+			uLocal_316[0 /*3*/] = { 1f, 1f, 1f };
+			uLocal_320[0] = MISC::GET_RANDOM_FLOAT_IN_RANGE(-180f, 180f);
 			break;
 	}
+
+	return;
 }
 
-struct<4> func_58(char* sParam0, int iParam1)
+struct<4> func_58(char* sParam0, int iParam1) // Position - 0x2C76
 {
-	struct<4> Var0;
-	
-	StringCopy(&Var0, sParam0, 16);
-	switch (unk_0xC5935DFB3F39785A(0, iParam1))
+	var unk;
+
+	TEXT_LABEL_ASSIGN_STRING(&unk, sParam0, 16);
+
+	switch (MISC::GET_RANDOM_INT_IN_RANGE(0, iParam1))
 	{
 		case 0:
-			StringConCat(&Var0, "a", 16);
+			TEXT_LABEL_APPEND_STRING(&unk, "a", 16);
 			break;
-		
+	
 		case 1:
-			StringConCat(&Var0, "b", 16);
+			TEXT_LABEL_APPEND_STRING(&unk, "b", 16);
 			break;
-		
+	
 		case 2:
-			StringConCat(&Var0, "c", 16);
+			TEXT_LABEL_APPEND_STRING(&unk, "c", 16);
 			break;
-		
+	
 		default:
-			StringConCat(&Var0, "X", 16);
+			TEXT_LABEL_APPEND_STRING(&unk, "X", 16);
 			break;
 	}
-	return Var0;
+
+	return unk;
 }
 
-int func_59(int iParam0, char* sParam1, char* sParam2, char* sParam3, var uParam4, var uParam5)
+int func_59(int iParam0, char* sParam1, char* sParam2, char* sParam3, var uParam4, var uParam5) // Position - 0x2CD2
 {
 	*uParam4 = 9;
 	*uParam5 = 0;
+
 	switch (iParam0)
 	{
 		case 11:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@STRIPCLUB", 64);
-			StringCopy(sParam2, "002113_02_FRAS_15_STRIPCLUB_IDLE", 64);
-			StringCopy(sParam3, "002113_02_FRAS_15_STRIPCLUB_EXIT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@STRIPCLUB", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "002113_02_FRAS_15_STRIPCLUB_IDLE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "002113_02_FRAS_15_STRIPCLUB_EXIT", 64);
 			return 1;
-			break;
-		
+	
 		case 124:
-			StringCopy(sParam1, "SWITCH@MICHAEL@WASH_FACE", 64);
-			StringCopy(sParam2, "LOOP_Michael", 64);
-			StringCopy(sParam3, "EXIT_Michael", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@WASH_FACE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "LOOP_Michael", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "EXIT_Michael", 64);
 			return 1;
-			break;
-		
+	
 		case 234:
-			StringCopy(sParam1, "SWITCH@TREVOR@ON_TOILET", 64);
-			StringCopy(sParam2, "trev_on_toilet_loop", 64);
-			StringCopy(sParam3, "trev_on_toilet_exit", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@ON_TOILET", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "trev_on_toilet_loop", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "trev_on_toilet_exit", 64);
 			*uParam4 = 1545;
 			*uParam5 = 1544;
 			return 1;
-			break;
-		
+	
 		case 316:
-			StringCopy(sParam1, "SWITCH@TREVOR@JERKING_OFF", 64);
-			StringCopy(sParam2, "trev_jerking_off_loop", 64);
-			StringCopy(sParam3, "trev_jerking_off_exit", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@JERKING_OFF", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "trev_jerking_off_loop", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "trev_jerking_off_exit", 64);
 			*uParam4 = 1545;
 			*uParam5 = 1544;
 			return 1;
-			break;
-		
+	
 		case 77:
-			StringCopy(sParam1, "SWITCH@MICHAEL@BEDROOM", 64);
-			StringCopy(sParam2, "BED_LOOP_Michael", 64);
-			StringCopy(sParam3, "BED_EXIT_Michael", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@BEDROOM", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "BED_LOOP_Michael", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "BED_EXIT_Michael", 64);
 			return 1;
-			break;
-		
+	
 		case 78:
-			StringCopy(sParam1, "SWITCH@MICHAEL@BEDROOM2", 64);
-			StringCopy(sParam2, "BED_LOOP_Michael", 64);
-			StringCopy(sParam3, "BED_EXIT_Michael", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@BEDROOM2", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "BED_LOOP_Michael", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "BED_EXIT_Michael", 64);
 			return 1;
-			break;
-		
+	
 		case 79:
-			StringCopy(sParam1, "SAFE@MICHAEL@IG_3", 64);
-			StringCopy(sParam2, "BASE_MICHAEL", 64);
-			StringCopy(sParam3, "EXIT_MICHAEL", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SAFE@MICHAEL@IG_3", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "BASE_MICHAEL", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "EXIT_MICHAEL", 64);
 			return 1;
-			break;
-		
+	
 		case 80:
-			StringCopy(sParam1, "SWITCH@MICHAEL@SITTING", 64);
-			StringCopy(sParam2, "IDLE", 64);
-			StringCopy(sParam3, "EXIT_FORWARD", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@SITTING", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "IDLE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "EXIT_FORWARD", 64);
 			return 1;
-			break;
-		
+	
 		case 82:
-			StringCopy(sParam1, "SWITCH@MICHAEL@WAKES_UP_SCREAMING", 64);
-			StringCopy(sParam2, "001671_02_MICS2_1_WAKES_UP_SCREAMING_IDLE", 64);
-			StringCopy(sParam3, "001671_02_MICS2_1_WAKES_UP_SCREAMING_EXIT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@WAKES_UP_SCREAMING", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001671_02_MICS2_1_WAKES_UP_SCREAMING_IDLE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001671_02_MICS2_1_WAKES_UP_SCREAMING_EXIT", 64);
 			return 1;
-			break;
-		
+	
 		case 84:
-			StringCopy(sParam1, "SAVECountryside@", 64);
-			StringCopy(sParam2, "M_Sleep_Loop_countryside", 64);
-			StringCopy(sParam3, "M_GetOut_countryside", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SAVECountryside@", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "M_Sleep_Loop_countryside", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "M_GetOut_countryside", 64);
 			return 1;
-			break;
-		
+	
 		case 83:
-			StringCopy(sParam1, "SWITCH@MICHAEL@WAKES_UP_SCARED", 64);
-			StringCopy(sParam2, "001672_02_MICS2_1_WAKES_UP_SCARED_IDLE", 64);
-			StringCopy(sParam3, "001672_02_MICS2_1_WAKES_UP_SCARED_EXIT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@WAKES_UP_SCARED", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001672_02_MICS2_1_WAKES_UP_SCARED_IDLE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001672_02_MICS2_1_WAKES_UP_SCARED_EXIT", 64);
 			return 1;
-			break;
-		
+	
 		case 85:
-			StringCopy(sParam1, "SWITCH@MICHAEL@WATCHING_TV", 64);
-			StringCopy(sParam2, "LOOP_Michael", 64);
-			StringCopy(sParam3, "EXIT_Michael", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@WATCHING_TV", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "LOOP_Michael", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "EXIT_Michael", 64);
 			return 1;
-			break;
-		
+	
 		case 291:
-			StringCopy(sParam1, "SWITCH@TREVOR@WATCHING_TV", 64);
-			StringCopy(sParam2, "LOOP", 64);
-			StringCopy(sParam3, "EXIT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@WATCHING_TV", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "LOOP", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "EXIT", 64);
 			return 1;
-			break;
-		
+	
 		case 128:
-			StringCopy(sParam1, "SWITCH@MICHAEL@SITTING", 64);
-			StringCopy(sParam2, "IDLE", 64);
-			StringCopy(sParam3, "EXIT_FORWARD", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@SITTING", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "IDLE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "EXIT_FORWARD", 64);
 			return 1;
-			break;
-		
+	
 		case 86:
-			StringCopy(sParam1, "SWITCH@MICHAEL@ON_SOFA", 64);
-			StringCopy(sParam2, "BASE_Michael", 64);
-			StringCopy(sParam3, "EXIT_Michael", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@ON_SOFA", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "BASE_Michael", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "EXIT_Michael", 64);
 			return 1;
-			break;
-		
+	
 		case 87:
 		case 88:
 		case 184:
 		case 185:
-			StringCopy(sParam1, "SWITCH@MICHAEL@SUNLOUNGER", 64);
-			StringCopy(sParam2, "SunLounger_Idle", 64);
-			StringCopy(sParam3, "SunLounger_GetUp", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@SUNLOUNGER", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "SunLounger_Idle", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "SunLounger_GetUp", 64);
 			*uParam4 = 1545;
 			*uParam5 = 1544;
 			return 1;
-			break;
-		
+	
 		case 89:
 		case 90:
-			StringCopy(sParam1, "SWITCH@MICHAEL@SLEEP_IN_CAR", 64);
-			StringCopy(sParam2, "BASE_MICHAEL", 64);
-			StringCopy(sParam3, "SLEEP_IN_CAR_MICHAEL", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@SLEEP_IN_CAR", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "BASE_MICHAEL", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "SLEEP_IN_CAR_MICHAEL", 64);
 			return 1;
-			break;
-		
+	
 		case 127:
-			StringCopy(sParam1, "SWITCH@MICHAEL@SLEEP_IN_CAR", 64);
-			StringCopy(sParam2, "BASE_PREMIER_MICHAEL", 64);
-			StringCopy(sParam3, "SLEEP_IN_CAR_PREMIER_MICHAEL", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@SLEEP_IN_CAR", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "BASE_PREMIER_MICHAEL", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "SLEEP_IN_CAR_PREMIER_MICHAEL", 64);
 			return 1;
-			break;
-		
+	
 		case 91:
 		case 92:
 		case 93:
 		case 104:
 		case 81:
 		case 126:
-			StringCopy(sParam1, "SWITCH@MICHAEL@SMOKING2", 64);
-			StringCopy(sParam2, "LOOP", 64);
-			StringCopy(sParam3, "EXIT", 64);
-			*uParam4 |= 1536;
-			*uParam5 |= 1536;
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@SMOKING2", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "LOOP", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "EXIT", 64);
+			*uParam4 = *uParam4 | 1536;
+			*uParam5 = *uParam5 | 1536;
 			return 1;
-			break;
-		
+	
 		case 94:
-			StringCopy(sParam1, "SWITCH@MICHAEL@CAFE", 64);
-			StringCopy(sParam2, "LOOP_Michael", 64);
-			StringCopy(sParam3, "EXIT_Michael", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@CAFE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "LOOP_Michael", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "EXIT_Michael", 64);
 			return 1;
-			break;
-		
+	
 		case 95:
-			StringCopy(sParam1, "SWITCH@MICHAEL@EXIT_RESTAURANT", 64);
-			StringCopy(sParam2, "mic_exit_restaurant_loop", 64);
-			StringCopy(sParam3, "mic_exit_restaurant_exit", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@EXIT_RESTAURANT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "mic_exit_restaurant_loop", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "mic_exit_restaurant_exit", 64);
 			return 1;
-			break;
-		
+	
 		case 134:
-			StringCopy(sParam1, "SWITCH@MICHAEL@DRUNK_BAR", 64);
-			StringCopy(sParam2, "Drunk_Idle_PED", 64);
-			StringCopy(sParam3, "Drunk_Exit_PED", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@DRUNK_BAR", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "Drunk_Idle_PED", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "Drunk_Exit_PED", 64);
 			return 1;
-			break;
-		
+	
 		case 108:
 		case 109:
-			StringCopy(sParam1, "SWITCH@MICHAEL@PARKBENCH_SMOKE_RANGER", 64);
-			StringCopy(sParam2, "parkbench_smoke_ranger_loop", 64);
-			StringCopy(sParam3, "parkbench_smoke_ranger_exit", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@PARKBENCH_SMOKE_RANGER", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "parkbench_smoke_ranger_loop", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "parkbench_smoke_ranger_exit", 64);
 			return 1;
-			break;
-		
+	
 		case 112:
 		case 113:
 		case 123:
-			StringCopy(sParam1, "SWITCH@MICHAEL@SITTING_ON_CAR_BONNET", 64);
-			StringCopy(sParam2, "sitting_on_car_bonnet_loop", 64);
-			StringCopy(sParam3, "sitting_on_car_bonnet_exit", 64);
-			*uParam4 |= 1536;
-			*uParam5 |= 1536;
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@SITTING_ON_CAR_BONNET", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "sitting_on_car_bonnet_loop", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "sitting_on_car_bonnet_exit", 64);
+			*uParam4 = *uParam4 | 1536;
+			*uParam5 = *uParam5 | 1536;
 			return 1;
-			break;
-		
+	
 		case 41:
 		case 135:
 		case 136:
 		case 137:
 		case 138:
 		case 139:
-			StringCopy(sParam1, "SWITCH@MICHAEL@SITTING_ON_CAR_PREMIERE", 64);
-			StringCopy(sParam2, "SITTING_ON_CAR_PREMIERE_LOOP_PLAYER", 64);
-			StringCopy(sParam3, "SITTING_ON_CAR_PREMIERE_EXIT_PLAYER", 64);
-			*uParam4 |= 1536;
-			*uParam5 |= 1536;
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@SITTING_ON_CAR_PREMIERE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "SITTING_ON_CAR_PREMIERE_LOOP_PLAYER", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "SITTING_ON_CAR_PREMIERE_EXIT_PLAYER", 64);
+			*uParam4 = *uParam4 | 1536;
+			*uParam5 = *uParam5 | 1536;
 			return 1;
-			break;
-		
+	
 		case 114:
-			StringCopy(sParam1, "SWITCH@MICHAEL@PHARMACY", 64);
-			StringCopy(sParam2, "mics1_ig_11_loop", 64);
-			StringCopy(sParam3, "mics1_ig_11_exit", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@PHARMACY", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "mics1_ig_11_loop", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "mics1_ig_11_exit", 64);
 			return 1;
-			break;
-		
+	
 		case 105:
-			StringCopy(sParam1, "SWITCH@MICHAEL@STUCKINTRAFFIC", 64);
-			StringCopy(sParam2, "", 64);
-			StringCopy(sParam3, "StuckInTraffic_Aggitated", 64);
-			*uParam5 |= 32;
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@STUCKINTRAFFIC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "StuckInTraffic_Aggitated", 64);
+			*uParam5 = *uParam5 | 32;
 			return 1;
-			break;
-		
+	
 		case 106:
-			StringCopy(sParam1, "SWITCH@MICHAEL@STUCKINTRAFFIC", 64);
-			StringCopy(sParam2, "", 64);
-			StringCopy(sParam3, "StuckInTraffic_HitWheel", 64);
-			*uParam5 |= 32;
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@STUCKINTRAFFIC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "StuckInTraffic_HitWheel", 64);
+			*uParam5 = *uParam5 | 32;
 			return 1;
-			break;
-		
+	
 		case 107:
-			StringCopy(sParam1, "SWITCH@MICHAEL@STUCKINTRAFFIC", 64);
-			StringCopy(sParam2, "", 64);
-			StringCopy(sParam3, "StuckInTraffic_HitHorn", 64);
-			*uParam5 |= 32;
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@STUCKINTRAFFIC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "StuckInTraffic_HitHorn", 64);
+			*uParam5 = *uParam5 | 32;
 			return 1;
-			break;
-		
+	
 		case 98:
-			StringCopy(sParam1, "SWITCH@MICHAEL@AMANDA_EXITS_CAR", 64);
-			StringCopy(sParam2, "000606_02_MICS1_5_AMANDA_EXITS_CAR_IDLE_MIC", 64);
-			StringCopy(sParam3, "000606_02_MICS1_5_AMANDA_EXITS_CAR_EXIT_MIC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@AMANDA_EXITS_CAR", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "000606_02_MICS1_5_AMANDA_EXITS_CAR_IDLE_MIC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "000606_02_MICS1_5_AMANDA_EXITS_CAR_EXIT_MIC", 64);
 			return 1;
-			break;
-		
+	
 		case 170:
-			StringCopy(sParam1, "SWITCH@MICHAEL@OPENS_DOOR_FOR_AMA", 64);
-			StringCopy(sParam2, "001895_02_MICS3_17_OPENS_DOOR_FOR_AMA_IDLE_MIC", 64);
-			StringCopy(sParam3, "001895_02_MICS3_17_OPENS_DOOR_FOR_AMA_EXIT_MIC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@OPENS_DOOR_FOR_AMA", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001895_02_MICS3_17_OPENS_DOOR_FOR_AMA_IDLE_MIC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001895_02_MICS3_17_OPENS_DOOR_FOR_AMA_EXIT_MIC", 64);
 			return 1;
-			break;
-		
+	
 		case 171:
-			StringCopy(sParam1, "SWITCH@MICHAEL@DROPPING_OFF_JMY", 64);
-			StringCopy(sParam2, "001839_02_MICS3_20_DROPPING_OFF_JMY_IDLE_MIC", 64);
-			StringCopy(sParam3, "001839_02_MICS3_20_DROPPING_OFF_JMY_EXIT_MIC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@DROPPING_OFF_JMY", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001839_02_MICS3_20_DROPPING_OFF_JMY_IDLE_MIC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001839_02_MICS3_20_DROPPING_OFF_JMY_EXIT_MIC", 64);
 			return 1;
-			break;
-		
+	
 		case 172:
-			StringCopy(sParam1, "SWITCH@MICHAEL@TRACY_EXITS_CAR", 64);
-			StringCopy(sParam2, "001840_01_MICS3_IG_21_TRACY_EXITS_CAR_IDLE_MIC", 64);
-			StringCopy(sParam3, "001840_01_MICS3_IG_21_TRACY_EXITS_CAR_MIC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@TRACY_EXITS_CAR", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001840_01_MICS3_IG_21_TRACY_EXITS_CAR_IDLE_MIC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001840_01_MICS3_IG_21_TRACY_EXITS_CAR_MIC", 64);
 			return 1;
-			break;
-		
+	
 		case 103:
-			StringCopy(sParam1, "SWITCH@MICHAEL@PIER", 64);
-			StringCopy(sParam2, "pier_lean_smoke_idle", 64);
-			StringCopy(sParam3, "pier_lean_smoke_outro", 64);
-			*uParam5 |= 68;
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@PIER", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "pier_lean_smoke_idle", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "pier_lean_smoke_outro", 64);
+			*uParam5 = *uParam5 | 68;
 			return 1;
-			break;
-		
+	
 		case 121:
-			StringCopy(sParam1, "SWITCH@MICHAEL@MARINA", 64);
-			StringCopy(sParam2, "loop", 64);
-			StringCopy(sParam3, "exit", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@MARINA", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "loop", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "exit", 64);
 			return 1;
-			break;
-		
+	
 		case 122:
-			StringCopy(sParam1, "SWITCH@MICHAEL@ARGUE_WITH_AMANDA", 64);
-			StringCopy(sParam2, "argue_with_amanda_loop_michael", 64);
-			StringCopy(sParam3, "argue_with_amanda_exit_michael", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@ARGUE_WITH_AMANDA", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "argue_with_amanda_loop_michael", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "argue_with_amanda_exit_michael", 64);
 			return 1;
-			break;
-		
+	
 		case 125:
-			StringCopy(sParam1, "SWITCH@MICHAEL@WALK_AND_TALK", 64);
-			StringCopy(sParam2, "", 64);
-			StringCopy(sParam3, "Im_A_Married_Man_Michael", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@WALK_AND_TALK", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "Im_A_Married_Man_Michael", 64);
 			return 1;
-			break;
-		
+	
 		case 115:
 		case 116:
 		case 117:
 		case 97:
 		case 162:
-			StringCopy(sParam1, "SWITCH@MICHAEL@CAFE", 64);
-			StringCopy(sParam2, "Cafe_Idle_PED", 64);
-			StringCopy(sParam3, "Cafe_Exit_PED", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@CAFE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "Cafe_Idle_PED", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "Cafe_Exit_PED", 64);
 			return 1;
-			break;
-		
+	
 		case 110:
 		case 111:
 		case 131:
 		case 132:
-			StringCopy(sParam1, "SWITCH@MICHAEL@BENCH", 64);
-			StringCopy(sParam2, "bench_on_phone_idle", 64);
-			StringCopy(sParam3, "EXIT_FORWARD", 64);
-			*uParam4 |= 1024;
-			*uParam5 |= 1026;
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@BENCH", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "bench_on_phone_idle", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "EXIT_FORWARD", 64);
+			*uParam4 = *uParam4 | 1024;
+			*uParam5 = *uParam5 | 1026;
 			return 1;
-			break;
-		
+	
 		case 129:
-			StringCopy(sParam1, "SWITCH@MICHAEL@ON_CLUBCHAIR", 64);
-			StringCopy(sParam2, "Switch_ON_CLUBCHAIR_BASE", 64);
-			StringCopy(sParam3, "Switch_ON_CLUBCHAIR", 64);
-			*uParam4 |= 1024;
-			*uParam5 |= 1024;
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@ON_CLUBCHAIR", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "Switch_ON_CLUBCHAIR_BASE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "Switch_ON_CLUBCHAIR", 64);
+			*uParam4 = *uParam4 | 1024;
+			*uParam5 = *uParam5 | 1024;
 			return 1;
-			break;
-		
+	
 		case 130:
-			StringCopy(sParam1, "SAFE@MICHAEL@IG_5", 64);
-			StringCopy(sParam2, "BASE_MICHAEL", 64);
-			StringCopy(sParam3, "EXIT_1_MICHAEL", 64);
-			*uParam4 |= 1024;
-			*uParam5 |= 1024;
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SAFE@MICHAEL@IG_5", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "BASE_MICHAEL", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "EXIT_1_MICHAEL", 64);
+			*uParam4 = *uParam4 | 1024;
+			*uParam5 = *uParam5 | 1024;
 			return 1;
-			break;
-		
+	
 		case 150:
-			StringCopy(sParam1, "SWITCH@MICHAEL@RONEX_IG_5_P2", 64);
-			StringCopy(sParam2, "BASE_MICHAEL", 64);
-			StringCopy(sParam3, "RONEX_IG5_P2_MICHAEL", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@RONEX_IG_5_P2", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "BASE_MICHAEL", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "RONEX_IG5_P2_MICHAEL", 64);
 			return 1;
-			break;
-		
+	
 		case 151:
-			StringCopy(sParam1, "SWITCH@MICHAEL@RESTAURANT", 64);
-			StringCopy(sParam2, "001510_02_GC_MICS3_IG_1_BASE_MICHAEL", 64);
-			StringCopy(sParam3, "001510_02_GC_MICS3_IG_1_EXIT_MICHAEL", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@RESTAURANT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001510_02_GC_MICS3_IG_1_BASE_MICHAEL", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001510_02_GC_MICS3_IG_1_EXIT_MICHAEL", 64);
 			return 1;
-			break;
-		
+	
 		case 152:
-			StringCopy(sParam1, "SWITCH@MICHAEL@LOUNGE_CHAIRS", 64);
-			StringCopy(sParam2, "001523_01_MICS3_9_LOUNGE_CHAIRS_IDLE_MIC", 64);
-			StringCopy(sParam3, "001523_01_MICS3_9_LOUNGE_CHAIRS_EXIT_MIC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@LOUNGE_CHAIRS", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001523_01_MICS3_9_LOUNGE_CHAIRS_IDLE_MIC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001523_01_MICS3_9_LOUNGE_CHAIRS_EXIT_MIC", 64);
 			return 1;
-			break;
-		
+	
 		case 153:
-			StringCopy(sParam1, "SWITCH@MICHAEL@GOODBYE_TO_SOLOMAN", 64);
-			StringCopy(sParam2, "001400_01_MICS3_5_BYE_TO_SOLOMAN_IDLE", 64);
-			StringCopy(sParam3, "001400_01_MICS3_5_BYE_TO_SOLOMAN_EXIT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@GOODBYE_TO_SOLOMAN", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001400_01_MICS3_5_BYE_TO_SOLOMAN_IDLE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001400_01_MICS3_5_BYE_TO_SOLOMAN_EXIT", 64);
 			return 1;
-			break;
-		
+	
 		case 154:
-			StringCopy(sParam1, "SWITCH@MICHAEL@GOODBYE_TO_SOLOMAN", 64);
-			StringCopy(sParam2, "LOOP_Michael", 64);
-			StringCopy(sParam3, "EXIT_Michael", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@GOODBYE_TO_SOLOMAN", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "LOOP_Michael", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "EXIT_Michael", 64);
 			return 1;
-			break;
-		
+	
 		case 155:
-			StringCopy(sParam1, "SWITCH@MICHAEL@AMA_TENNIS", 64);
-			StringCopy(sParam2, "001833_01_MICS3_18_AMA_TENNIS_IDLE_MIC", 64);
-			StringCopy(sParam3, "001833_01_MICS3_18_AMA_TENNIS_EXIT_MIC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@AMA_TENNIS", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001833_01_MICS3_18_AMA_TENNIS_IDLE_MIC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001833_01_MICS3_18_AMA_TENNIS_EXIT_MIC", 64);
 			return 1;
-			break;
-		
+	
 		case 156:
-			StringCopy(sParam1, "SWITCH@MICHAEL@AROUND_THE_TABLE_SELFISH", 64);
-			StringCopy(sParam2, "AROUND_THE_TABLE_SELFISH_BASE_Michael", 64);
-			StringCopy(sParam3, "AROUND_THE_TABLE_SELFISH_Michael", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@AROUND_THE_TABLE_SELFISH", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "AROUND_THE_TABLE_SELFISH_BASE_Michael", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "AROUND_THE_TABLE_SELFISH_Michael", 64);
 			return 1;
-			break;
-		
+	
 		case 157:
-			StringCopy(sParam1, "SWITCH@MICHAEL@REJECTED_ENTRY", 64);
-			StringCopy(sParam2, "001396_01_MICS3_6_REJECTED_ENTRY_IDLE_MIC", 64);
-			StringCopy(sParam3, "001396_01_MICS3_6_REJECTED_ENTRY_EXIT_MIC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@REJECTED_ENTRY", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001396_01_MICS3_6_REJECTED_ENTRY_IDLE_MIC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001396_01_MICS3_6_REJECTED_ENTRY_EXIT_MIC", 64);
 			return 1;
-			break;
-		
+	
 		case 159:
-			StringCopy(sParam1, "SWITCH@MICHAEL@EXITS_BARBER", 64);
-			StringCopy(sParam2, "001406_01_MICS3_7_EXITS_BARBER_IDLE", 64);
-			StringCopy(sParam3, "001406_01_MICS3_7_EXITS_BARBER_EXIT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@EXITS_BARBER", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001406_01_MICS3_7_EXITS_BARBER_IDLE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001406_01_MICS3_7_EXITS_BARBER_EXIT", 64);
 			return 1;
-			break;
-		
+	
 		case 160:
-			StringCopy(sParam1, "SWITCH@MICHAEL@EXITS_FANCYSHOP", 64);
-			StringCopy(sParam2, "001405_01_MICS3_8_EXITS_FANCYSHOP_IDLE", 64);
-			StringCopy(sParam3, "001405_01_MICS3_8_EXITS_FANCYSHOP_EXIT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@EXITS_FANCYSHOP", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001405_01_MICS3_8_EXITS_FANCYSHOP_IDLE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001405_01_MICS3_8_EXITS_FANCYSHOP_EXIT", 64);
 			return 1;
-			break;
-		
+	
 		case 161:
-			StringCopy(sParam1, "SWITCH@MICHAEL@SMOKING", 64);
-			StringCopy(sParam2, "LOOP_Michael", 64);
-			StringCopy(sParam3, "EXIT_Michael", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@SMOKING", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "LOOP_Michael", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "EXIT_Michael", 64);
 			return 1;
-			break;
-		
+	
 		case 163:
-			StringCopy(sParam1, "SWITCH@MICHAEL@GETS_READY", 64);
-			StringCopy(sParam2, "001520_02_MICS3_14_GETS_READY_IDLE_MIC", 64);
-			StringCopy(sParam3, "001520_02_MICS3_14_GETS_READY_EXIT_MIC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@GETS_READY", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001520_02_MICS3_14_GETS_READY_IDLE_MIC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001520_02_MICS3_14_GETS_READY_EXIT_MIC", 64);
 			return 1;
-			break;
-		
+	
 		case 164:
-			StringCopy(sParam1, "SWITCH@MICHAEL@READS_SCRIPT", 64);
-			StringCopy(sParam2, "001404_01_MICS3_16_READS_SCRIPT_IDLE", 64);
-			StringCopy(sParam3, "001404_01_MICS3_16_READS_SCRIPT_EXIT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@READS_SCRIPT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001404_01_MICS3_16_READS_SCRIPT_IDLE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001404_01_MICS3_16_READS_SCRIPT_EXIT", 64);
 			return 1;
-			break;
-		
+	
 		case 165:
-			StringCopy(sParam1, "SWITCH@MICHAEL@BAR_EMPLOYEE_CONVO", 64);
-			StringCopy(sParam2, "001387_03_MICS3_2_BAR_EMPLOYEE_CONVO_IDLE_MIC", 64);
-			StringCopy(sParam3, "001387_03_MICS3_2_BAR_EMPLOYEE_CONVO_EXIT_MIC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@BAR_EMPLOYEE_CONVO", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001387_03_MICS3_2_BAR_EMPLOYEE_CONVO_IDLE_MIC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001387_03_MICS3_2_BAR_EMPLOYEE_CONVO_EXIT_MIC", 64);
 			return 1;
-			break;
-		
+	
 		case 158:
-			StringCopy(sParam1, "SWITCH@MICHAEL@PROSTITUTE", 64);
-			StringCopy(sParam2, "BASE_MICHAEL", 64);
-			StringCopy(sParam3, "EXIT_MICHAEL", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@PROSTITUTE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "BASE_MICHAEL", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "EXIT_MICHAEL", 64);
 			return 1;
-			break;
-		
+	
 		case 166:
-			StringCopy(sParam1, "SWITCH@MICHAEL@TALKS_TO_GUARD", 64);
-			StringCopy(sParam2, "001393_02_MICS3_3_TALKS_TO_GUARD_IDLE_MIC", 64);
-			StringCopy(sParam3, "001393_02_MICS3_3_TALKS_TO_GUARD_EXIT_MIC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@TALKS_TO_GUARD", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001393_02_MICS3_3_TALKS_TO_GUARD_IDLE_MIC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001393_02_MICS3_3_TALKS_TO_GUARD_EXIT_MIC", 64);
 			return 1;
-			break;
-		
+	
 		case 167:
-			StringCopy(sParam1, "SWITCH@MICHAEL@ON_SET_W_JMY", 64);
-			StringCopy(sParam2, "", 64);
-			StringCopy(sParam3, "001513_03_GC_MICS3_IG_4_ON_SET_W_JMY_EXIT_MIC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@ON_SET_W_JMY", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001513_03_GC_MICS3_IG_4_ON_SET_W_JMY_EXIT_MIC", 64);
 			return 1;
-			break;
-		
+	
 		case 168:
-			StringCopy(sParam1, "SWITCH@MICHAEL@TV_W_KIDS", 64);
-			StringCopy(sParam2, "001520_02_MICS3_14_TV_W_KIDS_IDLE_MIC", 64);
-			StringCopy(sParam3, "001520_02_MICS3_14_TV_W_KIDS_EXIT_MIC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@TV_W_KIDS", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001520_02_MICS3_14_TV_W_KIDS_IDLE_MIC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001520_02_MICS3_14_TV_W_KIDS_EXIT_MIC", 64);
 			return 1;
-			break;
-		
+	
 		case 173:
-			StringCopy(sParam1, "SWITCH@MICHAEL@BIKING_WITH_JIMMY", 64);
-			StringCopy(sParam2, "LOOP_Michael", 64);
-			StringCopy(sParam3, "EXIT_Michael", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@BIKING_WITH_JIMMY", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "LOOP_Michael", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "EXIT_Michael", 64);
 			return 1;
-			break;
-		
+	
 		case 169:
-			StringCopy(sParam1, "SWITCH@MICHAEL@GAMING_W_JMY", 64);
-			StringCopy(sParam2, "001518_02_MICS3_11_GAMING_W_JMY_IDLE_MIC", 64);
-			StringCopy(sParam3, "001518_02_MICS3_11_GAMING_W_JMY_EXIT_MIC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@GAMING_W_JMY", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001518_02_MICS3_11_GAMING_W_JMY_IDLE_MIC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001518_02_MICS3_11_GAMING_W_JMY_EXIT_MIC", 64);
 			return 1;
-			break;
 	}
+
 	switch (iParam0)
 	{
 		case 186:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@CLEANING_APT", 64);
-			StringCopy(sParam2, "001918_01_FRAS_V2_1_CLEANING_APT_IDLE", 64);
-			StringCopy(sParam3, "001918_01_FRAS_V2_1_CLEANING_APT_EXIT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@CLEANING_APT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001918_01_FRAS_V2_1_CLEANING_APT_IDLE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001918_01_FRAS_V2_1_CLEANING_APT_EXIT", 64);
 			return 1;
-			break;
-		
+	
 		case 187:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@ON_CELL", 64);
-			StringCopy(sParam2, "001914_01_FRAS_V2_2_ON_CELL_IDLE", 64);
-			StringCopy(sParam3, "001914_01_FRAS_V2_2_ON_CELL_EXIT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@ON_CELL", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001914_01_FRAS_V2_2_ON_CELL_IDLE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001914_01_FRAS_V2_2_ON_CELL_EXIT", 64);
 			return 1;
-			break;
-		
+	
 		case 188:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@SNACKING", 64);
-			StringCopy(sParam2, "001922_01_FRAS_V2_3_SNACKING_IDLE", 64);
-			StringCopy(sParam3, "001922_01_FRAS_V2_3_SNACKING_EXIT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@SNACKING", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001922_01_FRAS_V2_3_SNACKING_IDLE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001922_01_FRAS_V2_3_SNACKING_EXIT", 64);
 			return 1;
-			break;
-		
+	
 		case 189:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@ON_LAPTOP", 64);
-			StringCopy(sParam2, "001927_01_FRAS_V2_4_ON_LAPTOP_IDLE", 64);
-			StringCopy(sParam3, "001927_01_FRAS_V2_4_ON_LAPTOP_EXIT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@ON_LAPTOP", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001927_01_FRAS_V2_4_ON_LAPTOP_IDLE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001927_01_FRAS_V2_4_ON_LAPTOP_EXIT", 64);
 			return 1;
-			break;
-		
+	
 		case 190:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@IRONING", 64);
-			StringCopy(sParam2, "001947_01_GC_FRAS_V2_IG_6_BASE", 64);
-			StringCopy(sParam3, "001947_01_GC_FRAS_V2_IG_6_EXIT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@IRONING", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001947_01_GC_FRAS_V2_IG_6_BASE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001947_01_GC_FRAS_V2_IG_6_EXIT", 64);
 			return 1;
-			break;
-		
+	
 		case 191:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@WATCHING_TV", 64);
-			StringCopy(sParam2, "001915_01_FRAS_V2_8_WATCHING_TV_IDLE", 64);
-			StringCopy(sParam3, "001915_01_FRAS_V2_8_WATCHING_TV_EXIT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@WATCHING_TV", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001915_01_FRAS_V2_8_WATCHING_TV_IDLE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001915_01_FRAS_V2_8_WATCHING_TV_EXIT", 64);
 			return 1;
-			break;
-		
+	
 		case 175:
 		case 176:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@BED", 64);
-			StringCopy(sParam2, "Sleep_LOOP", 64);
-			StringCopy(sParam3, "Sleep_GetUp_RubEyes", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@BED", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "Sleep_LOOP", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "Sleep_GetUp_RubEyes", 64);
 			return 1;
-			break;
-		
+	
 		case 177:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@NAPPING", 64);
-			StringCopy(sParam2, "002333_01_FRAS_V2_10_NAPPING_IDLE", 64);
-			StringCopy(sParam3, "002333_01_FRAS_V2_10_NAPPING_EXIT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@NAPPING", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "002333_01_FRAS_V2_10_NAPPING_IDLE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "002333_01_FRAS_V2_10_NAPPING_EXIT", 64);
 			return 1;
-			break;
-		
+	
 		case 178:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@GETTING_READY", 64);
-			StringCopy(sParam2, "002334_02_FRAS_V2_11_GETTING_DRESSED_IDLE", 64);
-			StringCopy(sParam3, "002334_02_FRAS_V2_11_GETTING_DRESSED_EXIT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@GETTING_READY", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "002334_02_FRAS_V2_11_GETTING_DRESSED_IDLE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "002334_02_FRAS_V2_11_GETTING_DRESSED_EXIT", 64);
 			return 1;
-			break;
-		
+	
 		case 179:
 		case 180:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@BED", 64);
-			StringCopy(sParam2, "Bed_Reading_LOOP", 64);
-			StringCopy(sParam3, "Bed_Reading_GetUp", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@BED", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "Bed_Reading_LOOP", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "Bed_Reading_GetUp", 64);
 			return 1;
-			break;
-		
+	
 		case 181:
 		case 182:
 		case 183:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@PRESS_UPS", 64);
-			StringCopy(sParam2, "PressUps_LOOP", 64);
-			StringCopy(sParam3, "PressUps_OUT", 64);
-			*uParam4 |= 1024;
-			*uParam5 |= 1024;
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@PRESS_UPS", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "PressUps_LOOP", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "PressUps_OUT", 64);
+			*uParam4 = *uParam4 | 1024;
+			*uParam5 = *uParam5 | 1024;
 			return 1;
-			break;
-		
+	
 		case 192:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@002110_04_MAGD_3_WEED_EXCHANGE", 64);
-			StringCopy(sParam2, "002110_04_MAGD_3_WEED_EXCHANGE_SHOPKEEPER", 64);
-			StringCopy(sParam3, "002110_04_MAGD_3_WEED_EXCHANGE_FRANKLIN", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@002110_04_MAGD_3_WEED_EXCHANGE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "002110_04_MAGD_3_WEED_EXCHANGE_SHOPKEEPER", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "002110_04_MAGD_3_WEED_EXCHANGE_FRANKLIN", 64);
 			return 1;
-			break;
-		
+	
 		case 193:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@DISPENSARY", 64);
-			StringCopy(sParam2, "exit_dispensary_idle", 64);
-			StringCopy(sParam3, "exit_dispensary_outro_ped", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@DISPENSARY", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "exit_dispensary_idle", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "exit_dispensary_outro_ped", 64);
 			return 1;
-			break;
-		
+	
 		case 194:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@DISPENSARY", 64);
-			StringCopy(sParam2, "exit_dispensary_idle", 64);
-			StringCopy(sParam3, "exit_dispensary_outro", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@DISPENSARY", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "exit_dispensary_idle", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "exit_dispensary_outro", 64);
 			return 1;
-			break;
-		
+	
 		case 195:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@DISPENSARY", 64);
-			StringCopy(sParam2, "exit_dispensary_idle", 64);
-			StringCopy(sParam3, "exit_dispensary_outro", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@DISPENSARY", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "exit_dispensary_idle", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "exit_dispensary_outro", 64);
 			return 1;
-			break;
-		
+	
 		case 198:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@GARBAGE", 64);
-			StringCopy(sParam2, "Garbage_Idle_PLYR", 64);
-			StringCopy(sParam3, "Garbage_Toss_PLYR", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@GARBAGE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "Garbage_Idle_PLYR", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "Garbage_Toss_PLYR", 64);
 			return 1;
-			break;
-		
+	
 		case 199:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@GARBAGE_B", 64);
-			StringCopy(sParam2, "Garbage_Idle_PLYR", 64);
-			StringCopy(sParam3, "Garbage_Toss_PLYR", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@GARBAGE_B", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "Garbage_Idle_PLYR", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "Garbage_Toss_PLYR", 64);
 			return 1;
-			break;
-		
+	
 		case 200:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@THROW_CUP", 64);
-			StringCopy(sParam2, "throw_cup_loop", 64);
-			StringCopy(sParam3, "throw_cup_exit", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@THROW_CUP", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "throw_cup_loop", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "throw_cup_exit", 64);
 			return 1;
-			break;
-		
+	
 		case 201:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@HIT_CUP_HAND", 64);
-			StringCopy(sParam2, "hit_cup_hand_loop", 64);
-			StringCopy(sParam3, "hit_cup_hand_exit", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@HIT_CUP_HAND", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "hit_cup_hand_loop", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "hit_cup_hand_exit", 64);
 			return 1;
-			break;
-		
+	
 		case 202:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@GYM", 64);
-			StringCopy(sParam2, "001942_02_GC_FRAS_IG_5_BASE", 64);
-			StringCopy(sParam3, "001942_02_GC_FRAS_IG_5_EXIT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@GYM", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001942_02_GC_FRAS_IG_5_BASE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001942_02_GC_FRAS_IG_5_EXIT", 64);
 			return 1;
-			break;
-		
+	
 		case 203:
 		case 206:
 		case 207:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@PLAYS_W_DOG", 64);
-			StringCopy(sParam2, "001916_01_FRAS_V2_9_PLAYS_W_DOG_IDLE", 64);
-			StringCopy(sParam3, "001916_01_FRAS_V2_9_PLAYS_W_DOG_EXIT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@PLAYS_W_DOG", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001916_01_FRAS_V2_9_PLAYS_W_DOG_IDLE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001916_01_FRAS_V2_9_PLAYS_W_DOG_EXIT", 64);
 			return 1;
-			break;
-		
+	
 		case 204:
 		case 205:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@PLAYS_W_DOG", 64);
-			StringCopy(sParam2, "001916_01_FRAS_V2_9_PLAYS_W_DOG_IDLE", 64);
-			StringCopy(sParam3, "001916_01_FRAS_V2_9_PLAYS_W_DOG_EXIT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@PLAYS_W_DOG", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001916_01_FRAS_V2_9_PLAYS_W_DOG_IDLE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001916_01_FRAS_V2_9_PLAYS_W_DOG_EXIT", 64);
 			return 1;
-			break;
-		
+	
 		case 211:
 		case 213:
 		case 216:
 		case 217:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@ADMIRE_MOTORCYCLE", 64);
-			StringCopy(sParam2, "BASE_FRANKLIN", 64);
-			StringCopy(sParam3, "EXIT_FRANKLIN", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@ADMIRE_MOTORCYCLE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "BASE_FRANKLIN", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "EXIT_FRANKLIN", 64);
 			return 1;
-			break;
-		
+	
 		case 212:
 		case 214:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@CLEANING_CAR", 64);
-			StringCopy(sParam2, "001946_01_GC_FRAS_V2_IG_5_BASE", 64);
-			StringCopy(sParam3, "001946_01_GC_FRAS_V2_IG_5_EXIT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@CLEANING_CAR", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001946_01_GC_FRAS_V2_IG_5_BASE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001946_01_GC_FRAS_V2_IG_5_EXIT", 64);
 			return 1;
-			break;
-		
+	
 		case 196:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@TANISHA_ARGUE", 64);
-			StringCopy(sParam2, "BASE_Franklin", 64);
-			StringCopy(sParam3, "Tanisha_Argue_Franklin", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@TANISHA_ARGUE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "BASE_Franklin", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "Tanisha_Argue_Franklin", 64);
 			return 1;
-			break;
-		
+	
 		case 197:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@WALK_AROUND_HOUSE", 64);
-			StringCopy(sParam2, "IDLE_FRANKLIN", 64);
-			StringCopy(sParam3, "EXIT_FRANKLIN", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@WALK_AROUND_HOUSE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "IDLE_FRANKLIN", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "EXIT_FRANKLIN", 64);
 			return 1;
-			break;
-		
+	
 		case 215:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@BYE_TAXI", 64);
-			StringCopy(sParam2, "001938_01_FRAS_V2_7_BYE_TAXI_IDLE_FRA", 64);
-			StringCopy(sParam3, "001938_01_FRAS_V2_7_BYE_TAXI_EXIT_FRA", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@BYE_TAXI", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001938_01_FRAS_V2_7_BYE_TAXI_IDLE_FRA", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001938_01_FRAS_V2_7_BYE_TAXI_EXIT_FRA", 64);
 			return 1;
-			break;
-		
+	
 		case 221:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@PICKUP_LINE", 64);
-			StringCopy(sParam2, "base_Franklin", 64);
-			StringCopy(sParam3, "switch_P1_Franklin", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@PICKUP_LINE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "base_Franklin", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "switch_P1_Franklin", 64);
 			return 1;
-			break;
-		
+	
 		case 222:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@CHOPSHOP", 64);
-			StringCopy(sParam2, "BASE", 64);
-			StringCopy(sParam3, "CheckShoe", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@CHOPSHOP", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "BASE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "CheckShoe", 64);
 			return 1;
-			break;
-		
+	
 		case 223:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@CHOPSHOP", 64);
-			StringCopy(sParam2, "BASE", 64);
-			StringCopy(sParam3, "WipeHands", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@CHOPSHOP", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "BASE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "WipeHands", 64);
 			return 1;
-			break;
-		
+	
 		case 224:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@CHOPSHOP", 64);
-			StringCopy(sParam2, "BASE", 64);
-			StringCopy(sParam3, "WipeRight", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@CHOPSHOP", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "BASE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "WipeRight", 64);
 			return 1;
-			break;
-		
+	
 		case 226:
 		case 227:
 		case 230:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@EXIT_BUILDING", 64);
-			StringCopy(sParam2, "loop", 64);
-			StringCopy(sParam3, "switch_01", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@EXIT_BUILDING", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "loop", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "switch_01", 64);
 			return 1;
-			break;
-		
+	
 		case 228:
 		case 229:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@EXIT_BUILDING", 64);
-			StringCopy(sParam2, "loop", 64);
-			StringCopy(sParam3, "switch_02", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@EXIT_BUILDING", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "loop", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "switch_02", 64);
 			return 1;
-			break;
-		
+	
 		case 218:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@GANG_TAUNT_P1", 64);
-			StringCopy(sParam2, "gang_taunt_loop_franklin", 64);
-			StringCopy(sParam3, "gang_taunt_exit_franklin", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@GANG_TAUNT_P1", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "gang_taunt_loop_franklin", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "gang_taunt_exit_franklin", 64);
 			return 1;
-			break;
-		
+	
 		case 219:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@GANG_TAUNT_P3", 64);
-			StringCopy(sParam2, "gang_taunt_with_lamar_loop_frank", 64);
-			StringCopy(sParam3, "gang_taunt_with_lamar_exit_frank", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@GANG_TAUNT_P3", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "gang_taunt_with_lamar_loop_frank", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "gang_taunt_with_lamar_exit_frank", 64);
 			return 1;
-			break;
-		
+	
 		case 220:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@GANG_TAUNT_P5", 64);
-			StringCopy(sParam2, "fras_ig_6_p5_loop_frank", 64);
-			StringCopy(sParam3, "fras_ig_6_p5_exit_frank", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@GANG_TAUNT_P5", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "fras_ig_6_p5_loop_frank", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "fras_ig_6_p5_exit_frank", 64);
 			return 1;
-			break;
-		
+	
 		case 225:
-			StringCopy(sParam1, "SWITCH@FRANKLIN@GANG_TAUNT_P3", 64);
-			StringCopy(sParam2, "fras_ig_10_p3_loop_frank", 64);
-			StringCopy(sParam3, "fras_ig_10_p3_exit_frank", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@FRANKLIN@GANG_TAUNT_P3", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "fras_ig_10_p3_loop_frank", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "fras_ig_10_p3_exit_frank", 64);
 			return 1;
-			break;
-		
+	
 		case 232:
 		case 233:
-			StringCopy(sParam1, "missheist_agency2aig_9", 64);
-			StringCopy(sParam2, "Franklin_call_Michael_IDLE_PLAYER", 64);
-			StringCopy(sParam3, "Franklin_call_Michael_EXIT_PLAYER", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "missheist_agency2aig_9", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "Franklin_call_Michael_IDLE_PLAYER", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "Franklin_call_Michael_EXIT_PLAYER", 64);
 			return 1;
-			break;
-		
+	
 		case 235:
-			StringCopy(sParam1, "SWITCH@TREVOR@MOCKS_LAPDANCE", 64);
-			StringCopy(sParam2, "001443_01_TRVS_28_IDLE_TRV", 64);
-			StringCopy(sParam3, "001443_01_TRVS_28_EXIT_TRV", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@MOCKS_LAPDANCE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001443_01_TRVS_28_IDLE_TRV", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001443_01_TRVS_28_EXIT_TRV", 64);
 			return 1;
-			break;
-		
+	
 		case 236:
-			StringCopy(sParam1, "SWITCH@TREVOR@BAR", 64);
-			StringCopy(sParam2, "LOOP_Trevor", 64);
-			StringCopy(sParam3, "EXIT_Trevor", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@BAR", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "LOOP_Trevor", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "EXIT_Trevor", 64);
 			return 1;
-			break;
-		
+	
 		case 237:
-			StringCopy(sParam1, "SWITCH@TREVOR@CHASE_STRIPPERS", 64);
-			StringCopy(sParam2, "LOOP_Trevor", 64);
-			StringCopy(sParam3, "EXIT_Trevor", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@CHASE_STRIPPERS", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "LOOP_Trevor", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "EXIT_Trevor", 64);
 			return 1;
-			break;
-		
+	
 		case 238:
-			StringCopy(sParam1, "SWITCH@TREVOR@STRIPCLUB", 64);
-			StringCopy(sParam2, "trev_leave_stripclub_idle", 64);
-			StringCopy(sParam3, "trev_leave_stripclub_outro", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@STRIPCLUB", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "trev_leave_stripclub_idle", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "trev_leave_stripclub_outro", 64);
 			return 1;
-			break;
-		
+	
 		case 239:
-			StringCopy(sParam1, "SWITCH@TREVOR@ESCORTED_OUT", 64);
-			StringCopy(sParam2, "001215_02_TRVS_12_ESCORTED_OUT_IDLE_TRV", 64);
-			StringCopy(sParam3, "001215_02_TRVS_12_ESCORTED_OUT_EXIT_TRV", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@ESCORTED_OUT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001215_02_TRVS_12_ESCORTED_OUT_IDLE_TRV", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001215_02_TRVS_12_ESCORTED_OUT_EXIT_TRV", 64);
 			return 1;
-			break;
-		
+	
 		case 273:
 		case 274:
-			StringCopy(sParam1, "SWITCH@TREVOR@PUKING_INTO_FOUNTAIN", 64);
-			StringCopy(sParam2, "trev_fountain_puke_loop", 64);
-			StringCopy(sParam3, "trev_fountain_puke_exit", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@PUKING_INTO_FOUNTAIN", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "trev_fountain_puke_loop", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "trev_fountain_puke_exit", 64);
 			return 1;
-			break;
-		
+	
 		case 245:
 		case 40:
-			StringCopy(sParam1, "SWITCH@TREVOR@TREV_SMOKING_METH", 64);
-			StringCopy(sParam2, "TREV_SMOKING_METH_LOOP", 64);
-			StringCopy(sParam3, "TREV_SMOKING_METH_EXIT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@TREV_SMOKING_METH", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "TREV_SMOKING_METH_LOOP", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "TREV_SMOKING_METH_EXIT", 64);
 			*uParam4 = 1545;
 			*uParam5 = 1544;
 			return 1;
-			break;
-		
+	
 		case 315:
-			StringCopy(sParam1, "SWITCH@TREVOR@HEAD_IN_SINK", 64);
-			StringCopy(sParam2, "trev_sink_idle", 64);
-			StringCopy(sParam3, "trev_sink_exit", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@HEAD_IN_SINK", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "trev_sink_idle", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "trev_sink_exit", 64);
 			*uParam4 = 1545;
 			*uParam5 = 1544;
 			return 1;
-			break;
-		
+	
 		case 250:
 		case 251:
 		case 252:
 		case 253:
-			StringCopy(sParam1, "SWITCH@TREVOR@AT_THE_DOCKS", 64);
-			StringCopy(sParam2, "001209_01_TRVS_3_AT_THE_DOCKS_IDLE", 64);
-			StringCopy(sParam3, "001209_01_TRVS_3_AT_THE_DOCKS_EXIT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@AT_THE_DOCKS", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001209_01_TRVS_3_AT_THE_DOCKS_IDLE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001209_01_TRVS_3_AT_THE_DOCKS_EXIT", 64);
 			return 1;
-			break;
-		
+	
 		case 262:
-			StringCopy(sParam1, "SWITCH@TREVOR@KO_NEIGHBOUR", 64);
-			StringCopy(sParam2, "001500_03_TRVS_19_KO_NEIGHBOUR_LOOP_TRV", 64);
-			StringCopy(sParam3, "001500_03_TRVS_19_KO_NEIGHBOUR_EXIT_TRV", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@KO_NEIGHBOUR", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001500_03_TRVS_19_KO_NEIGHBOUR_LOOP_TRV", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001500_03_TRVS_19_KO_NEIGHBOUR_EXIT_TRV", 64);
 			return 1;
-			break;
-		
+	
 		case 243:
-			StringCopy(sParam1, "SWITCH@TREVOR@GARBAGE_FOOD", 64);
-			StringCopy(sParam2, "LOOP_Trevor", 64);
-			StringCopy(sParam3, "EXIT_Trevor", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@GARBAGE_FOOD", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "LOOP_Trevor", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "EXIT_Trevor", 64);
 			return 1;
-			break;
-		
+	
 		case 244:
-			StringCopy(sParam1, "SWITCH@TREVOR@THROW_FOOD", 64);
-			StringCopy(sParam2, "LOOP_Trevor", 64);
-			StringCopy(sParam3, "EXIT_Trevor", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@THROW_FOOD", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "LOOP_Trevor", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "EXIT_Trevor", 64);
 			return 1;
-			break;
-		
+	
 		case 271:
 		case 272:
 		case 265:
@@ -3295,2378 +3203,2081 @@ int func_59(int iParam0, char* sParam1, char* sParam2, char* sParam3, var uParam
 		case 240:
 		case 241:
 		case 242:
-			StringCopy(sParam1, "SWITCH@TREVOR@SLOUCHED_GET_UP", 64);
-			StringCopy(sParam2, "TREV_SLOUCHED_GET_UP_IDLE", 64);
-			StringCopy(sParam3, "TREV_SLOUCHED_GET_UP_EXIT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@SLOUCHED_GET_UP", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "TREV_SLOUCHED_GET_UP_IDLE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "TREV_SLOUCHED_GET_UP_EXIT", 64);
 			return 1;
-			break;
-		
+	
 		case 280:
-			StringCopy(sParam1, "SWITCH@TREVOR@NAKED_ISLAND", 64);
-			StringCopy(sParam2, "loop", 64);
-			StringCopy(sParam3, "exit", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@NAKED_ISLAND", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "loop", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "exit", 64);
 			return 1;
-			break;
-		
+	
 		case 246:
-			StringCopy(sParam1, "SWITCH@TREVOR@PUSHES_BODYBUILDER", 64);
-			StringCopy(sParam2, "001426_03_TRVS_5_PUSHES_BODYBUILDER_IDLE_TRV", 64);
-			StringCopy(sParam3, "001426_03_TRVS_5_PUSHES_BODYBUILDER_EXIT_TRV", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@PUSHES_BODYBUILDER", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001426_03_TRVS_5_PUSHES_BODYBUILDER_IDLE_TRV", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001426_03_TRVS_5_PUSHES_BODYBUILDER_EXIT_TRV", 64);
 			return 1;
-			break;
-		
+	
 		case 286:
-			StringCopy(sParam1, "SWITCH@TREVOR@RUDE_AT_CAFE", 64);
-			StringCopy(sParam2, "001218_03_TRVS_23_RUDE_AT_CAFE_IDLE_TRV", 64);
-			StringCopy(sParam3, "001218_03_TRVS_23_RUDE_AT_CAFE_EXIT_TRV", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@RUDE_AT_CAFE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001218_03_TRVS_23_RUDE_AT_CAFE_IDLE_TRV", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001218_03_TRVS_23_RUDE_AT_CAFE_EXIT_TRV", 64);
 			return 1;
-			break;
-		
+	
 		case 247:
-			StringCopy(sParam1, "SWITCH@TREVOR@ANNOYS_SUNBATHERS", 64);
-			StringCopy(sParam2, "trev_annoys_sunbathers_loop_trevor", 64);
-			StringCopy(sParam3, "trev_annoys_sunbathers_exit_trevor", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@ANNOYS_SUNBATHERS", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "trev_annoys_sunbathers_loop_trevor", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "trev_annoys_sunbathers_exit_trevor", 64);
 			return 1;
-			break;
-		
+	
 		case 263:
-			StringCopy(sParam1, "SWITCH@TREVOR@SCARES_TRAMP", 64);
-			StringCopy(sParam2, "TREV_SCARES_TRAMP_IDLE_TREVOR", 64);
-			StringCopy(sParam3, "TREV_SCARES_TRAMP_EXIT_TREVOR", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@SCARES_TRAMP", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "TREV_SCARES_TRAMP_IDLE_TREVOR", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "TREV_SCARES_TRAMP_EXIT_TREVOR", 64);
 			return 1;
-			break;
-		
+	
 		case 278:
-			StringCopy(sParam1, "SWITCH@TREVOR@NAKED_ON_BRIDGE", 64);
-			StringCopy(sParam2, "002055_01_TRVS_17_NAKED_ON_BRIDGE_IDLE", 64);
-			StringCopy(sParam3, "002055_01_TRVS_17_NAKED_ON_BRIDGE_EXIT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@NAKED_ON_BRIDGE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "002055_01_TRVS_17_NAKED_ON_BRIDGE_IDLE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "002055_01_TRVS_17_NAKED_ON_BRIDGE_EXIT", 64);
 			return 1;
-			break;
-		
+	
 		case 264:
-			StringCopy(sParam1, "SWITCH@TREVOR@DUMPSTER", 64);
-			StringCopy(sParam2, "002002_01_TRVS_14_DUMPSTER_IDLE", 64);
-			StringCopy(sParam3, "002002_01_TRVS_14_DUMPSTER_EXIT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@DUMPSTER", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "002002_01_TRVS_14_DUMPSTER_IDLE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "002002_01_TRVS_14_DUMPSTER_EXIT", 64);
 			return 1;
-			break;
-		
+	
 		case 255:
-			StringCopy(sParam1, "SWITCH@TREVOR@FUNERAL_HOME", 64);
-			StringCopy(sParam2, "trvs_ig_11_loop", 64);
-			StringCopy(sParam3, "trvs_ig_11_exit", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@FUNERAL_HOME", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "trvs_ig_11_loop", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "trvs_ig_11_exit", 64);
 			return 1;
-			break;
-		
+	
 		case 285:
-			StringCopy(sParam1, "SWITCH@TREVOR@BRIDGE", 64);
-			StringCopy(sParam2, "HOLD_LOOP_trevor", 64);
-			StringCopy(sParam3, "THROW_EXIT_trevor", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@BRIDGE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "HOLD_LOOP_trevor", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "THROW_EXIT_trevor", 64);
 			return 1;
-			break;
-		
+	
 		case 259:
-			StringCopy(sParam1, "SWITCH@TREVOR@YELLS_AT_DOORMAN", 64);
-			StringCopy(sParam2, "001430_01_TRVS_21_YELLS_AT_DOORMAN_IDLE_TRV", 64);
-			StringCopy(sParam3, "001430_01_TRVS_21_YELLS_AT_DOORMAN_EXIT_TRV", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@YELLS_AT_DOORMAN", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001430_01_TRVS_21_YELLS_AT_DOORMAN_IDLE_TRV", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001430_01_TRVS_21_YELLS_AT_DOORMAN_EXIT_TRV", 64);
 			return 1;
-			break;
-		
+	
 		case 248:
-			StringCopy(sParam1, "SWITCH@TREVOR@BLOCK_CAMERA", 64);
-			StringCopy(sParam2, "001220_03_GC_TRVS_IG_7_BASE_TREVOR", 64);
-			StringCopy(sParam3, "001220_03_GC_TRVS_IG_7_EXIT_TREVOR", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@BLOCK_CAMERA", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001220_03_GC_TRVS_IG_7_BASE_TREVOR", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001220_03_GC_TRVS_IG_7_EXIT_TREVOR", 64);
 			return 1;
-			break;
-		
+	
 		case 249:
-			StringCopy(sParam1, "SWITCH@TREVOR@GUITAR_BEATDOWN", 64);
-			StringCopy(sParam2, "001370_02_TRVS_8_GUITAR_BEATDOWN_IDLE_TRV", 64);
-			StringCopy(sParam3, "001370_02_TRVS_8_GUITAR_BEATDOWN_EXIT_TRV", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@GUITAR_BEATDOWN", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001370_02_TRVS_8_GUITAR_BEATDOWN_IDLE_TRV", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001370_02_TRVS_8_GUITAR_BEATDOWN_EXIT_TRV", 64);
 			return 1;
-			break;
-		
+	
 		case 254:
-			StringCopy(sParam1, "SWITCH@TREVOR@LINGERIE_SHOP", 64);
-			StringCopy(sParam2, "trev_exit_lingerie_shop_idle", 64);
-			StringCopy(sParam3, "trev_exit_lingerie_shop_outro", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@LINGERIE_SHOP", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "trev_exit_lingerie_shop_idle", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "trev_exit_lingerie_shop_outro", 64);
 			return 1;
-			break;
-		
+	
 		case 287:
-			StringCopy(sParam1, "SWITCH@TREVOR@RAND_TEMPLE", 64);
-			StringCopy(sParam2, "", 64);
-			StringCopy(sParam3, "TAI_CHI_Trevor", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@RAND_TEMPLE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "TAI_CHI_Trevor", 64);
 			return 1;
-			break;
-		
+	
 		case 288:
-			StringCopy(sParam1, "SWITCH@TREVOR@UNDER_PIER", 64);
-			StringCopy(sParam2, "LOOP_Trevor", 64);
-			StringCopy(sParam3, "EXIT_Trevor", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@UNDER_PIER", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "LOOP_Trevor", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "EXIT_Trevor", 64);
 			return 1;
-			break;
-		
+	
 		case 289:
-			StringCopy(sParam1, "SWITCH@TREVOR@DRUNK_HOWLING", 64);
-			StringCopy(sParam2, "loop", 64);
-			StringCopy(sParam3, "exit", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@DRUNK_HOWLING", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "loop", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "exit", 64);
 			return 1;
-			break;
-		
+	
 		case 290:
-			StringCopy(sParam1, "SWITCH@TREVOR@DRUNK_HOWLING_SC", 64);
-			StringCopy(sParam2, "loop", 64);
-			StringCopy(sParam3, "exit", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@DRUNK_HOWLING_SC", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "loop", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "exit", 64);
 			return 1;
-			break;
-		
+	
 		case 292:
 		case 295:
-			StringCopy(sParam1, "SWITCH@TREVOR@BED", 64);
-			StringCopy(sParam2, "Bed_Sleep_TREVOR", 64);
-			StringCopy(sParam3, "Bed_GetUp_1_TREVOR", 64);
-			*uParam4 |= 1024;
-			*uParam5 |= 1024;
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@BED", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "Bed_Sleep_TREVOR", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "Bed_GetUp_1_TREVOR", 64);
+			*uParam4 = *uParam4 | 1024;
+			*uParam5 = *uParam5 | 1024;
 			return 1;
-			break;
-		
+	
 		case 293:
 		case 294:
-			StringCopy(sParam1, "SWITCH@TREVOR@BED", 64);
-			StringCopy(sParam2, "Bed_Sleep_TREVOR", 64);
-			StringCopy(sParam3, "Bed_GetUp_2_TREVOR", 64);
-			*uParam4 |= 1024;
-			*uParam5 |= 1024;
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@BED", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "Bed_Sleep_TREVOR", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "Bed_GetUp_2_TREVOR", 64);
+			*uParam4 = *uParam4 | 1024;
+			*uParam5 = *uParam5 | 1024;
 			return 1;
-			break;
-		
+	
 		case 299:
-			StringCopy(sParam1, "SWITCH@TREVOR@FLOYD_CRYING", 64);
-			StringCopy(sParam2, "Console_LOOP_TREVOR", 64);
-			StringCopy(sParam3, "Console_Wasnt_Fun_TREVOR", 64);
-			*uParam4 |= 1024;
-			*uParam5 |= 1024;
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@FLOYD_CRYING", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "Console_LOOP_TREVOR", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "Console_Wasnt_Fun_TREVOR", 64);
+			*uParam4 = *uParam4 | 1024;
+			*uParam5 = *uParam5 | 1024;
 			return 1;
-			break;
-		
+	
 		case 300:
 		case 301:
 		case 302:
 		case 303:
-			StringCopy(sParam1, "SWITCH@TREVOR@FLOYD_CRYING", 64);
-			StringCopy(sParam2, "Console_LOOP_TREVOR", 64);
-			StringCopy(sParam3, "Console_Get_Along_TREVOR", 64);
-			*uParam4 |= 1024;
-			*uParam5 |= 1024;
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@FLOYD_CRYING", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "Console_LOOP_TREVOR", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "Console_Get_Along_TREVOR", 64);
+			*uParam4 = *uParam4 | 1024;
+			*uParam5 = *uParam5 | 1024;
 			return 1;
-			break;
-		
+	
 		case 296:
-			StringCopy(sParam1, "SWITCH@TREVOR@BEAR_IN_FLOYDS_FACE", 64);
-			StringCopy(sParam2, "bear_in_floyds_face_loop_trev", 64);
-			StringCopy(sParam3, "bear_in_floyds_face_exit_trev", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@BEAR_IN_FLOYDS_FACE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "bear_in_floyds_face_loop_trev", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "bear_in_floyds_face_exit_trev", 64);
 			return 1;
-			break;
-		
+	
 		case 297:
-			StringCopy(sParam1, "SWITCH@TREVOR@BEAR_FLOYDS_FACE_SMELL", 64);
-			StringCopy(sParam2, "bear_floyds_face_smell_loop_trev", 64);
-			StringCopy(sParam3, "bear_floyds_face_smell_exit_trev", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@BEAR_FLOYDS_FACE_SMELL", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "bear_floyds_face_smell_loop_trev", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "bear_floyds_face_smell_exit_trev", 64);
 			return 1;
-			break;
-		
+	
 		case 298:
-			StringCopy(sParam1, "SWITCH@TREVOR@PINEAPPLE", 64);
-			StringCopy(sParam2, "Pineapple_LOOP_TREVOR", 64);
-			StringCopy(sParam3, "Pineapple_EXIT_TREVOR", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@PINEAPPLE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "Pineapple_LOOP_TREVOR", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "Pineapple_EXIT_TREVOR", 64);
 			return 1;
-			break;
-		
+	
 		case 304:
-			StringCopy(sParam1, "SWITCH@MICHAEL@SMOKING2", 64);
-			StringCopy(sParam2, "LOOP", 64);
-			StringCopy(sParam3, "EXIT", 64);
-			*uParam4 |= 1536;
-			*uParam5 |= 1536;
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@MICHAEL@SMOKING2", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "LOOP", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "EXIT", 64);
+			*uParam4 = *uParam4 | 1536;
+			*uParam5 = *uParam5 | 1536;
 			return 1;
-			break;
-		
+	
 		case 305:
 			func_60(iParam0, sParam1, sParam2, sParam3);
 			return 1;
-			break;
-		
+	
 		case 310:
-			StringCopy(sParam1, "SWITCH@TREVOR@DIGGING", 64);
-			StringCopy(sParam2, "001433_01_TRVS_26_DIGGING_IDLE", 64);
-			StringCopy(sParam3, "001433_01_TRVS_26_DIGGING_EXIT", 64);
-			*uParam5 |= 32768;
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@DIGGING", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "001433_01_TRVS_26_DIGGING_IDLE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "001433_01_TRVS_26_DIGGING_EXIT", 64);
+			*uParam5 = *uParam5 | 32768;
 			return 1;
-			break;
-		
+	
 		case 311:
-			StringCopy(sParam1, "SWITCH@TREVOR@FLUSHES_FOOT", 64);
-			StringCopy(sParam2, "002057_03_TRVS_27_FLUSHES_FOOT_IDLE", 64);
-			StringCopy(sParam3, "002057_03_TRVS_27_FLUSHES_FOOT_EXIT", 64);
-			*uParam5 |= 32768;
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "SWITCH@TREVOR@FLUSHES_FOOT", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "002057_03_TRVS_27_FLUSHES_FOOT_IDLE", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "002057_03_TRVS_27_FLUSHES_FOOT_EXIT", 64);
+			*uParam5 = *uParam5 | 32768;
 			return 1;
-			break;
-		
+	
 		default:
-			StringCopy(sParam1, "NULL", 64);
-			StringCopy(sParam2, "NULL", 64);
-			StringCopy(sParam3, "NULL", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "NULL", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "NULL", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam3, "NULL", 64);
 			return 0;
-			break;
 	}
-	StringCopy(sParam1, "NULL", 64);
-	StringCopy(sParam2, "NULL", 64);
-	StringCopy(sParam3, "NULL", 64);
+
+	TEXT_LABEL_ASSIGN_STRING(sParam1, "NULL", 64);
+	TEXT_LABEL_ASSIGN_STRING(sParam2, "NULL", 64);
+	TEXT_LABEL_ASSIGN_STRING(sParam3, "NULL", 64);
 	return 0;
 }
 
-void func_60(int iParam0, char* sParam1, char* sParam2, char* sParam3)
+void func_60(int iParam0, char* sParam1, char* sParam2, char* sParam3) // Position - 0x440E
 {
-	StringCopy(sParam1, "AMB@WORLD_HUMAN_SMOKING@MALE@MALE_A@IDLE_A", 64);
-	StringCopy(sParam2, "IDLE_A", 64);
-	StringCopy(sParam3, "IDLE_A", 64);
+	TEXT_LABEL_ASSIGN_STRING(sParam1, "AMB@WORLD_HUMAN_SMOKING@MALE@MALE_A@IDLE_A", 64);
+	TEXT_LABEL_ASSIGN_STRING(sParam2, "IDLE_A", 64);
+	TEXT_LABEL_ASSIGN_STRING(sParam3, "IDLE_A", 64);
+	return;
 }
 
-int func_61(int iParam0, var uParam1, var uParam2, char* sParam3)
+int func_61(int iParam0, var uParam1, var uParam2, char* sParam3) // Position - 0x442E
 {
-	int iVar0;
-	
+	int num;
+
 	if (func_63(iParam0, uParam2, sParam3))
 	{
 		switch (iParam0)
 		{
 			case 0:
 				return 0;
-				break;
-			
+		
 			case 1:
-				func_62(&iVar0);
-				if (iVar0 < 5)
+				func_62(&num);
+			
+				if (num < 5)
 				{
-					*uParam1 = { Global_96716[iVar0 /*9*/].f_3 };
-					*uParam2 = Global_96716[iVar0 /*9*/].f_6;
-					StringCopy(sParam3, "", 32);
+					*uParam1 = { Global_96716[num /*9*/].f_3 };
+					*uParam2 = Global_96716[num /*9*/].f_6;
+					TEXT_LABEL_ASSIGN_STRING(sParam3, "", 32);
 					return 1;
 				}
 				else
 				{
 					*uParam1 = { Global_96716[0 /*9*/].f_3 };
 					*uParam2 = Global_96716[0 /*9*/].f_6;
-					StringCopy(sParam3, "", 32);
+					TEXT_LABEL_ASSIGN_STRING(sParam3, "", 32);
 					return 1;
 				}
 				break;
-			
+		
 			case 2:
 				*uParam1 = { Global_99644[0 /*109*/].f_4 };
 				*uParam2 = Global_99644[0 /*109*/].f_7;
-				StringCopy(sParam3, "", 32);
+				TEXT_LABEL_ASSIGN_STRING(sParam3, "", 32);
 				return 1;
-				break;
-			
+		
 			case 3:
 				*uParam1 = { Global_99644[1 /*109*/].f_4 };
 				*uParam2 = Global_99644[1 /*109*/].f_7;
-				StringCopy(sParam3, "", 32);
+				TEXT_LABEL_ASSIGN_STRING(sParam3, "", 32);
 				return 1;
-				break;
-			
+		
 			case 4:
 				*uParam1 = { Global_99644[2 /*109*/].f_4 };
 				*uParam2 = Global_99644[2 /*109*/].f_7;
-				StringCopy(sParam3, "", 32);
+				TEXT_LABEL_ASSIGN_STRING(sParam3, "", 32);
 				return 1;
-				break;
-			
+		
 			case 5:
-				*uParam1 = { Global_113969.f_2366.f_539.f_2300[0 /*3*/] + Vector(-1f, 0f, 0f) };
+				*uParam1 = { Global_113969.f_2366.f_539.f_2300[0 /*3*/] + { -1f, 0f, 0f } };
 				*uParam2 = Global_113969.f_2366.f_539.f_2310[0];
-				StringCopy(sParam3, "", 32);
+				TEXT_LABEL_ASSIGN_STRING(sParam3, "", 32);
 				return 1;
-				break;
-			
+		
 			case 6:
-				*uParam1 = { Global_113969.f_2366.f_539.f_2300[1 /*3*/] + Vector(-1f, 0f, 0f) };
+				*uParam1 = { Global_113969.f_2366.f_539.f_2300[1 /*3*/] + { -1f, 0f, 0f } };
 				*uParam2 = Global_113969.f_2366.f_539.f_2310[1];
-				StringCopy(sParam3, "", 32);
+				TEXT_LABEL_ASSIGN_STRING(sParam3, "", 32);
 				return 1;
-				break;
-			
+		
 			case 7:
-				*uParam1 = { Global_113969.f_2366.f_539.f_2300[2 /*3*/] + Vector(-1f, 0f, 0f) };
+				*uParam1 = { Global_113969.f_2366.f_539.f_2300[2 /*3*/] + { -1f, 0f, 0f } };
 				*uParam2 = Global_113969.f_2366.f_539.f_2310[2];
-				StringCopy(sParam3, "", 32);
+				TEXT_LABEL_ASSIGN_STRING(sParam3, "", 32);
 				return 1;
-				break;
 		}
+	
 		*uParam1 = { Global_99972[iParam0 /*3*/] };
 		return 1;
 	}
+
 	return 0;
 }
 
-bool func_62(var uParam0)
+BOOL func_62(var uParam0) // Position - 0x4619
 {
-	int iVar0;
-	struct<3> Var1;
-	float fVar2;
-	int iVar3;
-	struct<3> Var4;
-	float fVar5;
-	
-	iVar0 = Global_113969.f_2366.f_539.f_4323;
-	Var1 = { Global_113969.f_2366.f_539.f_2300[iVar0 /*3*/] };
-	if (func_34(Var1, 0f, 0f, 0f, 0))
-	{
-		Var1 = { unk_0xD1A6A821F5AC81DB(unk_0x4A8C381C258A124D(), 0) };
-	}
+	int num;
+	Vector3 entityCoords;
+	float num2;
+	int i;
+	Vector3 vector;
+	float num3;
+
+	num = Global_113969.f_2366.f_539.f_4323;
+	entityCoords = { Global_113969.f_2366.f_539.f_2300[num /*3*/] };
+
+	if (func_34(entityCoords, 0f, 0f, 0f, false))
+		entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) };
+
 	*uParam0 = 5;
-	fVar2 = 9999999f;
-	iVar3 = 0;
-	while (iVar3 < 5)
+	num2 = 9999999f;
+
+	for (i = 0; i < 5; i = i + 1)
 	{
-		if (BitTest(Global_113969.f_7232.f_11[iVar3], 0))
+		if (IS_BIT_SET(Global_113969.f_7232.f_11[i], 0))
 		{
-			Var4 = { Global_96716[iVar3 /*9*/].f_3 };
-			fVar5 = system::vdist(Var1, Var4);
-			if (fVar5 > 150f)
+			vector = { Global_96716[i /*9*/].f_3 };
+			num3 = SYSTEM::VDIST(entityCoords, vector);
+		
+			if (num3 > 150f)
 			{
-				if (fVar5 < fVar2)
+				if (num3 < num2)
 				{
-					*uParam0 = iVar3;
-					fVar2 = fVar5;
+					*uParam0 = i;
+					num2 = num3;
 				}
 			}
 		}
-		iVar3++;
 	}
+
 	return *uParam0 != 5;
 }
 
-int func_63(int iParam0, var uParam1, char* sParam2)
+BOOL func_63(int iParam0, var uParam1, char* sParam2) // Position - 0x46D1
 {
-	struct<3> Var0;
-	int iVar1;
-	var uVar2;
-	float fVar3;
-	struct<3> Var4;
-	struct<3> Var5;
-	struct<3> Var6;
-	struct<3> Var7;
-	
+	var unk;
+	int num;
+	var unk4;
+	float num2;
+	float num3;
+	float num4;
+	float num5;
+	float num6;
+
 	switch (iParam0)
 	{
 		case 0:
-			return 0;
-			break;
-		
+			return false;
+	
 		case 1:
-			func_62(&iVar1);
-			if (iVar1 < 5)
+			func_62(&num);
+		
+			if (num < 5)
 			{
-				*uParam1 = Global_96716[iVar1 /*9*/].f_6;
-				StringCopy(sParam2, "", 32);
-				return 1;
+				*uParam1 = Global_96716[num /*9*/].f_6;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			else
 			{
 				*uParam1 = Global_96716[0 /*9*/].f_6;
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 2:
 			*uParam1 = Global_99644[0 /*109*/].f_7;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 3:
 			*uParam1 = Global_99644[1 /*109*/].f_7;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 4:
 			*uParam1 = Global_99644[2 /*109*/].f_7;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 5:
 			*uParam1 = Global_113969.f_2366.f_539.f_2310[0];
-			StringCopy(sParam2, func_67(Global_113969.f_2366.f_539.f_2314[0]), 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, func_67(Global_113969.f_2366.f_539.f_2314[0]), 32);
+			return true;
+	
 		case 6:
 			*uParam1 = Global_113969.f_2366.f_539.f_2310[1];
-			StringCopy(sParam2, func_67(Global_113969.f_2366.f_539.f_2314[1]), 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, func_67(Global_113969.f_2366.f_539.f_2314[1]), 32);
+			return true;
+	
 		case 7:
 			*uParam1 = Global_113969.f_2366.f_539.f_2310[2];
-			StringCopy(sParam2, func_67(Global_113969.f_2366.f_539.f_2314[2]), 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, func_67(Global_113969.f_2366.f_539.f_2314[2]), 32);
+			return true;
+	
 		case 11:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "v_strip3", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "v_strip3", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 8:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 9:
 			return func_63(8, uParam1, sParam2);
-			break;
-		
+	
 		case 10:
 			return func_63(8, uParam1, sParam2);
-			break;
-		
+	
 		case 13:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 14:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 15:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 12:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 16:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 17:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 18:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 19:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 20:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 21:
 			*uParam1 = 0f;
-			StringCopy(sParam2, "", 32);
-			return 0;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return false;
+	
 		case 22:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 74:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 23:
 			return func_63(208, uParam1, sParam2);
-			break;
-		
+	
 		case 24:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 67:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 25:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 26:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 27:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 28:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 29:
 			*uParam1 = 0f;
-			StringCopy(sParam2, "", 32);
-			return 0;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return false;
+	
 		case 30:
 			*uParam1 = 0f;
-			StringCopy(sParam2, "", 32);
-			return 0;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return false;
+	
 		case 31:
 			*uParam1 = 0f;
-			StringCopy(sParam2, "", 32);
-			return 0;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return false;
+	
 		case 32:
 			*uParam1 = 0f;
-			StringCopy(sParam2, "", 32);
-			return 0;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return false;
+	
 		case 33:
 			*uParam1 = 0f;
-			StringCopy(sParam2, "", 32);
-			return 0;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return false;
+	
 		case 34:
 			*uParam1 = 0f;
-			StringCopy(sParam2, "", 32);
-			return 0;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return false;
+	
 		case 35:
 			*uParam1 = 0f;
-			StringCopy(sParam2, "", 32);
-			return 0;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return false;
+	
 		case 36:
 			*uParam1 = 0f;
-			StringCopy(sParam2, "", 32);
-			return 0;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return false;
+	
 		case 37:
 			*uParam1 = 0f;
-			StringCopy(sParam2, "", 32);
-			return 0;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return false;
+	
 		case 58:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 59:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 60:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 38:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 39:
 			*uParam1 = 0f;
-			StringCopy(sParam2, "", 32);
-			return 0;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return false;
+	
 		case 40:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "v_trailer", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "v_trailer", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 41:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 42:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 43:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 44:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 45:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 46:
 			*uParam1 = 0f;
-			StringCopy(sParam2, "", 32);
-			return 0;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return false;
+	
 		case 47:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 49:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 48:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 124:
-			Var0 = { -803,734f, 168,148f, 76,3542f };
+			unk = { -803.734f, 168.148f, 76.3542f };
 			*uParam1 = 105f;
-			StringCopy(sParam2, "v_michael", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_michael", 32);
+			return true;
+	
 		case 50:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 51:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 52:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 66:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 53:
 			*uParam1 = 0f;
-			StringCopy(sParam2, "", 32);
-			return 0;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return false;
+	
 		case 54:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 55:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 56:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 57:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 61:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 62:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 63:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 68:
 			*uParam1 = 0f;
-			StringCopy(sParam2, "", 32);
-			return 0;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return false;
+	
 		case 69:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 64:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 65:
-			if (func_66(iParam0, &Var0, uParam1))
+			if (func_66(iParam0, &unk, uParam1))
 			{
-				StringCopy(sParam2, "", 32);
-				return 1;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 70:
 			*uParam1 = 0f;
-			StringCopy(sParam2, "", 32);
-			return 0;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return false;
+	
 		case 71:
 			*uParam1 = 0f;
-			StringCopy(sParam2, "", 32);
-			return 0;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return false;
+	
 		case 72:
 			*uParam1 = 0f;
-			StringCopy(sParam2, "", 32);
-			return 0;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return false;
+	
 		case 73:
 			*uParam1 = 0f;
-			StringCopy(sParam2, "", 32);
-			return 0;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return false;
+	
 		case 234:
-			*uParam1 = 122,69f;
-			StringCopy(sParam2, "v_trailer", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 122.69f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_trailer", 32);
+			return true;
+	
 		case 316:
-			*uParam1 = -60,31f;
-			StringCopy(sParam2, "v_trailer", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -60.31f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_trailer", 32);
+			return true;
+	
 		case 315:
-			*uParam1 = (41,654f - 180f);
-			StringCopy(sParam2, "v_trailer", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 41.654f - 180f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_trailer", 32);
+			return true;
+	
 		case 75:
-			*uParam1 = -172,697f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -172.697f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 76:
-			*uParam1 = (181,8927f - 180f);
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 181.8927f - 180f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 77:
 			*uParam1 = -158f;
-			StringCopy(sParam2, "v_michael", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_michael", 32);
+			return true;
+	
 		case 78:
 			*uParam1 = -152f;
-			StringCopy(sParam2, "v_michael", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_michael", 32);
+			return true;
+	
 		case 79:
-			*uParam1 = 20,353f;
-			StringCopy(sParam2, "v_michael", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 20.353f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_michael", 32);
+			return true;
+	
 		case 80:
-			*uParam1 = (-48,53f + 180f);
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -48.53f + 180f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 81:
 			*uParam1 = -45f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 82:
-			*uParam1 = -113,748f;
-			StringCopy(sParam2, "v_michael", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -113.748f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_michael", 32);
+			return true;
+	
 		case 83:
-			*uParam1 = -173,748f;
-			StringCopy(sParam2, "v_michael", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -173.748f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_michael", 32);
+			return true;
+	
 		case 84:
-			*uParam1 = 32,7938f;
-			StringCopy(sParam2, "v_trailer", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 32.7938f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_trailer", 32);
+			return true;
+	
 		case 85:
 			*uParam1 = -56f;
-			StringCopy(sParam2, "v_michael", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_michael", 32);
+			return true;
+	
 		case 86:
 			*uParam1 = 13f;
-			StringCopy(sParam2, "v_michael", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_michael", 32);
+			return true;
+	
 		case 87:
-			*uParam1 = 166,32f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 166.32f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 88:
 			*uParam1 = 21f;
 			*uParam1 = -132f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 89:
-			*uParam1 = -84,8108f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -84.8108f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 90:
-			*uParam1 = -90,5046f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -90.5046f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 91:
-			*uParam1 = 105,0795f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 105.0795f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 92:
-			*uParam1 = -54,347f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -54.347f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 93:
 			*uParam1 = 117f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 94:
 			*uParam1 = -36f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 95:
 			*uParam1 = 70f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 96:
-			*uParam1 = 34,621f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 34.621f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 97:
 			*uParam1 = -45f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 98:
-			*uParam1 = (-150,6148f + 0,0095f);
-			*uParam1 = (*uParam1 + 0,0004f);
-			*uParam1 = (*uParam1 + 0,0015f);
-			*uParam1 = (*uParam1 + 0,0002f);
-			*uParam1 = (*uParam1 + -0,0009f);
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -150.6148f + 0.0095f;
+			*uParam1 = *uParam1 + 0.0004f;
+			*uParam1 = *uParam1 + 0.0015f;
+			*uParam1 = *uParam1 + 0.0002f;
+			*uParam1 = *uParam1 + -0.0009f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 99:
 			*uParam1 = -57f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 100:
-			*uParam1 = 84,6073f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 84.6073f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 101:
-			*uParam1 = 249,0753f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 249.0753f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 102:
 			*uParam1 = 69f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 103:
-			*uParam1 = 143,4931f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 143.4931f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 104:
 			*uParam1 = 123f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 105:
 			*uParam1 = 168f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 106:
-			*uParam1 = 63,4995f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 63.4995f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 107:
 			*uParam1 = -159f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 108:
 			*uParam1 = -6f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 109:
 			*uParam1 = 99f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 110:
 			*uParam1 = 133f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 111:
 			*uParam1 = 33f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 112:
-			*uParam1 = -162,311f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -162.311f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 113:
 			*uParam1 = 172f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 135:
-			*uParam1 = -59,25f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -59.25f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 136:
-			*uParam1 = 82,254f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 82.254f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 137:
-			*uParam1 = -152,965f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -152.965f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 138:
-			*uParam1 = -10,099f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -10.099f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 139:
-			*uParam1 = 158,5974f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 158.5974f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 140:
-			*uParam1 = 99,18f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 99.18f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 141:
-			*uParam1 = 218,4774f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 218.4774f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 142:
-			*uParam1 = 125,6193f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 125.6193f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 143:
-			*uParam1 = 142,373f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 142.373f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 144:
-			*uParam1 = -34,878f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -34.878f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 145:
-			*uParam1 = -172,419f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -172.419f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 146:
-			*uParam1 = -107,439f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -107.439f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 147:
-			*uParam1 = 157,311f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 157.311f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 148:
-			*uParam1 = -68,812f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -68.812f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 149:
-			*uParam1 = 4,693f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 4.693f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 150:
-			*uParam1 = 78,65f;
-			StringCopy(sParam2, "v_trailer", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 78.65f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_trailer", 32);
+			return true;
+	
 		case 114:
 			*uParam1 = 8f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 115:
 			*uParam1 = 69f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 116:
 			*uParam1 = 0f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 117:
-			*uParam1 = -74,7818f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -74.7818f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 118:
-			*uParam1 = -48,36f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -48.36f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 119:
-			*uParam1 = 144,178f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 144.178f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 120:
 			*uParam1 = 288f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 121:
-			*uParam1 = 101,5f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 101.5f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 122:
-			*uParam1 = 99,72f;
-			StringCopy(sParam2, "v_michael", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 99.72f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_michael", 32);
+			return true;
+	
 		case 123:
 			*uParam1 = 120f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 125:
 			*uParam1 = -3f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 126:
-			*uParam1 = -158,0894f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -158.0894f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 127:
-			*uParam1 = -76,3681f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -76.3681f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 128:
-			*uParam1 = (30f + 180f);
-			StringCopy(sParam2, "v_trailer", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 30f + 180f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_trailer", 32);
+			return true;
+	
 		case 129:
-			*uParam1 = -80,6f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -80.6f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 130:
-			*uParam1 = -9,1673f;
-			StringCopy(sParam2, "v_trailer", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -9.1673f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_trailer", 32);
+			return true;
+	
 		case 131:
-			*uParam1 = -86,0894f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -86.0894f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 132:
-			*uParam1 = -161,0894f;
-			StringCopy(sParam2, "v_trailer", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -161.0894f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_trailer", 32);
+			return true;
+	
 		case 133:
-			*uParam1 = (226,5579f - 270f);
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 226.5579f - 270f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 134:
-			*uParam1 = -33,128f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -33.128f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 151:
 			*uParam1 = -6f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 152:
 			*uParam1 = 72f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 153:
-			*uParam1 = -176,25f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -176.25f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 154:
-			*uParam1 = -147,192f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -147.192f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 155:
-			*uParam1 = 59,082f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 59.082f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 156:
-			*uParam1 = 26,087f;
-			StringCopy(sParam2, "v_michael", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 26.087f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_michael", 32);
+			return true;
+	
 		case 157:
-			*uParam1 = 37,27f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 37.27f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 158:
-			*uParam1 = -13,8153f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -13.8153f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 159:
-			*uParam1 = -62,5f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -62.5f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 160:
 			*uParam1 = 119f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 161:
-			*uParam1 = 86,3776f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 86.3776f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 162:
 			*uParam1 = 117f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 163:
 			*uParam1 = -164f;
-			StringCopy(sParam2, "v_michael", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_michael", 32);
+			return true;
+	
 		case 164:
 			*uParam1 = 88f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 165:
-			*uParam1 = -144,622f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -144.622f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 166:
-			*uParam1 = -61,2262f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -61.2262f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 167:
-			*uParam1 = -22,32f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -22.32f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 168:
-			if (func_64(0, 25, &uVar2, &fVar3))
+			if (func_64(0, 25, &unk4, &num2))
 			{
-				*uParam1 = (fVar3 + 222,8314f);
-				StringCopy(sParam2, "v_michael", 32);
-				return 1;
+				*uParam1 = num2 + 222.8314f;
+				TEXT_LABEL_ASSIGN_STRING(sParam2, "v_michael", 32);
+				return true;
 			}
 			break;
-		
+	
 		case 169:
-			*uParam1 = 112,841f;
-			StringCopy(sParam2, "v_michael", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 112.841f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_michael", 32);
+			return true;
+	
 		case 170:
-			*uParam1 = (-103,8158f + 180f);
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -103.8158f + 180f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 171:
-			*uParam1 = -28,0926f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -28.0926f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 173:
-			*uParam1 = -0,0301f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -0.0301f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 172:
-			*uParam1 = -30,185f;
-			*uParam1 = (*uParam1 + 0,003f);
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -30.185f;
+			*uParam1 = *uParam1 + 0.003f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 174:
-			*uParam1 = 14,98f;
-			StringCopy(sParam2, "v_michael", 32);
-			return 1;
-			break;
+			*uParam1 = 14.98f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_michael", 32);
+			return true;
 	}
+
 	switch (iParam0)
 	{
 		case 175:
-			*uParam1 = -179,653f;
-			StringCopy(sParam2, "v_franklins", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -179.653f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_franklins", 32);
+			return true;
+	
 		case 176:
 			*uParam1 = -147f;
-			StringCopy(sParam2, "v_franklinshouse", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_franklinshouse", 32);
+			return true;
+	
 		case 177:
 			*uParam1 = -81f;
-			StringCopy(sParam2, "v_franklinshouse", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_franklinshouse", 32);
+			return true;
+	
 		case 178:
-			*uParam1 = -95,4016f;
-			StringCopy(sParam2, "v_franklinshouse", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -95.4016f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_franklinshouse", 32);
+			return true;
+	
 		case 179:
-			*uParam1 = (-16,0627f + 180f);
-			StringCopy(sParam2, "v_franklins", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -16.0627f + 180f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_franklins", 32);
+			return true;
+	
 		case 180:
 			*uParam1 = 129f;
-			StringCopy(sParam2, "v_franklinshouse", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_franklinshouse", 32);
+			return true;
+	
 		case 181:
-			*uParam1 = -86,613f;
-			StringCopy(sParam2, "v_franklins", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -86.613f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_franklins", 32);
+			return true;
+	
 		case 182:
 			*uParam1 = -63f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 183:
-			*uParam1 = 111,688f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 111.688f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 184:
-			*uParam1 = 143,7974f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 143.7974f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 185:
-			*uParam1 = 143,792f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 143.792f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 186:
-			*uParam1 = 4,6834f;
-			StringCopy(sParam2, "v_franklinshouse", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 4.6834f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_franklinshouse", 32);
+			return true;
+	
 		case 187:
 			*uParam1 = -108f;
-			StringCopy(sParam2, "v_franklinshouse", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_franklinshouse", 32);
+			return true;
+	
 		case 188:
 			*uParam1 = 69f;
-			StringCopy(sParam2, "v_franklinshouse", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_franklinshouse", 32);
+			return true;
+	
 		case 189:
-			*uParam1 = -172,2207f;
-			StringCopy(sParam2, "v_franklinshouse", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -172.2207f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_franklinshouse", 32);
+			return true;
+	
 		case 190:
 			*uParam1 = 0f;
-			StringCopy(sParam2, "v_franklinshouse", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_franklinshouse", 32);
+			return true;
+	
 		case 191:
-			*uParam1 = -12,5158f;
-			StringCopy(sParam2, "v_franklinshouse", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -12.5158f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_franklinshouse", 32);
+			return true;
+	
 		case 196:
-			*uParam1 = -1,5f;
-			StringCopy(sParam2, "v_franklins", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -1.5f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_franklins", 32);
+			return true;
+	
 		case 197:
 			*uParam1 = 27f;
-			StringCopy(sParam2, "v_franklinshouse", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_franklinshouse", 32);
+			return true;
+	
 		case 192:
-			*uParam1 = 107,981f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 107.981f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 193:
-			*uParam1 = 172,9187f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 172.9187f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 194:
-			*uParam1 = -67,608f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -67.608f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 195:
-			*uParam1 = 74,1158f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 74.1158f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 198:
-			*uParam1 = 1,0411f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 1.0411f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 199:
-			*uParam1 = -152,203f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -152.203f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 200:
-			*uParam1 = (310,879f - 180f);
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 310.879f - 180f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 201:
-			*uParam1 = 130,879f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 130.879f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 202:
-			*uParam1 = 35,604f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 35.604f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 203:
 			*uParam1 = -93f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 204:
-			*uParam1 = -119,3944f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -119.3944f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 205:
-			*uParam1 = 121,9322f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 121.9322f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 206:
 			*uParam1 = -36f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 207:
-			*uParam1 = -95,588f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -95.588f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 208:
 			*uParam1 = 168f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 209:
-			*uParam1 = 230,78f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 230.78f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 210:
-			*uParam1 = 165,7751f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 165.7751f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 211:
 			*uParam1 = -179f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 212:
-			*uParam1 = 1,2709f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 1.2709f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 213:
 			*uParam1 = 84f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 214:
-			*uParam1 = -117,03f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -117.03f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 215:
-			*uParam1 = -49,0324f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -49.0324f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 216:
 			*uParam1 = -45f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 217:
 			*uParam1 = 153f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 221:
-			*uParam1 = 84,96f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 84.96f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 222:
-			*uParam1 = -59,3848f;
-			StringCopy(sParam2, "v_chopshop", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -59.3848f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_chopshop", 32);
+			return true;
+	
 		case 223:
-			*uParam1 = 43,82f;
-			StringCopy(sParam2, "v_chopshop", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 43.82f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_chopshop", 32);
+			return true;
+	
 		case 224:
 			return func_63(222, uParam1, sParam2);
-			break;
-		
+	
 		case 226:
 			*uParam1 = 160f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 227:
-			*uParam1 = -14,749f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -14.749f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 228:
 			*uParam1 = -150f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 229:
-			*uParam1 = 96,0116f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 96.0116f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 230:
-			*uParam1 = -43,6661f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -43.6661f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 218:
-			*uParam1 = -70,4124f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -70.4124f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 219:
 			*uParam1 = -12f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 220:
-			*uParam1 = -117,356f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -117.356f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 225:
-			*uParam1 = -83,8f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -83.8f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 231:
-			*uParam1 = 350,3382f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 350.3382f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 232:
-			*uParam1 = 109,0206f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 109.0206f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 233:
-			*uParam1 = 109,0206f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 109.0206f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 235:
 			*uParam1 = -112f;
-			StringCopy(sParam2, "v_strip3", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_strip3", 32);
+			return true;
+	
 		case 236:
 			*uParam1 = 114f;
-			StringCopy(sParam2, "v_strip3", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_strip3", 32);
+			return true;
+	
 		case 237:
 			*uParam1 = 30f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 238:
 			*uParam1 = -164f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 239:
 			*uParam1 = -122f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 240:
-			*uParam1 = -4,124f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -4.124f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 241:
 			*uParam1 = 108f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 242:
-			*uParam1 = 13,7207f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 13.7207f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 245:
-			*uParam1 = 27,746f;
-			StringCopy(sParam2, "v_trailer", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 27.746f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_trailer", 32);
+			return true;
+	
 		case 243:
 			*uParam1 = 18f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 244:
 			*uParam1 = -51f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 246:
 			*uParam1 = -165f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 247:
 			*uParam1 = 133f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 248:
-			*uParam1 = 10,77f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 10.77f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 249:
-			*uParam1 = (138f - 180f);
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 138f - 180f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 250:
 			*uParam1 = 87f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 251:
-			*uParam1 = -42,8529f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -42.8529f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 252:
-			*uParam1 = 2,6497f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 2.6497f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 253:
 			*uParam1 = 135f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 254:
 			*uParam1 = -40f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 255:
-			*uParam1 = 30,24f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 30.24f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 264:
 			*uParam1 = -90f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 265:
-			*uParam1 = -144,274f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -144.274f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 266:
-			*uParam1 = 68,8227f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 68.8227f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 267:
-			*uParam1 = 56,2037f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 56.2037f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 268:
 			*uParam1 = 33f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 269:
-			*uParam1 = -106,6605f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -106.6605f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 270:
 			*uParam1 = -102f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 271:
-			*uParam1 = 26,3597f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 26.3597f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 272:
-			*uParam1 = -83,3175f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -83.3175f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 273:
 			*uParam1 = -153f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 274:
 			*uParam1 = 9f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 275:
-			*uParam1 = (277,613f - 360f);
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 277.613f - 360f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 276:
-			*uParam1 = -4,7459f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -4.7459f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 277:
-			*uParam1 = -98,56f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -98.56f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 278:
-			*uParam1 = -33,77f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -33.77f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 279:
-			*uParam1 = 155,68f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 155.68f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 280:
-			*uParam1 = -49,56f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -49.56f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 281:
-			*uParam1 = -5,8739f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -5.8739f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 282:
-			*uParam1 = 70,1627f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 70.1627f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 283:
-			*uParam1 = 158,979f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 158.979f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 284:
-			*uParam1 = -67,1851f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -67.1851f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 285:
-			*uParam1 = 47,054f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 47.054f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 256:
 			*uParam1 = 120f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 257:
-			*uParam1 = 171,253f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 171.253f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 258:
-			*uParam1 = 10,247f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 10.247f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 259:
-			*uParam1 = -32,488f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -32.488f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 260:
-			*uParam1 = -29,093f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -29.093f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 261:
-			*uParam1 = 229,6085f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 229.6085f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 286:
 			*uParam1 = -150f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 287:
 			*uParam1 = -81f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 288:
 			*uParam1 = 12f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 262:
 			*uParam1 = -90f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 263:
 			*uParam1 = -171f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 289:
-			*uParam1 = -11,5018f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -11.5018f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 290:
 			*uParam1 = -129f;
-			StringCopy(sParam2, "v_strip3", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_strip3", 32);
+			return true;
+	
 		case 291:
 			*uParam1 = -147f;
-			StringCopy(sParam2, "v_Trevors", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_Trevors", 32);
+			return true;
+	
 		case 292:
-			*uParam1 = 28,7271f;
-			StringCopy(sParam2, "v_Trevors", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 28.7271f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_Trevors", 32);
+			return true;
+	
 		case 293:
-			*uParam1 = 28,7271f;
-			StringCopy(sParam2, "v_Trevors", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 28.7271f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_Trevors", 32);
+			return true;
+	
 		case 294:
 			return func_63(293, uParam1, sParam2);
-			break;
-		
+	
 		case 295:
 			return func_63(292, uParam1, sParam2);
-			break;
-		
+	
 		case 299:
-			*uParam1 = 34,661f;
-			StringCopy(sParam2, "v_Trevors", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 34.661f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_Trevors", 32);
+			return true;
+	
 		case 300:
 			return func_63(303, uParam1, sParam2);
-			break;
-		
+	
 		case 301:
 			return func_63(303, uParam1, sParam2);
-			break;
-		
+	
 		case 302:
 			return func_63(303, uParam1, sParam2);
-			break;
-		
+	
 		case 303:
 			*uParam1 = 32f;
-			StringCopy(sParam2, "v_Trevors", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_Trevors", 32);
+			return true;
+	
 		case 296:
-			*uParam1 = 116,742f;
-			StringCopy(sParam2, "v_Trevors", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 116.742f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_Trevors", 32);
+			return true;
+	
 		case 297:
-			*uParam1 = 100,46f;
-			StringCopy(sParam2, "v_Trevors", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 100.46f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_Trevors", 32);
+			return true;
+	
 		case 298:
 			*uParam1 = 102f;
-			StringCopy(sParam2, "v_Trevors", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_Trevors", 32);
+			return true;
+	
 		case 304:
-			*uParam1 = -152,0894f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -152.0894f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 305:
-			*uParam1 = 122,5269f;
-			StringCopy(sParam2, "v_methlab", 32);
-			return 1;
-			break;
-		
+			*uParam1 = 122.5269f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_methlab", 32);
+			return true;
+	
 		case 306:
-			Var4 = { -7,4998f, 7,4995f, -0,5258f };
-			*uParam1 = unk_0x97BC40FFA2FFCCD2(-Var4.f_0, -Var4.f_1);
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			num3 = { -7.4998f, 7.4995f, -0.5258f };
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-num3, -num3.f_1);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 307:
-			Var5 = { 10,6345f, 0,7246f, 1,2508f };
-			*uParam1 = unk_0x97BC40FFA2FFCCD2(-Var5.f_0, -Var5.f_1);
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			num4 = { 10.6345f, 0.7246f, 1.2508f };
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-num4, -num4.f_1);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 308:
-			Var6 = { -3,4271f, -13,6787f, -1,4107f };
-			*uParam1 = unk_0x97BC40FFA2FFCCD2(-Var6.f_0, -Var6.f_1);
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			num5 = { -3.4271f, -13.6787f, -1.4107f };
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-num5, -num5.f_1);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 309:
-			Var7 = { -19,6582f, 7,896f, 0,1334f };
-			*uParam1 = unk_0x97BC40FFA2FFCCD2(-Var7.f_0, -Var7.f_1);
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			num6 = { -19.6582f, 7.896f, 0.1334f };
+			*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(-num6, -num6.f_1);
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 310:
-			*uParam1 = -87,7215f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -87.7215f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 311:
 			*uParam1 = -145f;
-			StringCopy(sParam2, "v_trailer", 32);
-			return 1;
-			break;
-		
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "v_trailer", 32);
+			return true;
+	
 		case 312:
-			*uParam1 = ((103,2841f + 88,7571f) / 2f);
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = (103.2841f + 88.7571f) / 2f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 313:
-			*uParam1 = (-177f + 180f);
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
-		
+			*uParam1 = -177f + 180f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
+	
 		case 314:
-			*uParam1 = 327,7746f;
-			StringCopy(sParam2, "", 32);
-			return 1;
-			break;
+			*uParam1 = 327.7746f;
+			TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+			return true;
 	}
+
 	*uParam1 = 0f;
-	StringCopy(sParam2, "", 32);
-	return 0;
+	TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
+	return false;
 }
 
-int func_64(int iParam0, int iParam1, var uParam2, var uParam3)
+BOOL func_64(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0x6ADD
 {
 	switch (iParam1)
 	{
@@ -5674,58 +5285,55 @@ int func_64(int iParam0, int iParam1, var uParam2, var uParam3)
 			switch (iParam0)
 			{
 				case 0:
-					*uParam2 = { 13,904f, 1,193f, 0,7f };
+					*uParam2 = { 13.904f, 1.193f, 0.7f };
 					*uParam3 = -144f;
-					return 1;
-					break;
-				
+					return true;
+			
 				case 1:
 					if (func_64(0, iParam1, uParam2, uParam3))
 					{
-						*uParam2 = { *uParam2 + Vector(0f, -1,1731f, 0,809f) };
-						*uParam3 = (*uParam3 + (456,7661f - 360f));
-						return 1;
+						*uParam2 = { *uParam2 + { 0f, -1.1731f, 0.809f } };
+						*uParam3 = *uParam3 + (456.7661f - 360f);
+						return true;
 					}
 					break;
-				
+			
 				case 2:
-					*uParam2 = { Vector(71,8356f, 180,5483f, -796,9911f) - Vector(71,1531f, 179,5117f, -812,0607f) };
-					*uParam3 = ((16f - 222,8314f) + 360f);
-					return 1;
-					break;
+					*uParam2 = { { 71.8356f, 180.5483f, -796.9911f } - { 71.1531f, 179.5117f, -812.0607f } };
+					*uParam3 = (16f - 222.8314f) + 360f;
+					return true;
 			}
-			return 0;
-			break;
 		
+			return false;
+	
 		case 1:
 			switch (iParam0)
 			{
 				case 0:
-					*uParam2 = { 10,9793f, -5,9f, 4,6f };
-					*uParam3 = 163,0716f;
-					return 1;
-					break;
-				
+					*uParam2 = { 10.9793f, -5.9f, 4.6f };
+					*uParam3 = 163.0716f;
+					return true;
+			
 				case 1:
 					if (func_64(0, iParam1, uParam2, uParam3))
 					{
-						*uParam2 = { *uParam2 + Vector(0f, 0,25f, -0,6f) };
-						*uParam3 = (*uParam3 + 0f);
-						return 1;
+						*uParam2 = { *uParam2 + { 0f, 0.25f, -0.6f } };
+						*uParam3 = *uParam3 + 0f;
+						return true;
 					}
 					break;
-				
+			
 				case 2:
 					if (func_64(0, iParam1, uParam2, uParam3))
 					{
-						*uParam2 = { *uParam2 + Vector(0f, -0,5f, -1,2f) };
-						*uParam3 = (*uParam3 + 0f);
-						return 1;
+						*uParam2 = { *uParam2 + { 0f, -0.5f, -1.2f } };
+						*uParam3 = *uParam3 + 0f;
+						return true;
 					}
 					break;
 			}
 			break;
-		
+	
 		case 2:
 		case 3:
 			switch (iParam0)
@@ -5733,1839 +5341,1650 @@ int func_64(int iParam0, int iParam1, var uParam2, var uParam3)
 				case 0:
 				case 1:
 				case 2:
-					*uParam2 = { Vector(71,835f, 180,548f, -796,991f) - Vector(71,1531f, 179,5117f, -812,0607f) };
-					*uParam3 = (((16f + 90f) - 222,8314f) + 360f);
-					return 1;
-					break;
+					*uParam2 = { { 71.835f, 180.548f, -796.991f } - { 71.1531f, 179.5117f, -812.0607f } };
+					*uParam3 = ((16f + 90f) - 222.8314f) + 360f;
+					return true;
 			}
 			break;
-		
+	
 		case 4:
 			switch (iParam0)
 			{
 				case 0:
 				case 1:
 				case 2:
-					*uParam2 = { 6,8878f, -5,5247f, 1,5228f };
+					*uParam2 = { 6.8878f, -5.5247f, 1.5228f };
 					*uParam3 = 160f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 18:
 			switch (iParam0)
 			{
 				case 0:
-					*uParam2 = { 4,1937f, -9,0309f, 4,5877f };
+					*uParam2 = { 4.1937f, -9.0309f, 4.5877f };
 					*uParam3 = 255f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 9:
 			switch (iParam0)
 			{
 				case 0:
-					*uParam2 = { 4,4577f, -9,6399f, 4,5876f };
+					*uParam2 = { 4.4577f, -9.6399f, 4.5876f };
 					*uParam3 = 252f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 5:
 			switch (iParam0)
 			{
 				case 0:
-					*uParam2 = { 3,799f, -9,41f, 4,5877f };
+					*uParam2 = { 3.799f, -9.41f, 4.5877f };
 					*uParam3 = 273f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 21:
 			switch (iParam0)
 			{
 				case 0:
 					if (func_64(0, 5, uParam2, uParam3))
 					{
-						*uParam2 = { *uParam2 + Vector(0f, 0f, 0f) };
-						*uParam3 = (*uParam3 + 0f);
-						return 1;
+						*uParam2 = { *uParam2 + { 0f, 0f, 0f } };
+						*uParam3 = *uParam3 + 0f;
+						return true;
 					}
 					break;
 			}
 			break;
-		
+	
 		case 6:
 			switch (iParam0)
 			{
 				case 0:
-					*uParam2 = { 12,552f, 4,373f, (4,6f + 1f) };
+					*uParam2 = { 12.552f, 4.373f, 4.6f + 1f };
 					*uParam3 = 318f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 7:
 			switch (iParam0)
 			{
 				case 0:
-					*uParam2 = { -0,4395f, -11,0022f, 0,0747f };
+					*uParam2 = { -0.4395f, -11.0022f, 0.0747f };
 					*uParam3 = 306f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 8:
 			switch (iParam0)
 			{
 				case 0:
-					*uParam2 = { 5,5001f, -12,4406f, 4,6f };
+					*uParam2 = { 5.5001f, -12.4406f, 4.6f };
 					*uParam3 = 0f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 10:
 			switch (iParam0)
 			{
 				case 0:
-					*uParam2 = { 3,5f, -9,1f, 4,6f };
+					*uParam2 = { 3.5f, -9.1f, 4.6f };
 					*uParam3 = 330f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 11:
 			switch (iParam0)
 			{
 				case 0:
-					*uParam2 = { 0,849f, 1,575f, 0f };
-					*uParam3 = 272,857f;
-					return 1;
-					break;
+					*uParam2 = { 0.849f, 1.575f, 0f };
+					*uParam3 = 272.857f;
+					return true;
 			}
 			break;
-		
+	
 		case 12:
 			switch (iParam0)
 			{
 				case 0:
 				case 1:
-					*uParam2 = { 8,183f, -3,0467f, 5,5876f };
+					*uParam2 = { 8.183f, -3.0467f, 5.5876f };
 					*uParam3 = 158f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 13:
 			switch (iParam0)
 			{
 				case 0:
 				case 1:
-					*uParam2 = { 9,383f, -3,3887f, 5,73f };
+					*uParam2 = { 9.383f, -3.3887f, 5.73f };
 					*uParam3 = 339f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 14:
 			switch (iParam0)
 			{
 				case 0:
 				case 1:
-					*uParam2 = { Vector(76,89f, 176,176f, -802,702f) - Vector(71,1531f, 179,5117f, -812,0607f) };
-					*uParam3 = ((-159,23f - 222,8314f) + 360f);
-					return 1;
-					break;
+					*uParam2 = { { 76.89f, 176.176f, -802.702f } - { 71.1531f, 179.5117f, -812.0607f } };
+					*uParam3 = (-159.23f - 222.8314f) + 360f;
+					return true;
 			}
 			break;
-		
+	
 		case 15:
 			switch (iParam0)
 			{
 				case 0:
 				case 1:
-					*uParam2 = { Vector(76,89f, 176,176f, -802,702f) - Vector(71,1531f, 179,5117f, -812,0607f) };
-					*uParam3 = ((-159,23f - 222,8314f) + 360f);
-					return 1;
-					break;
+					*uParam2 = { { 76.89f, 176.176f, -802.702f } - { 71.1531f, 179.5117f, -812.0607f } };
+					*uParam3 = (-159.23f - 222.8314f) + 360f;
+					return true;
 			}
 			break;
-		
+	
 		case 16:
 			switch (iParam0)
 			{
 				case 0:
-					*uParam2 = { 4,488f, -9,098f, 5,4864f };
+					*uParam2 = { 4.488f, -9.098f, 5.4864f };
 					*uParam3 = 147f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 17:
 			switch (iParam0)
 			{
 				case 0:
-					*uParam2 = { 9,04f, 5,71f, 1,44f };
-					*uParam3 = 159,3182f;
-					return 1;
-					break;
+					*uParam2 = { 9.04f, 5.71f, 1.44f };
+					*uParam3 = 159.3182f;
+					return true;
 			}
 			break;
-		
+	
 		case 20:
 			switch (iParam0)
 			{
 				case 0:
-					*uParam2 = { 3,25f, -9,53f, 4,588f };
+					*uParam2 = { 3.25f, -9.53f, 4.588f };
 					*uParam3 = 333f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 22:
 			switch (iParam0)
 			{
 				case 0:
-					*uParam2 = { Vector(0f, -11,0022f, -0,4395f) + Vector(0f, unk_0xD2AA6F822D3A55D2(-0,5f, 0,5f), unk_0xD2AA6F822D3A55D2(-0,5f, 0,5f)) };
-					*uParam3 = (306f + unk_0xD2AA6F822D3A55D2(10f, 10f));
-					return 1;
-					break;
+					*uParam2 = { { 0f, -11.0022f, -0.4395f } + { 0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-0.5f, 0.5f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-0.5f, 0.5f) } };
+					*uParam3 = 306f + MISC::GET_RANDOM_FLOAT_IN_RANGE(10f, 10f);
+					return true;
 			}
 			break;
-		
+	
 		case 23:
 			switch (iParam0)
 			{
 				case 0:
-					*uParam2 = { Vector(60,2063f, 141,5129f, -863,5425f) - Vector(71,1531f, 179,5117f, -812,0607f) - Vector(1f, 0f, 0f) };
-					*uParam2 = { *uParam2 * Vector(0,95f, 0,95f, 0,95f) };
-					*uParam3 = unk_0x97BC40FFA2FFCCD2(*uParam2, uParam2->f_1);
-					return 1;
-					break;
+					*uParam2 = { { 60.2063f, 141.5129f, -863.5425f } - { 71.1531f, 179.5117f, -812.0607f } - { 1f, 0f, 0f } };
+					*uParam2 = { *uParam2 * { 0.95f, 0.95f, 0.95f } };
+					*uParam3 = MISC::GET_HEADING_FROM_VECTOR_2D(*uParam2, uParam2->f_1);
+					return true;
 			}
 			break;
-		
+	
 		case 24:
 			switch (iParam0)
 			{
 				case 0:
-					*uParam2 = { Vector(71,8266f, 180,4725f, -796,7593f) - Vector(71,1531f, 179,5117f, -812,0607f) };
-					*uParam3 = ((26,087f - 222,8314f) + 360f);
-					return 1;
-					break;
+					*uParam2 = { { 71.8266f, 180.4725f, -796.7593f } - { 71.1531f, 179.5117f, -812.0607f } };
+					*uParam3 = (26.087f - 222.8314f) + 360f;
+					return true;
 			}
 			break;
-		
+	
 		case 19:
 			switch (iParam0)
 			{
 				case 0:
-					*uParam2 = { Vector(72,6876f, 173,987f, -805,173f) - Vector(71,1531f, 179,5117f, -812,0607f) };
-					*uParam3 = ((13f - 222,8314f) + 360f);
-					return 1;
-					break;
+					*uParam2 = { { 72.6876f, 173.987f, -805.173f } - { 71.1531f, 179.5117f, -812.0607f } };
+					*uParam3 = (13f - 222.8314f) + 360f;
+					return true;
 			}
 			break;
-		
+	
 		case 25:
 			switch (iParam0)
 			{
 				case 0:
 				case 1:
-					*uParam2 = { Vector(72,8447f, 172,4196f, -803,1823f) - Vector(71,1531f, 179,5117f, -812,0607f) };
-					*uParam3 = ((-28,7112f - 222,8314f) + 360f);
-					return 1;
-					break;
+					*uParam2 = { { 72.8447f, 172.4196f, -803.1823f } - { 71.1531f, 179.5117f, -812.0607f } };
+					*uParam3 = (-28.7112f - 222.8314f) + 360f;
+					return true;
 			}
 			break;
-		
+	
 		case 26:
 			switch (iParam0)
 			{
 				case 1:
-					*uParam2 = { 27,9648f, 8,3766f, 0,7f };
+					*uParam2 = { 27.9648f, 8.3766f, 0.7f };
 					*uParam3 = 319f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 32:
 			switch (iParam0)
 			{
 				case 1:
-					*uParam2 = { Vector(0,6f, -6,5f, 10,3f) + Vector(0,1f, 0f, 0f) };
+					*uParam2 = { { 0.6f, -6.5f, 10.3f } + { 0.1f, 0f, 0f } };
 					*uParam3 = 78f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 27:
 			switch (iParam0)
 			{
 				case 1:
-					*uParam2 = { -0,3142f, -10,9926f, 0,0747f };
-					*uParam3 = 304,1026f;
-					return 1;
-					break;
+					*uParam2 = { -0.3142f, -10.9926f, 0.0747f };
+					*uParam3 = 304.1026f;
+					return true;
 			}
 			break;
-		
+	
 		case 41:
 			switch (iParam0)
 			{
 				case 1:
-					*uParam2 = { 10,3f, -6,5f, 4,6f };
+					*uParam2 = { 10.3f, -6.5f, 4.6f };
 					*uParam3 = 180f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 33:
 			switch (iParam0)
 			{
 				case 1:
 					if (func_64(1, 32, uParam2, uParam3))
 					{
-						*uParam2 = { *uParam2 + Vector(0f, 0f, 0f) };
-						*uParam3 = (*uParam3 + 0f);
-						return 1;
+						*uParam2 = { *uParam2 + { 0f, 0f, 0f } };
+						*uParam3 = *uParam3 + 0f;
+						return true;
 					}
 					break;
 			}
 			break;
-		
+	
 		case 38:
 			switch (iParam0)
 			{
 				case 1:
-					*uParam2 = { 8,505f, -10,9717f, 4,6019f };
+					*uParam2 = { 8.505f, -10.9717f, 4.6019f };
 					*uParam3 = 228f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 31:
 			switch (iParam0)
 			{
 				case 1:
-					*uParam2 = { 12,7165f, 4,7109f, (4,6f + 1f) };
-					*uParam3 = 310,6696f;
-					return 1;
-					break;
+					*uParam2 = { 12.7165f, 4.7109f, 4.6f + 1f };
+					*uParam3 = 310.6696f;
+					return true;
 			}
 			break;
-		
+	
 		case 34:
 			switch (iParam0)
 			{
 				case 1:
-					*uParam2 = { 9,0529f, -8,9175f, 1,6907f };
-					*uParam3 = 102,156f;
-					return 1;
-					break;
+					*uParam2 = { 9.0529f, -8.9175f, 1.6907f };
+					*uParam3 = 102.156f;
+					return true;
 			}
 			break;
-		
+	
 		case 35:
 			switch (iParam0)
 			{
 				case 1:
-					*uParam2 = { 8,4799f, -7,5315f, 0,682f };
+					*uParam2 = { 8.4799f, -7.5315f, 0.682f };
 					*uParam3 = 264f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 37:
 			switch (iParam0)
 			{
 				case 1:
-					*uParam2 = { 9,352f, -3,356f, 5,7338f };
+					*uParam2 = { 9.352f, -3.356f, 5.7338f };
 					*uParam3 = 338f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 39:
 			switch (iParam0)
 			{
 				case 1:
-					*uParam2 = { 8,3003f, -10,3127f, 4,5874f };
-					*uParam3 = 262,789f;
-					return 1;
-					break;
+					*uParam2 = { 8.3003f, -10.3127f, 4.5874f };
+					*uParam3 = 262.789f;
+					return true;
 			}
 			break;
-		
+	
 		case 40:
 			switch (iParam0)
 			{
 				case 1:
-					*uParam2 = { 10,76f, -5,95f, 4,59f };
-					*uParam3 = 177,6766f;
-					return 1;
-					break;
+					*uParam2 = { 10.76f, -5.95f, 4.59f };
+					*uParam3 = 177.6766f;
+					return true;
 			}
 			break;
-		
+	
 		case 36:
 			switch (iParam0)
 			{
 				case 1:
-					*uParam2 = { 9,6691f, -7,6405f, 0,6817f };
-					*uParam3 = 159,156f;
-					return 1;
-					break;
+					*uParam2 = { 9.6691f, -7.6405f, 0.6817f };
+					*uParam3 = 159.156f;
+					return true;
 			}
 			break;
-		
+	
 		case 28:
 			switch (iParam0)
 			{
 				case 1:
-					*uParam2 = { 1,228f, 4,044f, 0,7665f };
+					*uParam2 = { 1.228f, 4.044f, 0.7665f };
 					*uParam3 = 165f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 42:
 			switch (iParam0)
 			{
 				case 1:
-					*uParam2 = { 10,2365f, -7,6073f, 6,2761f };
-					*uParam3 = 157,0716f;
-					return 1;
-					break;
+					*uParam2 = { 10.2365f, -7.6073f, 6.2761f };
+					*uParam3 = 157.0716f;
+					return true;
 			}
 			break;
-		
+	
 		case 43:
 			switch (iParam0)
 			{
 				case 1:
-					*uParam2 = { 8,161f, -7,562f, 2,17f };
+					*uParam2 = { 8.161f, -7.562f, 2.17f };
 					*uParam3 = 78f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 29:
 		case 30:
 		case 44:
 			switch (iParam0)
 			{
 				case 1:
-					*uParam2 = { 10,7668f, -7,8757f, 5,5559f };
-					*uParam3 = 144,6939f;
-					return 1;
-					break;
+					*uParam2 = { 10.7668f, -7.8757f, 5.5559f };
+					*uParam3 = 144.6939f;
+					return true;
 			}
 			break;
-		
+	
 		case 45:
 			switch (iParam0)
 			{
 				case 1:
-					*uParam2 = { 10,6257f, -9,4927f, 5,5876f };
-					*uParam3 = 257,4583f;
-					return 1;
-					break;
+					*uParam2 = { 10.6257f, -9.4927f, 5.5876f };
+					*uParam3 = 257.4583f;
+					return true;
 			}
 			break;
-		
+	
 		case 46:
 			return func_64(iParam0, 26, uParam2, uParam3);
-			break;
-		
+	
 		case 47:
 			switch (iParam0)
 			{
 				case 2:
 				case 3:
-					*uParam2 = { 8,4451f, 3,1568f, 1,47f };
+					*uParam2 = { 8.4451f, 3.1568f, 1.47f };
 					*uParam3 = 159f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 48:
 		case 68:
 			switch (iParam0)
 			{
 				case 2:
-					*uParam2 = { 9,0477f, -7,9397f, 0,6817f };
-					*uParam3 = 88,5686f;
-					return 1;
-					break;
+					*uParam2 = { 9.0477f, -7.9397f, 0.6817f };
+					*uParam3 = 88.5686f;
+					return true;
 			}
 			break;
-		
+	
 		case 49:
 			switch (iParam0)
 			{
 				case 2:
 					*uParam2 = { 0f, 0f, 0f };
 					*uParam3 = 0f;
-					return 0;
-					break;
+					return false;
 			}
 			break;
-		
+	
 		case 50:
 		case 69:
 			switch (iParam0)
 			{
 				case 2:
-					*uParam2 = { 21,7f, 9f, 1,7029f };
+					*uParam2 = { 21.7f, 9f, 1.7029f };
 					*uParam3 = 0f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 51:
 			switch (iParam0)
 			{
 				case 2:
-					*uParam2 = { 1,3278f, 1,534f, 0f };
-					*uParam3 = 159,72f;
-					return 1;
-					break;
+					*uParam2 = { 1.3278f, 1.534f, 0f };
+					*uParam3 = 159.72f;
+					return true;
 			}
 			break;
-		
+	
 		case 52:
 		case 67:
 			switch (iParam0)
 			{
 				case 2:
-					*uParam2 = { -3,0265f, 1,7627f, 0,1273f };
-					*uParam3 = 338,5f;
-					return 1;
-					break;
+					*uParam2 = { -3.0265f, 1.7627f, 0.1273f };
+					*uParam3 = 338.5f;
+					return true;
 			}
 			break;
-		
+	
 		case 53:
 			switch (iParam0)
 			{
 				case 2:
-					*uParam2 = { 15,2374f, 8,723f, 1,4495f };
-					*uParam3 = 205,677f;
-					return 1;
-					break;
+					*uParam2 = { 15.2374f, 8.723f, 1.4495f };
+					*uParam3 = 205.677f;
+					return true;
 			}
 			break;
-		
+	
 		case 54:
 		case 70:
 			switch (iParam0)
 			{
 				case 2:
-					*uParam2 = { 28,7f, 8,8241f, 0,6f };
+					*uParam2 = { 28.7f, 8.8241f, 0.6f };
 					*uParam3 = 39f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 55:
 		case 71:
 			switch (iParam0)
 			{
 				case 2:
-					*uParam2 = { Vector(1,1936f, -9,0107f, 9,0567f) + Vector((0,03f - 0,02f), 0f, 0f) };
-					*uParam3 = 94,2086f;
-					return 1;
-					break;
+					*uParam2 = { { 1.1936f, -9.0107f, 9.0567f } + { 0.03f - 0.02f, 0f, 0f } };
+					*uParam3 = 94.2086f;
+					return true;
 			}
 			break;
-		
+	
 		case 64:
 			switch (iParam0)
 			{
 				case 2:
-					*uParam2 = { Vector(5,2891f, 2,0403f, -2,8213f) + Vector((0,03f - 0,05f), 0f, 0f) };
+					*uParam2 = { { 5.2891f, 2.0403f, -2.8213f } + { 0.03f - 0.05f, 0f, 0f } };
 					*uParam3 = 336f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 56:
 			switch (iParam0)
 			{
 				case 2:
 				case 0:
-					*uParam2 = { 5,5782f, 5,7755f, 3,84f };
-					*uParam3 = 311,4f;
-					return 1;
-					break;
+					*uParam2 = { 5.5782f, 5.7755f, 3.84f };
+					*uParam3 = 311.4f;
+					return true;
 			}
 			break;
-		
+	
 		case 57:
 			switch (iParam0)
 			{
 				case 2:
 				case 0:
-					*uParam2 = { 5,5782f, 5,7755f, 3,8418f };
-					*uParam3 = 306,6f;
-					return 1;
-					break;
+					*uParam2 = { 5.5782f, 5.7755f, 3.8418f };
+					*uParam3 = 306.6f;
+					return true;
 			}
 			break;
-		
+	
 		case 58:
 			switch (iParam0)
 			{
 				case 2:
 				case 1:
-					*uParam2 = { 5,8092f, 5,7965f, 3,85f };
-					*uParam3 = 337,4f;
-					return 1;
-					break;
+					*uParam2 = { 5.8092f, 5.7965f, 3.85f };
+					*uParam3 = 337.4f;
+					return true;
 			}
 			break;
-		
+	
 		case 59:
 		case 72:
 			switch (iParam0)
 			{
 				case 2:
-					*uParam2 = { 13,3221f, 0,0684f, 0,6817f };
-					*uParam3 = 277,317f;
-					return 1;
-					break;
+					*uParam2 = { 13.3221f, 0.0684f, 0.6817f };
+					*uParam3 = 277.317f;
+					return true;
 			}
 			break;
-		
+	
 		case 60:
 			if (func_64(iParam0, 59, uParam2, uParam3))
 			{
-				*uParam2 = { *uParam2 + Vector(0f, unk_0xD2AA6F822D3A55D2(-1f, 1f), unk_0xD2AA6F822D3A55D2(-1f, 1f)) };
-				*uParam3 = (*uParam3 + unk_0xD2AA6F822D3A55D2(-10f, 10f));
-				return 1;
+				*uParam2 = { *uParam2 + { 0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f) } };
+				*uParam3 = *uParam3 + MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f);
+				return true;
 			}
 			break;
-		
+	
 		case 61:
 		case 62:
 		case 63:
 			switch (iParam0)
 			{
 				case 2:
-					*uParam2 = { -2,235f, 1,725f, 4,5877f };
-					*uParam3 = 172,714f;
-					return 1;
-					break;
+					*uParam2 = { -2.235f, 1.725f, 4.5877f };
+					*uParam3 = 172.714f;
+					return true;
 			}
 			break;
-		
+	
 		case 65:
 			switch (iParam0)
 			{
 				case 2:
-					*uParam2 = { Vector(75,7407f, 181,264f, -814,246f) - Vector(71,1531f, 179,5117f, -812,0607f) };
-					*uParam3 = ((-158f - 222,8314f) + 360f);
-					return 1;
-					break;
+					*uParam2 = { { 75.7407f, 181.264f, -814.246f } - { 71.1531f, 179.5117f, -812.0607f } };
+					*uParam3 = (-158f - 222.8314f) + 360f;
+					return true;
 			}
 			break;
-		
+	
 		case 66:
 			switch (iParam0)
 			{
 				case 2:
-					*uParam2 = { Vector(76,7233f, 181,114f, -812,896f) - Vector(71,1531f, 179,5117f, -812,0607f) };
-					*uParam3 = ((-164f - 222,8314f) + 360f);
-					return 1;
-					break;
+					*uParam2 = { { 76.7233f, 181.114f, -812.896f } - { 71.1531f, 179.5117f, -812.0607f } };
+					*uParam3 = (-164f - 222.8314f) + 360f;
+					return true;
 			}
 			break;
-		
+	
 		case 73:
 			switch (iParam0)
 			{
 				case 2:
-					*uParam2 = { 7,394f, 5,368f, 1,451f };
-					*uParam3 = 235,0656f;
-					return 1;
-					break;
+					*uParam2 = { 7.394f, 5.368f, 1.451f };
+					*uParam3 = 235.0656f;
+					return true;
 			}
 			break;
-		
+	
 		case 74:
 			switch (iParam0)
 			{
 				case 2:
 				case 1:
-					*uParam2 = { 1,0704f, -1,4624f, 0,999f };
-					*uParam3 = 157,44f;
-					return 1;
-					break;
+					*uParam2 = { 1.0704f, -1.4624f, 0.999f };
+					*uParam3 = 157.44f;
+					return true;
 			}
 			break;
-		
+	
 		case 75:
 		case 84:
 			switch (iParam0)
 			{
 				case 3:
-					*uParam2 = { 14,8186f, 6,8253f, 0,5f };
-					*uParam3 = 87,3368f;
-					return 1;
-					break;
+					*uParam2 = { 14.8186f, 6.8253f, 0.5f };
+					*uParam3 = 87.3368f;
+					return true;
 			}
 			break;
-		
+	
 		case 76:
 		case 78:
 		case 85:
 			switch (iParam0)
 			{
 				case 3:
-					*uParam2 = { 13,6486f, 6,2253f, 0,45f };
-					*uParam3 = 262,32f;
-					return 1;
-					break;
+					*uParam2 = { 13.6486f, 6.2253f, 0.45f };
+					*uParam3 = 262.32f;
+					return true;
 			}
 			break;
-		
+	
 		case 77:
 			if (func_64(iParam0, 47, uParam2, uParam3))
 			{
-				*uParam2 = { *uParam2 + Vector(0f, 0f, 0f) };
-				*uParam3 = (*uParam3 + 0f);
-				return 1;
+				*uParam2 = { *uParam2 + { 0f, 0f, 0f } };
+				*uParam3 = *uParam3 + 0f;
+				return true;
 			}
 			break;
-		
+	
 		case 79:
 		case 86:
 			switch (iParam0)
 			{
 				case 3:
-					*uParam2 = { 16,319f, -1,375f, 0,6817f };
-					*uParam3 = 334,126f;
-					return 1;
-					break;
+					*uParam2 = { 16.319f, -1.375f, 0.6817f };
+					*uParam3 = 334.126f;
+					return true;
 			}
 			break;
-		
+	
 		case 80:
 			switch (iParam0)
 			{
 				case 3:
-					*uParam2 = { -0,39f, 3,27f, 0f };
-					*uParam3 = 154,126f;
-					return 1;
-					break;
+					*uParam2 = { -0.39f, 3.27f, 0f };
+					*uParam3 = 154.126f;
+					return true;
 			}
 			break;
-		
+	
 		case 81:
 			switch (iParam0)
 			{
 				case 3:
-					*uParam2 = { 15,0213f, 6,9622f, 1,39f };
-					*uParam3 = 142,889f;
-					return 1;
-					break;
+					*uParam2 = { 15.0213f, 6.9622f, 1.39f };
+					*uParam3 = 142.889f;
+					return true;
 			}
 			break;
-		
+	
 		case 82:
 		case 83:
 			switch (iParam0)
 			{
 				case 3:
-					*uParam2 = { 15,128f, 6,842f, 0,4524f };
+					*uParam2 = { 15.128f, 6.842f, 0.4524f };
 					*uParam3 = 54f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 87:
 			switch (iParam0)
 			{
 				case 4:
-					*uParam2 = { -10,9019f, -23,8349f, -2,1f };
+					*uParam2 = { -10.9019f, -23.8349f, -2.1f };
 					*uParam3 = 339f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 88:
 			switch (iParam0)
 			{
 				case 4:
-					*uParam2 = { -10,9937f, -24,9005f, -2,18f };
-					*uParam3 = 314,2132f;
-					return 1;
-					break;
+					*uParam2 = { -10.9937f, -24.9005f, -2.18f };
+					*uParam3 = 314.2132f;
+					return true;
 			}
 			break;
-		
+	
 		case 89:
 			switch (iParam0)
 			{
 				case 4:
-					*uParam2 = { 31,7401f, -1,0943f, 0,6822f };
+					*uParam2 = { 31.7401f, -1.0943f, 0.6822f };
 					*uParam3 = 147f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 90:
 			switch (iParam0)
 			{
 				case 4:
-					*uParam2 = { -27,1728f, -3,75f, -1,626f };
-					*uParam3 = (147f + 90f);
-					return 1;
-					break;
+					*uParam2 = { -27.1728f, -3.75f, -1.626f };
+					*uParam3 = 147f + 90f;
+					return true;
 			}
 			break;
-		
+	
 		case 91:
 			switch (iParam0)
 			{
 				case 4:
-					*uParam2 = { 14,7722f, -10,9336f, -0,537f };
-					*uParam3 = 110,8505f;
-					return 1;
-					break;
+					*uParam2 = { 14.7722f, -10.9336f, -0.537f };
+					*uParam3 = 110.8505f;
+					return true;
 			}
 			break;
-		
+	
 		case 92:
 			switch (iParam0)
 			{
 				case 4:
-					*uParam2 = { -17,2536f, 2,451f, -0,6f };
+					*uParam2 = { -17.2536f, 2.451f, -0.6f };
 					*uParam3 = 0f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 93:
 			switch (iParam0)
 			{
 				case 4:
-					*uParam2 = { 23,9716f, -20,3533f, -3,18f };
+					*uParam2 = { 23.9716f, -20.3533f, -3.18f };
 					*uParam3 = 324f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 94:
 			switch (iParam0)
 			{
 				case 5:
-					*uParam2 = { 3,1416f, -2,0799f, -0,0145f };
+					*uParam2 = { 3.1416f, -2.0799f, -0.0145f };
 					*uParam3 = 33f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 95:
 			switch (iParam0)
 			{
 				case 5:
-					*uParam2 = { 3,2746f, -4,1995f, -0,0144f };
+					*uParam2 = { 3.2746f, -4.1995f, -0.0144f };
 					*uParam3 = 69f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 96:
 		case 98:
 			switch (iParam0)
 			{
 				case 5:
-					*uParam2 = { 2,983f, -4,094f, 0,4629f };
+					*uParam2 = { 2.983f, -4.094f, 0.4629f };
 					*uParam3 = 33f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 97:
 			switch (iParam0)
 			{
 				case 5:
-					*uParam2 = { 5,5235f, 2,9133f, 0,7288f };
+					*uParam2 = { 5.5235f, 2.9133f, 0.7288f };
 					*uParam3 = 71f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 99:
 			switch (iParam0)
 			{
 				case 6:
-					*uParam2 = { Vector(30,7131f, -1454,676f, -42,2059f) - Vector(30,116f, -1435,997f, -14,3064f) };
-					*uParam3 = (84,7009f - 188,5817f);
-					return 1;
-					break;
-				
+					*uParam2 = { { 30.7131f, -1454.6757f, -42.2059f } - { 30.116f, -1435.9974f, -14.3064f } };
+					*uParam3 = 84.7009f - 188.5817f;
+					return true;
+			
 				case 7:
-					*uParam2 = { Vector(30,6803f, -1455,848f, -40,7478f) - Vector(30,116f, -1435,997f, -14,3064f) };
-					*uParam3 = (90,6417f - 188,5817f);
-					return 1;
-					break;
+					*uParam2 = { { 30.6803f, -1455.8477f, -40.7478f } - { 30.116f, -1435.9974f, -14.3064f } };
+					*uParam3 = 90.6417f - 188.5817f;
+					return true;
 			}
 			break;
-		
+	
 		case 100:
 			switch (iParam0)
 			{
 				case 10:
-					*uParam2 = { 2,0126f, 0,3422f, -0,0086f };
+					*uParam2 = { 2.0126f, 0.3422f, -0.0086f };
 					*uParam3 = 354f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 101:
 			switch (iParam0)
 			{
 				case 10:
-					*uParam2 = { 1,2931f, 1,4476f, 1,0127f };
-					*uParam3 = 61,7525f;
-					return 1;
-					break;
+					*uParam2 = { 1.2931f, 1.4476f, 1.0127f };
+					*uParam3 = 61.7525f;
+					return true;
 			}
 			break;
-		
+	
 		case 102:
 		case 103:
 			switch (iParam0)
 			{
 				case 10:
-					*uParam2 = { 0,0158f, 1,4182f, 0,9913f };
-					*uParam3 = 119,008f;
-					return 1;
-					break;
+					*uParam2 = { 0.0158f, 1.4182f, 0.9913f };
+					*uParam3 = 119.008f;
+					return true;
 			}
 			break;
-		
+	
 		case 104:
 			switch (iParam0)
 			{
 				case 10:
-					*uParam2 = { -3,467f, 0,074f, 0f };
+					*uParam2 = { -3.467f, 0.074f, 0f };
 					*uParam3 = 30f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 105:
 			switch (iParam0)
 			{
 				case 10:
-					*uParam2 = { -2,1014f, -5,4089f, -0,013f };
-					*uParam3 = 123,753f;
-					return 1;
-					break;
+					*uParam2 = { -2.1014f, -5.4089f, -0.013f };
+					*uParam3 = 123.753f;
+					return true;
 			}
 			break;
-		
+	
 		case 106:
 			switch (iParam0)
 			{
 				case 10:
-					*uParam2 = { -2,802f, -6,3295f, -0,01f };
-					*uParam3 = 42,757f;
-					return 1;
-					break;
+					*uParam2 = { -2.802f, -6.3295f, -0.01f };
+					*uParam3 = 42.757f;
+					return true;
 			}
 			break;
-		
+	
 		case 107:
 			switch (iParam0)
 			{
 				case 8:
-					*uParam2 = { -2,156f, -4,9564f, 1,4886f };
-					*uParam3 = 136,309f;
-					return 1;
-					break;
+					*uParam2 = { -2.156f, -4.9564f, 1.4886f };
+					*uParam3 = 136.309f;
+					return true;
 			}
 			break;
-		
+	
 		case 108:
 			switch (iParam0)
 			{
 				case 8:
-					*uParam2 = { 7,2656f, 3,022f, -0,9061f };
-					*uParam3 = 92,8891f;
-					return 1;
-					break;
+					*uParam2 = { 7.2656f, 3.022f, -0.9061f };
+					*uParam3 = 92.8891f;
+					return true;
 			}
 			break;
-		
+	
 		case 109:
 			switch (iParam0)
 			{
 				case 8:
-					*uParam2 = { 0,5066f, 1,6992f, 0,0168f };
-					*uParam3 = 115,77f;
-					return 1;
-					break;
+					*uParam2 = { 0.5066f, 1.6992f, 0.0168f };
+					*uParam3 = 115.77f;
+					return true;
 			}
 			break;
-		
+	
 		case 110:
 		case 111:
 			switch (iParam0)
 			{
 				case 8:
-					*uParam2 = { -0,2121f, -6,2791f, -0,0089f };
-					*uParam3 = 114,3391f;
-					return 1;
-					break;
+					*uParam2 = { -0.2121f, -6.2791f, -0.0089f };
+					*uParam3 = 114.3391f;
+					return true;
 			}
 			break;
-		
+	
 		case 116:
 			switch (iParam0)
 			{
 				case 9:
 				case 11:
-					*uParam2 = { 8,2458f, -0,7136f, -0,2503f };
-					*uParam3 = 252,2687f;
-					return 1;
-					break;
+					*uParam2 = { 8.2458f, -0.7136f, -0.2503f };
+					*uParam3 = 252.2687f;
+					return true;
 			}
 			break;
-		
+	
 		case 117:
 			switch (iParam0)
 			{
 				case 9:
 				case 11:
-					*uParam2 = { 2,334f, 1,6889f, 0,586f };
+					*uParam2 = { 2.334f, 1.6889f, 0.586f };
 					*uParam3 = 109f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 112:
 			switch (iParam0)
 			{
 				case 9:
-					*uParam2 = { -0,6331f, 1,2093f, -0,0086f };
-					*uParam3 = 137,1861f;
-					return 1;
-					break;
+					*uParam2 = { -0.6331f, 1.2093f, -0.0086f };
+					*uParam3 = 137.1861f;
+					return true;
 			}
 			break;
-		
+	
 		case 113:
 			switch (iParam0)
 			{
 				case 9:
-					*uParam2 = { -3,887f, -0,166f, 0f };
+					*uParam2 = { -3.887f, -0.166f, 0f };
 					*uParam3 = 30f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 114:
 			switch (iParam0)
 			{
 				case 9:
-					*uParam2 = { 3,5179f, 9,1355f, -1f };
-					*uParam3 = 141,79f;
-					return 1;
-					break;
+					*uParam2 = { 3.5179f, 9.1355f, -1f };
+					*uParam3 = 141.79f;
+					return true;
 			}
 			break;
-		
+	
 		case 115:
 			switch (iParam0)
 			{
 				case 9:
-					*uParam2 = { Vector(0,15f, -1,9326f, -6,013f) + Vector(1f, 0f, 0f) };
-					*uParam3 = 121,6591f;
-					return 1;
-					break;
+					*uParam2 = { { 0.15f, -1.9326f, -6.013f } + { 1f, 0f, 0f } };
+					*uParam3 = 121.6591f;
+					return true;
 			}
 			break;
-		
+	
 		case 118:
 			switch (iParam0)
 			{
 				case 10:
-					*uParam2 = { 10,2823f, 2,2595f, -1,0742f };
-					*uParam3 = (170,2796f - 180f);
-					return 1;
-					break;
+					*uParam2 = { 10.2823f, 2.2595f, -1.0742f };
+					*uParam3 = 170.2796f - 180f;
+					return true;
 			}
 			break;
-		
+	
 		case 119:
 			switch (iParam0)
 			{
 				case 10:
-					*uParam2 = { 1,077f, -5,1446f, 0,9904f };
-					*uParam3 = 107,1399f;
-					return 1;
-					break;
+					*uParam2 = { 1.077f, -5.1446f, 0.9904f };
+					*uParam3 = 107.1399f;
+					return true;
 			}
 			break;
-		
+	
 		case 120:
 			switch (iParam0)
 			{
 				case 10:
-					*uParam2 = { -12,903f, -6,623f, -0,0406f };
-					*uParam3 = 63,48f;
-					return 1;
-					break;
+					*uParam2 = { -12.903f, -6.623f, -0.0406f };
+					*uParam3 = 63.48f;
+					return true;
 			}
 			break;
-		
+	
 		case 121:
 			switch (iParam0)
 			{
 				case 10:
-					*uParam2 = { 10,5514f, 5,393f, -0,0998f };
-					*uParam3 = 327,483f;
-					return 1;
-					break;
+					*uParam2 = { 10.5514f, 5.393f, -0.0998f };
+					*uParam3 = 327.483f;
+					return true;
 			}
 			break;
-		
+	
 		case 122:
 			switch (iParam0)
 			{
 				case 11:
-					*uParam2 = { 0,9794f, -0,3043f, 0f };
-					*uParam3 = 179,7612f;
-					return 1;
-					break;
+					*uParam2 = { 0.9794f, -0.3043f, 0f };
+					*uParam3 = 179.7612f;
+					return true;
 			}
 			break;
-		
+	
 		case 123:
 			switch (iParam0)
 			{
 				case 11:
-					*uParam2 = { 11,9759f, 1f, -1,0728f };
-					*uParam3 = 238,9422f;
-					return 1;
-					break;
+					*uParam2 = { 11.9759f, 1f, -1.0728f };
+					*uParam3 = 238.9422f;
+					return true;
 			}
 			break;
-		
+	
 		case 124:
 			switch (iParam0)
 			{
 				case 11:
 				case 8:
-					*uParam2 = { -0,576f, 1,671f, 0,601f };
+					*uParam2 = { -0.576f, 1.671f, 0.601f };
 					*uParam3 = 296f;
-					return 1;
-					break;
+					return true;
 			}
 			break;
-		
+	
 		case 125:
 			switch (iParam0)
 			{
 				case 12:
-					*uParam2 = { -0,6532f, 0,9556f, -0,0087f };
-					*uParam3 = 121,0556f;
-					return 1;
-					break;
+					*uParam2 = { -0.6532f, 0.9556f, -0.0087f };
+					*uParam3 = 121.0556f;
+					return true;
 			}
 			break;
-		
+	
 		case 126:
 			switch (iParam0)
 			{
 				case 13:
-					*uParam2 = { -0,18f, -4,173f, 0,9981f };
-					*uParam3 = 216,61f;
-					return 1;
-					break;
+					*uParam2 = { -0.18f, -4.173f, 0.9981f };
+					*uParam3 = 216.61f;
+					return true;
 			}
 			break;
-		
+	
 		case 127:
 			switch (iParam0)
 			{
 				case 13:
-					*uParam2 = { 6,5937f, 0,3521f, 1f };
-					*uParam3 = 119,4f;
-					return 1;
-					break;
+					*uParam2 = { 6.5937f, 0.3521f, 1f };
+					*uParam3 = 119.4f;
+					return true;
 			}
 			break;
-		
+	
 		case 128:
 			switch (iParam0)
 			{
 				case 13:
 					if (Global_113969.f_18536[2] == 299)
 					{
-						*uParam2 = { Vector(9,6327f, -1521,394f, -1158,133f) - Vector(9,6346f, -1517,601f, -1152,571f) };
-						*uParam3 = (34,661f - 90,6729f);
-						return 1;
+						*uParam2 = { { 9.6327f, -1521.394f, -1158.133f } - { 9.6346f, -1517.601f, -1152.5707f } };
+						*uParam3 = 34.661f - 90.6729f;
+						return true;
 					}
-					else if (((Global_113969.f_18536[2] == 300 || Global_113969.f_18536[2] == 301) || Global_113969.f_18536[2] == 302) || Global_113969.f_18536[2] == 303)
+					else if (Global_113969.f_18536[2] == 300 || Global_113969.f_18536[2] == 301 || Global_113969.f_18536[2] == 302 || Global_113969.f_18536[2] == 303)
 					{
-						*uParam2 = { Vector(9,6327f, -1521,334f, -1157,803f) - Vector(9,6346f, -1517,601f, -1152,571f) };
-						*uParam3 = (32f - 90,6729f);
-						return 1;
+						*uParam2 = { { 9.6327f, -1521.334f, -1157.803f } - { 9.6346f, -1517.601f, -1152.5707f } };
+						*uParam3 = 32f - 90.6729f;
+						return true;
 					}
-					if (func_65())
+				
+					if (_GET_RANDOM_BOOL())
 					{
-						*uParam2 = { Vector(9,6327f, -1521,394f, -1158,133f) - Vector(9,6346f, -1517,601f, -1152,571f) };
-						*uParam3 = (34,661f - 90,6729f);
-						return 1;
+						*uParam2 = { { 9.6327f, -1521.394f, -1158.133f } - { 9.6346f, -1517.601f, -1152.5707f } };
+						*uParam3 = 34.661f - 90.6729f;
+						return true;
 					}
 					else
 					{
-						*uParam2 = { Vector(9,6327f, -1521,334f, -1157,803f) - Vector(9,6346f, -1517,601f, -1152,571f) };
-						*uParam3 = (32f - 90,6729f);
-						return 1;
+						*uParam2 = { { 9.6327f, -1521.334f, -1157.803f } - { 9.6346f, -1517.601f, -1152.5707f } };
+						*uParam3 = 32f - 90.6729f;
+						return true;
 					}
 					break;
 			}
 			break;
-		
+	
 		case 129:
 			switch (iParam0)
 			{
 				case 13:
-					*uParam2 = { Vector(10,6327f, -1519,561f, -1156,422f) - Vector(9,6346f, -1517,601f, -1152,571f) };
-					*uParam3 = (102f - 90,6729f);
-					return 1;
-					break;
+					*uParam2 = { { 10.6327f, -1519.561f, -1156.422f } - { 9.6346f, -1517.601f, -1152.5707f } };
+					*uParam3 = 102f - 90.6729f;
+					return true;
 			}
 			break;
-		
+	
 		case 130:
 			switch (iParam0)
 			{
 				case 13:
-					*uParam2 = { -2,8352f, 0,0552f, 0f };
-					*uParam3 = 334,44f;
-					return 1;
-					break;
+					*uParam2 = { -2.8352f, 0.0552f, 0f };
+					*uParam3 = 334.44f;
+					return true;
 			}
 			break;
-		
+	
 		case 131:
 			switch (iParam0)
 			{
 				case 13:
 					if (func_64(iParam0, 130, uParam2, uParam3))
 					{
-						*uParam2 = { *uParam2 + Vector(0f, unk_0xD2AA6F822D3A55D2(-1f, 1f), unk_0xD2AA6F822D3A55D2(-1f, 1f)) };
-						*uParam3 = (*uParam3 + unk_0xD2AA6F822D3A55D2(-10f, 10f));
-						return 1;
+						*uParam2 = { *uParam2 + { 0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f) } };
+						*uParam3 = *uParam3 + MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f);
+						return true;
 					}
 					break;
 			}
 			break;
-		
+	
 		case 132:
 			switch (iParam0)
 			{
 				case 13:
-					*uParam2 = { -7,213f, -1,4536f, 0,9981f };
-					*uParam3 = 42,6f;
-					return 1;
-					break;
+					*uParam2 = { -7.213f, -1.4536f, 0.9981f };
+					*uParam3 = 42.6f;
+					return true;
 			}
 			break;
-		
+	
 		case 133:
 			switch (iParam0)
 			{
 				case 13:
-					*uParam2 = { Vector((9,6327f + 1f), -1518,736f, -1148,466f) - Vector(9,6346f, -1517,601f, -1152,571f) };
-					*uParam3 = unk_0xD2AA6F822D3A55D2(0f, 360f);
-					return 1;
-					break;
+					*uParam2 = { { 9.6327f + 1f, -1518.7363f, -1148.4664f } - { 9.6346f, -1517.601f, -1152.5707f } };
+					*uParam3 = MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 360f);
+					return true;
 			}
 			break;
-		
+	
 		case 134:
 			switch (iParam0)
 			{
 				case 13:
-					*uParam2 = { 5,24f, 6,217f, 0,998f };
-					*uParam3 = 315,72f;
-					return 1;
-					break;
+					*uParam2 = { 5.24f, 6.217f, 0.998f };
+					*uParam3 = 315.72f;
+					return true;
 			}
 			break;
-		
+	
 		case 135:
 			switch (iParam0)
 			{
 				case 13:
-					*uParam2 = { 6,6447f, 0,7635f, 1,0507f };
-					*uParam3 = 296,683f;
-					return 1;
-					break;
+					*uParam2 = { 6.6447f, 0.7635f, 1.0507f };
+					*uParam3 = 296.683f;
+					return true;
 			}
 			break;
-		
+	
 		case 136:
 			switch (iParam0)
 			{
 				case 13:
-					*uParam2 = { 3,968f, -1,04f, 0f };
-					*uParam3 = 214,92f;
-					return 1;
-					break;
-				
+					*uParam2 = { 3.968f, -1.04f, 0f };
+					*uParam3 = 214.92f;
+					return true;
+			
 				case 14:
-					*uParam2 = { 4,617f, -1,1314f, 0f };
-					*uParam3 = 39,4085f;
-					return 1;
-					break;
+					*uParam2 = { 4.617f, -1.1314f, 0f };
+					*uParam3 = 39.4085f;
+					return true;
 			}
 			break;
-		
+	
 		case 137:
 		case 138:
 			*uParam2 = { 0f, 0f, 0f };
 			*uParam3 = 0f;
-			return 0;
-			break;
-		
+			return false;
+	
 		case 140:
 		case 141:
 			*uParam2 = { 0f, 0f, 0f };
 			*uParam3 = 0f;
-			return 0;
-			break;
-		
+			return false;
+	
 		default:
-			*uParam2 = { unk_0xD2AA6F822D3A55D2(-10f, 10f), unk_0xD2AA6F822D3A55D2(-10f, 10f), 0f };
-			*uParam3 = unk_0xD2AA6F822D3A55D2(0f, 360f);
-			return 0;
-			break;
+			*uParam2 = { MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), 0f };
+			*uParam3 = MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 360f);
+			return false;
 	}
-	*uParam2 = { unk_0xD2AA6F822D3A55D2(-10f, 10f), unk_0xD2AA6F822D3A55D2(-10f, 10f), 0f };
-	*uParam3 = unk_0xD2AA6F822D3A55D2(0f, 360f);
-	return 0;
+
+	*uParam2 = { MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f), 0f };
+	*uParam3 = MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 360f);
+	return false;
 }
 
-int func_65()
+BOOL _GET_RANDOM_BOOL() // Position - 0x8A2D
 {
-	if (BitTest(unk_0xC5935DFB3F39785A(0, 65535), 0))
-	{
-		return 1;
-	}
-	return 0;
+	if (IS_BIT_SET(MISC::GET_RANDOM_INT_IN_RANGE(0, 65535), 0))
+		return true;
+
+	return false;
 }
 
-int func_66(int iParam0, var uParam1, var uParam2)
+BOOL func_66(int iParam0, var uParam1, var uParam2) // Position - 0x8A4B
 {
 	switch (iParam0)
 	{
 		case 11:
-			*uParam1 = { 115,1569f, -1286,684f, 28,2613f };
+			*uParam1 = { 115.1569f, -1286.684f, 28.2613f };
 			*uParam2 = 111f;
-			return 1;
-			break;
-		
+			return true;
+	
 		case 8:
-			*uParam1 = { -90,0089f, -1324,195f, 28,3203f };
-			*uParam2 = 194,1887f;
-			return 1;
-			break;
-		
+			*uParam1 = { -90.0089f, -1324.1947f, 28.3203f };
+			*uParam2 = 194.1887f;
+			return true;
+	
 		case 9:
 			return func_66(8, uParam1, uParam2);
-			break;
-		
+	
 		case 10:
 			return func_66(8, uParam1, uParam2);
-			break;
-		
+	
 		case 13:
-			*uParam1 = { -807,2979f, -48,4004f, 36,8173f };
-			*uParam2 = 201,6328f;
-			return 1;
-			break;
-		
+			*uParam1 = { -807.2979f, -48.4004f, 36.8173f };
+			*uParam2 = 201.6328f;
+			return true;
+	
 		case 14:
-			*uParam1 = { 1432,34f, -1887,383f, 70,5768f };
-			*uParam2 = 350,0509f;
-			return 1;
-			break;
-		
+			*uParam1 = { 1432.3402f, -1887.3832f, 70.5768f };
+			*uParam2 = 350.0509f;
+			return true;
+	
 		case 15:
-			*uParam1 = { 1666,204f, 1967,25f, 143,3213f };
-			*uParam2 = 0,7896f;
-			return 1;
-			break;
-		
+			*uParam1 = { 1666.204f, 1967.2504f, 143.3213f };
+			*uParam2 = 0.7896f;
+			return true;
+	
 		case 12:
-			*uParam1 = { -1440,22f, -127,02f, 50f };
+			*uParam1 = { -1440.22f, -127.02f, 50f };
 			*uParam2 = 42f;
-			return 1;
-			break;
-		
+			return true;
+	
 		case 16:
-			*uParam1 = { 135,055f, -1759,64f, 27,8957f };
+			*uParam1 = { 135.055f, -1759.6396f, 27.8957f };
 			*uParam2 = -129f;
-			return 1;
-			break;
-		
+			return true;
+	
 		case 17:
-			*uParam1 = { 687,6992f, -1744,03f, 28,3624f };
-			*uParam2 = 267,1409f;
-			return 1;
-			break;
-		
+			*uParam1 = { 687.6992f, -1744.0299f, 28.3624f };
+			*uParam2 = 267.1409f;
+			return true;
+	
 		case 18:
-			*uParam1 = { 56,5117f, -744,6122f, 43,1356f };
-			*uParam2 = 340,0526f;
-			return 1;
-			break;
-		
+			*uParam1 = { 56.5117f, -744.6122f, 43.1356f };
+			*uParam2 = 340.0526f;
+			return true;
+	
 		case 19:
-			*uParam1 = { 506,485f, -1884,967f, 24,764f };
-			*uParam2 = 22,9566f;
-			return 1;
-			break;
-		
+			*uParam1 = { 506.485f, -1884.967f, 24.764f };
+			*uParam2 = 22.9566f;
+			return true;
+	
 		case 20:
-			*uParam1 = { 1555,958f, 953,6136f, 77,2063f };
-			*uParam2 = 152,8118f;
-			return 1;
-			break;
-		
+			*uParam1 = { 1555.9575f, 953.6136f, 77.2063f };
+			*uParam2 = 152.8118f;
+			return true;
+	
 		case 21:
 			*uParam1 = { 0f, 0f, 0f };
 			*uParam2 = 0f;
-			return 1;
-			break;
-		
+			return true;
+	
 		case 22:
-			*uParam1 = { 220,72f, -64,4177f, 68,2922f };
-			*uParam2 = (250,4535f - 360f);
-			return 1;
-			break;
-		
+			*uParam1 = { 220.72f, -64.4177f, 68.2922f };
+			*uParam2 = 250.4535f - 360f;
+			return true;
+	
 		case 74:
-			*uParam1 = { 2048,07f, 3840,84f, 34,2238f };
-			*uParam2 = 119,603f;
-			return 1;
-			break;
-		
+			*uParam1 = { 2048.07f, 3840.84f, 34.2238f };
+			*uParam2 = 119.603f;
+			return true;
+	
 		case 23:
-			*uParam1 = { -464,22f, -1592,98f, 38,73f };
+			*uParam1 = { -464.22f, -1592.98f, 38.73f };
 			*uParam2 = 168f;
-			return 1;
-			break;
-		
+			return true;
+	
 		case 24:
-			*uParam1 = { (744,79f + 0,0186f), (-465,86f - 0,0114f), 36,6399f };
-			*uParam2 = 51,7279f;
-			return 1;
-			break;
-		
+			*uParam1 = { 744.79f + 0.0186f, -465.86f - 0.0114f, 36.6399f };
+			*uParam2 = 51.7279f;
+			return true;
+	
 		case 67:
-			*uParam1 = { -9f, 508,1f, 173,6278f };
-			*uParam2 = 151,2504f;
-			return 1;
-			break;
-		
+			*uParam1 = { -9f, 508.1f, 173.6278f };
+			*uParam2 = 151.2504f;
+			return true;
+	
 		case 25:
-			*uParam1 = { 72,2278f, -1464,68f, 28,2915f };
-			*uParam2 = 156,8827f;
-			return 1;
-			break;
-		
+			*uParam1 = { 72.2278f, -1464.6798f, 28.2915f };
+			*uParam2 = 156.8827f;
+			return true;
+	
 		case 27:
-			*uParam1 = { 763f, -906f, 24,2312f };
-			*uParam2 = 7,2736f;
-			return 1;
-			break;
-		
+			*uParam1 = { 763f, -906f, 24.2312f };
+			*uParam2 = 7.2736f;
+			return true;
+	
 		case 26:
-			*uParam1 = { 257,9167f, -1120,786f, 28,3684f };
-			*uParam2 = 97,2736f;
-			return 1;
-			break;
-		
+			*uParam1 = { 257.9167f, -1120.7855f, 28.3684f };
+			*uParam2 = 97.2736f;
+			return true;
+	
 		case 28:
-			*uParam1 = { 422,5858f, -978,6332f, 69,7073f };
+			*uParam1 = { 422.5858f, -978.6332f, 69.7073f };
 			*uParam2 = 4f;
-			return 1;
-			break;
-		
+			return true;
+	
 		case 29:
 			*uParam1 = { 0f, 0f, 0f };
 			*uParam2 = 0f;
-			return 1;
-			break;
-		
+			return true;
+	
 		case 30:
 			*uParam1 = { 0f, 0f, 0f };
 			*uParam2 = 0f;
-			return 1;
-			break;
-		
+			return true;
+	
 		case 31:
 			*uParam1 = { 0f, 0f, 0f };
 			*uParam2 = 0f;
-			return 1;
-			break;
-		
+			return true;
+	
 		case 32:
 			*uParam1 = { 0f, 0f, 0f };
 			*uParam2 = 0f;
-			return 1;
-			break;
-		
+			return true;
+	
 		case 33:
 			*uParam1 = { 0f, 0f, 0f };
 			*uParam2 = 0f;
-			return 1;
-			break;
-		
+			return true;
+	
 		case 34:
 			*uParam1 = { 0f, 0f, 0f };
 			*uParam2 = 0f;
-			return 1;
-			break;
-		
+			return true;
+	
 		case 35:
 			*uParam1 = { 0f, 0f, 0f };
 			*uParam2 = 0f;
-			return 1;
-			break;
-		
+			return true;
+	
 		case 36:
 			*uParam1 = { 0f, 0f, 0f };
 			*uParam2 = 0f;
-			return 1;
-			break;
-		
+			return true;
+	
 		case 37:
 			*uParam1 = { 0f, 0f, 0f };
 			*uParam2 = 0f;
-			return 1;
-			break;
-		
+			return true;
+	
 		case 58:
-			*uParam1 = { 294,8521f, 882,9366f, 197,8527f };
-			*uParam2 = 162,693f;
-			return 1;
-			break;
-		
+			*uParam1 = { 294.8521f, 882.9366f, 197.8527f };
+			*uParam2 = 162.693f;
+			return true;
+	
 		case 59:
-			*uParam1 = { -1771,802f, 794,4316f, 138,4211f };
-			*uParam2 = 128,9946f;
-			return 1;
-			break;
-		
+			*uParam1 = { -1771.8015f, 794.4316f, 138.4211f };
+			*uParam2 = 128.9946f;
+			return true;
+	
 		case 60:
-			*uParam1 = { 1495,595f, -1848,821f, 70,2075f };
-			*uParam2 = 32,2721f;
-			return 1;
-			break;
-		
+			*uParam1 = { 1495.5953f, -1848.8207f, 70.2075f };
+			*uParam2 = 32.2721f;
+			return true;
+	
 		case 38:
-			*uParam1 = { 2897,554f, 4032,241f, 50,1419f };
-			*uParam2 = 192,8091f;
-			return 1;
-			break;
-		
+			*uParam1 = { 2897.5544f, 4032.241f, 50.1419f };
+			*uParam2 = 192.8091f;
+			return true;
+	
 		case 39:
-			*uParam1 = { 1973,355f, 3818,204f, 32,005f };
+			*uParam1 = { 1973.355f, 3818.204f, 32.005f };
 			*uParam2 = 32f;
-			return 1;
-			break;
-		
+			return true;
+	
 		case 40:
-			*uParam1 = { 1973,355f, 3818,204f, 32,005f };
+			*uParam1 = { 1973.355f, 3818.204f, 32.005f };
 			*uParam2 = 32f;
-			return 1;
-			break;
-		
+			return true;
+	
 		case 41:
-			*uParam1 = { 1397f, 3725,8f, 33,0673f };
-			*uParam2 = -3,7534f;
-			return 1;
-			break;
-		
+			*uParam1 = { 1397f, 3725.8f, 33.0673f };
+			*uParam2 = -3.7534f;
+			return true;
+	
 		case 42:
-			*uParam1 = { Vector(4,0205f, -2975,341f, 798,4536f) + Vector(1f, 0f, 0f) };
+			*uParam1 = { { 4.0205f, -2975.3408f, 798.4536f } + { 1f, 0f, 0f } };
 			*uParam2 = 90f;
-			return 1;
-			break;
-		
+			return true;
+	
 		case 43:
-			*uParam1 = { 709,0244f, -2916,479f, 5,0589f };
-			*uParam2 = 355,326f;
-			return 1;
-			break;
-		
+			*uParam1 = { 709.0244f, -2916.4788f, 5.0589f };
+			*uParam2 = 355.326f;
+			return true;
+	
 		case 44:
-			*uParam1 = { 643,5248f, -2917,325f, 5,1337f };
-			*uParam2 = 334,1068f;
-			return 1;
-			break;
-		
+			*uParam1 = { 643.5248f, -2917.325f, 5.1337f };
+			*uParam2 = 334.1068f;
+			return true;
+	
 		case 45:
-			*uParam1 = { 595,2742f, -2819,183f, 5,0559f };
-			*uParam2 = 46,8853f;
-			return 1;
-			break;
-		
+			*uParam1 = { 595.2742f, -2819.1826f, 5.0559f };
+			*uParam2 = 46.8853f;
+			return true;
+	
 		case 46:
 			*uParam1 = { 0f, 0f, 0f };
 			*uParam2 = 0f;
-			return 1;
-			break;
-		
+			return true;
+	
 		case 47:
-			*uParam1 = { 314,4171f, 965,207f, 208,4024f };
-			*uParam2 = 165,9421f;
-			return 1;
-			break;
-		
+			*uParam1 = { 314.4171f, 965.207f, 208.4024f };
+			*uParam2 = 165.9421f;
+			return true;
+	
 		case 49:
-			*uParam1 = { 3321,537f, 4975,455f, 25,9097f };
-			*uParam2 = 221,228f;
-			return 1;
-			break;
-		
+			*uParam1 = { 3321.5369f, 4975.4546f, 25.9097f };
+			*uParam2 = 221.228f;
+			return true;
+	
 		case 48:
-			*uParam1 = { -111,1318f, 6316,479f, 30,4904f };
-			*uParam2 = (42f + 180f);
-			return 1;
-			break;
-		
+			*uParam1 = { -111.1318f, 6316.479f, 30.4904f };
+			*uParam2 = 42f + 180f;
+			return true;
+	
 		case 50:
-			*uParam1 = { -731,3261f, 106,68f, 54,7169f };
-			*uParam2 = 98,9764f;
-			return 1;
-			break;
-		
+			*uParam1 = { -731.3261f, 106.68f, 54.7169f };
+			*uParam2 = 98.9764f;
+			return true;
+	
 		case 51:
-			*uParam1 = { -1257,5f, -526,9999f, 30,2361f };
-			*uParam2 = 220,9554f;
-			return 1;
-			break;
-		
+			*uParam1 = { -1257.5f, -526.9999f, 30.2361f };
+			*uParam2 = 220.9554f;
+			return true;
+	
 		case 52:
-			*uParam1 = { 736,9869f, -2050,678f, 28,2718f };
-			*uParam2 = 83,9922f;
-			return 1;
-			break;
-		
+			*uParam1 = { 736.9869f, -2050.678f, 28.2718f };
+			*uParam2 = 83.9922f;
+			return true;
+	
 		case 66:
-			*uParam1 = { 262,5499f, -2540,15f, 4,8433f };
-			*uParam2 = -64,1366f;
-			return 1;
-			break;
-		
+			*uParam1 = { 262.5499f, -2540.1504f, 4.8433f };
+			*uParam2 = -64.1366f;
+			return true;
+	
 		case 53:
 			*uParam1 = { 0f, 0f, 0f };
 			*uParam2 = 0f;
-			return 1;
-			break;
-		
+			return true;
+	
 		case 55:
-			*uParam1 = { -315,7789f, 6201,355f, 30,4322f };
-			*uParam2 = 127,7547f;
-			return 1;
-			break;
-		
+			*uParam1 = { -315.7789f, 6201.355f, 30.4322f };
+			*uParam2 = 127.7547f;
+			return true;
+	
 		case 56:
-			*uParam1 = { 118,0988f, -1264,916f, 32,3637f };
+			*uParam1 = { 118.0988f, -1264.916f, 32.3637f };
 			*uParam2 = -63f;
-			return 1;
-			break;
-		
+			return true;
+	
 		case 57:
-			*uParam1 = { 37,5988f, -1351,52f, 28,2954f };
-			*uParam2 = 90,0339f;
-			return 1;
-			break;
-		
+			*uParam1 = { 37.5988f, -1351.5203f, 28.2954f };
+			*uParam2 = 90.0339f;
+			return true;
+	
 		case 61:
-			*uParam1 = { -558,2693f, 261,1167f, 82,07f };
-			*uParam2 = 84,6231f;
-			return 1;
-			break;
-		
+			*uParam1 = { -558.2693f, 261.1167f, 82.07f };
+			*uParam2 = 84.6231f;
+			return true;
+	
 		case 62:
-			*uParam1 = { -196,9999f, 507,9999f, 132,477f };
-			*uParam2 = 99,6049f;
-			return 1;
-			break;
-		
+			*uParam1 = { -196.9999f, 507.9999f, 132.477f };
+			*uParam2 = 99.6049f;
+			return true;
+	
 		case 63:
-			*uParam1 = { 1312,01f, -1645,87f, 51,2f };
+			*uParam1 = { 1312.01f, -1645.87f, 51.2f };
 			*uParam2 = 120f;
-			return 1;
-			break;
-		
+			return true;
+	
 		case 68:
 			*uParam1 = { 0f, 0f, 0f };
 			*uParam2 = 0f;
-			return 1;
-			break;
-		
+			return true;
+	
 		case 69:
-			*uParam1 = { -818,7374f, 6,4824f, 41,2432f };
-			*uParam2 = 211,8223f;
-			return 1;
-			break;
-		
+			*uParam1 = { -818.7374f, 6.4824f, 41.2432f };
+			*uParam2 = 211.8223f;
+			return true;
+	
 		case 64:
-			*uParam1 = { 2091,258f, 4714,852f, 40,1936f };
-			*uParam2 = 136,0867f;
-			return 1;
-			break;
-		
+			*uParam1 = { 2091.2583f, 4714.852f, 40.1936f };
+			*uParam2 = 136.0867f;
+			return true;
+	
 		case 54:
-			*uParam1 = { 1762,59f, 3247,212f, 40,735f };
-			*uParam2 = 27,0648f;
-			return 1;
-			break;
-		
+			*uParam1 = { 1762.59f, 3247.212f, 40.735f };
+			*uParam2 = 27.0648f;
+			return true;
+	
 		case 65:
-			*uParam1 = { 1764,013f, 3252,902f, 40,735f };
-			*uParam2 = 27,0648f;
-			return 1;
-			break;
-		
+			*uParam1 = { 1764.013f, 3252.902f, 40.735f };
+			*uParam2 = 27.0648f;
+			return true;
+	
 		case 70:
 			*uParam1 = { 0f, 0f, 0f };
 			*uParam2 = 0f;
-			return 1;
-			break;
-		
+			return true;
+	
 		case 71:
 			*uParam1 = { 0f, 0f, 0f };
 			*uParam2 = 0f;
-			return 1;
-			break;
-		
+			return true;
+	
 		case 72:
 			*uParam1 = { 0f, 0f, 0f };
 			*uParam2 = 0f;
-			return 1;
-			break;
-		
+			return true;
+	
 		case 73:
 			*uParam1 = { 0f, 0f, 0f };
 			*uParam2 = 0f;
-			return 1;
-			break;
-		
+			return true;
+	
 		default:
 			break;
 	}
-	return 0;
+
+	return false;
 }
 
-char* func_67(int iParam0)
+char* func_67(int iParam0) // Position - 0x93BA
 {
 	switch (iParam0)
 	{
-		case joaat("v_chopshop"):
+		case 2014101067:
 			return "v_chopshop";
-			break;
-		
-		case joaat("v_franklins"):
+	
+		case 551019620:
 			return "v_franklins";
-			break;
-		
-		case joaat("v_franklinshouse"):
+	
+		case 223682799:
 			return "v_franklinshouse";
-			break;
-		
-		case joaat("v_methlab"):
+	
+		case 2081281344:
 			return "v_methlab";
-			break;
-		
-		case joaat("v_michael"):
+	
+		case -1021412233:
 			return "v_michael";
-			break;
-		
-		case joaat("v_strip3"):
+	
+		case 1314234446:
 			return "v_strip3";
-			break;
-		
-		case joaat("v_trailer"):
+	
+		case 1681413451:
 			return "v_trailer";
-			break;
-		
-		case joaat("v_trevors"):
+	
+		case 1724779208:
 			return "v_Trevors";
-			break;
 	}
+
 	return "";
 }
 
-void func_68()
+void func_68() // Position - 0x944B
 {
-	int iVar0;
-	
-	iVar0 = 0;
-	while (iVar0 < iLocal_277)
+	int i;
+
+	for (i = 0; i < iLocal_285; i = i + 1)
 	{
-		if (iLocal_277[iVar0] != 0)
-		{
-			unk_0x55098D9E9AD58806(iLocal_277[iVar0]);
-		}
-		iVar0++;
+		if (iLocal_285[i] != 0)
+			STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(iLocal_285[i]);
 	}
-	unk_0x2B1BDC32466B40A9(iLocal_278);
-	unk_0x98E393364463951A(0);
-	unk_0xBBC29EBE6E1A48FA();
+
+	PED::REMOVE_RELATIONSHIP_GROUP(hLocal_288);
+	MISC::SET_GAME_PAUSED(false);
+	SCRIPT::TERMINATE_THIS_THREAD();
+	return;
 }
 

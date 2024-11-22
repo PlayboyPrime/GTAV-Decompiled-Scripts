@@ -1,19 +1,20 @@
-void __EntryFunction__()
+// Program registers 112522 globals at index 6 starting from Global_1572864
+void main() // Position - 0x0
 {
 	Global_1573982 = 1;
 	Global_1574461 = 4000;
 	Global_1574462 = 100f;
 	Global_1574464 = -1;
-	Global_1574465 = { 5511,55f, -6014,775f, -200f };
-	Global_1574468 = { 4139,8f, -4199,3f, 200f };
-	Global_1574471 = 1308,55f;
+	Global_1574465 = { 5511.55f, -6014.775f, -200f };
+	Global_1574468 = { 4139.8f, -4199.3f, 200f };
+	Global_1574471 = 1308.55f;
 	Global_1574472 = { 6000f, 8000f, 0f };
 	Global_1574475 = -160f;
 	Global_1574476 = 1;
 	Global_1574477 = 1;
 	Global_1574478 = 1;
-	Global_1574479 = 0,202f;
-	Global_1574480 = 0,276f;
+	Global_1574479 = 0.202f;
+	Global_1574480 = 0.276f;
 	Global_1574536 = 1;
 	Global_1574631 = -1;
 	Global_1574632 = 1;
@@ -23,9 +24,9 @@ void __EntryFunction__()
 	Global_1574686 = -1;
 	Global_1574690 = -1;
 	Global_1574691 = -1;
-	Global_1574726 = { 754,22f, 1226,83f, 356,51f };
-	Global_1574729 = { -199,194f, 305,1888f, 95,9458f };
-	Global_1574732 = { 355,7f, 277,5f, 102,249f };
+	Global_1574726 = { 754.22f, 1226.83f, 356.51f };
+	Global_1574729 = { -199.194f, 305.1888f, 95.9458f };
+	Global_1574732 = { 355.7f, 277.5f, 102.249f };
 	Global_1574846 = 1;
 	Global_1575001 = 1;
 	Global_1575002 = 1;
@@ -42,7 +43,7 @@ void __EntryFunction__()
 	Global_1575039 = -1;
 	Global_1575041 = -1;
 	Global_1575087 = 1;
-	Global_1575088 = 0,2f;
+	Global_1575088 = 0.2f;
 	Global_1575091 = 8;
 	Global_1577861 = 1;
 	Global_1577868 = -1;
@@ -78,12 +79,12 @@ void __EntryFunction__()
 	Global_1579727 = -1;
 	Global_1581995 = -1;
 	Global_1582004 = 1;
-	Global_1582006 = 0,5f;
-	Global_1582007 = 0,85f;
-	Global_1582008 = 0,3f;
-	Global_1582009 = 0,45f;
-	Global_1582010 = 0,23f;
-	Global_1582011 = 0,77f;
+	Global_1582006 = 0.5f;
+	Global_1582007 = 0.85f;
+	Global_1582008 = 0.3f;
+	Global_1582009 = 0.45f;
+	Global_1582010 = 0.23f;
+	Global_1582011 = 0.77f;
 	Global_1582012 = 1;
 	Global_1582014 = -1;
 	Global_1582019 = -1;
@@ -102,7 +103,7 @@ void __EntryFunction__()
 	Global_1680179 = 250;
 	Global_1680180 = 7250;
 	Global_1680181 = 250;
-	Global_1680182 = 0,15f;
+	Global_1680182 = 0.15f;
 	Global_1680183 = 0f;
 	Global_1680184 = 220;
 	Global_1680240 = -1;
@@ -119,5 +120,6 @@ void __EntryFunction__()
 	Global_1680310 = -1;
 	Global_1681436 = -1;
 	Global_1681440 = 1;
+	return;
 }
 

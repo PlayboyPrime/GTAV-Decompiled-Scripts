@@ -20,7 +20,7 @@
 	var uLocal_18 = 0;
 #endregion
 
-void __EntryFunction__()
+void main() // Position - 0x0
 {
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -32,11 +32,12 @@ void __EntryFunction__()
 	iLocal_9 = 1;
 	iLocal_10 = 12;
 	iLocal_11 = 12;
-	fLocal_12 = 0,001f;
+	fLocal_12 = 0.001f;
 	iLocal_15 = -1;
-	if (unk_0x96CFB880BAC634CE(34))
-	{
-		unk_0xBBC29EBE6E1A48FA();
-	}
+
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(34))
+		SCRIPT::TERMINATE_THIS_THREAD();
+
+	return;
 }
 

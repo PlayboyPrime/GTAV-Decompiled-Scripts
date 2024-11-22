@@ -18,7 +18,7 @@
 	var uLocal_16 = 0;
 	var uLocal_17 = 0;
 	var uLocal_18 = 0;
-	char* sLocal_19 = NULL;
+	char* sLocal_19 = 0;
 	var uLocal_20 = 0;
 	var uLocal_21 = 0;
 	float fLocal_22 = 0f;
@@ -89,11 +89,11 @@
 	var uLocal_87 = 0;
 	var uLocal_88 = 0;
 	var uLocal_89 = 0;
-	var uLocal_90 = 0;
-	var uLocal_91 = 0;
+	int iLocal_90 = 0;
+	int iLocal_91 = 0;
 #endregion
 
-void __EntryFunction__()
+void main() // Position - 0x0
 {
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -105,12 +105,12 @@ void __EntryFunction__()
 	iLocal_9 = 1;
 	iLocal_10 = 12;
 	iLocal_11 = 12;
-	fLocal_12 = 0,001f;
+	fLocal_12 = 0.001f;
 	iLocal_15 = -1;
 	sLocal_19 = "NULL";
 	fLocal_22 = 0f;
-	fLocal_26 = -0,0375f;
-	fLocal_27 = 0,17f;
+	fLocal_26 = -0.0375f;
+	fLocal_27 = 0.17f;
 	fLocal_31 = 80f;
 	fLocal_32 = 140f;
 	fLocal_33 = 180f;
@@ -119,7 +119,8 @@ void __EntryFunction__()
 	iLocal_84 = 65;
 	iLocal_85 = 49;
 	iLocal_86 = 64;
-	uLocal_90 = unk_0x8CC13B3BF7A9890A();
-	uLocal_91 = unk_0x2A3612A4B836469E();
+	iLocal_90 = HUD::GET_STANDARD_BLIP_ENUM_ID();
+	iLocal_91 = HUD::GET_WAYPOINT_BLIP_ENUM_ID();
+	return;
 }
 

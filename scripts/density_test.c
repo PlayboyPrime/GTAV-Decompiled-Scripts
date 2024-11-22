@@ -1,6 +1,6 @@
 #region Local Var
-	bool bLocal_0 = 0;
-	bool bLocal_1 = 0;
+	BOOL bLocal_0 = 0;
+	BOOL bLocal_1 = 0;
 	float fLocal_2 = 0f;
 	float fLocal_3 = 0f;
 	float fLocal_4 = 0f;
@@ -10,7 +10,7 @@
 	float fLocal_8 = 0f;
 #endregion
 
-void __EntryFunction__()
+void main() // Position - 0x0
 {
 	bLocal_0 = true;
 	bLocal_1 = true;
@@ -21,35 +21,38 @@ void __EntryFunction__()
 	fLocal_6 = 1f;
 	fLocal_7 = 1f;
 	fLocal_8 = 1f;
-	unk_0x925970A93719CADE(1);
-	if (unk_0x96CFB880BAC634CE(3))
-	{
+	MISC::SET_MISSION_FLAG(true);
+
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 		func_1();
-	}
+
 	while (true)
 	{
-		system::wait(0);
-		if (!unk_0x4FAFF4BCB7633475(unk_0x4A8C381C258A124D()))
+		SYSTEM::WAIT(0);
+	
+		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
 			if (bLocal_0)
-			{
-				unk_0xA0265306DFF63938(fLocal_2);
-			}
-			unk_0x23D563236A543309(fLocal_3);
-			unk_0x40C1C94D5A5157C5(fLocal_4);
-			unk_0x5D50773C51925144(fLocal_5);
+				VEHICLE::SET_VEHICLE_DENSITY_MULTIPLIER_THIS_FRAME(fLocal_2);
+		
+			VEHICLE::SET_RANDOM_VEHICLE_DENSITY_MULTIPLIER_THIS_FRAME(fLocal_3);
+			VEHICLE::SET_PARKED_VEHICLE_DENSITY_MULTIPLIER_THIS_FRAME(fLocal_4);
+			VEHICLE::SET_AMBIENT_VEHICLE_RANGE_MULTIPLIER_THIS_FRAME(fLocal_5);
+		
 			if (bLocal_1)
-			{
-				unk_0xF9A2335AB37CF17E(fLocal_6);
-			}
-			unk_0x0397A00D015A11D4(fLocal_7, fLocal_8);
+				PED::SET_PED_DENSITY_MULTIPLIER_THIS_FRAME(fLocal_6);
+		
+			PED::SET_SCENARIO_PED_DENSITY_MULTIPLIER_THIS_FRAME(fLocal_7, fLocal_8);
 		}
 	}
+
+	return;
 }
 
-void func_1()
+void func_1() // Position - 0x7C
 {
-	unk_0xAE03F542B985A69E(1);
-	unk_0xBBC29EBE6E1A48FA();
+	VEHICLE::SET_RANDOM_TRAINS(true);
+	SCRIPT::TERMINATE_THIS_THREAD();
+	return;
 }
 

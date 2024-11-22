@@ -1,4 +1,5 @@
-void __EntryFunction__()
+// Program registers 138330 globals at index 17 starting from Global_4456448
+void main() // Position - 0x0
 {
 	Global_4456520 = -1;
 	Global_4456521 = -1;
@@ -25,8 +26,8 @@ void __EntryFunction__()
 	Global_4540295 = -1;
 	Global_4540296 = -99;
 	Global_4540321 = -99;
-	StringCopy(&Global_4540641, "", 64);
-	StringCopy(&Global_4540658, "", 64);
+	TEXT_LABEL_ASSIGN_STRING(&Global_4540641, "", 64);
+	TEXT_LABEL_ASSIGN_STRING(&Global_4540658, "", 64);
 	Global_4540674 = 1;
 	Global_4541185 = -1;
 	Global_4541186 = -1;
@@ -35,10 +36,11 @@ void __EntryFunction__()
 	Global_4541514 = 1;
 	Global_4541515 = 1;
 	Global_4543360 = 1;
-	StringCopy(&Global_4543373, "", 16);
+	TEXT_LABEL_ASSIGN_STRING(&Global_4543373, "", 16);
 	Global_4543383 = 8f;
 	Global_4544079 = 12;
 	Global_4544080 = 12;
 	Global_4594775 = 100f;
+	return;
 }
 

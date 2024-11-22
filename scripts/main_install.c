@@ -3,84 +3,92 @@
 	int iLocal_1 = 0;
 #endregion
 
-void __EntryFunction__()
+void main() // Position - 0x0
 {
-	int iVar0;
-	
+	int num;
+
 	iLocal_0 = -1;
-	unk_0x51CC1333A10C4E09();
-	unk_0xECFC57F5F11BCD83("prologue06_int");
-	unk_0xECFC57F5F11BCD83("prologue01");
-	unk_0xECFC57F5F11BCD83("prologue02");
-	unk_0xECFC57F5F11BCD83("prologue03");
-	unk_0xECFC57F5F11BCD83("prologue04");
-	unk_0xECFC57F5F11BCD83("prologue05");
-	unk_0xECFC57F5F11BCD83("prologue06");
-	unk_0xECFC57F5F11BCD83("prologuerd");
-	unk_0xECFC57F5F11BCD83("Prologue01c");
-	unk_0xECFC57F5F11BCD83("Prologue01d");
-	unk_0xECFC57F5F11BCD83("Prologue01e");
-	unk_0xECFC57F5F11BCD83("Prologue01f");
-	unk_0xECFC57F5F11BCD83("Prologue01g");
-	unk_0xECFC57F5F11BCD83("prologue01h");
-	unk_0xECFC57F5F11BCD83("prologue01i");
-	unk_0xECFC57F5F11BCD83("prologue01j");
-	unk_0xECFC57F5F11BCD83("prologue01k");
-	unk_0xECFC57F5F11BCD83("prologue01z");
-	unk_0xECFC57F5F11BCD83("prologue03b");
-	unk_0xECFC57F5F11BCD83("prologue04b");
-	unk_0xECFC57F5F11BCD83("prologue05b");
-	unk_0xECFC57F5F11BCD83("prologue06b");
-	unk_0xECFC57F5F11BCD83("prologuerdb");
-	unk_0xECFC57F5F11BCD83("prologue_occl");
-	unk_0xECFC57F5F11BCD83("DES_ProTree_start");
-	unk_0xECFC57F5F11BCD83("DES_ProTree_start_lod");
-	unk_0xECFC57F5F11BCD83("prologue04_cover");
-	unk_0xECFC57F5F11BCD83("prologue03_grv_fun");
-	unk_0x5373E9377066509E("prologue03_grv_dug");
-	unk_0x5373E9377066509E("prologue_grv_torch");
-	unk_0x8BAB92052AD69AC5("prologue", 1);
-	unk_0xEC9DAA34BBB4658C(joaat("csb_prolsec"));
-	while (!unk_0x6252BC0DD8A320DB(joaat("csb_prolsec")))
+	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
+	STREAMING::REQUEST_IPL("prologue06_int");
+	STREAMING::REQUEST_IPL("prologue01");
+	STREAMING::REQUEST_IPL("prologue02");
+	STREAMING::REQUEST_IPL("prologue03");
+	STREAMING::REQUEST_IPL("prologue04");
+	STREAMING::REQUEST_IPL("prologue05");
+	STREAMING::REQUEST_IPL("prologue06");
+	STREAMING::REQUEST_IPL("prologuerd");
+	STREAMING::REQUEST_IPL("Prologue01c");
+	STREAMING::REQUEST_IPL("Prologue01d");
+	STREAMING::REQUEST_IPL("Prologue01e");
+	STREAMING::REQUEST_IPL("Prologue01f");
+	STREAMING::REQUEST_IPL("Prologue01g");
+	STREAMING::REQUEST_IPL("prologue01h");
+	STREAMING::REQUEST_IPL("prologue01i");
+	STREAMING::REQUEST_IPL("prologue01j");
+	STREAMING::REQUEST_IPL("prologue01k");
+	STREAMING::REQUEST_IPL("prologue01z");
+	STREAMING::REQUEST_IPL("prologue03b");
+	STREAMING::REQUEST_IPL("prologue04b");
+	STREAMING::REQUEST_IPL("prologue05b");
+	STREAMING::REQUEST_IPL("prologue06b");
+	STREAMING::REQUEST_IPL("prologuerdb");
+	STREAMING::REQUEST_IPL("prologue_occl");
+	STREAMING::REQUEST_IPL("DES_ProTree_start");
+	STREAMING::REQUEST_IPL("DES_ProTree_start_lod");
+	STREAMING::REQUEST_IPL("prologue04_cover");
+	STREAMING::REQUEST_IPL("prologue03_grv_fun");
+	STREAMING::REMOVE_IPL("prologue03_grv_dug");
+	STREAMING::REMOVE_IPL("prologue_grv_torch");
+	STREAMING::SET_MAPDATACULLBOX_ENABLED("prologue", true);
+	STREAMING::REQUEST_MODEL(2141384740);
+
+	while (!STREAMING::HAS_MODEL_LOADED(2141384740))
 	{
-		system::wait(0);
+		SYSTEM::WAIT(0);
 	}
-	unk_0x52E0301351FCDEC5(unk_0x259BE71D8A81D4FA(), joaat("csb_prolsec"));
-	if (!unk_0x1C2F771CDC87A3A5(unk_0x4A8C381C258A124D(), 0))
+
+	PLAYER::SET_PLAYER_MODEL(PLAYER::PLAYER_ID(), 2141384740);
+
+	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 	{
-		unk_0xB2BD5837A8D3CEDA(unk_0x4A8C381C258A124D(), 5313,8f, -5207,2f, 83,5f, 1, 0, 0, 1);
-		unk_0x5C96CEA06531AB03(unk_0x4A8C381C258A124D(), 169,2f);
+		ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 5313.8f, -5207.2f, 83.5f, true, false, false, true);
+		ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), 169.2f);
 	}
-	unk_0x37B894853929BF1A(0);
-	unk_0x4686BC3BFDBB5348(unk_0x259BE71D8A81D4FA(), 0, 0);
-	unk_0x4A3280817398D754(5312,996f, -5208,671f, 83,90526f, 10f, 0);
-	iVar0 = unk_0x1DD05E817C89C737() + 10000;
-	while (!unk_0x9E2D35FA908F57B4() && unk_0x1DD05E817C89C737() < iVar0)
+
+	HUD::DISPLAY_RADAR(false);
+	PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), false, 0);
+	STREAMING::NEW_LOAD_SCENE_START_SPHERE(5312.9956f, -5208.671f, 83.90526f, 10f, 0);
+	num = MISC::GET_GAME_TIMER() + 10000;
+
+	while (!STREAMING::IS_NEW_LOAD_SCENE_LOADED() && MISC::GET_GAME_TIMER() < num)
 	{
-		system::wait(0);
+		SYSTEM::WAIT(0);
 	}
-	unk_0xCD17096A98584C2B();
-	unk_0xCAC4020CCF361AC8("MISSION_FAILED_SCENE");
-	unk_0x10B228D2FDB7AF16(2500);
-	unk_0x6981C3213B841071();
-	unk_0xF2CB0224D3BE0B42("NG_INSTALL", 0);
+
+	SCRIPT::SHUTDOWN_LOADING_SCREEN();
+	AUDIO::START_AUDIO_SCENE("MISSION_FAILED_SCENE");
+	CAM::DO_SCREEN_FADE_IN(2500);
+	STREAMING::NEW_LOAD_SCENE_STOP();
+	HUD::REQUEST_ADDITIONAL_TEXT("NG_INSTALL", 0);
+
 	while (true)
 	{
-		if (!unk_0x9390801B06EE998F())
+		if (!CAM::IS_SCREEN_FADED_IN())
+			CAM::DO_SCREEN_FADE_IN(0);
+	
+		GRAPHICS::DRAW_RECT(0.5f, 0.5f, 1f, 1f, 0, 0, 0, 255, false);
+		GRAPHICS::DRAW_RECT(0.5f, 0.5f, 0.8f, 0.8f, 20, 20, 20, 255, false);
+		HUD::SET_TEXT_SCALE(0.5f, 0.5f);
+		HUD::SET_TEXT_CENTRE(true);
+	
+		if (SYSTEM::TIMERA() > 10000 && HUD::HAS_ADDITIONAL_TEXT_LOADED(0))
 		{
-			unk_0x10B228D2FDB7AF16(0);
-		}
-		unk_0x81645EE95A114FAE(0,5f, 0,5f, 1f, 1f, 0, 0, 0, 255, 0);
-		unk_0x81645EE95A114FAE(0,5f, 0,5f, 0,8f, 0,8f, 20, 20, 20, 255, 0);
-		unk_0xBFE94E91C83D8794(0,5f, 0,5f);
-		unk_0xEAF65721ACB2FDFB(1);
-		if (system::timera() > 10000 && unk_0xDCB78A15E5F495DC(0))
-		{
-			iLocal_0 = unk_0xC5935DFB3F39785A(0, 5);
-			if ((iLocal_0 - iLocal_1) != 0)
+			iLocal_0 = MISC::GET_RANDOM_INT_IN_RANGE(0, 5);
+		
+			if (iLocal_0 - iLocal_1 != 0)
 			{
 				iLocal_1 = iLocal_0;
-				system::settimera(0);
+				SYSTEM::SETTIMERA(0);
 			}
 		}
 		else
@@ -88,39 +96,45 @@ void __EntryFunction__()
 			switch (iLocal_0)
 			{
 				case 0:
-					func_1(0,5f, 0,4f, "NG_INST_TT_1", 0);
+					func_1(0.5f, 0.4f, "NG_INST_TT_1", 0);
 					break;
-				
+			
 				case 1:
-					func_1(0,5f, 0,4f, "NG_INST_TT_2", 0);
+					func_1(0.5f, 0.4f, "NG_INST_TT_2", 0);
 					break;
-				
+			
 				case 2:
-					func_1(0,5f, 0,4f, "NG_INST_TT_3", 0);
+					func_1(0.5f, 0.4f, "NG_INST_TT_3", 0);
 					break;
-				
+			
 				case 3:
-					func_1(0,5f, 0,4f, "NG_INST_TT_4", 0);
+					func_1(0.5f, 0.4f, "NG_INST_TT_4", 0);
 					break;
-				
+			
 				case 4:
-					func_1(0,5f, 0,4f, "NG_INST_TT_5", 0);
+					func_1(0.5f, 0.4f, "NG_INST_TT_5", 0);
 					break;
-				}
+			}
 		}
-		unk_0x6C978B200DAA54DE();
-		if (unk_0xD7F2FC1281F868FD())
+	
+		HUD::DISABLE_FRONTEND_THIS_FRAME();
+	
+		if (MISC::HAS_ASYNC_INSTALL_FINISHED())
 		{
-			unk_0x129E6CC3506106AC();
+			MISC::CLEANUP_ASYNC_INSTALL();
 			return;
 		}
-		system::wait(0);
+	
+		SYSTEM::WAIT(0);
 	}
+
+	return;
 }
 
-void func_1(float fParam0, float fParam1, char* sParam2, int iParam3)
+void func_1(float fParam0, float fParam1, char* sParam2, int iParam3) // Position - 0x2F8
 {
-	unk_0xEAEB6E7D3FAEBD5B(sParam2);
-	unk_0x25DD447A6EB3A86F(fParam0, fParam1, iParam3);
+	HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT(sParam2);
+	HUD::END_TEXT_COMMAND_DISPLAY_TEXT(fParam0, fParam1, iParam3);
+	return;
 }
 

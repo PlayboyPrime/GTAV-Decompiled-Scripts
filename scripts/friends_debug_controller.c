@@ -1,5 +1,6 @@
-void __EntryFunction__()
+void main() // Position - 0x0
 {
-	unk_0xBBC29EBE6E1A48FA();
+	SCRIPT::TERMINATE_THIS_THREAD();
+	return;
 }
 

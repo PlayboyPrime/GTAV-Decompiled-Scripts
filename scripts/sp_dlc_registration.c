@@ -1,16 +1,16 @@
-void __EntryFunction__()
+// Program registers 537 globals at index 11 starting from Global_2883584
+void main() // Position - 0x0
 {
-	int iVar0;
-	int iVar1;
-	
-	unk_0xA2CDB686AB549D8A(&Global_2883692, 1, 1);
-	unk_0xA40FAFA53DFF4362(&Global_2883692, "aFakeSavedInt");
-	unk_0xB6F769D890A34B99();
-	unk_0x0B0C9A0F9AAEB7F0(&Global_4543942, 0);
-	iVar0 = 1;
-	iVar1 = unk_0x7E1CF25229CF544D(1);
-	if (iVar0 != iVar1)
-	{
-	}
+	int num;
+	int sizeOfSaveData;
+
+	MISC::START_SAVE_DATA(&Global_2883692, 1, true);
+	MISC::REGISTER_INT_TO_SAVE(&Global_2883692, "aFakeSavedInt");
+	MISC::STOP_SAVE_DATA();
+	MISC::SET_BIT(&Global_4543942, 0);
+	num = 1;
+	sizeOfSaveData = MISC::GET_SIZE_OF_SAVE_DATA(true);
+	num != sizeOfSaveData;
+	return;
 }
 

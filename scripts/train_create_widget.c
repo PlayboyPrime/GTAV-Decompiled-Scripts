@@ -1,78 +1,88 @@
 #region Local Var
-	var uLocal_0 = 0;
-	struct<3> Local_1 = { 0, 0, 0 } ;
+	Vehicle veLocal_0 = 0;
+	var uLocal_1 = 0;
 	var uLocal_2 = 0;
-	float fLocal_3 = 0f;
+	var uLocal_3 = 0;
 	int iLocal_4 = 0;
-	int iLocal_5 = 0;
-	bool bLocal_6 = 0;
-	int iLocal_7 = 0;
+	float fLocal_5 = 0f;
+	BOOL bLocal_6 = 0;
+	BOOL bLocal_7 = 0;
+	BOOL bLocal_8 = 0;
+	BOOL bLocal_9 = 0;
 #endregion
 
-void __EntryFunction__()
+void main() // Position - 0x0
 {
-	Local_1 = { 613f, 6438f, 31f };
-	fLocal_3 = 5f;
-	iLocal_4 = 1;
-	unk_0x925970A93719CADE(1);
-	if (unk_0x96CFB880BAC634CE(3))
-	{
+	uLocal_1 = { 613f, 6438f, 31f };
+	fLocal_5 = 5f;
+	bLocal_6 = true;
+	MISC::SET_MISSION_FLAG(true);
+
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 		func_1();
-	}
-	unk_0xAE03F542B985A69E(0);
-	unk_0x47931C69C0D75B43();
-	if (!unk_0x4FAFF4BCB7633475(unk_0x4A8C381C258A124D()))
+
+	VEHICLE::SET_RANDOM_TRAINS(false);
+	VEHICLE::DELETE_ALL_TRAINS();
+
+	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
-		unk_0xB2BD5837A8D3CEDA(unk_0x4A8C381C258A124D(), 626,68f, 6442,31f, 30,88f, 1, 0, 0, 1);
-		unk_0x5C96CEA06531AB03(unk_0x4A8C381C258A124D(), -177f);
-		unk_0x64BB72494B9DF6DC(0);
+		ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 626.68f, 6442.31f, 30.88f, true, false, false, true);
+		ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), -177f);
+		CAM::SET_GAMEPLAY_CAM_RELATIVE_HEADING(0);
 	}
-	unk_0xEC9DAA34BBB4658C(joaat("freight"));
-	unk_0xEC9DAA34BBB4658C(joaat("freightcar"));
-	unk_0xEC9DAA34BBB4658C(joaat("freightgrain"));
-	unk_0xEC9DAA34BBB4658C(joaat("freightcont1"));
-	unk_0xEC9DAA34BBB4658C(joaat("freightcont2"));
-	unk_0xEC9DAA34BBB4658C(joaat("tankercar"));
-	unk_0xEC9DAA34BBB4658C(joaat("metrotrain"));
-	while ((((((!unk_0x6252BC0DD8A320DB(joaat("freight")) || !unk_0x6252BC0DD8A320DB(joaat("freightcar"))) || !unk_0x6252BC0DD8A320DB(joaat("freightgrain"))) || !unk_0x6252BC0DD8A320DB(joaat("freightcont1"))) || !unk_0x6252BC0DD8A320DB(joaat("freightcont2"))) || !unk_0x6252BC0DD8A320DB(joaat("tankercar"))) || !unk_0x6252BC0DD8A320DB(joaat("metrotrain")))
+
+	STREAMING::REQUEST_MODEL(1030400667);
+	STREAMING::REQUEST_MODEL(184361638);
+	STREAMING::REQUEST_MODEL(642617954);
+	STREAMING::REQUEST_MODEL(920453016);
+	STREAMING::REQUEST_MODEL(240201337);
+	STREAMING::REQUEST_MODEL(586013744);
+	STREAMING::REQUEST_MODEL(868868440);
+
+	while (!STREAMING::HAS_MODEL_LOADED(1030400667) || !STREAMING::HAS_MODEL_LOADED(184361638) || !STREAMING::HAS_MODEL_LOADED(642617954) || !STREAMING::HAS_MODEL_LOADED(920453016) || !STREAMING::HAS_MODEL_LOADED(240201337) || !STREAMING::HAS_MODEL_LOADED(586013744) || !STREAMING::HAS_MODEL_LOADED(868868440))
 	{
-		system::wait(0);
+		SYSTEM::WAIT(0);
 	}
+
 	while (true)
 	{
-		system::wait(0);
-		if (!unk_0x4FAFF4BCB7633475(unk_0x4A8C381C258A124D()))
+		SYSTEM::WAIT(0);
+	
+		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
-			if (iLocal_5)
+			if (bLocal_7)
 			{
-				if (unk_0xFC8BFE4B41177C22(uLocal_0))
-				{
-					unk_0x903908AA21114D72(&uLocal_0);
-				}
-				uLocal_0 = unk_0x767956351E028F74(uLocal_2, Local_1, iLocal_4, 0, 0);
-				iLocal_5 = 0;
+				if (ENTITY::DOES_ENTITY_EXIST(veLocal_0))
+					VEHICLE::DELETE_MISSION_TRAIN(&veLocal_0);
+			
+				veLocal_0 = VEHICLE::CREATE_MISSION_TRAIN(iLocal_4, uLocal_1, bLocal_6, 0, 0);
+				bLocal_7 = false;
 			}
-			if (iLocal_7)
+		
+			if (bLocal_9)
 			{
-				Local_1 = { unk_0x02AF3EA0F67D2329() };
-				iLocal_7 = 0;
+				uLocal_1 = { CAM::GET_FINAL_RENDERED_CAM_COORD() };
+				bLocal_9 = false;
 			}
-			if (unk_0xD9F5E1FEFD1329E4(uLocal_0, 0) && !unk_0x1C2F771CDC87A3A5(uLocal_0, 0))
+		
+			if (VEHICLE::IS_VEHICLE_DRIVEABLE(veLocal_0, false) && !ENTITY::IS_ENTITY_DEAD(veLocal_0, false))
 			{
-				unk_0x492EE2B9C9BD33C6(uLocal_0, fLocal_3);
-				unk_0xCD56231706809D19(uLocal_0, fLocal_3);
+				VEHICLE::SET_TRAIN_SPEED(veLocal_0, fLocal_5);
+				VEHICLE::SET_TRAIN_CRUISE_SPEED(veLocal_0, fLocal_5);
 			}
-			if (bLocal_6)
-			{
+		
+			if (bLocal_8)
 				func_1();
-			}
 		}
 	}
+
+	return;
 }
 
-void func_1()
+void func_1() // Position - 0x1A7
 {
-	unk_0xAE03F542B985A69E(1);
-	unk_0xBBC29EBE6E1A48FA();
+	VEHICLE::SET_RANDOM_TRAINS(true);
+	SCRIPT::TERMINATE_THIS_THREAD();
+	return;
 }
 

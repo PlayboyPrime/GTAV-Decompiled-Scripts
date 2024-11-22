@@ -1,7 +1,9 @@
-void __EntryFunction__()
+void main() // Position - 0x0
 {
 	while (true)
 	{
 	}
+
+	return;
 }
 

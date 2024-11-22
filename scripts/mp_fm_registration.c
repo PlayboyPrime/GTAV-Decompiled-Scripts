@@ -1,4 +1,5 @@
-void __EntryFunction__()
+// Program registers 145302 globals at index 7 starting from Global_1835008
+void main() // Position - 0x0
 {
 	Global_1835422 = 1;
 	Global_1835423 = -1;
@@ -30,7 +31,7 @@ void __EntryFunction__()
 	Global_1837414 = -2;
 	Global_1837415 = -2;
 	Global_1837451 = -1;
-	Global_1844854 = { -1,9252f, -0,826065f, 0,309731f };
+	Global_1844854 = { -1.9252f, -0.826065f, 0.309731f };
 	Global_1845114 = 1;
 	Global_1845127 = -1;
 	Global_1881813 = -1;
@@ -45,9 +46,9 @@ void __EntryFunction__()
 	Global_1882597 = 1;
 	Global_1917550 = 1;
 	Global_1917551 = -1;
-	Global_1917730 = joaat("s_m_y_blackops_01");
-	Global_1917731 = joaat("patriot");
-	Global_1917732 = joaat("weapon_microsmg");
+	Global_1917730 = -1275859404;
+	Global_1917731 = -808457413;
+	Global_1917732 = 324215364;
 	Global_1918987 = 1f;
 	Global_1918998 = -1;
 	Global_1919004 = 31;
@@ -56,12 +57,12 @@ void __EntryFunction__()
 	Global_1927721 = -1f;
 	Global_1927722 = -1;
 	Global_1928285 = -1;
-	Global_1928393 = { 1973,696f, 3814,861f, 32,4259f };
-	Global_1928397 = { 1274,796f, -1721,399f, 53,655f };
-	Global_1928401 = { 1204,21f, -3107,252f, 4,5502f };
-	Global_1928405 = { 718,0308f, -976,4414f, 23,9148f };
+	Global_1928393 = { 1973.696f, 3814.861f, 32.4259f };
+	Global_1928397 = { 1274.7963f, -1721.3986f, 53.655f };
+	Global_1928401 = { 1204.2096f, -3107.2524f, 4.5502f };
+	Global_1928405 = { 718.0308f, -976.4414f, 23.9148f };
 	Global_1937680 = 1;
-	Global_1938778 = joaat("weapon_vehicle_rocket");
+	Global_1938778 = -1090665087;
 	Global_1943178 = -1;
 	Global_1943179 = -3;
 	Global_1943185 = -1;
@@ -110,9 +111,9 @@ void __EntryFunction__()
 	Global_1956739 = 1;
 	Global_1956743 = 1;
 	Global_1956744 = 8;
-	Global_1956746 = 25,4375f;
-	Global_1956747 = { -578,43f, -794,0187f, 22,19716f };
-	Global_1956750 = { -615,1322f, -794,2707f, 45,31073f };
+	Global_1956746 = 25.4375f;
+	Global_1956747 = { -578.43f, -794.01874f, 22.197163f };
+	Global_1956750 = { -615.1322f, -794.2707f, 45.310726f };
 	Global_1956755 = -1;
 	Global_1956756 = -1;
 	Global_1956757 = -1;
@@ -145,17 +146,17 @@ void __EntryFunction__()
 	Global_1963890 = 0f;
 	Global_1963891 = 0f;
 	Global_1963900 = 0f;
-	Global_1963901 = -0,05f;
-	Global_1963902 = 0,05f;
-	Global_1963903 = -0,05f;
+	Global_1963901 = -0.05f;
+	Global_1963902 = 0.05f;
+	Global_1963903 = -0.05f;
 	Global_1963905 = 3;
 	Global_1964161 = -1;
 	Global_1964162 = -1;
 	Global_1964163 = -1;
 	Global_1964360 = -1;
 	Global_1964420 = -1;
-	Global_1964427 = { 947,5f, 16,843f, 117,239f };
-	Global_1964430 = { 0f, 0f, 195,9f };
+	Global_1964427 = { 947.5f, 16.843f, 117.239f };
+	Global_1964430 = { 0f, 0f, 195.9f };
 	Global_1964433 = -1;
 	Global_1964434 = -1;
 	Global_1964435 = -1;
@@ -166,11 +167,11 @@ void __EntryFunction__()
 	Global_1964444 = -1;
 	Global_1964445 = -1;
 	Global_1964451 = -1;
-	Global_1964452 = 0,55f;
+	Global_1964452 = 0.55f;
 	Global_1964464 = 0f;
-	Global_1964465 = -1,52f;
-	Global_1964466 = 0,655f;
-	Global_1964467 = -2,6f;
+	Global_1964465 = -1.52f;
+	Global_1964466 = 0.655f;
+	Global_1964467 = -2.6f;
 	Global_1964468 = 0f;
 	Global_1964469 = 180f;
 	Global_1964501 = -1;
@@ -203,11 +204,12 @@ void __EntryFunction__()
 	Global_1979297 = 1;
 	Global_1979364 = -1;
 	Global_1979416 = 1f;
-	Global_1979417 = 0,75f;
-	Global_1979418 = 0,75f;
-	Global_1979419 = 0,5f;
-	Global_1979420 = 0,25f;
+	Global_1979417 = 0.75f;
+	Global_1979418 = 0.75f;
+	Global_1979419 = 0.5f;
+	Global_1979420 = 0.25f;
 	Global_1980306 = -1;
 	Global_1980308 = -1;
+	return;
 }
 

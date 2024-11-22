@@ -17,11 +17,11 @@
 	int iLocal_15 = 0;
 #endregion
 
-void __EntryFunction__()
+void main() // Position - 0x0
 {
-	int iVar0;
-	bool bVar1;
-	
+	int gameTimer;
+	BOOL flag;
+
 	iLocal_2 = 1;
 	iLocal_3 = 134;
 	iLocal_4 = 134;
@@ -32,103 +32,103 @@ void __EntryFunction__()
 	iLocal_9 = 1;
 	iLocal_10 = 12;
 	iLocal_11 = 12;
-	fLocal_12 = 0,001f;
+	fLocal_12 = 0.001f;
 	iLocal_15 = -1;
-	iVar0 = -1;
-	bVar1 = false;
-	if (unk_0x96CFB880BAC634CE(3))
-	{
+	gameTimer = -1;
+	flag = false;
+
+	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 		func_5();
-	}
+
 	while (true)
 	{
-		if (!bVar1)
+		if (!flag)
 		{
-			switch (func_1(unk_0x4A8C381C258A124D()))
+			switch (_GET_PLAYER_CHARACTER_FROM_PED(PLAYER::PLAYER_PED_ID()))
 			{
-				case 1:
-					if (unk_0xB3157976738FC0C0("MISSION_COMPLETE_FRANKLIN_SMALL", 0))
+				case CHAR_FRANKLIN:
+					if (AUDIO::LOAD_STREAM("MISSION_COMPLETE_FRANKLIN_SMALL", 0))
 					{
-						unk_0x64B3EF30EAA9FBA3();
-						bVar1 = true;
+						AUDIO::PLAY_STREAM_FRONTEND();
+						flag = true;
 					}
 					break;
-				
-				case 2:
-					if (unk_0xB3157976738FC0C0("MISSION_COMPLETE_TREVOR_SMALL", 0))
+			
+				case CHAR_TREVOR:
+					if (AUDIO::LOAD_STREAM("MISSION_COMPLETE_TREVOR_SMALL", 0))
 					{
-						unk_0x64B3EF30EAA9FBA3();
-						bVar1 = true;
+						AUDIO::PLAY_STREAM_FRONTEND();
+						flag = true;
 					}
 					break;
-				
+			
 				default:
-					if (unk_0xB3157976738FC0C0("MISSION_COMPLETE_MICHAEL_SMALL", 0))
+					if (AUDIO::LOAD_STREAM("MISSION_COMPLETE_MICHAEL_SMALL", 0))
 					{
-						unk_0x64B3EF30EAA9FBA3();
-						bVar1 = true;
+						AUDIO::PLAY_STREAM_FRONTEND();
+						flag = true;
 					}
 					break;
 			}
 		}
-		else if (iVar0 == -1)
+		else if (gameTimer == -1)
 		{
-			iVar0 = unk_0x1DD05E817C89C737();
+			gameTimer = MISC::GET_GAME_TIMER();
 		}
-		else if (unk_0x1DD05E817C89C737() > iVar0 + 8000)
+		else if (MISC::GET_GAME_TIMER() > gameTimer + 8000)
 		{
 			func_5();
 		}
-		system::wait(0);
+	
+		SYSTEM::WAIT(0);
 	}
+
+	return;
 }
 
-int func_1(var uParam0)
+eCharacter _GET_PLAYER_CHARACTER_FROM_PED(Ped pedParam0) // Position - 0xD2
 {
-	int iVar0;
-	int iVar1;
-	
-	if (unk_0xFC8BFE4B41177C22(uParam0))
+	eCharacter i;
+	Hash entityModel;
+
+	if (ENTITY::DOES_ENTITY_EXIST(pedParam0))
 	{
-		iVar1 = unk_0x4B423FAA24E8ABF0(uParam0);
-		iVar0 = 0;
-		while (iVar0 <= 2)
+		entityModel = ENTITY::GET_ENTITY_MODEL(pedParam0);
+	
+		for (i = CHAR_MICHAEL; i <= CHAR_TREVOR; i = i + 1)
 		{
-			if (func_2(iVar0) == iVar1)
-			{
-				return iVar0;
-			}
-			iVar0++;
+			if (_GET_CHARACTER_MODEL(i) == entityModel)
+				return i;
 		}
 	}
-	return 145;
+
+	return _CHAR_NULL;
 }
 
-int func_2(int iParam0)
+Hash _GET_CHARACTER_MODEL(eCharacter character) // Position - 0x10F
 {
-	if (func_4(iParam0))
-	{
-		return func_3(iParam0);
-	}
-	else if (iParam0 != 145)
-	{
-	}
+	if (func_4(character))
+		return func_3(character);
+	else
+		character != _CHAR_NULL;
+
 	return 0;
 }
 
-var func_3(int iParam0)
+Hash func_3(eCharacter echParam0) // Position - 0x134
 {
-	return Global_2169[iParam0 /*29*/];
+	return Global_2169[echParam0 /*29*/];
 }
 
-bool func_4(int iParam0)
+BOOL func_4(eCharacter echParam0) // Position - 0x143
 {
-	return iParam0 < 3;
+	return echParam0 < CHAR_MULTIPLAYER;
 }
 
-void func_5()
+void func_5() // Position - 0x14F
 {
-	unk_0x22A76EDE2316E9A1();
-	unk_0xBBC29EBE6E1A48FA();
+	AUDIO::STOP_STREAM();
+	SCRIPT::TERMINATE_THIS_THREAD();
+	return;
 }
 

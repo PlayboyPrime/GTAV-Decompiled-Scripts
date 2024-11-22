@@ -1,8 +1,10 @@
-void __EntryFunction__()
+void main() // Position - 0x0
 {
 	while (true)
 	{
-		system::wait(0);
+		SYSTEM::WAIT(0);
 	}
+
+	return;
 }
 

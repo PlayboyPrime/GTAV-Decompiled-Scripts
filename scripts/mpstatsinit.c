@@ -1,40 +1,42 @@
-void __EntryFunction__()
+void main() // Position - 0x0
 {
 	func_1();
 	Global_2696105 = 1;
-	unk_0xBBC29EBE6E1A48FA();
+	SCRIPT::TERMINATE_THIS_THREAD();
+	return;
 }
 
-void func_1()
+void func_1() // Position - 0x15
 {
-	Global_1680145[0] = joaat("mpply_awd_fm_cr_races_made");
-	Global_1680145[1] = joaat("mpply_awd_fm_cr_dm_made");
-	Global_1680145[2] = joaat("mpply_awd_fm_cr_played_by_peep");
-	Global_1680145[3] = joaat("mpply_awd_fm_cr_mission_score");
-	Global_1680145[4] = joaat("mpply_awd_tempaward");
-	Global_1680151[0] = joaat("mpply_awd_tempawardfloat");
-	Global_1680153[0] = joaat("mpply_awd_tempawardbool");
-	Global_1680153[1] = joaat("mpply_awd_gangops_iaa");
-	Global_1680153[2] = joaat("mpply_awd_gangops_submarine");
-	Global_1680153[3] = joaat("mpply_awd_gangops_allinorder");
-	Global_1680153[4] = joaat("mpply_awd_gangops_loyalty");
-	Global_1680153[5] = joaat("mpply_awd_gangops_crimmasmd");
-	Global_1680153[6] = joaat("mpply_awd_gangops_missile");
-	Global_1680153[7] = joaat("mpply_awd_gangops_loyalty2");
-	Global_1680153[8] = joaat("mpply_awd_gangops_loyalty3");
-	Global_1680153[9] = joaat("mpply_awd_gangops_crimmasmd2");
-	Global_1680153[10] = joaat("mpply_awd_gangops_crimmasmd3");
-	Global_1680153[11] = joaat("mpply_awd_gangops_support");
-	Global_1680153[12] = joaat("mpply_awd_fleeca_fin");
-	Global_1680153[13] = joaat("mpply_awd_prison_fin");
-	Global_1680153[14] = joaat("mpply_awd_humane_fin");
-	Global_1680153[15] = joaat("mpply_awd_seriesa_fin");
-	Global_1680153[16] = joaat("mpply_awd_pacific_fin");
-	Global_1680153[17] = joaat("mpply_awd_hst_order");
-	Global_1680153[18] = joaat("mpply_awd_hst_same_team");
-	Global_1680153[19] = joaat("mpply_awd_hst_ult_chal");
-	Global_1680153[20] = joaat("mpply_awd_complet_heist_1stper");
-	Global_1680153[21] = joaat("mpply_awd_complet_heist_mem");
-	Global_1680176[0] = joaat("mpply_awd_tempawarddate");
+	Global_1680145[0] = -707450979;
+	Global_1680145[1] = 2037198186;
+	Global_1680145[2] = -536079583;
+	Global_1680145[3] = 1358752017;
+	Global_1680145[4] = 1286690916;
+	Global_1680151[0] = -1577130602;
+	Global_1680153[0] = -1355906951;
+	Global_1680153[1] = 542025473;
+	Global_1680153[2] = 963432385;
+	Global_1680153[3] = -338653499;
+	Global_1680153[4] = -1383215730;
+	Global_1680153[5] = 1789482930;
+	Global_1680153[6] = 2120743090;
+	Global_1680153[7] = 1058138833;
+	Global_1680153[8] = -2014380918;
+	Global_1680153[9] = -504877565;
+	Global_1680153[10] = -735178097;
+	Global_1680153[11] = -1925368033;
+	Global_1680153[12] = -1895623288;
+	Global_1680153[13] = 613974246;
+	Global_1680153[14] = -318060235;
+	Global_1680153[15] = -2107077647;
+	Global_1680153[16] = 1902081873;
+	Global_1680153[17] = 1568365530;
+	Global_1680153[18] = 562544245;
+	Global_1680153[19] = -1004552591;
+	Global_1680153[20] = 1639364235;
+	Global_1680153[21] = -311762359;
+	Global_1680176[0] = -573514631;
+	return;
 }
 
