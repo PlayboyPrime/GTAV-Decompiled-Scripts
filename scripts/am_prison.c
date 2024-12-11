@@ -99,11 +99,11 @@
 	var uLocal_97 = 0;
 	var uLocal_98 = 0;
 	var uLocal_99 = 0;
-	int iLocal_100 = 0;
+	var uLocal_100 = 0;
 	var uLocal_101 = 0;
-	var uLocal_102 = 32;
+	int iLocal_102 = 0;
 	var uLocal_103 = 0;
-	var uLocal_104 = 0;
+	var uLocal_104 = 32;
 	var uLocal_105 = 0;
 	var uLocal_106 = 0;
 	var uLocal_107 = 0;
@@ -134,11 +134,13 @@
 	var uLocal_132 = 0;
 	var uLocal_133 = 0;
 	var uLocal_134 = 0;
-	int iLocal_135 = 0;
+	var uLocal_135 = 0;
 	var uLocal_136 = 0;
-	var uLocal_137 = 0;
+	int iLocal_137 = 0;
 	var uLocal_138 = 0;
 	var uLocal_139 = 0;
+	var uLocal_140 = 0;
+	var uLocal_141 = 0;
 	var uScriptParam_0 = 0;
 	var uScriptParam_1 = -1;
 	var uScriptParam_2 = -1;
@@ -209,13 +211,13 @@ void main() // Position - 0x0
 				func_43();
 		
 			if (!func_28() || func_25(PLAYER::PLAYER_ID(), 0))
-				if (!Global_1836226 && !func_24(3) && !func_21(PLAYER::PLAYER_ID(), 0) && !STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS() && PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()) && !func_19(PLAYER::PLAYER_ID()) && !func_17(func_18(PLAYER::PLAYER_ID())) && !func_15(PLAYER::PLAYER_ID(), 146) && !func_10(PLAYER::PLAYER_ID()))
+				if (!Global_1836234 && !func_24(3) && !func_21(PLAYER::PLAYER_ID(), 0) && !STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS() && PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()) && !func_19(PLAYER::PLAYER_ID()) && !func_17(func_18(PLAYER::PLAYER_ID())) && !func_15(PLAYER::PLAYER_ID(), 146) && !func_10(PLAYER::PLAYER_ID()))
 					if (func_9(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), 4, 100, false))
 						if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 							if (PED::IS_PED_IN_ANY_PLANE(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_IN_ANY_HELI(PLAYER::PLAYER_PED_ID()))
-								if (!func_8(&(iLocal_135.f_1)))
-									func_5(&(iLocal_135.f_1));
-								else if (func_2(&(iLocal_135.f_1)) > 20f)
+								if (!func_8(&(iLocal_137.f_1)))
+									func_5(&(iLocal_137.f_1));
+								else if (func_2(&(iLocal_137.f_1)) > 20f)
 									if (PLAYER::GET_PLAYER_WANTED_LEVEL(PLAYER::PLAYER_ID()) < 4)
 										PLAYER::REPORT_CRIME(PLAYER::PLAYER_ID(), 36, PLAYER::GET_WANTED_LEVEL_THRESHOLD(4) - PLAYER::GET_WANTED_LEVEL_THRESHOLD(PLAYER::GET_PLAYER_WANTED_LEVEL(PLAYER::PLAYER_ID())));
 									else
@@ -224,8 +226,8 @@ void main() // Position - 0x0
 								PLAYER::REPORT_CRIME(PLAYER::PLAYER_ID(), 36, PLAYER::GET_WANTED_LEVEL_THRESHOLD(4) - PLAYER::GET_WANTED_LEVEL_THRESHOLD(PLAYER::GET_PLAYER_WANTED_LEVEL(PLAYER::PLAYER_ID())));
 							else
 								PLAYER::REPORT_POLICE_SPOTTED_PLAYER(PLAYER::PLAYER_ID());
-						else if (func_8(&(iLocal_135.f_1)))
-							func_1(&(iLocal_135.f_1));
+						else if (func_8(&(iLocal_137.f_1)))
+							func_1(&(iLocal_137.f_1));
 		}
 		else
 		{
@@ -577,7 +579,7 @@ int func_12(Player plParam0) // Position - 0x10E8
 {
 	if (func_14(plParam0))
 		if (func_13(plParam0, false))
-			return Global_1887305[plParam0 /*610*/].f_10.f_33;
+			return Global_1887549[plParam0 /*611*/].f_10.f_33;
 
 	return -1;
 }
@@ -585,7 +587,7 @@ int func_12(Player plParam0) // Position - 0x10E8
 BOOL func_13(Player plParam0, BOOL bParam1) // Position - 0x1114
 {
 	if (func_14(plParam0))
-		if (Global_1887305[plParam0 /*610*/].f_10.f_33 != -1 || bParam1 && Global_1887305[plParam0 /*610*/].f_10.f_32 != -1)
+		if (Global_1887549[plParam0 /*611*/].f_10.f_33 != -1 || bParam1 && Global_1887549[plParam0 /*611*/].f_10.f_32 != -1)
 			return true;
 
 	return false;
@@ -608,7 +610,7 @@ BOOL func_14(Player plParam0) // Position - 0x1158
 
 BOOL func_15(Player plParam0, int iParam1) // Position - 0x117A
 {
-	if (Global_1887305[plParam0 /*610*/] == iParam1)
+	if (Global_1887549[plParam0 /*611*/] == iParam1)
 		return func_16(plParam0);
 
 	return false;
@@ -621,7 +623,7 @@ BOOL func_16(Player plParam0) // Position - 0x119A
 	player = plParam0;
 
 	if (player != -1)
-		return IS_BIT_SET(Global_1887305[player /*610*/].f_1, 0);
+		return IS_BIT_SET(Global_1887549[player /*611*/].f_1, 0);
 
 	return false;
 }
@@ -651,7 +653,7 @@ int func_18(Player plParam0) // Position - 0x11FB
 	player = plParam0;
 
 	if (player != -1)
-		return Global_1887305[player /*610*/];
+		return Global_1887549[player /*611*/];
 
 	return -1;
 }
@@ -665,7 +667,7 @@ BOOL func_19(Player plParam0) // Position - 0x121A
 		if (plParam0 == PLAYER::PLAYER_ID())
 			return true;
 
-	if (IS_BIT_SET(Global_2657971[plParam0 /*465*/].f_200, 2))
+	if (IS_BIT_SET(Global_2657991[plParam0 /*467*/].f_202, 2))
 		return true;
 
 	return false;
@@ -686,7 +688,7 @@ BOOL func_21(Player plParam0, int iParam1) // Position - 0x1267
 	if (plParam0 == PLAYER::PLAYER_ID())
 		flag = func_22(-1, false) == 8;
 	else
-		flag = Global_1845281[plParam0 /*883*/].f_206 == 8;
+		flag = Global_1845221[plParam0 /*889*/].f_206 == 8;
 
 	if (iParam1 == 1)
 		if (NETWORK::NETWORK_IS_PLAYER_ACTIVE(plParam0))
@@ -705,7 +707,7 @@ int func_22(int iParam0, BOOL bParam1) // Position - 0x12C0
 	if (num2 == -1)
 		num2 = func_23();
 
-	if (Global_1575063[num2] == 1)
+	if (Global_1575064[num2] == 1)
 	{
 		bParam1;
 		num = 8;
@@ -726,7 +728,7 @@ int func_23() // Position - 0x1301
 
 BOOL func_24(int iParam0) // Position - 0x130D
 {
-	return IS_BIT_SET(Global_1836225, iParam0);
+	return IS_BIT_SET(Global_1836233, iParam0);
 }
 
 BOOL func_25(Player plParam0, int iParam1) // Position - 0x131C
@@ -741,7 +743,7 @@ BOOL func_25(Player plParam0, int iParam1) // Position - 0x131C
 
 	player = plParam0;
 
-	if (Global_1845281[player /*883*/] == iParam1)
+	if (Global_1845221[player /*889*/] == iParam1)
 		return true;
 
 	return false;
@@ -752,12 +754,12 @@ BOOL func_26(Player plParam0) // Position - 0x1355
 	if (!func_14(plParam0))
 		return false;
 
-	return IS_BIT_SET(Global_2672855.f_1, plParam0);
+	return IS_BIT_SET(Global_2672939.f_1, plParam0);
 }
 
 int func_27() // Position - 0x1374
 {
-	return Global_32948;
+	return Global_33087;
 }
 
 BOOL func_28() // Position - 0x137F
@@ -768,7 +770,7 @@ BOOL func_28() // Position - 0x137F
 	if (!func_26(PLAYER::PLAYER_ID()))
 		return false;
 
-	if (Global_1845281[PLAYER::PLAYER_ID() /*883*/] == -1)
+	if (Global_1845221[PLAYER::PLAYER_ID() /*889*/] == -1)
 		return false;
 
 	return true;
@@ -792,24 +794,24 @@ BOOL func_29() // Position - 0x13B7
 
 BOOL func_30() // Position - 0x13DF
 {
-	switch (iLocal_135)
+	switch (iLocal_137)
 	{
 		case 0:
-			if (Global_1836226 || func_24(3))
-				iLocal_135.f_4 = PED::ADD_SCENARIO_BLOCKING_AREA(1413.7028f, 2341.5168f, -232.3945f, 2016.2095f, 2998.893f, 161.0299f, false, true, true, true, 1);
+			if (Global_1836234 || func_24(3))
+				iLocal_137.f_4 = PED::ADD_SCENARIO_BLOCKING_AREA(1413.7028f, 2341.5168f, -232.3945f, 2016.2095f, 2998.893f, 161.0299f, false, true, true, true, 1);
 		
-			func_31(&uLocal_102[NETWORK::PARTICIPANT_ID_TO_INT()], 1);
-			iLocal_135 = 1;
+			func_31(&uLocal_104[NETWORK::PARTICIPANT_ID_TO_INT()], 1);
+			iLocal_137 = 1;
 			break;
 	
 		case 1:
 			if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), 1693.1636f, 2559.6162f, 44.5649f) >= 1030225f)
-				iLocal_135 = 2;
+				iLocal_137 = 2;
 			break;
 	
 		case 2:
-			if (Global_1836226 || func_24(3))
-				PED::REMOVE_SCENARIO_BLOCKING_AREA(iLocal_135.f_4, false);
+			if (Global_1836234 || func_24(3))
+				PED::REMOVE_SCENARIO_BLOCKING_AREA(iLocal_137.f_4, false);
 		
 			return true;
 	}
@@ -831,15 +833,15 @@ void func_32(var uParam0, int iParam1) // Position - 0x14AE
 
 BOOL func_33() // Position - 0x14BF
 {
-	switch (iLocal_100)
+	switch (iLocal_102)
 	{
 		case 0:
-			iLocal_100 = 1;
+			iLocal_102 = 1;
 			break;
 	
 		case 1:
 			if (func_34())
-				iLocal_100 = 2;
+				iLocal_102 = 2;
 			break;
 	
 		case 2:
@@ -862,14 +864,14 @@ BOOL func_34() // Position - 0x14FB
 
 BOOL _SHOULD_NETWORK_SCRIPT_TERMINATE() // Position - 0x153C
 {
-	if (Global_1575055 == false)
+	if (Global_1575056 == false)
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			return true;
 
 	if (func_41())
 		return true;
 
-	if (Global_2698758)
+	if (Global_2699004)
 		return true;
 
 	if (func_40())
@@ -908,7 +910,7 @@ Hash _GET_CURRENT_SESSION_TYPE_SCRIPT_HASH() // Position - 0x15C0
 
 Hash func_37() // Position - 0x15F3
 {
-	switch (Global_2698865)
+	switch (Global_2699111)
 	{
 		case 0:
 			return -931834499;
@@ -922,7 +924,7 @@ Hash func_37() // Position - 0x15F3
 
 BOOL func_38() // Position - 0x1617
 {
-	return Global_2684504.f_700;
+	return Global_2684718.f_700;
 }
 
 BOOL _DOES_EVENT_OF_TYPE_EXIST(int iParam0) // Position - 0x1626
@@ -935,12 +937,12 @@ BOOL _DOES_EVENT_OF_TYPE_EXIST(int iParam0) // Position - 0x1626
 
 BOOL func_40() // Position - 0x163D
 {
-	return Global_2696172;
+	return Global_2696416;
 }
 
 BOOL func_41() // Position - 0x1649
 {
-	return Global_2684504.f_695;
+	return Global_2684718.f_695;
 }
 
 void func_42() // Position - 0x1658
@@ -965,8 +967,8 @@ void func_45(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 {
 	func_49(func_50(uParam0), uParam0);
 	_NETWORK_ENSURE_SCRIPT_IS_NETWORKED(0, -1, false);
-	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&iLocal_100, 2, 0);
-	NETWORK::NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES(&uLocal_102, 33, 0);
+	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&iLocal_102, 2, 0);
+	NETWORK::NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES(&uLocal_104, 33, 0);
 	MISC::SET_THIS_SCRIPT_CAN_BE_PAUSED(false);
 
 	if (!_NETWORK_WAIT_FOR_HOST_BROADCAST_DATA())
@@ -1076,7 +1078,7 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 BOOL func_48(BOOL bParam0) // Position - 0x1839
 {
 	bParam0;
-	return Global_1575055;
+	return Global_1575056;
 }
 
 void func_49(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, var uParam14, var uParam15, var uParam16, var uParam17, var uParam18, var uParam19, var uParam20, var uParam21) // Position - 0x184A
@@ -1444,10 +1446,10 @@ int func_50(int iParam0) // Position - 0x1869
 		case 17:
 			return 2;
 	
-		case 197:
+		case 208:
 			return 32;
 	
-		case 198:
+		case 209:
 			return 32;
 	
 		case 19:
@@ -1471,43 +1473,19 @@ int func_50(int iParam0) // Position - 0x1869
 		case 21:
 			return 32;
 	
-		case 209:
+		case 220:
+			return 32;
+	
+		case 221:
 			return 32;
 	
 		case 210:
 			return 32;
 	
-		case 199:
-			return 32;
-	
-		case 200:
-			return 32;
-	
-		case 204:
-			return 32;
-	
-		case 202:
-			return 32;
-	
-		case 203:
-			return 32;
-	
-		case 207:
-			return 32;
-	
-		case 208:
-			return 32;
-	
-		case 205:
-			return 32;
-	
-		case 206:
-			return 32;
-	
 		case 211:
 			return 32;
 	
-		case 212:
+		case 215:
 			return 32;
 	
 		case 213:
@@ -1516,78 +1494,102 @@ int func_50(int iParam0) // Position - 0x1869
 		case 214:
 			return 32;
 	
-		case 215:
-			return 2;
-	
-		case 220:
-			return 1;
-	
-		case 216:
-			return 2;
-	
-		case 217:
-			return 4;
-	
 		case 218:
-			return 2;
+			return 32;
 	
 		case 219:
-			return 2;
+			return 32;
 	
-		case 201:
-			return 1;
+		case 216:
+			return 32;
 	
-		case 221:
-			return 2;
+		case 217:
+			return 32;
 	
 		case 222:
-		case 223:
-		case 224:
-		case 225:
-		case 226:
-		case 227:
-			return 0;
+			return 32;
 	
-		case 243:
+		case 223:
+			return 32;
+	
+		case 224:
+			return 32;
+	
+		case 225:
+			return 32;
+	
+		case 226:
+			return 2;
+	
+		case 231:
 			return 1;
+	
+		case 227:
+			return 2;
 	
 		case 228:
 			return 4;
 	
-		case 231:
-			return 4;
+		case 229:
+			return 2;
 	
-		case 232:
+		case 230:
+			return 2;
+	
+		case 212:
 			return 1;
 	
+		case 232:
+			return 2;
+	
 		case 233:
+		case 234:
+		case 235:
+		case 236:
+		case 237:
+		case 238:
+			return 0;
+	
+		case 254:
 			return 1;
 	
 		case 239:
-			return 1;
-	
-		case 235:
-			return 2;
-	
-		case 240:
-			return 1;
-	
-		case 236:
-			return 1;
-	
-		case 234:
-			return 2;
-	
-		case 237:
-			return 8;
-	
-		case 238:
-			return 8;
-	
-		case 241:
-			return 1;
+			return 4;
 	
 		case 242:
+			return 4;
+	
+		case 243:
+			return 1;
+	
+		case 244:
+			return 1;
+	
+		case 250:
+			return 1;
+	
+		case 246:
+			return 2;
+	
+		case 251:
+			return 1;
+	
+		case 247:
+			return 1;
+	
+		case 245:
+			return 2;
+	
+		case 248:
+			return 8;
+	
+		case 249:
+			return 8;
+	
+		case 252:
+			return 1;
+	
+		case 253:
 			return 2;
 	
 		case 142:
@@ -1605,10 +1607,13 @@ int func_50(int iParam0) // Position - 0x1869
 		case 196:
 			return 1;
 	
-		case 229:
+		case 206:
+			return 32;
+	
+		case 240:
 			return 16;
 	
-		case 230:
+		case 241:
 			return 32;
 	
 		default:
@@ -1633,7 +1638,7 @@ int func_50(int iParam0) // Position - 0x1869
 	return 0;
 }
 
-int func_51(int iParam0) // Position - 0x1FFE
+int func_51(int iParam0) // Position - 0x2009
 {
 	switch (iParam0)
 	{
@@ -1841,6 +1846,36 @@ int func_51(int iParam0) // Position - 0x1FFE
 		case 340:
 			return 0;
 	
+		case 343:
+			return 0;
+	
+		case 344:
+			return 0;
+	
+		case 345:
+			return 0;
+	
+		case 346:
+			return 0;
+	
+		case 347:
+			return 0;
+	
+		case 348:
+			return 0;
+	
+		case 349:
+			return 0;
+	
+		case 350:
+			return 0;
+	
+		case 351:
+			return 0;
+	
+		case 353:
+			return 2;
+	
 		default:
 		
 	}
@@ -1848,47 +1883,47 @@ int func_51(int iParam0) // Position - 0x1FFE
 	return -1;
 }
 
-int func_52(int iParam0, BOOL bParam1) // Position - 0x22B6
+int func_52(int iParam0, BOOL bParam1) // Position - 0x2325
 {
 	switch (iParam0)
 	{
-		case 215:
+		case 226:
 			return 15;
 	
-		case 222:
+		case 233:
 			return 8;
 	
-		case 216:
+		case 227:
 			return 14;
 	
-		case 220:
+		case 231:
 			return 122;
 	
-		case 223:
+		case 234:
 			return 1;
 	
-		case 221:
+		case 232:
 			return 5;
 	
-		case 224:
+		case 235:
 			return 6;
 	
-		case 217:
+		case 228:
 			return 11;
 	
-		case 225:
+		case 236:
 			return 0;
 	
-		case 226:
+		case 237:
 			return 2;
 	
-		case 218:
+		case 229:
 			return 13;
 	
-		case 227:
+		case 238:
 			return 3;
 	
-		case 219:
+		case 230:
 			return 12;
 	
 		case 49:
@@ -2311,11 +2346,44 @@ int func_52(int iParam0, BOOL bParam1) // Position - 0x22B6
 		case 196:
 			return 340;
 	
+		case 197:
+			return 343;
+	
+		case 198:
+			return 344;
+	
+		case 199:
+			return 345;
+	
+		case 200:
+			return 346;
+	
+		case 201:
+			return 347;
+	
+		case 202:
+			return 348;
+	
+		case 203:
+			return 349;
+	
+		case 204:
+			return 350;
+	
+		case 205:
+			return 351;
+	
+		case 206:
+			return 352;
+	
+		case 207:
+			return 353;
+	
 		default:
 		
 	}
 
 	bParam1;
-	return 343;
+	return 352;
 }
 

@@ -255,14 +255,14 @@ void main() // Position - 0x0
 				func_12(1);
 				func_9(&uLocal_45);
 			
-				if (!func_8(Global_113969.f_19100, 4096))
-					func_6(&(Global_113969.f_19100), 4096);
+				if (!func_8(Global_114135.f_19101, 4096))
+					func_6(&(Global_114135.f_19101), 4096);
 			
 				iLocal_43 = 3;
 				break;
 		
 			case 3:
-				if (func_2(&uLocal_45) > sScriptParam_0.f_67 && sScriptParam_0.f_67 != -1f || CAM::IS_SCREEN_FADED_OUT() || Global_33093)
+				if (func_2(&uLocal_45) > sScriptParam_0.f_67 && sScriptParam_0.f_67 != -1f || CAM::IS_SCREEN_FADED_OUT() || Global_33232)
 				{
 					func_19();
 				}
@@ -286,8 +286,8 @@ void main() // Position - 0x0
 
 void func_1(int iParam0) // Position - 0x447
 {
-	Global_79650 = iParam0;
-	Global_79651 = iParam0;
+	Global_79800 = iParam0;
+	Global_79801 = iParam0;
 	return;
 }
 
@@ -383,34 +383,34 @@ void func_12(int iParam0) // Position - 0x58B
 	if (func_17())
 		return;
 
-	if (Global_21145)
+	if (Global_21284)
 		if (func_16())
 			func_14(true, true);
 		else
 			func_14(false, false);
 
-	if (Global_20930.f_1 == 10 || Global_20930.f_1 == 9)
-		MISC::SET_BIT(&Global_8801, 16);
+	if (Global_21066.f_1 == 10 || Global_21066.f_1 == 9)
+		MISC::SET_BIT(&Global_8920, 16);
 
 	if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
 		AUDIO::STOP_SCRIPTED_CONVERSATION(false);
 
-	Global_22286 = 5;
+	Global_22425 = 5;
 
 	if (iParam0 == 1)
-		MISC::SET_BIT(&Global_8800, 30);
+		MISC::SET_BIT(&Global_8919, 30);
 	else
-		MISC::CLEAR_BIT(&Global_8800, 30);
+		MISC::CLEAR_BIT(&Global_8919, 30);
 
 	if (!func_13())
-		Global_20930.f_1 = 3;
+		Global_21066.f_1 = 3;
 
 	return;
 }
 
 BOOL func_13() // Position - 0x615
 {
-	if (Global_20930.f_1 == 1 || Global_20930.f_1 == 0)
+	if (Global_21066.f_1 == 1 || Global_21066.f_1 == 0)
 		return true;
 
 	return false;
@@ -422,24 +422,24 @@ void func_14(BOOL bParam0, BOOL bParam1) // Position - 0x63C
 	{
 		if (func_15(0))
 		{
-			Global_21145 = true;
+			Global_21284 = true;
 		
 			if (bParam1)
-				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20867);
+				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_21003);
 		
-			Global_20858 = { Global_20876[Global_20875 /*3*/] };
-			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20858);
+			Global_20994 = { Global_21012[Global_21011 /*3*/] };
+			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20994);
 		}
 	}
-	else if (Global_21145 == true)
+	else if (Global_21284 == true)
 	{
-		Global_21145 = false;
-		Global_20858 = { Global_20883[Global_20875 /*3*/] };
+		Global_21284 = false;
+		Global_20994 = { Global_21019[Global_21011 /*3*/] };
 	
 		if (bParam1)
-			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20867);
+			MOBILE::SET_MOBILE_PHONE_POSITION(Global_21003);
 		else
-			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20858);
+			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20994);
 	}
 
 	return;
@@ -448,8 +448,8 @@ void func_14(BOOL bParam0, BOOL bParam1) // Position - 0x63C
 BOOL func_15(int iParam0) // Position - 0x6B0
 {
 	if (iParam0 == 1)
-		if (Global_20930.f_1 > 3)
-			if (IS_BIT_SET(Global_8800, 14))
+		if (Global_21066.f_1 > 3)
+			if (IS_BIT_SET(Global_8919, 14))
 				return true;
 			else
 				return false;
@@ -459,7 +459,7 @@ BOOL func_15(int iParam0) // Position - 0x6B0
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(-754107665) > 0)
 		return true;
 
-	if (Global_20930.f_1 > 3)
+	if (Global_21066.f_1 > 3)
 		return true;
 
 	return false;
@@ -467,12 +467,12 @@ BOOL func_15(int iParam0) // Position - 0x6B0
 
 BOOL func_16() // Position - 0x707
 {
-	return IS_BIT_SET(Global_1956920, 5);
+	return IS_BIT_SET(Global_1957675, 5);
 }
 
 BOOL func_17() // Position - 0x715
 {
-	return IS_BIT_SET(Global_1956920, 19);
+	return IS_BIT_SET(Global_1957675, 19);
 }
 
 void func_18(const char* sParam0) // Position - 0x724
@@ -485,7 +485,7 @@ void func_18(const char* sParam0) // Position - 0x724
 void func_19() // Position - 0x736
 {
 	GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_44);
-	Global_33093 = false;
+	Global_33232 = false;
 	func_1(0);
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;

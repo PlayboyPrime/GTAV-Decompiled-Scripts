@@ -169,7 +169,7 @@ Player _INVALID_PLAYER_INDEX() // Position - 0x227
 
 Player _GET_BOSS_OF_LOCAL_PLAYER() // Position - 0x230
 {
-	return Global_1887305[PLAYER::PLAYER_ID() /*610*/].f_10;
+	return Global_1887549[PLAYER::PLAYER_ID() /*611*/].f_10;
 }
 
 BOOL func_5(Player plParam0, BOOL bParam1) // Position - 0x245
@@ -181,14 +181,14 @@ BOOL func_5(Player plParam0, BOOL bParam1) // Position - 0x245
 		if (func_6(plParam0))
 			return false;
 
-	return func_7(Global_1887305[plParam0 /*610*/].f_10);
+	return func_7(Global_1887549[plParam0 /*611*/].f_10);
 }
 
 BOOL func_6(Player plParam0) // Position - 0x27D
 {
 	if (func_7(plParam0))
-		if (func_7(Global_1887305[plParam0 /*610*/].f_10))
-			return Global_1887305[plParam0 /*610*/].f_10 == plParam0;
+		if (func_7(Global_1887549[plParam0 /*611*/].f_10))
+			return Global_1887549[plParam0 /*611*/].f_10 == plParam0;
 
 	return false;
 }
@@ -226,7 +226,7 @@ BOOL func_8(Player plParam0) // Position - 0x2D4
 int func_9(Player plParam0) // Position - 0x30D
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
-		return Global_1845281[plParam0 /*883*/].f_268.f_297;
+		return Global_1845221[plParam0 /*889*/].f_268.f_299;
 
 	return 0;
 }
@@ -234,7 +234,7 @@ int func_9(Player plParam0) // Position - 0x30D
 BOOL func_10(Player plParam0) // Position - 0x331
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
-		return Global_1845281[plParam0 /*883*/].f_268.f_297 != 0;
+		return Global_1845221[plParam0 /*889*/].f_268.f_299 != 0;
 
 	return false;
 }
@@ -752,7 +752,7 @@ BOOL func_24(Player plParam0) // Position - 0xD5A
 		if (plParam0 == PLAYER::PLAYER_ID())
 			return true;
 
-	if (IS_BIT_SET(Global_2657971[plParam0 /*465*/].f_200, 2))
+	if (IS_BIT_SET(Global_2657991[plParam0 /*467*/].f_202, 2))
 		return true;
 
 	return false;
@@ -773,7 +773,7 @@ BOOL func_26(Player plParam0, int iParam1) // Position - 0xDA7
 	if (plParam0 == PLAYER::PLAYER_ID())
 		flag = func_27(-1, false) == 8;
 	else
-		flag = Global_1845281[plParam0 /*883*/].f_206 == 8;
+		flag = Global_1845221[plParam0 /*889*/].f_206 == 8;
 
 	if (iParam1 == 1)
 		if (NETWORK::NETWORK_IS_PLAYER_ACTIVE(plParam0))
@@ -792,7 +792,7 @@ int func_27(int iParam0, BOOL bParam1) // Position - 0xE00
 	if (num2 == -1)
 		num2 = func_28();
 
-	if (Global_1575063[num2] == 1)
+	if (Global_1575064[num2] == 1)
 	{
 		bParam1;
 		num = 8;

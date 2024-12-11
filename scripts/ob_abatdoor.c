@@ -74,7 +74,7 @@ void main() // Position - 0x0
 						{
 							if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(-622120100) > 0)
 							{
-								if (Global_97944)
+								if (Global_98094)
 								{
 									if (STREAMING::HAS_ANIM_DICT_LOADED("map_objects"))
 									{
@@ -101,7 +101,7 @@ void main() // Position - 0x0
 							}
 							else
 							{
-								Global_97945 = 1;
+								Global_98095 = 1;
 								iLocal_2 = 4;
 							}
 						}

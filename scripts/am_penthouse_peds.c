@@ -2517,7 +2517,7 @@ void main() // Position - 0x0
 	fLocal_29 = 140f;
 	fLocal_30 = 180f;
 	iLocal_33 = 3;
-	Global_1579721 = 1;
+	Global_1579734 = 1;
 	func_46();
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
@@ -2543,7 +2543,7 @@ void main() // Position - 0x0
 	{
 		func_37();
 	
-		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS() || _SHOULD_NETWORK_SCRIPT_TERMINATE() || Global_1579721 == 0 || func_28())
+		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS() || _SHOULD_NETWORK_SCRIPT_TERMINATE() || Global_1579734 == 0 || func_28())
 			func_25();
 	
 		func_3();
@@ -3709,19 +3709,19 @@ void func_27() // Position - 0x1414
 
 BOOL func_28() // Position - 0x1439
 {
-	return !Global_1579717 && NETWORK::NETWORK_IS_ACTIVITY_SESSION();
+	return !Global_1579730 && NETWORK::NETWORK_IS_ACTIVITY_SESSION();
 }
 
 BOOL _SHOULD_NETWORK_SCRIPT_TERMINATE() // Position - 0x144F
 {
-	if (Global_1575055 == false)
+	if (Global_1575056 == false)
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			return true;
 
 	if (func_36())
 		return true;
 
-	if (Global_2698758)
+	if (Global_2699004)
 		return true;
 
 	if (func_35())
@@ -3760,7 +3760,7 @@ Hash _GET_CURRENT_SESSION_TYPE_SCRIPT_HASH() // Position - 0x14D3
 
 Hash func_31() // Position - 0x1506
 {
-	switch (Global_2698865)
+	switch (Global_2699111)
 	{
 		case 0:
 			return -931834499;
@@ -3774,12 +3774,12 @@ Hash func_31() // Position - 0x1506
 
 int func_32() // Position - 0x152A
 {
-	return Global_32948;
+	return Global_33087;
 }
 
 BOOL func_33() // Position - 0x1535
 {
-	return Global_2684504.f_700;
+	return Global_2684718.f_700;
 }
 
 BOOL _DOES_EVENT_OF_TYPE_EXIST(int iParam0) // Position - 0x1544
@@ -3792,12 +3792,12 @@ BOOL _DOES_EVENT_OF_TYPE_EXIST(int iParam0) // Position - 0x1544
 
 BOOL func_35() // Position - 0x155B
 {
-	return Global_2696172;
+	return Global_2696416;
 }
 
 BOOL func_36() // Position - 0x1567
 {
-	return Global_2684504.f_695;
+	return Global_2684718.f_695;
 }
 
 void func_37() // Position - 0x1576
@@ -7103,7 +7103,7 @@ int func_43() // Position - 0x83FE
 
 int func_44() // Position - 0x840E
 {
-	if (Global_1579717)
+	if (Global_1579730)
 		return 1;
 
 	return 0;
@@ -7125,12 +7125,12 @@ int func_45(var uParam0) // Position - 0x8422
 
 void func_46() // Position - 0x8474
 {
-	while (!NETWORK::NETWORK_TRY_TO_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, false, Global_1579736))
+	while (!NETWORK::NETWORK_TRY_TO_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, false, Global_1579749))
 	{
 		SYSTEM::WAIT(0);
 	}
 
-	Global_1579736 = Global_1579736 + 1;
+	Global_1579749 = Global_1579749 + 1;
 	_NETWORK_ENSURE_SCRIPT_IS_NETWORKED(0, -1, false);
 	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&iLocal_38, 3, 0);
 	return;
@@ -7203,6 +7203,6 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 BOOL func_48(BOOL bParam0) // Position - 0x85C3
 {
 	bParam0;
-	return Global_1575055;
+	return Global_1575056;
 }
 

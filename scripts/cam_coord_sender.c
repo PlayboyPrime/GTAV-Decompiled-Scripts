@@ -33,7 +33,7 @@ void main() // Position - 0x0
 	iLocal_15 = -1;
 
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
-		ENTITY::SET_ENTITY_INVINCIBLE(PLAYER::PLAYER_PED_ID(), true);
+		ENTITY::SET_ENTITY_INVINCIBLE(PLAYER::PLAYER_PED_ID(), true, 0);
 
 	while (true)
 	{

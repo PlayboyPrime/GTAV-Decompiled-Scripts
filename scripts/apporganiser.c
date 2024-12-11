@@ -50,20 +50,20 @@ void main() // Position - 0x0
 	{
 		SYSTEM::WAIT(0);
 	
-		if (Global_20930.f_1 != 9)
+		if (Global_21066.f_1 != 9)
 		{
 			if (!bLocal_16)
 			{
 				bLocal_16 = true;
 			}
-			else if (Global_20912)
+			else if (Global_21048)
 			{
 				if (!bLocal_17)
 				{
 					bLocal_17 = true;
-					func_7(Global_20911, "SET_DATA_SLOT_EMPTY", 5f, -1082130432, -1082130432, -1082130432, -1082130432);
-					func_4(Global_20911, true);
-					func_7(Global_20911, "DISPLAY_VIEW", 5f, -1082130432, -1082130432, -1082130432, -1082130432);
+					func_7(Global_21047, "SET_DATA_SLOT_EMPTY", 5f, -1082130432, -1082130432, -1082130432, -1082130432);
+					func_4(Global_21047, true);
+					func_7(Global_21047, "DISPLAY_VIEW", 5f, -1082130432, -1082130432, -1082130432, -1082130432);
 				}
 				else
 				{
@@ -84,9 +84,9 @@ void main() // Position - 0x0
 
 BOOL func_1() // Position - 0xDC
 {
-	if (Global_20930.f_1 == 1 || Global_20930.f_1 == 3 || Global_20930.f_1 == 0 || Global_20874 == 1)
+	if (Global_21066.f_1 == 1 || Global_21066.f_1 == 3 || Global_21066.f_1 == 0 || Global_21010 == 1)
 	{
-		Global_20917 = 1;
+		Global_21053 = 1;
 		return true;
 	}
 
@@ -95,9 +95,9 @@ BOOL func_1() // Position - 0xDC
 
 BOOL func_2() // Position - 0x11F
 {
-	if (Global_9406 == 1 || Global_20930.f_1 < 7)
+	if (Global_9542 == 1 || Global_21066.f_1 < 7)
 	{
-		Global_20917 = 1;
+		Global_21053 = 1;
 		return true;
 	}
 
@@ -111,7 +111,7 @@ void func_3() // Position - 0x148
 		if (PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_CELLPHONE_UP))
 		{
 			bLocal_18 = true;
-			func_7(Global_20911, "SET_INPUT_EVENT", 1f, -1082130432, -1082130432, -1082130432, -1082130432);
+			func_7(Global_21047, "SET_INPUT_EVENT", 1f, -1082130432, -1082130432, -1082130432, -1082130432);
 		}
 	}
 	else if (!PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_CELLPHONE_UP))
@@ -124,7 +124,7 @@ void func_3() // Position - 0x148
 		if (PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_CELLPHONE_DOWN))
 		{
 			bLocal_19 = true;
-			func_7(Global_20911, "SET_INPUT_EVENT", 3f, -1082130432, -1082130432, -1082130432, -1082130432);
+			func_7(Global_21047, "SET_INPUT_EVENT", 3f, -1082130432, -1082130432, -1082130432, -1082130432);
 		}
 	}
 	else if (!PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_CELLPHONE_DOWN))
@@ -137,7 +137,7 @@ void func_3() // Position - 0x148
 		if (PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_CELLPHONE_LEFT))
 		{
 			bLocal_20 = true;
-			func_7(Global_20911, "SET_INPUT_EVENT", 4f, -1082130432, -1082130432, -1082130432, -1082130432);
+			func_7(Global_21047, "SET_INPUT_EVENT", 4f, -1082130432, -1082130432, -1082130432, -1082130432);
 		}
 	}
 	else if (!PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_CELLPHONE_LEFT))
@@ -150,7 +150,7 @@ void func_3() // Position - 0x148
 		if (PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_CELLPHONE_RIGHT))
 		{
 			bLocal_21 = true;
-			func_7(Global_20911, "SET_INPUT_EVENT", 2f, -1082130432, -1082130432, -1082130432, -1082130432);
+			func_7(Global_21047, "SET_INPUT_EVENT", 2f, -1082130432, -1082130432, -1082130432, -1082130432);
 		}
 	}
 	else if (!PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_CELLPHONE_RIGHT))
@@ -171,7 +171,7 @@ void func_4(int iParam0, BOOL bParam1) // Position - 0x25C
 	int value2;
 	char* str;
 
-	if (Global_98600 == Global_98601)
+	if (Global_98750 == Global_98751)
 		if (!bParam1)
 			return;
 
@@ -182,8 +182,8 @@ void func_4(int iParam0, BOOL bParam1) // Position - 0x25C
 		return;
 
 	func_8();
-	num = Global_98604;
-	value = Global_98603;
+	num = Global_98754;
+	value = Global_98753;
 	flag = true;
 	num2 = 0;
 	num3 = 0;
@@ -192,7 +192,7 @@ void func_4(int iParam0, BOOL bParam1) // Position - 0x25C
 	while (flag)
 	{
 		num3 = num2;
-		num2 = Global_98605[num /*25*/][value];
+		num2 = Global_98755[num /*25*/][value];
 	
 		if (!(num2 == num3))
 		{
@@ -256,11 +256,11 @@ void func_4(int iParam0, BOOL bParam1) // Position - 0x25C
 		if (num > 6)
 			num = 0;
 	
-		if (num == Global_98604 && value == Global_98603)
+		if (num == Global_98754 && value == Global_98753)
 			flag = false;
 	}
 
-	Global_98601 = Global_98600;
+	Global_98751 = Global_98750;
 	return;
 }
 
@@ -321,14 +321,14 @@ void func_8() // Position - 0x475
 	int num6;
 	int num7;
 
-	if (!Global_98599)
+	if (!Global_98749)
 	{
-		Global_98783 = CLOCK::GET_CLOCK_MONTH();
-		Global_98782 = CLOCK::GET_CLOCK_DAY_OF_MONTH();
-		Global_98781 = CLOCK::GET_CLOCK_HOURS();
-		Global_98599 = true;
-		Global_98604 = CLOCK::GET_CLOCK_DAY_OF_WEEK();
-		Global_98603 = CLOCK::GET_CLOCK_HOURS();
+		Global_98933 = CLOCK::GET_CLOCK_MONTH();
+		Global_98932 = CLOCK::GET_CLOCK_DAY_OF_MONTH();
+		Global_98931 = CLOCK::GET_CLOCK_HOURS();
+		Global_98749 = true;
+		Global_98754 = CLOCK::GET_CLOCK_DAY_OF_WEEK();
+		Global_98753 = CLOCK::GET_CLOCK_HOURS();
 		func_12();
 		return;
 	}
@@ -336,9 +336,9 @@ void func_8() // Position - 0x475
 	clockMonth = CLOCK::GET_CLOCK_MONTH();
 	clockDayOfMonth = CLOCK::GET_CLOCK_DAY_OF_MONTH();
 	clockHours = CLOCK::GET_CLOCK_HOURS();
-	num = Global_98783;
-	num2 = Global_98782;
-	num3 = Global_98781;
+	num = Global_98933;
+	num2 = Global_98932;
+	num3 = Global_98931;
 	num4 = 0;
 	num5 = 0;
 	i = 0;
@@ -359,13 +359,13 @@ void func_8() // Position - 0x475
 			{
 				for (j = 0; j < 24; j = j + 1)
 				{
-					if (!(Global_98605[num4 /*25*/][num5] == 0))
+					if (!(Global_98755[num4 /*25*/][num5] == 0))
 					{
-						Global_98600 = Global_98600 + 1;
-						Global_98602 = Global_98602 - 1;
+						Global_98750 = Global_98750 + 1;
+						Global_98752 = Global_98752 - 1;
 					}
 				
-					Global_98605[num4 /*25*/][num5] = 0;
+					Global_98755[num4 /*25*/][num5] = 0;
 				}
 			}
 		}
@@ -377,8 +377,8 @@ void func_8() // Position - 0x475
 		num6 = num6 + (24 - num3);
 		num6 = num6 + (24 - 24 - clockHours);
 		i = 0;
-		num5 = Global_98603;
-		num4 = Global_98604;
+		num5 = Global_98753;
+		num4 = Global_98754;
 	
 		for (i = 0; i < num6; i = i + 1)
 		{
@@ -391,28 +391,28 @@ void func_8() // Position - 0x475
 			if (num4 > 6)
 				num4 = 0;
 		
-			if (!(Global_98605[num4 /*25*/][num5] == 0))
+			if (!(Global_98755[num4 /*25*/][num5] == 0))
 			{
-				Global_98600 = Global_98600 + 1;
-				Global_98602 = Global_98602 - 1;
+				Global_98750 = Global_98750 + 1;
+				Global_98752 = Global_98752 - 1;
 			}
 		
-			Global_98605[num4 /*25*/][num5] = 0;
+			Global_98755[num4 /*25*/][num5] = 0;
 			num5 = num5 + 1;
 		}
 	
-		Global_98603 = num5 - 1;
-		Global_98604 = num4;
+		Global_98753 = num5 - 1;
+		Global_98754 = num4;
 	}
 	else
 	{
 		if (num3 > clockHours)
 		{
-			Global_98783 = clockMonth;
-			Global_98782 = clockDayOfMonth;
-			Global_98781 = clockHours;
-			Global_98604 = CLOCK::GET_CLOCK_DAY_OF_WEEK();
-			Global_98603 = CLOCK::GET_CLOCK_HOURS();
+			Global_98933 = clockMonth;
+			Global_98932 = clockDayOfMonth;
+			Global_98931 = clockHours;
+			Global_98754 = CLOCK::GET_CLOCK_DAY_OF_WEEK();
+			Global_98753 = CLOCK::GET_CLOCK_HOURS();
 			return;
 		}
 	
@@ -424,18 +424,18 @@ void func_8() // Position - 0x475
 		{
 			num6 = clockHours - num3;
 			i = 0;
-			num5 = Global_98603;
-			num4 = Global_98604;
+			num5 = Global_98753;
+			num4 = Global_98754;
 		
 			for (i = 0; i < num6; i = i + 1)
 			{
-				if (!(Global_98605[num4 /*25*/][num5] == 0))
+				if (!(Global_98755[num4 /*25*/][num5] == 0))
 				{
-					Global_98600 = Global_98600 + 1;
-					Global_98602 = Global_98602 - 1;
+					Global_98750 = Global_98750 + 1;
+					Global_98752 = Global_98752 - 1;
 				}
 			
-				Global_98605[num4 /*25*/][num5] = 0;
+				Global_98755[num4 /*25*/][num5] = 0;
 				num5 = num5 + 1;
 			
 				if (num5 > 23)
@@ -448,21 +448,21 @@ void func_8() // Position - 0x475
 					num4 = 0;
 			}
 		
-			Global_98603 = num5;
-			Global_98604 = num4;
+			Global_98753 = num5;
+			Global_98754 = num4;
 		}
 	}
 
-	Global_98600 > Global_98601;
+	Global_98750 > Global_98751;
 
 	if (num == clockMonth && num3 == clockHours && num2 == clockDayOfMonth)
 	{
 	}
 	else
 	{
-		Global_98783 = clockMonth;
-		Global_98782 = clockDayOfMonth;
-		Global_98781 = clockHours;
+		Global_98933 = clockMonth;
+		Global_98932 = clockDayOfMonth;
+		Global_98931 = clockHours;
 	}
 
 	return;
@@ -558,8 +558,8 @@ void func_12() // Position - 0x81F
 	int i;
 	int j;
 
-	Global_98603 = 0;
-	Global_98604 = 0;
+	Global_98753 = 0;
+	Global_98754 = 0;
 	i = 0;
 	j = 0;
 
@@ -567,7 +567,7 @@ void func_12() // Position - 0x81F
 	{
 		for (j = 0; j < 24; j = j + 1)
 		{
-			Global_98605[i /*25*/][j] = 0;
+			Global_98755[i /*25*/][j] = 0;
 		}
 	}
 
@@ -577,11 +577,11 @@ void func_12() // Position - 0x81F
 
 void func_13() // Position - 0x86D
 {
-	Global_98603 = 0;
-	Global_98604 = 0;
-	Global_98781 = CLOCK::GET_CLOCK_HOURS();
-	Global_98782 = CLOCK::GET_CLOCK_DAY_OF_MONTH();
-	Global_98783 = CLOCK::GET_CLOCK_MONTH();
+	Global_98753 = 0;
+	Global_98754 = 0;
+	Global_98931 = CLOCK::GET_CLOCK_HOURS();
+	Global_98932 = CLOCK::GET_CLOCK_DAY_OF_MONTH();
+	Global_98933 = CLOCK::GET_CLOCK_MONTH();
 	return;
 }
 
