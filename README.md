@@ -1,4 +1,4 @@
 # GTAV-Decompiled-Scripts
-## Current Version: 3351
+## Current Version: 3407
 
 All scripts were automatically decompiled. I didnt check any file for mistakes and whatsoever.
