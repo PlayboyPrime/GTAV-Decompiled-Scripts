@@ -20,7 +20,7 @@
 	BOOL bLocal_18 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	int num;
 	int num2;
@@ -161,7 +161,7 @@ void main() // Position - 0x0
 	return;
 }
 
-var func_1() // Position - 0x244
+var func_1() // Position - 0x244 (580)
 {
 	var unk;
 
@@ -174,7 +174,7 @@ var func_1() // Position - 0x244
 	return unk;
 }
 
-void func_2(var uParam0, int iParam1) // Position - 0x28A
+void func_2(var uParam0, int iParam1) // Position - 0x28A (650)
 {
 	if (iParam1 <= 0)
 		return;
@@ -198,7 +198,7 @@ void func_2(var uParam0, int iParam1) // Position - 0x28A
 	return;
 }
 
-void func_3(var uParam0, int iParam1) // Position - 0x310
+void func_3(var uParam0, int iParam1) // Position - 0x310 (784)
 {
 	if (iParam1 < 0 || iParam1 > 11)
 		return;
@@ -208,7 +208,7 @@ void func_3(var uParam0, int iParam1) // Position - 0x310
 	return;
 }
 
-void func_4(var uParam0, int iParam1) // Position - 0x343
+void func_4(var uParam0, int iParam1) // Position - 0x343 (835)
 {
 	int num;
 	int num2;
@@ -224,7 +224,7 @@ void func_4(var uParam0, int iParam1) // Position - 0x343
 	return;
 }
 
-int func_5(int iParam0, int iParam1) // Position - 0x394
+int func_5(int iParam0, int iParam1) // Position - 0x394 (916)
 {
 	if (iParam1 < 0)
 		iParam1 = 0;
@@ -259,12 +259,12 @@ int func_5(int iParam0, int iParam1) // Position - 0x394
 	return 30;
 }
 
-int func_6(int iParam0) // Position - 0x436
+int func_6(int iParam0) // Position - 0x436 (1078)
 {
 	return (SYSTEM::SHIFT_RIGHT(iParam0, 26) & 31 * IS_BIT_SET(iParam0, 31) ? -1 : 1) + 2011;
 }
 
-var func_7(BOOL bParam0, var uParam1, var uParam2) // Position - 0x458
+var func_7(BOOL bParam0, var uParam1, var uParam2) // Position - 0x458 (1112)
 {
 	if (bParam0)
 		return uParam1;
@@ -272,12 +272,12 @@ var func_7(BOOL bParam0, var uParam1, var uParam2) // Position - 0x458
 	return uParam2;
 }
 
-int func_8(int iParam0) // Position - 0x46F
+int func_8(int iParam0) // Position - 0x46F (1135)
 {
 	return iParam0 & 15;
 }
 
-void func_9(var uParam0, int iParam1) // Position - 0x47C
+void func_9(var uParam0, int iParam1) // Position - 0x47C (1148)
 {
 	if (iParam1 < 0 || iParam1 > 24)
 		return;
@@ -287,7 +287,7 @@ void func_9(var uParam0, int iParam1) // Position - 0x47C
 	return;
 }
 
-void func_10(var uParam0, int iParam1) // Position - 0x4B6
+void func_10(var uParam0, int iParam1) // Position - 0x4B6 (1206)
 {
 	if (iParam1 < 0 || iParam1 >= 60)
 		return;
@@ -297,7 +297,7 @@ void func_10(var uParam0, int iParam1) // Position - 0x4B6
 	return;
 }
 
-void func_11(var uParam0, int iParam1) // Position - 0x4F1
+void func_11(var uParam0, int iParam1) // Position - 0x4F1 (1265)
 {
 	if (iParam1 < 0 || iParam1 >= 60)
 		return;
@@ -307,7 +307,7 @@ void func_11(var uParam0, int iParam1) // Position - 0x4F1
 	return;
 }
 
-BOOL func_12(int iParam0) // Position - 0x52D
+BOOL func_12(int iParam0) // Position - 0x52D (1325)
 {
 	switch (iParam0)
 	{
@@ -329,7 +329,7 @@ BOOL func_12(int iParam0) // Position - 0x52D
 	return false;
 }
 
-void func_13(BOOL bParam0) // Position - 0x58C
+void func_13(BOOL bParam0) // Position - 0x58C (1420)
 {
 	if (!bParam0)
 		Global_112774 = MISC::GET_GAME_TIMER() + 250;
@@ -338,7 +338,7 @@ void func_13(BOOL bParam0) // Position - 0x58C
 	return;
 }
 
-void func_14(BOOL bParam0) // Position - 0x5AA
+void func_14(BOOL bParam0) // Position - 0x5AA (1450)
 {
 	int i;
 	int j;
@@ -385,12 +385,12 @@ void func_14(BOOL bParam0) // Position - 0x5AA
 	return;
 }
 
-BOOL _CAN_ENTER_FREEROAM_STATE(int iParam0) // Position - 0x82C
+BOOL _CAN_ENTER_FREEROAM_STATE(int iParam0) // Position - 0x82C (2092)
 {
 	return func_16(iParam0, Global_44181);
 }
 
-BOOL func_16(int iParam0, int iParam1) // Position - 0x83D
+BOOL func_16(int iParam0, int iParam1) // Position - 0x83D (2109)
 {
 	if (iParam1 == 15)
 		return 1;
@@ -514,7 +514,7 @@ BOOL func_16(int iParam0, int iParam1) // Position - 0x83D
 	return 0;
 }
 
-void func_17(int iParam0) // Position - 0xA1E
+void func_17(int iParam0) // Position - 0xA1E (2590)
 {
 	if (*iParam0 == -1)
 		return;
@@ -534,7 +534,7 @@ void func_17(int iParam0) // Position - 0xA1E
 	return;
 }
 
-void func_18() // Position - 0xA5B
+void func_18() // Position - 0xA5B (2651)
 {
 	func_17(&Global_44143);
 	Global_44147 = 0;

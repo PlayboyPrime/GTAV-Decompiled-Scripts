@@ -99,7 +99,7 @@
 	int iLocal_97 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -126,7 +126,7 @@ void main() // Position - 0x0
 	iLocal_39 = 49;
 	iLocal_40 = 64;
 	bLocal_76 = true;
-	hLocal_82 = -413447396;
+	hLocal_82 = joaat("S_M_M_Pilot_01");
 	iLocal_97 = 500;
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
@@ -179,7 +179,7 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1() // Position - 0x11A
+void func_1() // Position - 0x11A (282)
 {
 	int i;
 
@@ -233,7 +233,7 @@ void func_1() // Position - 0x11A
 	return;
 }
 
-void func_2(var uParam0, var uParam1) // Position - 0x233
+void func_2(var uParam0, var uParam1) // Position - 0x233 (563)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(*uParam0) && ENTITY::DOES_ENTITY_EXIST(*uParam1) && !ENTITY::IS_ENTITY_DEAD(*uParam0, false) && !ENTITY::IS_ENTITY_DEAD(*uParam1, false))
 		if (ENTITY::IS_ENTITY_IN_AIR(*uParam0))
@@ -244,7 +244,7 @@ void func_2(var uParam0, var uParam1) // Position - 0x233
 	return;
 }
 
-void func_3(BOOL bParam0) // Position - 0x2B4
+void func_3(BOOL bParam0) // Position - 0x2B4 (692)
 {
 	if (bLocal_76)
 	{
@@ -270,7 +270,7 @@ void func_3(BOOL bParam0) // Position - 0x2B4
 	return;
 }
 
-void func_4() // Position - 0x493
+void func_4() // Position - 0x493 (1171)
 {
 	int i;
 
@@ -293,7 +293,7 @@ void func_4() // Position - 0x493
 			break;
 	
 		case 1:
-			STREAMING::REQUEST_MODEL(1058115860);
+			STREAMING::REQUEST_MODEL(joaat("jet"));
 			STREAMING::REQUEST_MODEL(hLocal_82);
 			VEHICLE::REQUEST_VEHICLE_RECORDING(101, "AirportJetTakeOff");
 			VEHICLE::REQUEST_VEHICLE_RECORDING(103, "AirplaneLandingRedux");
@@ -306,13 +306,13 @@ void func_4() // Position - 0x493
 		case 2:
 			if (!bLocal_80)
 			{
-				if (STREAMING::HAS_MODEL_LOADED(1058115860) && STREAMING::HAS_MODEL_LOADED(hLocal_82) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(101, "AirportJetTakeOff") && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(103, "AirplaneLandingRedux") && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(101, "AirportNew") && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(104, "AirplaneLandingRedux") && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(101, "EastWestFlight"))
+				if (STREAMING::HAS_MODEL_LOADED(joaat("jet")) && STREAMING::HAS_MODEL_LOADED(hLocal_82) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(101, "AirportJetTakeOff") && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(103, "AirplaneLandingRedux") && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(101, "AirportNew") && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(104, "AirplaneLandingRedux") && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(101, "EastWestFlight"))
 				{
 					bLocal_80 = true;
 				}
 				else
 				{
-					STREAMING::REQUEST_MODEL(1058115860);
+					STREAMING::REQUEST_MODEL(joaat("jet"));
 					STREAMING::REQUEST_MODEL(hLocal_82);
 					VEHICLE::REQUEST_VEHICLE_RECORDING(101, "AirportJetTakeOff");
 					VEHICLE::REQUEST_VEHICLE_RECORDING(102, "AirportJetTakeOff");
@@ -337,14 +337,14 @@ void func_4() // Position - 0x493
 			break;
 	
 		case 3:
-			uLocal_47[0] = VEHICLE::CREATE_VEHICLE(1058115860, uLocal_59[0 /*3*/], 0, true, true, false);
+			uLocal_47[0] = VEHICLE::CREATE_VEHICLE(joaat("jet"), uLocal_59[0 /*3*/], 0, true, true, false);
 			ENTITY::SET_ENTITY_HEADING(uLocal_47[0], 240.3179f);
 			VEHICLE::SET_VEHICLE_GENERATES_ENGINE_SHOCKING_EVENTS(uLocal_47[0], false);
-			uLocal_47[1] = VEHICLE::CREATE_VEHICLE(1058115860, uLocal_59[1 /*3*/], 0, true, true, false);
+			uLocal_47[1] = VEHICLE::CREATE_VEHICLE(joaat("jet"), uLocal_59[1 /*3*/], 0, true, true, false);
 			VEHICLE::SET_VEHICLE_GENERATES_ENGINE_SHOCKING_EVENTS(uLocal_47[1], false);
-			uLocal_47[2] = VEHICLE::CREATE_VEHICLE(1058115860, uLocal_59[2 /*3*/], 0, true, true, false);
+			uLocal_47[2] = VEHICLE::CREATE_VEHICLE(joaat("jet"), uLocal_59[2 /*3*/], 0, true, true, false);
 			VEHICLE::SET_VEHICLE_GENERATES_ENGINE_SHOCKING_EVENTS(uLocal_47[2], false);
-			uLocal_47[3] = VEHICLE::CREATE_VEHICLE(1058115860, uLocal_59[3 /*3*/], 0, true, true, false);
+			uLocal_47[3] = VEHICLE::CREATE_VEHICLE(joaat("jet"), uLocal_59[3 /*3*/], 0, true, true, false);
 			VEHICLE::SET_VEHICLE_GENERATES_ENGINE_SHOCKING_EVENTS(uLocal_47[3], false);
 		
 			for (i = 0; i < 4; i = i + 1)
@@ -559,7 +559,7 @@ void func_4() // Position - 0x493
 	return;
 }
 
-void func_5() // Position - 0xBB3
+void func_5() // Position - 0xBB3 (2995)
 {
 	fLocal_83 = 0f;
 	bLocal_75 = false;
@@ -568,7 +568,7 @@ void func_5() // Position - 0xBB3
 	return;
 }
 
-void func_6(var uParam0, var uParam1) // Position - 0xBC7
+void func_6(var uParam0, var uParam1) // Position - 0xBC7 (3015)
 {
 	ENTITY::SET_ENTITY_VISIBLE(*uParam0, true, false);
 	ENTITY::SET_ENTITY_VISIBLE(*uParam1, true, false);
@@ -577,7 +577,7 @@ void func_6(var uParam0, var uParam1) // Position - 0xBC7
 	return;
 }
 
-void func_7() // Position - 0xBF2
+void func_7() // Position - 0xBF2 (3058)
 {
 	Vector3 entityCoords;
 
@@ -586,7 +586,7 @@ void func_7() // Position - 0xBF2
 		case 0:
 			if (!ENTITY::DOES_ENTITY_EXIST(veLocal_52))
 			{
-				veLocal_52 = VEHICLE::CREATE_VEHICLE(1058115860, -65.3177f, 15.4603f, 703.106f, 0, true, true, false);
+				veLocal_52 = VEHICLE::CREATE_VEHICLE(joaat("jet"), -65.3177f, 15.4603f, 703.106f, 0, true, true, false);
 				ENTITY::SET_ENTITY_LOD_DIST(veLocal_52, 1000);
 				VEHICLE::SET_VEHICLE_ENGINE_ON(veLocal_52, true, true, false);
 				VEHICLE::SET_VEHICLE_GENERATES_ENGINE_SHOCKING_EVENTS(veLocal_52, false);
@@ -624,7 +624,7 @@ void func_7() // Position - 0xBF2
 	return;
 }
 
-void func_8(var uParam0, var uParam1) // Position - 0xD31
+void func_8(var uParam0, var uParam1) // Position - 0xD31 (3377)
 {
 	ENTITY::SET_ENTITY_VISIBLE(*uParam0, false, false);
 	ENTITY::SET_ENTITY_VISIBLE(*uParam1, false, false);
@@ -633,22 +633,22 @@ void func_8(var uParam0, var uParam1) // Position - 0xD31
 	return;
 }
 
-void func_9() // Position - 0xD5C
+void func_9() // Position - 0xD5C (3420)
 {
 	return;
 }
 
-BOOL func_10() // Position - 0xD64
+BOOL func_10() // Position - 0xD64 (3428)
 {
 	return true;
 }
 
-void func_11() // Position - 0xD6D
+void func_11() // Position - 0xD6D (3437)
 {
 	return;
 }
 
-void func_12() // Position - 0xD75
+void func_12() // Position - 0xD75 (3445)
 {
 	func_1();
 	func_13();
@@ -656,7 +656,7 @@ void func_12() // Position - 0xD75
 	return;
 }
 
-void func_13() // Position - 0xD89
+void func_13() // Position - 0xD89 (3465)
 {
 	Vector3 entityCoords;
 	Vector3 vector;

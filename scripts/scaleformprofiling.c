@@ -18,7 +18,7 @@
 	int iLocal_16 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -56,7 +56,7 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1(int iParam0) // Position - 0x93
+void func_1(int iParam0) // Position - 0x93 (147)
 {
 	if (Global_21045 == 0)
 	{
@@ -133,7 +133,7 @@ void func_1(int iParam0) // Position - 0x93
 	return;
 }
 
-void func_2() // Position - 0x215
+void func_2() // Position - 0x215 (533)
 {
 	func_3(false);
 	MISC::SET_GAME_PAUSED(false);
@@ -142,7 +142,7 @@ void func_2() // Position - 0x215
 	return;
 }
 
-void func_3(BOOL bParam0) // Position - 0x231
+void func_3(BOOL bParam0) // Position - 0x231 (561)
 {
 	if (bParam0)
 	{
@@ -165,7 +165,7 @@ void func_3(BOOL bParam0) // Position - 0x231
 	return;
 }
 
-void func_4(int iParam0) // Position - 0x294
+void func_4(int iParam0) // Position - 0x294 (660)
 {
 	if (func_8())
 		return;
@@ -195,7 +195,7 @@ void func_4(int iParam0) // Position - 0x294
 	return;
 }
 
-BOOL func_5() // Position - 0x31E
+BOOL func_5() // Position - 0x31E (798)
 {
 	if (Global_21066.f_1 == 1 || Global_21066.f_1 == 0)
 		return true;
@@ -203,7 +203,7 @@ BOOL func_5() // Position - 0x31E
 	return false;
 }
 
-void func_6(BOOL bParam0, BOOL bParam1) // Position - 0x345
+void func_6(BOOL bParam0, BOOL bParam1) // Position - 0x345 (837)
 {
 	if (bParam0)
 	{
@@ -232,17 +232,17 @@ void func_6(BOOL bParam0, BOOL bParam1) // Position - 0x345
 	return;
 }
 
-BOOL func_7() // Position - 0x3B9
+BOOL func_7() // Position - 0x3B9 (953)
 {
 	return IS_BIT_SET(Global_1957675, 5);
 }
 
-BOOL func_8() // Position - 0x3C7
+BOOL func_8() // Position - 0x3C7 (967)
 {
 	return IS_BIT_SET(Global_1957675, 19);
 }
 
-BOOL func_9(int iParam0) // Position - 0x3D6
+BOOL func_9(int iParam0) // Position - 0x3D6 (982)
 {
 	if (iParam0 == 1)
 		if (Global_21066.f_1 > 3)
@@ -253,7 +253,7 @@ BOOL func_9(int iParam0) // Position - 0x3D6
 		else
 			return false;
 
-	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(-754107665) > 0)
+	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("cellphone_flashhand")) > 0)
 		return true;
 
 	if (Global_21066.f_1 > 3)
@@ -262,7 +262,7 @@ BOOL func_9(int iParam0) // Position - 0x3D6
 	return false;
 }
 
-void func_10() // Position - 0x42D
+void func_10() // Position - 0x42D (1069)
 {
 	if (Global_21066.f_1 == 9 || Global_21066.f_1 == 10)
 	{

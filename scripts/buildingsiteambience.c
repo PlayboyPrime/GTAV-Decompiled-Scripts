@@ -27,7 +27,7 @@
 	var uLocal_25 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -74,7 +74,7 @@ void main() // Position - 0x0
 	return;
 }
 
-BOOL func_1(int iParam0) // Position - 0xB6
+BOOL func_1(int iParam0) // Position - 0xB6 (182)
 {
 	if (iParam0 == 146 || iParam0 == -1)
 		return false;
@@ -82,7 +82,7 @@ BOOL func_1(int iParam0) // Position - 0xB6
 	return Global_114135.f_9089.f_99.f_58[iParam0];
 }
 
-int func_2(int iParam0) // Position - 0xE3
+int func_2(int iParam0) // Position - 0xE3 (227)
 {
 	int num;
 	int offset;
@@ -105,7 +105,7 @@ int func_2(int iParam0) // Position - 0xE3
 	return 1;
 }
 
-void func_3() // Position - 0x13A
+void func_3() // Position - 0x13A (314)
 {
 	AUDIO::STOP_STREAM();
 	AUDIO::UNREGISTER_SCRIPT_WITH_AUDIO();
@@ -113,7 +113,7 @@ void func_3() // Position - 0x13A
 	return;
 }
 
-int func_4(int iParam0) // Position - 0x14E
+int func_4(int iParam0) // Position - 0x14E (334)
 {
 	int num;
 	int offset;

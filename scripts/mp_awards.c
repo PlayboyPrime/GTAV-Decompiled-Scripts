@@ -118,7 +118,7 @@
 	var uScriptParam_3 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	int num;
 	int num2;
@@ -154,18 +154,18 @@ void main() // Position - 0x0
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(4))
 	{
-		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(995898030);
-		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(1433313072);
-		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(1096198329);
-		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(696733436);
-		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(831272562);
-		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(-1871331138);
+		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(joaat("EditPlaylistPick"));
+		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(joaat("EditPlaylistDrop"));
+		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(joaat("DeletePlaylist"));
+		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(joaat("EditPlaylist"));
+		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(joaat("SetCrewChallenge"));
+		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(joaat("RScrollUpDown"));
 		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(874957556);
 		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(817402210);
-		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(337714004);
-		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(1655527845);
-		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(-2086579765);
-		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(-1770673475);
+		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(joaat("HIDE_ACCEPTBUTTON"));
+		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(joaat("PageLeft"));
+		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(joaat("PageRight"));
+		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(joaat("SupressSelectPM"));
 		HUD::PAUSE_MENU_SET_BUSY_SPINNER(false, -1, 0);
 		Global_1574599 = 0;
 		STATS::PLAYSTATS_AWARD_NAV(Global_1672152.f_471, Global_1672152.f_472, Global_1672152.f_499, Global_1672152.f_500);
@@ -233,7 +233,7 @@ void main() // Position - 0x0
 						{
 							num2 = 1;
 							HUD::PAUSE_MENU_ACTIVATE_CONTEXT(874957556);
-							HUD::PAUSE_MENU_ACTIVATE_CONTEXT(-1884422346);
+							HUD::PAUSE_MENU_ACTIVATE_CONTEXT(joaat("NAVIGATING_CONTENT"));
 							HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(817402210);
 							HUD::PAUSE_MENU_REDRAW_INSTRUCTIONAL_BUTTONS(0);
 							func_156(Global_1671568.f_6, &Global_1673152);
@@ -251,7 +251,7 @@ void main() // Position - 0x0
 									GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("MENU_SHIFT_DEPTH");
 									GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
 									GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-									HUD::PAUSE_MENU_ACTIVATE_CONTEXT(337714004);
+									HUD::PAUSE_MENU_ACTIVATE_CONTEXT(joaat("HIDE_ACCEPTBUTTON"));
 									HUD::PAUSE_MENU_ACTIVATE_CONTEXT(817402210);
 									HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(874957556);
 									HUD::PAUSE_MENU_REDRAW_INSTRUCTIONAL_BUTTONS(0);
@@ -300,7 +300,7 @@ void main() // Position - 0x0
 								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("MENU_SHIFT_DEPTH");
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(-1);
 								GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-								HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(337714004);
+								HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(joaat("HIDE_ACCEPTBUTTON"));
 								HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(817402210);
 								HUD::PAUSE_MENU_ACTIVATE_CONTEXT(874957556);
 								HUD::PAUSE_MENU_REDRAW_INSTRUCTIONAL_BUTTONS(0);
@@ -364,7 +364,7 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1() // Position - 0x539
+void func_1() // Position - 0x539 (1337)
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("SET_DATA_SLOT_EMPTY");
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
@@ -372,7 +372,7 @@ void func_1() // Position - 0x539
 	return;
 }
 
-void func_2(var uParam0, var uParam1, var uParam2) // Position - 0x552
+void func_2(var uParam0, var uParam1, var uParam2) // Position - 0x552 (1362)
 {
 	BOOL flag;
 	int num;
@@ -686,13 +686,13 @@ void func_2(var uParam0, var uParam1, var uParam2) // Position - 0x552
 	return;
 }
 
-void func_3(BOOL bParam0) // Position - 0xB9D
+void func_3(BOOL bParam0) // Position - 0xB9D (2973)
 {
 	HUD::PAUSE_MENU_SET_BUSY_SPINNER(bParam0, 6, 0);
 	return;
 }
 
-BOOL func_4(var uParam0, int iParam1, BOOL bParam2) // Position - 0xBAD
+BOOL func_4(var uParam0, int iParam1, BOOL bParam2) // Position - 0xBAD (2989)
 {
 	if (iParam1 == -1)
 		return true;
@@ -716,7 +716,7 @@ BOOL func_4(var uParam0, int iParam1, BOOL bParam2) // Position - 0xBAD
 	return false;
 }
 
-void _STOPWATCH_RESET(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateTime) // Position - 0xC17
+void _STOPWATCH_RESET(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateTime) // Position - 0xC17 (3095)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !useLocalTimer)
 		if (!useAccurateTime)
@@ -730,7 +730,7 @@ void _STOPWATCH_RESET(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateTime) 
 	return;
 }
 
-int func_6(int iParam0, BOOL bParam1) // Position - 0xC54
+int func_6(int iParam0, BOOL bParam1) // Position - 0xC54 (3156)
 {
 	int num;
 	int num2;
@@ -754,22 +754,22 @@ int func_6(int iParam0, BOOL bParam1) // Position - 0xC54
 	return num;
 }
 
-int func_7() // Position - 0xC95
+int func_7() // Position - 0xC95 (3221)
 {
 	return Global_1574926;
 }
 
-int func_8() // Position - 0xCA1
+int func_8() // Position - 0xCA1 (3233)
 {
 	return Global_33088;
 }
 
-int func_9() // Position - 0xCAC
+int func_9() // Position - 0xCAC (3244)
 {
 	return Global_33087;
 }
 
-void _STOPWATCH_INITIALIZE(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateTime) // Position - 0xCB7
+void _STOPWATCH_INITIALIZE(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateTime) // Position - 0xCB7 (3255)
 {
 	if (pStopwatch->f_1 == 0)
 	{
@@ -787,13 +787,13 @@ void _STOPWATCH_INITIALIZE(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateT
 	return;
 }
 
-void _STOPWATCH_DESTROY(var uParam0) // Position - 0xCFC
+void _STOPWATCH_DESTROY(var uParam0) // Position - 0xCFC (3324)
 {
 	uParam0->f_1 = 0;
 	return;
 }
 
-BOOL func_12(int iParam0, var uParam1, int iParam2) // Position - 0xD09
+BOOL func_12(int iParam0, var uParam1, int iParam2) // Position - 0xD09 (3337)
 {
 	int num;
 	int num2;
@@ -875,7 +875,7 @@ BOOL func_12(int iParam0, var uParam1, int iParam2) // Position - 0xD09
 	return false;
 }
 
-BOOL _STOPWATCH_HAS_TIME_PASSED(var pStopwatch, int millis, BOOL useLocalTimer) // Position - 0xE6C
+BOOL _STOPWATCH_HAS_TIME_PASSED(var pStopwatch, int millis, BOOL useLocalTimer) // Position - 0xE6C (3692)
 {
 	if (millis == -1)
 		return 1;
@@ -891,12 +891,12 @@ BOOL _STOPWATCH_HAS_TIME_PASSED(var pStopwatch, int millis, BOOL useLocalTimer) 
 	return 0;
 }
 
-BOOL _STOPWATCH_IS_INITIALIZED(var uParam0) // Position - 0xECA
+BOOL _STOPWATCH_IS_INITIALIZED(var uParam0) // Position - 0xECA (3786)
 {
 	return uParam0->f_1;
 }
 
-void func_15(var uParam0) // Position - 0xED6
+void func_15(var uParam0) // Position - 0xED6 (3798)
 {
 	BOOL flag;
 	BOOL flag2;
@@ -2888,10 +2888,10 @@ void func_15(var uParam0) // Position - 0xED6
 			func_25(13, "HEISTISLAWDPAGE" /*The Cayo Perico Heist*/, &Global_1673152);
 			func_25(14, "TUNEAWDPAGE" /*Los Santos Tuners*/, &Global_1673152);
 			func_25(15, "FIXAWDPAGE" /*The Contract*/, &Global_1673152);
-			func_25(16, "DLC222AWDPAGE", &Global_1673152);
-			func_25(17, "DLC223AWDPAGE", &Global_1673152);
-			func_25(18, "DLC124AWDPAGE", &Global_1673152);
-			func_25(19, "DLC224AWDPAGE", &Global_1673152);
+			func_25(16, "DLC222AWDPAGE" /*Los Santos Drug Wars*/, &Global_1673152);
+			func_25(17, "DLC223AWDPAGE" /*The Chop Shop*/, &Global_1673152);
+			func_25(18, "DLC124AWDPAGE" /*Bottom Dollar Bounties*/, &Global_1673152);
+			func_25(19, "DLC224AWDPAGE" /*Agents of Sabotage*/, &Global_1673152);
 			func_25(20, "HUD_AWDLIST6b" /*Rewards*/, &Global_1673152);
 			func_16(&Global_1673152, func_24(&Global_1673152));
 		}
@@ -2900,7 +2900,7 @@ void func_15(var uParam0) // Position - 0xED6
 	return;
 }
 
-void func_16(var uParam0, int iParam1) // Position - 0x4E4C
+void func_16(var uParam0, int iParam1) // Position - 0x4E4C (20044)
 {
 	int i;
 	int value;
@@ -2961,7 +2961,7 @@ void func_16(var uParam0, int iParam1) // Position - 0x4E4C
 	return;
 }
 
-void func_17(var uParam0, int iParam1) // Position - 0x4F6C
+void func_17(var uParam0, int iParam1) // Position - 0x4F6C (20332)
 {
 	if (iParam1 == 1)
 	{
@@ -2985,18 +2985,18 @@ void func_17(var uParam0, int iParam1) // Position - 0x4F6C
 	return;
 }
 
-void func_18(var uParam0) // Position - 0x4FBF
+void func_18(var uParam0) // Position - 0x4FBF (20415)
 {
 	uParam0->f_498 = 0;
 	return;
 }
 
-int func_19(var uParam0) // Position - 0x4FCD
+int func_19(var uParam0) // Position - 0x4FCD (20429)
 {
 	return uParam0->f_498;
 }
 
-void func_20(int iParam0) // Position - 0x4FDA
+void func_20(int iParam0) // Position - 0x4FDA (20442)
 {
 	if (GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("DISPLAY_DATA_SLOT"))
 	{
@@ -3007,56 +3007,56 @@ void func_20(int iParam0) // Position - 0x4FDA
 	return;
 }
 
-void func_21(const char* sParam0) // Position - 0x4FF7
+void func_21(const char* sParam0) // Position - 0x4FF7 (20471)
 {
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_PLAYER_NAME_STRING(sParam0);
 	return;
 }
 
-void func_22(char* sParam0) // Position - 0x5005
+void func_22(char* sParam0) // Position - 0x5005 (20485)
 {
 	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(sParam0);
 	GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 	return;
 }
 
-void func_23(var uParam0) // Position - 0x5017
+void func_23(var uParam0) // Position - 0x5017 (20503)
 {
 	uParam0->f_497 = 0;
 	return;
 }
 
-int func_24(var uParam0) // Position - 0x5025
+int func_24(var uParam0) // Position - 0x5025 (20517)
 {
 	return uParam0->f_497;
 }
 
-void func_25(int iParam0, char* sParam1, var uParam2) // Position - 0x5032
+void func_25(int iParam0, char* sParam1, var uParam2) // Position - 0x5032 (20530)
 {
 	TEXT_LABEL_ASSIGN_STRING(&uParam2->f_23[iParam0 /*16*/], sParam1, 64);
 	uParam2->f_1[iParam0] = 1;
 	return;
 }
 
-void func_26(int iParam0, var uParam1) // Position - 0x504F
+void func_26(int iParam0, var uParam1) // Position - 0x504F (20559)
 {
 	uParam1->f_494 = iParam0;
 	return;
 }
 
-void func_27(int iParam0, var uParam1) // Position - 0x505E
+void func_27(int iParam0, var uParam1) // Position - 0x505E (20574)
 {
 	uParam1->f_492 = iParam0;
 	return;
 }
 
-void func_28(int iParam0, var uParam1) // Position - 0x506D
+void func_28(int iParam0, var uParam1) // Position - 0x506D (20589)
 {
 	uParam1->f_493 = iParam0;
 	return;
 }
 
-void func_29(var uParam0, int iParam1) // Position - 0x507C
+void func_29(var uParam0, int iParam1) // Position - 0x507C (20604)
 {
 	int i;
 	int value;
@@ -3162,7 +3162,7 @@ void func_29(var uParam0, int iParam1) // Position - 0x507C
 	return;
 }
 
-void func_30(var uParam0, int iParam1) // Position - 0x5265
+void func_30(var uParam0, int iParam1) // Position - 0x5265 (21093)
 {
 	if (iParam1 == 1)
 	{
@@ -3183,18 +3183,18 @@ void func_30(var uParam0, int iParam1) // Position - 0x5265
 	return;
 }
 
-void func_31(var uParam0) // Position - 0x52AF
+void func_31(var uParam0) // Position - 0x52AF (21167)
 {
 	uParam0->f_462 = 0;
 	return;
 }
 
-int func_32(var uParam0) // Position - 0x52BD
+int func_32(var uParam0) // Position - 0x52BD (21181)
 {
 	return uParam0->f_462;
 }
 
-void func_33(var uParam0, int iParam1) // Position - 0x52CA
+void func_33(var uParam0, int iParam1) // Position - 0x52CA (21194)
 {
 	if (iParam1 == 1)
 	{
@@ -3229,7 +3229,7 @@ void func_33(var uParam0, int iParam1) // Position - 0x52CA
 	return;
 }
 
-void func_34(const char* sParam0, int iParam1) // Position - 0x5376
+void func_34(const char* sParam0, int iParam1) // Position - 0x5376 (21366)
 {
 	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(sParam0);
 	HUD::ADD_TEXT_COMPONENT_INTEGER(iParam1);
@@ -3237,18 +3237,18 @@ void func_34(const char* sParam0, int iParam1) // Position - 0x5376
 	return;
 }
 
-void func_35(var uParam0) // Position - 0x538E
+void func_35(var uParam0) // Position - 0x538E (21390)
 {
 	uParam0->f_463 = 0;
 	return;
 }
 
-int func_36(var uParam0) // Position - 0x539C
+int func_36(var uParam0) // Position - 0x539C (21404)
 {
 	return uParam0->f_463;
 }
 
-BOOL func_37(const char* sParam0) // Position - 0x53A9
+BOOL func_37(const char* sParam0) // Position - 0x53A9 (21417)
 {
 	if (MISC::IS_STRING_NULL(sParam0))
 		return true;
@@ -3258,7 +3258,7 @@ BOOL func_37(const char* sParam0) // Position - 0x53A9
 	return false;
 }
 
-char* func_38(int iParam0) // Position - 0x53E3
+char* func_38(int iParam0) // Position - 0x53E3 (21475)
 {
 	switch (iParam0)
 	{
@@ -3278,7 +3278,7 @@ char* func_38(int iParam0) // Position - 0x53E3
 	return "";
 }
 
-BOOL func_39(var uParam0) // Position - 0x5436
+BOOL func_39(var uParam0) // Position - 0x5436 (21558)
 {
 	int i;
 
@@ -3299,18 +3299,18 @@ BOOL func_39(var uParam0) // Position - 0x5436
 	return true;
 }
 
-void func_40(var uParam0) // Position - 0x5492
+void func_40(var uParam0) // Position - 0x5492 (21650)
 {
 	uParam0->f_460 = 0;
 	return;
 }
 
-int func_41(var uParam0) // Position - 0x54A0
+int func_41(var uParam0) // Position - 0x54A0 (21664)
 {
 	return uParam0->f_460;
 }
 
-int func_42(int iParam0) // Position - 0x54AD
+int func_42(int iParam0) // Position - 0x54AD (21677)
 {
 	int num;
 
@@ -3330,20 +3330,20 @@ int func_42(int iParam0) // Position - 0x54AD
 	return Global_1938834[iParam0 /*8*/];
 }
 
-void func_43(int iParam0, int iParam1) // Position - 0x54F0
+void func_43(int iParam0, int iParam1) // Position - 0x54F0 (21744)
 {
 	Global_1938834[iParam0 /*8*/] = iParam1;
 	func_44(func_48(iParam0), iParam1, -1);
 	return;
 }
 
-void func_44(int iParam0, int iParam1, int iParam2) // Position - 0x550F
+void func_44(int iParam0, int iParam1, int iParam2) // Position - 0x550F (21775)
 {
 	func_45(iParam0, iParam1, iParam2, true);
 	return;
 }
 
-void func_45(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position - 0x5522
+void func_45(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position - 0x5522 (21794)
 {
 	Hash statName;
 
@@ -3358,12 +3358,12 @@ void func_45(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position - 
 	return;
 }
 
-Hash func_46(int iParam0, int iParam1) // Position - 0x5550
+Hash func_46(int iParam0, int iParam1) // Position - 0x5550 (21840)
 {
 	return STATS::_GET_STAT_HASH_FOR_CHARACTER_STAT(0, iParam0, func_47(iParam1));
 }
 
-int func_47(int iParam0) // Position - 0x5565
+int func_47(int iParam0) // Position - 0x5565 (21861)
 {
 	int num;
 	int num2;
@@ -3389,7 +3389,7 @@ int func_47(int iParam0) // Position - 0x5565
 	return num;
 }
 
-int func_48(int iParam0) // Position - 0x5599
+int func_48(int iParam0) // Position - 0x5599 (21913)
 {
 	switch (iParam0)
 	{
@@ -3403,7 +3403,7 @@ int func_48(int iParam0) // Position - 0x5599
 	return 13520;
 }
 
-int func_49(int iParam0, int iParam1) // Position - 0x55B7
+int func_49(int iParam0, int iParam1) // Position - 0x55B7 (21943)
 {
 	Hash statHash;
 	int outValue;
@@ -3419,7 +3419,7 @@ int func_49(int iParam0, int iParam1) // Position - 0x55B7
 	return 0;
 }
 
-int func_50(int iParam0, int iParam1) // Position - 0x55E6
+int func_50(int iParam0, int iParam1) // Position - 0x55E6 (21990)
 {
 	Hash statHash;
 	int outValue;
@@ -3432,12 +3432,12 @@ int func_50(int iParam0, int iParam1) // Position - 0x55E6
 	return 0;
 }
 
-Hash func_51(int iParam0, int iParam1) // Position - 0x560A
+Hash func_51(int iParam0, int iParam1) // Position - 0x560A (22026)
 {
 	return STATS::_GET_STAT_HASH_FOR_CHARACTER_STAT(8, iParam0, func_47(iParam1));
 }
 
-int func_52(int iParam0, int iParam1, int iParam2) // Position - 0x5620
+int func_52(int iParam0, int iParam1, int iParam2) // Position - 0x5620 (22048)
 {
 	iParam2 == 0;
 
@@ -7711,7 +7711,7 @@ int func_52(int iParam0, int iParam1, int iParam2) // Position - 0x5620
 	return 999;
 }
 
-BOOL func_53(int iParam0) // Position - 0x8A27
+BOOL func_53(int iParam0) // Position - 0x8A27 (35367)
 {
 	BOOL flag;
 
@@ -7729,7 +7729,7 @@ BOOL func_53(int iParam0) // Position - 0x8A27
 	return false;
 }
 
-BOOL func_54(int iParam0, int iParam1) // Position - 0x8A80
+BOOL func_54(int iParam0, int iParam1) // Position - 0x8A80 (35456)
 {
 	int num;
 	int num2;
@@ -7742,12 +7742,12 @@ BOOL func_54(int iParam0, int iParam1) // Position - 0x8A80
 	return IS_BIT_SET(num, func_55(num2));
 }
 
-int func_55(int iParam0) // Position - 0x8AAF
+int func_55(int iParam0) // Position - 0x8AAF (35503)
 {
 	return iParam0 % 32;
 }
 
-int func_56(int iParam0, int iParam1) // Position - 0x8ABC
+int func_56(int iParam0, int iParam1) // Position - 0x8ABC (35516)
 {
 	int num;
 
@@ -7755,7 +7755,7 @@ int func_56(int iParam0, int iParam1) // Position - 0x8ABC
 	return num;
 }
 
-int func_57(int iParam0) // Position - 0x8AD4
+int func_57(int iParam0) // Position - 0x8AD4 (35540)
 {
 	int num;
 	int num2;
@@ -7828,7 +7828,7 @@ int func_57(int iParam0) // Position - 0x8AD4
 				return 2620;
 		
 			case 20:
-				return &_STOPWATCH_IS_INITIALIZED;
+				return 3786;
 		
 			case 21:
 				return 3789;
@@ -7934,12 +7934,12 @@ int func_57(int iParam0) // Position - 0x8AD4
 	return 15468;
 }
 
-int func_58(int iParam0) // Position - 0x8E4F
+int func_58(int iParam0) // Position - 0x8E4F (36431)
 {
 	return iParam0 / 32;
 }
 
-int func_59(int iParam0, Hash hParam1) // Position - 0x8E5C
+int func_59(int iParam0, Hash hParam1) // Position - 0x8E5C (36444)
 {
 	int tattooShopDlcItemIndex;
 
@@ -7951,267 +7951,267 @@ int func_59(int iParam0, Hash hParam1) // Position - 0x8E5C
 	return -1;
 }
 
-int func_60(int iParam0, BOOL bParam1) // Position - 0x8E7E
+int func_60(int iParam0, BOOL bParam1) // Position - 0x8E7E (36478)
 {
 	switch (iParam0)
 	{
 		case 0:
 			if (bParam1)
-				return -627999265;
+				return joaat("MP_Award_M_Tshirt_004");
 			else
-				return -1864998224;
+				return joaat("MP_Award_F_Tshirt_004");
 			break;
 	
 		case 1:
 			if (bParam1)
-				return 1682346315;
+				return joaat("MP_Award_M_Tshirt_005");
 			else
-				return -2140814897;
+				return joaat("MP_Award_F_Tshirt_005");
 			break;
 	
 		case 2:
 			if (bParam1)
-				return 1021952654;
+				return joaat("MP_Award_M_Tshirt_006");
 			else
-				return 223468453;
+				return joaat("MP_Award_F_Tshirt_006");
 			break;
 	
 		case 3:
 			if (bParam1)
-				return 1319396867;
+				return joaat("MP_Award_M_Tshirt_007");
 			else
-				return -83970305;
+				return joaat("MP_Award_F_Tshirt_007");
 			break;
 	
 		case 4:
 			if (bParam1)
-				return 560794517;
+				return joaat("MP_Award_M_Tshirt_008");
 			else
-				return -406843262;
+				return joaat("MP_Award_F_Tshirt_008");
 			break;
 	
 		case 5:
 			if (bParam1)
-				return 858697496;
+				return joaat("MP_Award_M_Tshirt_009");
 			else
-				return -954740942;
+				return joaat("MP_Award_F_Tshirt_009");
 			break;
 	
 		case 6:
 			if (bParam1)
-				return -30981230;
+				return joaat("MP_Award_M_Tshirt_010");
 			else
-				return -1675526854;
+				return joaat("MP_Award_F_Tshirt_010");
 			break;
 	
 		case 7:
 			if (bParam1)
-				return -328032215;
+				return joaat("MP_Award_M_Tshirt_011");
 			else
-				return 2111717556;
+				return joaat("MP_Award_F_Tshirt_011");
 			break;
 	
 		case 8:
 			if (bParam1)
-				return -1451681225;
+				return joaat("MP_Award_M_Tshirt_012");
 			else
-				return -415395003;
+				return joaat("MP_Award_F_Tshirt_012");
 			break;
 	
 		case 9:
 			if (bParam1)
-				return 267904819;
+				return joaat("MP_Award_M_Tshirt_013");
 			else
-				return 427521984;
+				return joaat("MP_Award_F_Tshirt_013");
 			break;
 	
 		case 10:
 			if (bParam1)
-				return 953986562;
+				return joaat("FM_Hip_M_Retro_000");
 			else
-				return 1531057961;
+				return joaat("FM_Hip_F_Retro_000");
 			break;
 	
 		case 11:
 			if (bParam1)
-				return 585335312;
+				return joaat("FM_Hip_M_Retro_001");
 			else
-				return 1986678137;
+				return joaat("FM_Hip_F_Retro_001");
 			break;
 	
 		case 12:
 			if (bParam1)
-				return 489617063;
+				return joaat("FM_Hip_M_Retro_002");
 			else
-				return 2142789653;
+				return joaat("FM_Hip_F_Retro_002");
 			break;
 	
 		case 13:
 			if (bParam1)
-				return 210195800;
+				return joaat("FM_Hip_M_Retro_003");
 			else
-				return 7463306;
+				return joaat("FM_Hip_F_Retro_003");
 			break;
 	
 		case 14:
 			if (bParam1)
-				return 1843402776;
+				return joaat("FM_Hip_M_Retro_004");
 			else
-				return 308053343;
+				return joaat("FM_Hip_F_Retro_004");
 			break;
 	
 		case 15:
 			if (bParam1)
-				return -1600520821;
+				return joaat("FM_Hip_M_Retro_005");
 			else
-				return 753842819;
+				return joaat("FM_Hip_F_Retro_005");
 			break;
 	
 		case 16:
 			if (bParam1)
-				return 1399087889;
+				return joaat("FM_Hip_M_Retro_006");
 			else
-				return 1052794406;
+				return joaat("FM_Hip_F_Retro_006");
 			break;
 	
 		case 17:
 			if (bParam1)
-				return 1169344430;
+				return joaat("FM_Hip_M_Retro_007");
 			else
-				return -695726661;
+				return joaat("FM_Hip_F_Retro_007");
 			break;
 	
 		case 18:
 			if (bParam1)
-				return -2028647818;
+				return joaat("FM_Hip_M_Retro_008");
 			else
-				return -1001821890;
+				return joaat("FM_Hip_F_Retro_008");
 			break;
 	
 		case 19:
 			if (bParam1)
-				return -1335845620;
+				return joaat("FM_Hip_M_Retro_009");
 			else
-				return -1425459522;
+				return joaat("FM_Hip_F_Retro_009");
 			break;
 	
 		case 20:
 			if (bParam1)
-				return -1450406320;
+				return joaat("FM_Hip_M_Retro_010");
 			else
-				return 1412653072;
+				return joaat("FM_Hip_F_Retro_010");
 			break;
 	
 		case 21:
 			if (bParam1)
-				return -1209849091;
+				return joaat("FM_Hip_M_Retro_011");
 			else
-				return 1163510365;
+				return joaat("FM_Hip_F_Retro_011");
 			break;
 	
 		case 22:
 			if (bParam1)
-				return 2065609077;
+				return joaat("FM_Hip_M_Retro_012");
 			else
-				return 933242602;
+				return joaat("FM_Hip_F_Retro_012");
 			break;
 	
 		case 23:
 			if (bParam1)
-				return -664245241;
+				return joaat("FM_Hip_M_Retro_013");
 			else
-				return -1347021116;
+				return joaat("FM_Hip_F_Retro_013");
 			break;
 	
 		case 24:
 			if (bParam1)
-				return 1676130538;
+				return joaat("FM_Rstar_M_Tshirt_000");
 			else
-				return 1297354841;
+				return joaat("FM_Rstar_F_Tshirt_000");
 			break;
 	
 		case 25:
 			if (bParam1)
-				return -1730534702;
+				return joaat("FM_Rstar_M_Tshirt_001");
 			else
-				return -839806574;
+				return joaat("FM_Rstar_F_Tshirt_001");
 			break;
 	
 		case 26:
 			if (bParam1)
-				return -1767432596;
+				return joaat("FM_Rstar_M_Tshirt_002");
 			else
-				return -542100209;
+				return joaat("FM_Rstar_F_Tshirt_002");
 			break;
 	
 		case 27:
 			if (bParam1)
-				return 632918673;
+				return joaat("FM_Ind_M_Award_000");
 			else
-				return 1525246127;
+				return joaat("FM_Ind_F_Award_000");
 			break;
 	
 		case 28:
 			if (bParam1)
-				return -190040148;
+				return joaat("MP_Fli_M_Tshirt_000");
 			else
-				return -11341151;
+				return joaat("MP_Fli_F_Tshirt_000");
 			break;
 	
 		case 29:
 			if (bParam1)
-				return 42936837;
+				return joaat("FM_LTS_M_Tshirt_000");
 			else
-				return 516055815;
+				return joaat("FM_LTS_F_Tshirt_000");
 			break;
 	
 		case 30:
 			if (bParam1)
-				return -1458541976;
+				return joaat("MP_FM_OGA_000_m");
 			else
-				return -1034642040;
+				return joaat("MP_FM_OGA_000_f");
 			break;
 	
 		case 31:
 			if (bParam1)
-				return -606014753;
+				return joaat("MP_FM_OGA_001_m");
 			else
-				return 1022637316;
+				return joaat("MP_FM_OGA_001_f");
 			break;
 	
 		case 32:
 			if (bParam1)
-				return -613376371;
+				return joaat("MP_FM_OGA_002_m");
 			else
-				return -1677156418;
+				return joaat("MP_FM_OGA_002_f");
 			break;
 	
 		case 33:
 			if (bParam1)
-				return -446291501;
+				return joaat("MP_FM_OGA_003_m");
 			else
-				return -1130213300;
+				return joaat("MP_FM_OGA_003_f");
 			break;
 	
 		case 34:
 			if (bParam1)
-				return -863391184;
+				return joaat("MP_Elite_M_Tshirt");
 			else
-				return 1675446188;
+				return joaat("MP_Elite_F_Tshirt");
 			break;
 	
 		case 35:
 			if (bParam1)
-				return 671171671;
+				return joaat("MP_Elite_M_Tshirt_1");
 			else
-				return 1911627074;
+				return joaat("MP_Elite_F_Tshirt_1");
 			break;
 	}
 
 	return 0;
 }
 
-int _STAT_GET_PACKED_INT(int iParam0, int iParam1) // Position - 0x9331
+int _STAT_GET_PACKED_INT(int iParam0, int iParam1) // Position - 0x9331 (37681)
 {
 	if (iParam1 == -1)
 		iParam1 = func_7();
@@ -8219,7 +8219,7 @@ int _STAT_GET_PACKED_INT(int iParam0, int iParam1) // Position - 0x9331
 	return STATS::GET_PACKED_STAT_INT_CODE(iParam0, iParam1);
 }
 
-void func_62(int iParam0) // Position - 0x934D
+void func_62(int iParam0) // Position - 0x934D (37709)
 {
 	char* str;
 	char* str2;
@@ -8317,7 +8317,7 @@ void func_62(int iParam0) // Position - 0x934D
 	return;
 }
 
-int func_63() // Position - 0x94CC
+int func_63() // Position - 0x94CC (38092)
 {
 	int num;
 
@@ -8339,7 +8339,7 @@ int func_63() // Position - 0x94CC
 	return num;
 }
 
-int func_64(int iParam0, int iParam1) // Position - 0x952B
+int func_64(int iParam0, int iParam1) // Position - 0x952B (38187)
 {
 	iParam1 == 9;
 
@@ -8725,7 +8725,7 @@ int func_64(int iParam0, int iParam1) // Position - 0x952B
 	return 0;
 }
 
-void func_65(char* sParam0, char* sParam1, char* sParam2, char* sParam3, int iParam4, int iParam5, int iParam6, int iParam7, var uParam8, int iParam9, int iParam10) // Position - 0x9AC8
+void func_65(char* sParam0, char* sParam1, char* sParam2, char* sParam3, int iParam4, int iParam5, int iParam6, int iParam7, var uParam8, int iParam9, int iParam10) // Position - 0x9AC8 (39624)
 {
 	int i;
 
@@ -8745,7 +8745,7 @@ void func_65(char* sParam0, char* sParam1, char* sParam2, char* sParam3, int iPa
 	return;
 }
 
-void func_66(int iParam0, char* sParam1, char* sParam2, int iParam3, int iParam4, var uParam5) // Position - 0x9B32
+void func_66(int iParam0, char* sParam1, char* sParam2, int iParam3, int iParam4, var uParam5) // Position - 0x9B32 (39730)
 {
 	TEXT_LABEL_ASSIGN_STRING(&uParam5->f_14[iParam0 /*8*/], sParam1, 32);
 	TEXT_LABEL_ASSIGN_STRING(&uParam5->f_111[iParam0 /*8*/], sParam2, 32);
@@ -8754,7 +8754,7 @@ void func_66(int iParam0, char* sParam1, char* sParam2, int iParam3, int iParam4
 	return;
 }
 
-void func_67(int iParam0, char* sParam1, char* sParam2, int iParam3, int iParam4, var uParam5) // Position - 0x9B66
+void func_67(int iParam0, char* sParam1, char* sParam2, int iParam3, int iParam4, var uParam5) // Position - 0x9B66 (39782)
 {
 	TEXT_LABEL_ASSIGN_STRING(&uParam5->f_234[iParam0 /*8*/], sParam1, 32);
 	TEXT_LABEL_ASSIGN_STRING(&uParam5->f_331[iParam0 /*8*/], sParam2, 32);
@@ -8763,7 +8763,7 @@ void func_67(int iParam0, char* sParam1, char* sParam2, int iParam3, int iParam4
 	return;
 }
 
-int func_68(int iParam0) // Position - 0x9BA1
+int func_68(int iParam0) // Position - 0x9BA1 (39841)
 {
 	switch (iParam0)
 	{
@@ -8786,7 +8786,7 @@ int func_68(int iParam0) // Position - 0x9BA1
 	return 0;
 }
 
-BOOL _STAT_GET_PACKED_BOOL(int iParam0, int iParam1) // Position - 0x9BF0
+BOOL _STAT_GET_PACKED_BOOL(int iParam0, int iParam1) // Position - 0x9BF0 (39920)
 {
 	if (iParam1 == -1)
 		iParam1 = func_7();
@@ -8794,7 +8794,7 @@ BOOL _STAT_GET_PACKED_BOOL(int iParam0, int iParam1) // Position - 0x9BF0
 	return STATS::GET_PACKED_STAT_BOOL_CODE(iParam0, iParam1);
 }
 
-void func_70(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 0x9C0C
+void func_70(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 0x9C0C (39948)
 {
 	int num;
 	char* str;
@@ -8867,7 +8867,7 @@ void func_70(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 0
 	return;
 }
 
-int func_71(int iParam0) // Position - 0x9D48
+int func_71(int iParam0) // Position - 0x9D48 (40264)
 {
 	int num;
 
@@ -8901,7 +8901,7 @@ int func_71(int iParam0) // Position - 0x9D48
 	return num;
 }
 
-int func_72(int iParam0) // Position - 0x9DA1
+int func_72(int iParam0) // Position - 0x9DA1 (40353)
 {
 	Hash hash;
 	Hash statHash;
@@ -8916,7 +8916,7 @@ int func_72(int iParam0) // Position - 0x9DA1
 	return 0;
 }
 
-int func_73(int iParam0, int iParam1, int iParam2) // Position - 0x9DC9
+int func_73(int iParam0, int iParam1, int iParam2) // Position - 0x9DC9 (40393)
 {
 	iParam2 == 0;
 
@@ -9030,7 +9030,7 @@ int func_73(int iParam0, int iParam1, int iParam2) // Position - 0x9DC9
 	return 999;
 }
 
-char* func_74(int iParam0, int iParam1) // Position - 0x9F1F
+char* func_74(int iParam0, int iParam1) // Position - 0x9F1F (40735)
 {
 	iParam1 == 9;
 
@@ -9055,7 +9055,7 @@ char* func_74(int iParam0, int iParam1) // Position - 0x9F1F
 	return "";
 }
 
-char* func_75(int iParam0, int iParam1) // Position - 0x9F6D
+char* func_75(int iParam0, int iParam1) // Position - 0x9F6D (40813)
 {
 	iParam1 == 9;
 
@@ -9080,7 +9080,7 @@ char* func_75(int iParam0, int iParam1) // Position - 0x9F6D
 	return "";
 }
 
-char* func_76(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position - 0x9FBB
+char* func_76(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position - 0x9FBB (40891)
 {
 	iParam2 == 9;
 	bParam3;
@@ -9107,7 +9107,7 @@ char* func_76(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 	return "";
 }
 
-char* func_77(int iParam0, int iParam1, BOOL bParam2) // Position - 0xA01C
+char* func_77(int iParam0, int iParam1, BOOL bParam2) // Position - 0xA01C (40988)
 {
 	bParam2;
 	iParam1 == 9;
@@ -9133,7 +9133,7 @@ char* func_77(int iParam0, int iParam1, BOOL bParam2) // Position - 0xA01C
 	return "";
 }
 
-int func_78(int iParam0, int iParam1) // Position - 0xA06F
+int func_78(int iParam0, int iParam1) // Position - 0xA06F (41071)
 {
 	iParam1 == 9;
 
@@ -9158,7 +9158,7 @@ int func_78(int iParam0, int iParam1) // Position - 0xA06F
 	return 0;
 }
 
-int func_79(int iParam0, int iParam1) // Position - 0xA0AE
+int func_79(int iParam0, int iParam1) // Position - 0xA0AE (41134)
 {
 	if (func_80(func_72(iParam0), func_73(iParam0, 5, iParam1)))
 		return 5;
@@ -9175,7 +9175,7 @@ int func_79(int iParam0, int iParam1) // Position - 0xA0AE
 	return 2;
 }
 
-BOOL func_80(int iParam0, int iParam1) // Position - 0xA11F
+BOOL func_80(int iParam0, int iParam1) // Position - 0xA11F (41247)
 {
 	if (iParam1 <= iParam0)
 		return true;
@@ -9183,7 +9183,7 @@ BOOL func_80(int iParam0, int iParam1) // Position - 0xA11F
 	return false;
 }
 
-int func_81(int iParam0, int iParam1) // Position - 0xA133
+int func_81(int iParam0, int iParam1) // Position - 0xA133 (41267)
 {
 	if (!func_80(func_72(iParam0), func_73(iParam0, 5, iParam1)))
 		return 0;
@@ -9200,7 +9200,7 @@ int func_81(int iParam0, int iParam1) // Position - 0xA133
 	return 5;
 }
 
-void func_82(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 0xA1A8
+void func_82(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 0xA1A8 (41384)
 {
 	int num;
 	int num2;
@@ -9272,7 +9272,7 @@ void func_82(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 0
 	return;
 }
 
-char* func_83(int iParam0, int iParam1) // Position - 0xA2D2
+char* func_83(int iParam0, int iParam1) // Position - 0xA2D2 (41682)
 {
 	char* str;
 
@@ -9321,7 +9321,7 @@ char* func_83(int iParam0, int iParam1) // Position - 0xA2D2
 	return str;
 }
 
-char* func_84(int iParam0, int iParam1) // Position - 0xA3B7
+char* func_84(int iParam0, int iParam1) // Position - 0xA3B7 (41911)
 {
 	char* str;
 
@@ -9554,7 +9554,7 @@ char* func_84(int iParam0, int iParam1) // Position - 0xA3B7
 	return str;
 }
 
-char* func_85(int iParam0, int iParam1) // Position - 0xA863
+char* func_85(int iParam0, int iParam1) // Position - 0xA863 (43107)
 {
 	char* str;
 
@@ -9787,7 +9787,7 @@ char* func_85(int iParam0, int iParam1) // Position - 0xA863
 	return str;
 }
 
-char* func_86(int iParam0, int iParam1) // Position - 0xAD0F
+char* func_86(int iParam0, int iParam1) // Position - 0xAD0F (44303)
 {
 	char* str;
 
@@ -10023,7 +10023,7 @@ char* func_86(int iParam0, int iParam1) // Position - 0xAD0F
 	return str;
 }
 
-int func_87(int iParam0) // Position - 0xB1CB
+int func_87(int iParam0) // Position - 0xB1CB (45515)
 {
 	switch (iParam0)
 	{
@@ -10094,7 +10094,7 @@ int func_87(int iParam0) // Position - 0xB1CB
 	return 64;
 }
 
-void func_88(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 0xB2B6
+void func_88(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 0xB2B6 (45750)
 {
 	int i;
 	int num;
@@ -10217,7 +10217,7 @@ void func_88(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 0
 		{
 			case 17:
 				value2 = 0;
-				num7 = _MPPLY_STAT_GET_INT(962840492);
+				num7 = _MPPLY_STAT_GET_INT(joaat("MPPLY_HEISTFLOWORDERPROGRESS"));
 			
 				for (i = 0; i < 28; i = i + 1)
 				{
@@ -10241,7 +10241,7 @@ void func_88(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 0
 		
 			case 18:
 				value2 = 0;
-				num7 = _MPPLY_STAT_GET_INT(-308302665);
+				num7 = _MPPLY_STAT_GET_INT(joaat("MPPLY_HEISTTEAMPROGRESSBITSET"));
 			
 				for (i = 0; i < 28; i = i + 1)
 				{
@@ -10265,7 +10265,7 @@ void func_88(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 0
 		
 			case 19:
 				value2 = 0;
-				num7 = _MPPLY_STAT_GET_INT(-521667130);
+				num7 = _MPPLY_STAT_GET_INT(joaat("MPPLY_HEISTNODEATHPROGREITSET"));
 			
 				for (i = 0; i < 28; i = i + 1)
 				{
@@ -10289,7 +10289,7 @@ void func_88(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 0
 		
 			case 20:
 				value2 = 0;
-				num7 = _MPPLY_STAT_GET_INT(229552884);
+				num7 = _MPPLY_STAT_GET_INT(joaat("MPPLY_HEIST_1STPERSON_PROG"));
 			
 				for (i = 0; i < 28; i = i + 1)
 				{
@@ -10313,7 +10313,7 @@ void func_88(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 0
 		
 			case 21:
 				value2 = 0;
-				num7 = _MPPLY_STAT_GET_INT(1123599941);
+				num7 = _MPPLY_STAT_GET_INT(joaat("MPPLY_HEISTMEMBERPROGRESSBITSET"));
 			
 				for (i = 0; i < 28; i = i + 1)
 				{
@@ -10355,7 +10355,7 @@ void func_88(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 0
 	return;
 }
 
-int _MPPLY_STAT_GET_INT(Hash hParam0) // Position - 0xB704
+int _MPPLY_STAT_GET_INT(Hash hParam0) // Position - 0xB704 (46852)
 {
 	Hash statHash;
 	int outValue;
@@ -10368,7 +10368,7 @@ int _MPPLY_STAT_GET_INT(Hash hParam0) // Position - 0xB704
 	return 0;
 }
 
-BOOL func_90(int iParam0) // Position - 0xB722
+BOOL func_90(int iParam0) // Position - 0xB722 (46882)
 {
 	Hash hash;
 	Hash statHash;
@@ -10383,7 +10383,7 @@ BOOL func_90(int iParam0) // Position - 0xB722
 	return false;
 }
 
-int func_91(int iParam0, int iParam1, int iParam2) // Position - 0xB74A
+int func_91(int iParam0, int iParam1, int iParam2) // Position - 0xB74A (46922)
 {
 	iParam1 == 5;
 	iParam2 == 0;
@@ -10425,7 +10425,7 @@ int func_91(int iParam0, int iParam1, int iParam2) // Position - 0xB74A
 	return 0;
 }
 
-int func_92(int iParam0) // Position - 0xB7F8
+int func_92(int iParam0) // Position - 0xB7F8 (47096)
 {
 	int num;
 	int num2;
@@ -10442,42 +10442,42 @@ int func_92(int iParam0) // Position - 0xB7F8
 	return num;
 }
 
-int func_93(int iParam0) // Position - 0xB82F
+int func_93(int iParam0) // Position - 0xB82F (47151)
 {
 	switch (iParam0)
 	{
 		case 3:
-			return -459860705;
+			return joaat("MPPLY_GANGOPS_ALLINORDER");
 	
 		case 4:
-			return 1348542811;
+			return joaat("MPPLY_GANGOPS_LOYALTY");
 	
 		case 7:
-			return 2062296848;
+			return joaat("MPPLY_GANGOPS_LOYALTY2");
 	
 		case 8:
-			return -487098587;
+			return joaat("MPPLY_GANGOPS_LOYALTY3");
 	
 		case 5:
-			return -1292050535;
+			return joaat("MPPLY_GANGOPS_CRIMMASMD");
 	
 		case 9:
-			return -1485732191;
+			return joaat("MPPLY_GANGOPS_CRIMMASMD2");
 	
 		case 10:
-			return -1254677972;
+			return joaat("MPPLY_GANGOPS_CRIMMASMD3");
 	
 		case 11:
-			return 1511438227;
+			return joaat("MPPLY_GANGOPS_SUPPORT");
 	
 		default:
 		
 	}
 
-	return -459860705;
+	return joaat("MPPLY_GANGOPS_ALLINORDER");
 }
 
-int func_94(int iParam0, int iParam1, int iParam2) // Position - 0xB8B3
+int func_94(int iParam0, int iParam1, int iParam2) // Position - 0xB8B3 (47283)
 {
 	iParam1 == 5;
 	iParam2 == 0;
@@ -10516,12 +10516,12 @@ int func_94(int iParam0, int iParam1, int iParam2) // Position - 0xB8B3
 	return 1;
 }
 
-int func_95() // Position - 0xB940
+int func_95() // Position - 0xB940 (47424)
 {
 	return 29;
 }
 
-char* func_96(int iParam0, int iParam1) // Position - 0xB94A
+char* func_96(int iParam0, int iParam1) // Position - 0xB94A (47434)
 {
 	iParam1 == 9;
 
@@ -10597,7 +10597,7 @@ char* func_96(int iParam0, int iParam1) // Position - 0xB94A
 	return "MPAwardHeists";
 }
 
-char* func_97(int iParam0, int iParam1) // Position - 0xBA75
+char* func_97(int iParam0, int iParam1) // Position - 0xBA75 (47733)
 {
 	iParam1 == 9;
 
@@ -10673,7 +10673,7 @@ char* func_97(int iParam0, int iParam1) // Position - 0xBA75
 	return "";
 }
 
-char* func_98(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position - 0xBBA0
+char* func_98(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position - 0xBBA0 (48032)
 {
 	iParam2 == 9;
 	bParam3;
@@ -10727,7 +10727,7 @@ char* func_98(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 			return "AWD_GANGOP7d" /*Complete The Doomsday Heist in order with the same team of 4 players.*/;
 	
 		case 5:
-			return "AWD_GANGOP9d" /*Complete The Doomsday Heist in order, with the same team of 4 players, on hard difficulty, without losing any lives on Setups and Finales.*/;
+			return "AWD_GANGOP9d" /*Complete The Doomsday Heist in order, with the same team of 4 players, on Hard difficulty, without losing any lives on Setups and Finales.*/;
 	
 		case 7:
 			return "AWD_GANGOP4d" /*Complete The Doomsday Heist in order with the same team of 2 players.*/;
@@ -10736,10 +10736,10 @@ char* func_98(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 			return "AWD_GANGOP6d" /*Complete The Doomsday Heist in order with the same team of 3 players.*/;
 	
 		case 9:
-			return "AWD_GANGOP5d" /*Complete The Doomsday Heist in order, with the same team of 2 players, on hard difficulty, without losing any lives on Setups and Finales.*/;
+			return "AWD_GANGOP5d" /*Complete The Doomsday Heist in order, with the same team of 2 players, on Hard difficulty, without losing any lives on Setups and Finales.*/;
 	
 		case 10:
-			return "AWD_GANGOP8d" /*Complete The Doomsday Heist in order, with the same team of 3 players, on hard difficulty, without losing any lives on Setups and Finales.*/;
+			return "AWD_GANGOP8d" /*Complete The Doomsday Heist in order, with the same team of 3 players, on Hard difficulty, without losing any lives on Setups and Finales.*/;
 	
 		case 11:
 			return "AWD_GANGO10d" /*Complete all acts of The Doomsday Heist as a crew member, ending with completion of the Act III finale.*/;
@@ -10751,7 +10751,7 @@ char* func_98(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 	return "";
 }
 
-char* func_99(int iParam0, int iParam1, BOOL bParam2) // Position - 0xBCDE
+char* func_99(int iParam0, int iParam1, BOOL bParam2) // Position - 0xBCDE (48350)
 {
 	bParam2;
 	iParam1 == 9;
@@ -10799,7 +10799,7 @@ char* func_99(int iParam0, int iParam1, BOOL bParam2) // Position - 0xBCDE
 		case 9:
 		case 10:
 		case 11:
-			return AUDIO_SPEECH_GET_PARAM_STRING_FROM_ENUM(iParam0);
+			return func_100(iParam0);
 	
 		default:
 		
@@ -10808,7 +10808,7 @@ char* func_99(int iParam0, int iParam1, BOOL bParam2) // Position - 0xBCDE
 	return "";
 }
 
-char* AUDIO_SPEECH_GET_PARAM_STRING_FROM_ENUM(int iParam0) // Position - 0xBDCA
+char* func_100(int iParam0) // Position - 0xBDCA (48586)
 {
 	switch (iParam0)
 	{
@@ -10852,7 +10852,7 @@ char* AUDIO_SPEECH_GET_PARAM_STRING_FROM_ENUM(int iParam0) // Position - 0xBDCA
 	return "";
 }
 
-int func_101(int iParam0, int iParam1) // Position - 0xBE6C
+int func_101(int iParam0, int iParam1) // Position - 0xBE6C (48748)
 {
 	iParam1 == 0;
 
@@ -10928,12 +10928,12 @@ int func_101(int iParam0, int iParam1) // Position - 0xBE6C
 	return 0;
 }
 
-int func_102() // Position - 0xBF54
+int func_102() // Position - 0xBF54 (48980)
 {
 	return 5;
 }
 
-int func_103(int iParam0) // Position - 0xBF5D
+int func_103(int iParam0) // Position - 0xBF5D (48989)
 {
 	if (func_90(iParam0))
 		return 5;
@@ -10941,7 +10941,7 @@ int func_103(int iParam0) // Position - 0xBF5D
 	return 0;
 }
 
-void func_104(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 0xBF73
+void func_104(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 0xBF73 (49011)
 {
 	int num;
 	char* str;
@@ -11163,7 +11163,7 @@ void func_104(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 
 	return;
 }
 
-int func_105() // Position - 0xC2CC
+int func_105() // Position - 0xC2CC (49868)
 {
 	int num;
 
@@ -11185,7 +11185,7 @@ int func_105() // Position - 0xC2CC
 	return 0;
 }
 
-int func_106() // Position - 0xC331
+int func_106() // Position - 0xC331 (49969)
 {
 	int i;
 	int num;
@@ -11199,7 +11199,7 @@ int func_106() // Position - 0xC331
 	return num;
 }
 
-int func_107(int iParam0) // Position - 0xC35E
+int func_107(int iParam0) // Position - 0xC35E (50014)
 {
 	switch (iParam0)
 	{
@@ -11360,7 +11360,7 @@ int func_107(int iParam0) // Position - 0xC35E
 	return 0;
 }
 
-BOOL func_108(int iParam0, int iParam1) // Position - 0xC6C3
+BOOL func_108(int iParam0, int iParam1) // Position - 0xC6C3 (50883)
 {
 	Hash statHash;
 	int outValue;
@@ -11373,12 +11373,12 @@ BOOL func_108(int iParam0, int iParam1) // Position - 0xC6C3
 	return 0;
 }
 
-Hash func_109(int iParam0, int iParam1) // Position - 0xC6E7
+Hash func_109(int iParam0, int iParam1) // Position - 0xC6E7 (50919)
 {
 	return STATS::_GET_STAT_HASH_FOR_CHARACTER_STAT(10, iParam0, func_47(iParam1));
 }
 
-int func_110(int iParam0, int iParam1, int iParam2) // Position - 0xC6FD
+int func_110(int iParam0, int iParam1, int iParam2) // Position - 0xC6FD (50941)
 {
 	iParam1 == 5;
 	iParam2 == 0;
@@ -11416,7 +11416,7 @@ int func_110(int iParam0, int iParam1, int iParam2) // Position - 0xC6FD
 	return 1;
 }
 
-char* func_111(int iParam0, int iParam1) // Position - 0xC794
+char* func_111(int iParam0, int iParam1) // Position - 0xC794 (51092)
 {
 	iParam1 == 9;
 
@@ -11869,7 +11869,7 @@ char* func_111(int iParam0, int iParam1) // Position - 0xC794
 	return "";
 }
 
-char* func_112(int iParam0, int iParam1) // Position - 0xCFA6
+char* func_112(int iParam0, int iParam1) // Position - 0xCFA6 (53158)
 {
 	if (iParam1 == 9)
 		iParam1 = 9;
@@ -12477,7 +12477,7 @@ char* func_112(int iParam0, int iParam1) // Position - 0xCFA6
 	return "";
 }
 
-char* func_113(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position - 0xDA1B
+char* func_113(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position - 0xDA1B (55835)
 {
 	iParam2 == 9;
 	bParam3;
@@ -12925,166 +12925,166 @@ char* func_113(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position 
 			return "AWS_985" /*Complete OG Kush as Lamar to earn $100,000.*/;
 	
 		case 143:
-			return "AWS_1010";
+			return "AWS_1010" /*Complete First Dose - Welcome to the Troupe as leader to earn $50,000.*/;
 	
 		case 144:
-			return "AWS_987";
+			return "AWS_987" /*Complete First Dose - Designated Driver as leader to earn $50,000.*/;
 	
 		case 145:
-			return "AWS_988";
+			return "AWS_988" /*Complete First Dose - Fatal Incursion as leader to earn $50,000.*/;
 	
 		case 146:
-			return "AWS_989";
+			return "AWS_989" /*Complete First Dose - Uncontrolled Substance as leader to earn $50,000.*/;
 	
 		case 147:
-			return "AWS_990";
+			return "AWS_990" /*Complete First Dose - Make War not Love as leader to earn $50,000.*/;
 	
 		case 148:
-			return "AWS_991";
+			return "AWS_991" /*Complete First Dose - Off the Rails as leader to earn $250,000.*/;
 	
 		case 149:
-			return "AWS_992";
+			return "AWS_992" /*Complete all of the missions in the First Dose as a member of an Organization or Motorcycle Club to earn $100,000.*/;
 	
 		case 150:
-			return "AWS_993";
+			return "AWS_993" /*Set up your own Acid Lab.*/;
 	
 		case 151:
-			return "AWS_994";
+			return "AWS_994" /*Boost the production speed inside your Acid Lab.*/;
 	
 		case 152:
-			return "AWS_995";
+			return "AWS_995" /*Complete Last Dose - This is an Intervention as leader to earn $100,000.*/;
 	
 		case 153:
-			return "AWS_996";
+			return "AWS_996" /*Complete Last Dose - Unusual Suspects as leader to earn $100,000.*/;
 	
 		case 154:
-			return "AWS_997";
+			return "AWS_997" /*Complete Last Dose - FriedMind as leader to earn $100,000.*/;
 	
 		case 155:
-			return "AWS_998";
+			return "AWS_998" /*Complete Last Dose - Checking In as leader to earn $100,000.*/;
 	
 		case 156:
-			return "AWS_999";
+			return "AWS_999" /*Complete Last Dose - BDKD as leader to earn $100,000.*/;
 	
 		case 157:
-			return "AWS_1000";
+			return "AWS_1000" /*Complete all of the missions in the Last Dose as a member of an Organization or Motorcycle Club to earn $100,000.*/;
 	
 		case 158:
-			return "AWS_1001";
+			return "AWS_1001" /*Complete 10 fares in a row during Taxi Work.*/;
 	
 		case 159:
-			return "AWS_1012";
+			return "AWS_1012" /*Complete The Duggan Robbery as leader to earn $50,000.*/;
 	
 		case 160:
-			return "AWS_1013";
+			return "AWS_1013" /*Complete The Cargo Ship Robbery as leader to earn $50,000.*/;
 	
 		case 161:
-			return "AWS_1014";
+			return "AWS_1014" /*Complete The Podium Robbery as leader to earn $50,000.*/;
 	
 		case 162:
-			return "AWS_1015";
+			return "AWS_1015" /*Complete The Gangbanger Robbery as leader to earn $50,000.*/;
 	
 		case 163:
-			return "AWS_1016";
+			return "AWS_1016" /*Complete The McTony Robbery as leader to earn $50,000.*/;
 	
 		case 164:
-			return "AWS_1017";
+			return "AWS_1017" /*Complete all the Elite Challenges for a Salvage Yard Robbery as leader to earn $50,000.*/;
 	
 		case 165:
-			return "AWS_1018";
+			return "AWS_1018" /*Complete a Salvage Yard Robbery with all optional Planning Works and Tasks also completed.*/;
 	
 		case 166:
-			return "AWS_1024";
+			return "AWS_1024" /*Complete Slush Fund as leader.*/;
 	
 		case 167:
-			return "AWS_1025";
+			return "AWS_1025" /*Complete all the Setup missions for The Cluckin' Bell Farm Raid as leader.*/;
 	
 		case 168:
-			return "AWS_1026";
+			return "AWS_1026" /*Complete The Cluckin' Bell Farm Raid as leader to earn $250,000.*/;
 	
 		case 169:
-			return "AWS_1027";
+			return "AWS_1027" /*Complete The Cluckin' Bell Farm Raid as a goon to earn $250,000.*/;
 	
 		case 170:
-			return "AWS_1028";
+			return "AWS_1028" /*Complete The Cluckin' Bell Farm Raid as leader using the stealth approach.*/;
 	
 		case 171:
-			return "AWS_1029";
+			return "AWS_1029" /*Complete The Cluckin' Bell Farm Raid as leader using the aggressive approach.*/;
 	
 		case 172:
-			return "AWS_1030";
+			return "AWS_1030" /*Steal all weapons and gear in one playthrough of Concealed Weapons.*/;
 	
 		case 173:
-			return "AWS_1031";
+			return "AWS_1031" /*Steal all getaway vehicles in one playthrough of Hit and Run.*/;
 	
 		case 174:
-			return "AWS_1032";
+			return "AWS_1032" /*Complete Most Wanted - Whitney as leader to earn $25,000.*/;
 	
 		case 175:
-			return "AWS_1033";
+			return "AWS_1033" /*Complete Most Wanted - Lieberman as leader to earn $25,000.*/;
 	
 		case 176:
-			return "AWS_1034";
+			return "AWS_1034" /*Complete Most Wanted - O'Neil as leader to earn $25,000.*/;
 	
 		case 177:
-			return "AWS_1035";
+			return "AWS_1035" /*Complete Most Wanted - Thompson as leader to earn $25,000.*/;
 	
 		case 178:
-			return "AWS_1036";
+			return "AWS_1036" /*Complete Most Wanted - Song as leader to earn $25,000.*/;
 	
 		case 179:
-			return "AWS_1037";
+			return "AWS_1037" /*Complete Most Wanted - Garcia as leader to earn $25,000.*/;
 	
 		case 180:
-			return "AWS_1044";
+			return "AWS_1044" /*Win Assault on ATT-16 in under 25 minutes on the Attacking team.*/;
 	
 		case 181:
-			return "AWS_1045";
+			return "AWS_1045" /*Win Assault on ATT-16 without any parts of the aircraft carrier being destroyed.*/;
 	
 		case 182:
-			return "AWS_1049";
+			return "AWS_1049" /*Take out each type of undead in Ludendorff Cemetery Survival.*/;
 	}
 
 	switch (iParam0)
 	{
 		case 183:
-			return "AWS_1050";
+			return "AWS_1050" /*Complete The Fine Art File as leader to earn $50,000.*/;
 	
 		case 184:
-			return "AWS_1051";
+			return "AWS_1051" /*Complete The Brute Force File as leader to earn $50,000.*/;
 	
 		case 185:
-			return "AWS_1052";
+			return "AWS_1052" /*Complete The Project Breakaway File as leader to earn $50,000.*/;
 	
 		case 186:
-			return "AWS_1053";
+			return "AWS_1053" /*Complete The Black Box File as leader to earn $50,000.*/;
 	
 		case 187:
-			return "AWS_1054";
+			return "AWS_1054" /*Complete all mission challenges for an FIB File to earn $50,000.*/;
 	
 		case 188:
-			return "AWS_1059";
+			return "AWS_1059" /*Complete Up and Running as leader.*/;
 	
 		case 189:
-			return "AWS_1060";
+			return "AWS_1060" /*Complete Setup: Mogul as leader.*/;
 	
 		case 190:
-			return "AWS_1061";
+			return "AWS_1061" /*Complete Setup: Intel as leader.*/;
 	
 		case 191:
-			return "AWS_1063";
+			return "AWS_1063" /*Complete Setup: Iron Mule as leader.*/;
 	
 		case 192:
-			return "AWS_1064";
+			return "AWS_1064" /*Complete Setup: Ammunition as leader.*/;
 	
 		case 193:
-			return "AWS_1065";
+			return "AWS_1065" /*Deliver the Ammunition and all bonus objectives directly onto the trailer in Setup: Ammunition.*/;
 	
 		case 194:
-			return "AWS_1067";
+			return "AWS_1067" /*Complete The Titan Job as leader to earn $250,000.*/;
 	
 		case 195:
-			return "AWS_1068";
+			return "AWS_1068" /*Complete all Oscar Guzman Flies Again missions as a Crew Member to earn $100,000.*/;
 	
 		default:
 		
@@ -13093,7 +13093,7 @@ char* func_113(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position 
 	return "";
 }
 
-char* func_114(int iParam0, int iParam1, BOOL bParam2) // Position - 0xE469
+char* func_114(int iParam0, int iParam1, BOOL bParam2) // Position - 0xE469 (58473)
 {
 	bParam2;
 	iParam1 == 9;
@@ -13395,7 +13395,7 @@ char* func_114(int iParam0, int iParam1, BOOL bParam2) // Position - 0xE469
 			return "AWT_918" /*Easy Access*/;
 	
 		case 97:
-			return "AWT_919" /*Its A Steal*/;
+			return "AWT_919" /*It's A Steal*/;
 	
 		case 98:
 			return "AWT_920" /*Maximum Disruption*/;
@@ -13533,166 +13533,166 @@ char* func_114(int iParam0, int iParam1, BOOL bParam2) // Position - 0xE469
 			return "AWT_985" /*OG Kush  - Lamar*/;
 	
 		case 143:
-			return "AWT_1010";
+			return "AWT_1010" /*Welcome to the Troupe*/;
 	
 		case 144:
-			return "AWT_987";
+			return "AWT_987" /*Designated Driver*/;
 	
 		case 145:
-			return "AWT_988";
+			return "AWT_988" /*Fatal Incursion*/;
 	
 		case 146:
-			return "AWT_989";
+			return "AWT_989" /*Uncontrolled Substance*/;
 	
 		case 147:
-			return "AWT_990";
+			return "AWT_990" /*Make War not Love*/;
 	
 		case 148:
-			return "AWT_991";
+			return "AWT_991" /*Off The Rails*/;
 	
 		case 149:
-			return "AWT_992";
+			return "AWT_992" /*Back It Up*/;
 	
 		case 150:
-			return "AWT_993";
+			return "AWT_993" /*Lick My Acid*/;
 	
 		case 151:
-			return "AWT_994";
+			return "AWT_994" /*Chemical Reaction*/;
 	
 		case 152:
-			return "AWT_995";
+			return "AWT_995" /*This is an Intervention*/;
 	
 		case 153:
-			return "AWT_996";
+			return "AWT_996" /*Unusual Suspects*/;
 	
 		case 154:
-			return "AWT_997";
+			return "AWT_997" /*FriedMind*/;
 	
 		case 155:
-			return "AWT_998";
+			return "AWT_998" /*Checking In*/;
 	
 		case 156:
-			return "AWT_999";
+			return "AWT_999" /*BDKD*/;
 	
 		case 157:
-			return "AWT_1000";
+			return "AWT_1000" /*Back It Up 2*/;
 	
 		case 158:
-			return "AWT_1001";
+			return "AWT_1001" /*5 Star Ride*/;
 	
 		case 159:
-			return "AWT_1012";
+			return "AWT_1012" /*The Duggan Robbery*/;
 	
 		case 160:
-			return "AWT_1013";
+			return "AWT_1013" /*The Cargo Ship Robbery*/;
 	
 		case 161:
-			return "AWT_1014";
+			return "AWT_1014" /*The Podium Robbery*/;
 	
 		case 162:
-			return "AWT_1015";
+			return "AWT_1015" /*The Gangbanger Robbery*/;
 	
 		case 163:
-			return "AWT_1016";
+			return "AWT_1016" /*The McTony Robbery*/;
 	
 		case 164:
-			return "AWT_1017";
+			return "AWT_1017" /*Perfect Run*/;
 	
 		case 165:
-			return "AWT_1018";
+			return "AWT_1018" /*Extra Mile*/;
 	
 		case 166:
-			return "AWT_1024";
+			return "AWT_1024" /*Slush Fund*/;
 	
 		case 167:
-			return "AWT_1025";
+			return "AWT_1025" /*Best Laid Plans*/;
 	
 		case 168:
-			return "AWT_1026";
+			return "AWT_1026" /*The Cluckin' Bell Farm Raid*/;
 	
 		case 169:
-			return "AWT_1027";
+			return "AWT_1027" /*Pecking Order*/;
 	
 		case 170:
-			return "AWT_1028";
+			return "AWT_1028" /*Sly Fox*/;
 	
 		case 171:
-			return "AWT_1029";
+			return "AWT_1029" /*Cock Fight*/;
 	
 		case 172:
-			return "AWT_1030";
+			return "AWT_1030" /*All The Sides*/;
 	
 		case 173:
-			return "AWT_1031";
+			return "AWT_1031" /*Fly The Coop*/;
 	
 		case 174:
-			return "AWT_1032";
+			return "AWT_1032" /*Get Whitney*/;
 	
 		case 175:
-			return "AWT_1033";
+			return "AWT_1033" /*Get Lieberman*/;
 	
 		case 176:
-			return "AWT_1034";
+			return "AWT_1034" /*Get O'Neil*/;
 	
 		case 177:
-			return "AWT_1035";
+			return "AWT_1035" /*Get Thompson*/;
 	
 		case 178:
-			return "AWT_1036";
+			return "AWT_1036" /*Get Song*/;
 	
 		case 179:
-			return "AWT_1037";
+			return "AWT_1037" /*Get Garcia*/;
 	
 		case 180:
-			return "AWT_1044";
+			return "AWT_1044" /*Priority Boarding*/;
 	
 		case 181:
-			return "AWT_1045";
+			return "AWT_1045" /*Not A Scratch*/;
 	
 		case 182:
-			return "AWT_1049";
+			return "AWT_1049" /*One Of A Kind*/;
 	}
 
 	switch (iParam0)
 	{
 		case 183:
-			return "AWT_1050";
+			return "AWT_1050" /*The Fine Art File*/;
 	
 		case 184:
-			return "AWT_1051";
+			return "AWT_1051" /*The Brute Force File*/;
 	
 		case 185:
-			return "AWT_1052";
+			return "AWT_1052" /*The Project Breakaway File*/;
 	
 		case 186:
-			return "AWT_1053";
+			return "AWT_1053" /*The Black Box File*/;
 	
 		case 187:
-			return "AWT_1054";
+			return "AWT_1054" /*Bonus Points*/;
 	
 		case 188:
-			return "AWT_1059";
+			return "AWT_1059" /*Up And Running*/;
 	
 		case 189:
-			return "AWT_1060";
+			return "AWT_1060" /*Mogul*/;
 	
 		case 190:
-			return "AWT_1061";
+			return "AWT_1061" /*Intel*/;
 	
 		case 191:
-			return "AWT_1063";
+			return "AWT_1063" /*Iron Mule*/;
 	
 		case 192:
-			return "AWT_1064";
+			return "AWT_1064" /*Ammunition*/;
 	
 		case 193:
-			return "AWT_1065";
+			return "AWT_1065" /*Direct Delivery*/;
 	
 		case 194:
-			return "AWT_1067";
+			return "AWT_1067" /*The Titan Job*/;
 	
 		case 195:
-			return "AWT_1068";
+			return "AWT_1068" /*Permanent Contract*/;
 	
 		default:
 		
@@ -13701,7 +13701,7 @@ char* func_114(int iParam0, int iParam1, BOOL bParam2) // Position - 0xE469
 	return "";
 }
 
-int func_115(int iParam0, int iParam1) // Position - 0xEE93
+int func_115(int iParam0, int iParam1) // Position - 0xEE93 (61075)
 {
 	iParam1 == 9;
 
@@ -14146,12 +14146,12 @@ int func_115(int iParam0, int iParam1) // Position - 0xEE93
 	return 0;
 }
 
-int func_116() // Position - 0xF52F
+int func_116() // Position - 0xF52F (62767)
 {
 	return 5;
 }
 
-int func_117(int iParam0) // Position - 0xF538
+int func_117(int iParam0) // Position - 0xF538 (62776)
 {
 	if (func_108(iParam0, -1))
 		return 5;
@@ -14159,7 +14159,7 @@ int func_117(int iParam0) // Position - 0xF538
 	return 0;
 }
 
-void func_118(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 0xF54F
+void func_118(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 0xF54F (62799)
 {
 	int num;
 	char* str;
@@ -14232,7 +14232,7 @@ void func_118(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 
 	return;
 }
 
-char* func_119(int iParam0, int iParam1, int iParam2) // Position - 0xF68F
+char* func_119(int iParam0, int iParam1, int iParam2) // Position - 0xF68F (63119)
 {
 	switch (iParam0)
 	{
@@ -14656,7 +14656,7 @@ char* func_119(int iParam0, int iParam1, int iParam2) // Position - 0xF68F
 	return "";
 }
 
-char* func_120(int iParam0, int iParam1, int iParam2) // Position - 0xFDDA
+char* func_120(int iParam0, int iParam1, int iParam2) // Position - 0xFDDA (64986)
 {
 	iParam2 == 9;
 	iParam1 == 5;
@@ -15159,7 +15159,7 @@ char* func_120(int iParam0, int iParam1, int iParam2) // Position - 0xFDDA
 	return "";
 }
 
-char* func_121(int iParam0, int iParam1, int iParam2) // Position - 0x10896
+char* func_121(int iParam0, int iParam1, int iParam2) // Position - 0x10896 (67734)
 {
 	iParam1 == 5;
 	iParam2 == 9;
@@ -15860,313 +15860,313 @@ char* func_121(int iParam0, int iParam1, int iParam2) // Position - 0x10896
 			return "AWS_983" /*Watch Dr. Dre working in Record A Studios.*/;
 	
 		case 120:
-			return "AWS_1002";
+			return "AWS_1002" /*Reach the gateway as the rabbit in First Dose - Uncontrolled Substance.*/;
 	
 		case 121:
 			if (iParam1 == 5)
-				return "AWS_1003d";
+				return "AWS_1003d" /*Complete 50 Fooligan Jobs for Dax.*/;
 			else if (iParam1 == 4)
-				return "AWS_1003c";
+				return "AWS_1003c" /*Complete 20 Fooligan Jobs for Dax.*/;
 			else if (iParam1 == 3)
-				return "AWS_1003b";
+				return "AWS_1003b" /*Complete 10 Fooligan Jobs for Dax.*/;
 			else
-				return "AWS_1003a";
+				return "AWS_1003a" /*Complete 5 Fooligan Jobs for Dax.*/;
 			break;
 	
 		case 122:
 			if (iParam1 == 5)
-				return "AWS_1004d";
+				return "AWS_1004d" /*Source Supplies for the Acid Lab 50 times.*/;
 			else if (iParam1 == 4)
-				return "AWS_1004c";
+				return "AWS_1004c" /*Source Supplies for the Acid Lab 20 times.*/;
 			else if (iParam1 == 3)
-				return "AWS_1004b";
+				return "AWS_1004b" /*Source Supplies for the Acid Lab 10 times.*/;
 			else
-				return "AWS_1004a";
+				return "AWS_1004a" /*Source Supplies for the Acid Lab 5 times.*/;
 			break;
 	
 		case 123:
 			if (iParam1 == 5)
-				return "AWS_1005d";
+				return "AWS_1005d" /*Raid and steal from 50 stash houses.*/;
 			else if (iParam1 == 4)
-				return "AWS_1005c";
+				return "AWS_1005c" /*Raid and steal from 20 stash houses.*/;
 			else if (iParam1 == 3)
-				return "AWS_1005b";
+				return "AWS_1005b" /*Raid and steal from 10 stash houses.*/;
 			else
-				return "AWS_1005a";
+				return "AWS_1005a" /*Raid and steal from 5 stash houses.*/;
 			break;
 	
 		case 124:
 			if (iParam1 == 5)
-				return "AWS_1006d";
+				return "AWS_1006d" /*Collect 50 G's Caches around Los Santos and Blaine County.*/;
 			else if (iParam1 == 4)
-				return "AWS_1006c";
+				return "AWS_1006c" /*Collect 20 G's Caches around Los Santos and Blaine County.*/;
 			else if (iParam1 == 3)
-				return "AWS_1006b";
+				return "AWS_1006b" /*Collect 10 G's Caches around Los Santos and Blaine County.*/;
 			else
-				return "AWS_1006a";
+				return "AWS_1006a" /*Collect 5 G's Caches around Los Santos and Blaine County.*/;
 			break;
 	
 		case 125:
 			if (iParam1 == 5)
-				return "AWS_1007d";
+				return "AWS_1007d" /*Return stolen cash to a shop 5 times.*/;
 			else if (iParam1 == 4)
-				return "AWS_1007c";
+				return "AWS_1007c" /*Return stolen cash to a shop 3 times.*/;
 			else if (iParam1 == 3)
-				return "AWS_1007b";
+				return "AWS_1007b" /*Return stolen cash to a shop 2 times.*/;
 			else
-				return "AWS_1007a";
+				return "AWS_1007a" /*Return stolen cash to a shop once.*/;
 			break;
 	
 		case 126:
-			return "AWS_1008";
+			return "AWS_1008" /*Take out the hostile versions of yourself.*/;
 	
 		case 127:
 			if (iParam1 == 5)
-				return "AWS_1009d";
+				return "AWS_1009d" /*Complete 50 fares during Taxi Work.*/;
 			else if (iParam1 == 4)
-				return "AWS_1009c";
+				return "AWS_1009c" /*Complete 20 fares during Taxi Work.*/;
 			else if (iParam1 == 3)
-				return "AWS_1009b";
+				return "AWS_1009b" /*Complete 10 fares during Taxi Work.*/;
 			else
-				return "AWS_1009a";
+				return "AWS_1009a" /*Complete 5 fares during Taxi Work.*/;
 			break;
 	
 		case 128:
 			if (iParam1 == 5)
-				return "AWS_1019d";
+				return "AWS_1019d" /*Steal 50 vehicles as part of the Salvage Yard Robberies as leader.*/;
 			else if (iParam1 == 4)
-				return "AWS_1019c";
+				return "AWS_1019c" /*Steal 20 vehicles as part of the Salvage Yard Robberies as leader.*/;
 			else if (iParam1 == 3)
-				return "AWS_1019b";
+				return "AWS_1019b" /*Steal 10 vehicles as part of the Salvage Yard Robberies as leader.*/;
 			else
-				return "AWS_1019a";
+				return "AWS_1019a" /*Steal 5 vehicles as part of the Salvage Yard Robberies as leader.*/;
 			break;
 	
 		case 129:
 			if (iParam1 == 5)
-				return "AWS_1020d";
+				return "AWS_1020d" /*Complete 50 Planning Works as part of Salvage Yard Robberies as leader.*/;
 			else if (iParam1 == 4)
-				return "AWS_1020c";
+				return "AWS_1020c" /*Complete 20 Planning Works as part of Salvage Yard Robberies as leader.*/;
 			else if (iParam1 == 3)
-				return "AWS_1020b";
+				return "AWS_1020b" /*Complete 10 Planning Works as part of Salvage Yard Robberies as leader.*/;
 			else
-				return "AWS_1020a";
+				return "AWS_1020a" /*Complete 5 Planning Works as part of Salvage Yard Robberies as leader.*/;
 			break;
 	
 		case 130:
 			if (iParam1 == 5)
-				return "AWS_1021d";
+				return "AWS_1021d" /*Earn $5,000,000 from selling acquired vehicles as part of the Salvage Yard Robberies.*/;
 			else if (iParam1 == 4)
-				return "AWS_1021c";
+				return "AWS_1021c" /*Earn $2,500,000 from selling acquired vehicles as part of the Salvage Yard Robberies.*/;
 			else if (iParam1 == 3)
-				return "AWS_1021b";
+				return "AWS_1021b" /*Earn $1,000,000 from selling acquired vehicles as part of the Salvage Yard Robberies.*/;
 			else
-				return "AWS_1021a";
+				return "AWS_1021a" /*Earn $250,000 from selling acquired vehicles as part of the Salvage Yard Robberies.*/;
 			break;
 	
 		case 131:
 			if (iParam1 == 5)
-				return "AWS_1022d";
+				return "AWS_1022d" /*Earn $5,000,000 from salvaging acquired vehicles as part of the Salvage Yard Robberies or Tow Truck Service.*/;
 			else if (iParam1 == 4)
-				return "AWS_1022c";
+				return "AWS_1022c" /*Earn $2,500,000 from salvaging acquired vehicles as part of the Salvage Yard Robberies or Tow Truck Service.*/;
 			else if (iParam1 == 3)
-				return "AWS_1022b";
+				return "AWS_1022b" /*Earn $1,000,000 from salvaging acquired vehicles as part of the Salvage Yard Robberies or Tow Truck Service.*/;
 			else
-				return "AWS_1022a";
+				return "AWS_1022a" /*Earn $250,000 from salvaging acquired vehicles as part of the Salvage Yard Robberies or Tow Truck Service.*/;
 			break;
 	
 		case 132:
 			if (iParam1 == 5)
-				return "AWS_1023d";
+				return "AWS_1023d" /*Recover 50 vehicles as part of the Tow Truck Service.*/;
 			else if (iParam1 == 4)
-				return "AWS_1023c";
+				return "AWS_1023c" /*Recover 20 vehicles as part of the Tow Truck Service.*/;
 			else if (iParam1 == 3)
-				return "AWS_1023b";
+				return "AWS_1023b" /*Recover 10 vehicles as part of the Tow Truck Service.*/;
 			else
-				return "AWS_1023a";
+				return "AWS_1023a" /*Recover 5 vehicles as part of the Tow Truck Service.*/;
 			break;
 	
 		case 133:
 			if (iParam1 == 5)
-				return "AWS_1038d";
+				return "AWS_1038d" /*Secure or eliminate 50 bounty targets.*/;
 			else if (iParam1 == 4)
-				return "AWS_1038c";
+				return "AWS_1038c" /*Secure or eliminate 20 bounty targets.*/;
 			else if (iParam1 == 3)
-				return "AWS_1038b";
+				return "AWS_1038b" /*Secure or eliminate 10 bounty targets.*/;
 			else
-				return "AWS_1038";
+				return "AWS_1038" /*Secure or eliminate 5 bounty targets.*/;
 			break;
 	
 		case 134:
 			if (iParam1 == 5)
-				return "AWS_1039d";
+				return "AWS_1039d" /*Secure 50 bounty targets alive.*/;
 			else if (iParam1 == 4)
-				return "AWS_1039c";
+				return "AWS_1039c" /*Secure 20 bounty targets alive.*/;
 			else if (iParam1 == 3)
-				return "AWS_1039b";
+				return "AWS_1039b" /*Secure 10 bounty targets alive.*/;
 			else
-				return "AWS_1039";
+				return "AWS_1039" /*Secure 5 bounty targets alive.*/;
 			break;
 	
 		case 135:
 			if (iParam1 == 5)
-				return "AWS_1040d";
+				return "AWS_1040d" /*Earn $5,000,000 from securing or eliminating bounty targets.*/;
 			else if (iParam1 == 4)
-				return "AWS_1040c";
+				return "AWS_1040c" /*Earn $2,500,000 from securing or eliminating bounty targets.*/;
 			else if (iParam1 == 3)
-				return "AWS_1040b";
+				return "AWS_1040b" /*Earn $1,000,000 from securing or eliminating bounty targets.*/;
 			else
-				return "AWS_1040";
+				return "AWS_1040" /*Earn $250,000 from securing or eliminating bounty targets.*/;
 			break;
 	
 		case 136:
 			if (iParam1 == 5)
-				return "AWS_1041d";
+				return "AWS_1041d" /*Earn $1,000,000 in additional income from the Bail Enforcement Agents.*/;
 			else if (iParam1 == 4)
-				return "AWS_1041c";
+				return "AWS_1041c" /*Earn $750,000 in additional income from the Bail Enforcement Agents.*/;
 			else if (iParam1 == 3)
-				return "AWS_1041b";
+				return "AWS_1041b" /*Earn $500,000 in additional income from the Bail Enforcement Agents.*/;
 			else
-				return "AWS_1041";
+				return "AWS_1041" /*Earn $250,000 in additional income from the Bail Enforcement Agents.*/;
 			break;
 	
 		case 137:
 			if (iParam1 == 5)
-				return "AWS_1042d";
+				return "AWS_1042d" /*Complete 50 Dispatch Works for Vincent.*/;
 			else if (iParam1 == 4)
-				return "AWS_1042c";
+				return "AWS_1042c" /*Complete 20 Dispatch Works for Vincent.*/;
 			else if (iParam1 == 3)
-				return "AWS_1042b";
+				return "AWS_1042b" /*Complete 10 Dispatch Works for Vincent.*/;
 			else
-				return "AWS_1042";
+				return "AWS_1042" /*Complete 5 Dispatch Works for Vincent.*/;
 			break;
 	
 		case 138:
 			if (iParam1 == 5)
-				return "AWS_1043d";
+				return "AWS_1043d" /*Make 50 deliveries for Pizza This...*/;
 			else if (iParam1 == 4)
-				return "AWS_1043c";
+				return "AWS_1043c" /*Make 20 deliveries for Pizza This...*/;
 			else if (iParam1 == 3)
-				return "AWS_1043b";
+				return "AWS_1043b" /*Make 10 deliveries for Pizza This...*/;
 			else
-				return "AWS_1043";
+				return "AWS_1043" /*Make 5 deliveries for Pizza This...*/;
 			break;
 	
 		case 139:
 			if (iParam1 == 5)
-				return "AWS_1046d";
+				return "AWS_1046d" /*Complete 20 bonus objectives in Assault on ATT-16.*/;
 			else if (iParam1 == 4)
-				return "AWS_1046c";
+				return "AWS_1046c" /*Complete 10 bonus objectives in Assault on ATT-16.*/;
 			else if (iParam1 == 3)
-				return "AWS_1046b";
+				return "AWS_1046b" /*Complete 5 bonus objectives in Assault on ATT-16.*/;
 			else
-				return "AWS_1046";
+				return "AWS_1046" /*Complete 3 bonus objectives in Assault on ATT-16.*/;
 			break;
 	
 		case 140:
 			if (iParam1 == 5)
-				return "AWS_1047d";
+				return "AWS_1047d" /*Steal 50 data drives during Assault on ATT-16.*/;
 			else if (iParam1 == 4)
-				return "AWS_1047c";
+				return "AWS_1047c" /*Steal 20 data drives during Assault on ATT-16.*/;
 			else if (iParam1 == 3)
-				return "AWS_1047b";
+				return "AWS_1047b" /*Steal 10 data drives during Assault on ATT-16.*/;
 			else
-				return "AWS_1047";
+				return "AWS_1047" /*Steal 5 data drives during Assault on ATT-16.*/;
 			break;
 	
 		case 141:
 			if (iParam1 == 5)
-				return "AWS_1048d";
+				return "AWS_1048d" /*Survive 15 waves in Ludendorff Cemetery Survival.*/;
 			else if (iParam1 == 4)
-				return "AWS_1048c";
+				return "AWS_1048c" /*Survive 10 waves in Ludendorff Cemetery Survival.*/;
 			else if (iParam1 == 3)
-				return "AWS_1048b";
+				return "AWS_1048b" /*Survive 7 waves in Ludendorff Cemetery Survival.*/;
 			else
-				return "AWS_1048";
+				return "AWS_1048" /*Survive 5 waves in Ludendorff Cemetery Survival.*/;
 			break;
 	
 		case 142:
 			if (iParam1 == 5)
-				return "AWS_1055d";
+				return "AWS_1055d" /*Complete 50 FIB Files.*/;
 			else if (iParam1 == 4)
-				return "AWS_1055c";
+				return "AWS_1055c" /*Complete 20 FIB Files.*/;
 			else if (iParam1 == 3)
-				return "AWS_1055b";
+				return "AWS_1055b" /*Complete 10 FIB Files.*/;
 			else
-				return "AWS_1055a";
+				return "AWS_1055a" /*Complete 5 FIB Files.*/;
 			break;
 	
 		case 143:
 			if (iParam1 == 5)
-				return "AWS_1056d";
+				return "AWS_1056d" /*Complete 50 Planning Works as part of The FIB Files.*/;
 			else if (iParam1 == 4)
-				return "AWS_1056c";
+				return "AWS_1056c" /*Complete 20 Planning Works as part of The FIB Files.*/;
 			else if (iParam1 == 3)
-				return "AWS_1056b";
+				return "AWS_1056b" /*Complete 10 Planning Works as part of The FIB Files.*/;
 			else
-				return "AWS_1056a";
+				return "AWS_1056a" /*Complete 5 Planning Works as part of The FIB Files.*/;
 			break;
 	
 		case 144:
 			if (iParam1 == 5)
-				return "AWS_1057d";
+				return "AWS_1057d" /*Earn $5,000,000 from The FIB Files.*/;
 			else if (iParam1 == 4)
-				return "AWS_1057c";
+				return "AWS_1057c" /*Earn $2,500,000 from The FIB Files.*/;
 			else if (iParam1 == 3)
-				return "AWS_1057b";
+				return "AWS_1057b" /*Earn $1,000,000 from The FIB Files.*/;
 			else
-				return "AWS_1057a";
+				return "AWS_1057a" /*Earn $250,000 from The FIB Files.*/;
 			break;
 	
 		case 145:
 			if (iParam1 == 5)
-				return "AWS_1058d";
+				return "AWS_1058d" /*Earn $50,000 in additional income from the Garment Factory.*/;
 			else if (iParam1 == 4)
-				return "AWS_1058c";
+				return "AWS_1058c" /*Earn $25,000 in additional income from the Garment Factory.*/;
 			else if (iParam1 == 3)
-				return "AWS_1058b";
+				return "AWS_1058b" /*Earn $10,000 in additional income from the Garment Factory.*/;
 			else
-				return "AWS_1058a";
+				return "AWS_1058a" /*Earn $5,000 in additional income from the Garment Factory.*/;
 			break;
 	
 		case 146:
 			if (iParam1 == 5)
-				return "AWS_1062d";
+				return "AWS_1062d" /*Survive 5 shark attacks.*/;
 			else if (iParam1 == 4)
-				return "AWS_1062c";
+				return "AWS_1062c" /*Survive 3 shark attacks.*/;
 			else if (iParam1 == 3)
-				return "AWS_1062b";
+				return "AWS_1062b" /*Survive 2 shark attacks.*/;
 			else
-				return "AWS_1062a";
+				return "AWS_1062a" /*Survive 1 shark attack.*/;
 			break;
 	
 		case 147:
 			if (iParam1 == 5)
-				return "AWS_1066d";
+				return "AWS_1066d" /*Steal all additional equipment in a single playthrough of Oscar Guzman Flies Again.*/;
 			else if (iParam1 == 4)
-				return "AWS_1066c";
+				return "AWS_1066c" /*Steal 5 pieces of additional equipment in a single playthrough of Oscar Guzman Flies Again.*/;
 			else if (iParam1 == 3)
-				return "AWS_1066b";
+				return "AWS_1066b" /*Steal 3 pieces of additional equipment in a single playthrough of Oscar Guzman Flies Again.*/;
 			else
-				return "AWS_1066a";
+				return "AWS_1066a" /*Steal 1 piece of additional equipment in a single playthrough of Oscar Guzman Flies Again.*/;
 			break;
 	
 		case 148:
 			if (iParam1 == 5)
-				return "AWS_1069d";
+				return "AWS_1069d" /*Complete 50 Arms Trafficking missions for Oscar.*/;
 			else if (iParam1 == 4)
-				return "AWS_1069c";
+				return "AWS_1069c" /*Complete 25 Arms Trafficking missions for Oscar.*/;
 			else if (iParam1 == 3)
-				return "AWS_1069b";
+				return "AWS_1069b" /*Complete 10 Arms Trafficking missions for Oscar.*/;
 			else
-				return "AWS_1069a";
+				return "AWS_1069a" /*Complete 5 Arms Trafficking missions for Oscar.*/;
 			break;
 	}
 
 	return "";
 }
 
-char* func_122(int iParam0, int iParam1) // Position - 0x11D95
+char* func_122(int iParam0, int iParam1) // Position - 0x11D95 (73109)
 {
 	iParam1 == 9;
 
@@ -16582,97 +16582,97 @@ char* func_122(int iParam0, int iParam1) // Position - 0x11D95
 			return "AWT_983" /*Producer*/;
 	
 		case 120:
-			return "AWT_1002";
+			return "AWT_1002" /*Run Rabbit Run*/;
 	
 		case 121:
-			return "AWT_1003";
+			return "AWT_1003" /*Call Me*/;
 	
 		case 122:
-			return "AWT_1004";
+			return "AWT_1004" /*Chemical Attraction*/;
 	
 		case 123:
-			return "AWT_1005";
+			return "AWT_1005" /*Stashes To Stashes*/;
 	
 		case 124:
-			return "AWT_1006";
+			return "AWT_1006" /*Here Comes The Drop*/;
 	
 		case 125:
-			return "AWT_1007";
+			return "AWT_1007" /*Good Samaritan*/;
 	
 		case 126:
-			return "AWT_1008";
+			return "AWT_1008" /*Your Own Worst Enemy*/;
 	
 		case 127:
-			return "AWT_1009";
+			return "AWT_1009" /*Taxi Driver*/;
 	
 		case 128:
-			return "AWT_1019";
+			return "AWT_1019" /*New Car Smell*/;
 	
 		case 129:
-			return "AWT_1020";
+			return "AWT_1020" /*Serious Prepper*/;
 	
 		case 130:
-			return "AWT_1021";
+			return "AWT_1021" /*Wheeler Dealer*/;
 	
 		case 131:
-			return "AWT_1022";
+			return "AWT_1022" /*Second Hand Parts*/;
 	
 		case 132:
-			return "AWT_1023";
+			return "AWT_1023" /*Towed Away*/;
 	
 		case 133:
-			return "AWT_1038";
+			return "AWT_1038" /*Bountiful*/;
 	
 		case 134:
-			return "AWT_1039";
+			return "AWT_1039" /*Still Breathing*/;
 	
 		case 135:
-			return "AWT_1040";
+			return "AWT_1040" /*Cash On Delivery*/;
 	
 		case 136:
-			return "AWT_1041";
+			return "AWT_1041" /*Step Two: Profit*/;
 	
 		case 137:
-			return "AWT_1042";
+			return "AWT_1042" /*Dispatched*/;
 	
 		case 138:
-			return "AWT_1043";
+			return "AWT_1043" /*Pizza This...*/;
 	
 		case 139:
-			return "AWT_1046";
+			return "AWT_1046" /*Happy Landings*/;
 	
 		case 140:
-			return "AWT_1047";
+			return "AWT_1047" /*Hard Drive Hoarder*/;
 	
 		case 141:
-			return "AWT_1048";
+			return "AWT_1048" /*Death Trap*/;
 	
 		case 142:
-			return "AWT_1055";
+			return "AWT_1055" /*Darnell Bros Inc.*/;
 	
 		case 143:
-			return "AWT_1056";
+			return "AWT_1056" /*Get Ready*/;
 	
 		case 144:
-			return "AWT_1057";
+			return "AWT_1057" /*Cash In Hand*/;
 	
 		case 145:
-			return "AWT_1058";
+			return "AWT_1058" /*Brotherly Love*/;
 	
 		case 146:
-			return "AWT_1062";
+			return "AWT_1062" /*Not Out Of Your Depth*/;
 	
 		case 147:
-			return "AWT_1066";
+			return "AWT_1066" /*Fully Stocked*/;
 	
 		case 148:
-			return "AWT_1069";
+			return "AWT_1069" /*Arms In Arms*/;
 	}
 
 	return "";
 }
 
-int func_123(int iParam0, int iParam1) // Position - 0x12656
+int func_123(int iParam0, int iParam1) // Position - 0x12656 (75350)
 {
 	if (func_80(func_50(iParam0, -1), func_52(iParam0, 5, iParam1)))
 		return 5;
@@ -16689,7 +16689,7 @@ int func_123(int iParam0, int iParam1) // Position - 0x12656
 	return 2;
 }
 
-int func_124(int iParam0, int iParam1) // Position - 0x126CB
+int func_124(int iParam0, int iParam1) // Position - 0x126CB (75467)
 {
 	if (!func_80(func_50(iParam0, -1), func_52(iParam0, 2, iParam1)))
 		return 0;
@@ -16706,22 +16706,22 @@ int func_124(int iParam0, int iParam1) // Position - 0x126CB
 	return 5;
 }
 
-BOOL IS_PLAYSTATION_PLATFORM() // Position - 0x12744
+BOOL IS_PLAYSTATION_PLATFORM() // Position - 0x12744 (75588)
 {
 	return MISC::IS_ORBIS_VERSION() || MISC::IS_PROSPERO_VERSION();
 }
 
-BOOL IS_XBOX_PLATFORM() // Position - 0x1275A
+BOOL IS_XBOX_PLATFORM() // Position - 0x1275A (75610)
 {
 	return MISC::IS_DURANGO_VERSION() || MISC::IS_SCARLETT_VERSION();
 }
 
-BOOL func_127() // Position - 0x12770
+BOOL func_127() // Position - 0x12770 (75632)
 {
 	return *Global_262145.f_33140;
 }
 
-void func_128(var uParam0, var uParam1) // Position - 0x12782
+void func_128(var uParam0, var uParam1) // Position - 0x12782 (75650)
 {
 	int num;
 	int num2;
@@ -16753,7 +16753,7 @@ void func_128(var uParam0, var uParam1) // Position - 0x12782
 	return;
 }
 
-void func_129(int iParam0, int iParam1, int iParam2, const char* sParam3, BOOL bParam4) // Position - 0x12812
+void func_129(int iParam0, int iParam1, int iParam2, const char* sParam3, BOOL bParam4) // Position - 0x12812 (75794)
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("SET_COLUMN_SCROLL");
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iParam0);
@@ -16778,7 +16778,7 @@ void func_129(int iParam0, int iParam1, int iParam2, const char* sParam3, BOOL b
 	return;
 }
 
-void func_130(int iParam0) // Position - 0x1286F
+void func_130(int iParam0) // Position - 0x1286F (75887)
 {
 	int offset;
 	BOOL flag;
@@ -16830,7 +16830,7 @@ void func_130(int iParam0) // Position - 0x1286F
 	return;
 }
 
-int func_131(int iParam0) // Position - 0x12945
+int func_131(int iParam0) // Position - 0x12945 (76101)
 {
 	switch (iParam0)
 	{
@@ -16862,7 +16862,7 @@ int func_131(int iParam0) // Position - 0x12945
 	return 0;
 }
 
-BOOL func_132(int iParam0) // Position - 0x129C5
+BOOL func_132(int iParam0) // Position - 0x129C5 (76229)
 {
 	switch (iParam0)
 	{
@@ -16880,7 +16880,7 @@ BOOL func_132(int iParam0) // Position - 0x129C5
 	return false;
 }
 
-BOOL func_133(int iParam0) // Position - 0x12A0C
+BOOL func_133(int iParam0) // Position - 0x12A0C (76300)
 {
 	int num;
 	int num2;
@@ -16890,7 +16890,7 @@ BOOL func_133(int iParam0) // Position - 0x12A0C
 	return IS_BIT_SET(num, func_55(num2));
 }
 
-int func_134(int iParam0) // Position - 0x12A29
+int func_134(int iParam0) // Position - 0x12A29 (76329)
 {
 	switch (func_135(iParam0))
 	{
@@ -16919,7 +16919,7 @@ int func_134(int iParam0) // Position - 0x12A29
 	return 0;
 }
 
-int func_135(int iParam0) // Position - 0x12AA3
+int func_135(int iParam0) // Position - 0x12AA3 (76451)
 {
 	int num;
 	int num2;
@@ -16951,7 +16951,7 @@ int func_135(int iParam0) // Position - 0x12AA3
 	return 15468;
 }
 
-int func_136(int iParam0) // Position - 0x12B1B
+int func_136(int iParam0) // Position - 0x12B1B (76571)
 {
 	switch (iParam0)
 	{
@@ -16968,7 +16968,7 @@ int func_136(int iParam0) // Position - 0x12B1B
 	return 0;
 }
 
-BOOL func_137(int iParam0) // Position - 0x12B55
+BOOL func_137(int iParam0) // Position - 0x12B55 (76629)
 {
 	switch (iParam0)
 	{
@@ -16981,7 +16981,7 @@ BOOL func_137(int iParam0) // Position - 0x12B55
 	return false;
 }
 
-void func_138(int iParam0) // Position - 0x12B7E
+void func_138(int iParam0) // Position - 0x12B7E (76670)
 {
 	int offset;
 	BOOL flag;
@@ -17029,7 +17029,7 @@ void func_138(int iParam0) // Position - 0x12B7E
 	return;
 }
 
-int func_139(int iParam0) // Position - 0x12C4E
+int func_139(int iParam0) // Position - 0x12C4E (76878)
 {
 	switch (iParam0)
 	{
@@ -17085,7 +17085,7 @@ int func_139(int iParam0) // Position - 0x12C4E
 	return 0;
 }
 
-BOOL func_140(int iParam0) // Position - 0x12D36
+BOOL func_140(int iParam0) // Position - 0x12D36 (77110)
 {
 	switch (iParam0)
 	{
@@ -17111,7 +17111,7 @@ BOOL func_140(int iParam0) // Position - 0x12D36
 	return false;
 }
 
-int func_141(int iParam0) // Position - 0x12DAD
+int func_141(int iParam0) // Position - 0x12DAD (77229)
 {
 	switch (iParam0)
 	{
@@ -17167,7 +17167,7 @@ int func_141(int iParam0) // Position - 0x12DAD
 	return 0;
 }
 
-BOOL func_142(int iParam0) // Position - 0x12E95
+BOOL func_142(int iParam0) // Position - 0x12E95 (77461)
 {
 	switch (iParam0)
 	{
@@ -17193,7 +17193,7 @@ BOOL func_142(int iParam0) // Position - 0x12E95
 	return false;
 }
 
-int func_143(var uParam0, var uParam1, var uParam2, int iParam3) // Position - 0x12F0C
+int func_143(var uParam0, var uParam1, var uParam2, int iParam3) // Position - 0x12F0C (77580)
 {
 	int num;
 	int i;
@@ -17283,7 +17283,7 @@ int func_143(var uParam0, var uParam1, var uParam2, int iParam3) // Position - 0
 	return num;
 }
 
-void func_144(var uParam0, var uParam1) // Position - 0x13076
+void func_144(var uParam0, var uParam1) // Position - 0x13076 (77942)
 {
 	if (uParam1->f_5 > iLocal_109)
 	{
@@ -17295,26 +17295,26 @@ void func_144(var uParam0, var uParam1) // Position - 0x13076
 	return;
 }
 
-void func_145() // Position - 0x13097
+void func_145() // Position - 0x13097 (77975)
 {
 	func_129(0, -1, -1, 0, false);
 	return;
 }
 
-void func_146() // Position - 0x130A8
+void func_146() // Position - 0x130A8 (77992)
 {
 	func_147();
 	func_129(0, -1, -1, 0, false);
 	return;
 }
 
-void func_147() // Position - 0x130BD
+void func_147() // Position - 0x130BD (78013)
 {
 	func_148(false);
 	return;
 }
 
-void func_148(BOOL bParam0) // Position - 0x130CA
+void func_148(BOOL bParam0) // Position - 0x130CA (78026)
 {
 	if (bParam0)
 		func_149(0, 3, 0, 2, 0, false);
@@ -17324,7 +17324,7 @@ void func_148(BOOL bParam0) // Position - 0x130CA
 	return;
 }
 
-void func_149(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, BOOL bParam5) // Position - 0x130EE
+void func_149(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, BOOL bParam5) // Position - 0x130EE (78062)
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("INIT_COLUMN_SCROLL");
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iParam0);
@@ -17339,33 +17339,33 @@ void func_149(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, B
 	return;
 }
 
-void func_150(var uParam0) // Position - 0x13131
+void func_150(var uParam0) // Position - 0x13131 (78129)
 {
 	uParam0->f_463 = 1;
 	return;
 }
 
-void func_151(var uParam0) // Position - 0x1313F
+void func_151(var uParam0) // Position - 0x1313F (78143)
 {
 	uParam0->f_462 = 1;
 	return;
 }
 
-void func_152(int iParam0, var uParam1) // Position - 0x1314D
+void func_152(int iParam0, var uParam1) // Position - 0x1314D (78157)
 {
 	uParam1->f_455 = iParam0;
 	uParam1->f_456 = iParam0;
 	return;
 }
 
-void func_153(var uParam0) // Position - 0x13163
+void func_153(var uParam0) // Position - 0x13163 (78179)
 {
 	func_154(uParam0);
 	uParam0->f_460 = 1;
 	return;
 }
 
-void func_154(var uParam0) // Position - 0x13177
+void func_154(var uParam0) // Position - 0x13177 (78199)
 {
 	var unk;
 
@@ -17384,26 +17384,26 @@ void func_154(var uParam0) // Position - 0x13177
 	return;
 }
 
-void func_155(var uParam0) // Position - 0x131E0
+void func_155(var uParam0) // Position - 0x131E0 (78304)
 {
 	uParam0->f_498 = 1;
 	return;
 }
 
-void func_156(int iParam0, var uParam1) // Position - 0x131EE
+void func_156(int iParam0, var uParam1) // Position - 0x131EE (78318)
 {
 	uParam1->f_495 = iParam0;
 	return;
 }
 
-void func_157(var uParam0) // Position - 0x131FD
+void func_157(var uParam0) // Position - 0x131FD (78333)
 {
 	func_158(uParam0);
 	uParam0->f_497 = 1;
 	return;
 }
 
-void func_158(var uParam0) // Position - 0x13211
+void func_158(var uParam0) // Position - 0x13211 (78353)
 {
 	var unk;
 

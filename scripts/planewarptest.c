@@ -28,7 +28,7 @@
 	var uLocal_26 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -47,9 +47,9 @@ void main() // Position - 0x0
 		func_1();
 
 	MISC::SET_MISSION_FLAG(true);
-	STREAMING::REQUEST_MODEL(-644710429);
+	STREAMING::REQUEST_MODEL(joaat("cuban800"));
 
-	while (!STREAMING::HAS_MODEL_LOADED(-644710429))
+	while (!STREAMING::HAS_MODEL_LOADED(joaat("cuban800")))
 	{
 		SYSTEM::WAIT(0);
 	}
@@ -63,9 +63,9 @@ void main() // Position - 0x0
 		ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1220.2024f, 3596.2805f, 33.259f, true, false, false, true);
 
 	STREAMING::LOAD_SCENE(1220.2024f, 3596.2805f, 33.259f);
-	veLocal_16 = VEHICLE::CREATE_VEHICLE(-644710429, uLocal_17[0 /*3*/], uLocal_24[0], true, true, false);
+	veLocal_16 = VEHICLE::CREATE_VEHICLE(joaat("cuban800"), uLocal_17[0 /*3*/], uLocal_24[0], true, true, false);
 	VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(veLocal_16, 1084227584);
-	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(-644710429);
+	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("cuban800"));
 
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 		PED::SET_PED_INTO_VEHICLE(PLAYER::PLAYER_PED_ID(), veLocal_16, -1);
@@ -79,7 +79,7 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1() // Position - 0x136
+void func_1() // Position - 0x136 (310)
 {
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 		TASK::CLEAR_PED_TASKS_IMMEDIATELY(PLAYER::PLAYER_PED_ID());
@@ -87,7 +87,7 @@ void func_1() // Position - 0x136
 	if (ENTITY::DOES_ENTITY_EXIST(veLocal_16))
 		VEHICLE::DELETE_VEHICLE(&veLocal_16);
 
-	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(-644710429);
+	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("cuban800"));
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;
 }

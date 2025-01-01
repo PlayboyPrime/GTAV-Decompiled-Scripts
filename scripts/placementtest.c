@@ -46,7 +46,7 @@
 	int iLocal_44 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	int scaleformHandle;
 
@@ -110,7 +110,7 @@ void main() // Position - 0x0
 	return;
 }
 
-BOOL func_1(var uParam0, BOOL bParam1) // Position - 0xEF
+BOOL func_1(var uParam0, BOOL bParam1) // Position - 0xEF (239)
 {
 	if (!func_8(&(uParam0->f_2)))
 		func_6(&(uParam0->f_2));
@@ -135,7 +135,7 @@ BOOL func_1(var uParam0, BOOL bParam1) // Position - 0xEF
 	return true;
 }
 
-void func_2(var uParam0) // Position - 0x175
+void func_2(var uParam0) // Position - 0x175 (373)
 {
 	uParam0->f_1 = 0f;
 	uParam0->f_2 = 0f;
@@ -143,7 +143,7 @@ void func_2(var uParam0) // Position - 0x175
 	return;
 }
 
-float func_3(var uParam0) // Position - 0x18B
+float func_3(var uParam0) // Position - 0x18B (395)
 {
 	if (func_8(uParam0))
 		if (func_5(uParam0))
@@ -154,7 +154,7 @@ float func_3(var uParam0) // Position - 0x18B
 	return uParam0->f_1;
 }
 
-float func_4(BOOL bParam0) // Position - 0x1C7
+float func_4(BOOL bParam0) // Position - 0x1C7 (455)
 {
 	float num;
 	float num2;
@@ -180,18 +180,18 @@ float func_4(BOOL bParam0) // Position - 0x1C7
 	return SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
 }
 
-BOOL func_5(var uParam0) // Position - 0x21F
+BOOL func_5(var uParam0) // Position - 0x21F (543)
 {
 	return IS_BIT_SET(*uParam0, 2);
 }
 
-void func_6(int* piParam0) // Position - 0x22C
+void func_6(int* piParam0) // Position - 0x22C (556)
 {
 	func_7(piParam0, 0f);
 	return;
 }
 
-void func_7(int* piParam0, float fParam1) // Position - 0x23B
+void func_7(int* piParam0, float fParam1) // Position - 0x23B (571)
 {
 	piParam0->f_1 = func_4(IS_BIT_SET(*piParam0, 4)) - fParam1;
 	MISC::SET_BIT(piParam0, 1);
@@ -200,12 +200,12 @@ void func_7(int* piParam0, float fParam1) // Position - 0x23B
 	return;
 }
 
-BOOL func_8(var uParam0) // Position - 0x266
+BOOL func_8(var uParam0) // Position - 0x266 (614)
 {
 	return IS_BIT_SET(*uParam0, 1);
 }
 
-void func_9(var uParam0) // Position - 0x273
+void func_9(var uParam0) // Position - 0x273 (627)
 {
 	uParam0->f_1 = 300;
 	func_6(&(uParam0->f_2));
@@ -215,14 +215,14 @@ void func_9(var uParam0) // Position - 0x273
 	return;
 }
 
-void func_10(var uParam0) // Position - 0x2A0
+void func_10(var uParam0) // Position - 0x2A0 (672)
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(*uParam0, "SPLASH_TEXT_TRANSITION_IN");
 	GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 	return;
 }
 
-void func_11(var uParam0, char* sParam1, int iParam2, int iParam3, int iParam4, int iParam5, BOOL bParam6) // Position - 0x2B7
+void func_11(var uParam0, char* sParam1, int iParam2, int iParam3, int iParam4, int iParam5, BOOL bParam6) // Position - 0x2B7 (695)
 {
 	uParam0->f_1 = -1;
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(*uParam0, "SPLASH_TEXT_LABEL");
@@ -242,14 +242,14 @@ void func_11(var uParam0, char* sParam1, int iParam2, int iParam3, int iParam4, 
 	return;
 }
 
-void func_12(char* sParam0) // Position - 0x305
+void func_12(char* sParam0) // Position - 0x305 (773)
 {
 	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(sParam0);
 	GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 	return;
 }
 
-int func_13() // Position - 0x317
+int func_13() // Position - 0x317 (791)
 {
 	return GRAPHICS::REQUEST_SCALEFORM_MOVIE("SPLASH_TEXT");
 }

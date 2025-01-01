@@ -66,7 +66,7 @@
 	var uLocal_64 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	iLocal_0 = 3;
 	iLocal_3 = 1;

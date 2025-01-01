@@ -20,7 +20,7 @@
 	int iLocal_18 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -86,7 +86,7 @@ void main() // Position - 0x0
 	return;
 }
 
-BOOL func_1() // Position - 0xC9
+BOOL func_1() // Position - 0xC9 (201)
 {
 	if (Global_21066.f_1 == 1 || Global_21066.f_1 == 3 || Global_21066.f_1 == 0 || Global_21010 == 1)
 	{
@@ -97,13 +97,13 @@ BOOL func_1() // Position - 0xC9
 	return false;
 }
 
-void func_2() // Position - 0x10C
+void func_2() // Position - 0x10C (268)
 {
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;
 }
 
-BOOL func_3() // Position - 0x118
+BOOL func_3() // Position - 0x118 (280)
 {
 	if (Global_9542 == 1 || Global_21066.f_1 < 7)
 	{
@@ -114,7 +114,7 @@ BOOL func_3() // Position - 0x118
 	return false;
 }
 
-void func_4() // Position - 0x141
+void func_4() // Position - 0x141 (321)
 {
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 		AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Back", &Global_21055, true);
@@ -122,7 +122,7 @@ void func_4() // Position - 0x141
 	return;
 }
 
-BOOL func_5(eControlType ectParam0, eControlAction ecaParam1, int iParam2) // Position - 0x161
+BOOL func_5(eControlType ectParam0, eControlAction ecaParam1, int iParam2) // Position - 0x161 (353)
 {
 	if (PAD::IS_CONTROL_JUST_PRESSED(ectParam0, ecaParam1) || iParam2 == 1 && PAD::IS_DISABLED_CONTROL_JUST_PRESSED(ectParam0, ecaParam1))
 	{
@@ -139,14 +139,14 @@ BOOL func_5(eControlType ectParam0, eControlAction ecaParam1, int iParam2) // Po
 	return false;
 }
 
-void func_6() // Position - 0x1D3
+void func_6() // Position - 0x1D3 (467)
 {
 	func_7();
 	PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_VEH_CIN_CAM, true);
 	return;
 }
 
-void func_7() // Position - 0x1E7
+void func_7() // Position - 0x1E7 (487)
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_21047, "SET_DATA_SLOT");
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(27);
@@ -166,7 +166,7 @@ void func_7() // Position - 0x1E7
 	return;
 }
 
-void func_8(int iParam0, char* sParam1, float fParam2, float fParam3, float fParam4, float fParam5, float fParam6, const char* sParam7, const char* sParam8, const char* sParam9, const char* sParam10, const char* sParam11) // Position - 0x262
+void func_8(int iParam0, char* sParam1, float fParam2, float fParam3, float fParam4, float fParam5, float fParam6, const char* sParam7, const char* sParam8, const char* sParam9, const char* sParam10, const char* sParam11) // Position - 0x262 (610)
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, sParam1);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::ROUND(fParam2));
@@ -202,14 +202,14 @@ void func_8(int iParam0, char* sParam1, float fParam2, float fParam3, float fPar
 	return;
 }
 
-void func_9(const char* sParam0) // Position - 0x315
+void func_9(const char* sParam0) // Position - 0x315 (789)
 {
 	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(sParam0);
 	GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 	return;
 }
 
-void func_10() // Position - 0x327
+void func_10() // Position - 0x327 (807)
 {
 	func_7();
 	func_8(Global_21047, "SET_SOFT_KEYS", 2f, 0f, 27f, -1f, -1f, 0, 0, 0, 0, 0);

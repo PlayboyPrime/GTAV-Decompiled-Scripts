@@ -12,7 +12,7 @@
 	Object obScriptParam_0 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	var unk;
 	var entityCoords;
@@ -42,13 +42,13 @@ void main() // Position - 0x0
 					case 0:
 						if (ENTITY::DOES_ENTITY_HAVE_DRAWABLE(obScriptParam_0))
 						{
-							STREAMING::REQUEST_MODEL(1922550796);
+							STREAMING::REQUEST_MODEL(joaat("p_abat_roller_1_col"));
 						
-							if (STREAMING::HAS_MODEL_LOADED(1922550796))
+							if (STREAMING::HAS_MODEL_LOADED(joaat("p_abat_roller_1_col")))
 							{
 								if (!func_3(uLocal_4, 0f, 0f, 0f, false))
 								{
-									obLocal_3 = OBJECT::CREATE_OBJECT(1922550796, uLocal_4, true, true, false);
+									obLocal_3 = OBJECT::CREATE_OBJECT(joaat("p_abat_roller_1_col"), uLocal_4, true, true, false);
 									ENTITY::SET_ENTITY_ROTATION(obLocal_3, uLocal_7, 2, true);
 									iLocal_2 = 1;
 								}
@@ -59,7 +59,7 @@ void main() // Position - 0x0
 					case 1:
 						if (ENTITY::DOES_ENTITY_HAVE_DRAWABLE(obScriptParam_0))
 						{
-							if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(-622120100) > 0)
+							if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("michael2")) > 0)
 							{
 								STREAMING::REQUEST_ANIM_DICT("map_objects");
 							
@@ -72,7 +72,7 @@ void main() // Position - 0x0
 					case 2:
 						if (ENTITY::DOES_ENTITY_HAVE_DRAWABLE(obScriptParam_0))
 						{
-							if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(-622120100) > 0)
+							if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("michael2")) > 0)
 							{
 								if (Global_98094)
 								{
@@ -125,7 +125,7 @@ void main() // Position - 0x0
 	return;
 }
 
-Vector3 func_1(float fParam0, var uParam1, var uParam2) // Position - 0x1C6
+Vector3 func_1(float fParam0, var uParam1, var uParam2) // Position - 0x1C6 (454)
 {
 	float num;
 	float num2;
@@ -147,7 +147,7 @@ Vector3 func_1(float fParam0, var uParam1, var uParam2) // Position - 0x1C6
 	return fParam0;
 }
 
-BOOL func_2(float fParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, float fParam6, BOOL bParam7) // Position - 0x205
+BOOL func_2(float fParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, float fParam6, BOOL bParam7) // Position - 0x205 (517)
 {
 	if (fParam6 < 0f)
 		fParam6 = 0f;
@@ -164,7 +164,7 @@ BOOL func_2(float fParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 	return false;
 }
 
-BOOL func_3(float fParam0, var uParam1, var uParam2, float fParam3, float fParam4, float fParam5, BOOL bParam6) // Position - 0x280
+BOOL func_3(float fParam0, var uParam1, var uParam2, float fParam3, float fParam4, float fParam5, BOOL bParam6) // Position - 0x280 (640)
 {
 	if (bParam6)
 		return fParam0 == fParam3 && fParam0.f_1 == fParam3.f_1;
@@ -172,24 +172,24 @@ BOOL func_3(float fParam0, var uParam1, var uParam2, float fParam3, float fParam
 	return fParam0 == fParam3 && fParam0.f_1 == fParam3.f_1 && fParam0.f_2 == fParam3.f_2;
 }
 
-void func_4() // Position - 0x2C7
+void func_4() // Position - 0x2C7 (711)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(obLocal_3))
 		OBJECT::DELETE_OBJECT(&obLocal_3);
 
-	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(1922550796);
+	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("p_abat_roller_1_col"));
 	func_5("ob_abatdoor Terminated >>>>>>>>>>>>>>>>>\\n");
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;
 }
 
-void func_5(char* sParam0) // Position - 0x2F2
+void func_5(char* sParam0) // Position - 0x2F2 (754)
 {
 	func_6(sParam0);
 	return;
 }
 
-void func_6(char* sParam0) // Position - 0x300
+void func_6(char* sParam0) // Position - 0x300 (768)
 {
 	MISC::ARE_STRINGS_EQUAL(sParam0, sParam0);
 	return;

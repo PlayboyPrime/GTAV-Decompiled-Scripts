@@ -1,5 +1,5 @@
 // Program registers 146865 globals at index 7 starting from Global_1835008
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	Global_1835426 = 1;
 	Global_1835427 = -1;
@@ -46,9 +46,9 @@ void main() // Position - 0x0
 	Global_1882745 = 1;
 	Global_1917903 = 1;
 	Global_1917904 = -1;
-	Global_1918083 = -1275859404;
-	Global_1918084 = -808457413;
-	Global_1918085 = 324215364;
+	Global_1918083 = joaat("S_M_Y_BlackOps_01");
+	Global_1918084 = joaat("patriot");
+	Global_1918085 = joaat("WEAPON_MICROSMG");
 	Global_1919340 = 1f;
 	Global_1919353 = -1;
 	Global_1919361 = 31;
@@ -62,7 +62,7 @@ void main() // Position - 0x0
 	Global_1928760 = { 1204.2096f, -3107.2524f, 4.5502f };
 	Global_1928764 = { 718.0308f, -976.4414f, 23.9148f };
 	Global_1938039 = 1;
-	Global_1939167 = -1090665087;
+	Global_1939167 = joaat("WEAPON_VEHICLE_ROCKET");
 	Global_1943575 = -1;
 	Global_1943576 = -3;
 	Global_1943582 = -1;

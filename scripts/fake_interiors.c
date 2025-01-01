@@ -34,7 +34,7 @@
 	int iLocal_32 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -77,7 +77,7 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1() // Position - 0xB1
+void func_1() // Position - 0xB1 (177)
 {
 	Vector3 entityCoords;
 	float x;
@@ -143,7 +143,7 @@ void func_1() // Position - 0xB1
 	return;
 }
 
-BOOL func_2() // Position - 0x1E7
+BOOL func_2() // Position - 0x1E7 (487)
 {
 	Player player;
 
@@ -162,17 +162,17 @@ BOOL func_2() // Position - 0x1E7
 	return false;
 }
 
-Player _INVALID_PLAYER_INDEX() // Position - 0x227
+Player _INVALID_PLAYER_INDEX() // Position - 0x227 (551)
 {
 	return -1;
 }
 
-Player _GET_BOSS_OF_LOCAL_PLAYER() // Position - 0x230
+Player _GET_BOSS_OF_LOCAL_PLAYER() // Position - 0x230 (560)
 {
 	return Global_1887549[PLAYER::PLAYER_ID() /*611*/].f_10;
 }
 
-BOOL func_5(Player plParam0, BOOL bParam1) // Position - 0x245
+BOOL func_5(Player plParam0, BOOL bParam1) // Position - 0x245 (581)
 {
 	if (!func_7(plParam0))
 		return false;
@@ -184,7 +184,7 @@ BOOL func_5(Player plParam0, BOOL bParam1) // Position - 0x245
 	return func_7(Global_1887549[plParam0 /*611*/].f_10);
 }
 
-BOOL func_6(Player plParam0) // Position - 0x27D
+BOOL func_6(Player plParam0) // Position - 0x27D (637)
 {
 	if (func_7(plParam0))
 		if (func_7(Global_1887549[plParam0 /*611*/].f_10))
@@ -193,7 +193,7 @@ BOOL func_6(Player plParam0) // Position - 0x27D
 	return false;
 }
 
-BOOL func_7(Player plParam0) // Position - 0x2B2
+BOOL func_7(Player plParam0) // Position - 0x2B2 (690)
 {
 	Player player;
 
@@ -208,7 +208,7 @@ BOOL func_7(Player plParam0) // Position - 0x2B2
 	return true;
 }
 
-BOOL func_8(Player plParam0) // Position - 0x2D4
+BOOL func_8(Player plParam0) // Position - 0x2D4 (724)
 {
 	int num;
 
@@ -223,7 +223,7 @@ BOOL func_8(Player plParam0) // Position - 0x2D4
 	return false;
 }
 
-int func_9(Player plParam0) // Position - 0x30D
+int func_9(Player plParam0) // Position - 0x30D (781)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
 		return Global_1845221[plParam0 /*889*/].f_268.f_299;
@@ -231,7 +231,7 @@ int func_9(Player plParam0) // Position - 0x30D
 	return 0;
 }
 
-BOOL func_10(Player plParam0) // Position - 0x331
+BOOL func_10(Player plParam0) // Position - 0x331 (817)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
 		return Global_1845221[plParam0 /*889*/].f_268.f_299 != 0;
@@ -239,7 +239,7 @@ BOOL func_10(Player plParam0) // Position - 0x331
 	return false;
 }
 
-void func_11(int iParam0) // Position - 0x357
+void func_11(int iParam0) // Position - 0x357 (855)
 {
 	float entityCoords;
 
@@ -271,7 +271,7 @@ void func_11(int iParam0) // Position - 0x357
 	return;
 }
 
-int func_12(int iParam0) // Position - 0x3C5
+int func_12(int iParam0) // Position - 0x3C5 (965)
 {
 	var entityCoords;
 
@@ -312,7 +312,7 @@ int func_12(int iParam0) // Position - 0x3C5
 	return 0;
 }
 
-int func_13(int iParam0) // Position - 0x49A
+int func_13(int iParam0) // Position - 0x49A (1178)
 {
 	switch (iParam0)
 	{
@@ -335,7 +335,7 @@ int func_13(int iParam0) // Position - 0x49A
 	return 0;
 }
 
-char* func_14(int iParam0) // Position - 0x4EB
+char* func_14(int iParam0) // Position - 0x4EB (1259)
 {
 	switch (iParam0)
 	{
@@ -358,7 +358,7 @@ char* func_14(int iParam0) // Position - 0x4EB
 	return "";
 }
 
-float func_15(int iParam0, int iParam1) // Position - 0x547
+float func_15(int iParam0, int iParam1) // Position - 0x547 (1351)
 {
 	switch (iParam0)
 	{
@@ -445,7 +445,7 @@ float func_15(int iParam0, int iParam1) // Position - 0x547
 	return 0f;
 }
 
-Vector3 func_16(int iParam0, int iParam1) // Position - 0x6D9
+Vector3 func_16(int iParam0, int iParam1) // Position - 0x6D9 (1753)
 {
 	switch (iParam0)
 	{
@@ -532,7 +532,7 @@ Vector3 func_16(int iParam0, int iParam1) // Position - 0x6D9
 	return uLocal_28;
 }
 
-Vector3 func_17(int iParam0, int iParam1) // Position - 0x922
+Vector3 func_17(int iParam0, int iParam1) // Position - 0x922 (2338)
 {
 	switch (iParam0)
 	{
@@ -619,7 +619,7 @@ Vector3 func_17(int iParam0, int iParam1) // Position - 0x922
 	return uLocal_28;
 }
 
-int func_18(int iParam0) // Position - 0xB6B
+int func_18(int iParam0) // Position - 0xB6B (2923)
 {
 	switch (iParam0)
 	{
@@ -642,7 +642,7 @@ int func_18(int iParam0) // Position - 0xB6B
 	return 0;
 }
 
-int func_19(int iParam0) // Position - 0xBBD
+int func_19(int iParam0) // Position - 0xBBD (3005)
 {
 	switch (iParam0)
 	{
@@ -665,7 +665,7 @@ int func_19(int iParam0) // Position - 0xBBD
 	return 0;
 }
 
-Vector3 func_20(int iParam0) // Position - 0xC1B
+Vector3 func_20(int iParam0) // Position - 0xC1B (3099)
 {
 	switch (iParam0)
 	{
@@ -688,7 +688,7 @@ Vector3 func_20(int iParam0) // Position - 0xC1B
 	return uLocal_28;
 }
 
-BOOL func_21(int iParam0) // Position - 0xCB5
+BOOL func_21(int iParam0) // Position - 0xCB5 (3253)
 {
 	switch (iParam0)
 	{
@@ -711,7 +711,7 @@ BOOL func_21(int iParam0) // Position - 0xCB5
 	return true;
 }
 
-void func_22() // Position - 0xCF2
+void func_22() // Position - 0xCF2 (3314)
 {
 	Vector3 entityCoords;
 
@@ -738,12 +738,12 @@ void func_22() // Position - 0xCF2
 	return;
 }
 
-Ped func_23() // Position - 0xD4C
+Ped func_23() // Position - 0xD4C (3404)
 {
 	return Global_2621446.f_2;
 }
 
-BOOL func_24(Player plParam0) // Position - 0xD5A
+BOOL func_24(Player plParam0) // Position - 0xD5A (3418)
 {
 	if (func_26(plParam0, 0))
 		return true;
@@ -758,12 +758,12 @@ BOOL func_24(Player plParam0) // Position - 0xD5A
 	return false;
 }
 
-BOOL func_25() // Position - 0xD99
+BOOL func_25() // Position - 0xD99 (3481)
 {
 	return IS_BIT_SET(Global_2621446, 3);
 }
 
-BOOL func_26(Player plParam0, int iParam1) // Position - 0xDA7
+BOOL func_26(Player plParam0, int iParam1) // Position - 0xDA7 (3495)
 {
 	BOOL flag;
 
@@ -782,7 +782,7 @@ BOOL func_26(Player plParam0, int iParam1) // Position - 0xDA7
 	return flag;
 }
 
-int func_27(int iParam0, BOOL bParam1) // Position - 0xE00
+int func_27(int iParam0, BOOL bParam1) // Position - 0xE00 (3584)
 {
 	int num;
 	int num2;
@@ -806,7 +806,7 @@ int func_27(int iParam0, BOOL bParam1) // Position - 0xE00
 	return num;
 }
 
-int func_28() // Position - 0xE41
+int func_28() // Position - 0xE41 (3649)
 {
 	return Global_1574926;
 }

@@ -48,7 +48,7 @@
 	int iLocal_46 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -90,7 +90,7 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1() // Position - 0xA4
+void func_1() // Position - 0xA4 (164)
 {
 	switch (iLocal_46)
 	{
@@ -145,13 +145,13 @@ void func_1() // Position - 0xA4
 	return;
 }
 
-void func_2(char* sParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8) // Position - 0x19C
+void func_2(char* sParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8) // Position - 0x19C (412)
 {
 	func_3(sParam0, "", iParam1, iParam2, iParam3, iParam4, iParam5, iParam6, iParam7, iParam8);
 	return;
 }
 
-void func_3(char* sParam0, char* sParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9) // Position - 0x1BD
+void func_3(char* sParam0, char* sParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9) // Position - 0x1BD (445)
 {
 	int i;
 
@@ -206,7 +206,7 @@ void func_3(char* sParam0, char* sParam1, int iParam2, int iParam3, int iParam4,
 	return;
 }
 
-void func_4() // Position - 0x390
+void func_4() // Position - 0x390 (912)
 {
 	int i;
 
@@ -233,7 +233,7 @@ void func_4() // Position - 0x390
 	return;
 }
 
-int func_5(char* sParam0) // Position - 0x4A7
+int func_5(char* sParam0) // Position - 0x4A7 (1191)
 {
 	if (MISC::ARE_STRINGS_EQUAL(sParam0, &Global_112775))
 		return 1;
@@ -244,7 +244,7 @@ int func_5(char* sParam0) // Position - 0x4A7
 	return 2;
 }
 
-BOOL func_6(char* sParam0) // Position - 0x4CE
+BOOL func_6(char* sParam0) // Position - 0x4CE (1230)
 {
 	int i;
 
@@ -257,7 +257,7 @@ BOOL func_6(char* sParam0) // Position - 0x4CE
 	return false;
 }
 
-BOOL func_7() // Position - 0x509
+BOOL func_7() // Position - 0x509 (1289)
 {
 	if (Global_79800)
 		return true;
@@ -267,12 +267,12 @@ BOOL func_7() // Position - 0x509
 	return false;
 }
 
-BOOL func_8() // Position - 0x533
+BOOL func_8() // Position - 0x533 (1331)
 {
 	return Global_101727.f_1;
 }
 
-BOOL func_9(int iParam0) // Position - 0x541
+BOOL func_9(int iParam0) // Position - 0x541 (1345)
 {
 	if (iParam0 == 94 || iParam0 == -1)
 		return false;
@@ -280,7 +280,7 @@ BOOL func_9(int iParam0) // Position - 0x541
 	return Global_114135.f_9089.f_330[iParam0 /*6*/];
 }
 
-void func_10() // Position - 0x56D
+void func_10() // Position - 0x56D (1389)
 {
 	if (func_6("AM_H_TAXI1" /*Use ~INPUT_CONTEXT~ to flag down passing taxis.*/))
 		func_11("AM_H_TAXI1" /*Use ~INPUT_CONTEXT~ to flag down passing taxis.*/, 1);
@@ -292,7 +292,7 @@ void func_10() // Position - 0x56D
 	return;
 }
 
-void func_11(char* sParam0, int iParam1) // Position - 0x59D
+void func_11(char* sParam0, int iParam1) // Position - 0x59D (1437)
 {
 	int i;
 	int j;
@@ -320,7 +320,7 @@ void func_11(char* sParam0, int iParam1) // Position - 0x59D
 	return;
 }
 
-void func_12(int iParam0) // Position - 0x64A
+void func_12(int iParam0) // Position - 0x64A (1610)
 {
 	TEXT_LABEL_ASSIGN_STRING(&Global_114135.f_20414[iParam0 /*16*/], "", 16);
 	TEXT_LABEL_ASSIGN_STRING(&(Global_114135.f_20414[iParam0 /*16*/].f_4), "", 16);
@@ -335,7 +335,7 @@ void func_12(int iParam0) // Position - 0x64A
 	return;
 }
 
-void func_13(int iParam0, int iParam1) // Position - 0x6E4
+void func_13(int iParam0, int iParam1) // Position - 0x6E4 (1764)
 {
 	Global_114135.f_20414[iParam0 /*16*/] = { Global_114135.f_20414[iParam1 /*16*/] };
 	Global_114135.f_20414[iParam0 /*16*/].f_4 = { Global_114135.f_20414[iParam1 /*16*/].f_4 };
@@ -350,7 +350,7 @@ void func_13(int iParam0, int iParam1) // Position - 0x6E4
 	return;
 }
 
-BOOL _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(char* message) // Position - 0x7F4
+BOOL _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(char* message) // Position - 0x7F4 (2036)
 {
 	HUD::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(message);
 	return HUD::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(0);

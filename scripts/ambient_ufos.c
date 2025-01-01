@@ -105,7 +105,7 @@
 	BOOL bLocal_103 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	int i;
 
@@ -297,7 +297,7 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1() // Position - 0x3A3
+void func_1() // Position - 0x3A3 (931)
 {
 	Vehicle vehiclePedIsIn;
 
@@ -315,7 +315,7 @@ void func_1() // Position - 0x3A3
 	return;
 }
 
-BOOL func_2(Vehicle veParam0) // Position - 0x3DF
+BOOL func_2(Vehicle veParam0) // Position - 0x3DF (991)
 {
 	if (_DOES_ENTITY_EXIST_AND_IS_ALIVE(veParam0))
 		if (VEHICLE::IS_VEHICLE_DRIVEABLE(veParam0, false))
@@ -325,7 +325,7 @@ BOOL func_2(Vehicle veParam0) // Position - 0x3DF
 	return false;
 }
 
-BOOL _DOES_ENTITY_EXIST_AND_IS_ALIVE(Vehicle veParam0) // Position - 0x409
+BOOL _DOES_ENTITY_EXIST_AND_IS_ALIVE(Vehicle veParam0) // Position - 0x409 (1033)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(veParam0))
 		if (!ENTITY::IS_ENTITY_DEAD(veParam0, false))
@@ -334,7 +334,7 @@ BOOL _DOES_ENTITY_EXIST_AND_IS_ALIVE(Vehicle veParam0) // Position - 0x409
 	return false;
 }
 
-void func_4(var uParam0) // Position - 0x42A
+void func_4(var uParam0) // Position - 0x42A (1066)
 {
 	if (*uParam0 != -1)
 	{
@@ -346,7 +346,7 @@ void func_4(var uParam0) // Position - 0x42A
 	return;
 }
 
-void func_5() // Position - 0x44B
+void func_5() // Position - 0x44B (1099)
 {
 	Vehicle vehiclePedIsIn;
 
@@ -364,7 +364,7 @@ void func_5() // Position - 0x44B
 	return;
 }
 
-void func_6() // Position - 0x491
+void func_6() // Position - 0x491 (1169)
 {
 	if (bLocal_103)
 	{
@@ -387,7 +387,7 @@ void func_6() // Position - 0x491
 	return;
 }
 
-void func_7() // Position - 0x4DB
+void func_7() // Position - 0x4DB (1243)
 {
 	if (bLocal_102)
 	{
@@ -410,7 +410,7 @@ void func_7() // Position - 0x4DB
 	return;
 }
 
-void func_8() // Position - 0x525
+void func_8() // Position - 0x525 (1317)
 {
 	Vector3 vector;
 
@@ -428,7 +428,7 @@ void func_8() // Position - 0x525
 	return;
 }
 
-Vector3 func_9(float fParam0, var uParam1, var uParam2) // Position - 0x593
+Vector3 func_9(float fParam0, var uParam1, var uParam2) // Position - 0x593 (1427)
 {
 	float num;
 	float num2;
@@ -450,12 +450,12 @@ Vector3 func_9(float fParam0, var uParam1, var uParam2) // Position - 0x593
 	return fParam0;
 }
 
-BOOL func_10(Ped pedParam0, Vector3 vParam1, var uParam2, var uParam3, float fParam4, BOOL bParam5) // Position - 0x5D2
+BOOL func_10(Ped pedParam0, Vector3 vParam1, var uParam2, var uParam3, float fParam4, BOOL bParam5) // Position - 0x5D2 (1490)
 {
 	return SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(pedParam0, bParam5), vParam1) <= fParam4 * fParam4;
 }
 
-BOOL func_11(Ped pedParam0) // Position - 0x5F0
+BOOL func_11(Ped pedParam0) // Position - 0x5F0 (1520)
 {
 	if (!ENTITY::DOES_ENTITY_EXIST(pedParam0))
 		return false;
@@ -463,7 +463,7 @@ BOOL func_11(Ped pedParam0) // Position - 0x5F0
 	return !ENTITY::IS_ENTITY_DEAD(pedParam0, false);
 }
 
-void func_12() // Position - 0x60E
+void func_12() // Position - 0x60E (1550)
 {
 	if (STREAMING::IS_IPL_ACTIVE("ufo"))
 		STREAMING::REMOVE_IPL("ufo");

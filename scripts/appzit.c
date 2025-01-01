@@ -63,7 +63,7 @@
 	int iLocal_61 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -174,7 +174,7 @@ void main() // Position - 0x0
 	return;
 }
 
-BOOL func_1() // Position - 0x1C6
+BOOL func_1() // Position - 0x1C6 (454)
 {
 	if (Global_21066.f_1 == 1 || Global_21066.f_1 == 3 || Global_21066.f_1 == 0 || Global_21010 == 1)
 	{
@@ -185,14 +185,14 @@ BOOL func_1() // Position - 0x1C6
 	return false;
 }
 
-void func_2() // Position - 0x209
+void func_2() // Position - 0x209 (521)
 {
 	bLocal_59 = false;
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;
 }
 
-BOOL func_3() // Position - 0x218
+BOOL func_3() // Position - 0x218 (536)
 {
 	if (Global_9542 == 1 || Global_21066.f_1 < 7)
 	{
@@ -203,7 +203,7 @@ BOOL func_3() // Position - 0x218
 	return false;
 }
 
-void func_4() // Position - 0x241
+void func_4() // Position - 0x241 (577)
 {
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 		AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Back", &Global_21055, true);
@@ -211,7 +211,7 @@ void func_4() // Position - 0x241
 	return;
 }
 
-BOOL func_5(eControlType ectParam0, eControlAction ecaParam1, int iParam2) // Position - 0x262
+BOOL func_5(eControlType ectParam0, eControlAction ecaParam1, int iParam2) // Position - 0x262 (610)
 {
 	if (PAD::IS_CONTROL_JUST_PRESSED(ectParam0, ecaParam1) || iParam2 == 1 && PAD::IS_DISABLED_CONTROL_JUST_PRESSED(ectParam0, ecaParam1))
 	{
@@ -228,7 +228,7 @@ BOOL func_5(eControlType ectParam0, eControlAction ecaParam1, int iParam2) // Po
 	return false;
 }
 
-void func_6() // Position - 0x2D4
+void func_6() // Position - 0x2D4 (724)
 {
 	if (SYSTEM::TIMERA() > 2200)
 	{
@@ -243,7 +243,7 @@ void func_6() // Position - 0x2D4
 	return;
 }
 
-void func_7(int iParam0, char* sParam1, float fParam2, float fParam3, float fParam4, float fParam5, float fParam6, char* sParam7, const char* sParam8, const char* sParam9, const char* sParam10, const char* sParam11) // Position - 0x324
+void func_7(int iParam0, char* sParam1, float fParam2, float fParam3, float fParam4, float fParam5, float fParam6, char* sParam7, const char* sParam8, const char* sParam9, const char* sParam10, const char* sParam11) // Position - 0x324 (804)
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, sParam1);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::ROUND(fParam2));
@@ -279,7 +279,7 @@ void func_7(int iParam0, char* sParam1, float fParam2, float fParam3, float fPar
 	return;
 }
 
-void func_8() // Position - 0x3D7
+void func_8() // Position - 0x3D7 (983)
 {
 	if (Global_21044 == 0)
 	{
@@ -319,7 +319,7 @@ void func_8() // Position - 0x3D7
 	return;
 }
 
-void func_9(int iParam0, char* sParam1, float fParam2, float fParam3, int iParam4, int iParam5, int iParam6) // Position - 0x4ED
+void func_9(int iParam0, char* sParam1, float fParam2, float fParam3, int iParam4, int iParam5, int iParam6) // Position - 0x4ED (1261)
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, sParam1);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::ROUND(fParam2));
@@ -340,14 +340,14 @@ void func_9(int iParam0, char* sParam1, float fParam2, float fParam3, int iParam
 	return;
 }
 
-void func_10(const char* sParam0) // Position - 0x550
+void func_10(const char* sParam0) // Position - 0x550 (1360)
 {
 	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(sParam0);
 	GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 	return;
 }
 
-void func_11() // Position - 0x562
+void func_11() // Position - 0x562 (1378)
 {
 	int playerRadioStationIndex;
 
@@ -372,7 +372,7 @@ void func_11() // Position - 0x562
 	return;
 }
 
-int func_12(int iParam0) // Position - 0x5AC
+int func_12(int iParam0) // Position - 0x5AC (1452)
 {
 	switch (iParam0)
 	{
@@ -404,7 +404,7 @@ int func_12(int iParam0) // Position - 0x5AC
 	return 0;
 }
 
-void func_13(int iParam0, int iParam1) // Position - 0x638
+void func_13(int iParam0, int iParam1) // Position - 0x638 (1592)
 {
 	int outValue;
 
@@ -427,7 +427,7 @@ void func_13(int iParam0, int iParam1) // Position - 0x638
 	return;
 }
 
-void func_14() // Position - 0x695
+void func_14() // Position - 0x695 (1685)
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_21047, "SET_DATA_SLOT");
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(23);
@@ -468,7 +468,7 @@ void func_14() // Position - 0x695
 	return;
 }
 
-void func_15() // Position - 0x7E5
+void func_15() // Position - 0x7E5 (2021)
 {
 	iLocal_49 = AUDIO::GET_AUDIBLE_MUSIC_TRACK_TEXT_ID();
 	TEXT_LABEL_ASSIGN_STRING(&uLocal_18, "", 64);

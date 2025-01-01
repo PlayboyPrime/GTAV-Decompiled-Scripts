@@ -23,7 +23,7 @@
 	BOOL bLocal_21 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -82,7 +82,7 @@ void main() // Position - 0x0
 	return;
 }
 
-BOOL func_1() // Position - 0xDC
+BOOL func_1() // Position - 0xDC (220)
 {
 	if (Global_21066.f_1 == 1 || Global_21066.f_1 == 3 || Global_21066.f_1 == 0 || Global_21010 == 1)
 	{
@@ -93,7 +93,7 @@ BOOL func_1() // Position - 0xDC
 	return false;
 }
 
-BOOL func_2() // Position - 0x11F
+BOOL func_2() // Position - 0x11F (287)
 {
 	if (Global_9542 == 1 || Global_21066.f_1 < 7)
 	{
@@ -104,7 +104,7 @@ BOOL func_2() // Position - 0x11F
 	return false;
 }
 
-void func_3() // Position - 0x148
+void func_3() // Position - 0x148 (328)
 {
 	if (!bLocal_18)
 	{
@@ -161,7 +161,7 @@ void func_3() // Position - 0x148
 	return;
 }
 
-void func_4(int iParam0, BOOL bParam1) // Position - 0x25C
+void func_4(int iParam0, BOOL bParam1) // Position - 0x25C (604)
 {
 	int num;
 	int value;
@@ -264,7 +264,7 @@ void func_4(int iParam0, BOOL bParam1) // Position - 0x25C
 	return;
 }
 
-char* func_5(int iParam0) // Position - 0x3D0
+char* func_5(int iParam0) // Position - 0x3D0 (976)
 {
 	switch (iParam0)
 	{
@@ -278,14 +278,14 @@ char* func_5(int iParam0) // Position - 0x3D0
 	return "ORG_EV_0" /*NOT SET!*/;
 }
 
-void func_6(char* sParam0) // Position - 0x400
+void func_6(char* sParam0) // Position - 0x400 (1024)
 {
 	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(sParam0);
 	GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 	return;
 }
 
-void func_7(int iParam0, char* sParam1, float fParam2, int iParam3, int iParam4, int iParam5, int iParam6) // Position - 0x412
+void func_7(int iParam0, char* sParam1, float fParam2, int iParam3, int iParam4, int iParam5, int iParam6) // Position - 0x412 (1042)
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, sParam1);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::ROUND(fParam2));
@@ -306,7 +306,7 @@ void func_7(int iParam0, char* sParam1, float fParam2, int iParam3, int iParam4,
 	return;
 }
 
-void func_8() // Position - 0x475
+void func_8() // Position - 0x475 (1141)
 {
 	int clockMonth;
 	int clockDayOfMonth;
@@ -468,7 +468,7 @@ void func_8() // Position - 0x475
 	return;
 }
 
-int func_9(int iParam0, int iParam1, int iParam2, int iParam3) // Position - 0x712
+int func_9(int iParam0, int iParam1, int iParam2, int iParam3) // Position - 0x712 (1810)
 {
 	int i;
 	int num;
@@ -522,12 +522,12 @@ int func_9(int iParam0, int iParam1, int iParam2, int iParam3) // Position - 0x7
 	return 0;
 }
 
-int func_10(int iParam0) // Position - 0x7C5
+int func_10(int iParam0) // Position - 0x7C5 (1989)
 {
 	return func_11(iParam0);
 }
 
-int func_11(int iParam0) // Position - 0x7D3
+int func_11(int iParam0) // Position - 0x7D3 (2003)
 {
 	switch (iParam0)
 	{
@@ -553,7 +553,7 @@ int func_11(int iParam0) // Position - 0x7D3
 	return 31;
 }
 
-void func_12() // Position - 0x81F
+void func_12() // Position - 0x81F (2079)
 {
 	int i;
 	int j;
@@ -575,7 +575,7 @@ void func_12() // Position - 0x81F
 	return;
 }
 
-void func_13() // Position - 0x86D
+void func_13() // Position - 0x86D (2157)
 {
 	Global_98753 = 0;
 	Global_98754 = 0;
@@ -585,7 +585,7 @@ void func_13() // Position - 0x86D
 	return;
 }
 
-void func_14() // Position - 0x897
+void func_14() // Position - 0x897 (2199)
 {
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;

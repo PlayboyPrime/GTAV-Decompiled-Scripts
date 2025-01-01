@@ -395,7 +395,7 @@
 	var uScriptParam_20 = -1;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -532,7 +532,7 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1() // Position - 0x24E
+void func_1() // Position - 0x24E (590)
 {
 	iLocal_202 = 0;
 
@@ -585,7 +585,7 @@ void func_1() // Position - 0x24E
 	return;
 }
 
-void func_2(int iParam0, Hash hParam1, int iParam2) // Position - 0x3A2
+void func_2(int iParam0, Hash hParam1, int iParam2) // Position - 0x3A2 (930)
 {
 	int offset;
 
@@ -639,13 +639,13 @@ void func_2(int iParam0, Hash hParam1, int iParam2) // Position - 0x3A2
 	return;
 }
 
-void _STOPWATCH_DESTROY(var uParam0) // Position - 0x47C
+void _STOPWATCH_DESTROY(var uParam0) // Position - 0x47C (1148)
 {
 	uParam0->f_1 = 0;
 	return;
 }
 
-BOOL _STOPWATCH_HAS_TIME_PASSED(var pStopwatch, int millis, BOOL useLocalTimer) // Position - 0x489
+BOOL _STOPWATCH_HAS_TIME_PASSED(var pStopwatch, int millis, BOOL useLocalTimer) // Position - 0x489 (1161)
 {
 	if (millis == -1)
 		return true;
@@ -661,7 +661,7 @@ BOOL _STOPWATCH_HAS_TIME_PASSED(var pStopwatch, int millis, BOOL useLocalTimer) 
 	return false;
 }
 
-void _STOPWATCH_INITIALIZE(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateTime) // Position - 0x4E7
+void _STOPWATCH_INITIALIZE(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateTime) // Position - 0x4E7 (1255)
 {
 	if (pStopwatch->f_1 == 0)
 	{
@@ -679,12 +679,12 @@ void _STOPWATCH_INITIALIZE(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateT
 	return;
 }
 
-BOOL _STOPWATCH_IS_INITIALIZED(var uParam0) // Position - 0x52C
+BOOL _STOPWATCH_IS_INITIALIZED(var uParam0) // Position - 0x52C (1324)
 {
 	return uParam0->f_1;
 }
 
-BOOL _NETWORK_IS_PLAYER_VALID(Player player, BOOL bIsPlaying, BOOL bUnk) // Position - 0x538
+BOOL _NETWORK_IS_PLAYER_VALID(Player player, BOOL bIsPlaying, BOOL bUnk) // Position - 0x538 (1336)
 {
 	Player player;
 
@@ -711,13 +711,13 @@ BOOL _NETWORK_IS_PLAYER_VALID(Player player, BOOL bIsPlaying, BOOL bUnk) // Posi
 	return false;
 }
 
-void func_8(int iParam0) // Position - 0x598
+void func_8(int iParam0) // Position - 0x598 (1432)
 {
 	iLocal_204 = iParam0;
 	return;
 }
 
-void func_9() // Position - 0x5A4
+void func_9() // Position - 0x5A4 (1444)
 {
 	float num;
 	Vector3 vector;
@@ -763,7 +763,7 @@ void func_9() // Position - 0x5A4
 	return;
 }
 
-BOOL func_10(int iParam0) // Position - 0x76C
+BOOL func_10(int iParam0) // Position - 0x76C (1900)
 {
 	if (iParam0 < 32)
 		return IS_BIT_SET(Global_2672939.f_63.f_1, iParam0);
@@ -771,7 +771,7 @@ BOOL func_10(int iParam0) // Position - 0x76C
 	return IS_BIT_SET(Global_2672939.f_63.f_2, iParam0 - 32);
 }
 
-int _GET_ACTIVE_PV_SLOT() // Position - 0x79A
+int _GET_ACTIVE_PV_SLOT() // Position - 0x79A (1946)
 {
 	if (Global_2359296[func_12() /*5571*/].f_681.f_2 >= 547)
 	{
@@ -782,7 +782,7 @@ int _GET_ACTIVE_PV_SLOT() // Position - 0x79A
 	return Global_2359296[func_12() /*5571*/].f_681.f_2;
 }
 
-int func_12() // Position - 0x7DD
+int func_12() // Position - 0x7DD (2013)
 {
 	int num;
 
@@ -790,12 +790,12 @@ int func_12() // Position - 0x7DD
 	return num;
 }
 
-Vector3 _GET_PLAYER_COORDS(Player plParam0) // Position - 0x7EA
+Vector3 _GET_PLAYER_COORDS(Player plParam0) // Position - 0x7EA (2026)
 {
 	return ENTITY::GET_ENTITY_COORDS(PLAYER::GET_PLAYER_PED(plParam0), false);
 }
 
-void func_14() // Position - 0x7FD
+void func_14() // Position - 0x7FD (2045)
 {
 	int i;
 	int j;
@@ -858,7 +858,7 @@ void func_14() // Position - 0x7FD
 	return;
 }
 
-BOOL func_15(Player plParam0) // Position - 0x95B
+BOOL func_15(Player plParam0) // Position - 0x95B (2395)
 {
 	int num;
 	Player player;
@@ -894,12 +894,12 @@ BOOL func_15(Player plParam0) // Position - 0x95B
 	return false;
 }
 
-Player _INVALID_PLAYER_INDEX() // Position - 0x9EA
+Player _INVALID_PLAYER_INDEX() // Position - 0x9EA (2538)
 {
 	return -1;
 }
 
-Player func_17(Player plParam0) // Position - 0x9F3
+Player func_17(Player plParam0) // Position - 0x9F3 (2547)
 {
 	if (func_18(plParam0))
 		return Global_1887549[plParam0 /*611*/].f_10;
@@ -907,7 +907,7 @@ Player func_17(Player plParam0) // Position - 0x9F3
 	return _INVALID_PLAYER_INDEX();
 }
 
-BOOL func_18(Player plParam0) // Position - 0xA16
+BOOL func_18(Player plParam0) // Position - 0xA16 (2582)
 {
 	Player player;
 
@@ -922,7 +922,7 @@ BOOL func_18(Player plParam0) // Position - 0xA16
 	return true;
 }
 
-BOOL func_19(Player plParam0, BOOL bParam1) // Position - 0xA38
+BOOL func_19(Player plParam0, BOOL bParam1) // Position - 0xA38 (2616)
 {
 	if (!func_18(plParam0))
 		return false;
@@ -934,7 +934,7 @@ BOOL func_19(Player plParam0, BOOL bParam1) // Position - 0xA38
 	return func_18(Global_1887549[plParam0 /*611*/].f_10);
 }
 
-BOOL func_20(Player plParam0) // Position - 0xA70
+BOOL func_20(Player plParam0) // Position - 0xA70 (2672)
 {
 	if (func_18(plParam0))
 		if (func_18(Global_1887549[plParam0 /*611*/].f_10))
@@ -943,7 +943,7 @@ BOOL func_20(Player plParam0) // Position - 0xA70
 	return false;
 }
 
-int func_21(Player plParam0) // Position - 0xAA5
+int func_21(Player plParam0) // Position - 0xAA5 (2725)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
 		return Global_1845221[plParam0 /*889*/].f_268.f_299;
@@ -951,7 +951,7 @@ int func_21(Player plParam0) // Position - 0xAA5
 	return 0;
 }
 
-BOOL func_22(Player plParam0) // Position - 0xAC9
+BOOL func_22(Player plParam0) // Position - 0xAC9 (2761)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
 		return Global_1845221[plParam0 /*889*/].f_268.f_299 != 0;
@@ -959,7 +959,7 @@ BOOL func_22(Player plParam0) // Position - 0xAC9
 	return false;
 }
 
-void func_23(int iParam0, var uParam1) // Position - 0xAEF
+void func_23(int iParam0, var uParam1) // Position - 0xAEF (2799)
 {
 	switch (iParam0)
 	{
@@ -1003,7 +1003,7 @@ void func_23(int iParam0, var uParam1) // Position - 0xAEF
 	return;
 }
 
-void func_24() // Position - 0xC9A
+void func_24() // Position - 0xC9A (3226)
 {
 	if (func_25())
 	{
@@ -1022,7 +1022,7 @@ void func_24() // Position - 0xC9A
 	return;
 }
 
-BOOL func_25() // Position - 0xCC7
+BOOL func_25() // Position - 0xCC7 (3271)
 {
 	if (func_26())
 		return true;
@@ -1034,7 +1034,7 @@ BOOL func_25() // Position - 0xCC7
 	return false;
 }
 
-BOOL func_26() // Position - 0xCEF
+BOOL func_26() // Position - 0xCEF (3311)
 {
 	if (Global_4718592 == 2 || Global_4718592 == 8)
 		return true;
@@ -1042,12 +1042,12 @@ BOOL func_26() // Position - 0xCEF
 	return false;
 }
 
-int func_27() // Position - 0xD12
+int func_27() // Position - 0xD12 (3346)
 {
 	return iLocal_204;
 }
 
-BOOL func_28(var uParam0, int iParam1) // Position - 0xD1C
+BOOL func_28(var uParam0, int iParam1) // Position - 0xD1C (3356)
 {
 	Hash doorHash;
 	int i;
@@ -1072,7 +1072,7 @@ BOOL func_28(var uParam0, int iParam1) // Position - 0xD1C
 	return true;
 }
 
-struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
+struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89 (3465)
 {
 	int num;
 
@@ -1081,7 +1081,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 176:
 			num = -247372382;
 			num.f_1 = 99;
-			num.f_2 = -190780785;
+			num.f_2 = joaat("prop_com_gar_door_01");
 			num.f_3 = { 1204.57f, -3110.4f, 6.57f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1090,7 +1090,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 1:
 			num = -1198408382;
 			num.f_1 = 99;
-			num.f_2 = -2023754432;
+			num.f_2 = joaat("v_ilev_rc_door2");
 			num.f_3 = { 467.3716f, -1014.452f, 26.5362f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1100,7 +1100,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 2:
 			num = 1651829484;
 			num.f_1 = 99;
-			num.f_2 = -2023754432;
+			num.f_2 = joaat("v_ilev_rc_door2");
 			num.f_3 = { 469.9679f, -1014.452f, 26.5362f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1110,7 +1110,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 3:
 			num = -1209329220;
 			num.f_1 = 99;
-			num.f_2 = -340230128;
+			num.f_2 = joaat("v_ilev_gtdoor02");
 			num.f_3 = { 464.3613f, -984.6779f, 43.8344f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1120,7 +1120,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 4:
 			num = 534621945;
 			num.f_1 = 99;
-			num.f_2 = -1215222675;
+			num.f_2 = joaat("v_ilev_ph_door01");
 			num.f_3 = { 434.75f, -980.61f, 30.84f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1130,7 +1130,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 5:
 			num = -457131900;
 			num.f_1 = 99;
-			num.f_2 = 320433149;
+			num.f_2 = joaat("v_ilev_ph_door002");
 			num.f_3 = { 434.75f, -983.22f, 30.84f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1140,7 +1140,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 6:
 			num = 163748837;
 			num.f_1 = 99;
-			num.f_2 = 1071105235;
+			num.f_2 = joaat("prop_biolab_g_door");
 			num.f_3 = { 3589.1f, 3671.5f, 35f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1150,7 +1150,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 7:
 			num = -1249217678;
 			num.f_1 = 99;
-			num.f_2 = 1071105235;
+			num.f_2 = joaat("prop_biolab_g_door");
 			num.f_3 = { 3587.6f, 3663.3f, 35f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1160,7 +1160,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 33:
 			num = 1984929564;
 			num.f_1 = 99;
-			num.f_2 = -1081024910;
+			num.f_2 = joaat("v_ilev_bl_shutter2");
 			num.f_3 = { 3627.71f, 3746.72f, 27.69f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1170,7 +1170,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 34:
 			num = -1532658745;
 			num.f_1 = 99;
-			num.f_2 = -1081024910;
+			num.f_2 = joaat("v_ilev_bl_shutter2");
 			num.f_3 = { 3620.84f, 3751.53f, 27.69f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1180,7 +1180,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 36:
 			num = 1877357900;
 			num.f_1 = 99;
-			num.f_2 = 1755793225;
+			num.f_2 = joaat("v_ilev_abbmaindoor");
 			num.f_3 = { 962.1f, -2183.83f, 31.06f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1190,7 +1190,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 35:
 			num = -769623617;
 			num.f_1 = 99;
-			num.f_2 = 239858268;
+			num.f_2 = joaat("v_ilev_abbmaindoor2");
 			num.f_3 = { 961.79f, -2187.08f, 31.06f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1199,7 +1199,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 	
 		case 179:
 			num = 738966015;
-			num.f_2 = 725274945;
+			num.f_2 = joaat("prop_gate_airport_01");
 			num.f_3 = { -1138.47f, -2730.45f, 12.95f };
 		
 			if (iParam1 == 98)
@@ -1220,7 +1220,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 	
 		case 178:
 			num = 969004395;
-			num.f_2 = 725274945;
+			num.f_2 = joaat("prop_gate_airport_01");
 			num.f_3 = { -1151.2043f, -2723.1023f, 12.946f };
 		
 			if (iParam1 == 98)
@@ -1241,7 +1241,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 	
 		case 118:
 			num = 1036961952;
-			num.f_2 = 725274945;
+			num.f_2 = joaat("prop_gate_airport_01");
 			num.f_3 = { -977.5174f, -2837.2644f, 12.9549f };
 		
 			if (iParam1 == 98)
@@ -1262,7 +1262,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 	
 		case 119:
 			num = 1864280899;
-			num.f_2 = 725274945;
+			num.f_2 = joaat("prop_gate_airport_01");
 			num.f_3 = { -990.2963f, -2829.8872f, 12.9499f };
 		
 			if (iParam1 == 98)
@@ -1283,7 +1283,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 	
 		case 120:
 			num = -355737150;
-			num.f_2 = 569833973;
+			num.f_2 = joaat("prop_facgate_01");
 			num.f_3 = { -1213.4f, -2079.3003f, 12.907f };
 		
 			if (iParam1 == 98)
@@ -1305,7 +1305,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 121:
 			num = -1170618471;
 			num.f_1 = 99;
-			num.f_2 = 227019171;
+			num.f_2 = joaat("prop_fnclink_02gate6_r");
 			num.f_3 = { -967.4473f, -2778.495f, 14.409f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1315,7 +1315,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 122:
 			num = -1300449249;
 			num.f_1 = 99;
-			num.f_2 = 1526539404;
+			num.f_2 = joaat("prop_fnclink_02gate6_l");
 			num.f_3 = { -974.5734f, -2774.3809f, 14.4099f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1325,7 +1325,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 123:
 			num = -1529668404;
 			num.f_1 = 99;
-			num.f_2 = 227019171;
+			num.f_2 = joaat("prop_fnclink_02gate6_r");
 			num.f_3 = { -971.1018f, -2776.3855f, 14.409f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1335,7 +1335,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 124:
 			num = 1577455399;
 			num.f_1 = 99;
-			num.f_2 = 1526539404;
+			num.f_2 = joaat("prop_fnclink_02gate6_l");
 			num.f_3 = { -970.9188f, -2776.4907f, 14.409f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1345,7 +1345,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 125:
 			num = 2142655111;
 			num.f_1 = 99;
-			num.f_2 = 227019171;
+			num.f_2 = joaat("prop_fnclink_02gate6_r");
 			num.f_3 = { -935.2114f, -2767.3967f, 14.3882f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1355,7 +1355,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 126:
 			num = 996723181;
 			num.f_1 = 99;
-			num.f_2 = 1526539404;
+			num.f_2 = joaat("prop_fnclink_02gate6_l");
 			num.f_3 = { -933.1581f, -2763.9546f, 14.3882f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1365,7 +1365,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 127:
 			num = 1830923614;
 			num.f_1 = 99;
-			num.f_2 = 227019171;
+			num.f_2 = joaat("prop_fnclink_02gate6_r");
 			num.f_3 = { -933.0535f, -2763.7793f, 14.3882f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1375,7 +1375,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 128:
 			num = -125385686;
 			num.f_1 = 99;
-			num.f_2 = 1526539404;
+			num.f_2 = joaat("prop_fnclink_02gate6_l");
 			num.f_3 = { -931.0002f, -2760.3372f, 14.3882f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1385,7 +1385,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 129:
 			num = 745417724;
 			num.f_1 = 99;
-			num.f_2 = 227019171;
+			num.f_2 = joaat("prop_fnclink_02gate6_r");
 			num.f_3 = { -773.2438f, -2842.6775f, 14.2715f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1395,7 +1395,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 130:
 			num = -1305304906;
 			num.f_1 = 99;
-			num.f_2 = 1526539404;
+			num.f_2 = joaat("prop_fnclink_02gate6_l");
 			num.f_3 = { -769.7721f, -2844.682f, 14.2715f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1405,7 +1405,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 131:
 			num = -1543175077;
 			num.f_1 = 99;
-			num.f_2 = 227019171;
+			num.f_2 = joaat("prop_fnclink_02gate6_r");
 			num.f_3 = { -769.6071f, -2844.777f, 14.2715f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1415,7 +1415,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 132:
 			num = -811770997;
 			num.f_1 = 99;
-			num.f_2 = 1526539404;
+			num.f_2 = joaat("prop_fnclink_02gate6_l");
 			num.f_3 = { -766.1354f, -2846.7815f, 14.2715f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1425,7 +1425,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 133:
 			num = 29310942;
 			num.f_1 = 99;
-			num.f_2 = 1817008884;
+			num.f_2 = joaat("prop_fnclink_09gate1");
 			num.f_3 = { -828.9456f, -2964.3037f, 14.2758f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1435,7 +1435,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 134:
 			num = -247292187;
 			num.f_1 = 99;
-			num.f_2 = 1817008884;
+			num.f_2 = joaat("prop_fnclink_09gate1");
 			num.f_3 = { -907.7999f, -3100.874f, 14.2808f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1445,7 +1445,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 135:
 			num = 460387137;
 			num.f_1 = 99;
-			num.f_2 = 1817008884;
+			num.f_2 = joaat("prop_fnclink_09gate1");
 			num.f_3 = { -833.4395f, -3186.7095f, 14.267f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1455,7 +1455,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 136:
 			num = 106875165;
 			num.f_1 = 99;
-			num.f_2 = 1817008884;
+			num.f_2 = joaat("prop_fnclink_09gate1");
 			num.f_3 = { -830.0544f, -3391.1628f, 14.1972f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1465,7 +1465,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 137:
 			num = 923052648;
 			num.f_1 = 99;
-			num.f_2 = 1817008884;
+			num.f_2 = joaat("prop_fnclink_09gate1");
 			num.f_3 = { -913.0834f, -3534.9697f, 14.1924f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1475,7 +1475,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 138:
 			num = -1237505857;
 			num.f_1 = 99;
-			num.f_2 = 1817008884;
+			num.f_2 = joaat("prop_fnclink_09gate1");
 			num.f_3 = { -971.6149f, -3549.152f, 14.2727f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1485,7 +1485,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 139:
 			num = -1938172615;
 			num.f_1 = 99;
-			num.f_2 = 1817008884;
+			num.f_2 = joaat("prop_fnclink_09gate1");
 			num.f_3 = { -1017.6921f, -3563.2173f, 14.2767f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1495,7 +1495,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 140:
 			num = -810513079;
 			num.f_1 = 99;
-			num.f_2 = 1817008884;
+			num.f_2 = joaat("prop_fnclink_09gate1");
 			num.f_3 = { -1146.8314f, -3546.6382f, 14.2595f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1505,7 +1505,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 141:
 			num = 69924413;
 			num.f_1 = 99;
-			num.f_2 = 1817008884;
+			num.f_2 = joaat("prop_fnclink_09gate1");
 			num.f_3 = { -1260.8966f, -3480.764f, 14.1721f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1515,7 +1515,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 142:
 			num = -152773711;
 			num.f_1 = 99;
-			num.f_2 = 1817008884;
+			num.f_2 = joaat("prop_fnclink_09gate1");
 			num.f_3 = { -1351.1328f, -3404.1616f, 14.1721f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1525,7 +1525,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 143:
 			num = 681951026;
 			num.f_1 = 99;
-			num.f_2 = 1817008884;
+			num.f_2 = joaat("prop_fnclink_09gate1");
 			num.f_3 = { -1409.5073f, -3370.4614f, 14.2068f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1535,7 +1535,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 144:
 			num = 877254262;
 			num.f_1 = 99;
-			num.f_2 = 1817008884;
+			num.f_2 = joaat("prop_fnclink_09gate1");
 			num.f_3 = { -1831.804f, -3224.9663f, 14.3119f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1545,7 +1545,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 145:
 			num = 1712929328;
 			num.f_1 = 99;
-			num.f_2 = 1817008884;
+			num.f_2 = joaat("prop_fnclink_09gate1");
 			num.f_3 = { -1942.2893f, -3161.1904f, 14.2981f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1555,7 +1555,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 146:
 			num = 1482661565;
 			num.f_1 = 99;
-			num.f_2 = 1817008884;
+			num.f_2 = joaat("prop_fnclink_09gate1");
 			num.f_3 = { -1927.5635f, -3076.269f, 14.4569f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1565,7 +1565,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 147:
 			num = 1782694529;
 			num.f_1 = 99;
-			num.f_2 = 1817008884;
+			num.f_2 = joaat("prop_fnclink_09gate1");
 			num.f_3 = { -1951.6956f, -3003.8457f, 14.4418f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1575,7 +1575,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 148:
 			num = -1714183772;
 			num.f_1 = 99;
-			num.f_2 = 1817008884;
+			num.f_2 = joaat("prop_fnclink_09gate1");
 			num.f_3 = { -1836.875f, -2804.969f, 14.4557f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1585,7 +1585,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 149:
 			num = -1953037013;
 			num.f_1 = 99;
-			num.f_2 = 1817008884;
+			num.f_2 = joaat("prop_fnclink_09gate1");
 			num.f_3 = { -1802.6915f, -2745.7615f, 14.448f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -1594,7 +1594,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 	
 		case 150:
 			num = -795813070;
-			num.f_2 = 569833973;
+			num.f_2 = joaat("prop_facgate_01");
 			num.f_3 = { -1099.5308f, -2020.8026f, 12.1745f };
 		
 			if (iParam1 == 98)
@@ -1615,7 +1615,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 	
 		case 151:
 			num = -580979506;
-			num.f_2 = 569833973;
+			num.f_2 = joaat("prop_facgate_01");
 			num.f_3 = { -994.4996f, -2341.6482f, 12.9448f };
 		
 			if (iParam1 == 98)
@@ -1636,7 +1636,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 	
 		case 152:
 			num = -1426452475;
-			num.f_2 = 569833973;
+			num.f_2 = joaat("prop_facgate_01");
 			num.f_3 = { -984.0709f, -2348.4001f, 12.9448f };
 		
 			if (iParam1 == 98)
@@ -1657,7 +1657,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 	
 		case 153:
 			num = -1178784373;
-			num.f_2 = 725274945;
+			num.f_2 = joaat("prop_gate_airport_01");
 			num.f_3 = { -1008.0708f, -2406.751f, 12.977f };
 		
 			if (iParam1 == 98)
@@ -1678,7 +1678,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 	
 		case 154:
 			num = 94815597;
-			num.f_2 = 725274945;
+			num.f_2 = joaat("prop_gate_airport_01");
 			num.f_3 = { -1015.4854f, -2419.5828f, 12.9586f };
 		
 			if (iParam1 == 98)
@@ -1700,7 +1700,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 62:
 			num = 208246292;
 			num.f_1 = 99;
-			num.f_2 = 1145337974;
+			num.f_2 = joaat("v_ilev_lester_doorfront");
 			num.f_3 = { 1273.82f, -1720.7f, 54.92f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1710,7 +1710,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 63:
 			num = -1357778570;
 			num.f_1 = 99;
-			num.f_2 = 464151082;
+			num.f_2 = joaat("v_ilev_tort_door");
 			num.f_3 = { 134.4f, -2204.1f, 7.52f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1720,7 +1720,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 74:
 			num = -80542775;
 			num.f_1 = 99;
-			num.f_2 = 486670049;
+			num.f_2 = joaat("v_ilev_janitor_frontdoor");
 			num.f_3 = { -107.5373f, -9.0181f, 70.6708f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1730,7 +1730,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 72:
 			num = 868388666;
 			num.f_1 = 99;
-			num.f_2 = -2069558801;
+			num.f_2 = joaat("v_ilev_deviantfrontdoor");
 			num.f_3 = { -128.33f, -1457.17f, 37.94f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1740,7 +1740,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 73:
 			num = 2137238404;
 			num.f_1 = 99;
-			num.f_2 = 1378348636;
+			num.f_2 = joaat("v_ilev_po_door");
 			num.f_3 = { -1910.58f, -576.01f, 19.25f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1750,7 +1750,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 64:
 			num = 1494493065;
 			num.f_1 = 99;
-			num.f_2 = -228773386;
+			num.f_2 = joaat("v_ilev_ra_door3");
 			num.f_3 = { 1395.92f, 1142.9f, 114.79f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1760,7 +1760,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 65:
 			num = 1388518119;
 			num.f_1 = 99;
-			num.f_2 = -228773386;
+			num.f_2 = joaat("v_ilev_ra_door3");
 			num.f_3 = { 1395.92f, 1140.7f, 114.79f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1770,7 +1770,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 66:
 			num = -2119698256;
 			num.f_1 = 99;
-			num.f_2 = -1032171637;
+			num.f_2 = joaat("v_ilev_ra_door1_l");
 			num.f_3 = { 1390.52f, 1163.44f, 114.38f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1780,7 +1780,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 67:
 			num = 1935563805;
 			num.f_1 = 99;
-			num.f_2 = -52575179;
+			num.f_2 = joaat("v_ilev_ra_door1_r");
 			num.f_3 = { 1390.52f, 1161.24f, 114.38f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1790,7 +1790,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 68:
 			num = -271559421;
 			num.f_1 = 99;
-			num.f_2 = -1032171637;
+			num.f_2 = joaat("v_ilev_ra_door1_l");
 			num.f_3 = { 1408.07f, 1158.97f, 114.48f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1800,7 +1800,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 69:
 			num = -1985574735;
 			num.f_1 = 99;
-			num.f_2 = -52575179;
+			num.f_2 = joaat("v_ilev_ra_door1_r");
 			num.f_3 = { 1408.07f, 1161.17f, 114.48f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1810,7 +1810,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 70:
 			num = -1132368282;
 			num.f_1 = 99;
-			num.f_2 = -1032171637;
+			num.f_2 = joaat("v_ilev_ra_door1_l");
 			num.f_3 = { 1409.29f, 1146.25f, 114.49f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1820,7 +1820,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 71:
 			num = -1508687478;
 			num.f_1 = 99;
-			num.f_2 = -52575179;
+			num.f_2 = joaat("v_ilev_ra_door1_r");
 			num.f_3 = { 1409.29f, 1148.45f, 114.49f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1830,7 +1830,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 75:
 			num = 689210336;
 			num.f_1 = 99;
-			num.f_2 = -421709054;
+			num.f_2 = joaat("v_ilev_bl_door_l");
 			num.f_3 = { -1387.05f, -586.58f, 30.47f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1840,7 +1840,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 76:
 			num = 510553748;
 			num.f_1 = 99;
-			num.f_2 = 1282049587;
+			num.f_2 = joaat("v_ilev_bl_door_r");
 			num.f_3 = { -1389.24f, -588f, 30.47f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1850,7 +1850,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 77:
 			num = 313127870;
 			num.f_1 = 99;
-			num.f_2 = -577103870;
+			num.f_2 = joaat("prop_sec_gate_01c");
 			num.f_3 = { 25.03f, -664.6f, 31.04f };
 			num.f_7 = 1;
 			num.f_8 = 5;
@@ -1860,7 +1860,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 78:
 			num = 145416128;
 			num.f_1 = 99;
-			num.f_2 = 267648181;
+			num.f_2 = joaat("prop_sec_gate_01d");
 			num.f_3 = { -72.75f, -682.17f, 33.27f };
 			num.f_7 = 1;
 			num.f_8 = 5;
@@ -1870,7 +1870,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 60:
 			num = -948170937;
 			num.f_1 = 99;
-			num.f_2 = -353187150;
+			num.f_2 = joaat("v_ilev_bank4door02");
 			num.f_3 = { -111.48f, 6463.94f, 31.985f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1880,7 +1880,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 61:
 			num = -684544332;
 			num.f_1 = 99;
-			num.f_2 = -1666470363;
+			num.f_2 = joaat("v_ilev_bank4door01");
 			num.f_3 = { -109.65f, 6462.11f, 31.985f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1890,7 +1890,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 12:
 			num = -1135190791;
 			num.f_1 = 99;
-			num.f_2 = -222270721;
+			num.f_2 = joaat("hei_v_ilev_bk_gate_pris");
 			num.f_3 = { 256.3116f, 220.6579f, 106.4296f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1900,7 +1900,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 13:
 			num = 1011604710;
 			num.f_1 = 99;
-			num.f_2 = 746855201;
+			num.f_2 = joaat("hei_v_ilev_bk_gate2_pris");
 			num.f_3 = { 262.1981f, 222.5188f, 106.4296f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1910,7 +1910,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 14:
 			num = -403267826;
 			num.f_1 = 99;
-			num.f_2 = -1152174184;
+			num.f_2 = joaat("v_ilev_genbankdoor1");
 			num.f_3 = { -2965.821f, 481.63f, 16.048f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1920,7 +1920,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 15:
 			num = -171885917;
 			num.f_1 = 99;
-			num.f_2 = 73386408;
+			num.f_2 = joaat("v_ilev_genbankdoor2");
 			num.f_3 = { -2965.71f, 484.219f, 16.048f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1930,7 +1930,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 16:
 			num = 1734755709;
 			num.f_1 = 99;
-			num.f_2 = -1152174184;
+			num.f_2 = joaat("v_ilev_genbankdoor1");
 			num.f_3 = { 1176.49f, 2703.61f, 38.44f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1940,7 +1940,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 17:
 			num = -1006108989;
 			num.f_1 = 99;
-			num.f_2 = 73386408;
+			num.f_2 = joaat("v_ilev_genbankdoor2");
 			num.f_3 = { 1173.9f, 2703.61f, 38.44f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1950,7 +1950,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 18:
 			num = 2012837225;
 			num.f_1 = 99;
-			num.f_2 = -1152174184;
+			num.f_2 = joaat("v_ilev_genbankdoor1");
 			num.f_3 = { 1656.25f, 4852.24f, 42.35f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1960,7 +1960,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 19:
 			num = 314747645;
 			num.f_1 = 99;
-			num.f_2 = 73386408;
+			num.f_2 = joaat("v_ilev_genbankdoor2");
 			num.f_3 = { 1656.57f, 4849.66f, 42.35f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1970,7 +1970,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 20:
 			num = 571329950;
 			num.f_1 = 99;
-			num.f_2 = -1152174184;
+			num.f_2 = joaat("v_ilev_genbankdoor1");
 			num.f_3 = { -1215.39f, -328.52f, 38.13f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1980,7 +1980,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 21:
 			num = 266021177;
 			num.f_1 = 99;
-			num.f_2 = 73386408;
+			num.f_2 = joaat("v_ilev_genbankdoor2");
 			num.f_3 = { -1213.07f, -327.35f, 38.13f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -1990,7 +1990,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 22:
 			num = -171153163;
 			num.f_1 = 99;
-			num.f_2 = -1152174184;
+			num.f_2 = joaat("v_ilev_genbankdoor1");
 			num.f_3 = { 149.63f, -1037.23f, 29.72f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -2000,7 +2000,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 23:
 			num = -1163398483;
 			num.f_1 = 99;
-			num.f_2 = 73386408;
+			num.f_2 = joaat("v_ilev_genbankdoor2");
 			num.f_3 = { 152.06f, -1038.12f, 29.72f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -2010,7 +2010,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 24:
 			num = 1080982134;
 			num.f_1 = 99;
-			num.f_2 = -1152174184;
+			num.f_2 = joaat("v_ilev_genbankdoor1");
 			num.f_3 = { 313.96f, -275.6f, 54.52f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -2020,7 +2020,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 25:
 			num = -775086795;
 			num.f_1 = 99;
-			num.f_2 = 73386408;
+			num.f_2 = joaat("v_ilev_genbankdoor2");
 			num.f_3 = { 316.39f, -276.49f, 54.52f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -2030,7 +2030,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 26:
 			num = -1819100989;
 			num.f_1 = 99;
-			num.f_2 = 73386408;
+			num.f_2 = joaat("v_ilev_genbankdoor2");
 			num.f_3 = { -348.8109f, -47.2621f, 49.3876f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -2040,7 +2040,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 27:
 			num = 1787848387;
 			num.f_1 = 99;
-			num.f_2 = -1152174184;
+			num.f_2 = joaat("v_ilev_genbankdoor1");
 			num.f_3 = { -351.2598f, -46.4122f, 49.3876f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -2050,7 +2050,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 58:
 			num = 1598253329;
 			num.f_1 = 99;
-			num.f_2 = -1517873911;
+			num.f_2 = joaat("v_ilev_fibl_door02");
 			num.f_3 = { 106.38f, -742.7f, 46.18f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -2060,7 +2060,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 59:
 			num = 1369034174;
 			num.f_1 = 99;
-			num.f_2 = -90456267;
+			num.f_2 = joaat("v_ilev_fibl_door01");
 			num.f_3 = { 105.76f, -746.65f, 46.18f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -2070,7 +2070,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 183:
 			num = -1814497429;
 			num.f_1 = 99;
-			num.f_2 = -26664553;
+			num.f_2 = joaat("prop_ch3_01_trlrdoor_l");
 			num.f_3 = { 2333.23f, 2574.97f, 47.03f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -2080,7 +2080,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 184:
 			num = 1526269356;
 			num.f_1 = 99;
-			num.f_2 = 914592203;
+			num.f_2 = joaat("prop_ch3_01_trlrdoor_r");
 			num.f_3 = { 2329.65f, 2576.64f, 47.03f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -2090,7 +2090,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 185:
 			num = 422781221;
 			num.f_1 = 99;
-			num.f_2 = 1413743677;
+			num.f_2 = joaat("v_ilev_fh_frntdoor");
 			num.f_3 = { 0.2169f, -1823.3031f, 29.6391f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -2100,7 +2100,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 186:
 			num = -1066241800;
 			num.f_1 = 99;
-			num.f_2 = 1878909644;
+			num.f_2 = joaat("v_ilev_bl_doorel_l");
 			num.f_3 = { -2053.16f, 3239.49f, 30.5f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -2110,7 +2110,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 187:
 			num = 1959909816;
 			num.f_1 = 99;
-			num.f_2 = 1709395619;
+			num.f_2 = joaat("v_ilev_bl_doorel_r");
 			num.f_3 = { -2054.39f, 3237.23f, 30.5f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -2120,7 +2120,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 188:
 			num = 1931749328;
 			num.f_1 = 99;
-			num.f_2 = 1342464176;
+			num.f_2 = joaat("prop_cs4_05_tdoor");
 			num.f_3 = { 31.918f, 3666.8535f, 40.8586f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -2130,7 +2130,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 189:
 			num = 1624933181;
 			num.f_1 = 99;
-			num.f_2 = 668467214;
+			num.f_2 = joaat("prop_magenta_door");
 			num.f_3 = { 29.102f, 3661.4893f, 40.8547f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -2140,7 +2140,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 290:
 			num = -1184370912;
 			num.f_1 = 99;
-			num.f_2 = 1853479348;
+			num.f_2 = joaat("hei_prop_heist_cutscene_doorb");
 			num.f_3 = { 776.8f, 4184.64f, 41.91f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -2150,7 +2150,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 291:
 			num = -1023333176;
 			num.f_1 = 99;
-			num.f_2 = -1697796712;
+			num.f_2 = joaat("apa_prop_apa_cutscene_doora");
 			num.f_3 = { 722.399f, 4187.952f, 41.231f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -2160,7 +2160,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 292:
 			num = 651841620;
 			num.f_1 = 99;
-			num.f_2 = -1920147247;
+			num.f_2 = joaat("hei_prop_heist_cutscene_doorc_r");
 			num.f_3 = { 610.594f, -421.83f, 24.979f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -2170,7 +2170,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 293:
 			num = 1049460666;
 			num.f_1 = 99;
-			num.f_2 = 1890297615;
+			num.f_2 = joaat("hei_prop_heist_cutscene_doorc_l");
 			num.f_3 = { 610.874f, -419.365f, 24.979f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -2180,7 +2180,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 294:
 			num = 1343869835;
 			num.f_1 = 99;
-			num.f_2 = 1286392437;
+			num.f_2 = joaat("prop_gate_docks_ld");
 			num.f_3 = { 492f, -3116f, 5f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -2190,7 +2190,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 295:
 			num = 207506449;
 			num.f_1 = 99;
-			num.f_2 = 1286392437;
+			num.f_2 = joaat("prop_gate_docks_ld");
 			num.f_3 = { 476f, -3116f, 5f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -2200,7 +2200,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 296:
 			num = -2110173063;
 			num.f_1 = 99;
-			num.f_2 = -817177082;
+			num.f_2 = joaat("lr_prop_boathousedoor_l");
 			num.f_3 = { 1527.7452f, 3778.1309f, 34.7106f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -2210,7 +2210,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 297:
 			num = -1032072975;
 			num.f_1 = 99;
-			num.f_2 = 2042213105;
+			num.f_2 = joaat("lr_prop_boathousedoor_r");
 			num.f_3 = { 1530.7625f, 3780.244f, 34.7104f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -2223,7 +2223,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 190:
 			num = 1255781408;
 			num.f_1 = 99;
-			num.f_2 = -250842784;
+			num.f_2 = joaat("prop_fnclink_03gate2");
 			num.f_3 = { -687.73f, -2458.82f, 12.9f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2232,7 +2232,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 191:
 			num = 1901756713;
 			num.f_1 = 99;
-			num.f_2 = -250842784;
+			num.f_2 = joaat("prop_fnclink_03gate2");
 			num.f_3 = { -697.82f, -1226.5f, 12.91f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2241,7 +2241,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 192:
 			num = 1719167837;
 			num.f_1 = 99;
-			num.f_2 = -250842784;
+			num.f_2 = joaat("prop_fnclink_03gate2");
 			num.f_3 = { -692.77f, -2455.93f, 12.9f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2250,7 +2250,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 194:
 			num = 389336283;
 			num.f_1 = 99;
-			num.f_2 = 725274945;
+			num.f_2 = joaat("prop_gate_airport_01");
 			num.f_3 = { -891.93f, -2748.71f, 12.95f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2259,7 +2259,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 195:
 			num = 732598411;
 			num.f_1 = 99;
-			num.f_2 = 725274945;
+			num.f_2 = joaat("prop_gate_airport_01");
 			num.f_3 = { -896.46f, -2746.42f, 12.95f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2268,7 +2268,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 196:
 			num = 1348295152;
 			num.f_1 = 99;
-			num.f_2 = 725274945;
+			num.f_2 = joaat("prop_gate_airport_01");
 			num.f_3 = { -859.73f, -2683.9f, 12.76f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2277,7 +2277,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 197:
 			num = 1547432097;
 			num.f_1 = 99;
-			num.f_2 = 569833973;
+			num.f_2 = joaat("prop_facgate_01");
 			num.f_3 = { -1019.61f, -1897.02f, 13.37f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2286,7 +2286,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 198:
 			num = 1231145709;
 			num.f_1 = 99;
-			num.f_2 = 569833973;
+			num.f_2 = joaat("prop_facgate_01");
 			num.f_3 = { -160.88f, -2636.2f, 5.03f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2295,7 +2295,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 199:
 			num = 934782873;
 			num.f_1 = 99;
-			num.f_2 = 569833973;
+			num.f_2 = joaat("prop_facgate_01");
 			num.f_3 = { -148.71f, -2636.2f, 5.03f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2304,7 +2304,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 200:
 			num = 652215786;
 			num.f_1 = 99;
-			num.f_2 = 569833973;
+			num.f_2 = joaat("prop_facgate_01");
 			num.f_3 = { 237.78f, -2936.96f, 5.05f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2313,7 +2313,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 201:
 			num = -1791270241;
 			num.f_1 = 99;
-			num.f_2 = 1286392437;
+			num.f_2 = joaat("prop_gate_docks_ld");
 			num.f_3 = { -188.28f, -2204.61f, 9.3f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2322,7 +2322,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 202:
 			num = -2108474161;
 			num.f_1 = 99;
-			num.f_2 = 1286392437;
+			num.f_2 = joaat("prop_gate_docks_ld");
 			num.f_3 = { -127.56f, -2185.29f, 9.3f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2331,7 +2331,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 203:
 			num = -959673820;
 			num.f_1 = 99;
-			num.f_2 = 1286392437;
+			num.f_2 = joaat("prop_gate_docks_ld");
 			num.f_3 = { -33.22f, -2141.27f, 9.3f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2340,7 +2340,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 204:
 			num = -653316439;
 			num.f_1 = 99;
-			num.f_2 = 569833973;
+			num.f_2 = joaat("prop_facgate_01");
 			num.f_3 = { 1000.68f, -2454.99f, 27.57f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2349,7 +2349,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 205:
 			num = -1560558973;
 			num.f_1 = 99;
-			num.f_2 = 569833973;
+			num.f_2 = joaat("prop_facgate_01");
 			num.f_3 = { 1012.91f, -2456.23f, 27.53f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2358,7 +2358,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 206:
 			num = 1221988161;
 			num.f_1 = 99;
-			num.f_2 = 569833973;
+			num.f_2 = joaat("prop_facgate_01");
 			num.f_3 = { 1028.08f, -2364.72f, 29.52f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2367,7 +2367,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 207:
 			num = 1998121926;
 			num.f_1 = 99;
-			num.f_2 = 569833973;
+			num.f_2 = joaat("prop_facgate_01");
 			num.f_3 = { 1033.22f, -2299.1f, 29.52f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2376,7 +2376,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 208:
 			num = 1778504088;
 			num.f_1 = 99;
-			num.f_2 = 569833973;
+			num.f_2 = joaat("prop_facgate_01");
 			num.f_3 = { 1022.4f, -2417.13f, 28.13f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2385,7 +2385,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 209:
 			num = -1618264918;
 			num.f_1 = 99;
-			num.f_2 = 1185512375;
+			num.f_2 = joaat("prop_gate_military_01");
 			num.f_3 = { 2485.44f, -432.71f, 91.97f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2394,7 +2394,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 210:
 			num = -1881039529;
 			num.f_1 = 99;
-			num.f_2 = 741314661;
+			num.f_2 = joaat("prop_gate_prison_01");
 			num.f_3 = { 2485.09f, -335.84f, 91.98f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2403,7 +2403,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 211:
 			num = -1105298992;
 			num.f_1 = 99;
-			num.f_2 = 569833973;
+			num.f_2 = joaat("prop_facgate_01");
 			num.f_3 = { 2491.97f, -303.48f, 91.99f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2412,7 +2412,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 212:
 			num = -734026222;
 			num.f_1 = 99;
-			num.f_2 = 569833973;
+			num.f_2 = joaat("prop_facgate_01");
 			num.f_3 = { 1944.86f, -957.69f, 78.15f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2421,7 +2421,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 213:
 			num = 895772842;
 			num.f_1 = 99;
-			num.f_2 = 569833973;
+			num.f_2 = joaat("prop_facgate_01");
 			num.f_3 = { 1956.74f, -956.86f, 78.15f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2430,7 +2430,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 214:
 			num = 77825833;
 			num.f_1 = 99;
-			num.f_2 = 741314661;
+			num.f_2 = joaat("prop_gate_prison_01");
 			num.f_3 = { 1845f, 2604.81f, 44.64f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2439,7 +2439,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 215:
 			num = 308880052;
 			num.f_1 = 99;
-			num.f_2 = 741314661;
+			num.f_2 = joaat("prop_gate_prison_01");
 			num.f_3 = { 1818.55f, 2604.81f, 44.6f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2448,7 +2448,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 216:
 			num = -620547091;
 			num.f_1 = 99;
-			num.f_2 = 741314661;
+			num.f_2 = joaat("prop_gate_prison_01");
 			num.f_3 = { 1799.74f, 2616.98f, 44.61f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2457,7 +2457,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 217:
 			num = -1471033717;
 			num.f_1 = 99;
-			num.f_2 = 741314661;
+			num.f_2 = joaat("prop_gate_prison_01");
 			num.f_3 = { 1813.4f, 2488.63f, 44.47f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2466,7 +2466,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 218:
 			num = -1233360160;
 			num.f_1 = 99;
-			num.f_2 = 741314661;
+			num.f_2 = joaat("prop_gate_prison_01");
 			num.f_3 = { 1808.82f, 2474.88f, 44.47f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2475,7 +2475,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 219:
 			num = -2075785612;
 			num.f_1 = 99;
-			num.f_2 = 741314661;
+			num.f_2 = joaat("prop_gate_prison_01");
 			num.f_3 = { 1762.19f, 2426.73f, 44.44f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2484,7 +2484,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 220:
 			num = 1874713956;
 			num.f_1 = 99;
-			num.f_2 = 741314661;
+			num.f_2 = joaat("prop_gate_prison_01");
 			num.f_3 = { 1749.22f, 2420.28f, 44.43f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2493,7 +2493,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 221:
 			num = 2113436121;
 			num.f_1 = 99;
-			num.f_2 = 741314661;
+			num.f_2 = joaat("prop_gate_prison_01");
 			num.f_3 = { 1667.61f, 2408.11f, 44.42f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2502,7 +2502,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 222:
 			num = 1266488547;
 			num.f_1 = 99;
-			num.f_2 = 741314661;
+			num.f_2 = joaat("prop_gate_prison_01");
 			num.f_3 = { 1661.76f, 2748.32f, 44.43f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2511,7 +2511,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 223:
 			num = 2060464373;
 			num.f_1 = 99;
-			num.f_2 = 741314661;
+			num.f_2 = joaat("prop_gate_prison_01");
 			num.f_3 = { 1653.21f, 2409.71f, 44.42f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2520,7 +2520,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 224:
 			num = -1207063697;
 			num.f_1 = 99;
-			num.f_2 = 741314661;
+			num.f_2 = joaat("prop_gate_prison_01");
 			num.f_3 = { 1558.14f, 2469.87f, 44.4f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2529,7 +2529,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 225:
 			num = -565839905;
 			num.f_1 = 99;
-			num.f_2 = 741314661;
+			num.f_2 = joaat("prop_gate_prison_01");
 			num.f_3 = { 1551.18f, 2482.58f, 44.4f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2538,7 +2538,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 226:
 			num = -1189958275;
 			num.f_1 = 99;
-			num.f_2 = 741314661;
+			num.f_2 = joaat("prop_gate_prison_01");
 			num.f_3 = { 1547.41f, 2576.6f, 44.51f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2547,7 +2547,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 227:
 			num = -1492973218;
 			num.f_1 = 99;
-			num.f_2 = 741314661;
+			num.f_2 = joaat("prop_gate_prison_01");
 			num.f_3 = { 1547.99f, 2591.08f, 44.51f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2556,7 +2556,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 228:
 			num = 348251354;
 			num.f_1 = 99;
-			num.f_2 = 741314661;
+			num.f_2 = joaat("prop_gate_prison_01");
 			num.f_3 = { 1576.19f, 2667.23f, 44.51f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2565,7 +2565,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 229:
 			num = 40845365;
 			num.f_1 = 99;
-			num.f_2 = 741314661;
+			num.f_2 = joaat("prop_gate_prison_01");
 			num.f_3 = { 1584.63f, 2679.02f, 44.51f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2574,7 +2574,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 230:
 			num = -95047678;
 			num.f_1 = 99;
-			num.f_2 = 741314661;
+			num.f_2 = joaat("prop_gate_prison_01");
 			num.f_3 = { 1648.95f, 2741.55f, 44.45f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2583,7 +2583,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 231:
 			num = -267871384;
 			num.f_1 = 99;
-			num.f_2 = 741314661;
+			num.f_2 = joaat("prop_gate_prison_01");
 			num.f_3 = { 1762.58f, 2751.9f, 44.45f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2592,7 +2592,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 232:
 			num = 1572566732;
 			num.f_1 = 99;
-			num.f_2 = 741314661;
+			num.f_2 = joaat("prop_gate_prison_01");
 			num.f_3 = { 1776.26f, 2747.1f, 44.43f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2601,7 +2601,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 233:
 			num = 2106931155;
 			num.f_1 = 99;
-			num.f_2 = 741314661;
+			num.f_2 = joaat("prop_gate_prison_01");
 			num.f_3 = { 1829.8f, 2702.92f, 44.45f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2610,7 +2610,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 234:
 			num = -1899079099;
 			num.f_1 = 99;
-			num.f_2 = 741314661;
+			num.f_2 = joaat("prop_gate_prison_01");
 			num.f_3 = { 1834.92f, 2689.37f, 44.45f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2619,7 +2619,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 235:
 			num = -1592787256;
 			num.f_1 = 99;
-			num.f_2 = -1234764774;
+			num.f_2 = joaat("prop_fnclink_03gate1");
 			num.f_3 = { 222.07f, -2013.99f, 18.41f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2628,7 +2628,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 236:
 			num = -1902159381;
 			num.f_1 = 99;
-			num.f_2 = -1234764774;
+			num.f_2 = joaat("prop_fnclink_03gate1");
 			num.f_3 = { 210.93f, -2022.58f, 17.65f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2637,7 +2637,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 237:
 			num = -1605042858;
 			num.f_1 = 99;
-			num.f_2 = -655468553;
+			num.f_2 = joaat("prop_facgate_01b");
 			num.f_3 = { 459.7f, -2002.94f, 22.07f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2646,7 +2646,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 238:
 			num = -1558510878;
 			num.f_1 = 99;
-			num.f_2 = 569833973;
+			num.f_2 = joaat("prop_facgate_01");
 			num.f_3 = { 451.45f, -1994.01f, 22.07f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2655,7 +2655,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 239:
 			num = -1259755905;
 			num.f_1 = 99;
-			num.f_2 = -655468553;
+			num.f_2 = joaat("prop_facgate_01b");
 			num.f_3 = { 455.74f, -1944.85f, 23.66f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2664,7 +2664,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 240:
 			num = -42223710;
 			num.f_1 = 99;
-			num.f_2 = 569833973;
+			num.f_2 = joaat("prop_facgate_01");
 			num.f_3 = { 466.76f, -1939.65f, 23.66f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2673,7 +2673,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 241:
 			num = -687183168;
 			num.f_1 = 99;
-			num.f_2 = -655468553;
+			num.f_2 = joaat("prop_facgate_01b");
 			num.f_3 = { 539.83f, -1901.88f, 24.22f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2682,7 +2682,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 242:
 			num = 435613848;
 			num.f_1 = 99;
-			num.f_2 = 569833973;
+			num.f_2 = joaat("prop_facgate_01");
 			num.f_3 = { 550.87f, -1896.75f, 24.15f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2691,7 +2691,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 243:
 			num = 1139523801;
 			num.f_1 = 99;
-			num.f_2 = 569833973;
+			num.f_2 = joaat("prop_facgate_01");
 			num.f_3 = { 564.12f, -1903f, 23.71f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2700,7 +2700,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 244:
 			num = 1126088511;
 			num.f_1 = 99;
-			num.f_2 = -655468553;
+			num.f_2 = joaat("prop_facgate_01b");
 			num.f_3 = { 570.6271f, -1913.332f, 23.7104f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2709,7 +2709,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 245:
 			num = 827399076;
 			num.f_1 = 99;
-			num.f_2 = -1234764774;
+			num.f_2 = joaat("prop_fnclink_03gate1");
 			num.f_3 = { 1081.65f, -1818.42f, 36.43f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2718,7 +2718,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 246:
 			num = 1126285129;
 			num.f_1 = 99;
-			num.f_2 = 569833973;
+			num.f_2 = joaat("prop_facgate_01");
 			num.f_3 = { 987.52f, -1176.82f, 24.55f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2727,7 +2727,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 247:
 			num = 829955062;
 			num.f_1 = 99;
-			num.f_2 = 569833973;
+			num.f_2 = joaat("prop_facgate_01");
 			num.f_3 = { 705.64f, -1319.67f, 24.96f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2736,7 +2736,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 248:
 			num = -1633749438;
 			num.f_1 = 99;
-			num.f_2 = 569833973;
+			num.f_2 = joaat("prop_facgate_01");
 			num.f_3 = { 712.95f, -1329.42f, 24.99f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2745,7 +2745,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 249:
 			num = -1934732703;
 			num.f_1 = 99;
-			num.f_2 = 569833973;
+			num.f_2 = joaat("prop_facgate_01");
 			num.f_3 = { 796.46f, -921.49f, 24.4f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2754,7 +2754,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 250:
 			num = 1737951283;
 			num.f_1 = 99;
-			num.f_2 = 569833973;
+			num.f_2 = joaat("prop_facgate_01");
 			num.f_3 = { 795.78f, -909.33f, 24.36f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2763,7 +2763,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 251:
 			num = -703535835;
 			num.f_1 = 99;
-			num.f_2 = 569833973;
+			num.f_2 = joaat("prop_facgate_01");
 			num.f_3 = { 795.16f, -896.64f, 24.1f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2772,7 +2772,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 252:
 			num = -987085992;
 			num.f_1 = 99;
-			num.f_2 = 569833973;
+			num.f_2 = joaat("prop_facgate_01");
 			num.f_3 = { 794.48f, -884.48f, 24.06f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2781,7 +2781,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 253:
 			num = -1736447128;
 			num.f_1 = 99;
-			num.f_2 = -250842784;
+			num.f_2 = joaat("prop_fnclink_03gate2");
 			num.f_3 = { 546.17f, -1869.94f, 24.53f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2790,7 +2790,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 254:
 			num = 1725499419;
 			num.f_1 = 99;
-			num.f_2 = -1234764774;
+			num.f_2 = joaat("prop_fnclink_03gate1");
 			num.f_3 = { 492.33f, -1410.47f, 28.43f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2799,7 +2799,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 255:
 			num = 2032577718;
 			num.f_1 = 99;
-			num.f_2 = -1234764774;
+			num.f_2 = joaat("prop_fnclink_03gate1");
 			num.f_3 = { 484.57f, -1408.5f, 28.48f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2808,7 +2808,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 256:
 			num = 2130786415;
 			num.f_1 = 99;
-			num.f_2 = -1234764774;
+			num.f_2 = joaat("prop_fnclink_03gate1");
 			num.f_3 = { 469.33f, -1272.7f, 28.82f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2817,7 +2817,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 257:
 			num = -783852294;
 			num.f_1 = 99;
-			num.f_2 = -1234764774;
+			num.f_2 = joaat("prop_fnclink_03gate1");
 			num.f_3 = { 487.87f, -1272.59f, 28.86f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2826,7 +2826,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 258:
 			num = -493650030;
 			num.f_1 = 99;
-			num.f_2 = -1483471451;
+			num.f_2 = joaat("prop_facgate_08");
 			num.f_3 = { 488.89f, -1011.67f, 27.14f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2835,7 +2835,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 259:
 			num = -1403186394;
 			num.f_1 = 99;
-			num.f_2 = -1234764774;
+			num.f_2 = joaat("prop_fnclink_03gate1");
 			num.f_3 = { 527.55f, -1597.33f, 28.39f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2844,7 +2844,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 260:
 			num = -1105283415;
 			num.f_1 = 99;
-			num.f_2 = -1234764774;
+			num.f_2 = joaat("prop_fnclink_03gate1");
 			num.f_3 = { 544.94f, -1649.75f, 27.49f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2853,7 +2853,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 261:
 			num = 132270639;
 			num.f_1 = 99;
-			num.f_2 = -250842784;
+			num.f_2 = joaat("prop_fnclink_03gate2");
 			num.f_3 = { 151.35f, -1668.64f, 28.77f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2862,7 +2862,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 262:
 			num = 429714852;
 			num.f_1 = 99;
-			num.f_2 = -1234764774;
+			num.f_2 = joaat("prop_fnclink_03gate1");
 			num.f_3 = { 47.2f, -1448.3f, 28.44f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2871,7 +2871,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 263:
 			num = 712231657;
 			num.f_1 = 99;
-			num.f_2 = 575680671;
+			num.f_2 = joaat("prop_lrggate_03a");
 			num.f_3 = { -1876.37f, 194.85f, 83.33f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2880,7 +2880,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 264:
 			num = 2136700087;
 			num.f_1 = 99;
-			num.f_2 = 575680671;
+			num.f_2 = joaat("prop_lrggate_03a");
 			num.f_3 = { -1868.31f, 183.79f, 83.34f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2889,7 +2889,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 265:
 			num = 218566672;
 			num.f_1 = 99;
-			num.f_2 = 575680671;
+			num.f_2 = joaat("prop_lrggate_03a");
 			num.f_3 = { -1452.43f, 37.03f, 51.75f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2898,7 +2898,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 266:
 			num = 2061822982;
 			num.f_1 = 99;
-			num.f_2 = 575680671;
+			num.f_2 = joaat("prop_lrggate_03a");
 			num.f_3 = { -1483.1f, 46.93f, 53.26f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2907,7 +2907,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 267:
 			num = 1617901339;
 			num.f_1 = 99;
-			num.f_2 = 575680671;
+			num.f_2 = joaat("prop_lrggate_03a");
 			num.f_3 = { -1507.47f, 39.16f, 54.41f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2916,7 +2916,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 268:
 			num = 1859638252;
 			num.f_1 = 99;
-			num.f_2 = 575680671;
+			num.f_2 = joaat("prop_lrggate_03a");
 			num.f_3 = { -1528.36f, 35.77f, 55.78f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2925,7 +2925,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 269:
 			num = -1008173552;
 			num.f_1 = 99;
-			num.f_2 = -2125423493;
+			num.f_2 = joaat("prop_lrggate_02_ld");
 			num.f_3 = { -1583.28f, 40.14f, 59.32f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2934,7 +2934,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 270:
 			num = 1403985307;
 			num.f_1 = 99;
-			num.f_2 = -2125423493;
+			num.f_2 = joaat("prop_lrggate_02_ld");
 			num.f_3 = { -1616.23f, 79.78f, 60.78f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2943,7 +2943,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 271:
 			num = -1988622032;
 			num.f_1 = 99;
-			num.f_2 = 575680671;
+			num.f_2 = joaat("prop_lrggate_03a");
 			num.f_3 = { -924.98f, -9.03f, 43.28f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2952,7 +2952,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 272:
 			num = 1716077491;
 			num.f_1 = 99;
-			num.f_2 = 575680671;
+			num.f_2 = joaat("prop_lrggate_03a");
 			num.f_3 = { -905.7f, 14.66f, 45.66f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2961,7 +2961,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 273:
 			num = -1151537699;
 			num.f_1 = 99;
-			num.f_2 = -2125423493;
+			num.f_2 = joaat("prop_lrggate_02_ld");
 			num.f_3 = { -844.05f, 155.96f, 66.03f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2970,7 +2970,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 274:
 			num = 1236503176;
 			num.f_1 = 99;
-			num.f_2 = 1738619932;
+			num.f_2 = joaat("prop_lrggate_04a");
 			num.f_3 = { -914.32f, 184.54f, 68.42f };
 			num.f_6 = 1;
 			num.f_10 = 1;
@@ -2979,7 +2979,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 79:
 			num = -1725728509;
 			num.f_1 = 99;
-			num.f_2 = -607040053;
+			num.f_2 = joaat("v_ilev_trev_doorfront");
 			num.f_3 = { -1149.71f, -1521.09f, 10.79f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -2989,7 +2989,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 80:
 			num = -854930290;
 			num.f_1 = 99;
-			num.f_2 = -1207991715;
+			num.f_2 = joaat("v_ilev_ct_door01");
 			num.f_3 = { -2343.53f, 3265.37f, 32.96f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -2999,7 +2999,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 81:
 			num = -86464467;
 			num.f_1 = 99;
-			num.f_2 = -1207991715;
+			num.f_2 = joaat("v_ilev_ct_door01");
 			num.f_3 = { -2342.23f, 3267.62f, 32.96f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3009,7 +3009,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 0:
 			num = 1066535586;
 			num.f_1 = 99;
-			num.f_2 = 1436076651;
+			num.f_2 = joaat("v_ilev_housedoor1");
 			num.f_3 = { 347.8678f, -1003.3159f, -99.0952f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -3019,7 +3019,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 275:
 			num = -153506146;
 			num.f_1 = 99;
-			num.f_2 = -1563640173;
+			num.f_2 = joaat("v_ilev_mm_door");
 			num.f_3 = { 257.2896f, -1001.2546f, -98.8587f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -3027,9 +3027,9 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 			break;
 	
 		case 276:
-			num = -1750863300;
+			num = joaat("MP_MED_APT_BATH_DOOR");
 			num.f_1 = 99;
-			num.f_2 = -384976104;
+			num.f_2 = joaat("v_ilev_mm_doorw");
 			num.f_3 = { 348.2157f, -993.1122f, -99.043f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -3039,7 +3039,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 277:
 			num = 1022411403;
 			num.f_1 = 99;
-			num.f_2 = 1980513646;
+			num.f_2 = joaat("v_ilev_fh_bedrmdoor");
 			num.f_3 = { -789.3017f, 332.0119f, 201.5596f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -3049,7 +3049,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 82:
 			num = -1858596497;
 			num.f_1 = 99;
-			num.f_2 = 30769481;
+			num.f_2 = joaat("prop_ld_garaged_01");
 			num.f_3 = { -815.3282f, 185.9571f, 72.99f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3059,7 +3059,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 85:
 			num = 360545155;
 			num.f_1 = 99;
-			num.f_2 = 1019527301;
+			num.f_2 = joaat("v_ilev_mm_windowwc");
 			num.f_3 = { -802.7333f, 167.5041f, 77.5824f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3069,7 +3069,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 83:
 			num = -1846031173;
 			num.f_1 = 99;
-			num.f_2 = 159994461;
+			num.f_2 = joaat("v_ilev_mm_doorm_l");
 			num.f_3 = { -816.716f, 179.098f, 72.84f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3079,7 +3079,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 84:
 			num = 1966183215;
 			num.f_1 = 99;
-			num.f_2 = -1686014385;
+			num.f_2 = joaat("v_ilev_mm_doorm_r");
 			num.f_3 = { -816.1068f, 177.5109f, 72.8274f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3089,7 +3089,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 86:
 			num = -452757037;
 			num.f_1 = 99;
-			num.f_2 = -1454760130;
+			num.f_2 = joaat("prop_bh1_48_backdoor_l");
 			num.f_3 = { -796.5657f, 177.2214f, 73.0405f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3099,7 +3099,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 87:
 			num = 422961723;
 			num.f_1 = 99;
-			num.f_2 = 1245831483;
+			num.f_2 = joaat("prop_bh1_48_backdoor_r");
 			num.f_3 = { -794.5051f, 178.0124f, 73.0405f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3109,7 +3109,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 88:
 			num = 113556825;
 			num.f_1 = 99;
-			num.f_2 = -1454760130;
+			num.f_2 = joaat("prop_bh1_48_backdoor_l");
 			num.f_3 = { -793.3943f, 180.5075f, 73.0405f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3119,7 +3119,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 89:
 			num = 1035119412;
 			num.f_1 = 99;
-			num.f_2 = 1245831483;
+			num.f_2 = joaat("prop_bh1_48_backdoor_r");
 			num.f_3 = { -794.1853f, 182.568f, 73.0405f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3129,7 +3129,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 90:
 			num = 929216155;
 			num.f_1 = 99;
-			num.f_2 = -1563640173;
+			num.f_2 = joaat("v_ilev_mm_door");
 			num.f_3 = { -806.2817f, 187.0246f, 72.624f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3139,7 +3139,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 91:
 			num = -2017851706;
 			num.f_1 = 99;
-			num.f_2 = -13153749;
+			num.f_2 = joaat("prop_gate_cult_01_l");
 			num.f_3 = { -1041.2676f, 4906.0967f, 209.2002f };
 			num.f_7 = 1;
 			num.f_8 = 4;
@@ -3150,7 +3150,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 92:
 			num = -90706816;
 			num.f_1 = 99;
-			num.f_2 = -1578791031;
+			num.f_2 = joaat("prop_gate_cult_01_r");
 			num.f_3 = { -1044.749f, 4914.9717f, 209.1932f };
 			num.f_7 = 1;
 			num.f_8 = 4;
@@ -3161,7 +3161,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 93:
 			num = -1701678154;
 			num.f_1 = 99;
-			num.f_2 = 132154435;
+			num.f_2 = joaat("v_ilev_trevtraildr");
 			num.f_3 = { 1972.7689f, 3815.366f, 33.6633f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3171,7 +3171,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 94:
 			num = -2129438429;
 			num.f_1 = 99;
-			num.f_2 = 520341586;
+			num.f_2 = joaat("v_ilev_fa_frontdoor");
 			num.f_3 = { -14.8689f, -1441.1821f, 31.192f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3181,7 +3181,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 95:
 			num = -670056199;
 			num.f_1 = 99;
-			num.f_2 = 245182344;
+			num.f_2 = joaat("v_ilev_ss_door8");
 			num.f_3 = { 716.7808f, -975.4207f, 25.057f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3191,7 +3191,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 96:
 			num = 917058539;
 			num.f_1 = 99;
-			num.f_2 = -681066206;
+			num.f_2 = joaat("v_ilev_ss_door7");
 			num.f_3 = { 719.3818f, -975.4185f, 25.0057f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3201,7 +3201,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 286:
 			num = 505794885;
 			num.f_1 = 99;
-			num.f_2 = 551491569;
+			num.f_2 = joaat("v_ilev_ss_door02");
 			num.f_3 = { 710f, -964f, 31f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3211,7 +3211,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 288:
 			num = 998060257;
 			num.f_1 = 99;
-			num.f_2 = 1878909644;
+			num.f_2 = joaat("v_ilev_bl_doorel_l");
 			num.f_3 = { 3539f, 3673.7f, 20f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3221,7 +3221,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 289:
 			num = 1685291713;
 			num.f_1 = 99;
-			num.f_2 = 1709395619;
+			num.f_2 = joaat("v_ilev_bl_doorel_r");
 			num.f_3 = { 3541.6f, 3673.2f, 20f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3231,7 +3231,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 287:
 			num = 856811118;
 			num.f_1 = 99;
-			num.f_2 = 426403179;
+			num.f_2 = joaat("v_ilev_store_door");
 			num.f_3 = { 708f, -962f, 31f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3241,7 +3241,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 97:
 			num = 1579789044;
 			num.f_1 = 99;
-			num.f_2 = 1425919976;
+			num.f_2 = joaat("p_jewel_door_l");
 			num.f_3 = { -631.9554f, -236.3333f, 38.2065f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3251,7 +3251,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 98:
 			num = -740144707;
 			num.f_1 = 99;
-			num.f_2 = 9467943;
+			num.f_2 = joaat("p_jewel_door_r1");
 			num.f_3 = { -630.4265f, -238.4375f, 38.2065f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3261,7 +3261,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 99:
 			num = 459292593;
 			num.f_1 = 99;
-			num.f_2 = 1173348778;
+			num.f_2 = joaat("v_ilev_ss_door04");
 			num.f_3 = { 1395.6134f, 3609.327f, 35.1308f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3271,7 +3271,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 100:
 			num = 699522132;
 			num.f_1 = 99;
-			num.f_2 = 1804626822;
+			num.f_2 = joaat("v_ilev_ss_doorext");
 			num.f_3 = { 1388.4987f, 3614.8276f, 39.0919f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3281,7 +3281,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 101:
 			num = 919402122;
 			num.f_1 = 99;
-			num.f_2 = 1804626822;
+			num.f_2 = joaat("v_ilev_ss_doorext");
 			num.f_3 = { 1399.6996f, 3607.763f, 39.0919f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3291,7 +3291,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 102:
 			num = -1009094475;
 			num.f_1 = 99;
-			num.f_2 = -190780785;
+			num.f_2 = joaat("prop_com_gar_door_01");
 			num.f_3 = { 484.5642f, -1315.574f, 30.2033f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3301,7 +3301,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 103:
 			num = 1304570179;
 			num.f_1 = 99;
-			num.f_2 = -664582244;
+			num.f_2 = joaat("v_ilev_cs_door");
 			num.f_3 = { 482.8112f, -1311.953f, 29.3506f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3311,7 +3311,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 104:
 			num = 1374764510;
 			num.f_1 = 99;
-			num.f_2 = -1230442770;
+			num.f_2 = joaat("v_ilev_epsstoredoor");
 			num.f_3 = { 241.3621f, 361.0471f, 105.003f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3321,7 +3321,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 105:
 			num = -1326670325;
 			num.f_1 = 99;
-			num.f_2 = 308207762;
+			num.f_2 = joaat("v_ilev_fh_frontdoor");
 			num.f_3 = { 7.5179f, 539.526f, 176.1781f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3331,7 +3331,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 106:
 			num = -646035010;
 			num.f_1 = 99;
-			num.f_2 = 2052512905;
+			num.f_2 = joaat("prop_ch_025c_g_door_01");
 			num.f_3 = { 18.6504f, 546.3401f, 176.3448f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3341,7 +3341,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 8:
 			num = -2020886833;
 			num.f_1 = 99;
-			num.f_2 = 2059227086;
+			num.f_2 = joaat("v_ilev_csr_door_l");
 			num.f_3 = { -59.893f, -1092.9518f, 26.8836f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3351,7 +3351,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 9:
 			num = 424893020;
 			num.f_1 = 99;
-			num.f_2 = 1417577297;
+			num.f_2 = joaat("v_ilev_csr_door_r");
 			num.f_3 = { -60.5458f, -1094.7489f, 26.8887f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3361,7 +3361,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 10:
 			num = -234058813;
 			num.f_1 = 99;
-			num.f_2 = 2059227086;
+			num.f_2 = joaat("v_ilev_csr_door_l");
 			num.f_3 = { -38.464f, -1108.4462f, 26.7198f };
 			num.f_7 = 1;
 		
@@ -3379,7 +3379,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 11:
 			num = -513447307;
 			num.f_1 = 99;
-			num.f_2 = 1417577297;
+			num.f_2 = joaat("v_ilev_csr_door_r");
 			num.f_3 = { -36.6615f, -1109.1016f, 26.7198f };
 			num.f_7 = 1;
 		
@@ -3397,7 +3397,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 107:
 			num = 777975393;
 			num.f_1 = 99;
-			num.f_2 = 1099436502;
+			num.f_2 = joaat("v_ilev_rc_door3_l");
 			num.f_3 = { -608.7289f, -1610.3153f, 27.1589f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3407,7 +3407,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 108:
 			num = 2134513686;
 			num.f_1 = 99;
-			num.f_2 = -1627599682;
+			num.f_2 = joaat("v_ilev_rc_door3_r");
 			num.f_3 = { -611.32f, -1610.0886f, 27.1589f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3417,7 +3417,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 109:
 			num = -1758213847;
 			num.f_1 = 99;
-			num.f_2 = 1099436502;
+			num.f_2 = joaat("v_ilev_rc_door3_l");
 			num.f_3 = { -592.9376f, -1631.577f, 27.1593f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3427,7 +3427,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 110:
 			num = -990993250;
 			num.f_1 = 99;
-			num.f_2 = -1627599682;
+			num.f_2 = joaat("v_ilev_rc_door3_r");
 			num.f_3 = { -592.7109f, -1628.986f, 27.1593f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3437,7 +3437,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 111:
 			num = -611431917;
 			num.f_1 = 99;
-			num.f_2 = -1501157055;
+			num.f_2 = joaat("v_ilev_shrf2door");
 			num.f_3 = { -442.66f, 6015.2217f, 31.8663f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3446,7 +3446,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 112:
 			num = -1988181627;
 			num.f_1 = 99;
-			num.f_2 = -1501157055;
+			num.f_2 = joaat("v_ilev_shrf2door");
 			num.f_3 = { -444.4985f, 6017.06f, 31.8663f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3455,7 +3455,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 113:
 			num = 1879085215;
 			num.f_1 = 99;
-			num.f_2 = -1765048490;
+			num.f_2 = joaat("v_ilev_shrfdoor");
 			num.f_3 = { 1855.6848f, 3683.9302f, 34.5928f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3464,7 +3464,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 114:
 			num = -100586674;
 			num.f_1 = 99;
-			num.f_2 = -1652821467;
+			num.f_2 = joaat("prop_gar_door_01");
 			num.f_3 = { -1067.0024f, -1665.6091f, 4.7898f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3474,7 +3474,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 115:
 			num = -384071293;
 			num.f_1 = 99;
-			num.f_2 = 1013329911;
+			num.f_2 = joaat("prop_gar_door_02");
 			num.f_3 = { -1064.7632f, -1668.7623f, 4.8084f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3484,7 +3484,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 116:
 			num = 1317819491;
 			num.f_1 = 99;
-			num.f_2 = -1223237597;
+			num.f_2 = joaat("prop_gar_door_03_ld");
 			num.f_3 = { -1074.6482f, -1676.1313f, 4.684f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3494,7 +3494,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 117:
 			num = -1321526845;
 			num.f_1 = 99;
-			num.f_2 = -728539053;
+			num.f_2 = joaat("prop_gar_door_05");
 			num.f_3 = { 201.4f, -153.3652f, 57.8522f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3504,7 +3504,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 156:
 			num = 96518847;
 			num.f_1 = 99;
-			num.f_2 = 1104171198;
+			num.f_2 = joaat("v_ilev_fb_doorshortl");
 			num.f_3 = { -1045.1199f, -232.004f, 39.4379f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3514,7 +3514,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 157:
 			num = 1355864282;
 			num.f_1 = 99;
-			num.f_2 = -1425071302;
+			num.f_2 = joaat("v_ilev_fb_doorshortr");
 			num.f_3 = { -1046.5161f, -229.3581f, 39.4379f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3524,7 +3524,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 158:
 			num = 1350395200;
 			num.f_1 = 99;
-			num.f_2 = -1679881977;
+			num.f_2 = joaat("v_ilev_fb_door01");
 			num.f_3 = { -1083.6201f, -260.4167f, 38.1867f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3534,7 +3534,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 159:
 			num = -351200663;
 			num.f_1 = 99;
-			num.f_2 = -1045015371;
+			num.f_2 = joaat("v_ilev_fb_door02");
 			num.f_3 = { -1080.9744f, -259.0204f, 38.1867f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3544,7 +3544,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 160:
 			num = 1721932052;
 			num.f_1 = 99;
-			num.f_2 = -1033001619;
+			num.f_2 = joaat("v_ilev_gtdoor");
 			num.f_3 = { -1042.57f, -240.6f, 38.11f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3554,7 +3554,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 304:
 			num = 1196312723;
 			num.f_1 = 99;
-			num.f_2 = -1881825907;
+			num.f_2 = joaat("v_ilev_door_orange");
 			num.f_3 = { -1063.804f, -240.832f, 39.883f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3564,7 +3564,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 305:
 			num = -1161120149;
 			num.f_1 = 99;
-			num.f_2 = -495720969;
+			num.f_2 = joaat("v_ilev_door_orangesolid");
 			num.f_3 = { -1055.958f, -236.425f, 44.171f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3574,7 +3574,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 161:
 			num = 659933472;
 			num.f_1 = 99;
-			num.f_2 = 993120320;
+			num.f_2 = joaat("v_ilev_roc_door4");
 			num.f_3 = { -565.1712f, 276.6259f, 83.2863f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3584,7 +3584,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 162:
 			num = 1556853707;
 			num.f_1 = 99;
-			num.f_2 = 993120320;
+			num.f_2 = joaat("v_ilev_roc_door4");
 			num.f_3 = { -561.2863f, 293.5043f, 87.7771f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3594,7 +3594,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 163:
 			num = 9031593;
 			num.f_1 = 99;
-			num.f_2 = -1428622127;
+			num.f_2 = joaat("prop_ron_door_01");
 			num.f_3 = { 1065.2372f, -2006.0791f, 32.2329f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3604,7 +3604,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 164:
 			num = -1114322496;
 			num.f_1 = 99;
-			num.f_2 = -1428622127;
+			num.f_2 = joaat("prop_ron_door_01");
 			num.f_3 = { 1083.5472f, -1975.4354f, 31.622f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3614,7 +3614,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 165:
 			num = -1353175737;
 			num.f_1 = 99;
-			num.f_2 = -1428622127;
+			num.f_2 = joaat("prop_ron_door_01");
 			num.f_3 = { 1085.307f, -2018.5614f, 41.6289f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3624,7 +3624,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 166:
 			num = 44182644;
 			num.f_1 = 99;
-			num.f_2 = 1436076651;
+			num.f_2 = joaat("v_ilev_housedoor1");
 			num.f_3 = { 86.6624f, -1959.477f, 21.2152f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3634,7 +3634,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 167:
 			num = -85603376;
 			num.f_1 = 99;
-			num.f_2 = -1468417022;
+			num.f_2 = joaat("prop_abat_slide");
 			num.f_3 = { 962.9084f, -2105.8137f, 34.6432f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3644,7 +3644,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 168:
 			num = -336931144;
 			num.f_1 = 99;
-			num.f_2 = -982531572;
+			num.f_2 = joaat("prop_gar_door_04");
 			num.f_3 = { 778.31f, -1867.49f, 30.66f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3654,7 +3654,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 169:
 			num = -1850802875;
 			num.f_1 = 99;
-			num.f_2 = -582278602;
+			num.f_2 = joaat("prop_ch3_04_door_01l");
 			num.f_3 = { 2514.32f, -317.34f, 93.32f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3664,7 +3664,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 170:
 			num = -1675259342;
 			num.f_1 = 99;
-			num.f_2 = 1343686600;
+			num.f_2 = joaat("prop_ch3_04_door_01r");
 			num.f_3 = { 2512.42f, -319.26f, 93.32f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3674,7 +3674,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 171:
 			num = 682572401;
 			num.f_1 = 99;
-			num.f_2 = 720693755;
+			num.f_2 = joaat("prop_sc1_12_door");
 			num.f_3 = { -58.47f, -1530.51f, 34.54f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3684,7 +3684,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 172:
 			num = 638173652;
 			num.f_1 = 99;
-			num.f_2 = -44475594;
+			num.f_2 = joaat("prop_ch1_07_door_01l");
 			num.f_3 = { -2255.1938f, 322.2593f, 184.9264f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3694,7 +3694,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 173:
 			num = -657938605;
 			num.f_1 = 99;
-			num.f_2 = 1183182250;
+			num.f_2 = joaat("prop_ch1_07_door_01r");
 			num.f_3 = { -2254.0557f, 319.7009f, 184.9264f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3704,7 +3704,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 174:
 			num = -913405729;
 			num.f_1 = 99;
-			num.f_2 = -44475594;
+			num.f_2 = joaat("prop_ch1_07_door_01l");
 			num.f_3 = { -2280.597f, 265.432f, 184.926f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3714,7 +3714,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 175:
 			num = -61510036;
 			num.f_1 = 99;
-			num.f_2 = 1183182250;
+			num.f_2 = joaat("prop_ch1_07_door_01r");
 			num.f_3 = { -2278.039f, 266.57f, 184.926f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3724,7 +3724,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 180:
 			num = 1741567220;
 			num.f_1 = 99;
-			num.f_2 = -1483471451;
+			num.f_2 = joaat("prop_facgate_08");
 			num.f_3 = { 413.3649f, -1620.0333f, 28.3416f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3734,7 +3734,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 181:
 			num = -2117572376;
 			num.f_1 = 99;
-			num.f_2 = -1483471451;
+			num.f_2 = joaat("prop_facgate_08");
 			num.f_3 = { 418.2896f, -1651.3962f, 28.2951f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3744,7 +3744,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 182:
 			num = 1308623196;
 			num.f_1 = 99;
-			num.f_2 = 1286535678;
+			num.f_2 = joaat("prop_facgate_07b");
 			num.f_3 = { 397.8846f, -1607.3838f, 28.3301f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3754,7 +3754,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 278:
 			num = -1181991670;
 			num.f_1 = 99;
-			num.f_2 = 703855057;
+			num.f_2 = joaat("prop_sc1_21_g_door_01");
 			num.f_3 = { -25.28f, -1431.06f, 30.84f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3764,7 +3764,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 279:
 			num = 655256353;
 			num.f_1 = 99;
-			num.f_2 = -1857663329;
+			num.f_2 = joaat("prop_ss1_14_garage_door");
 			num.f_3 = { -62.38f, 352.7173f, 113.2499f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3774,7 +3774,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 280:
 			num = -1283878568;
 			num.f_1 = 99;
-			num.f_2 = -1306074314;
+			num.f_2 = joaat("prop_motel_door_09");
 			num.f_3 = { 549.2567f, -1773.115f, 33.7309f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3784,7 +3784,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 283:
 			num = -1442263252;
 			num.f_1 = 99;
-			num.f_2 = -2076287065;
+			num.f_2 = joaat("prop_ss1_10_door_l");
 			num.f_3 = { -720.39f, 256.86f, 80.29f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3794,7 +3794,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 284:
 			num = 945482706;
 			num.f_1 = 99;
-			num.f_2 = -374527357;
+			num.f_2 = joaat("prop_ss1_10_door_r");
 			num.f_3 = { -718.42f, 257.79f, 80.29f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3804,7 +3804,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 298:
 			num = 1281942816;
 			num.f_1 = 99;
-			num.f_2 = 631614199;
+			num.f_2 = joaat("v_ilev_ph_cellgate");
 			num.f_3 = { 461.8065f, -994.4086f, 25.0644f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -3813,7 +3813,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 299:
 			num = 2066876030;
 			num.f_1 = 99;
-			num.f_2 = -952356348;
+			num.f_2 = joaat("v_ilev_cf_officedoor");
 			num.f_3 = { -70.5223f, 6254.584f, 31.2331f };
 			num.f_7 = 1;
 			num.f_8 = 0;
@@ -3822,7 +3822,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 300:
 			num = 302514014;
 			num.f_1 = 99;
-			num.f_2 = -1184516519;
+			num.f_2 = joaat("prop_sec_barrier_ld_01a");
 			num.f_3 = { -1588.27f, 2794.21f, 16.85f };
 			num.f_6 = 1;
 			break;
@@ -3830,7 +3830,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 301:
 			num = 374122670;
 			num.f_1 = 99;
-			num.f_2 = -1184516519;
+			num.f_2 = joaat("prop_sec_barrier_ld_01a");
 			num.f_3 = { -1589.58f, 2793.67f, 16.86f };
 			num.f_6 = 1;
 			break;
@@ -3838,7 +3838,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 302:
 			num = -1450927686;
 			num.f_1 = 99;
-			num.f_2 = -1184516519;
+			num.f_2 = joaat("prop_sec_barrier_ld_01a");
 			num.f_3 = { -2309.107f, 3382.55f, 29.9703f };
 			num.f_6 = 1;
 			break;
@@ -3846,7 +3846,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 303:
 			num = -1927270846;
 			num.f_1 = 99;
-			num.f_2 = -1184516519;
+			num.f_2 = joaat("prop_sec_barrier_ld_01a");
 			num.f_3 = { -2299.539f, 3384.9495f, 31.0658f };
 			num.f_6 = 1;
 			break;
@@ -3854,7 +3854,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 306:
 			num = 181342382;
 			num.f_1 = 99;
-			num.f_2 = -1591004109;
+			num.f_2 = joaat("v_ilev_gb_vaubar");
 			num.f_3 = { -1207.328f, -335.129f, 38.079f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3864,7 +3864,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 307:
 			num = 290843807;
 			num.f_1 = 99;
-			num.f_2 = -1591004109;
+			num.f_2 = joaat("v_ilev_gb_vaubar");
 			num.f_3 = { 1175.542f, 2710.861f, 38.227f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3874,7 +3874,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 308:
 			num = 838938616;
 			num.f_1 = 99;
-			num.f_2 = 1335309163;
+			num.f_2 = joaat("v_ilev_j2_door");
 			num.f_3 = { -629.134f, -230.152f, 38.207f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3884,7 +3884,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 309:
 			num = 1801855141;
 			num.f_1 = 99;
-			num.f_2 = -458248282;
+			num.f_2 = joaat("v_ilev_fbisecgate");
 			num.f_3 = { 116.2367f, -754.6212f, 44.8285f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3894,7 +3894,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 310:
 			num = -173591179;
 			num.f_1 = 99;
-			num.f_2 = -458248282;
+			num.f_2 = joaat("v_ilev_fbisecgate");
 			num.f_3 = { 115.9029f, -755.5384f, 44.8285f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3904,7 +3904,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 311:
 			num = 487906950;
 			num.f_1 = 99;
-			num.f_2 = -458248282;
+			num.f_2 = joaat("v_ilev_fbisecgate");
 			num.f_3 = { 115.8078f, -755.7997f, 44.8285f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3914,7 +3914,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 312:
 			num = -1571165938;
 			num.f_1 = 99;
-			num.f_2 = -458248282;
+			num.f_2 = joaat("v_ilev_fbisecgate");
 			num.f_3 = { 115.474f, -756.7169f, 44.8285f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3924,7 +3924,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 313:
 			num = 473483816;
 			num.f_1 = 99;
-			num.f_2 = -458248282;
+			num.f_2 = joaat("v_ilev_fbisecgate");
 			num.f_3 = { 115.3789f, -756.9781f, 44.8285f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3934,7 +3934,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 		case 314:
 			num = -1852558119;
 			num.f_1 = 99;
-			num.f_2 = -458248282;
+			num.f_2 = joaat("v_ilev_fbisecgate");
 			num.f_3 = { 115.0451f, -757.8953f, 44.8285f };
 			num.f_7 = 1;
 			num.f_8 = 1;
@@ -3945,7 +3945,7 @@ struct<15> func_29(int iParam0, int iParam1) // Position - 0xD89
 	return num;
 }
 
-BOOL func_30(var uParam0, int iParam1) // Position - 0x572A
+BOOL func_30(var uParam0, int iParam1) // Position - 0x572A (22314)
 {
 	var unk;
 	int i;
@@ -3969,7 +3969,7 @@ BOOL func_30(var uParam0, int iParam1) // Position - 0x572A
 	return true;
 }
 
-void func_31(Hash hParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, var uParam14, BOOL bParam15) // Position - 0x5796
+void func_31(Hash hParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, var uParam14, BOOL bParam15) // Position - 0x5796 (22422)
 {
 	if (hParam0 != 0)
 	{
@@ -3998,7 +3998,7 @@ void func_31(Hash hParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 	return;
 }
 
-BOOL func_32(var uParam0, int iParam1) // Position - 0x5836
+BOOL func_32(var uParam0, int iParam1) // Position - 0x5836 (22582)
 {
 	Hash doorHash;
 	int i;
@@ -4028,17 +4028,17 @@ BOOL func_32(var uParam0, int iParam1) // Position - 0x5836
 	return true;
 }
 
-int func_33() // Position - 0x58A9
+int func_33() // Position - 0x58A9 (22697)
 {
 	return Global_33087;
 }
 
-int func_34(int iParam0) // Position - 0x58B4
+int func_34(int iParam0) // Position - 0x58B4 (22708)
 {
 	return uLocal_239[iParam0 /*4*/];
 }
 
-void _STOPWATCH_RESET(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateTime) // Position - 0x58C2
+void _STOPWATCH_RESET(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateTime) // Position - 0x58C2 (22722)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !useLocalTimer)
 		if (!useAccurateTime)
@@ -4052,19 +4052,19 @@ void _STOPWATCH_RESET(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateTime) 
 	return;
 }
 
-void func_36(int iParam0) // Position - 0x58FF
+void func_36(int iParam0) // Position - 0x58FF (22783)
 {
 	uLocal_239[NETWORK::PARTICIPANT_ID_TO_INT() /*4*/] = iParam0;
 	return;
 }
 
-void func_37() // Position - 0x5911
+void func_37() // Position - 0x5911 (22801)
 {
 	SYSTEM::WAIT(0);
 	return;
 }
 
-void func_38() // Position - 0x591E
+void func_38() // Position - 0x591E (22814)
 {
 	int i;
 
@@ -4076,7 +4076,7 @@ void func_38() // Position - 0x591E
 	return;
 }
 
-void func_39(int iParam0, var uParam1) // Position - 0x5944
+void func_39(int iParam0, var uParam1) // Position - 0x5944 (22852)
 {
 	switch (iParam0)
 	{
@@ -4105,7 +4105,7 @@ void func_39(int iParam0, var uParam1) // Position - 0x5944
 	return;
 }
 
-BOOL func_40(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, var uParam14, var uParam15, var uParam16, var uParam17, var uParam18, var uParam19, var uParam20) // Position - 0x5A25
+BOOL func_40(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, var uParam14, var uParam15, var uParam16, var uParam17, var uParam18, var uParam19, var uParam20) // Position - 0x5A25 (23077)
 {
 	func_47(func_48(uParam0), uParam0);
 	_NETWORK_ENSURE_SCRIPT_IS_NETWORKED(0, -1, false);
@@ -4120,7 +4120,7 @@ BOOL func_40(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	return true;
 }
 
-BOOL _NETWORK_WAIT_FOR_HOST_BROADCAST_DATA() // Position - 0x5A6B
+BOOL _NETWORK_WAIT_FOR_HOST_BROADCAST_DATA() // Position - 0x5A6B (23147)
 {
 	int num;
 
@@ -4151,7 +4151,7 @@ BOOL _NETWORK_WAIT_FOR_HOST_BROADCAST_DATA() // Position - 0x5A6B
 	return false;
 }
 
-BOOL _DOES_EVENT_OF_TYPE_EXIST(int iParam0) // Position - 0x5AC4
+BOOL _DOES_EVENT_OF_TYPE_EXIST(int iParam0) // Position - 0x5AC4 (23236)
 {
 	if (SCRIPT::GET_EVENT_EXISTS(SCRIPT_EVENT_QUEUE_NETWORK, iParam0))
 		return true;
@@ -4159,12 +4159,12 @@ BOOL _DOES_EVENT_OF_TYPE_EXIST(int iParam0) // Position - 0x5AC4
 	return false;
 }
 
-BOOL func_43() // Position - 0x5ADB
+BOOL func_43() // Position - 0x5ADB (23259)
 {
 	return Global_2684718.f_695;
 }
 
-int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTerminate) // Position - 0x5AEA
+int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTerminate) // Position - 0x5AEA (23274)
 {
 	int i;
 
@@ -4228,19 +4228,19 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 	return 1;
 }
 
-BOOL func_45(BOOL bParam0) // Position - 0x5C00
+BOOL func_45(BOOL bParam0) // Position - 0x5C00 (23552)
 {
 	bParam0;
 	return Global_1575056;
 }
 
-void func_46() // Position - 0x5C11
+void func_46() // Position - 0x5C11 (23569)
 {
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;
 }
 
-void func_47(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, var uParam14, var uParam15, var uParam16, var uParam17, var uParam18, var uParam19, var uParam20, var uParam21) // Position - 0x5C1D
+void func_47(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, var uParam14, var uParam15, var uParam16, var uParam17, var uParam18, var uParam19, var uParam20, var uParam21) // Position - 0x5C1D (23581)
 {
 	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 		func_46();
@@ -4249,7 +4249,7 @@ void func_47(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	return;
 }
 
-int func_48(int iParam0) // Position - 0x5C3C
+int func_48(int iParam0) // Position - 0x5C3C (23612)
 {
 	switch (iParam0)
 	{
@@ -4797,7 +4797,7 @@ int func_48(int iParam0) // Position - 0x5C3C
 	return 0;
 }
 
-int func_49(int iParam0) // Position - 0x63DC
+int func_49(int iParam0) // Position - 0x63DC (25564)
 {
 	switch (iParam0)
 	{
@@ -5042,7 +5042,7 @@ int func_49(int iParam0) // Position - 0x63DC
 	return -1;
 }
 
-int func_50(int iParam0, BOOL bParam1) // Position - 0x66F8
+int func_50(int iParam0, BOOL bParam1) // Position - 0x66F8 (26360)
 {
 	switch (iParam0)
 	{
@@ -5546,7 +5546,7 @@ int func_50(int iParam0, BOOL bParam1) // Position - 0x66F8
 	return 352;
 }
 
-void func_51() // Position - 0x6E5F
+void func_51() // Position - 0x6E5F (28255)
 {
 	func_52(iLocal_147);
 	Global_2739811.f_1772 = 0;
@@ -5555,7 +5555,7 @@ void func_51() // Position - 0x6E5F
 	return;
 }
 
-void func_52(int iParam0) // Position - 0x6E81
+void func_52(int iParam0) // Position - 0x6E81 (28289)
 {
 	Hash doorHash;
 	int i;
@@ -5573,7 +5573,7 @@ void func_52(int iParam0) // Position - 0x6E81
 	return;
 }
 
-BOOL _SHOULD_NETWORK_SCRIPT_TERMINATE() // Position - 0x6ED8
+BOOL _SHOULD_NETWORK_SCRIPT_TERMINATE() // Position - 0x6ED8 (28376)
 {
 	if (Global_1575056 == 0)
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
@@ -5605,7 +5605,7 @@ BOOL _SHOULD_NETWORK_SCRIPT_TERMINATE() // Position - 0x6ED8
 	return false;
 }
 
-Hash _GET_CURRENT_SESSION_TYPE_SCRIPT_HASH() // Position - 0x6F5C
+Hash _GET_CURRENT_SESSION_TYPE_SCRIPT_HASH() // Position - 0x6F5C (28508)
 {
 	switch (func_33())
 	{
@@ -5613,32 +5613,32 @@ Hash _GET_CURRENT_SESSION_TYPE_SCRIPT_HASH() // Position - 0x6F5C
 			return func_55();
 	
 		case 2:
-			return -47565502;
+			return joaat("creator");
 	}
 
 	return 0;
 }
 
-Hash func_55() // Position - 0x6F8F
+Hash func_55() // Position - 0x6F8F (28559)
 {
 	switch (Global_2699111)
 	{
 		case 0:
-			return -931834499;
+			return joaat("freemode");
 	
 		default:
 		
 	}
 
-	return -931834499;
+	return joaat("freemode");
 }
 
-BOOL func_56() // Position - 0x6FB3
+BOOL func_56() // Position - 0x6FB3 (28595)
 {
 	return Global_2684718.f_700;
 }
 
-BOOL func_57() // Position - 0x6FC2
+BOOL func_57() // Position - 0x6FC2 (28610)
 {
 	return Global_2696416;
 }

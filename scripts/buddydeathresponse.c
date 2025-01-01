@@ -20,7 +20,7 @@
 	Ped pedLocal_18 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -42,7 +42,7 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1() // Position - 0x4F
+void func_1() // Position - 0x4F (79)
 {
 	Vector3 entityCoords;
 	int taskSequenceId;
@@ -95,7 +95,7 @@ void func_1() // Position - 0x4F
 	return;
 }
 
-void func_2(Ped pedParam0) // Position - 0x13C
+void func_2(Ped pedParam0) // Position - 0x13C (316)
 {
 	int num;
 
@@ -152,13 +152,13 @@ void func_2(Ped pedParam0) // Position - 0x13C
 	return;
 }
 
-void func_3(Ped pedParam0, char* sParam1, char* sParam2, int iParam3, BOOL bParam4) // Position - 0x23A
+void func_3(Ped pedParam0, char* sParam1, char* sParam2, int iParam3, BOOL bParam4) // Position - 0x23A (570)
 {
 	AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(pedParam0, sParam1, sParam2, func_4(iParam3), bParam4);
 	return;
 }
 
-char* func_4(int iParam0) // Position - 0x254
+char* func_4(int iParam0) // Position - 0x254 (596)
 {
 	char* str;
 
@@ -283,7 +283,7 @@ char* func_4(int iParam0) // Position - 0x254
 	return str;
 }
 
-eCharacter _GET_PLAYER_CHARACTER_FROM_PED(Ped pedParam0) // Position - 0x443
+eCharacter _GET_PLAYER_CHARACTER_FROM_PED(Ped pedParam0) // Position - 0x443 (1091)
 {
 	eCharacter i;
 	Hash entityModel;
@@ -302,7 +302,7 @@ eCharacter _GET_PLAYER_CHARACTER_FROM_PED(Ped pedParam0) // Position - 0x443
 	return _CHAR_NULL;
 }
 
-Hash _GET_CHARACTER_MODEL(eCharacter character) // Position - 0x480
+Hash _GET_CHARACTER_MODEL(eCharacter character) // Position - 0x480 (1152)
 {
 	if (func_8(character))
 		return func_7(character);
@@ -312,17 +312,17 @@ Hash _GET_CHARACTER_MODEL(eCharacter character) // Position - 0x480
 	return 0;
 }
 
-Hash func_7(eCharacter echParam0) // Position - 0x4A5
+Hash func_7(eCharacter echParam0) // Position - 0x4A5 (1189)
 {
 	return Global_2201[echParam0 /*29*/];
 }
 
-BOOL func_8(eCharacter echParam0) // Position - 0x4B4
+BOOL func_8(eCharacter echParam0) // Position - 0x4B4 (1204)
 {
 	return echParam0 < CHAR_MULTIPLAYER;
 }
 
-BOOL func_9(var uParam0) // Position - 0x4C0
+BOOL func_9(var uParam0) // Position - 0x4C0 (1216)
 {
 	Vehicle vehiclePedIsIn;
 
@@ -370,13 +370,13 @@ BOOL func_9(var uParam0) // Position - 0x4C0
 	return false;
 }
 
-eCharacter _GET_CURRENT_PLAYER_CHARACTER() // Position - 0x605
+eCharacter _GET_CURRENT_PLAYER_CHARACTER() // Position - 0x605 (1541)
 {
 	func_11();
 	return Global_114135.f_2367.f_539.f_4321;
 }
 
-void func_11() // Position - 0x61E
+void func_11() // Position - 0x61E (1566)
 {
 	eCharacter character;
 
@@ -409,7 +409,7 @@ void func_11() // Position - 0x61E
 	return;
 }
 
-BOOL func_12(int iParam0) // Position - 0x71B
+BOOL func_12(int iParam0) // Position - 0x71B (1819)
 {
 	return Global_44181 == iParam0;
 }

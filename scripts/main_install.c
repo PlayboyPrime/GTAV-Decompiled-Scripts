@@ -3,7 +3,7 @@
 	int iLocal_1 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	int num;
 
@@ -40,14 +40,14 @@ void main() // Position - 0x0
 	STREAMING::REMOVE_IPL("prologue03_grv_dug");
 	STREAMING::REMOVE_IPL("prologue_grv_torch");
 	STREAMING::SET_MAPDATACULLBOX_ENABLED("prologue", true);
-	STREAMING::REQUEST_MODEL(2141384740);
+	STREAMING::REQUEST_MODEL(joaat("CSB_ProlSec"));
 
-	while (!STREAMING::HAS_MODEL_LOADED(2141384740))
+	while (!STREAMING::HAS_MODEL_LOADED(joaat("CSB_ProlSec")))
 	{
 		SYSTEM::WAIT(0);
 	}
 
-	PLAYER::SET_PLAYER_MODEL(PLAYER::PLAYER_ID(), 2141384740);
+	PLAYER::SET_PLAYER_MODEL(PLAYER::PLAYER_ID(), joaat("CSB_ProlSec"));
 
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 	{
@@ -131,7 +131,7 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1(float fParam0, float fParam1, char* sParam2, int iParam3) // Position - 0x2F8
+void func_1(float fParam0, float fParam1, char* sParam2, int iParam3) // Position - 0x2F8 (760)
 {
 	HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT(sParam2);
 	HUD::END_TEXT_COMMAND_DISPLAY_TEXT(fParam0, fParam1, iParam3);

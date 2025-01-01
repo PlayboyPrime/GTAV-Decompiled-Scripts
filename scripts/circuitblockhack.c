@@ -776,7 +776,7 @@
 	var uLocal_774 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -812,7 +812,7 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1() // Position - 0x80
+void func_1() // Position - 0x80 (128)
 {
 	func_108();
 
@@ -842,7 +842,7 @@ void func_1() // Position - 0x80
 	return;
 }
 
-void func_2() // Position - 0xD6
+void func_2() // Position - 0xD6 (214)
 {
 	var textureDict;
 
@@ -870,7 +870,7 @@ void func_2() // Position - 0xD6
 	return;
 }
 
-void func_3() // Position - 0x169
+void func_3() // Position - 0x169 (361)
 {
 	if (Global_2672939.f_1023.f_10)
 		Global_2672939.f_1023.f_10 = 0;
@@ -878,7 +878,7 @@ void func_3() // Position - 0x169
 	return;
 }
 
-struct<16> func_4(int iParam0) // Position - 0x187
+struct<16> func_4(int iParam0) // Position - 0x187 (391)
 {
 	var unk;
 
@@ -893,28 +893,28 @@ struct<16> func_4(int iParam0) // Position - 0x187
 	return unk;
 }
 
-char* func_5() // Position - 0x1AE
+char* func_5() // Position - 0x1AE (430)
 {
 	return "MPBeamHack";
 }
 
-char* func_6() // Position - 0x1B9
+char* func_6() // Position - 0x1B9 (441)
 {
 	return "PCB_Hack_Assets_Foreground";
 }
 
-char* func_7() // Position - 0x1C4
+char* func_7() // Position - 0x1C4 (452)
 {
 	return "PCB_Hack_Assets_Backgrounds";
 }
 
-void func_8() // Position - 0x1CF
+void func_8() // Position - 0x1CF (463)
 {
 	Global_1919341.f_1 = 0;
 	return;
 }
 
-void func_9(var uParam0) // Position - 0x1DE
+void func_9(var uParam0) // Position - 0x1DE (478)
 {
 	int i;
 
@@ -951,7 +951,7 @@ void func_9(var uParam0) // Position - 0x1DE
 	return;
 }
 
-void func_10() // Position - 0x2C8
+void func_10() // Position - 0x2C8 (712)
 {
 	func_79();
 	func_78();
@@ -977,18 +977,18 @@ void func_10() // Position - 0x2C8
 	return;
 }
 
-void func_11(int iParam0) // Position - 0x33E
+void func_11(int iParam0) // Position - 0x33E (830)
 {
 	uLocal_49.f_9 = iParam0;
 	return;
 }
 
-BOOL func_12(int iParam0, int iParam1) // Position - 0x34C
+BOOL func_12(int iParam0, int iParam1) // Position - 0x34C (844)
 {
 	return func_13(iParam0) > iParam1;
 }
 
-int func_13(int iParam0) // Position - 0x35D
+int func_13(int iParam0) // Position - 0x35D (861)
 {
 	if (!func_15(iParam0))
 		return 0;
@@ -996,7 +996,7 @@ int func_13(int iParam0) // Position - 0x35D
 	return NETWORK::GET_NETWORK_TIME_ACCURATE() - iParam0;
 }
 
-void func_14(var uParam0) // Position - 0x37A
+void func_14(var uParam0) // Position - 0x37A (890)
 {
 	if (*uParam0 == 0)
 		*uParam0 = NETWORK::GET_NETWORK_TIME_ACCURATE();
@@ -1004,12 +1004,12 @@ void func_14(var uParam0) // Position - 0x37A
 	return;
 }
 
-BOOL func_15(int iParam0) // Position - 0x390
+BOOL func_15(int iParam0) // Position - 0x390 (912)
 {
 	return iParam0 != 0;
 }
 
-void func_16() // Position - 0x39C
+void func_16() // Position - 0x39C (924)
 {
 	if (func_15(uLocal_49.f_16) && func_12(uLocal_49.f_16, 1250))
 	{
@@ -1017,20 +1017,20 @@ void func_16() // Position - 0x39C
 		HUD::SET_TEXT_COLOUR(237, 35, 54, 255);
 		HUD::SET_TEXT_DROPSHADOW(5, 0, 0, 0, 175);
 		HUD::SET_TEXT_JUSTIFICATION(0);
-		func_17(0.5f, 0.41f, "CBH_MV_FL", 0);
+		func_17(0.5f, 0.41f, "CBH_MV_FL" /*FAIL*/, 0);
 	}
 
 	return;
 }
 
-void func_17(float fParam0, float fParam1, char* sParam2, int iParam3) // Position - 0x3F8
+void func_17(float fParam0, float fParam1, char* sParam2, int iParam3) // Position - 0x3F8 (1016)
 {
 	HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT(sParam2);
 	HUD::END_TEXT_COMMAND_DISPLAY_TEXT(fParam0, fParam1, iParam3);
 	return;
 }
 
-void func_18() // Position - 0x410
+void func_18() // Position - 0x410 (1040)
 {
 	int num;
 
@@ -1057,7 +1057,7 @@ void func_18() // Position - 0x410
 	return;
 }
 
-void func_19(int iParam0) // Position - 0x4EC
+void func_19(int iParam0) // Position - 0x4EC (1260)
 {
 	float num;
 	var unk2;
@@ -1081,7 +1081,7 @@ void func_19(int iParam0) // Position - 0x4EC
 	return;
 }
 
-void func_20(var uParam0, var uParam1, int iParam2, int iParam3, char* sParam4, BOOL bParam5, BOOL bParam6) // Position - 0x56B
+void func_20(var uParam0, var uParam1, int iParam2, int iParam3, char* sParam4, BOOL bParam5, BOOL bParam6) // Position - 0x56B (1387)
 {
 	char* text;
 
@@ -1104,17 +1104,17 @@ void func_20(var uParam0, var uParam1, int iParam2, int iParam3, char* sParam4, 
 	return;
 }
 
-float func_21(float fParam0) // Position - 0x5C4
+float func_21(float fParam0) // Position - 0x5C4 (1476)
 {
 	return fParam0;
 }
 
-float func_22(float fParam0) // Position - 0x5CE
+float func_22(float fParam0) // Position - 0x5CE (1486)
 {
 	return fParam0;
 }
 
-BOOL func_23(const char* sParam0) // Position - 0x5D8
+BOOL func_23(const char* sParam0) // Position - 0x5D8 (1496)
 {
 	if (MISC::IS_STRING_NULL(sParam0))
 		return true;
@@ -1124,7 +1124,7 @@ BOOL func_23(const char* sParam0) // Position - 0x5D8
 	return false;
 }
 
-void func_24(var uParam0, BOOL bParam1) // Position - 0x610
+void func_24(var uParam0, BOOL bParam1) // Position - 0x610 (1552)
 {
 	HUD::SET_TEXT_FONT(*uParam0);
 
@@ -1159,7 +1159,7 @@ void func_24(var uParam0, BOOL bParam1) // Position - 0x610
 	return;
 }
 
-BOOL func_25() // Position - 0x6A9
+BOOL func_25() // Position - 0x6A9 (1705)
 {
 	if (func_26())
 		return true;
@@ -1176,12 +1176,12 @@ BOOL func_25() // Position - 0x6A9
 	return true;
 }
 
-BOOL func_26() // Position - 0x6E8
+BOOL func_26() // Position - 0x6E8 (1768)
 {
 	return Global_1574604;
 }
 
-struct<11> func_27(int iParam0) // Position - 0x6F4
+struct<11> func_27(int iParam0) // Position - 0x6F4 (1780)
 {
 	int num;
 
@@ -1215,18 +1215,18 @@ struct<11> func_27(int iParam0) // Position - 0x6F4
 	return num;
 }
 
-float func_28(float fParam0, float fParam1, float fParam2) // Position - 0x7B8
+float func_28(float fParam0, float fParam1, float fParam2) // Position - 0x7B8 (1976)
 {
 	return ((1f - fParam2) * fParam0) + (fParam2 * fParam1);
 }
 
-float func_29(float fParam0) // Position - 0x7CD
+float func_29(float fParam0) // Position - 0x7CD (1997)
 {
 	fParam0 = 0.5f - ((0.5f - fParam0) / fLocal_45);
 	return fParam0;
 }
 
-int func_30(int iParam0) // Position - 0x7EA
+int func_30(int iParam0) // Position - 0x7EA (2026)
 {
 	switch (iParam0)
 	{
@@ -1267,7 +1267,7 @@ int func_30(int iParam0) // Position - 0x7EA
 	return 20000;
 }
 
-void func_31() // Position - 0x87E
+void func_31() // Position - 0x87E (2174)
 {
 	float num;
 	float num2;
@@ -1372,7 +1372,7 @@ void func_31() // Position - 0x87E
 	return;
 }
 
-BOOL func_32(var uParam0) // Position - 0xB73
+BOOL func_32(var uParam0) // Position - 0xB73 (2931)
 {
 	int i;
 
@@ -1387,17 +1387,17 @@ BOOL func_32(var uParam0) // Position - 0xB73
 	return true;
 }
 
-char* func_33() // Position - 0xBAB
+char* func_33() // Position - 0xBAB (2987)
 {
 	return "fail";
 }
 
-char* func_34() // Position - 0xBB6
+char* func_34() // Position - 0xBB6 (2998)
 {
 	return "MPBeamHack";
 }
 
-var func_35(BOOL bParam0, var uParam1, var uParam2) // Position - 0xBC1
+var func_35(BOOL bParam0, var uParam1, var uParam2) // Position - 0xBC1 (3009)
 {
 	if (bParam0)
 		return uParam1;
@@ -1405,12 +1405,12 @@ var func_35(BOOL bParam0, var uParam1, var uParam2) // Position - 0xBC1
 	return uParam2;
 }
 
-char* func_36() // Position - 0xBD8
+char* func_36() // Position - 0xBD8 (3032)
 {
 	return "pass";
 }
 
-void func_37(float fParam0, float fParam1, int iParam2) // Position - 0xBE3
+void func_37(float fParam0, float fParam1, int iParam2) // Position - 0xBE3 (3043)
 {
 	var textureName;
 
@@ -1433,81 +1433,81 @@ void func_37(float fParam0, float fParam1, int iParam2) // Position - 0xBE3
 	return;
 }
 
-char* func_38() // Position - 0xC53
+char* func_38() // Position - 0xC53 (3155)
 {
 	return "PCB_Hack_Assets_Foreground";
 }
 
-char* func_39() // Position - 0xC5E
+char* func_39() // Position - 0xC5E (3166)
 {
 	return "PCB_Hack_OffLight";
 }
 
-char* func_40() // Position - 0xC69
+char* func_40() // Position - 0xC69 (3177)
 {
 	return "PCB_Hack_RedLight";
 }
 
-char* func_41() // Position - 0xC75
+char* func_41() // Position - 0xC75 (3189)
 {
 	return "PCB_Hack_GreenLight";
 }
 
-void func_42(float fParam0, float fParam1) // Position - 0xC81
+void func_42(float fParam0, float fParam1) // Position - 0xC81 (3201)
 {
 	GRAPHICS::DRAW_SPRITE(func_44(), func_43(), func_29(fParam0), fParam1, (0.046875f * 1.788f) / fLocal_45, 0.054166667f, 0f, 255, 255, 255, 255, false, 0);
 	return;
 }
 
-char* func_43() // Position - 0xCB9
+char* func_43() // Position - 0xCB9 (3257)
 {
 	return "PCB_Hack_EndSolder_Top";
 }
 
-char* func_44() // Position - 0xCC5
+char* func_44() // Position - 0xCC5 (3269)
 {
 	return "PCB_Hack_Assets_Foreground";
 }
 
-void func_45(float fParam0, float fParam1) // Position - 0xCD0
+void func_45(float fParam0, float fParam1) // Position - 0xCD0 (3280)
 {
 	GRAPHICS::DRAW_SPRITE(func_47(), func_46(), func_29(fParam0), fParam1, (0.046875f * 1.788f) / fLocal_45, 0.054166667f, 0f, 255, 255, 255, 255, false, 0);
 	return;
 }
 
-char* func_46() // Position - 0xD08
+char* func_46() // Position - 0xD08 (3336)
 {
 	return "PCB_Hack_StartSolder_Bottom";
 }
 
-char* func_47() // Position - 0xD14
+char* func_47() // Position - 0xD14 (3348)
 {
 	return "PCB_Hack_Assets_Foreground";
 }
 
-void func_48(float fParam0, float fParam1) // Position - 0xD1F
+void func_48(float fParam0, float fParam1) // Position - 0xD1F (3359)
 {
 	GRAPHICS::DRAW_SPRITE(func_47(), func_49(), func_29(fParam0), fParam1, (0.046875f * 1.788f) / fLocal_45, 0.054166667f, 0f, 255, 255, 255, 255, false, 0);
 	return;
 }
 
-char* func_49() // Position - 0xD57
+char* func_49() // Position - 0xD57 (3415)
 {
 	return "PCB_Hack_StartSolder_Middle";
 }
 
-void func_50(float fParam0, float fParam1) // Position - 0xD63
+void func_50(float fParam0, float fParam1) // Position - 0xD63 (3427)
 {
 	GRAPHICS::DRAW_SPRITE(func_47(), func_51(), func_29(fParam0), fParam1, (0.046875f * 1.788f) / fLocal_45, 0.054166667f, 0f, 255, 255, 255, 255, false, 0);
 	return;
 }
 
-char* func_51() // Position - 0xD9B
+char* func_51() // Position - 0xD9B (3483)
 {
 	return "PCB_Hack_StartSolder_Top";
 }
 
-int func_52(int iParam0) // Position - 0xDA7
+int func_52(int iParam0) // Position - 0xDA7 (3495)
 {
 	switch (iParam0)
 	{
@@ -1548,7 +1548,7 @@ int func_52(int iParam0) // Position - 0xDA7
 	return -1;
 }
 
-int func_53(int iParam0) // Position - 0xE1B
+int func_53(int iParam0) // Position - 0xE1B (3611)
 {
 	switch (iParam0)
 	{
@@ -1589,7 +1589,7 @@ int func_53(int iParam0) // Position - 0xE1B
 	return -1;
 }
 
-int func_54(int iParam0) // Position - 0xE8F
+int func_54(int iParam0) // Position - 0xE8F (3727)
 {
 	switch (iParam0)
 	{
@@ -1630,7 +1630,7 @@ int func_54(int iParam0) // Position - 0xE8F
 	return -1;
 }
 
-int func_55(int iParam0) // Position - 0xF03
+int func_55(int iParam0) // Position - 0xF03 (3843)
 {
 	switch (iParam0)
 	{
@@ -1671,7 +1671,7 @@ int func_55(int iParam0) // Position - 0xF03
 	return -1;
 }
 
-void func_56(float fParam0, float fParam1, int iParam2, int iParam3) // Position - 0xF77
+void func_56(float fParam0, float fParam1, int iParam2, int iParam3) // Position - 0xF77 (3959)
 {
 	var unk;
 	var unk17;
@@ -1692,14 +1692,14 @@ void func_56(float fParam0, float fParam1, int iParam2, int iParam3) // Position
 	return;
 }
 
-void func_57(const char* sParam0, const char* sParam1, float fParam2, float fParam3, float fParam4, float fParam5, float fParam6, var uParam7) // Position - 0x1002
+void func_57(const char* sParam0, const char* sParam1, float fParam2, float fParam3, float fParam4, float fParam5, float fParam6, var uParam7) // Position - 0x1002 (4098)
 {
 	func_58(&fParam2, &fParam3, &fParam4, &fParam5);
 	GRAPHICS::DRAW_SPRITE(sParam0, sParam1, fParam2, fParam3, fParam4, fParam5, fParam6, *uParam7, uParam7->f_1, uParam7->f_2, uParam7->f_3, false, 1);
 	return;
 }
 
-void func_58(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 0x1039
+void func_58(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 0x1039 (4153)
 {
 	int value;
 
@@ -1712,22 +1712,22 @@ void func_58(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 0
 	return;
 }
 
-float func_59() // Position - 0x1090
+float func_59() // Position - 0x1090 (4240)
 {
 	return 0.453f;
 }
 
-float func_60() // Position - 0x109D
+float func_60() // Position - 0x109D (4253)
 {
 	return 0.074f;
 }
 
-char* func_61() // Position - 0x10AA
+char* func_61() // Position - 0x10AA (4266)
 {
 	return "PCB_Hack_Selection";
 }
 
-void func_62(float fParam0, float fParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7) // Position - 0x10B6
+void func_62(float fParam0, float fParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7) // Position - 0x10B6 (4278)
 {
 	var unk;
 	var unk17;
@@ -1744,17 +1744,17 @@ void func_62(float fParam0, float fParam1, int iParam2, int iParam3, int iParam4
 	return;
 }
 
-float func_63() // Position - 0x1125
+float func_63() // Position - 0x1125 (4389)
 {
 	return 0.465f;
 }
 
-float func_64() // Position - 0x1132
+float func_64() // Position - 0x1132 (4402)
 {
 	return 0.081f;
 }
 
-struct<16> func_65(int iParam0, int iParam1) // Position - 0x113F
+struct<16> func_65(int iParam0, int iParam1) // Position - 0x113F (4415)
 {
 	var unk;
 
@@ -1773,7 +1773,7 @@ struct<16> func_65(int iParam0, int iParam1) // Position - 0x113F
 	return unk;
 }
 
-int func_66(var uParam0, int iParam1) // Position - 0x117B
+int func_66(var uParam0, int iParam1) // Position - 0x117B (4475)
 {
 	switch (iParam1)
 	{
@@ -1808,7 +1808,7 @@ int func_66(var uParam0, int iParam1) // Position - 0x117B
 	return -1;
 }
 
-int func_67(int iParam0) // Position - 0x1203
+int func_67(int iParam0) // Position - 0x1203 (4611)
 {
 	switch (iParam0)
 	{
@@ -1849,7 +1849,7 @@ int func_67(int iParam0) // Position - 0x1203
 	return -1;
 }
 
-int func_68(int iParam0) // Position - 0x1277
+int func_68(int iParam0) // Position - 0x1277 (4727)
 {
 	switch (iParam0)
 	{
@@ -1890,7 +1890,7 @@ int func_68(int iParam0) // Position - 0x1277
 	return -1;
 }
 
-int func_69(int iParam0) // Position - 0x12EB
+int func_69(int iParam0) // Position - 0x12EB (4843)
 {
 	switch (iParam0)
 	{
@@ -1931,7 +1931,7 @@ int func_69(int iParam0) // Position - 0x12EB
 	return -1;
 }
 
-int func_70(int iParam0) // Position - 0x135F
+int func_70(int iParam0) // Position - 0x135F (4959)
 {
 	switch (iParam0)
 	{
@@ -1972,7 +1972,7 @@ int func_70(int iParam0) // Position - 0x135F
 	return -1;
 }
 
-int func_71(int iParam0) // Position - 0x13D3
+int func_71(int iParam0) // Position - 0x13D3 (5075)
 {
 	switch (iParam0)
 	{
@@ -2013,7 +2013,7 @@ int func_71(int iParam0) // Position - 0x13D3
 	return -1;
 }
 
-int func_72(int iParam0) // Position - 0x1447
+int func_72(int iParam0) // Position - 0x1447 (5191)
 {
 	switch (iParam0)
 	{
@@ -2054,7 +2054,7 @@ int func_72(int iParam0) // Position - 0x1447
 	return -1;
 }
 
-int func_73(int iParam0) // Position - 0x14BB
+int func_73(int iParam0) // Position - 0x14BB (5307)
 {
 	switch (iParam0)
 	{
@@ -2095,7 +2095,7 @@ int func_73(int iParam0) // Position - 0x14BB
 	return -1;
 }
 
-int func_74(int iParam0) // Position - 0x152F
+int func_74(int iParam0) // Position - 0x152F (5423)
 {
 	switch (iParam0)
 	{
@@ -2136,22 +2136,22 @@ int func_74(int iParam0) // Position - 0x152F
 	return -1;
 }
 
-float func_75() // Position - 0x15A3
+float func_75() // Position - 0x15A3 (5539)
 {
 	return 0.004f;
 }
 
-float func_76() // Position - 0x15B0
+float func_76() // Position - 0x15B0 (5552)
 {
 	return 0.0625f;
 }
 
-float func_77() // Position - 0x15BD
+float func_77() // Position - 0x15BD (5565)
 {
 	return func_64() - 0.014f;
 }
 
-void func_78() // Position - 0x15CF
+void func_78() // Position - 0x15CF (5583)
 {
 	if (uLocal_49.f_24)
 	{
@@ -2177,25 +2177,25 @@ void func_78() // Position - 0x15CF
 	return;
 }
 
-void func_79() // Position - 0x1625
+void func_79() // Position - 0x1625 (5669)
 {
 	func_81(0f, 0f, 1f, 1f, 0, 0, 100, 255);
 	GRAPHICS::DRAW_SPRITE(func_7(), func_80(), 0.5f, 0.5f, 1f * fLocal_46, 1f, 0f, 255, 255, 255, 255, false, 0);
 	return;
 }
 
-char* func_80() // Position - 0x165E
+char* func_80() // Position - 0x165E (5726)
 {
 	return "PCB_Hack_Background";
 }
 
-void func_81(float fParam0, float fParam1, float fParam2, float fParam3, int iParam4, int iParam5, int iParam6, int iParam7) // Position - 0x166A
+void func_81(float fParam0, float fParam1, float fParam2, float fParam3, int iParam4, int iParam5, int iParam6, int iParam7) // Position - 0x166A (5738)
 {
 	GRAPHICS::DRAW_RECT(fParam0 + (fParam2 * 0.5f), fParam1 + (fParam3 * 0.5f), fParam2, fParam3, iParam4, iParam5, iParam6, iParam7, false);
 	return;
 }
 
-void func_82() // Position - 0x1699
+void func_82() // Position - 0x1699 (5785)
 {
 	func_79();
 	func_78();
@@ -2221,7 +2221,7 @@ void func_82() // Position - 0x1699
 	return;
 }
 
-void func_83() // Position - 0x1710
+void func_83() // Position - 0x1710 (5904)
 {
 	if (func_15(uLocal_49.f_17) && func_12(uLocal_49.f_17, 1250))
 	{
@@ -2229,13 +2229,13 @@ void func_83() // Position - 0x1710
 		HUD::SET_TEXT_COLOUR(13, 118, 94, 255);
 		HUD::SET_TEXT_DROPSHADOW(5, 0, 0, 0, 175);
 		HUD::SET_TEXT_JUSTIFICATION(0);
-		func_17(0.5f, 0.41f, "CBH_MV_PS", 0);
+		func_17(0.5f, 0.41f, "CBH_MV_PS" /*SUCCESS*/, 0);
 	}
 
 	return;
 }
 
-void func_84() // Position - 0x176D
+void func_84() // Position - 0x176D (5997)
 {
 	func_79();
 	func_78();
@@ -2266,7 +2266,7 @@ void func_84() // Position - 0x176D
 	return;
 }
 
-BOOL func_85() // Position - 0x17BE
+BOOL func_85() // Position - 0x17BE (6078)
 {
 	if (IS_BIT_SET(Global_1919341, 0))
 		return true;
@@ -2274,7 +2274,7 @@ BOOL func_85() // Position - 0x17BE
 	return false;
 }
 
-BOOL func_86() // Position - 0x17D4
+BOOL func_86() // Position - 0x17D4 (6100)
 {
 	if (IS_BIT_SET(Global_1919341, 1) || IS_BIT_SET(Global_1919341, 4))
 		return true;
@@ -2282,7 +2282,7 @@ BOOL func_86() // Position - 0x17D4
 	return false;
 }
 
-BOOL func_87() // Position - 0x17F6
+BOOL func_87() // Position - 0x17F6 (6134)
 {
 	if (IS_BIT_SET(Global_1919341, 5) && IS_BIT_SET(Global_1919341, 2))
 		return true;
@@ -2290,7 +2290,7 @@ BOOL func_87() // Position - 0x17F6
 	return false;
 }
 
-void func_88() // Position - 0x1817
+void func_88() // Position - 0x1817 (6167)
 {
 	if (func_32(uLocal_49.f_20))
 		MISC::SET_BIT(&Global_1919341, 2);
@@ -2300,7 +2300,7 @@ void func_88() // Position - 0x1817
 	return;
 }
 
-void func_89() // Position - 0x183F
+void func_89() // Position - 0x183F (6207)
 {
 	if (func_91(uLocal_49.f_14))
 	{
@@ -2326,7 +2326,7 @@ void func_89() // Position - 0x183F
 	return;
 }
 
-BOOL func_90(int iParam0) // Position - 0x18D2
+BOOL func_90(int iParam0) // Position - 0x18D2 (6354)
 {
 	if (iParam0 == 0)
 		return false;
@@ -2337,7 +2337,7 @@ BOOL func_90(int iParam0) // Position - 0x18D2
 	return true;
 }
 
-BOOL func_91(int iParam0) // Position - 0x1907
+BOOL func_91(int iParam0) // Position - 0x1907 (6407)
 {
 	if (iParam0 == 0)
 		return false;
@@ -2348,7 +2348,7 @@ BOOL func_91(int iParam0) // Position - 0x1907
 	return true;
 }
 
-void func_92() // Position - 0x1944
+void func_92() // Position - 0x1944 (6468)
 {
 	var unk;
 
@@ -2398,10 +2398,10 @@ void func_92() // Position - 0x1944
 
 	if (uLocal_49.f_25.f_693 == 0)
 	{
-		func_104(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(PLAYER_CONTROL, INPUT_FRONTEND_ACCEPT, true), "CBH_CONFI", &(uLocal_49.f_25), 0);
-		func_104(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(PLAYER_CONTROL, INPUT_FRONTEND_CANCEL, true), "CBH_QUIT", &(uLocal_49.f_25), 0);
-		func_103(0, 4, "CBH_MV_UD", &(uLocal_49.f_25));
-		func_103(0, 5, "CBH_MV_LR", &(uLocal_49.f_25));
+		func_104(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(PLAYER_CONTROL, INPUT_FRONTEND_ACCEPT, true), "CBH_CONFI" /*Confirm*/, &(uLocal_49.f_25), 0);
+		func_104(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(PLAYER_CONTROL, INPUT_FRONTEND_CANCEL, true), "CBH_QUIT" /*Quit*/, &(uLocal_49.f_25), 0);
+		func_103(0, 4, "CBH_MV_UD" /*Move*/, &(uLocal_49.f_25));
+		func_103(0, 5, "CBH_MV_LR" /*Select*/, &(uLocal_49.f_25));
 	}
 
 	unk = { func_102() };
@@ -2423,7 +2423,7 @@ void func_92() // Position - 0x1944
 	return;
 }
 
-void func_93(var uParam0, var uParam1, var uParam2, BOOL bParam3) // Position - 0x1B17
+void func_93(var uParam0, var uParam1, var uParam2, BOOL bParam3) // Position - 0x1B17 (6935)
 {
 	int i;
 	eControlType control;
@@ -2612,7 +2612,7 @@ void func_93(var uParam0, var uParam1, var uParam2, BOOL bParam3) // Position - 
 	return;
 }
 
-void func_94() // Position - 0x1EB2
+void func_94() // Position - 0x1EB2 (7858)
 {
 	HUD::HIDE_HUD_COMPONENT_THIS_FRAME(HUD_AREA_NAME);
 	HUD::HIDE_HUD_COMPONENT_THIS_FRAME(HUD_VEHICLE_NAME);
@@ -2621,50 +2621,50 @@ void func_94() // Position - 0x1EB2
 	return;
 }
 
-void func_95(int iParam0, var uParam1) // Position - 0x1ED0
+void func_95(int iParam0, var uParam1) // Position - 0x1ED0 (7888)
 {
 	GRAPHICS::DRAW_SCALEFORM_MOVIE(iParam0, *uParam1, uParam1->f_1, uParam1->f_2, uParam1->f_3, uParam1->f_4, uParam1->f_5, uParam1->f_6, uParam1->f_7, 0);
 	return;
 }
 
-void func_96(const char* sParam0) // Position - 0x1EFE
+void func_96(const char* sParam0) // Position - 0x1EFE (7934)
 {
 	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(sParam0);
 	GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 	return;
 }
 
-void func_97(const char* sParam0) // Position - 0x1F10
+void func_97(const char* sParam0) // Position - 0x1F10 (7952)
 {
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_PLAYER_NAME_STRING(sParam0);
 	return;
 }
 
-void func_98(int iParam0) // Position - 0x1F1E
+void func_98(int iParam0) // Position - 0x1F1E (7966)
 {
 	Global_1577950 = iParam0;
 	return;
 }
 
-void func_99(var uParam0) // Position - 0x1F2C
+void func_99(var uParam0) // Position - 0x1F2C (7980)
 {
 	Global_1981195 = 0;
 	uParam0->f_692 = 0;
 	return;
 }
 
-BOOL func_100(var uParam0) // Position - 0x1F3F
+BOOL func_100(var uParam0) // Position - 0x1F3F (7999)
 {
 	return Global_1981195 || uParam0->f_692;
 }
 
-void func_101(int iParam0) // Position - 0x1F56
+void func_101(int iParam0) // Position - 0x1F56 (8022)
 {
 	Global_1675211.f_1163 = iParam0;
 	return;
 }
 
-struct<9> func_102() // Position - 0x1F67
+struct<9> func_102() // Position - 0x1F67 (8039)
 {
 	float num;
 
@@ -2680,7 +2680,7 @@ struct<9> func_102() // Position - 0x1F67
 	return num;
 }
 
-void func_103(int iParam0, int iParam1, char* sParam2, var uParam3) // Position - 0x1FAB
+void func_103(int iParam0, int iParam1, char* sParam2, var uParam3) // Position - 0x1FAB (8107)
 {
 	int offset;
 
@@ -2697,7 +2697,7 @@ void func_103(int iParam0, int iParam1, char* sParam2, var uParam3) // Position 
 	return;
 }
 
-void func_104(const char* sParam0, char* sParam1, var uParam2, char* sParam3) // Position - 0x200F
+void func_104(const char* sParam0, char* sParam1, var uParam2, char* sParam3) // Position - 0x200F (8207)
 {
 	int num;
 
@@ -2712,7 +2712,7 @@ void func_104(const char* sParam0, char* sParam1, var uParam2, char* sParam3) //
 	return;
 }
 
-void func_105() // Position - 0x205F
+void func_105() // Position - 0x205F (8287)
 {
 	int i;
 	var textureDict;
@@ -2764,7 +2764,7 @@ void func_105() // Position - 0x205F
 	if (!GRAPHICS::HAS_STREAMED_TEXTURE_DICT_LOADED(&textureDict))
 		return;
 
-	_DISPLAY_HELP_TEXT("CBH_MV_HELP", 10000);
+	_DISPLAY_HELP_TEXT("CBH_MV_HELP" /*Arrange the circuit blocks to create a continuous line between the start and end points. Use ~INPUTGROUP_CELLPHONE_NAVIGATE~ to select and move each block. Press ~INPUT_FRONTEND_ACCEPT~ to test the circuit.*/, 10000);
 	AUDIO::START_AUDIO_SCENE("DLC_24-2_Hacking_Circuit_Scene");
 	uLocal_49.f_21 = AUDIO::GET_SOUND_ID();
 	AUDIO::PLAY_SOUND_FRONTEND(uLocal_49.f_21, "Background_Loop", "DLC_24-2_Hack_Circuit_Board", true);
@@ -2774,19 +2774,19 @@ void func_105() // Position - 0x205F
 	return;
 }
 
-void _DISPLAY_HELP_TEXT(char* text, int iParam1) // Position - 0x21C7
+void _DISPLAY_HELP_TEXT(char* text, int iParam1) // Position - 0x21C7 (8647)
 {
 	HUD::BEGIN_TEXT_COMMAND_DISPLAY_HELP(text);
 	HUD::END_TEXT_COMMAND_DISPLAY_HELP(0, false, true, iParam1);
 	return;
 }
 
-char* func_107() // Position - 0x21DE
+char* func_107() // Position - 0x21DE (8670)
 {
 	return "CommonMenu";
 }
 
-void func_108() // Position - 0x21EA
+void func_108() // Position - 0x21EA (8682)
 {
 	func_119(0);
 	PAD::ALLOW_ALTERNATIVE_SCRIPT_CONTROLS_LAYOUT(PLAYER_CONTROL);
@@ -2819,7 +2819,7 @@ void func_108() // Position - 0x21EA
 	return;
 }
 
-void func_109() // Position - 0x2265
+void func_109() // Position - 0x2265 (8805)
 {
 	if (!Global_2672939.f_1023.f_10)
 		Global_2672939.f_1023.f_10 = 1;
@@ -2827,14 +2827,14 @@ void func_109() // Position - 0x2265
 	return;
 }
 
-void func_110() // Position - 0x2284
+void func_110() // Position - 0x2284 (8836)
 {
 	fLocal_46 = 1.778f / fLocal_45;
 	fLocal_46 = fLocal_46;
 	return;
 }
 
-void func_111() // Position - 0x229A
+void func_111() // Position - 0x229A (8858)
 {
 	fLocal_45 = GRAPHICS::GET_ASPECT_RATIO(false);
 
@@ -2845,13 +2845,13 @@ void func_111() // Position - 0x229A
 	return;
 }
 
-void func_112() // Position - 0x22BD
+void func_112() // Position - 0x22BD (8893)
 {
 	Global_23831.f_134 = 1;
 	return;
 }
 
-BOOL func_113() // Position - 0x22CB
+BOOL func_113() // Position - 0x22CB (8907)
 {
 	if (func_114() == 0)
 		return true;
@@ -2859,24 +2859,24 @@ BOOL func_113() // Position - 0x22CB
 	return false;
 }
 
-int func_114() // Position - 0x22E0
+int func_114() // Position - 0x22E0 (8928)
 {
 	return Global_1574633.f_18;
 }
 
-void func_115() // Position - 0x22EE
+void func_115() // Position - 0x22EE (8942)
 {
 	Global_2739811.f_4667 = 0;
 	return;
 }
 
-void func_116() // Position - 0x22FE
+void func_116() // Position - 0x22FE (8958)
 {
 	Global_23831.f_6 = 1;
 	return;
 }
 
-void func_117() // Position - 0x230C
+void func_117() // Position - 0x230C (8972)
 {
 	Global_1574755 = 1;
 	TEXT_LABEL_ASSIGN_STRING(&(Global_1574755.f_1), SCRIPT::GET_THIS_SCRIPT_NAME(), 32);
@@ -2884,7 +2884,7 @@ void func_117() // Position - 0x230C
 	return;
 }
 
-void func_118(int iParam0, int iParam1) // Position - 0x2335
+void func_118(int iParam0, int iParam1) // Position - 0x2335 (9013)
 {
 	MISC::SET_BIT(&(Global_1673654.f_1047), iParam0);
 
@@ -2899,7 +2899,7 @@ void func_118(int iParam0, int iParam1) // Position - 0x2335
 	return;
 }
 
-void func_119(int iParam0) // Position - 0x236B
+void func_119(int iParam0) // Position - 0x236B (9067)
 {
 	if (func_125())
 		return;
@@ -2915,7 +2915,7 @@ void func_119(int iParam0) // Position - 0x236B
 	return;
 }
 
-void func_120(int iParam0) // Position - 0x239E
+void func_120(int iParam0) // Position - 0x239E (9118)
 {
 	if (func_125())
 		return;
@@ -2945,7 +2945,7 @@ void func_120(int iParam0) // Position - 0x239E
 	return;
 }
 
-BOOL func_121() // Position - 0x2428
+BOOL func_121() // Position - 0x2428 (9256)
 {
 	if (Global_21066.f_1 == 1 || Global_21066.f_1 == 0)
 		return true;
@@ -2953,7 +2953,7 @@ BOOL func_121() // Position - 0x2428
 	return false;
 }
 
-void func_122(BOOL bParam0, BOOL bParam1) // Position - 0x244F
+void func_122(BOOL bParam0, BOOL bParam1) // Position - 0x244F (9295)
 {
 	if (bParam0)
 	{
@@ -2982,12 +2982,12 @@ void func_122(BOOL bParam0, BOOL bParam1) // Position - 0x244F
 	return;
 }
 
-BOOL func_123() // Position - 0x24C3
+BOOL func_123() // Position - 0x24C3 (9411)
 {
 	return IS_BIT_SET(Global_1957675, 5);
 }
 
-BOOL func_124(int iParam0) // Position - 0x24D1
+BOOL func_124(int iParam0) // Position - 0x24D1 (9425)
 {
 	if (iParam0 == 1)
 		if (Global_21066.f_1 > 3)
@@ -2998,7 +2998,7 @@ BOOL func_124(int iParam0) // Position - 0x24D1
 		else
 			return false;
 
-	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(-754107665) > 0)
+	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("cellphone_flashhand")) > 0)
 		return true;
 
 	if (Global_21066.f_1 > 3)
@@ -3007,12 +3007,12 @@ BOOL func_124(int iParam0) // Position - 0x24D1
 	return false;
 }
 
-BOOL func_125() // Position - 0x2528
+BOOL func_125() // Position - 0x2528 (9512)
 {
 	return IS_BIT_SET(Global_1957675, 19);
 }
 
-void func_126() // Position - 0x2537
+void func_126() // Position - 0x2537 (9527)
 {
 	SYSTEM::WAIT(0);
 	return;

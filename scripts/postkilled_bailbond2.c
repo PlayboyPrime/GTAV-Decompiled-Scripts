@@ -154,7 +154,7 @@
 	var uScriptParam_8 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	Vector3 entityCoords;
 	int num;
@@ -253,7 +253,7 @@ void main() // Position - 0x0
 	return;
 }
 
-BOOL func_1() // Position - 0x213
+BOOL func_1() // Position - 0x213 (531)
 {
 	int i;
 
@@ -272,7 +272,7 @@ BOOL func_1() // Position - 0x213
 	return true;
 }
 
-void func_2(Vehicle* pveParam0) // Position - 0x26C
+void func_2(Vehicle* pveParam0) // Position - 0x26C (620)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(*pveParam0))
 	{
@@ -285,7 +285,7 @@ void func_2(Vehicle* pveParam0) // Position - 0x26C
 	return;
 }
 
-BOOL func_3(Vehicle veParam0) // Position - 0x2A4
+BOOL func_3(Vehicle veParam0) // Position - 0x2A4 (676)
 {
 	if (_DOES_ENTITY_EXIST_AND_IS_ALIVE(veParam0))
 		if (VEHICLE::IS_VEHICLE_DRIVEABLE(veParam0, false))
@@ -295,7 +295,7 @@ BOOL func_3(Vehicle veParam0) // Position - 0x2A4
 	return false;
 }
 
-BOOL _DOES_ENTITY_EXIST_AND_IS_ALIVE(Vehicle veParam0) // Position - 0x2CE
+BOOL _DOES_ENTITY_EXIST_AND_IS_ALIVE(Vehicle veParam0) // Position - 0x2CE (718)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(veParam0))
 		if (!ENTITY::IS_ENTITY_DEAD(veParam0, false))
@@ -304,7 +304,7 @@ BOOL _DOES_ENTITY_EXIST_AND_IS_ALIVE(Vehicle veParam0) // Position - 0x2CE
 	return false;
 }
 
-int func_5(Ped pedParam0, var uParam1, int iParam2, Player plParam3, BOOL bParam4, BOOL bParam5, int iParam6, const char* sParam7, int iParam8, int iParam9, BOOL bParam10, BOOL bParam11, BOOL bParam12) // Position - 0x2EF
+int func_5(Ped pedParam0, var uParam1, int iParam2, Player plParam3, BOOL bParam4, BOOL bParam5, int iParam6, const char* sParam7, int iParam8, int iParam9, BOOL bParam10, BOOL bParam11, BOOL bParam12) // Position - 0x2EF (751)
 {
 	BOOL flag;
 
@@ -420,7 +420,7 @@ int func_5(Ped pedParam0, var uParam1, int iParam2, Player plParam3, BOOL bParam
 	return 0;
 }
 
-void func_6(Ped* ppedParam0, BOOL bParam1, int iParam2, int iParam3) // Position - 0x4DF
+void func_6(Ped* ppedParam0, BOOL bParam1, int iParam2, int iParam3) // Position - 0x4DF (1247)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(*ppedParam0))
 	{
@@ -443,7 +443,7 @@ void func_6(Ped* ppedParam0, BOOL bParam1, int iParam2, int iParam3) // Position
 	return;
 }
 
-void func_7(Blip* pblParam0, BOOL bParam1) // Position - 0x52F
+void func_7(Blip* pblParam0, BOOL bParam1) // Position - 0x52F (1327)
 {
 	BOOL flag;
 	var unk;
@@ -475,7 +475,7 @@ void func_7(Blip* pblParam0, BOOL bParam1) // Position - 0x52F
 	return;
 }
 
-BOOL func_8(Vehicle veParam0) // Position - 0x5A9
+BOOL func_8(Vehicle veParam0) // Position - 0x5A9 (1449)
 {
 	if (_DOES_ENTITY_EXIST_AND_IS_ALIVE(veParam0))
 		if (!PED::IS_PED_INJURED(veParam0))
@@ -484,9 +484,9 @@ BOOL func_8(Vehicle veParam0) // Position - 0x5A9
 	return false;
 }
 
-BOOL func_9() // Position - 0x5C9
+BOOL func_9() // Position - 0x5C9 (1481)
 {
-	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(1189534554) == 0)
+	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("bailbond2")) == 0)
 		if (!_CAN_ENTER_FREEROAM_STATE(4))
 			return false;
 
@@ -505,13 +505,13 @@ BOOL func_9() // Position - 0x5C9
 	return true;
 }
 
-eCharacter _GET_CURRENT_PLAYER_CHARACTER() // Position - 0x619
+eCharacter _GET_CURRENT_PLAYER_CHARACTER() // Position - 0x619 (1561)
 {
 	func_11();
 	return Global_114135.f_2367.f_539.f_4321;
 }
 
-void func_11() // Position - 0x632
+void func_11() // Position - 0x632 (1586)
 {
 	eCharacter character;
 
@@ -544,17 +544,17 @@ void func_11() // Position - 0x632
 	return;
 }
 
-BOOL func_12(int iParam0) // Position - 0x72F
+BOOL func_12(int iParam0) // Position - 0x72F (1839)
 {
 	return Global_44181 == iParam0;
 }
 
-BOOL func_13(eCharacter echParam0) // Position - 0x73D
+BOOL func_13(eCharacter echParam0) // Position - 0x73D (1853)
 {
 	return echParam0 < CHAR_MULTIPLAYER;
 }
 
-eCharacter _GET_PLAYER_CHARACTER_FROM_PED(Ped pedParam0) // Position - 0x749
+eCharacter _GET_PLAYER_CHARACTER_FROM_PED(Ped pedParam0) // Position - 0x749 (1865)
 {
 	eCharacter i;
 	Hash entityModel;
@@ -573,7 +573,7 @@ eCharacter _GET_PLAYER_CHARACTER_FROM_PED(Ped pedParam0) // Position - 0x749
 	return _CHAR_NULL;
 }
 
-Hash _GET_CHARACTER_MODEL(eCharacter character) // Position - 0x786
+Hash _GET_CHARACTER_MODEL(eCharacter character) // Position - 0x786 (1926)
 {
 	if (func_13(character))
 		return func_16(character);
@@ -583,17 +583,17 @@ Hash _GET_CHARACTER_MODEL(eCharacter character) // Position - 0x786
 	return 0;
 }
 
-Hash func_16(eCharacter echParam0) // Position - 0x7AB
+Hash func_16(eCharacter echParam0) // Position - 0x7AB (1963)
 {
 	return Global_2201[echParam0 /*29*/];
 }
 
-BOOL _CAN_ENTER_FREEROAM_STATE(int iParam0) // Position - 0x7BA
+BOOL _CAN_ENTER_FREEROAM_STATE(int iParam0) // Position - 0x7BA (1978)
 {
 	return func_18(iParam0, Global_44181);
 }
 
-BOOL func_18(int iParam0, int iParam1) // Position - 0x7CB
+BOOL func_18(int iParam0, int iParam1) // Position - 0x7CB (1995)
 {
 	if (iParam1 == 15)
 		return 1;
@@ -717,13 +717,13 @@ BOOL func_18(int iParam0, int iParam1) // Position - 0x7CB
 	return 0;
 }
 
-void func_19() // Position - 0x9AC
+void func_19() // Position - 0x9AC (2476)
 {
 	int i;
 
 	PED::ADD_RELATIONSHIP_GROUP("ENEMIES", &hLocal_143);
-	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, hLocal_143);
-	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, hLocal_143, 1862763509);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, joaat("PLAYER"), hLocal_143);
+	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, hLocal_143, joaat("PLAYER"));
 
 	for (i = 0; i <= iLocal_77.f_5 - 1; i = i + 1)
 	{
@@ -747,12 +747,12 @@ void func_19() // Position - 0x9AC
 	return;
 }
 
-void func_20() // Position - 0xA79
+void func_20() // Position - 0xA79 (2681)
 {
 	int i;
 
-	PED::CLEAR_RELATIONSHIP_BETWEEN_GROUPS(5, 1862763509, hLocal_143);
-	PED::CLEAR_RELATIONSHIP_BETWEEN_GROUPS(5, hLocal_143, 1862763509);
+	PED::CLEAR_RELATIONSHIP_BETWEEN_GROUPS(5, joaat("PLAYER"), hLocal_143);
+	PED::CLEAR_RELATIONSHIP_BETWEEN_GROUPS(5, hLocal_143, joaat("PLAYER"));
 
 	for (i = 0; i <= iLocal_77 - 1; i = i + 1)
 	{

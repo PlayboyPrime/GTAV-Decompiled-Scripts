@@ -1,4 +1,4 @@
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
 
@@ -11,7 +11,7 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1() // Position - 0x1C
+void func_1() // Position - 0x1C (28)
 {
 	int i;
 	int hudIndex;
@@ -66,7 +66,7 @@ void func_1() // Position - 0x1C
 	return;
 }
 
-void func_2(int iParam0) // Position - 0x204
+void func_2(int iParam0) // Position - 0x204 (516)
 {
 	Global_112784[iParam0 /*28*/].f_21 = 0;
 	TEXT_LABEL_ASSIGN_STRING(&Global_112784[iParam0 /*28*/], "", 16);
@@ -79,7 +79,7 @@ void func_2(int iParam0) // Position - 0x204
 	return;
 }
 
-BOOL func_3(int iParam0) // Position - 0x26C
+BOOL func_3(int iParam0) // Position - 0x26C (620)
 {
 	int num;
 
@@ -99,27 +99,27 @@ BOOL func_3(int iParam0) // Position - 0x26C
 	return false;
 }
 
-BOOL func_4(int iParam0, const char* sParam1) // Position - 0x33F
+BOOL func_4(int iParam0, const char* sParam1) // Position - 0x33F (831)
 {
 	HUD::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(sParam1);
 	return HUD::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(1 + iParam0);
 }
 
-BOOL func_5(int iParam0, const char* sParam1, int iParam2) // Position - 0x355
+BOOL func_5(int iParam0, const char* sParam1, int iParam2) // Position - 0x355 (853)
 {
 	HUD::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(sParam1);
 	HUD::ADD_TEXT_COMPONENT_INTEGER(iParam2);
 	return HUD::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(1 + iParam0);
 }
 
-BOOL func_6(int iParam0, const char* sParam1, const char* sParam2) // Position - 0x371
+BOOL func_6(int iParam0, const char* sParam1, const char* sParam2) // Position - 0x371 (881)
 {
 	HUD::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(sParam1);
 	HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(sParam2);
 	return HUD::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(1 + iParam0);
 }
 
-BOOL func_7(int iParam0, const char* sParam1, const char* sParam2, int iParam3) // Position - 0x38D
+BOOL func_7(int iParam0, const char* sParam1, const char* sParam2, int iParam3) // Position - 0x38D (909)
 {
 	HUD::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(sParam1);
 	HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(sParam2);

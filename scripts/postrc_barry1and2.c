@@ -54,7 +54,7 @@
 	var uLocal_52 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -143,7 +143,7 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1(Object* pobParam0, BOOL bParam1) // Position - 0x1D9
+void func_1(Object* pobParam0, BOOL bParam1) // Position - 0x1D9 (473)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(*pobParam0))
 	{
@@ -159,7 +159,7 @@ void func_1(Object* pobParam0, BOOL bParam1) // Position - 0x1D9
 	return;
 }
 
-float func_2(Ped pedParam0, Vector3 vParam1, var uParam2, var uParam3, BOOL bParam4) // Position - 0x214
+float func_2(Ped pedParam0, Vector3 vParam1, var uParam2, var uParam3, BOOL bParam4) // Position - 0x214 (532)
 {
 	Vector3 entityCoords;
 
@@ -171,7 +171,7 @@ float func_2(Ped pedParam0, Vector3 vParam1, var uParam2, var uParam3, BOOL bPar
 	return MISC::GET_DISTANCE_BETWEEN_COORDS(entityCoords, vParam1, bParam4);
 }
 
-BOOL func_3() // Position - 0x24E
+BOOL func_3() // Position - 0x24E (590)
 {
 	var unk;
 
@@ -187,7 +187,7 @@ BOOL func_3() // Position - 0x24E
 	return false;
 }
 
-void _CONVERSATION_ADD_LINE_NO_SUBTITLE(var uParam0, char* sParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x2DE
+void _CONVERSATION_ADD_LINE_NO_SUBTITLE(var uParam0, char* sParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x2DE (734)
 {
 	func_5(uParam0, 145, sParam1, iParam4, iParam5, 0);
 
@@ -201,7 +201,7 @@ void _CONVERSATION_ADD_LINE_NO_SUBTITLE(var uParam0, char* sParam1, char* sParam
 	return;
 }
 
-void func_5(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x319
+void func_5(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x319 (793)
 {
 	Global_21879 = { *uParam0 };
 	Global_8235 = iParam1;
@@ -233,7 +233,7 @@ void func_5(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, i
 	return;
 }
 
-char* func_6() // Position - 0x36F
+char* func_6() // Position - 0x36F (879)
 {
 	char* str;
 
@@ -268,7 +268,7 @@ char* func_6() // Position - 0x36F
 	return str;
 }
 
-void _CONVERSATION_INITIALIZE_ACTOR(var uParam0, int iParam1, Object obParam2, char* sParam3, int iParam4, int iParam5) // Position - 0x3D5
+void _CONVERSATION_INITIALIZE_ACTOR(var uParam0, int iParam1, Object obParam2, char* sParam3, int iParam4, int iParam5) // Position - 0x3D5 (981)
 {
 	uParam0->[iParam1 /*10*/].f_7 == 1;
 	uParam0->[iParam1 /*10*/] = obParam2;
@@ -295,7 +295,7 @@ void _CONVERSATION_INITIALIZE_ACTOR(var uParam0, int iParam1, Object obParam2, c
 	return;
 }
 
-float func_8(Ped pedParam0, Object obParam1, BOOL bParam2) // Position - 0x470
+float func_8(Ped pedParam0, Object obParam1, BOOL bParam2) // Position - 0x470 (1136)
 {
 	Vector3 entityCoords;
 	Vector3 entityCoords2;
@@ -313,7 +313,7 @@ float func_8(Ped pedParam0, Object obParam1, BOOL bParam2) // Position - 0x470
 	return MISC::GET_DISTANCE_BETWEEN_COORDS(entityCoords, entityCoords2, bParam2);
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x4CE
+BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x4CE (1230)
 {
 	if (Global_22425 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -321,7 +321,7 @@ BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x4CE
 	return false;
 }
 
-BOOL _DOES_ENTITY_EXIST_AND_IS_ALIVE(Object obParam0) // Position - 0x4F0
+BOOL _DOES_ENTITY_EXIST_AND_IS_ALIVE(Object obParam0) // Position - 0x4F0 (1264)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(obParam0))
 		if (!ENTITY::IS_ENTITY_DEAD(obParam0, false))
@@ -330,7 +330,7 @@ BOOL _DOES_ENTITY_EXIST_AND_IS_ALIVE(Object obParam0) // Position - 0x4F0
 	return false;
 }
 
-void func_11() // Position - 0x511
+void func_11() // Position - 0x511 (1297)
 {
 	if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, uLocal_50, 5f))
 	{
@@ -350,7 +350,7 @@ void func_11() // Position - 0x511
 	return;
 }
 
-void func_12() // Position - 0x562
+void func_12() // Position - 0x562 (1378)
 {
 	if (_DOES_ENTITY_EXIST_AND_IS_ALIVE(obLocal_41))
 	{
@@ -362,7 +362,7 @@ void func_12() // Position - 0x562
 		PED::SET_PED_MONEY(obLocal_41, 0);
 		PED::SET_PED_CAN_BE_TARGETTED(obLocal_41, false);
 		PED::SET_PED_NAME_DEBUG(obLocal_41, "POSTBARRY");
-		PED::SET_PED_RELATIONSHIP_GROUP_HASH(obLocal_41, 1862763509);
+		PED::SET_PED_RELATIONSHIP_GROUP_HASH(obLocal_41, joaat("PLAYER"));
 		ENTITY::SET_ENTITY_COLLISION(obLocal_41, false, false);
 		ENTITY::FREEZE_ENTITY_POSITION(obLocal_41, true);
 		ENTITY::SET_ENTITY_COORDS(obLocal_41, uLocal_50, true, false, false, true);
@@ -375,7 +375,7 @@ void func_12() // Position - 0x562
 	return;
 }
 
-BOOL func_13(Ped* ppedParam0, int iParam1, Vector3 vParam2, var uParam3, var uParam4, float fParam5, BOOL bParam6) // Position - 0x614
+BOOL func_13(Ped* ppedParam0, int iParam1, Vector3 vParam2, var uParam3, var uParam4, float fParam5, BOOL bParam6) // Position - 0x614 (1556)
 {
 	Hash model;
 
@@ -392,7 +392,7 @@ BOOL func_13(Ped* ppedParam0, int iParam1, Vector3 vParam2, var uParam3, var uPa
 			*ppedParam0 = PED::CREATE_PED(PED_TYPE_MISSION, model, vParam2, fParam5, false, false);
 			PED::SET_PED_DEFAULT_COMPONENT_VARIATION(*ppedParam0);
 		
-			if (model == 1706635382)
+			if (model == joaat("IG_LamarDavis"))
 				if (PED::GET_PED_DRAWABLE_VARIATION(*ppedParam0, PV_COMP_UPPR) == 0)
 					PED::SET_PED_COMPONENT_VARIATION(*ppedParam0, PV_COMP_HAND, 2, 0, 0);
 		
@@ -408,7 +408,7 @@ BOOL func_13(Ped* ppedParam0, int iParam1, Vector3 vParam2, var uParam3, var uPa
 	return false;
 }
 
-int func_14(var uParam0, int iParam1) // Position - 0x6A2
+int func_14(var uParam0, int iParam1) // Position - 0x6A2 (1698)
 {
 	int num;
 
@@ -436,7 +436,7 @@ int func_14(var uParam0, int iParam1) // Position - 0x6A2
 	return 1;
 }
 
-Hash func_15(int iParam0) // Position - 0x6E8
+Hash func_15(int iParam0) // Position - 0x6E8 (1768)
 {
 	if (!func_17(iParam0))
 		return func_16(iParam0);
@@ -446,26 +446,26 @@ Hash func_15(int iParam0) // Position - 0x6E8
 	return 0;
 }
 
-int func_16(int iParam0) // Position - 0x70E
+int func_16(int iParam0) // Position - 0x70E (1806)
 {
 	return Global_2201[iParam0 /*29*/];
 }
 
-BOOL func_17(int iParam0) // Position - 0x71D
+BOOL func_17(int iParam0) // Position - 0x71D (1821)
 {
 	return iParam0 < 3;
 }
 
-float func_18(float fParam0) // Position - 0x729
+float func_18(float fParam0) // Position - 0x729 (1833)
 {
 	return fParam0 * 57.29578f;
 }
 
-void func_19() // Position - 0x739
+void func_19() // Position - 0x739 (1849)
 {
-	if (OBJECT::DOES_OBJECT_OF_TYPE_EXIST_AT_COORDS(190.56f, -956.4f, 28.63f, 20f, 974300346, false))
+	if (OBJECT::DOES_OBJECT_OF_TYPE_EXIST_AT_COORDS(190.56f, -956.4f, 28.63f, 20f, joaat("prop_protest_table_01"), false))
 	{
-		obLocal_39 = OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(190.56f, -956.4f, 28.63f, 20f, 974300346, false, false, true);
+		obLocal_39 = OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(190.56f, -956.4f, 28.63f, 20f, joaat("prop_protest_table_01"), false, false, true);
 	
 		if (func_25(obLocal_39))
 		{
@@ -479,9 +479,9 @@ void func_19() // Position - 0x739
 		}
 	}
 
-	if (OBJECT::DOES_OBJECT_OF_TYPE_EXIST_AT_COORDS(190.56f, -956.4f, 28.63f, 20f, 1281480215, false))
+	if (OBJECT::DOES_OBJECT_OF_TYPE_EXIST_AT_COORDS(190.56f, -956.4f, 28.63f, 20f, joaat("prop_chair_08"), false))
 	{
-		obLocal_38 = OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(190.56f, -956.4f, 28.63f, 20f, 1281480215, false, false, true);
+		obLocal_38 = OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(190.56f, -956.4f, 28.63f, 20f, joaat("prop_chair_08"), false, false, true);
 	
 		if (func_25(obLocal_38))
 		{
@@ -497,7 +497,7 @@ void func_19() // Position - 0x739
 	else
 	{
 		uLocal_47 = { 190.2574f, -956.3513f, 29.621f };
-		func_20(&obLocal_38, 1281480215, uLocal_47, func_18(-1.68f));
+		func_20(&obLocal_38, joaat("prop_chair_08"), uLocal_47, func_18(-1.68f));
 		ENTITY::SET_ENTITY_COORDS(obLocal_38, uLocal_47, true, false, false, true);
 		ENTITY::SET_ENTITY_HEADING(obLocal_38, func_18(-1.68f));
 		ENTITY::FREEZE_ENTITY_POSITION(obLocal_38, true);
@@ -505,9 +505,9 @@ void func_19() // Position - 0x739
 
 	uLocal_47 = { 192.4462f, -953.5946f, 29.0919f };
 
-	if (OBJECT::DOES_OBJECT_OF_TYPE_EXIST_AT_COORDS(uLocal_47, 25f, 1716800000, false))
+	if (OBJECT::DOES_OBJECT_OF_TYPE_EXIST_AT_COORDS(uLocal_47, 25f, joaat("prop_protest_sign_01"), false))
 	{
-		obLocal_40 = OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(uLocal_47, 25f, 1716800000, false, false, true);
+		obLocal_40 = OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(uLocal_47, 25f, joaat("prop_protest_sign_01"), false, false, true);
 	
 		if (func_25(obLocal_40))
 		{
@@ -521,7 +521,7 @@ void func_19() // Position - 0x739
 	}
 	else
 	{
-		func_20(&obLocal_40, 1716800000, uLocal_47, 23.45f);
+		func_20(&obLocal_40, joaat("prop_protest_sign_01"), uLocal_47, 23.45f);
 		ENTITY::SET_ENTITY_COORDS(obLocal_40, uLocal_47, true, false, false, true);
 		ENTITY::SET_ENTITY_HEADING(obLocal_40, 23.45f);
 	}
@@ -529,7 +529,7 @@ void func_19() // Position - 0x739
 	return;
 }
 
-void func_20(Object* pobParam0, Hash hParam1, Vector3 vParam2, var uParam3, var uParam4, float fParam5) // Position - 0x96A
+void func_20(Object* pobParam0, Hash hParam1, Vector3 vParam2, var uParam3, var uParam4, float fParam5) // Position - 0x96A (2410)
 {
 	func_21(pobParam0);
 	*pobParam0 = OBJECT::CREATE_OBJECT(hParam1, vParam2, true, true, false);
@@ -537,7 +537,7 @@ void func_20(Object* pobParam0, Hash hParam1, Vector3 vParam2, var uParam3, var 
 	return;
 }
 
-void func_21(Object* pobParam0) // Position - 0x991
+void func_21(Object* pobParam0) // Position - 0x991 (2449)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(*pobParam0))
 	{
@@ -550,7 +550,7 @@ void func_21(Object* pobParam0) // Position - 0x991
 	return;
 }
 
-void func_22(BOOL bParam0) // Position - 0x9BC
+void func_22(BOOL bParam0) // Position - 0x9BC (2492)
 {
 	if (bParam0)
 		func_24(&obLocal_41);
@@ -582,7 +582,7 @@ void func_22(BOOL bParam0) // Position - 0x9BC
 	return;
 }
 
-void func_23(Ped* ppedParam0, BOOL bParam1, int iParam2, int iParam3) // Position - 0xA3A
+void func_23(Ped* ppedParam0, BOOL bParam1, int iParam2, int iParam3) // Position - 0xA3A (2618)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(*ppedParam0))
 	{
@@ -605,7 +605,7 @@ void func_23(Ped* ppedParam0, BOOL bParam1, int iParam2, int iParam3) // Positio
 	return;
 }
 
-void func_24(Ped* ppedParam0) // Position - 0xA8A
+void func_24(Ped* ppedParam0) // Position - 0xA8A (2698)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(*ppedParam0))
 	{
@@ -621,7 +621,7 @@ void func_24(Ped* ppedParam0) // Position - 0xA8A
 	return;
 }
 
-BOOL func_25(Object obParam0) // Position - 0xACB
+BOOL func_25(Object obParam0) // Position - 0xACB (2763)
 {
 	if (!ENTITY::DOES_ENTITY_EXIST(obParam0))
 		return false;

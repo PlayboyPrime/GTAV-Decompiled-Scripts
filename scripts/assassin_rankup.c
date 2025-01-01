@@ -44,7 +44,7 @@
 	var uLocal_42 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -89,19 +89,19 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1() // Position - 0xAD
+void func_1() // Position - 0xAD (173)
 {
 	func_2(&(Global_114135.f_19967.f_1), 2048);
 	return;
 }
 
-void func_2(var uParam0, int iParam1) // Position - 0xC5
+void func_2(var uParam0, int iParam1) // Position - 0xC5 (197)
 {
 	func_3(uParam0, iParam1);
 	return;
 }
 
-void func_3(var uParam0, int iParam1) // Position - 0xD5
+void func_3(var uParam0, int iParam1) // Position - 0xD5 (213)
 {
 	*uParam0 = *uParam0 || iParam1;
 	return;

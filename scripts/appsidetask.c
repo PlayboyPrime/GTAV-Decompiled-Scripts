@@ -31,7 +31,7 @@
 	BOOL bLocal_29 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -110,7 +110,7 @@ void main() // Position - 0x0
 	return;
 }
 
-BOOL func_1() // Position - 0x163
+BOOL func_1() // Position - 0x163 (355)
 {
 	if (Global_21066.f_1 == 1 || Global_21066.f_1 == 3 || Global_21066.f_1 == 0 || Global_21010 == 1)
 	{
@@ -121,7 +121,7 @@ BOOL func_1() // Position - 0x163
 	return false;
 }
 
-BOOL func_2(eControlType ectParam0, eControlAction ecaParam1, int iParam2) // Position - 0x1A6
+BOOL func_2(eControlType ectParam0, eControlAction ecaParam1, int iParam2) // Position - 0x1A6 (422)
 {
 	if (PAD::IS_CONTROL_JUST_PRESSED(ectParam0, ecaParam1) || iParam2 == 1 && PAD::IS_DISABLED_CONTROL_JUST_PRESSED(ectParam0, ecaParam1))
 	{
@@ -138,13 +138,13 @@ BOOL func_2(eControlType ectParam0, eControlAction ecaParam1, int iParam2) // Po
 	return false;
 }
 
-void func_3() // Position - 0x218
+void func_3() // Position - 0x218 (536)
 {
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;
 }
 
-BOOL func_4() // Position - 0x224
+BOOL func_4() // Position - 0x224 (548)
 {
 	if (Global_9542 == 1 || Global_21066.f_1 < 7)
 	{
@@ -155,14 +155,14 @@ BOOL func_4() // Position - 0x224
 	return false;
 }
 
-void func_5() // Position - 0x24D
+void func_5() // Position - 0x24D (589)
 {
 	GRAPHICS::DRAW_RECT(0.824f, 0.5f, 0.253f, 0.313f, 0, 0, 0, 155, false);
 	func_6();
 	return;
 }
 
-void func_6() // Position - 0x277
+void func_6() // Position - 0x277 (631)
 {
 	int i;
 
@@ -207,7 +207,7 @@ void func_6() // Position - 0x277
 	return;
 }
 
-void func_7(float fParam0, float fParam1, const char* sParam2, int iParam3, int iParam4) // Position - 0x458
+void func_7(float fParam0, float fParam1, const char* sParam2, int iParam3, int iParam4) // Position - 0x458 (1112)
 {
 	HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT(sParam2);
 	HUD::ADD_TEXT_COMPONENT_INTEGER(iParam3);
@@ -216,14 +216,14 @@ void func_7(float fParam0, float fParam1, const char* sParam2, int iParam3, int 
 	return;
 }
 
-void func_8(float fParam0, float fParam1, const char* sParam2, int iParam3) // Position - 0x47B
+void func_8(float fParam0, float fParam1, const char* sParam2, int iParam3) // Position - 0x47B (1147)
 {
 	HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT(sParam2);
 	HUD::END_TEXT_COMMAND_DISPLAY_TEXT(fParam0, fParam1, iParam3);
 	return;
 }
 
-void func_9() // Position - 0x493
+void func_9() // Position - 0x493 (1171)
 {
 	HUD::SET_TEXT_SCALE(0.4f, 0.4f);
 	HUD::SET_TEXT_COLOUR(255, 128, 0, 255);
@@ -231,7 +231,7 @@ void func_9() // Position - 0x493
 	return;
 }
 
-void func_10(int iParam0, int iParam1, int iParam2, int iParam3) // Position - 0x4BD
+void func_10(int iParam0, int iParam1, int iParam2, int iParam3) // Position - 0x4BD (1213)
 {
 	HUD::SET_TEXT_SCALE(0.3f, 0.3f);
 	HUD::SET_TEXT_DROPSHADOW(0, 0, 0, 0, 0);
@@ -242,7 +242,7 @@ void func_10(int iParam0, int iParam1, int iParam2, int iParam3) // Position - 0
 	return;
 }
 
-void func_11() // Position - 0x4FC
+void func_11() // Position - 0x4FC (1276)
 {
 	if (func_2(FRONTEND_CONTROL, Global_21035, 0))
 	{
@@ -258,7 +258,7 @@ void func_11() // Position - 0x4FC
 	return;
 }
 
-void func_12(int iParam0, char* sParam1, float fParam2, float fParam3, float fParam4, float fParam5, float fParam6, char* sParam7, char* sParam8, const char* sParam9, const char* sParam10, const char* sParam11) // Position - 0x57A
+void func_12(int iParam0, char* sParam1, float fParam2, float fParam3, float fParam4, float fParam5, float fParam6, char* sParam7, char* sParam8, const char* sParam9, const char* sParam10, const char* sParam11) // Position - 0x57A (1402)
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, sParam1);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::ROUND(fParam2));
@@ -294,14 +294,14 @@ void func_12(int iParam0, char* sParam1, float fParam2, float fParam3, float fPa
 	return;
 }
 
-void func_13(const char* sParam0) // Position - 0x62D
+void func_13(const char* sParam0) // Position - 0x62D (1581)
 {
 	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(sParam0);
 	GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 	return;
 }
 
-void func_14() // Position - 0x63F
+void func_14() // Position - 0x63F (1599)
 {
 	if (bLocal_29)
 		if (SYSTEM::TIMERA() > 50)
@@ -348,7 +348,7 @@ void func_14() // Position - 0x63F
 	return;
 }
 
-void func_15() // Position - 0x6DC
+void func_15() // Position - 0x6DC (1756)
 {
 	int num;
 
@@ -392,7 +392,7 @@ void func_15() // Position - 0x6DC
 	return;
 }
 
-void func_16(int iParam0, char* sParam1, char* sParam2, const char* sParam3, const char* sParam4, const char* sParam5, const char* sParam6) // Position - 0x83F
+void func_16(int iParam0, char* sParam1, char* sParam2, const char* sParam3, const char* sParam4, const char* sParam5, const char* sParam6) // Position - 0x83F (2111)
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, sParam1);
 	func_13(sParam2);
@@ -413,7 +413,7 @@ void func_16(int iParam0, char* sParam1, char* sParam2, const char* sParam3, con
 	return;
 }
 
-void func_17(int iParam0, char* sParam1, float fParam2, int iParam3, int iParam4, int iParam5, int iParam6) // Position - 0x89A
+void func_17(int iParam0, char* sParam1, float fParam2, int iParam3, int iParam4, int iParam5, int iParam6) // Position - 0x89A (2202)
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, sParam1);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::ROUND(fParam2));
@@ -434,7 +434,7 @@ void func_17(int iParam0, char* sParam1, float fParam2, int iParam3, int iParam4
 	return;
 }
 
-void func_18() // Position - 0x8FD
+void func_18() // Position - 0x8FD (2301)
 {
 	var unk;
 	int i;
@@ -475,7 +475,7 @@ void func_18() // Position - 0x8FD
 	return;
 }
 
-BOOL func_19(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, int iParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11) // Position - 0x9E8
+BOOL func_19(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, int iParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11) // Position - 0x9E8 (2536)
 {
 	int num;
 	int num2;

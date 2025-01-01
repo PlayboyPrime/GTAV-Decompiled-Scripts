@@ -10,7 +10,7 @@
 	float fLocal_8 = 0f;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	bLocal_0 = true;
 	bLocal_1 = true;
@@ -49,7 +49,7 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1() // Position - 0x7C
+void func_1() // Position - 0x7C (124)
 {
 	VEHICLE::SET_RANDOM_TRAINS(true);
 	SCRIPT::TERMINATE_THIS_THREAD();

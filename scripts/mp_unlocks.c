@@ -177,7 +177,7 @@
 	var uScriptParam_3 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	var lastItemMenuId;
 	int selectedItemMenuId;
@@ -270,8 +270,8 @@ void main() // Position - 0x0
 			break;
 	}
 
-	HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(-1871331138);
-	HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(337714004);
+	HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(joaat("RScrollUpDown"));
+	HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(joaat("HIDE_ACCEPTBUTTON"));
 	HUD::PAUSE_MENU_REDRAW_INSTRUCTIONAL_BUTTONS(0);
 	HUD::RELEASE_CONTROL_OF_FRONTEND();
 
@@ -283,7 +283,7 @@ void main() // Position - 0x0
 	return;
 }
 
-int func_1(var uParam0) // Position - 0x18B
+int func_1(var uParam0) // Position - 0x18B (395)
 {
 	int num;
 	int i;
@@ -320,279 +320,279 @@ int func_1(var uParam0) // Position - 0x18B
 	
 		case 2:
 			func_37(&num, 2, true);
-			func_23(&num, "PM_UCON_T2" /*Stunt Jumps (from Rank 2)*/, func_25(21, false, false));
+			func_23(&num, "PM_UCON_T2" /*Stunt Jumps*/, func_25(21, false, false));
 			func_37(&num, 3, false);
-			func_23(&num, "PMCUR30", func_22(num4, 3));
-			func_23(&num, "PMCUR31", func_22(num4, 3));
-			func_23(&num, "WT_NGTSTK" /*Nightstick*/, func_8(1737195953, -1, 0));
-			func_23(&num, "PMCUR32", func_22(num4, 3));
+			func_23(&num, "PMCUR30" /*One On One Deathmatch*/, func_22(num4, 3));
+			func_23(&num, "PMCUR31" /*Shooting Range*/, func_22(num4, 3));
+			func_23(&num, "WT_NGTSTK" /*Nightstick*/, func_8(joaat("WEAPON_NIGHTSTICK"), -1, 0));
+			func_23(&num, "PMCUR32" /*Pistol Extended Clip*/, func_22(num4, 3));
 			func_37(&num, 4, false);
-			func_23(&num, "PMCUR4", func_22(num4, 4));
+			func_23(&num, "PMCUR4" /*Pistol Flashlight*/, func_22(num4, 4));
 			func_37(&num, 5, false);
-			func_23(&num, "PM_UCON_T11" /*Movies (from Rank 5)*/, func_25(23, false, false));
-			func_23(&num, "FM_RANK5_w_TICK" /*Micro SMG*/, func_8(324215364, -1, 0));
-			func_23(&num, "PMCUR5", func_22(num4, 5));
+			func_23(&num, "PM_UCON_T11" /*Movies*/, func_25(23, false, false));
+			func_23(&num, "FM_RANK5_w_TICK" /*Micro SMG*/, func_8(joaat("WEAPON_MICROSMG"), -1, 0));
+			func_23(&num, "PMCUR5" /*Pistol Suppressor*/, func_22(num4, 5));
 			func_37(&num, 6, false);
-			func_23(&num, "PM_UCON_T15" /*Arm Wrestling (from Rank 6)*/, func_25(15, false, false));
-			func_23(&num, "PM_UCON_T14" /*Darts (from Rank 6)*/, func_25(14, false, false));
-			func_23(&num, "PM_UCON_T13" /*Golf (from Rank 6)*/, func_25(11, false, false));
-			func_23(&num, "PM_UCON_T38" /*San Andreas Flight School (from Rank 6)*/, func_25(122, false, false));
-			func_23(&num, "PM_UCON_T16" /*Strip Club (from Rank 6)*/, func_25(27, false, false));
-			func_23(&num, "PM_UCON_T12" /*Tennis (from Rank 6)*/, func_25(12, false, false));
-			func_23(&num, "PMCUR6", func_22(num4, 6));
+			func_23(&num, "PM_UCON_T15" /*Arm Wrestling*/, func_25(15, false, false));
+			func_23(&num, "PM_UCON_T14" /*Darts*/, func_25(14, false, false));
+			func_23(&num, "PM_UCON_T13" /*Golf*/, func_25(11, false, false));
+			func_23(&num, "PM_UCON_T38" /*San Andreas Flight School*/, func_25(122, false, false));
+			func_23(&num, "PM_UCON_T16" /*Strip Club*/, func_25(27, false, false));
+			func_23(&num, "PM_UCON_T12" /*Tennis*/, func_25(12, false, false));
+			func_23(&num, "PMCUR6" /*Micro SMG Extended Clip*/, func_22(num4, 6));
 			func_37(&num, 7, false);
-			func_23(&num, "PMCUR74", func_22(num4, 7));
-			func_23(&num, "PMCUR71", func_22(num4, 7));
-			func_23(&num, "PMCUR72", func_22(num4, 7));
-			func_23(&num, "PMCUR70", func_22(num4, 7));
-			func_23(&num, "PMCUR73", func_22(num4, 7));
+			func_23(&num, "PMCUR74" /*Micro SMG Flashlight*/, func_22(num4, 7));
+			func_23(&num, "PMCUR71" /*Anthracite Black Paint*/, func_22(num4, 7));
+			func_23(&num, "PMCUR72" /*Black Steel Paint*/, func_22(num4, 7));
+			func_23(&num, "PMCUR70" /*Carbon Black Paint*/, func_22(num4, 7));
+			func_23(&num, "PMCUR73" /*Graphite Paint*/, func_22(num4, 7));
 			func_37(&num, 8, false);
-			func_23(&num, "PMCUR83", func_22(num4, 8));
+			func_23(&num, "PMCUR83" /*Simeon's Export Requests*/, func_22(num4, 8));
 			func_23(&num, "WT_PIST_CBT" /*Combat Pistol*/, func_22(num4, 8));
-			func_23(&num, "PMCUR80", func_22(num4, 8));
+			func_23(&num, "PMCUR80" /*Light Smoke Windows Tint*/, func_22(num4, 8));
 			func_37(&num, 9, false);
-			func_23(&num, "PMCUR94", func_22(num4, 9));
-			func_23(&num, "PMCUR95", func_22(num4, 9));
-			func_23(&num, "PMCUR93", func_22(num4, 9));
-			func_23(&num, "PMCUR90", func_22(num4, 9));
-			func_23(&num, "PMCUR92", func_22(num4, 9));
-			func_23(&num, "PMCUR91", func_22(num4, 9));
+			func_23(&num, "PMCUR94" /*Combat Pistol Extended Clip*/, func_22(num4, 9));
+			func_23(&num, "PMCUR95" /*Micro SMG Scope*/, func_22(num4, 9));
+			func_23(&num, "PMCUR93" /*Bluish Silver Paint*/, func_22(num4, 9));
+			func_23(&num, "PMCUR90" /*Midnight Silver Paint*/, func_22(num4, 9));
+			func_23(&num, "PMCUR92" /*Rolled Steel Paint*/, func_22(num4, 9));
+			func_23(&num, "PMCUR91" /*Shadow Silver Paint*/, func_22(num4, 9));
 			func_37(&num, 10, false);
-			func_23(&num, "PM_UCON_T18" /*Bounties (from Rank 10)*/, func_25(29, false, false));
-			func_23(&num, "PMCUR101", func_22(num4, 10));
-			func_23(&num, "PMCUR100", func_22(num4, 10));
+			func_23(&num, "PM_UCON_T18" /*Bounties*/, func_25(29, false, false));
+			func_23(&num, "PMCUR101" /*Vehicle Armor Upgrade 20%*/, func_22(num4, 10));
+			func_23(&num, "PMCUR100" /*Truck Horn*/, func_22(num4, 10));
 			func_37(&num, 11, false);
-			func_23(&num, "PM_UCON_T19" /*Parachuting (from Rank 11)*/, func_25(8, false, false));
-			func_23(&num, "PMCUR117", func_22(num4, 11));
-			func_23(&num, "PMCUR118", func_22(num4, 11));
-			func_23(&num, "PMCUR116", func_22(num4, 11));
-			func_23(&num, "PMCUR114", func_22(num4, 11));
-			func_23(&num, "PMCUR112", func_22(num4, 11));
-			func_23(&num, "PMCUR113", func_22(num4, 11));
-			func_23(&num, "PMCUR115", func_22(num4, 11));
+			func_23(&num, "PM_UCON_T19" /*Parachuting*/, func_25(8, false, false));
+			func_23(&num, "PMCUR117" /*SMG*/, func_22(num4, 11));
+			func_23(&num, "PMCUR118" /*Combat Pistol Flashlight*/, func_22(num4, 11));
+			func_23(&num, "PMCUR116" /*Cop Horn*/, func_22(num4, 11));
+			func_23(&num, "PMCUR114" /*Blaze Red Paint*/, func_22(num4, 11));
+			func_23(&num, "PMCUR112" /*Formula Red Paint*/, func_22(num4, 11));
+			func_23(&num, "PMCUR113" /*Grace Red Paint*/, func_22(num4, 11));
+			func_23(&num, "PMCUR115" /*Torino Red Paint*/, func_22(num4, 11));
 			func_37(&num, 12, false);
-			func_23(&num, "PMCUR123", func_22(num4, 12));
-			func_23(&num, "PMCUR122", func_22(num4, 12));
-			func_23(&num, "PMCUR120", func_22(num4, 12));
-			func_23(&num, "PMCUR124", func_22(num4, 12));
-			func_23(&num, "PMCUR121", func_22(num4, 12));
+			func_23(&num, "PMCUR123" /*Ammo Drop*/, func_22(num4, 12));
+			func_23(&num, "PMCUR122" /*Cops Turn a Blind Eye*/, func_22(num4, 12));
+			func_23(&num, "PMCUR120" /*Combat Pistol Suppressor*/, func_22(num4, 12));
+			func_23(&num, "PMCUR124" /*SMG Extended Clip*/, func_22(num4, 12));
+			func_23(&num, "PMCUR121" /*Clown Horn*/, func_22(num4, 12));
 			func_37(&num, 13, false);
-			func_23(&num, "PMCUR136", func_22(num4, 13));
-			func_23(&num, "PMCUR135", func_22(num4, 13));
-			func_23(&num, "PMCUR134", func_22(num4, 13));
-			func_23(&num, "PMCUR132", func_22(num4, 13));
-			func_23(&num, "PMCUR133", func_22(num4, 13));
-			func_23(&num, "PMCUR131", func_22(num4, 13));
+			func_23(&num, "PMCUR136" /*SMG Flashlight*/, func_22(num4, 13));
+			func_23(&num, "PMCUR135" /*Musical Horn 1*/, func_22(num4, 13));
+			func_23(&num, "PMCUR134" /*Bright Orange Paint*/, func_22(num4, 13));
+			func_23(&num, "PMCUR132" /*Pfister Pink Paint*/, func_22(num4, 13));
+			func_23(&num, "PMCUR133" /*Salmon Pink Paint*/, func_22(num4, 13));
+			func_23(&num, "PMCUR131" /*Sunset Red Paint*/, func_22(num4, 13));
 			func_37(&num, 14, false);
-			func_23(&num, "PMCUR141", func_22(num4, 14));
-			func_23(&num, "PMCUR140", func_22(num4, 14));
+			func_23(&num, "PMCUR141" /*SMG Scope*/, func_22(num4, 14));
+			func_23(&num, "PMCUR140" /*Musical Horn 2*/, func_22(num4, 14));
 			func_37(&num, 15, false);
-			func_23(&num, "PMCUR152", func_22(num4, 15));
-			func_23(&num, "PMCUR159", func_22(num4, 15));
-			func_23(&num, "PMCUR1510", func_22(num4, 15));
-			func_23(&num, "PMCUR1514", func_22(num4, 15));
-			func_23(&num, "PMCUR1513", func_22(num4, 15));
-			func_23(&num, "PMCUR1512", func_22(num4, 15));
-			func_23(&num, "PMCUR1511", func_22(num4, 15));
-			func_23(&num, "PMCUR1515", func_22(num4, 15));
-			func_23(&num, "PMCUR1517", func_22(num4, 15));
+			func_23(&num, "PMCUR152" /*Locate a Car*/, func_22(num4, 15));
+			func_23(&num, "PMCUR159" /*SMG Suppressor*/, func_22(num4, 15));
+			func_23(&num, "PMCUR1510" /*Vehicle EMS Upgrade Level 1*/, func_22(num4, 15));
+			func_23(&num, "PMCUR1514" /*Bronze Paint*/, func_22(num4, 15));
+			func_23(&num, "PMCUR1513" /*Dark Green Paint*/, func_22(num4, 15));
+			func_23(&num, "PMCUR1512" /*Sea Green Paint*/, func_22(num4, 15));
+			func_23(&num, "PMCUR1511" /*Yellow Paint*/, func_22(num4, 15));
+			func_23(&num, "PMCUR1515" /*Black Tire Smoke*/, func_22(num4, 15));
+			func_23(&num, "PMCUR1517" /*Black Smoke Trails*/, func_22(num4, 15));
 			func_37(&num, 16, false);
-			func_23(&num, "PMCUR160", func_22(num4, 16));
-			func_23(&num, "PMCUR161", func_22(num4, 16));
+			func_23(&num, "PMCUR160" /*Musical Horn 3*/, func_22(num4, 16));
+			func_23(&num, "PMCUR161" /*Red Parachute*/, func_22(num4, 16));
 			func_37(&num, 17, false);
-			func_23(&num, "PMCUR170", func_22(num4, 17));
-			func_23(&num, "PMCUR175", func_22(num4, 17));
-			func_23(&num, "PMCUR176", func_22(num4, 17));
-			func_23(&num, "PMCUR174", func_22(num4, 17));
-			func_23(&num, "PMCUR171", func_22(num4, 17));
-			func_23(&num, "PMCUR172", func_22(num4, 17));
-			func_23(&num, "PMCUR173", func_22(num4, 17));
+			func_23(&num, "PMCUR170" /*Bull Shark Testosterone*/, func_22(num4, 17));
+			func_23(&num, "PMCUR175" /*Pump Shotgun*/, func_22(num4, 17));
+			func_23(&num, "PMCUR176" /*Lowered Suspension*/, func_22(num4, 17));
+			func_23(&num, "PMCUR174" /*Dark Blue Paint*/, func_22(num4, 17));
+			func_23(&num, "PMCUR171" /*Galaxy Blue Paint*/, func_22(num4, 17));
+			func_23(&num, "PMCUR172" /*Mariner Blue Paint*/, func_22(num4, 17));
+			func_23(&num, "PMCUR173" /*Saxon Blue Paint*/, func_22(num4, 17));
 			func_37(&num, 18, false);
-			func_23(&num, "PMCUR180", func_22(num4, 18));
-			func_23(&num, "PMCUR183", func_22(num4, 18));
-			func_23(&num, "PMCUR181", func_22(num4, 18));
-			func_23(&num, "PMCUR182", func_22(num4, 18));
+			func_23(&num, "PMCUR180" /*Gang Attacks*/, func_22(num4, 18));
+			func_23(&num, "PMCUR183" /*Pump Shotgun Flashlight*/, func_22(num4, 18));
+			func_23(&num, "PMCUR181" /*Musical Horn 4*/, func_22(num4, 18));
+			func_23(&num, "PMCUR182" /*Blue Smoke Trails*/, func_22(num4, 18));
 			func_37(&num, 19, false);
-			func_23(&num, "PMCUR198", func_22(num4, 19));
-			func_23(&num, "PMCUR191", func_22(num4, 19));
-			func_23(&num, "PMCUR196", func_22(num4, 19));
-			func_23(&num, "PMCUR195", func_22(num4, 19));
-			func_23(&num, "PMCUR194", func_22(num4, 19));
-			func_23(&num, "PMCUR193", func_22(num4, 19));
-			func_23(&num, "PMCUR192", func_22(num4, 19));
+			func_23(&num, "PMCUR198" /*Pump Shotgun Suppressor*/, func_22(num4, 19));
+			func_23(&num, "PMCUR191" /*Musical Horn 5*/, func_22(num4, 19));
+			func_23(&num, "PMCUR196" /*Sad Trombone Horn*/, func_22(num4, 19));
+			func_23(&num, "PMCUR195" /*Diamond Blue Paint*/, func_22(num4, 19));
+			func_23(&num, "PMCUR194" /*Nautical Blue Paint*/, func_22(num4, 19));
+			func_23(&num, "PMCUR193" /*Racing Blue Paint*/, func_22(num4, 19));
+			func_23(&num, "PMCUR192" /*Surf Blue Paint*/, func_22(num4, 19));
 			func_37(&num, 20, false);
-			func_23(&num, "PMCUR203", func_22(num4, 20));
-			func_23(&num, "PMCUR201", func_22(num4, 20));
-			func_23(&num, "PMCUR200", func_22(num4, 20));
-			func_23(&num, "PMCUR204", func_22(num4, 20));
+			func_23(&num, "PMCUR203" /*Maximum Health Increased*/, func_22(num4, 20));
+			func_23(&num, "PMCUR201" /*Health Regeneration Increased*/, func_22(num4, 20));
+			func_23(&num, "PMCUR200" /*Backup Buzzard Attack Chopper*/, func_22(num4, 20));
+			func_23(&num, "PMCUR204" /*Jerry Can*/, func_22(num4, 20));
 			func_23(&num, "CMOD_GBX_1" /*Street Transmission*/, func_22(num4, 20));
 			func_23(&num, "WAR_TRUCK_UP_2" /*Bulletproof Tires*/, func_22(num4, 20));
 			func_37(&num, 21, false);
-			func_23(&num, "PMCUR210", func_22(num4, 21));
-			func_23(&num, "PMCUR211", func_22(num4, 21));
-			func_23(&num, "PMCUR212", func_22(num4, 21));
-			func_23(&num, "PMCUR216", func_22(num4, 21));
-			func_23(&num, "PMCUR215", func_22(num4, 21));
-			func_23(&num, "PMCUR213", func_22(num4, 21));
-			func_23(&num, "PMCUR214", func_22(num4, 21));
+			func_23(&num, "PMCUR210" /*Remove Wanted Level*/, func_22(num4, 21));
+			func_23(&num, "PMCUR211" /*Sniper Rifle*/, func_22(num4, 21));
+			func_23(&num, "PMCUR212" /*Xenon Lights*/, func_22(num4, 21));
+			func_23(&num, "PMCUR216" /*Chocolate Brown Paint*/, func_22(num4, 21));
+			func_23(&num, "PMCUR215" /*Feltzer Brown Paint*/, func_22(num4, 21));
+			func_23(&num, "PMCUR213" /*Maple Brown Paint*/, func_22(num4, 21));
+			func_23(&num, "PMCUR214" /*Sienna Brown Paint*/, func_22(num4, 21));
 			func_37(&num, 22, false);
-			func_23(&num, "PMCUR220", func_22(num4, 22));
-			func_23(&num, "PMCUR221", func_22(num4, 22));
+			func_23(&num, "PMCUR220" /*Sniper Rifle Suppressor*/, func_22(num4, 22));
+			func_23(&num, "PMCUR221" /*Yellow Smoke Trails*/, func_22(num4, 22));
 			func_37(&num, 23, false);
-			func_23(&num, "PMCUR236", func_22(num4, 23));
-			func_23(&num, "PMCUR235", func_22(num4, 23));
-			func_23(&num, "PMCUR233", func_22(num4, 23));
-			func_23(&num, "PMCUR234", func_22(num4, 23));
-			func_23(&num, "PMCUR232", func_22(num4, 23));
-			func_23(&num, "PMCUR231", func_22(num4, 23));
+			func_23(&num, "PMCUR236" /*Sniper Rifle Advanced Scope*/, func_22(num4, 23));
+			func_23(&num, "PMCUR235" /*Moss Brown Paint*/, func_22(num4, 23));
+			func_23(&num, "PMCUR233" /*Sandy Brown Paint*/, func_22(num4, 23));
+			func_23(&num, "PMCUR234" /*Straw Brown Paint*/, func_22(num4, 23));
+			func_23(&num, "PMCUR232" /*Woodbeech Brown Paint*/, func_22(num4, 23));
+			func_23(&num, "PMCUR231" /*Seaside Stripes Parachute*/, func_22(num4, 23));
 			func_37(&num, 24, false);
-			func_23(&num, "PMCUR240", func_22(num4, 24));
-			func_23(&num, "PMCUR241", func_22(num4, 24));
+			func_23(&num, "PMCUR240" /*Assault Rifle*/, func_22(num4, 24));
+			func_23(&num, "PMCUR241" /*Orange Smoke Trails*/, func_22(num4, 24));
 			func_37(&num, 25, false);
-			func_23(&num, "PMCUR250", func_22(num4, 25));
-			func_23(&num, "PMCUR258", func_22(num4, 25));
-			func_23(&num, "PMCUR259", func_22(num4, 25));
-			func_23(&num, "PMCUR252", func_22(num4, 25));
-			func_23(&num, "PMCUR251", func_22(num4, 25));
-			func_23(&num, "PMCUR255", func_22(num4, 25));
-			func_23(&num, "PMCUR254", func_22(num4, 25));
-			func_23(&num, "PMCUR256", func_22(num4, 25));
-			func_23(&num, "PMCUR257", func_22(num4, 25));
-			func_23(&num, "PMCUR253", func_22(num4, 25));
+			func_23(&num, "PMCUR250" /*Boat Pick-Up*/, func_22(num4, 25));
+			func_23(&num, "PMCUR258" /*Locate a Boat*/, func_22(num4, 25));
+			func_23(&num, "PMCUR259" /*Assault Rifle Extended Clip*/, func_22(num4, 25));
+			func_23(&num, "PMCUR252" /*Street Brakes*/, func_22(num4, 25));
+			func_23(&num, "PMCUR251" /*Ignition Bomb*/, func_22(num4, 25));
+			func_23(&num, "PMCUR255" /*Cream Paint*/, func_22(num4, 25));
+			func_23(&num, "PMCUR254" /*Frost White Paint*/, func_22(num4, 25));
+			func_23(&num, "PMCUR256" /*Midnight Purple Paint*/, func_22(num4, 25));
+			func_23(&num, "PMCUR257" /*Schafter Purple Paint*/, func_22(num4, 25));
+			func_23(&num, "PMCUR253" /*Blue Tire Smoke*/, func_22(num4, 25));
 			func_37(&num, 26, false);
-			func_23(&num, "PMCUR261", func_22(num4, 26));
+			func_23(&num, "PMCUR261" /*Assault Rifle Grip*/, func_22(num4, 26));
 			func_37(&num, 27, false);
-			func_23(&num, "PMCUR270", func_22(num4, 27));
-			func_23(&num, "PMCUR271", func_22(num4, 27));
+			func_23(&num, "PMCUR270" /*Assault Rifle Flashlight*/, func_22(num4, 27));
+			func_23(&num, "PMCUR271" /*Red Smoke Trails*/, func_22(num4, 27));
 			func_37(&num, 28, false);
-			func_23(&num, "PMCUR280", func_22(num4, 28));
-			func_23(&num, "PMCUR281", func_22(num4, 28));
+			func_23(&num, "PMCUR280" /*Assault Rifle Scope*/, func_22(num4, 28));
+			func_23(&num, "PMCUR281" /*Hornet Parachute*/, func_22(num4, 28));
 			func_37(&num, 29, false);
-			func_23(&num, "PMCUR290", func_22(num4, 29));
-			func_23(&num, "PMCUR294", func_22(num4, 29));
+			func_23(&num, "PMCUR290" /*Assault SMG*/, func_22(num4, 29));
+			func_23(&num, "PMCUR294" /*Assault Rifle Suppressor*/, func_22(num4, 29));
 			func_37(&num, 30, false);
-			func_23(&num, "PMCUR300", func_22(num4, 30));
-			func_23(&num, "PMCUR304", func_22(num4, 30));
-			func_23(&num, "PMCUR303", func_22(num4, 30));
-			func_23(&num, "PMCUR302", func_22(num4, 30));
+			func_23(&num, "PMCUR300" /*Helicopter Pickup*/, func_22(num4, 30));
+			func_23(&num, "PMCUR304" /*Assault SMG Extended Clip*/, func_22(num4, 30));
+			func_23(&num, "PMCUR303" /*Vehicle Armor Upgrade 40%*/, func_22(num4, 30));
+			func_23(&num, "PMCUR302" /*Vehicle EMS Upgrade Level 2*/, func_22(num4, 30));
 			func_37(&num, 31, false);
-			func_23(&num, "PMCUR311", func_22(num4, 31));
-			func_23(&num, "PMCUR310", func_22(num4, 31));
+			func_23(&num, "PMCUR311" /*Assault SMG Flashlight*/, func_22(num4, 31));
+			func_23(&num, "PMCUR310" /*Dark Smoke Windows*/, func_22(num4, 31));
 			func_37(&num, 32, false);
-			func_23(&num, "PMCUR321", func_22(num4, 32));
-			func_23(&num, "PMCUR320", func_22(num4, 32));
+			func_23(&num, "PMCUR321" /*Assault SMG Scope*/, func_22(num4, 32));
+			func_23(&num, "PMCUR320" /*Patriot Parachute*/, func_22(num4, 32));
 			func_37(&num, 33, false);
-			func_23(&num, "PMCUR331", func_22(num4, 33));
-			func_23(&num, "PMCUR332", func_22(num4, 33));
+			func_23(&num, "PMCUR331" /*AP Pistol*/, func_22(num4, 33));
+			func_23(&num, "PMCUR332" /*Assault SMG Suppressor*/, func_22(num4, 33));
 			func_37(&num, 34, false);
-			func_23(&num, "PMCUR340", func_22(num4, 34));
+			func_23(&num, "PMCUR340" /*AP Pistol Extended Clip*/, func_22(num4, 34));
 			func_37(&num, 35, false);
-			func_23(&num, "PMCUR350", func_22(num4, 35));
-			func_23(&num, "PMCUR351", func_22(num4, 35));
-			func_23(&num, "PMCUR352", func_22(num4, 35));
+			func_23(&num, "PMCUR350" /*Locate a Helicopter*/, func_22(num4, 35));
+			func_23(&num, "PMCUR351" /*Send Mercenaries*/, func_22(num4, 35));
+			func_23(&num, "PMCUR352" /*AP Pistol Flashlight*/, func_22(num4, 35));
 			func_37(&num, 36, false);
-			func_23(&num, "PMCUR361", func_22(num4, 36));
-			func_23(&num, "PMCUR360", func_22(num4, 36));
+			func_23(&num, "PMCUR361" /*AP Pistol Suppressor*/, func_22(num4, 36));
+			func_23(&num, "PMCUR360" /*Street Suspension*/, func_22(num4, 36));
 			func_37(&num, 37, false);
-			func_23(&num, "PMCUR370", func_22(num4, 37));
+			func_23(&num, "PMCUR370" /*Assault Shotgun*/, func_22(num4, 37));
 			func_37(&num, 38, false);
-			func_23(&num, "PMCUR381", func_22(num4, 38));
-			func_23(&num, "PMCUR380", func_22(num4, 38));
+			func_23(&num, "PMCUR381" /*Assault Shotgun Extended Clip*/, func_22(num4, 38));
+			func_23(&num, "PMCUR380" /*Widowmaker Parachute*/, func_22(num4, 38));
 			func_37(&num, 39, false);
-			func_23(&num, "PMCUR390", func_22(num4, 39));
+			func_23(&num, "PMCUR390" /*Assault Shotgun Grip*/, func_22(num4, 39));
 			func_37(&num, 40, false);
-			func_23(&num, "PMCUR403", func_22(num4, 40));
-			func_23(&num, "PMCUR402", func_22(num4, 40));
-			func_23(&num, "PMCUR400", func_22(num4, 40));
-			func_23(&num, "PMCUR401", func_22(num4, 40));
-			func_23(&num, "PMCUR404", func_22(num4, 40));
+			func_23(&num, "PMCUR403" /*Maximum Health Increased*/, func_22(num4, 40));
+			func_23(&num, "PMCUR402" /*Health Regeneration Increased*/, func_22(num4, 40));
+			func_23(&num, "PMCUR400" /*Off the Radar*/, func_22(num4, 40));
+			func_23(&num, "PMCUR401" /*Reveal Players*/, func_22(num4, 40));
+			func_23(&num, "PMCUR404" /*Assault Shotgun Flashlight*/, func_22(num4, 40));
 			func_23(&num, "CMOD_GBX_2" /*Sports Transmission*/, func_22(num4, 40));
 			func_37(&num, 41, false);
-			func_23(&num, "PMCUR41", func_22(num4, 41));
+			func_23(&num, "PMCUR41" /*Assault Shotgun Suppressor*/, func_22(num4, 41));
 			func_37(&num, 42, false);
-			func_23(&num, "PMCUR420", func_22(num4, 42));
+			func_23(&num, "PMCUR420" /*Carbine Rifle*/, func_22(num4, 42));
 			func_37(&num, 43, false);
-			func_23(&num, "PMCUR430", func_22(num4, 43));
+			func_23(&num, "PMCUR430" /*Carbine Rifle Extended Clip*/, func_22(num4, 43));
 			func_23(&num, "FM_RANK43_VM_TICK" /*Yellow Tire Smoke*/, func_22(num4, 43));
 			func_37(&num, 44, false);
-			func_23(&num, "PMCUR441", func_22(num4, 44));
-			func_23(&num, "PMCUR440", func_22(num4, 44));
+			func_23(&num, "PMCUR441" /*Carbine Rifle Grip*/, func_22(num4, 44));
+			func_23(&num, "PMCUR440" /*Rainbow Parachute*/, func_22(num4, 44));
 			func_37(&num, 45, false);
-			func_23(&num, "PMCUR453", func_22(num4, 45));
-			func_23(&num, "PMCUR451", func_22(num4, 45));
+			func_23(&num, "PMCUR453" /*Carbine Rifle Flashlight*/, func_22(num4, 45));
+			func_23(&num, "PMCUR451" /*Locate a Plane*/, func_22(num4, 45));
 			func_37(&num, 46, false);
-			func_23(&num, "PMCUR460", func_22(num4, 46));
+			func_23(&num, "PMCUR460" /*Carbine Rifle Scope*/, func_22(num4, 46));
 			func_37(&num, 47, false);
-			func_23(&num, "PMCUR470", func_22(num4, 47));
+			func_23(&num, "PMCUR470" /*Carbine Rifle Suppressor*/, func_22(num4, 47));
 			func_37(&num, 49, false);
-			func_23(&num, "PMCUR490", func_22(num4, 49));
+			func_23(&num, "PMCUR490" /*Limo Windows Tint*/, func_22(num4, 49));
 			func_37(&num, 50, false);
-			func_23(&num, "PMCUR501", func_22(num4, 50));
-			func_23(&num, "PMCUR500", func_22(num4, 50));
-			func_23(&num, "PMCUR504", func_22(num4, 50));
-			func_23(&num, "PMCUR506", func_22(num4, 50));
-			func_23(&num, "PMCUR502", func_22(num4, 50));
-			func_23(&num, "PMCUR503", func_22(num4, 50));
-			func_23(&num, "PMCUR505", func_22(num4, 50));
+			func_23(&num, "PMCUR501" /*Airstrike*/, func_22(num4, 50));
+			func_23(&num, "PMCUR500" /*Mugger*/, func_22(num4, 50));
+			func_23(&num, "PMCUR504" /*MG*/, func_22(num4, 50));
+			func_23(&num, "PMCUR506" /*Pink Weapon Tint*/, func_22(num4, 50));
+			func_23(&num, "PMCUR502" /*Vehicle Armor Upgrade 60%*/, func_22(num4, 50));
+			func_23(&num, "PMCUR503" /*Sport Brakes*/, func_22(num4, 50));
+			func_23(&num, "PMCUR505" /*Remote Bomb*/, func_22(num4, 50));
 			func_37(&num, 51, false);
-			func_23(&num, "PMCUR511", func_22(num4, 51));
+			func_23(&num, "PMCUR511" /*MG Extended Magazine*/, func_22(num4, 51));
 			func_37(&num, 52, false);
-			func_23(&num, "PMCUR522", func_22(num4, 52));
+			func_23(&num, "PMCUR522" /*MG Scope*/, func_22(num4, 52));
 			func_37(&num, 55, false);
 			func_23(&num, "CMOD_TYR_7" /*Orange Tire Smoke*/, func_22(num4, 55));
 			func_37(&num, 56, false);
-			func_23(&num, "PMCUR560", func_22(num4, 56));
-			func_23(&num, "PMCUR561", func_22(num4, 56));
+			func_23(&num, "PMCUR560" /*Black Parachute*/, func_22(num4, 56));
+			func_23(&num, "PMCUR561" /*Sport Suspension*/, func_22(num4, 56));
 			func_37(&num, 60, false);
-			func_23(&num, "PMCUR605", func_22(num4, 60));
-			func_23(&num, "PMCUR604", func_22(num4, 60));
-			func_23(&num, "PMCUR600", func_22(num4, 60));
-			func_23(&num, "PMCUR603", func_22(num4, 60));
+			func_23(&num, "PMCUR605" /*Maximum Health Increased*/, func_22(num4, 60));
+			func_23(&num, "PMCUR604" /*Health Regeneration Increased*/, func_22(num4, 60));
+			func_23(&num, "PMCUR600" /*Grenade Launcher*/, func_22(num4, 60));
+			func_23(&num, "PMCUR603" /*Vehicle EMS Upgrade Level 3*/, func_22(num4, 60));
 			func_37(&num, 61, false);
-			func_23(&num, "PMCUR610", func_22(num4, 61));
+			func_23(&num, "PMCUR610" /*Grenade Launcher Grip*/, func_22(num4, 61));
 			func_37(&num, 62, false);
-			func_23(&num, "PMCUR620", func_22(num4, 62));
+			func_23(&num, "PMCUR620" /*Grenade Launcher Flashlight*/, func_22(num4, 62));
 			func_37(&num, 63, false);
-			func_23(&num, "PMCUR630", func_22(num4, 63));
+			func_23(&num, "PMCUR630" /*Grenade Launcher Scope*/, func_22(num4, 63));
 			func_37(&num, 65, false);
-			func_23(&num, "PMCUR650", func_22(num4, 65));
+			func_23(&num, "PMCUR650" /*Red Tire Smoke*/, func_22(num4, 65));
 			func_37(&num, 70, false);
-			func_23(&num, "PMCUR700", func_22(num4, 70));
+			func_23(&num, "PMCUR700" /*Advanced Rifle*/, func_22(num4, 70));
 			func_23(&num, "CMOD_GBX_3" /*Race Transmission*/, func_22(num4, 70));
 			func_37(&num, 71, false);
-			func_23(&num, "PMCUR711", func_22(num4, 71));
-			func_23(&num, "PMCUR710", func_22(num4, 71));
+			func_23(&num, "PMCUR711" /*Advanced Rifle Extended Clip*/, func_22(num4, 71));
+			func_23(&num, "PMCUR710" /*Competition Suspension*/, func_22(num4, 71));
 			func_37(&num, 72, false);
-			func_23(&num, "PMCUR721", func_22(num4, 72));
+			func_23(&num, "PMCUR721" /*Advanced Rifle Flashlight*/, func_22(num4, 72));
 			func_37(&num, 73, false);
-			func_23(&num, "PMCUR730", func_22(num4, 73));
+			func_23(&num, "PMCUR730" /*Advanced Rifle Scope*/, func_22(num4, 73));
 			func_37(&num, 75, false);
-			func_23(&num, "PMCUR751", func_22(num4, 75));
+			func_23(&num, "PMCUR751" /*Gold Weapon Tint*/, func_22(num4, 75));
 			func_37(&num, 80, false);
-			func_23(&num, "PMCUR804", func_22(num4, 80));
-			func_23(&num, "PMCUR803", func_22(num4, 80));
-			func_23(&num, "PMCUR801", func_22(num4, 80));
-			func_23(&num, "PMCUR800", func_22(num4, 80));
-			func_23(&num, "PMCUR802", func_22(num4, 80));
+			func_23(&num, "PMCUR804" /*Maximum Health Increased*/, func_22(num4, 80));
+			func_23(&num, "PMCUR803" /*Health Regeneration Increased*/, func_22(num4, 80));
+			func_23(&num, "PMCUR801" /*Combat MG*/, func_22(num4, 80));
+			func_23(&num, "PMCUR800" /*Vehicle Armor Upgrade 80%*/, func_22(num4, 80));
+			func_23(&num, "PMCUR802" /*Race Brakes*/, func_22(num4, 80));
 			func_37(&num, 81, false);
-			func_23(&num, "PMCUR811", func_22(num4, 81));
+			func_23(&num, "PMCUR811" /*Combat MG Extended Magazine*/, func_22(num4, 81));
 			func_37(&num, 82, false);
-			func_23(&num, "PMCUR820", func_22(num4, 82));
+			func_23(&num, "PMCUR820" /*Combat MG Grip*/, func_22(num4, 82));
 			func_37(&num, 83, false);
-			func_23(&num, "PMCUR830", func_22(num4, 83));
+			func_23(&num, "PMCUR830" /*Combat MG Scope*/, func_22(num4, 83));
 			func_37(&num, 90, false);
-			func_23(&num, "PMCUR900", func_22(num4, 90));
-			func_23(&num, "PMCUR901", func_22(num4, 90));
+			func_23(&num, "PMCUR900" /*Heavy Sniper*/, func_22(num4, 90));
+			func_23(&num, "PMCUR901" /*Vehicle EMS Upgrade Level 4*/, func_22(num4, 90));
 			func_37(&num, 91, false);
-			func_23(&num, "PMCUR910", func_22(num4, 91));
+			func_23(&num, "PMCUR910" /*Heavy Sniper Advanced Scope*/, func_22(num4, 91));
 			func_37(&num, 100, false);
-			func_23(&num, "PMCUR1009", func_22(num4, 100));
-			func_23(&num, "PMCUR1008", func_22(num4, 100));
-			func_23(&num, "PMCUR1001", func_22(num4, 100));
-			func_23(&num, "PMCUR1002", func_22(num4, 100));
-			func_23(&num, "PMCUR1000", func_22(num4, 100));
-			func_23(&num, "PMCUR1004", func_22(num4, 100));
-			func_23(&num, "PMCUR1003", func_22(num4, 100));
+			func_23(&num, "PMCUR1009" /*Maximum Health Increased*/, func_22(num4, 100));
+			func_23(&num, "PMCUR1008" /*Health Regeneration Increased*/, func_22(num4, 100));
+			func_23(&num, "PMCUR1001" /*RPG*/, func_22(num4, 100));
+			func_23(&num, "PMCUR1002" /*Platinum Weapon Tint*/, func_22(num4, 100));
+			func_23(&num, "PMCUR1000" /*Vehicle Armor Upgrade 100%*/, func_22(num4, 100));
+			func_23(&num, "PMCUR1004" /*Brushed Gold Paint*/, func_22(num4, 100));
+			func_23(&num, "PMCUR1003" /*Pure Gold Paint*/, func_22(num4, 100));
 			func_37(&num, 120, false);
 			func_23(&num, "FM_RANK120_W_TICK" /*Minigun*/, func_22(num4, 120));
 			break;
@@ -603,16 +603,16 @@ int func_1(var uParam0) // Position - 0x18B
 		bLocal_168 = true;
 		func_7(1, 2, 1, 1, 0, false);
 		func_5(1, 0, num, 0, false);
-		HUD::PAUSE_MENU_ACTIVATE_CONTEXT(-1871331138);
+		HUD::PAUSE_MENU_ACTIVATE_CONTEXT(joaat("RScrollUpDown"));
 	}
 	else
 	{
 		bLocal_168 = false;
 		func_5(1, -1, -1, 0, false);
-		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(-1871331138);
+		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(joaat("RScrollUpDown"));
 	}
 
-	HUD::PAUSE_MENU_ACTIVATE_CONTEXT(337714004);
+	HUD::PAUSE_MENU_ACTIVATE_CONTEXT(joaat("HIDE_ACCEPTBUTTON"));
 	HUD::PAUSE_MENU_REDRAW_INSTRUCTIONAL_BUTTONS(0);
 	func_4(1);
 	func_2(1);
@@ -620,13 +620,13 @@ int func_1(var uParam0) // Position - 0x18B
 	return 1;
 }
 
-void func_2(int iParam0) // Position - 0x135A
+void func_2(int iParam0) // Position - 0x135A (4954)
 {
 	func_3(iParam0, true);
 	return;
 }
 
-void func_3(int iParam0, BOOL bParam1) // Position - 0x1369
+void func_3(int iParam0, BOOL bParam1) // Position - 0x1369 (4969)
 {
 	if (GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("SHOW_COLUMN"))
 	{
@@ -644,7 +644,7 @@ void func_3(int iParam0, BOOL bParam1) // Position - 0x1369
 	return;
 }
 
-void func_4(int iParam0) // Position - 0x13AE
+void func_4(int iParam0) // Position - 0x13AE (5038)
 {
 	if (GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("DISPLAY_DATA_SLOT"))
 	{
@@ -655,7 +655,7 @@ void func_4(int iParam0) // Position - 0x13AE
 	return;
 }
 
-void func_5(int iParam0, int iParam1, int iParam2, const char* sParam3, BOOL bParam4) // Position - 0x13CB
+void func_5(int iParam0, int iParam1, int iParam2, const char* sParam3, BOOL bParam4) // Position - 0x13CB (5067)
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("SET_COLUMN_SCROLL");
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iParam0);
@@ -680,14 +680,14 @@ void func_5(int iParam0, int iParam1, int iParam2, const char* sParam3, BOOL bPa
 	return;
 }
 
-void func_6(char* sParam0) // Position - 0x1428
+void func_6(char* sParam0) // Position - 0x1428 (5160)
 {
 	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(sParam0);
 	GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 	return;
 }
 
-void func_7(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, BOOL bParam5) // Position - 0x143A
+void func_7(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, BOOL bParam5) // Position - 0x143A (5178)
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("INIT_COLUMN_SCROLL");
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iParam0);
@@ -702,7 +702,7 @@ void func_7(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, BOO
 	return;
 }
 
-BOOL func_8(int iParam0, int iParam1, int iParam2) // Position - 0x147D
+BOOL func_8(int iParam0, int iParam1, int iParam2) // Position - 0x147D (5245)
 {
 	int num;
 	eControlAction action;
@@ -717,339 +717,339 @@ BOOL func_8(int iParam0, int iParam1, int iParam2) // Position - 0x147D
 	return IS_BIT_SET(num, func_9(action));
 }
 
-int func_9(eControlAction ecaParam0) // Position - 0x14B1
+int func_9(eControlAction ecaParam0) // Position - 0x14B1 (5297)
 {
 	return ecaParam0 % 32;
 }
 
-eControlAction func_10(int iParam0) // Position - 0x14BE
+eControlAction func_10(int iParam0) // Position - 0x14BE (5310)
 {
 	return func_11(iParam0);
 }
 
-int func_11(int iParam0) // Position - 0x14CC
+int func_11(int iParam0) // Position - 0x14CC (5324)
 {
 	switch (iParam0)
 	{
-		case -1569615261:
+		case joaat("WEAPON_UNARMED"):
 			return 0;
 	
-		case 453432689:
+		case joaat("WEAPON_PISTOL"):
 			return 1;
 	
-		case 1593441988:
+		case joaat("WEAPON_COMBATPISTOL"):
 			return 2;
 	
-		case 584646201:
+		case joaat("WEAPON_APPISTOL"):
 			return 3;
 	
-		case -1716589765:
+		case joaat("WEAPON_PISTOL50"):
 			return 4;
 	
-		case 736523883:
+		case joaat("WEAPON_SMG"):
 			return 5;
 	
-		case -270015777:
+		case joaat("WEAPON_ASSAULTSMG"):
 			return 6;
 	
-		case 324215364:
+		case joaat("WEAPON_MICROSMG"):
 			return 7;
 	
-		case -1074790547:
+		case joaat("WEAPON_ASSAULTRIFLE"):
 			return 8;
 	
-		case -2084633992:
+		case joaat("WEAPON_CARBINERIFLE"):
 			return 9;
 	
-		case -1357824103:
+		case joaat("WEAPON_ADVANCEDRIFLE"):
 			return 11;
 	
-		case -1660422300:
+		case joaat("WEAPON_MG"):
 			return 12;
 	
-		case 2144741730:
+		case joaat("WEAPON_COMBATMG"):
 			return 13;
 	
-		case -572349828:
+		case joaat("WEAPON_ASSAULTMG"):
 			return 14;
 	
-		case 741814745:
+		case joaat("WEAPON_STICKYBOMB"):
 			return 15;
 	
-		case -1813897027:
+		case joaat("WEAPON_GRENADE"):
 			return 16;
 	
-		case -37975472:
+		case joaat("WEAPON_SMOKEGRENADE"):
 			return 17;
 	
-		case 856002082:
+		case joaat("WEAPON_REMOTESNIPER"):
 			return 18;
 	
-		case 392730790:
+		case joaat("WEAPON_ASSAULTSNIPER"):
 			return 19;
 	
-		case 100416529:
+		case joaat("WEAPON_SNIPERRIFLE"):
 			return 20;
 	
-		case 205991906:
+		case joaat("WEAPON_HEAVYSNIPER"):
 			return 21;
 	
-		case 487013001:
+		case joaat("WEAPON_PUMPSHOTGUN"):
 			return 22;
 	
-		case -1654528753:
+		case joaat("WEAPON_BULLPUPSHOTGUN"):
 			return 23;
 	
-		case -494615257:
+		case joaat("WEAPON_ASSAULTSHOTGUN"):
 			return 24;
 	
-		case 2017895192:
+		case joaat("WEAPON_SAWNOFFSHOTGUN"):
 			return 25;
 	
-		case -1568386805:
+		case joaat("WEAPON_GRENADELAUNCHER"):
 			return 26;
 	
-		case -1312131151:
+		case joaat("WEAPON_RPG"):
 			return 27;
 	
-		case 1119849093:
+		case joaat("WEAPON_MINIGUN"):
 			return 28;
 	
-		case -344484024:
+		case joaat("WEAPON_LOUDHAILER"):
 			return 29;
 	
-		case -1887867191:
+		case joaat("WEAPON_PROGRAMMABLEAR"):
 			return 30;
 	
-		case 911657153:
+		case joaat("WEAPON_STUNGUN"):
 			return 31;
 	
-		case -837150131:
+		case joaat("WEAPON_RUBBERGUN"):
 			return 32;
 	
-		case -72657034:
+		case joaat("GADGET_PARACHUTE"):
 			return 33;
 	
-		case -1716189206:
+		case joaat("WEAPON_KNIFE"):
 			return 34;
 	
-		case 1737195953:
+		case joaat("WEAPON_NIGHTSTICK"):
 			return 35;
 	
-		case 1317494643:
+		case joaat("WEAPON_HAMMER"):
 			return 36;
 	
-		case -1786099057:
+		case joaat("WEAPON_BAT"):
 			return 37;
 	
-		case -2067956739:
+		case joaat("WEAPON_CROWBAR"):
 			return 38;
 	
-		case 1141786504:
+		case joaat("WEAPON_GOLFCLUB"):
 			return 39;
 	
-		case 1305664598:
+		case joaat("WEAPON_GRENADELAUNCHER_SMOKE"):
 			return 40;
 	
-		case 615608432:
+		case joaat("WEAPON_MOLOTOV"):
 			return 41;
 	
-		case 101631238:
+		case joaat("WEAPON_FIREEXTINGUISHER"):
 			return 42;
 	
-		case 883325847:
+		case joaat("WEAPON_PETROLCAN"):
 			return 43;
 	
-		case -38085395:
+		case joaat("WEAPON_DIGISCANNER"):
 			return 44;
 	
-		case -102323637:
+		case joaat("WEAPON_BOTTLE"):
 			return 45;
 	
-		case -1063057011:
+		case joaat("WEAPON_SPECIALCARBINE"):
 			return 46;
 	
-		case -1076751822:
+		case joaat("WEAPON_SNSPISTOL"):
 			return 47;
 	
-		case -771403250:
+		case joaat("WEAPON_HEAVYPISTOL"):
 			return 49;
 	
-		case 2132975508:
+		case joaat("WEAPON_BULLPUPRIFLE"):
 			return 48;
 	
-		case 1627465347:
+		case joaat("WEAPON_GUSENBERG"):
 			return 50;
 	
-		case -1834847097:
+		case joaat("WEAPON_DAGGER"):
 			return 51;
 	
-		case 137902532:
+		case joaat("WEAPON_VINTAGEPISTOL"):
 			return 52;
 	
-		case 1198879012:
+		case joaat("WEAPON_FLAREGUN"):
 			return 57;
 	
-		case -1466123874:
+		case joaat("WEAPON_MUSKET"):
 			return 53;
 	
-		case 2138347493:
+		case joaat("WEAPON_FIREWORK"):
 			return 54;
 	
-		case -952879014:
+		case joaat("WEAPON_MARKSMANRIFLE"):
 			return 56;
 	
-		case 984333226:
+		case joaat("WEAPON_HEAVYSHOTGUN"):
 			return 55;
 	
-		case -1420407917:
+		case joaat("WEAPON_PROXMINE"):
 			return 60;
 	
-		case 1672152130:
+		case joaat("WEAPON_HOMINGLAUNCHER"):
 			return 61;
 	
-		case -102973651:
+		case joaat("WEAPON_HATCHET"):
 			return 58;
 	
-		case 1834241177:
+		case joaat("WEAPON_RAILGUN"):
 			return 59;
 	
-		case 171789620:
+		case joaat("WEAPON_COMBATPDW"):
 			return 64;
 	
-		case -656458692:
+		case joaat("WEAPON_KNUCKLE"):
 			return 62;
 	
-		case -598887786:
+		case joaat("WEAPON_MARKSMANPISTOL"):
 			return 63;
 	
-		case -581044007:
+		case joaat("WEAPON_MACHETE"):
 			return 65;
 	
-		case -619010992:
+		case joaat("WEAPON_MACHINEPISTOL"):
 			return 68;
 	
-		case -275439685:
+		case joaat("WEAPON_DBSHOTGUN"):
 			return 66;
 	
-		case 1649403952:
+		case joaat("WEAPON_COMPACTRIFLE"):
 			return 67;
 	
-		case -1951375401:
+		case joaat("WEAPON_FLASHLIGHT"):
 			return 69;
 	
-		case -1045183535:
+		case joaat("WEAPON_REVOLVER"):
 			return 70;
 	
-		case -538741184:
+		case joaat("WEAPON_SWITCHBLADE"):
 			return 71;
 	
-		case 317205821:
+		case joaat("WEAPON_AUTOSHOTGUN"):
 			return 72;
 	
-		case -1121678507:
+		case joaat("WEAPON_MINISMG"):
 			return 73;
 	
-		case 125959754:
+		case joaat("WEAPON_COMPACTLAUNCHER"):
 			return 74;
 	
-		case -853065399:
+		case joaat("WEAPON_BATTLEAXE"):
 			return 75;
 	
-		case -1169823560:
+		case joaat("WEAPON_PIPEBOMB"):
 			return 76;
 	
-		case -1810795771:
+		case joaat("WEAPON_POOLCUE"):
 			return 77;
 	
-		case 419712736:
+		case joaat("WEAPON_WRENCH"):
 			return 78;
 	
-		case 961495388:
+		case joaat("WEAPON_ASSAULTRIFLE_MK2"):
 			return 8;
 	
-		case -86904375:
+		case joaat("WEAPON_CARBINERIFLE_MK2"):
 			return 9;
 	
-		case -608341376:
+		case joaat("WEAPON_COMBATMG_MK2"):
 			return 13;
 	
-		case 177293209:
+		case joaat("WEAPON_HEAVYSNIPER_MK2"):
 			return 21;
 	
-		case -1075685676:
+		case joaat("WEAPON_PISTOL_MK2"):
 			return 1;
 	
-		case 2024373456:
+		case joaat("WEAPON_SMG_MK2"):
 			return 5;
 	
-		case 1432025498:
+		case joaat("WEAPON_PUMPSHOTGUN_MK2"):
 			return 22;
 	
-		case -1768145561:
+		case joaat("WEAPON_SPECIALCARBINE_MK2"):
 			return 46;
 	
-		case -2009644972:
+		case joaat("WEAPON_SNSPISTOL_MK2"):
 			return 47;
 	
-		case 1785463520:
+		case joaat("WEAPON_MARKSMANRIFLE_MK2"):
 			return 56;
 	
-		case -879347409:
+		case joaat("WEAPON_REVOLVER_MK2"):
 			return 70;
 	
-		case -2066285827:
+		case joaat("WEAPON_BULLPUPRIFLE_MK2"):
 			return 48;
 	
-		case -1746263880:
+		case joaat("WEAPON_DOUBLEACTION"):
 			return 79;
 	
-		case 940833800:
+		case joaat("WEAPON_STONE_HATCHET"):
 			return 80;
 	
-		case -1355376991:
+		case joaat("WEAPON_RAYPISTOL"):
 			return 81;
 	
-		case 1198256469:
+		case joaat("WEAPON_RAYCARBINE"):
 			return 82;
 	
-		case -1238556825:
+		case joaat("WEAPON_RAYMINIGUN"):
 			return 83;
 	
-		case -1853920116:
+		case joaat("WEAPON_NAVYREVOLVER"):
 			return 84;
 	
-		case 727643628:
+		case joaat("WEAPON_CERAMICPISTOL"):
 			return 85;
 	
-		case 94989220:
+		case joaat("WEAPON_COMBATSHOTGUN"):
 			return 86;
 	
-		case -1658906650:
+		case joaat("WEAPON_MILITARYRIFLE"):
 			return 88;
 	
-		case 1470379660:
+		case joaat("WEAPON_GADGETPISTOL"):
 			return 87;
 	
-		case -947031628:
+		case joaat("WEAPON_HEAVYRIFLE"):
 			return 10;
 	
-		case -618237638:
+		case joaat("WEAPON_EMPLAUNCHER"):
 			return 89;
 	
-		case 406929569:
+		case joaat("WEAPON_FERTILIZERCAN"):
 			return 90;
 	
-		case 1171102963:
+		case joaat("WEAPON_STUNGUN_MP"):
 			return 91;
 	
-		case -610080759:
+		case joaat("WEAPON_METALDETECTOR"):
 			return 92;
 	
-		case -774507221:
+		case joaat("WEAPON_TACTICALRIFLE"):
 			return 93;
 	
-		case 1853742572:
+		case joaat("WEAPON_PRECISIONRIFLE"):
 			return 94;
 	
 		case 465894841:
@@ -1064,7 +1064,7 @@ int func_11(int iParam0) // Position - 0x14CC
 		case 350597077:
 			return 98;
 	
-		case 1924557585:
+		case joaat("WEAPON_BATTLERIFLE"):
 			return 99;
 	
 		case 62870901:
@@ -1080,7 +1080,7 @@ int func_11(int iParam0) // Position - 0x14CC
 	return 0;
 }
 
-int func_12(int iParam0, int iParam1) // Position - 0x1B1C
+int func_12(int iParam0, int iParam1) // Position - 0x1B1C (6940)
 {
 	int num;
 
@@ -1088,7 +1088,7 @@ int func_12(int iParam0, int iParam1) // Position - 0x1B1C
 	return num;
 }
 
-int func_13(int iParam0, int iParam1) // Position - 0x1B34
+int func_13(int iParam0, int iParam1) // Position - 0x1B34 (6964)
 {
 	Hash statHash;
 	int outValue;
@@ -1104,12 +1104,12 @@ int func_13(int iParam0, int iParam1) // Position - 0x1B34
 	return 0;
 }
 
-Hash func_14(int iParam0, int iParam1) // Position - 0x1B63
+Hash func_14(int iParam0, int iParam1) // Position - 0x1B63 (7011)
 {
 	return STATS::_GET_STAT_HASH_FOR_CHARACTER_STAT(0, iParam0, func_15(iParam1));
 }
 
-int func_15(int iParam0) // Position - 0x1B78
+int func_15(int iParam0) // Position - 0x1B78 (7032)
 {
 	int num;
 	int num2;
@@ -1135,12 +1135,12 @@ int func_15(int iParam0) // Position - 0x1B78
 	return num;
 }
 
-int func_16() // Position - 0x1BAC
+int func_16() // Position - 0x1BAC (7084)
 {
 	return Global_1574926;
 }
 
-int func_17(int iParam0) // Position - 0x1BB8
+int func_17(int iParam0) // Position - 0x1BB8 (7096)
 {
 	eControlAction action;
 	int num;
@@ -1175,27 +1175,27 @@ int func_17(int iParam0) // Position - 0x1BB8
 	return 15468;
 }
 
-int func_18() // Position - 0x1C82
+int func_18() // Position - 0x1C82 (7298)
 {
 	return Global_33088;
 }
 
-int func_19() // Position - 0x1C8D
+int func_19() // Position - 0x1C8D (7309)
 {
 	return Global_33087;
 }
 
-int func_20(eControlAction ecaParam0) // Position - 0x1C98
+int func_20(eControlAction ecaParam0) // Position - 0x1C98 (7320)
 {
 	return ecaParam0 / 32;
 }
 
-BOOL func_21() // Position - 0x1CA5
+BOOL func_21() // Position - 0x1CA5 (7333)
 {
 	return Global_1575063;
 }
 
-BOOL func_22(int iParam0, int iParam1) // Position - 0x1CB1
+BOOL func_22(int iParam0, int iParam1) // Position - 0x1CB1 (7345)
 {
 	if (iParam0 >= iParam1)
 		return true;
@@ -1203,14 +1203,14 @@ BOOL func_22(int iParam0, int iParam1) // Position - 0x1CB1
 	return false;
 }
 
-void func_23(var uParam0, char* sParam1, BOOL bParam2) // Position - 0x1CC5
+void func_23(var uParam0, char* sParam1, BOOL bParam2) // Position - 0x1CC5 (7365)
 {
 	func_24(1, *uParam0, iLocal_162, *uParam0, sParam1, bParam2, 1);
 	*uParam0 = *uParam0 + 1;
 	return;
 }
 
-void func_24(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4, BOOL bParam5, int iParam6) // Position - 0x1CE7
+void func_24(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4, BOOL bParam5, int iParam6) // Position - 0x1CE7 (7399)
 {
 	if (GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("SET_DATA_SLOT"))
 	{
@@ -1239,7 +1239,7 @@ void func_24(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4, 
 	return;
 }
 
-BOOL func_25(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x1D66
+BOOL func_25(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x1D66 (7526)
 {
 	int num;
 	int num2;
@@ -1287,7 +1287,7 @@ BOOL func_25(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x1D66
 	return IS_BIT_SET(Global_1836954[num2], num);
 }
 
-BOOL func_26() // Position - 0x1ED1
+BOOL func_26() // Position - 0x1ED1 (7889)
 {
 	int num;
 
@@ -1314,17 +1314,17 @@ BOOL func_26() // Position - 0x1ED1
 	return false;
 }
 
-BOOL func_27() // Position - 0x1F2E
+BOOL func_27() // Position - 0x1F2E (7982)
 {
 	return Global_1575072;
 }
 
-BOOL func_28() // Position - 0x1F3A
+BOOL func_28() // Position - 0x1F3A (7994)
 {
 	return Global_1575074;
 }
 
-BOOL func_29(Player plParam0, int iParam1) // Position - 0x1F46
+BOOL func_29(Player plParam0, int iParam1) // Position - 0x1F46 (8006)
 {
 	if (!func_33())
 		return false;
@@ -1338,7 +1338,7 @@ BOOL func_29(Player plParam0, int iParam1) // Position - 0x1F46
 	return func_30(&(Global_1845221[plParam0 /*889*/].f_825), func_31(iParam1));
 }
 
-BOOL func_30(var uParam0, int iParam1) // Position - 0x1F86
+BOOL func_30(var uParam0, int iParam1) // Position - 0x1F86 (8070)
 {
 	int num;
 	int num2;
@@ -1350,7 +1350,7 @@ BOOL func_30(var uParam0, int iParam1) // Position - 0x1F86
 	return IS_BIT_SET(uParam0->[num2], num3);
 }
 
-int func_31(int iParam0) // Position - 0x1FA9
+int func_31(int iParam0) // Position - 0x1FA9 (8105)
 {
 	switch (iParam0)
 	{
@@ -1493,12 +1493,12 @@ int func_31(int iParam0) // Position - 0x1FA9
 	return 1;
 }
 
-BOOL func_32() // Position - 0x2195
+BOOL func_32() // Position - 0x2195 (8597)
 {
 	return IS_BIT_SET(Global_1845221[PLAYER::PLAYER_ID() /*889*/].f_144, 3);
 }
 
-BOOL func_33() // Position - 0x21AC
+BOOL func_33() // Position - 0x21AC (8620)
 {
 	if (!func_34())
 		return false;
@@ -1506,7 +1506,7 @@ BOOL func_33() // Position - 0x21AC
 	return true;
 }
 
-BOOL func_34() // Position - 0x21C1
+BOOL func_34() // Position - 0x21C1 (8641)
 {
 	if (Global_1574612)
 		return true;
@@ -1520,7 +1520,7 @@ BOOL func_34() // Position - 0x21C1
 	return func_35(120, -1);
 }
 
-BOOL func_35(int iParam0, int iParam1) // Position - 0x21F1
+BOOL func_35(int iParam0, int iParam1) // Position - 0x21F1 (8689)
 {
 	Hash statHash;
 	BOOL outValue;
@@ -1533,12 +1533,12 @@ BOOL func_35(int iParam0, int iParam1) // Position - 0x21F1
 	return false;
 }
 
-Hash func_36(int iParam0, int iParam1) // Position - 0x2215
+Hash func_36(int iParam0, int iParam1) // Position - 0x2215 (8725)
 {
 	return STATS::_GET_STAT_HASH_FOR_CHARACTER_STAT(2, iParam0, func_15(iParam1));
 }
 
-void func_37(var uParam0, int iParam1, BOOL bParam2) // Position - 0x222A
+void func_37(var uParam0, int iParam1, BOOL bParam2) // Position - 0x222A (8746)
 {
 	char* str;
 
@@ -1548,13 +1548,13 @@ void func_37(var uParam0, int iParam1, BOOL bParam2) // Position - 0x222A
 		*uParam0 = *uParam0 + 1;
 	}
 
-	str = "PAUSEUNLRANK";
+	str = "PAUSEUNLRANK" /*RANK ~1~*/;
 	func_38(1, *uParam0, iLocal_162, *uParam0, str, iParam1);
 	*uParam0 = *uParam0 + 1;
 	return;
 }
 
-void func_38(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4, int iParam5) // Position - 0x2272
+void func_38(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4, int iParam5) // Position - 0x2272 (8818)
 {
 	if (GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("SET_DATA_SLOT"))
 	{
@@ -1575,7 +1575,7 @@ void func_38(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4, 
 	return;
 }
 
-void func_39(var uParam0, BOOL bParam1) // Position - 0x22C8
+void func_39(var uParam0, BOOL bParam1) // Position - 0x22C8 (8904)
 {
 	var unk;
 
@@ -1586,7 +1586,7 @@ void func_39(var uParam0, BOOL bParam1) // Position - 0x22C8
 	return;
 }
 
-BOOL func_40(int iParam0) // Position - 0x22F9
+BOOL func_40(int iParam0) // Position - 0x22F9 (8953)
 {
 	switch (iParam0)
 	{
@@ -1699,7 +1699,7 @@ BOOL func_40(int iParam0) // Position - 0x22F9
 			return func_35(86, -1);
 	
 		case 36:
-			if (_MPPLY_STAT_GET_INT(-1678617733) > 0 || _MPPLY_STAT_GET_INT(-1609664002) > 0)
+			if (_MPPLY_STAT_GET_INT(joaat("MPPLY_RACE_2_POINT_WINS")) > 0 || _MPPLY_STAT_GET_INT(joaat("MPPLY_RACE_2_POINT_LOST")) > 0)
 				return true;
 			else
 				return false;
@@ -1742,7 +1742,7 @@ BOOL func_40(int iParam0) // Position - 0x22F9
 	return false;
 }
 
-BOOL func_41() // Position - 0x2654
+BOOL func_41() // Position - 0x2654 (9812)
 {
 	int num;
 
@@ -1754,7 +1754,7 @@ BOOL func_41() // Position - 0x2654
 	return num;
 }
 
-int _MPPLY_STAT_GET_INT(Hash hParam0) // Position - 0x2670
+int _MPPLY_STAT_GET_INT(Hash hParam0) // Position - 0x2670 (9840)
 {
 	Hash statHash;
 	int outValue;
@@ -1767,7 +1767,7 @@ int _MPPLY_STAT_GET_INT(Hash hParam0) // Position - 0x2670
 	return 0;
 }
 
-int func_43(int iParam0, int iParam1) // Position - 0x268E
+int func_43(int iParam0, int iParam1) // Position - 0x268E (9870)
 {
 	Hash statHash;
 	int outValue;
@@ -1780,12 +1780,12 @@ int func_43(int iParam0, int iParam1) // Position - 0x268E
 	return 0;
 }
 
-Hash func_44(int iParam0, int iParam1) // Position - 0x26B2
+Hash func_44(int iParam0, int iParam1) // Position - 0x26B2 (9906)
 {
 	return STATS::_GET_STAT_HASH_FOR_CHARACTER_STAT(8, iParam0, func_15(iParam1));
 }
 
-BOOL func_45() // Position - 0x26C8
+BOOL func_45() // Position - 0x26C8 (9928)
 {
 	int num;
 
@@ -1797,7 +1797,7 @@ BOOL func_45() // Position - 0x26C8
 	return num;
 }
 
-BOOL _STAT_GET_PACKED_BOOL(int iParam0, int iParam1) // Position - 0x26E3
+BOOL _STAT_GET_PACKED_BOOL(int iParam0, int iParam1) // Position - 0x26E3 (9955)
 {
 	if (iParam1 == -1)
 		iParam1 = func_16();
@@ -1805,7 +1805,7 @@ BOOL _STAT_GET_PACKED_BOOL(int iParam0, int iParam1) // Position - 0x26E3
 	return STATS::GET_PACKED_STAT_BOOL_CODE(iParam0, iParam1);
 }
 
-void func_47(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position - 0x26FF
+void func_47(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position - 0x26FF (9983)
 {
 	var unk;
 
@@ -1821,7 +1821,7 @@ void func_47(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position - 
 	return;
 }
 
-void func_48(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4, char* sParam5, int iParam6) // Position - 0x2753
+void func_48(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4, char* sParam5, int iParam6) // Position - 0x2753 (10067)
 {
 	if (GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("SET_DATA_SLOT"))
 	{
@@ -1842,7 +1842,7 @@ void func_48(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4, 
 	return;
 }
 
-void func_49(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4, char* sParam5, int iParam6, int iParam7) // Position - 0x27A7
+void func_49(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4, char* sParam5, int iParam6, int iParam7) // Position - 0x27A7 (10151)
 {
 	if (GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("SET_DATA_SLOT"))
 	{
@@ -1864,7 +1864,7 @@ void func_49(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4, 
 	return;
 }
 
-BOOL func_50(int iParam0) // Position - 0x2801
+BOOL func_50(int iParam0) // Position - 0x2801 (10241)
 {
 	if (iParam0 == 1 || iParam0 == 2 || iParam0 == 3 || iParam0 == 4 || iParam0 == 5 || iParam0 == 6)
 		return true;
@@ -1872,7 +1872,7 @@ BOOL func_50(int iParam0) // Position - 0x2801
 	return false;
 }
 
-int func_51(int iParam0) // Position - 0x2847
+int func_51(int iParam0) // Position - 0x2847 (10311)
 {
 	int num;
 
@@ -1951,17 +1951,17 @@ int func_51(int iParam0) // Position - 0x2847
 	return -1;
 }
 
-BOOL func_52() // Position - 0x29D3
+BOOL func_52() // Position - 0x29D3 (10707)
 {
 	return 1;
 }
 
-BOOL func_53() // Position - 0x29DC
+BOOL func_53() // Position - 0x29DC (10716)
 {
 	return true;
 }
 
-int func_54(int iParam0) // Position - 0x29E5
+int func_54(int iParam0) // Position - 0x29E5 (10725)
 {
 	int num;
 
@@ -2040,7 +2040,7 @@ int func_54(int iParam0) // Position - 0x29E5
 			if (func_35(394, -1))
 				num = num + 1;
 		
-			if (func_35(&func_1, -1))
+			if (func_35(395, -1))
 				num = num + 1;
 		
 			if (func_35(396, -1))
@@ -2058,7 +2058,7 @@ int func_54(int iParam0) // Position - 0x29E5
 	return -1;
 }
 
-int func_55() // Position - 0x2BDE
+int func_55() // Position - 0x2BDE (11230)
 {
 	int num;
 
@@ -2067,7 +2067,7 @@ int func_55() // Position - 0x2BDE
 	return num;
 }
 
-int func_56(int iParam0) // Position - 0x2BFB
+int func_56(int iParam0) // Position - 0x2BFB (11259)
 {
 	int num;
 	int i;
@@ -2084,7 +2084,7 @@ int func_56(int iParam0) // Position - 0x2BFB
 	return num;
 }
 
-int func_57() // Position - 0x2C82
+int func_57() // Position - 0x2C82 (11394)
 {
 	int num;
 
@@ -2093,7 +2093,7 @@ int func_57() // Position - 0x2C82
 	return num;
 }
 
-int func_58() // Position - 0x2C9D
+int func_58() // Position - 0x2C9D (11421)
 {
 	int num;
 
@@ -2102,7 +2102,7 @@ int func_58() // Position - 0x2C9D
 	return num;
 }
 
-int func_59() // Position - 0x2CB8
+int func_59() // Position - 0x2CB8 (11448)
 {
 	int num;
 
@@ -2111,7 +2111,7 @@ int func_59() // Position - 0x2CB8
 	return num;
 }
 
-int func_60() // Position - 0x2CD3
+int func_60() // Position - 0x2CD3 (11475)
 {
 	int num;
 
@@ -2120,7 +2120,7 @@ int func_60() // Position - 0x2CD3
 	return num;
 }
 
-int func_61() // Position - 0x2CF0
+int func_61() // Position - 0x2CF0 (11504)
 {
 	int num;
 
@@ -2132,13 +2132,13 @@ int func_61() // Position - 0x2CF0
 	return num;
 }
 
-int func_62(int iParam0, BOOL bParam1) // Position - 0x2D2B
+int func_62(int iParam0, BOOL bParam1) // Position - 0x2D2B (11563)
 {
 	bParam1;
 	return func_63(iParam0, 0);
 }
 
-int func_63(int iParam0, int iParam1) // Position - 0x2D3F
+int func_63(int iParam0, int iParam1) // Position - 0x2D3F (11583)
 {
 	int i;
 	int value;
@@ -2192,7 +2192,7 @@ int func_63(int iParam0, int iParam1) // Position - 0x2D3F
 }
 
 // Unhandled jump detected. Output should be considered invalid
-int func_64(int iParam0) // Position - 0x2DFA
+int func_64(int iParam0) // Position - 0x2DFA (11770)
 {
 	int num;
 	int num2;
@@ -2385,7 +2385,7 @@ int func_64(int iParam0) // Position - 0x2DFA
 				return 644500;
 		
 			case 62:
-				return 663800;
+				return joaat("pyro_sub_bass_synth");
 		
 			case 63:
 				return 683400;
@@ -2512,13 +2512,13 @@ int func_64(int iParam0) // Position - 0x2DFA
 	return 1555800;
 }
 
-int func_65(Player plParam0, BOOL bParam1) // Position - 0x3335
+int func_65(Player plParam0, BOOL bParam1) // Position - 0x3335 (13109)
 {
 	bParam1;
 	return func_66(plParam0);
 }
 
-int func_66(Player plParam0) // Position - 0x3348
+int func_66(Player plParam0) // Position - 0x3348 (13128)
 {
 	if (Global_1574633.f_9 == 0)
 		if (plParam0 > -1)
@@ -2532,7 +2532,7 @@ int func_66(Player plParam0) // Position - 0x3348
 	return 0;
 }
 
-BOOL func_67(Player plParam0) // Position - 0x339F
+BOOL func_67(Player plParam0) // Position - 0x339F (13215)
 {
 	if (!func_68(plParam0))
 		return false;
@@ -2540,7 +2540,7 @@ BOOL func_67(Player plParam0) // Position - 0x339F
 	return IS_BIT_SET(Global_2672939.f_1, plParam0);
 }
 
-BOOL func_68(Player plParam0) // Position - 0x33BE
+BOOL func_68(Player plParam0) // Position - 0x33BE (13246)
 {
 	Player player;
 
@@ -2555,7 +2555,7 @@ BOOL func_68(Player plParam0) // Position - 0x33BE
 	return true;
 }
 
-void func_69(int iParam0) // Position - 0x33E0
+void func_69(int iParam0) // Position - 0x33E0 (13280)
 {
 	if (GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("SET_DATA_SLOT_EMPTY"))
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iParam0);
@@ -2564,7 +2564,7 @@ void func_69(int iParam0) // Position - 0x33E0
 	return;
 }
 
-void func_70(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3) // Position - 0x33FD
+void func_70(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3) // Position - 0x33FD (13309)
 {
 	if (iParam1 == -1)
 		return;
@@ -2581,7 +2581,7 @@ void func_70(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3) // Position -
 	return;
 }
 
-void func_71() // Position - 0x3435
+void func_71() // Position - 0x3435 (13365)
 {
 	var lastItemMenuId;
 	var selectedItemMenuId;
@@ -2600,20 +2600,20 @@ void func_71() // Position - 0x3435
 	func_72(5);
 	func_4(0);
 	func_1(&uLocal_169);
-	HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(-1871331138);
-	HUD::PAUSE_MENU_ACTIVATE_CONTEXT(337714004);
+	HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(joaat("RScrollUpDown"));
+	HUD::PAUSE_MENU_ACTIVATE_CONTEXT(joaat("HIDE_ACCEPTBUTTON"));
 	HUD::PAUSE_MENU_REDRAW_INSTRUCTIONAL_BUTTONS(0);
 	iLocal_170 = 1;
 	return;
 }
 
-void func_72(int iParam0) // Position - 0x34C1
+void func_72(int iParam0) // Position - 0x34C1 (13505)
 {
 	func_3(iParam0, false);
 	return;
 }
 
-void func_73(int iParam0, int iParam1, int iParam2, int iParam3, BOOL bParam4, char* sParam5, BOOL bParam6, int iParam7, BOOL bParam8) // Position - 0x34D0
+void func_73(int iParam0, int iParam1, int iParam2, int iParam3, BOOL bParam4, char* sParam5, BOOL bParam6, int iParam7, BOOL bParam8) // Position - 0x34D0 (13520)
 {
 	if (GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("SET_DATA_SLOT"))
 	{
@@ -2649,7 +2649,7 @@ void func_73(int iParam0, int iParam1, int iParam2, int iParam3, BOOL bParam4, c
 	return;
 }
 
-BOOL func_74() // Position - 0x354A
+BOOL func_74() // Position - 0x354A (13642)
 {
 	int i;
 
@@ -2668,7 +2668,7 @@ BOOL func_74() // Position - 0x354A
 	return true;
 }
 
-BOOL func_75(eControlAction ecaParam0) // Position - 0x35F1
+BOOL func_75(eControlAction ecaParam0) // Position - 0x35F1 (13809)
 {
 	eControlAction action;
 	int num;
@@ -2694,7 +2694,7 @@ BOOL func_75(eControlAction ecaParam0) // Position - 0x35F1
 	return false;
 }
 
-BOOL func_76(eControlAction ecaParam0, var uParam1, int iParam2) // Position - 0x3685
+BOOL func_76(eControlAction ecaParam0, var uParam1, int iParam2) // Position - 0x3685 (13957)
 {
 	int num;
 	int num2;
@@ -2776,7 +2776,7 @@ BOOL func_76(eControlAction ecaParam0, var uParam1, int iParam2) // Position - 0
 	return false;
 }
 
-void func_77() // Position - 0x37E8
+void func_77() // Position - 0x37E8 (14312)
 {
 	int controlValue;
 
@@ -2833,13 +2833,13 @@ void func_77() // Position - 0x37E8
 	return;
 }
 
-void _STOPWATCH_DESTROY(var uParam0) // Position - 0x38A5
+void _STOPWATCH_DESTROY(var uParam0) // Position - 0x38A5 (14501)
 {
 	uParam0->f_1 = 0;
 	return;
 }
 
-BOOL _STOPWATCH_HAS_TIME_PASSED(var pStopwatch, int millis, BOOL useLocalTimer) // Position - 0x38B2
+BOOL _STOPWATCH_HAS_TIME_PASSED(var pStopwatch, int millis, BOOL useLocalTimer) // Position - 0x38B2 (14514)
 {
 	if (millis == -1)
 		return true;
@@ -2855,7 +2855,7 @@ BOOL _STOPWATCH_HAS_TIME_PASSED(var pStopwatch, int millis, BOOL useLocalTimer) 
 	return false;
 }
 
-void _STOPWATCH_INITIALIZE(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateTime) // Position - 0x3910
+void _STOPWATCH_INITIALIZE(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateTime) // Position - 0x3910 (14608)
 {
 	if (pStopwatch->f_1 == 0)
 	{
@@ -2873,12 +2873,12 @@ void _STOPWATCH_INITIALIZE(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateT
 	return;
 }
 
-BOOL IS_PLAYSTATION_PLATFORM() // Position - 0x3955
+BOOL IS_PLAYSTATION_PLATFORM() // Position - 0x3955 (14677)
 {
 	return MISC::IS_ORBIS_VERSION() || MISC::IS_PROSPERO_VERSION();
 }
 
-BOOL IS_XBOX_PLATFORM() // Position - 0x396B
+BOOL IS_XBOX_PLATFORM() // Position - 0x396B (14699)
 {
 	return MISC::IS_DURANGO_VERSION() || MISC::IS_SCARLETT_VERSION();
 }

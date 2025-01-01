@@ -227,7 +227,7 @@
 	var uLocal_225 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -260,7 +260,7 @@ void main() // Position - 0x0
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(18))
 		func_33();
 
-	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(-333035279) > 1)
+	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("ambient_tonyacall2")) > 1)
 		SCRIPT::TERMINATE_THIS_THREAD();
 
 	while (true)
@@ -287,9 +287,9 @@ void main() // Position - 0x0
 				STREAMING::REQUEST_ANIM_DICT("amb@world_human_stand_mobile@female@standing@call@enter");
 				STREAMING::REQUEST_ANIM_DICT("amb@world_human_stand_mobile@female@standing@call@base");
 				STREAMING::REQUEST_ANIM_DICT("amb@world_human_stand_mobile@female@standing@call@exit");
-				STREAMING::REQUEST_MODEL(413312110);
+				STREAMING::REQUEST_MODEL(joaat("prop_phone_ing"));
 			
-				if (STREAMING::HAS_MODEL_LOADED(413312110) && STREAMING::HAS_ANIM_DICT_LOADED("amb@world_human_stand_mobile@female@standing@call@enter") && STREAMING::HAS_ANIM_DICT_LOADED("amb@world_human_stand_mobile@female@standing@call@base") && STREAMING::HAS_ANIM_DICT_LOADED("amb@world_human_stand_mobile@female@standing@call@exit"))
+				if (STREAMING::HAS_MODEL_LOADED(joaat("prop_phone_ing")) && STREAMING::HAS_ANIM_DICT_LOADED("amb@world_human_stand_mobile@female@standing@call@enter") && STREAMING::HAS_ANIM_DICT_LOADED("amb@world_human_stand_mobile@female@standing@call@base") && STREAMING::HAS_ANIM_DICT_LOADED("amb@world_human_stand_mobile@female@standing@call@exit"))
 					iLocal_35 = 2;
 				break;
 		
@@ -309,7 +309,7 @@ void main() // Position - 0x0
 	return;
 }
 
-BOOL func_1() // Position - 0x1BA
+BOOL func_1() // Position - 0x1BA (442)
 {
 	Vector3 entityCoords;
 	Vector3 entityCoords2;
@@ -361,7 +361,7 @@ BOOL func_1() // Position - 0x1BA
 						
 							if (entityAnimCurrentTime >= 0.157f)
 							{
-								obLocal_37 = OBJECT::CREATE_OBJECT(413312110, 1f, 1f, 1f, true, true, false);
+								obLocal_37 = OBJECT::CREATE_OBJECT(joaat("prop_phone_ing"), 1f, 1f, 1f, true, true, false);
 								ENTITY::ATTACH_ENTITY_TO_ENTITY(obLocal_37, pedLocal_36, PED::GET_PED_BONE_INDEX(pedLocal_36, 28422), 0f, 0f, 0f, 0f, 0f, 0f, true, true, false, false, 2, true, 0);
 							}
 						}
@@ -424,7 +424,7 @@ BOOL func_1() // Position - 0x1BA
 	return false;
 }
 
-void func_2() // Position - 0x465
+void func_2() // Position - 0x465 (1125)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(pedLocal_36) && !ENTITY::IS_ENTITY_DEAD(pedLocal_36, false))
 	{
@@ -446,7 +446,7 @@ void func_2() // Position - 0x465
 	return;
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x4DD
+BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x4DD (1245)
 {
 	if (Global_22425 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -454,7 +454,7 @@ BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x4DD
 	return false;
 }
 
-BOOL _CONVERSATION_ADD_LINE(var uParam0, char* sParam1, char* sParam2, int iParam3, int iParam4, int iParam5, int iParam6) // Position - 0x4FF
+BOOL _CONVERSATION_ADD_LINE(var uParam0, char* sParam1, char* sParam2, int iParam3, int iParam4, int iParam5, int iParam6) // Position - 0x4FF (1279)
 {
 	func_26(uParam0, 145, sParam1, iParam4, iParam5, iParam6);
 
@@ -472,7 +472,7 @@ BOOL _CONVERSATION_ADD_LINE(var uParam0, char* sParam1, char* sParam2, int iPara
 	return func_5(sParam2, iParam3, false);
 }
 
-BOOL func_5(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x54D
+BOOL func_5(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x54D (1357)
 {
 	Global_22426 = 0;
 
@@ -576,7 +576,7 @@ BOOL func_5(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x54D
 				if (PED::IS_PED_IN_PARACHUTE_FREE_FALL(PLAYER::PLAYER_PED_ID()))
 					return 0;
 			
-				if (WEAPON::GET_IS_PED_GADGET_EQUIPPED(PLAYER::PLAYER_PED_ID(), -72657034))
+				if (WEAPON::GET_IS_PED_GADGET_EQUIPPED(PLAYER::PLAYER_PED_ID(), joaat("GADGET_PARACHUTE")))
 					return 0;
 			
 				if (!Global_79539)
@@ -652,7 +652,7 @@ BOOL func_5(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x54D
 	return 0;
 }
 
-void func_6() // Position - 0x81B
+void func_6() // Position - 0x81B (2075)
 {
 	if (!func_7())
 		return;
@@ -667,7 +667,7 @@ void func_6() // Position - 0x81B
 	return;
 }
 
-BOOL func_7() // Position - 0x852
+BOOL func_7() // Position - 0x852 (2130)
 {
 	if (!Global_262145.f_28397)
 		return false;
@@ -690,22 +690,22 @@ BOOL func_7() // Position - 0x852
 	return true;
 }
 
-BOOL func_8(Player plParam0) // Position - 0x8B5
+BOOL func_8(Player plParam0) // Position - 0x8B5 (2229)
 {
 	return func_9(plParam0, 20);
 }
 
-BOOL func_9(Player plParam0, int iParam1) // Position - 0x8C5
+BOOL func_9(Player plParam0, int iParam1) // Position - 0x8C5 (2245)
 {
 	return IS_BIT_SET(Global_1887549[plParam0 /*611*/].f_10.f_4, iParam1);
 }
 
-Player _INVALID_PLAYER_INDEX() // Position - 0x8DD
+Player _INVALID_PLAYER_INDEX() // Position - 0x8DD (2269)
 {
 	return -1;
 }
 
-void func_11() // Position - 0x8E6
+void func_11() // Position - 0x8E6 (2278)
 {
 	int i;
 
@@ -719,7 +719,7 @@ void func_11() // Position - 0x8E6
 	return;
 }
 
-void func_12() // Position - 0x917
+void func_12() // Position - 0x917 (2327)
 {
 	Global_22478 = Global_22477;
 	Global_22472 = Global_22473;
@@ -743,7 +743,7 @@ void func_12() // Position - 0x917
 	return;
 }
 
-BOOL func_13() // Position - 0x9AC
+BOOL func_13() // Position - 0x9AC (2476)
 {
 	if (Global_21066.f_1 == 1 || Global_21066.f_1 == 0)
 		return true;
@@ -751,7 +751,7 @@ BOOL func_13() // Position - 0x9AC
 	return false;
 }
 
-BOOL func_14() // Position - 0x9D3
+BOOL func_14() // Position - 0x9D3 (2515)
 {
 	int num;
 	int weaponHash;
@@ -762,7 +762,7 @@ BOOL func_14() // Position - 0x9D3
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &weaponHash, true);
 	
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
-			if (weaponHash == 100416529 || weaponHash == 205991906 || weaponHash == 856002082)
+			if (weaponHash == joaat("WEAPON_SNIPERRIFLE") || weaponHash == joaat("WEAPON_HEAVYSNIPER") || weaponHash == joaat("WEAPON_REMOTESNIPER"))
 				num = 1;
 	
 		if (CAM::IS_AIM_CAM_ACTIVE() && num == 1)
@@ -780,7 +780,7 @@ BOOL func_14() // Position - 0x9D3
 	return true;
 }
 
-void _UPDATE_CURRENT_PLAYER_CHARACTER() // Position - 0xA6C
+void _UPDATE_CURRENT_PLAYER_CHARACTER() // Position - 0xA6C (2668)
 {
 	if (func_22(14))
 	{
@@ -811,13 +811,13 @@ void _UPDATE_CURRENT_PLAYER_CHARACTER() // Position - 0xA6C
 	return;
 }
 
-eCharacter _GET_CURRENT_PLAYER_CHARACTER() // Position - 0xB0E
+eCharacter _GET_CURRENT_PLAYER_CHARACTER() // Position - 0xB0E (2830)
 {
 	func_17();
 	return Global_114135.f_2367.f_539.f_4321;
 }
 
-void func_17() // Position - 0xB27
+void func_17() // Position - 0xB27 (2855)
 {
 	eCharacter character;
 
@@ -850,12 +850,12 @@ void func_17() // Position - 0xB27
 	return;
 }
 
-BOOL func_18(eCharacter echParam0) // Position - 0xC24
+BOOL func_18(eCharacter echParam0) // Position - 0xC24 (3108)
 {
 	return echParam0 < CHAR_MULTIPLAYER;
 }
 
-eCharacter _GET_PLAYER_CHARACTER_FROM_PED(Ped pedParam0) // Position - 0xC30
+eCharacter _GET_PLAYER_CHARACTER_FROM_PED(Ped pedParam0) // Position - 0xC30 (3120)
 {
 	eCharacter i;
 	Hash entityModel;
@@ -874,7 +874,7 @@ eCharacter _GET_PLAYER_CHARACTER_FROM_PED(Ped pedParam0) // Position - 0xC30
 	return _CHAR_NULL;
 }
 
-Hash _GET_CHARACTER_MODEL(eCharacter character) // Position - 0xC6D
+Hash _GET_CHARACTER_MODEL(eCharacter character) // Position - 0xC6D (3181)
 {
 	if (func_18(character))
 		return func_21(character);
@@ -884,17 +884,17 @@ Hash _GET_CHARACTER_MODEL(eCharacter character) // Position - 0xC6D
 	return 0;
 }
 
-Hash func_21(eCharacter echParam0) // Position - 0xC92
+Hash func_21(eCharacter echParam0) // Position - 0xC92 (3218)
 {
 	return Global_2201[echParam0 /*29*/];
 }
 
-BOOL func_22(int iParam0) // Position - 0xCA1
+BOOL func_22(int iParam0) // Position - 0xCA1 (3233)
 {
 	return Global_44181 == iParam0;
 }
 
-void func_23() // Position - 0xCAF
+void func_23() // Position - 0xCAF (3247)
 {
 	int i;
 
@@ -911,7 +911,7 @@ void func_23() // Position - 0xCAF
 	return;
 }
 
-BOOL func_24(int iParam0, int iParam1) // Position - 0xD06
+BOOL func_24(int iParam0, int iParam1) // Position - 0xD06 (3334)
 {
 	switch (iParam0)
 	{
@@ -924,7 +924,7 @@ BOOL func_24(int iParam0, int iParam1) // Position - 0xD06
 	return IS_BIT_SET(Global_1673654.f_1048, iParam0);
 }
 
-void func_25() // Position - 0xD3E
+void func_25() // Position - 0xD3E (3390)
 {
 	AUDIO::RESTART_SCRIPTED_CONVERSATION();
 	Global_23436 = 0;
@@ -947,7 +947,7 @@ void func_25() // Position - 0xD3E
 	return;
 }
 
-void func_26(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0xD95
+void func_26(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0xD95 (3477)
 {
 	Global_21879 = { *uParam0 };
 	Global_8235 = iParam1;
@@ -979,7 +979,7 @@ void func_26(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, 
 	return;
 }
 
-BOOL func_27() // Position - 0xDEB
+BOOL func_27() // Position - 0xDEB (3563)
 {
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false) && !ENTITY::IS_ENTITY_DEAD(pedLocal_36, false))
 	{
@@ -1002,7 +1002,7 @@ BOOL func_27() // Position - 0xDEB
 	return false;
 }
 
-BOOL func_28() // Position - 0xE6C
+BOOL func_28() // Position - 0xE6C (3692)
 {
 	Vector3 entityCoords;
 	Ped outPed;
@@ -1017,14 +1017,14 @@ BOOL func_28() // Position - 0xE6C
 	{
 		entityModel = ENTITY::GET_ENTITY_MODEL(outPed);
 	
-		if (entityModel == -892841148)
+		if (entityModel == joaat("IG_Tonya"))
 		{
 			pedLocal_36 = outPed;
 			ENTITY::SET_ENTITY_AS_MISSION_ENTITY(pedLocal_36, true, false);
 			PED::SET_PED_MONEY(pedLocal_36, 0);
 			PED::SET_PED_CAN_BE_TARGETTED(pedLocal_36, false);
 			PED::SET_PED_NAME_DEBUG(pedLocal_36, "TONYA");
-			PED::SET_PED_RELATIONSHIP_GROUP_HASH(pedLocal_36, 1862763509);
+			PED::SET_PED_RELATIONSHIP_GROUP_HASH(pedLocal_36, joaat("PLAYER"));
 			_CONVERSATION_INITIALIZE_ACTOR(&uLocal_61, 3, pedLocal_36, "TONYA", 1, 1);
 			func_30();
 		
@@ -1044,7 +1044,7 @@ BOOL func_28() // Position - 0xE6C
 	return false;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0xF43
+BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0xF43 (3907)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -1052,7 +1052,7 @@ BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0xF4
 	return false;
 }
 
-void func_30() // Position - 0xF6D
+void func_30() // Position - 0xF6D (3949)
 {
 	Vector3 entityCoords;
 
@@ -1090,7 +1090,7 @@ void func_30() // Position - 0xF6D
 	return;
 }
 
-void _CONVERSATION_INITIALIZE_ACTOR(var uParam0, int iParam1, Ped pedParam2, char* sParam3, int iParam4, int iParam5) // Position - 0x1026
+void _CONVERSATION_INITIALIZE_ACTOR(var uParam0, int iParam1, Ped pedParam2, char* sParam3, int iParam4, int iParam5) // Position - 0x1026 (4134)
 {
 	uParam0->[iParam1 /*10*/].f_7 == 1;
 	uParam0->[iParam1 /*10*/] = pedParam2;
@@ -1117,7 +1117,7 @@ void _CONVERSATION_INITIALIZE_ACTOR(var uParam0, int iParam1, Ped pedParam2, cha
 	return;
 }
 
-BOOL func_32(int iParam0, int iParam1) // Position - 0x10C1
+BOOL func_32(int iParam0, int iParam1) // Position - 0x10C1 (4289)
 {
 	BOOL flag;
 
@@ -1131,12 +1131,12 @@ BOOL func_32(int iParam0, int iParam1) // Position - 0x10C1
 	return flag;
 }
 
-void func_33() // Position - 0x110B
+void func_33() // Position - 0x110B (4363)
 {
 	STREAMING::REMOVE_ANIM_DICT("amb@world_human_stand_mobile@female@standing@call@enter");
 	STREAMING::REMOVE_ANIM_DICT("amb@world_human_stand_mobile@female@standing@call@base");
 	STREAMING::REMOVE_ANIM_DICT("amb@world_human_stand_mobile@female@standing@call@exit");
-	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(413312110);
+	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("prop_phone_ing"));
 
 	if (ENTITY::DOES_ENTITY_EXIST(pedLocal_36))
 		if (ENTITY::IS_ENTITY_OCCLUDED(pedLocal_36))

@@ -266,7 +266,7 @@
 	var uLocal_264 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -434,12 +434,12 @@ void main() // Position - 0x0
 	return;
 }
 
-BOOL func_1() // Position - 0x319
+BOOL func_1() // Position - 0x319 (793)
 {
 	return Global_1574533;
 }
 
-BOOL func_2(int* piParam0) // Position - 0x325
+BOOL func_2(int* piParam0) // Position - 0x325 (805)
 {
 	if (!IS_BIT_SET(*piParam0, 2))
 	{
@@ -455,7 +455,7 @@ BOOL func_2(int* piParam0) // Position - 0x325
 			}
 		}
 	}
-	else if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(1141911594) == 0)
+	else if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_race_creator")) == 0)
 	{
 		MISC::CLEAR_BIT(piParam0, 2);
 		return true;
@@ -464,15 +464,15 @@ BOOL func_2(int* piParam0) // Position - 0x325
 	return false;
 }
 
-BOOL func_3() // Position - 0x388
+BOOL func_3() // Position - 0x388 (904)
 {
-	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(1768762336) > 0 || SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(-1518439287) > 0 || SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(1141911594) > 0 || SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(-884469787) > 0 || SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(229048663) > 0 || SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(-1121276913) > 0 || SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(-1167339987) > 0 || SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(-1844397475) > 0)
+	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_mission_creator")) > 0 || SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_deathmatch_creator")) > 0 || SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_race_creator")) > 0 || SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_capture_creator")) > 0 || SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_lts_creator")) > 0 || SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_survival_creator")) > 0 || SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("basic_creator")) > 0 || SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("freemode_creator")) > 0)
 		return true;
 
 	return false;
 }
 
-BOOL func_4() // Position - 0x41A
+BOOL func_4() // Position - 0x41A (1050)
 {
 	if (Global_4718592 == 2 || Global_4718592 == 8)
 		return true;
@@ -480,7 +480,7 @@ BOOL func_4() // Position - 0x41A
 	return false;
 }
 
-BOOL func_5(int* piParam0) // Position - 0x43D
+BOOL func_5(int* piParam0) // Position - 0x43D (1085)
 {
 	if (!IS_BIT_SET(*piParam0, 2))
 	{
@@ -496,7 +496,7 @@ BOOL func_5(int* piParam0) // Position - 0x43D
 			}
 		}
 	}
-	else if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(-1518439287) == 0)
+	else if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_deathmatch_creator")) == 0)
 	{
 		MISC::CLEAR_BIT(piParam0, 2);
 		return true;
@@ -505,7 +505,7 @@ BOOL func_5(int* piParam0) // Position - 0x43D
 	return false;
 }
 
-BOOL func_6(int* piParam0) // Position - 0x4A0
+BOOL func_6(int* piParam0) // Position - 0x4A0 (1184)
 {
 	if (!IS_BIT_SET(*piParam0, 2))
 	{
@@ -521,7 +521,7 @@ BOOL func_6(int* piParam0) // Position - 0x4A0
 			}
 		}
 	}
-	else if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(-884469787) == 0)
+	else if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_capture_creator")) == 0)
 	{
 		MISC::CLEAR_BIT(piParam0, 2);
 		return true;
@@ -530,7 +530,7 @@ BOOL func_6(int* piParam0) // Position - 0x4A0
 	return false;
 }
 
-BOOL func_7(int* piParam0) // Position - 0x503
+BOOL func_7(int* piParam0) // Position - 0x503 (1283)
 {
 	if (!IS_BIT_SET(*piParam0, 2))
 	{
@@ -546,7 +546,7 @@ BOOL func_7(int* piParam0) // Position - 0x503
 			}
 		}
 	}
-	else if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(1768762336) == 0)
+	else if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_mission_creator")) == 0)
 	{
 		MISC::CLEAR_BIT(piParam0, 2);
 		return true;
@@ -555,7 +555,7 @@ BOOL func_7(int* piParam0) // Position - 0x503
 	return false;
 }
 
-BOOL func_8(int* piParam0) // Position - 0x566
+BOOL func_8(int* piParam0) // Position - 0x566 (1382)
 {
 	if (!IS_BIT_SET(*piParam0, 2))
 	{
@@ -571,7 +571,7 @@ BOOL func_8(int* piParam0) // Position - 0x566
 			}
 		}
 	}
-	else if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(-1844397475) == 0)
+	else if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("freemode_creator")) == 0)
 	{
 		MISC::CLEAR_BIT(piParam0, 2);
 		return true;
@@ -580,7 +580,7 @@ BOOL func_8(int* piParam0) // Position - 0x566
 	return false;
 }
 
-BOOL func_9(int* piParam0) // Position - 0x5C9
+BOOL func_9(int* piParam0) // Position - 0x5C9 (1481)
 {
 	if (!IS_BIT_SET(*piParam0, 2))
 	{
@@ -596,7 +596,7 @@ BOOL func_9(int* piParam0) // Position - 0x5C9
 			}
 		}
 	}
-	else if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(-1167339987) == 0)
+	else if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("basic_creator")) == 0)
 	{
 		MISC::CLEAR_BIT(piParam0, 2);
 		return true;
@@ -605,7 +605,7 @@ BOOL func_9(int* piParam0) // Position - 0x5C9
 	return false;
 }
 
-BOOL func_10(int* piParam0) // Position - 0x62C
+BOOL func_10(int* piParam0) // Position - 0x62C (1580)
 {
 	if (!IS_BIT_SET(*piParam0, 2))
 	{
@@ -621,7 +621,7 @@ BOOL func_10(int* piParam0) // Position - 0x62C
 			}
 		}
 	}
-	else if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(-1121276913) == 0)
+	else if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_survival_creator")) == 0)
 	{
 		MISC::CLEAR_BIT(piParam0, 2);
 		return true;
@@ -630,12 +630,12 @@ BOOL func_10(int* piParam0) // Position - 0x62C
 	return false;
 }
 
-BOOL func_11() // Position - 0x68F
+BOOL func_11() // Position - 0x68F (1679)
 {
 	return Global_4718592 == 3;
 }
 
-BOOL func_12(int* piParam0) // Position - 0x69D
+BOOL func_12(int* piParam0) // Position - 0x69D (1693)
 {
 	if (!IS_BIT_SET(*piParam0, 2))
 	{
@@ -651,7 +651,7 @@ BOOL func_12(int* piParam0) // Position - 0x69D
 			}
 		}
 	}
-	else if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(229048663) == 0)
+	else if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_lts_creator")) == 0)
 	{
 		MISC::CLEAR_BIT(piParam0, 2);
 		return true;
@@ -660,7 +660,7 @@ BOOL func_12(int* piParam0) // Position - 0x69D
 	return false;
 }
 
-BOOL func_13(BOOL bParam0) // Position - 0x700
+BOOL func_13(BOOL bParam0) // Position - 0x700 (1792)
 {
 	if (!bParam0)
 		return Global_4718592 == 0;
@@ -671,18 +671,18 @@ BOOL func_13(BOOL bParam0) // Position - 0x700
 	return false;
 }
 
-void func_14() // Position - 0x772
+void func_14() // Position - 0x772 (1906)
 {
 	Global_23831.f_5 = 1;
 	return;
 }
 
-BOOL func_15() // Position - 0x780
+BOOL func_15() // Position - 0x780 (1920)
 {
 	return Global_23831.f_5 || Global_23831.f_6;
 }
 
-void func_16(var uParam0) // Position - 0x798
+void func_16(var uParam0) // Position - 0x798 (1944)
 {
 	if (Global_4718592 == 0)
 	{
@@ -702,12 +702,12 @@ void func_16(var uParam0) // Position - 0x798
 	return;
 }
 
-BOOL func_17() // Position - 0x818
+BOOL func_17() // Position - 0x818 (2072)
 {
 	return Global_1574530;
 }
 
-int func_18() // Position - 0x824
+int func_18() // Position - 0x824 (2084)
 {
 	if (IS_BIT_SET(Global_1673654.f_102, 1))
 		return 1;
@@ -727,12 +727,12 @@ int func_18() // Position - 0x824
 	return 0;
 }
 
-void func_19(var uParam0) // Position - 0x870
+void func_19(var uParam0) // Position - 0x870 (2160)
 {
 	return;
 }
 
-void func_20() // Position - 0x878
+void func_20() // Position - 0x878 (2168)
 {
 	func_21();
 	Global_4718592.f_126829 = 0;
@@ -742,7 +742,7 @@ void func_20() // Position - 0x878
 	return;
 }
 
-void func_21() // Position - 0x89D
+void func_21() // Position - 0x89D (2205)
 {
 	Global_23831.f_5 = 0;
 	return;

@@ -6,7 +6,7 @@
 	var uScriptParam_1 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	float num;
 
@@ -63,7 +63,7 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1() // Position - 0x105
+void func_1() // Position - 0x105 (261)
 {
 	ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&veLocal_0);
 	ENTITY::SET_ENTITY_AS_NO_LONGER_NEEDED(&eLocal_1);

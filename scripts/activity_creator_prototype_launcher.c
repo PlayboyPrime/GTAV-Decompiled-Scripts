@@ -138,7 +138,7 @@
 	var uLocal_136 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -177,19 +177,19 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1() // Position - 0x9B
+void func_1() // Position - 0x9B (155)
 {
 	return;
 }
 
-void func_2() // Position - 0xA3
+void func_2() // Position - 0xA3 (163)
 {
 	NETWORK::NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, false, -1);
 	_NETWORK_ENSURE_SCRIPT_IS_NETWORKED(0, -1, false);
 	return;
 }
 
-int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTerminate) // Position - 0xBB
+int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTerminate) // Position - 0xBB (187)
 {
 	int i;
 
@@ -253,7 +253,7 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 	return 1;
 }
 
-BOOL _DOES_EVENT_OF_TYPE_EXIST(int iParam0) // Position - 0x1D1
+BOOL _DOES_EVENT_OF_TYPE_EXIST(int iParam0) // Position - 0x1D1 (465)
 {
 	if (SCRIPT::GET_EVENT_EXISTS(SCRIPT_EVENT_QUEUE_NETWORK, iParam0))
 		return true;
@@ -261,18 +261,18 @@ BOOL _DOES_EVENT_OF_TYPE_EXIST(int iParam0) // Position - 0x1D1
 	return false;
 }
 
-BOOL func_5() // Position - 0x1E8
+BOOL func_5() // Position - 0x1E8 (488)
 {
 	return Global_2684718.f_695;
 }
 
-BOOL func_6(BOOL bParam0) // Position - 0x1F7
+BOOL func_6(BOOL bParam0) // Position - 0x1F7 (503)
 {
 	bParam0;
 	return Global_1575056;
 }
 
-void func_7() // Position - 0x208
+void func_7() // Position - 0x208 (520)
 {
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;

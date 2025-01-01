@@ -222,7 +222,7 @@
 	var uScriptParam_3 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -393,7 +393,7 @@ void main() // Position - 0x0
 								Global_79791 = { ENTITY::GET_ENTITY_VELOCITY(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false)) };
 					
 						if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
-							ENTITY::SET_ENTITY_INVINCIBLE(PLAYER::PLAYER_PED_ID(), true, 0);
+							ENTITY::SET_ENTITY_INVINCIBLE(PLAYER::PLAYER_PED_ID(), true, false);
 					}
 					break;
 			}
@@ -404,7 +404,7 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1(int iParam0, int iParam1) // Position - 0x321
+void func_1(int iParam0, int iParam1) // Position - 0x321 (801)
 {
 	Global_79786 = iParam0;
 	Global_79786.f_1 = iParam1;
@@ -417,7 +417,7 @@ void func_1(int iParam0, int iParam1) // Position - 0x321
 	return;
 }
 
-void func_2(int iParam0, int iParam1) // Position - 0x362
+void func_2(int iParam0, int iParam1) // Position - 0x362 (866)
 {
 	if (func_8() == -1)
 	{
@@ -432,14 +432,14 @@ void func_2(int iParam0, int iParam1) // Position - 0x362
 	return;
 }
 
-void func_3(BOOL bParam0) // Position - 0x396
+void func_3(BOOL bParam0) // Position - 0x396 (918)
 {
 	func_29(1, bParam0);
 	func_29(2, bParam0);
 	return;
 }
 
-BOOL func_4(int iParam0) // Position - 0x3AC
+BOOL func_4(int iParam0) // Position - 0x3AC (940)
 {
 	HUD::REQUEST_ADDITIONAL_TEXT("MISHSTA", 8);
 
@@ -450,7 +450,7 @@ BOOL func_4(int iParam0) // Position - 0x3AC
 	return true;
 }
 
-BOOL func_5(int iParam0) // Position - 0x3D1
+BOOL func_5(int iParam0) // Position - 0x3D1 (977)
 {
 	switch (iParam0)
 	{
@@ -467,7 +467,7 @@ BOOL func_5(int iParam0) // Position - 0x3D1
 	return false;
 }
 
-BOOL func_6() // Position - 0x404
+BOOL func_6() // Position - 0x404 (1028)
 {
 	if (Global_114135.f_18578.f_380 > 0)
 		return 1;
@@ -475,7 +475,7 @@ BOOL func_6() // Position - 0x404
 	return 0;
 }
 
-BOOL func_7() // Position - 0x41F
+BOOL func_7() // Position - 0x41F (1055)
 {
 	if (Global_2883694)
 	{
@@ -499,7 +499,7 @@ BOOL func_7() // Position - 0x41F
 	return 0;
 }
 
-int func_8() // Position - 0x477
+int func_8() // Position - 0x477 (1143)
 {
 	if (func_27())
 	{
@@ -518,10 +518,10 @@ int func_8() // Position - 0x477
 	else if (Global_2883693)
 		if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(2006115718) > 0)
 			return 0;
-	else if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(-131607125) > 0)
+	else if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("mission_stat_watcher")) > 0)
 		return 0;
 
-	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(-47565502) > 0)
+	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("creator")) > 0)
 		return 1;
 
 	if (_IS_MISSION_REPEAT_ACTIVE(false))
@@ -562,15 +562,15 @@ int func_8() // Position - 0x477
 	return -1;
 }
 
-BOOL func_9() // Position - 0x5D9
+BOOL func_9() // Position - 0x5D9 (1497)
 {
-	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(-1424752554) > 0)
+	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("player_timetable_scene")) > 0)
 		return true;
 
 	return false;
 }
 
-BOOL func_10() // Position - 0x5F3
+BOOL func_10() // Position - 0x5F3 (1523)
 {
 	int i;
 
@@ -586,12 +586,12 @@ BOOL func_10() // Position - 0x5F3
 	return false;
 }
 
-BOOL func_11(int iParam0) // Position - 0x623
+BOOL func_11(int iParam0) // Position - 0x623 (1571)
 {
 	return func_12(iParam0, 20, true);
 }
 
-BOOL func_12(int iParam0, int iParam1, BOOL bParam2) // Position - 0x634
+BOOL func_12(int iParam0, int iParam1, BOOL bParam2) // Position - 0x634 (1588)
 {
 	if (iParam0 == -1)
 		return false;
@@ -607,7 +607,7 @@ BOOL func_12(int iParam0, int iParam1, BOOL bParam2) // Position - 0x634
 	return false;
 }
 
-int func_13(int iParam0, int iParam1) // Position - 0x694
+int func_13(int iParam0, int iParam1) // Position - 0x694 (1684)
 {
 	Hash statHash;
 	int outValue;
@@ -623,12 +623,12 @@ int func_13(int iParam0, int iParam1) // Position - 0x694
 	return 0;
 }
 
-Hash func_14(int iParam0, int iParam1) // Position - 0x6C3
+Hash func_14(int iParam0, int iParam1) // Position - 0x6C3 (1731)
 {
 	return STATS::_GET_STAT_HASH_FOR_CHARACTER_STAT(0, iParam0, func_15(iParam1));
 }
 
-int func_15(int iParam0) // Position - 0x6D8
+int func_15(int iParam0) // Position - 0x6D8 (1752)
 {
 	int num;
 	int num2;
@@ -654,12 +654,12 @@ int func_15(int iParam0) // Position - 0x6D8
 	return num;
 }
 
-int func_16() // Position - 0x70C
+int func_16() // Position - 0x70C (1804)
 {
 	return Global_1574926;
 }
 
-int func_17(int iParam0) // Position - 0x718
+int func_17(int iParam0) // Position - 0x718 (1816)
 {
 	switch (iParam0)
 	{
@@ -775,7 +775,7 @@ int func_17(int iParam0) // Position - 0x718
 			return 865;
 	
 		case 37:
-			return &func_2;
+			return 866;
 	
 		case 38:
 			return 867;
@@ -856,32 +856,32 @@ int func_17(int iParam0) // Position - 0x718
 	return 15468;
 }
 
-int func_18() // Position - 0xACF
+int func_18() // Position - 0xACF (2767)
 {
 	return Global_33087;
 }
 
-BOOL func_19() // Position - 0xADA
+BOOL func_19() // Position - 0xADA (2778)
 {
 	return Global_101740.f_399 > 0;
 }
 
-BOOL func_20() // Position - 0xAEB
+BOOL func_20() // Position - 0xAEB (2795)
 {
 	return Global_101740.f_400 > 0;
 }
 
-BOOL func_21() // Position - 0xAFC
+BOOL func_21() // Position - 0xAFC (2812)
 {
 	return IS_BIT_SET(Global_79788, 9);
 }
 
-BOOL func_22() // Position - 0xB0B
+BOOL func_22() // Position - 0xB0B (2827)
 {
 	return IS_BIT_SET(Global_79788, 8);
 }
 
-BOOL func_23() // Position - 0xB1A
+BOOL func_23() // Position - 0xB1A (2842)
 {
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false) && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		if (ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), "misshair_shop@barbers", "player_intro", 3) || ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), "misshair_shop@barbers", "player_base", 3) || ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), "misshair_shop@barbers", "player_enterchair", 3) || ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), "misshair_shop@barbers", "player_exitchair", 3) || ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), "misshair_shop@barbers", "player_idle_a", 3) || ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), "misshair_shop@barbers", "player_idle_b", 3) || ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), "misshair_shop@barbers", "player_idle_c", 3) || ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), "misshair_shop@barbers", "player_idle_d", 3) || ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), "misshair_shop@hair_dressers", "player_intro", 3) || ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), "misshair_shop@hair_dressers", "player_base", 3) || ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), "misshair_shop@hair_dressers", "player_enterchair", 3) || ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), "misshair_shop@hair_dressers", "player_exitchair", 3) || ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), "misshair_shop@hair_dressers", "player_idle_a", 3) || ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), "misshair_shop@hair_dressers", "player_idle_b", 3) || ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), "misshair_shop@hair_dressers", "player_idle_c", 3) || ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), "misshair_shop@hair_dressers", "player_idle_d", 3))
@@ -890,25 +890,25 @@ BOOL func_23() // Position - 0xB1A
 	return false;
 }
 
-BOOL func_24(int iParam0, int iParam1) // Position - 0xC8F
+BOOL func_24(int iParam0, int iParam1) // Position - 0xC8F (3215)
 {
 	return iParam0 && iParam1 != false;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0xC9E
+BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0xC9E (3230)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(-448212099) > 0)
+	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79788, 0);
 }
 
-BOOL func_26(int iParam0) // Position - 0xCC6
+BOOL func_26(int iParam0) // Position - 0xCC6 (3270)
 {
 	return Global_44181 == iParam0;
 }
 
-BOOL func_27() // Position - 0xCD4
+BOOL func_27() // Position - 0xCD4 (3284)
 {
 	if (Global_44181 == 15)
 		return false;
@@ -916,13 +916,13 @@ BOOL func_27() // Position - 0xCD4
 	return true;
 }
 
-void func_28(int iParam0) // Position - 0xCE9
+void func_28(int iParam0) // Position - 0xCE9 (3305)
 {
 	Global_79806 = iParam0;
 	return;
 }
 
-void func_29(int iParam0, BOOL bParam1) // Position - 0xCF7
+void func_29(int iParam0, BOOL bParam1) // Position - 0xCF7 (3319)
 {
 	if (bParam1 == true)
 		func_30(false, 1);
@@ -934,7 +934,7 @@ void func_29(int iParam0, BOOL bParam1) // Position - 0xCF7
 	return;
 }
 
-void func_30(BOOL bParam0, int iParam1) // Position - 0xD26
+void func_30(BOOL bParam0, int iParam1) // Position - 0xD26 (3366)
 {
 	char* str;
 	char* str2;
@@ -955,27 +955,27 @@ void func_30(BOOL bParam0, int iParam1) // Position - 0xD26
 			switch (num)
 			{
 				case 0:
-					str = "PM_RPB_SM_1" /*Replay is unavailable while on a Mission. Once you have passed the current Mission, you will be able to try it again and aim to reach the Gold standard.~n~~n~If you are a Social Club member, Mission stats are recorded on the leaderboards on the Social Club website where you can see how you stack up against friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/socialclub~s~ to view leaderboards and in-depth career stats.*/;
+					str = "PM_RPB_SM_1" /*Replay is unavailable while on a Mission. Once you have passed the current Mission, you will be able to try it again and aim to reach the Gold standard.~n~~n~If you have a Rockstar Games account, Mission stats are recorded on the leaderboards on rockstargames.com where you can see how you stack up against friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com~s~ to view leaderboards and in-depth career stats.*/;
 					break;
 			
 				case 2:
-					str = "PM_RPB_SM_2" /*Replay is unavailable while viewing a cutscene.~n~~n~If you are a Social Club member, Mission stats are recorded on the leaderboards on the Social Club website where you can see how you stack up against friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/socialclub~s~ to view leaderboards and in-depth career stats.*/;
+					str = "PM_RPB_SM_2" /*Replay is unavailable while viewing a cutscene.~n~~n~If you have a Rockstar Games account, Mission stats are recorded on the leaderboards on rockstargames.com where you can see how you stack up against friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com~s~ to view leaderboards and in-depth career stats.*/;
 					break;
 			
 				case 3:
-					str = "PM_RPB_SM_3" /*Replay is unavailable while browsing in a shop.~n~~n~If you are a Social Club member, Mission stats are recorded on the leaderboards on the Social Club website where you can see how you stack up against friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/socialclub~s~ to view leaderboards and in-depth career stats.*/;
+					str = "PM_RPB_SM_3" /*Replay is unavailable while browsing in a shop.~n~~n~If you have a Rockstar Games account, Mission stats are recorded on the leaderboards on rockstargames.com where you can see how you stack up against friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com~s~ to view leaderboards and in-depth career stats.*/;
 					break;
 			
 				case 1:
-					str = "PM_RPB_SM_4" /*Replay is unavailable while the Creator is running.~n~~n~If you are a Social Club member, Mission stats are recorded on the leaderboards on the Social Club website where you can see how you stack up against friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/socialclub~s~ to view leaderboards and in-depth career stats.*/;
+					str = "PM_RPB_SM_4" /*Replay is unavailable while the Creator is running.~n~~n~If you have a Rockstar Games account, Mission stats are recorded on the leaderboards on rockstargames.com where you can see how you stack up against friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com~s~ to view leaderboards and in-depth career stats.*/;
 					break;
 			
 				case 4:
-					str = "PM_RPB_SM_5" /*Replay is unavailable from this location.~n~~n~If you are a Social Club member, Mission stats are recorded on the leaderboards on the Social Club website where you can see how you stack up against friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/socialclub~s~ to view leaderboards and in-depth career stats.*/;
+					str = "PM_RPB_SM_5" /*Replay is unavailable from this location.~n~~n~If you have a Rockstar Games account, Mission stats are recorded on the leaderboards on rockstargames.com where you can see how you stack up against friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com~s~ to view leaderboards and in-depth career stats.*/;
 					break;
 			
 				case 5:
-					str = "PM_RPB_SM_6" /*Replay is unavailable while Director Mode is running. Once you have exited Director Mode, you will be able to replay missions and aim to reach the Gold standard.~n~~n~If you are a Social Club member, Mission stats are recorded on the leaderboards on the Social Club website where you can see how you stack up against friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/socialclub~s~ to view leaderboards and in-depth career stats.*/;
+					str = "PM_RPB_SM_6" /*Replay is unavailable while Director Mode is running. Once you have exited Director Mode, you will be able to replay missions and aim to reach the Gold standard.~n~~n~If you have a Rockstar Games account, Mission stats are recorded on the leaderboards on rockstargames.com where you can see how you stack up against friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com~s~ to view leaderboards and in-depth career stats.*/;
 					break;
 			
 				default:
@@ -987,27 +987,27 @@ void func_30(BOOL bParam0, int iParam1) // Position - 0xD26
 			switch (num)
 			{
 				case 0:
-					str = "PM_RPB_RC_1" /*Replay is unavailable while on a Mission. Once you have passed the current Mission, you will be able to try it again and aim to reach the Gold standard.~n~~n~If you are a Social Club member, you can see which Strangers and Freaks you are yet to meet and see how you stack up against your friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/socialclub~s~ for more information and to view in-depth career stats.*/;
+					str = "PM_RPB_RC_1" /*Replay is unavailable while on a Mission. Once you have passed the current Mission, you will be able to try it again and aim to reach the Gold standard.~n~~n~If you have a Rockstar Games account, you can see which Strangers and Freaks you are yet to meet and see how you stack up against your friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com~s~ for more information and to view in-depth career stats.*/;
 					break;
 			
 				case 2:
-					str = "PM_RPB_RC_2" /*Replay is unavailable while viewing a cutscene.~n~~n~If you are a Social Club member, you can see which Strangers and Freaks you are yet to meet and see how you stack up against your friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/socialclub~s~ for more information and to view in-depth career stats.*/;
+					str = "PM_RPB_RC_2" /*Replay is unavailable while viewing a cutscene.~n~~n~If you have a Rockstar Games account, you can see which Strangers and Freaks you are yet to meet and see how you stack up against your friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com~s~ for more information and to view in-depth career stats.*/;
 					break;
 			
 				case 3:
-					str = "PM_RPB_RC_3" /*Replay is unavailable while browsing in a shop.~n~~n~If you are a Social Club member, you can see which Strangers and Freaks you are yet to meet and see how you stack up against your friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/socialclub~s~ for more information and to view in-depth career stats.*/;
+					str = "PM_RPB_RC_3" /*Replay is unavailable while browsing in a shop.~n~~n~If you have a Rockstar Games account, you can see which Strangers and Freaks you are yet to meet and see how you stack up against your friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com~s~ for more information and to view in-depth career stats.*/;
 					break;
 			
 				case 1:
-					str = "PM_RPB_RC_4" /*Replay is unavailable while the Creator is running.~n~~n~If you are a Social Club member, you can see which Strangers and Freaks you are yet to meet and see how you stack up against your friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/socialclub~s~ for more information and to view in-depth career stats.*/;
+					str = "PM_RPB_RC_4" /*Replay is unavailable while the Creator is running.~n~~n~If you have a Rockstar Games account, you can see which Strangers and Freaks you are yet to meet and see how you stack up against your friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com~s~ for more information and to view in-depth career stats.*/;
 					break;
 			
 				case 4:
-					str = "PM_RPB_RC_5" /*Replay is unavailable from this location.~n~~n~If you are a Social Club member, you can see which Strangers and Freaks you are yet to meet and see how you stack up against your friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/socialclub~s~ for more information and to view in-depth career stats.*/;
+					str = "PM_RPB_RC_5" /*Replay is unavailable from this location.~n~~n~If you have a Rockstar Games account, you can see which Strangers and Freaks you are yet to meet and see how you stack up against your friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com~s~ for more information and to view in-depth career stats.*/;
 					break;
 			
 				case 5:
-					str = "PM_RPB_RC_6" /*Replay is unavailable while Director Mode is running. Once you have exited Director Mode, you will be able to replay missions and aim to reach the Gold standard.~n~~n~If you are a Social Club member, you can see which Strangers and Freaks you are yet to meet and see how you stack up against your friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/socialclub~s~ for more information and to view in-depth career stats.*/;
+					str = "PM_RPB_RC_6" /*Replay is unavailable while Director Mode is running. Once you have exited Director Mode, you will be able to replay missions and aim to reach the Gold standard.~n~~n~If you have a Rockstar Games account, you can see which Strangers and Freaks you are yet to meet and see how you stack up against your friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com~s~ for more information and to view in-depth career stats.*/;
 					break;
 			
 				default:
@@ -1022,12 +1022,12 @@ void func_30(BOOL bParam0, int iParam1) // Position - 0xD26
 		if (iParam1 == 1)
 		{
 			str2 = "PM_RP_HELPT" /*Replay*/;
-			str = "PM_RP_HELP" /*Replay Missions you've passed and try to reach the Gold standard for each. Aim to reach Gold in a single attempt, or work towards it one objective at a time.~n~~n~If you are a Social Club member, Mission stats are recorded on the leaderboards on the Social Club website where you can see how you stack up against friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/socialclub~s~ to view leaderboards and in-depth career stats.*/;
+			str = "PM_RP_HELP" /*Replay Missions you've passed and try to reach the Gold standard for each. Aim to reach Gold in a single attempt, or work towards it one objective at a time.~n~~n~If you have a Rockstar Games account, Mission stats are recorded on the leaderboards on rockstargames.com where you can see how you stack up against friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com~s~ to view leaderboards and in-depth career stats.*/;
 		}
 		else
 		{
 			str2 = "PM_RP_HELPT3" /*Replay*/;
-			str = "PM_RP_HELP3" /*Select an encounter with Strangers and Freaks to replay.~n~~n~If you are a Social Club member, you can see which Strangers and Freaks you are yet to meet and see how you stack up against your friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/socialclub~s~ for more information and to view in-depth career stats.*/;
+			str = "PM_RP_HELP3" /*Select an encounter with Strangers and Freaks to replay.~n~~n~If you have a Rockstar Games account, you can see which Strangers and Freaks you are yet to meet and see how you stack up against your friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com~s~ for more information and to view in-depth career stats.*/;
 		}
 	}
 	else
@@ -1037,12 +1037,12 @@ void func_30(BOOL bParam0, int iParam1) // Position - 0xD26
 		if (iParam1 == 1)
 		{
 			str2 = "PM_RP_HELPT1" /*Replay*/;
-			str = "PM_RP_HELP1" /*There are currently no Missions available to replay. Once you have played some Missions you will be able to try them again and aim to reach the Gold standard in each.~n~~n~If you are a Social Club member, Mission stats are recorded on the leaderboards on the Social Club website where you can see how you stack up against friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/socialclub~s~ to view leaderboards and in-depth career stats.*/;
+			str = "PM_RP_HELP1" /*There are currently no Missions available to replay. Once you have played some Missions you will be able to try them again and aim to reach the Gold standard in each.~n~~n~If you have a Rockstar Games account, Mission stats are recorded on the leaderboards on rockstargames.com where you can see how you stack up against friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com~s~ to view leaderboards and in-depth career stats.*/;
 		}
 		else
 		{
 			str2 = "PM_RP_HELPT3" /*Replay*/;
-			str = "PM_RP_HELP4" /*There are currently no encounters with Strangers and Freaks available to replay.~n~~n~If you are a Social Club member, you can see which Strangers and Freaks you are yet to meet and see how you stack up against your friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/socialclub~s~ for more information and to view in-depth career stats.*/;
+			str = "PM_RP_HELP4" /*There are currently no encounters with Strangers and Freaks available to replay.~n~~n~If you have a Rockstar Games account, you can see which Strangers and Freaks you are yet to meet and see how you stack up against your friends and Crewmates. Visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com~s~ for more information and to view in-depth career stats.*/;
 		}
 	}
 
@@ -1057,25 +1057,25 @@ void func_30(BOOL bParam0, int iParam1) // Position - 0xD26
 	return;
 }
 
-void func_31(char* sParam0) // Position - 0xEA7
+void func_31(char* sParam0) // Position - 0xEA7 (3751)
 {
 	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(sParam0);
 	GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 	return;
 }
 
-void func_32(int iParam0) // Position - 0xEB9
+void func_32(int iParam0) // Position - 0xEB9 (3769)
 {
 	if (iParam0 == 1)
-		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(337714004);
+		HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(joaat("HIDE_ACCEPTBUTTON"));
 	else
-		HUD::PAUSE_MENU_ACTIVATE_CONTEXT(337714004);
+		HUD::PAUSE_MENU_ACTIVATE_CONTEXT(joaat("HIDE_ACCEPTBUTTON"));
 
 	HUD::PAUSE_MENU_REDRAW_INSTRUCTIONAL_BUTTONS(0);
 	return;
 }
 
-void func_33(int iParam0, int iParam1) // Position - 0xEE1
+void func_33(int iParam0, int iParam1) // Position - 0xEE1 (3809)
 {
 	if (func_8() == -1)
 	{
@@ -1097,7 +1097,7 @@ void func_33(int iParam0, int iParam1) // Position - 0xEE1
 	return;
 }
 
-void func_34(int iParam0, int iParam1) // Position - 0xF2F
+void func_34(int iParam0, int iParam1) // Position - 0xF2F (3887)
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("SET_COLUMN_SCROLL");
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
@@ -1108,7 +1108,7 @@ void func_34(int iParam0, int iParam1) // Position - 0xF2F
 	return;
 }
 
-int func_35(int iParam0) // Position - 0xF5A
+int func_35(int iParam0) // Position - 0xF5A (3930)
 {
 	int i;
 
@@ -1121,7 +1121,7 @@ int func_35(int iParam0) // Position - 0xF5A
 	return -1;
 }
 
-void func_36() // Position - 0xF88
+void func_36() // Position - 0xF88 (3976)
 {
 	switch (Global_79789)
 	{
@@ -1140,7 +1140,7 @@ void func_36() // Position - 0xF88
 	return;
 }
 
-int func_37(var uParam0, int iParam1, int iParam2, int iParam3) // Position - 0xFC8
+int func_37(var uParam0, int iParam1, int iParam2, int iParam3) // Position - 0xFC8 (4040)
 {
 	int num;
 
@@ -1166,7 +1166,7 @@ int func_37(var uParam0, int iParam1, int iParam2, int iParam3) // Position - 0x
 	return num;
 }
 
-void func_38(var uParam0, var uParam1, int iParam2, int iParam3, int iParam4) // Position - 0x1020
+void func_38(var uParam0, var uParam1, int iParam2, int iParam3, int iParam4) // Position - 0x1020 (4128)
 {
 	int num;
 	int i;
@@ -1229,7 +1229,7 @@ void func_38(var uParam0, var uParam1, int iParam2, int iParam3, int iParam4) //
 	return;
 }
 
-int func_39(int iParam0, int iParam1, int iParam2) // Position - 0x110E
+int func_39(int iParam0, int iParam1, int iParam2) // Position - 0x110E (4366)
 {
 	int i;
 	int num;
@@ -1265,7 +1265,7 @@ int func_39(int iParam0, int iParam1, int iParam2) // Position - 0x110E
 	return num2;
 }
 
-BOOL func_40(int iParam0, int iParam1) // Position - 0x118A
+BOOL func_40(int iParam0, int iParam1) // Position - 0x118A (4490)
 {
 	switch (iParam1)
 	{
@@ -1282,7 +1282,7 @@ BOOL func_40(int iParam0, int iParam1) // Position - 0x118A
 	return false;
 }
 
-BOOL func_41(int iParam0) // Position - 0x11C8
+BOOL func_41(int iParam0) // Position - 0x11C8 (4552)
 {
 	switch (iParam0)
 	{
@@ -1482,7 +1482,7 @@ BOOL func_41(int iParam0) // Position - 0x11C8
 	return 0;
 }
 
-int func_42(int iParam0, int iParam1) // Position - 0x150E
+int func_42(int iParam0, int iParam1) // Position - 0x150E (5390)
 {
 	switch (iParam1)
 	{
@@ -1499,7 +1499,7 @@ int func_42(int iParam0, int iParam1) // Position - 0x150E
 	return -1;
 }
 
-BOOL func_43(int iParam0, int iParam1) // Position - 0x1556
+BOOL func_43(int iParam0, int iParam1) // Position - 0x1556 (5462)
 {
 	switch (iParam1)
 	{
@@ -1520,7 +1520,7 @@ BOOL func_43(int iParam0, int iParam1) // Position - 0x1556
 	return false;
 }
 
-BOOL func_44() // Position - 0x15AF
+BOOL func_44() // Position - 0x15AF (5551)
 {
 	if (Global_114135.f_9089.f_330[24 /*6*/] == 1 || Global_114135.f_9089.f_330[25 /*6*/] == 1 || Global_114135.f_9089.f_330[26 /*6*/] == 1 || Global_114135.f_9089.f_330[27 /*6*/] == 1)
 		return 1;
@@ -1528,7 +1528,7 @@ BOOL func_44() // Position - 0x15AF
 	return 0;
 }
 
-BOOL func_45(int iParam0) // Position - 0x1611
+BOOL func_45(int iParam0) // Position - 0x1611 (5649)
 {
 	int num;
 
@@ -1540,7 +1540,7 @@ BOOL func_45(int iParam0) // Position - 0x1611
 	return false;
 }
 
-int func_46(int iParam0) // Position - 0x164B
+int func_46(int iParam0) // Position - 0x164B (5707)
 {
 	switch (iParam0)
 	{
@@ -1557,7 +1557,7 @@ int func_46(int iParam0) // Position - 0x164B
 	return -1;
 }
 
-void func_47(int iParam0) // Position - 0x167A
+void func_47(int iParam0) // Position - 0x167A (5754)
 {
 	int i;
 	int num;
@@ -1630,7 +1630,7 @@ void func_47(int iParam0) // Position - 0x167A
 	return;
 }
 
-void func_48(int iParam0) // Position - 0x17BE
+void func_48(int iParam0) // Position - 0x17BE (6078)
 {
 	if (GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("DISPLAY_DATA_SLOT"))
 	{
@@ -1641,7 +1641,7 @@ void func_48(int iParam0) // Position - 0x17BE
 	return;
 }
 
-float func_49(int iParam0, int iParam1, BOOL bParam2, int iParam3, int iParam4) // Position - 0x17DB
+float func_49(int iParam0, int iParam1, BOOL bParam2, int iParam3, int iParam4) // Position - 0x17DB (6107)
 {
 	float value;
 	int num;
@@ -1698,7 +1698,7 @@ float func_49(int iParam0, int iParam1, BOOL bParam2, int iParam3, int iParam4) 
 	return value;
 }
 
-int func_50(int iParam0) // Position - 0x18AD
+int func_50(int iParam0) // Position - 0x18AD (6317)
 {
 	int num;
 
@@ -1722,7 +1722,7 @@ int func_50(int iParam0) // Position - 0x18AD
 	return num;
 }
 
-int func_51(float fParam0) // Position - 0x18E9
+int func_51(float fParam0) // Position - 0x18E9 (6377)
 {
 	if (fParam0 == 0f)
 		return 0;
@@ -1735,7 +1735,7 @@ int func_51(float fParam0) // Position - 0x18E9
 	return 1;
 }
 
-float func_52(int iParam0, int iParam1, BOOL bParam2) // Position - 0x191E
+float func_52(int iParam0, int iParam1, BOOL bParam2) // Position - 0x191E (6430)
 {
 	float num;
 	float value;
@@ -1756,7 +1756,7 @@ float func_52(int iParam0, int iParam1, BOOL bParam2) // Position - 0x191E
 	return value;
 }
 
-void func_53(int iParam0, var uParam1) // Position - 0x197D
+void func_53(int iParam0, var uParam1) // Position - 0x197D (6525)
 {
 	int num;
 
@@ -1806,7 +1806,7 @@ void func_53(int iParam0, var uParam1) // Position - 0x197D
 	return;
 }
 
-BOOL func_54(int iParam0, int iParam1, int iParam2) // Position - 0x1A3D
+BOOL func_54(int iParam0, int iParam1, int iParam2) // Position - 0x1A3D (6717)
 {
 	int num;
 	int num2;
@@ -1850,7 +1850,7 @@ BOOL func_54(int iParam0, int iParam1, int iParam2) // Position - 0x1A3D
 	}
 
 	num3 = func_73(iParam0);
-	str = AUDIO_SPEECH_GET_PARAM_STRING_FROM_ENUM_0(iParam0);
+	str = func_63(iParam0);
 
 	if (num3 == -1)
 	{
@@ -1925,7 +1925,7 @@ BOOL func_54(int iParam0, int iParam1, int iParam2) // Position - 0x1A3D
 	return true;
 }
 
-void func_55(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4, int iParam5) // Position - 0x1CA3
+void func_55(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4, int iParam5) // Position - 0x1CA3 (7331)
 {
 	if (iParam5 != 0)
 	{
@@ -1946,7 +1946,7 @@ void func_55(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4, 
 	{
 		GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING("PM_RP_STATD" /*~a~~n~~a~*/);
 		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(sParam3);
-		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(AUDIO_SPEECH_GET_PARAM_STRING_FROM_ENUM(iParam4));
+		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(func_56(iParam4));
 		GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 	}
 	else
@@ -1958,7 +1958,7 @@ void func_55(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4, 
 	return;
 }
 
-char* AUDIO_SPEECH_GET_PARAM_STRING_FROM_ENUM(int iParam0) // Position - 0x1D13
+char* func_56(int iParam0) // Position - 0x1D13 (7443)
 {
 	switch (iParam0)
 	{
@@ -2490,7 +2490,7 @@ char* AUDIO_SPEECH_GET_PARAM_STRING_FROM_ENUM(int iParam0) // Position - 0x1D13
 		case 800:
 			return "MISHSTD159";
 	
-		case &func_1:
+		case 801:
 			return "MISHSTD160";
 	
 		case 802:
@@ -3094,7 +3094,7 @@ char* AUDIO_SPEECH_GET_PARAM_STRING_FROM_ENUM(int iParam0) // Position - 0x1D13
 	return "MISSING_MISSION_STAT_STRING";
 }
 
-void func_57(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4, int iParam5) // Position - 0x2EEE
+void func_57(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4, int iParam5) // Position - 0x2EEE (12014)
 {
 	if (iParam5 != 0)
 	{
@@ -3115,7 +3115,7 @@ void func_57(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4, 
 	{
 		GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING("PM_RP_STATD" /*~a~~n~~a~*/);
 		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(sParam3);
-		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(AUDIO_SPEECH_GET_PARAM_STRING_FROM_ENUM(iParam4));
+		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(func_56(iParam4));
 		GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 	}
 	else
@@ -3127,7 +3127,7 @@ void func_57(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4, 
 	return;
 }
 
-void func_58(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4, int iParam5, int iParam6) // Position - 0x2F5E
+void func_58(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4, int iParam5, int iParam6) // Position - 0x2F5E (12126)
 {
 	int value;
 
@@ -3156,7 +3156,7 @@ void func_58(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4, 
 	{
 		GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING("PM_RP_STATD" /*~a~~n~~a~*/);
 		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(sParam4);
-		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(AUDIO_SPEECH_GET_PARAM_STRING_FROM_ENUM(iParam5));
+		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(func_56(iParam5));
 		GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 	}
 	else
@@ -3168,7 +3168,7 @@ void func_58(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4, 
 	return;
 }
 
-void func_59(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4, int iParam5, int iParam6) // Position - 0x2FE3
+void func_59(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4, int iParam5, int iParam6) // Position - 0x2FE3 (12259)
 {
 	float value;
 
@@ -3193,7 +3193,7 @@ void func_59(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4, 
 	{
 		GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING("PM_RP_STATD" /*~a~~n~~a~*/);
 		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(sParam4);
-		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(AUDIO_SPEECH_GET_PARAM_STRING_FROM_ENUM(iParam5));
+		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(func_56(iParam5));
 		GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 	}
 	else
@@ -3205,7 +3205,7 @@ void func_59(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4, 
 	return;
 }
 
-void func_60(int iParam0, int iParam1, char* sParam2, int iParam3, int iParam4) // Position - 0x306C
+void func_60(int iParam0, int iParam1, char* sParam2, int iParam3, int iParam4) // Position - 0x306C (12396)
 {
 	if (iParam4 != 0)
 	{
@@ -3224,7 +3224,7 @@ void func_60(int iParam0, int iParam1, char* sParam2, int iParam3, int iParam4) 
 	{
 		GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING("PM_RP_STATD" /*~a~~n~~a~*/);
 		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(sParam2);
-		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(AUDIO_SPEECH_GET_PARAM_STRING_FROM_ENUM(iParam3));
+		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(func_56(iParam3));
 		GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 	}
 	else
@@ -3236,7 +3236,7 @@ void func_60(int iParam0, int iParam1, char* sParam2, int iParam3, int iParam4) 
 	return;
 }
 
-void func_61(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4, int iParam5) // Position - 0x30D1
+void func_61(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4, int iParam5) // Position - 0x30D1 (12497)
 {
 	int value;
 	int value2;
@@ -3264,7 +3264,7 @@ void func_61(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4, 
 	{
 		GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING("PM_RP_STATD" /*~a~~n~~a~*/);
 		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(sParam3);
-		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(AUDIO_SPEECH_GET_PARAM_STRING_FROM_ENUM(iParam4));
+		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(func_56(iParam4));
 		GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 	}
 	else
@@ -3276,7 +3276,7 @@ void func_61(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4, 
 	return;
 }
 
-void func_62(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4, int iParam5) // Position - 0x3170
+void func_62(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4, int iParam5) // Position - 0x3170 (12656)
 {
 	if (iParam5 != 0)
 	{
@@ -3297,7 +3297,7 @@ void func_62(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4, 
 	{
 		GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING("PM_RP_STATD" /*~a~~n~~a~*/);
 		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(sParam3);
-		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(AUDIO_SPEECH_GET_PARAM_STRING_FROM_ENUM(iParam4));
+		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(func_56(iParam4));
 		GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 	}
 	else
@@ -3309,7 +3309,7 @@ void func_62(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4, 
 	return;
 }
 
-char* AUDIO_SPEECH_GET_PARAM_STRING_FROM_ENUM_0(int iParam0) // Position - 0x31E0
+char* func_63(int iParam0) // Position - 0x31E0 (12768)
 {
 	switch (iParam0)
 	{
@@ -3823,7 +3823,7 @@ char* AUDIO_SPEECH_GET_PARAM_STRING_FROM_ENUM_0(int iParam0) // Position - 0x31E
 		case 800:
 			return "MISHSTA_111";
 	
-		case &func_1:
+		case 801:
 			return "MISHSTA_112";
 	
 		case 802:
@@ -4409,7 +4409,7 @@ char* AUDIO_SPEECH_GET_PARAM_STRING_FROM_ENUM_0(int iParam0) // Position - 0x31E
 	return "MISSING_MISSION_STAT_STRING";
 }
 
-int func_64(int iParam0) // Position - 0x4392
+int func_64(int iParam0) // Position - 0x4392 (17298)
 {
 	if (func_65(iParam0, func_72(Global_64533[iParam0 /*13*/].f_4)))
 		return 1;
@@ -4417,7 +4417,7 @@ int func_64(int iParam0) // Position - 0x4392
 	return 0;
 }
 
-BOOL func_65(int iParam0, int iParam1) // Position - 0x43B5
+BOOL func_65(int iParam0, int iParam1) // Position - 0x43B5 (17333)
 {
 	if (iParam1 < 0)
 		return false;
@@ -4449,13 +4449,13 @@ BOOL func_65(int iParam0, int iParam1) // Position - 0x43B5
 	return false;
 }
 
-eCharacter _GET_CURRENT_PLAYER_CHARACTER() // Position - 0x447F
+eCharacter _GET_CURRENT_PLAYER_CHARACTER() // Position - 0x447F (17535)
 {
 	func_67();
 	return Global_114135.f_2367.f_539.f_4321;
 }
 
-void func_67() // Position - 0x4498
+void func_67() // Position - 0x4498 (17560)
 {
 	eCharacter character;
 
@@ -4488,12 +4488,12 @@ void func_67() // Position - 0x4498
 	return;
 }
 
-BOOL func_68(eCharacter echParam0) // Position - 0x4595
+BOOL func_68(eCharacter echParam0) // Position - 0x4595 (17813)
 {
 	return echParam0 < CHAR_MULTIPLAYER;
 }
 
-eCharacter _GET_PLAYER_CHARACTER_FROM_PED(Ped pedParam0) // Position - 0x45A1
+eCharacter _GET_PLAYER_CHARACTER_FROM_PED(Ped pedParam0) // Position - 0x45A1 (17825)
 {
 	eCharacter i;
 	Hash entityModel;
@@ -4512,7 +4512,7 @@ eCharacter _GET_PLAYER_CHARACTER_FROM_PED(Ped pedParam0) // Position - 0x45A1
 	return _CHAR_NULL;
 }
 
-Hash _GET_CHARACTER_MODEL(eCharacter character) // Position - 0x45DE
+Hash _GET_CHARACTER_MODEL(eCharacter character) // Position - 0x45DE (17886)
 {
 	if (func_68(character))
 		return func_71(character);
@@ -4522,12 +4522,12 @@ Hash _GET_CHARACTER_MODEL(eCharacter character) // Position - 0x45DE
 	return 0;
 }
 
-Hash func_71(eCharacter echParam0) // Position - 0x4603
+Hash func_71(eCharacter echParam0) // Position - 0x4603 (17923)
 {
 	return Global_2201[echParam0 /*29*/];
 }
 
-int func_72(Hash hParam0) // Position - 0x4612
+int func_72(Hash hParam0) // Position - 0x4612 (17938)
 {
 	int outValue;
 
@@ -4540,7 +4540,7 @@ int func_72(Hash hParam0) // Position - 0x4612
 	return -1;
 }
 
-int func_73(int iParam0) // Position - 0x463B
+int func_73(int iParam0) // Position - 0x463B (17979)
 {
 	int num;
 
@@ -4552,7 +4552,7 @@ int func_73(int iParam0) // Position - 0x463B
 	return 0;
 }
 
-int func_74(int iParam0, int iParam1, int iParam2) // Position - 0x4660
+int func_74(int iParam0, int iParam1, int iParam2) // Position - 0x4660 (18016)
 {
 	switch (iParam1)
 	{
@@ -4569,7 +4569,7 @@ int func_74(int iParam0, int iParam1, int iParam2) // Position - 0x4660
 	return 914;
 }
 
-int func_75(int iParam0, int iParam1) // Position - 0x46A3
+int func_75(int iParam0, int iParam1) // Position - 0x46A3 (18083)
 {
 	switch (iParam0)
 	{
@@ -5033,7 +5033,7 @@ int func_75(int iParam0, int iParam1) // Position - 0x46A3
 					return 800;
 			
 				case 1:
-					return &func_1;
+					return 801;
 			
 				default:
 				
@@ -5216,7 +5216,7 @@ int func_75(int iParam0, int iParam1) // Position - 0x46A3
 	return -1;
 }
 
-int func_76(int iParam0, int iParam1) // Position - 0x4D87
+int func_76(int iParam0, int iParam1) // Position - 0x4D87 (19847)
 {
 	switch (iParam1)
 	{
@@ -5233,7 +5233,7 @@ int func_76(int iParam0, int iParam1) // Position - 0x4D87
 	return 0;
 }
 
-int func_77(int iParam0) // Position - 0x4DC2
+int func_77(int iParam0) // Position - 0x4DC2 (19906)
 {
 	switch (iParam0)
 	{
@@ -5373,7 +5373,7 @@ int func_77(int iParam0) // Position - 0x4DC2
 	return 0;
 }
 
-void func_78(int iParam0) // Position - 0x4F73
+void func_78(int iParam0) // Position - 0x4F73 (20339)
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("SET_DATA_SLOT_EMPTY");
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iParam0);
@@ -5385,7 +5385,7 @@ void func_78(int iParam0) // Position - 0x4F73
 	return;
 }
 
-struct<2> func_79(int iParam0, int iParam1) // Position - 0x4F98
+struct<2> func_79(int iParam0, int iParam1) // Position - 0x4F98 (20376)
 {
 	var unk;
 
@@ -5420,7 +5420,7 @@ struct<2> func_79(int iParam0, int iParam1) // Position - 0x4F98
 	return unk;
 }
 
-struct<2> func_80(int iParam0) // Position - 0x502E
+struct<2> func_80(int iParam0) // Position - 0x502E (20526)
 {
 	var unk;
 	var unk3;
@@ -5440,7 +5440,7 @@ struct<2> func_80(int iParam0) // Position - 0x502E
 	return unk;
 }
 
-struct<2> func_81(int iParam0) // Position - 0x5066
+struct<2> func_81(int iParam0) // Position - 0x5066 (20582)
 {
 	var unk;
 
@@ -5707,7 +5707,7 @@ struct<2> func_81(int iParam0) // Position - 0x5066
 	return unk;
 }
 
-void func_82() // Position - 0x54B3
+void func_82() // Position - 0x54B3 (21683)
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("SET_COLUMN_SCROLL");
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
@@ -5720,7 +5720,7 @@ void func_82() // Position - 0x54B3
 	return;
 }
 
-void func_83(int iParam0, int iParam1, int iParam2) // Position - 0x54E9
+void func_83(int iParam0, int iParam1, int iParam2) // Position - 0x54E9 (21737)
 {
 	int num;
 
@@ -5761,7 +5761,7 @@ void func_83(int iParam0, int iParam1, int iParam2) // Position - 0x54E9
 	return;
 }
 
-void func_84() // Position - 0x5583
+void func_84() // Position - 0x5583 (21891)
 {
 	int i;
 	int num;
@@ -5834,7 +5834,7 @@ void func_84() // Position - 0x5583
 	return;
 }
 
-void func_85(int iParam0, int iParam1, int iParam2, int iParam3, BOOL bParam4, char* sParam5, int iParam6) // Position - 0x56A1
+void func_85(int iParam0, int iParam1, int iParam2, int iParam3, BOOL bParam4, char* sParam5, int iParam6) // Position - 0x56A1 (22177)
 {
 	if (GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("SET_DATA_SLOT"))
 	{
@@ -5858,7 +5858,7 @@ void func_85(int iParam0, int iParam1, int iParam2, int iParam3, BOOL bParam4, c
 	return;
 }
 
-void func_86() // Position - 0x56F8
+void func_86() // Position - 0x56F8 (22264)
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("INIT_COLUMN_SCROLL");
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);

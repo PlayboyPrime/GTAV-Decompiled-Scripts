@@ -5,7 +5,7 @@
 	var uScriptParam_3 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	switch (iScriptParam_0)
 	{
@@ -18,7 +18,7 @@ void main() // Position - 0x0
 	
 		case 0:
 		case 1:
-			if (iScriptParam_0.f_1 == -1931845307)
+			if (iScriptParam_0.f_1 == joaat("PM_REPLAY"))
 			{
 				func_2(1, 0, -1705870862, 25, true, "PM_PANE_AUD" /*Audio*/, 0, 0);
 				func_2(1, 1, -1705870862, 50, true, "PM_PANE_DIS" /*Display*/, 0, 0);
@@ -31,7 +31,7 @@ void main() // Position - 0x0
 		case 2:
 			switch (iScriptParam_0.f_1)
 			{
-				case -1931845307:
+				case joaat("PM_REPLAY"):
 					break;
 			
 				case -1705871862:
@@ -52,7 +52,7 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1(int iParam0) // Position - 0xBA
+void func_1(int iParam0) // Position - 0xBA (186)
 {
 	if (GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("DISPLAY_DATA_SLOT"))
 	{
@@ -63,7 +63,7 @@ void func_1(int iParam0) // Position - 0xBA
 	return;
 }
 
-void func_2(int iParam0, int iParam1, int iParam2, int iParam3, BOOL bParam4, char* sParam5, int iParam6, int iParam7) // Position - 0xD6
+void func_2(int iParam0, int iParam1, int iParam2, int iParam3, BOOL bParam4, char* sParam5, int iParam6, int iParam7) // Position - 0xD6 (214)
 {
 	if (GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("SET_DATA_SLOT"))
 	{
@@ -90,7 +90,7 @@ void func_2(int iParam0, int iParam1, int iParam2, int iParam3, BOOL bParam4, ch
 	return;
 }
 
-void func_3(char* sParam0) // Position - 0x136
+void func_3(char* sParam0) // Position - 0x136 (310)
 {
 	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(sParam0);
 	GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();

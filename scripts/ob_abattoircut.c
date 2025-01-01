@@ -5,7 +5,7 @@
 	Object obScriptParam_0 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(2))
 		func_1();
@@ -19,7 +19,7 @@ void main() // Position - 0x0
 	
 		if (ENTITY::DOES_ENTITY_EXIST(obScriptParam_0))
 		{
-			if (BRAIN::IS_OBJECT_WITHIN_BRAIN_ACTIVATION_RANGE(obScriptParam_0) && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(-622120100) > 0)
+			if (BRAIN::IS_OBJECT_WITHIN_BRAIN_ACTIVATION_RANGE(obScriptParam_0) && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("michael2")) > 0)
 			{
 				switch (iLocal_2)
 				{
@@ -57,7 +57,7 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1() // Position - 0xAF
+void func_1() // Position - 0xAF (175)
 {
 	func_2("ob_abattoir Terminated >>>>>>>>>>>>>>>>>\\n");
 	STREAMING::REMOVE_ANIM_DICT("MISSMIC2");
@@ -65,13 +65,13 @@ void func_1() // Position - 0xAF
 	return;
 }
 
-void func_2(char* sParam0) // Position - 0xC8
+void func_2(char* sParam0) // Position - 0xC8 (200)
 {
 	func_3(sParam0);
 	return;
 }
 
-void func_3(char* sParam0) // Position - 0xD6
+void func_3(char* sParam0) // Position - 0xD6 (214)
 {
 	MISC::ARE_STRINGS_EQUAL(sParam0, sParam0);
 	return;

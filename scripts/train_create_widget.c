@@ -11,7 +11,7 @@
 	BOOL bLocal_9 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	uLocal_1 = { 613f, 6438f, 31f };
 	fLocal_5 = 5f;
@@ -31,15 +31,15 @@ void main() // Position - 0x0
 		CAM::SET_GAMEPLAY_CAM_RELATIVE_HEADING(0);
 	}
 
-	STREAMING::REQUEST_MODEL(1030400667);
-	STREAMING::REQUEST_MODEL(184361638);
-	STREAMING::REQUEST_MODEL(642617954);
-	STREAMING::REQUEST_MODEL(920453016);
-	STREAMING::REQUEST_MODEL(240201337);
-	STREAMING::REQUEST_MODEL(586013744);
-	STREAMING::REQUEST_MODEL(868868440);
+	STREAMING::REQUEST_MODEL(joaat("freight"));
+	STREAMING::REQUEST_MODEL(joaat("freightcar"));
+	STREAMING::REQUEST_MODEL(joaat("freightgrain"));
+	STREAMING::REQUEST_MODEL(joaat("freightcont1"));
+	STREAMING::REQUEST_MODEL(joaat("freightcont2"));
+	STREAMING::REQUEST_MODEL(joaat("tankercar"));
+	STREAMING::REQUEST_MODEL(joaat("metrotrain"));
 
-	while (!STREAMING::HAS_MODEL_LOADED(1030400667) || !STREAMING::HAS_MODEL_LOADED(184361638) || !STREAMING::HAS_MODEL_LOADED(642617954) || !STREAMING::HAS_MODEL_LOADED(920453016) || !STREAMING::HAS_MODEL_LOADED(240201337) || !STREAMING::HAS_MODEL_LOADED(586013744) || !STREAMING::HAS_MODEL_LOADED(868868440))
+	while (!STREAMING::HAS_MODEL_LOADED(joaat("freight")) || !STREAMING::HAS_MODEL_LOADED(joaat("freightcar")) || !STREAMING::HAS_MODEL_LOADED(joaat("freightgrain")) || !STREAMING::HAS_MODEL_LOADED(joaat("freightcont1")) || !STREAMING::HAS_MODEL_LOADED(joaat("freightcont2")) || !STREAMING::HAS_MODEL_LOADED(joaat("tankercar")) || !STREAMING::HAS_MODEL_LOADED(joaat("metrotrain")))
 	{
 		SYSTEM::WAIT(0);
 	}
@@ -79,7 +79,7 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1() // Position - 0x1A7
+void func_1() // Position - 0x1A7 (423)
 {
 	VEHICLE::SET_RANDOM_TRAINS(true);
 	SCRIPT::TERMINATE_THIS_THREAD();

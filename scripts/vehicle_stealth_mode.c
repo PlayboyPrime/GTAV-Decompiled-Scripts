@@ -55,7 +55,7 @@
 	var uLocal_53 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -100,7 +100,7 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1(int* piParam0) // Position - 0xA8
+void func_1(int* piParam0) // Position - 0xA8 (168)
 {
 	func_16();
 
@@ -117,19 +117,19 @@ void func_1(int* piParam0) // Position - 0xA8
 	return;
 }
 
-void func_2() // Position - 0xE7
+void func_2() // Position - 0xE7 (231)
 {
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;
 }
 
-void func_3() // Position - 0xF3
+void func_3() // Position - 0xF3 (243)
 {
 	MISC::CLEAR_BIT(&(Global_1845221[PLAYER::PLAYER_ID() /*889*/].f_871), 3);
 	return;
 }
 
-void func_4(int* piParam0) // Position - 0x10E
+void func_4(int* piParam0) // Position - 0x10E (270)
 {
 	func_7(false, true);
 	func_6(false, -1, true);
@@ -137,13 +137,13 @@ void func_4(int* piParam0) // Position - 0x10E
 	return;
 }
 
-void func_5(int* piParam0, int iParam1) // Position - 0x12C
+void func_5(int* piParam0, int iParam1) // Position - 0x12C (300)
 {
 	MISC::CLEAR_BIT(piParam0, iParam1);
 	return;
 }
 
-void func_6(BOOL bParam0, int iParam1, BOOL bParam2) // Position - 0x13C
+void func_6(BOOL bParam0, int iParam1, BOOL bParam2) // Position - 0x13C (316)
 {
 	if (!SCRIPT::IS_THREAD_ACTIVE(Global_2647037.f_1582) || Global_2647037.f_1582 == SCRIPT::GET_ID_OF_THIS_THREAD() || bParam2)
 	{
@@ -168,7 +168,7 @@ void func_6(BOOL bParam0, int iParam1, BOOL bParam2) // Position - 0x13C
 	return;
 }
 
-void func_7(BOOL bParam0, BOOL bParam1) // Position - 0x1AE
+void func_7(BOOL bParam0, BOOL bParam1) // Position - 0x1AE (430)
 {
 	if (!SCRIPT::IS_THREAD_ACTIVE(Global_2647037.f_1598) || Global_2647037.f_1598 == SCRIPT::GET_ID_OF_THIS_THREAD() || bParam1)
 	{
@@ -191,17 +191,17 @@ void func_7(BOOL bParam0, BOOL bParam1) // Position - 0x1AE
 	return;
 }
 
-BOOL func_8(int* piParam0) // Position - 0x22D
+BOOL func_8(int* piParam0) // Position - 0x22D (557)
 {
 	return func_9(&(piParam0->f_6), 5);
 }
 
-BOOL func_9(int* piParam0, int iParam1) // Position - 0x23E
+BOOL func_9(int* piParam0, int iParam1) // Position - 0x23E (574)
 {
 	return IS_BIT_SET(*piParam0, iParam1);
 }
 
-BOOL func_10(int* piParam0) // Position - 0x24C
+BOOL func_10(int* piParam0) // Position - 0x24C (588)
 {
 	if (piParam0->f_2 != 0)
 		if (func_14("STEALTH_OFF" /*Press ~INPUT_VEH_ROOF~ to enter Stealth Mode when piloting the ~a~. All pilot and passenger weapons are unavailable in Stealth Mode as the ~a~ will not appear on enemy radars or maps.*/, func_15(piParam0->f_2), func_15(piParam0->f_2)) || func_13("STEALTH_ON_P" /*The Pilot has turned on Stealth Mode. All pilot and passenger weapons are unavailable as the ~a~ will not appear on enemy radars or maps.*/, func_15(piParam0->f_2)))
@@ -210,25 +210,25 @@ BOOL func_10(int* piParam0) // Position - 0x24C
 	return _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("STEALTH_ON" /*Press ~INPUT_VEH_ROOF~ to disable Stealth Mode.*/) || _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(func_11()) || _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("STEALTH_OFF_P" /*The Pilot has disabled Stealth Mode.*/);
 }
 
-char* func_11() // Position - 0x2B0
+char* func_11() // Position - 0x2B0 (688)
 {
 	return "STEALTH_WARN" /*All pilot and passenger weapons are unavailable while the vehicle is in Stealth Mode.*/;
 }
 
-BOOL _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(char* message) // Position - 0x2BB
+BOOL _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(char* message) // Position - 0x2BB (699)
 {
 	HUD::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(message);
 	return HUD::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(0);
 }
 
-BOOL func_13(char* sParam0, char* sParam1) // Position - 0x2CE
+BOOL func_13(char* sParam0, char* sParam1) // Position - 0x2CE (718)
 {
 	HUD::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(sParam0);
 	HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(sParam1);
 	return HUD::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(0);
 }
 
-BOOL func_14(char* sParam0, char* sParam1, char* sParam2) // Position - 0x2E7
+BOOL func_14(char* sParam0, char* sParam1, char* sParam2) // Position - 0x2E7 (743)
 {
 	HUD::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(sParam0);
 	HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(sParam1);
@@ -236,21 +236,21 @@ BOOL func_14(char* sParam0, char* sParam1, char* sParam2) // Position - 0x2E7
 	return HUD::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(0);
 }
 
-char* func_15(Hash hParam0) // Position - 0x306
+char* func_15(Hash hParam0) // Position - 0x306 (774)
 {
-	if (hParam0 == 295054921)
+	if (hParam0 == joaat("annihilator2"))
 		return "ANNIH_2_STEALTH" /*Stealth Annihilator*/;
 
 	return VEHICLE::GET_DISPLAY_NAME_FROM_VEHICLE_MODEL(hParam0);
 }
 
-void func_16() // Position - 0x324
+void func_16() // Position - 0x324 (804)
 {
 	MISC::CLEAR_BIT(&(Global_1845221[PLAYER::PLAYER_ID() /*889*/].f_871), 1);
 	return;
 }
 
-void func_17(int* piParam0) // Position - 0x33F
+void func_17(int* piParam0) // Position - 0x33F (831)
 {
 	func_58(piParam0);
 	func_57(piParam0);
@@ -312,7 +312,7 @@ void func_17(int* piParam0) // Position - 0x33F
 	return;
 }
 
-void func_18(int* piParam0) // Position - 0x48C
+void func_18(int* piParam0) // Position - 0x48C (1164)
 {
 	int num;
 
@@ -335,13 +335,13 @@ void func_18(int* piParam0) // Position - 0x48C
 	return;
 }
 
-void func_19(int* piParam0) // Position - 0x56A
+void func_19(int* piParam0) // Position - 0x56A (1386)
 {
 	func_25(&(piParam0->f_6), 2);
 	return;
 }
 
-void func_20(char* sParam0, char* sParam1, int iParam2) // Position - 0x57B
+void func_20(char* sParam0, char* sParam1, int iParam2) // Position - 0x57B (1403)
 {
 	HUD::BEGIN_TEXT_COMMAND_DISPLAY_HELP(sParam0);
 	HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(sParam1);
@@ -349,7 +349,7 @@ void func_20(char* sParam0, char* sParam1, int iParam2) // Position - 0x57B
 	return;
 }
 
-void func_21(char* sParam0, char* sParam1, char* sParam2, int iParam3) // Position - 0x598
+void func_21(char* sParam0, char* sParam1, char* sParam2, int iParam3) // Position - 0x598 (1432)
 {
 	HUD::BEGIN_TEXT_COMMAND_DISPLAY_HELP(sParam0);
 	HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(sParam1);
@@ -358,18 +358,18 @@ void func_21(char* sParam0, char* sParam1, char* sParam2, int iParam3) // Positi
 	return;
 }
 
-char* func_22(int* piParam0) // Position - 0x5BB
+char* func_22(int* piParam0) // Position - 0x5BB (1467)
 {
 	if (func_56(piParam0))
 		if (func_23(piParam0->f_2))
-			return "STEALTH_OFF_S";
+			return "STEALTH_OFF_S" /*Press ~INPUT_VEH_ROOF~ to enable Stealth Mode. All weapons are unavailable in Stealth Mode as the ~a~ will not appear on enemy radars or maps.*/;
 		else
 			return "STEALTH_OFF" /*Press ~INPUT_VEH_ROOF~ to enter Stealth Mode when piloting the ~a~. All pilot and passenger weapons are unavailable in Stealth Mode as the ~a~ will not appear on enemy radars or maps.*/;
 
 	return "STEALTH_OFF_P" /*The Pilot has disabled Stealth Mode.*/;
 }
 
-BOOL func_23(int iParam0) // Position - 0x5EB
+BOOL func_23(int iParam0) // Position - 0x5EB (1515)
 {
 	switch (iParam0)
 	{
@@ -380,7 +380,7 @@ BOOL func_23(int iParam0) // Position - 0x5EB
 	return false;
 }
 
-var func_24(BOOL bParam0, var uParam1, var uParam2) // Position - 0x608
+var func_24(BOOL bParam0, var uParam1, var uParam2) // Position - 0x608 (1544)
 {
 	if (bParam0)
 		return uParam1;
@@ -388,13 +388,13 @@ var func_24(BOOL bParam0, var uParam1, var uParam2) // Position - 0x608
 	return uParam2;
 }
 
-void func_25(int* piParam0, int iParam1) // Position - 0x61F
+void func_25(int* piParam0, int iParam1) // Position - 0x61F (1567)
 {
 	MISC::SET_BIT(piParam0, iParam1);
 	return;
 }
 
-void func_26(int* piParam0, int iParam1) // Position - 0x62F
+void func_26(int* piParam0, int iParam1) // Position - 0x62F (1583)
 {
 	int num;
 	int num2;
@@ -403,11 +403,11 @@ void func_26(int* piParam0, int iParam1) // Position - 0x62F
 	{
 		switch (piParam0->f_2)
 		{
-			case 1181327175:
+			case joaat("akula"):
 				num2 = 19004;
 				break;
 		
-			case 295054921:
+			case joaat("annihilator2"):
 				num2 = 36624;
 				break;
 		
@@ -415,7 +415,7 @@ void func_26(int* piParam0, int iParam1) // Position - 0x62F
 				num2 = 36625;
 				break;
 		
-			case -1988428699:
+			case joaat("terbyte"):
 				return;
 		}
 	
@@ -428,7 +428,7 @@ void func_26(int* piParam0, int iParam1) // Position - 0x62F
 	return;
 }
 
-void func_27(int iParam0, int iParam1, int iParam2) // Position - 0x69C
+void func_27(int iParam0, int iParam1, int iParam2) // Position - 0x69C (1692)
 {
 	if (iParam2 == -1)
 		iParam2 = func_28();
@@ -440,12 +440,12 @@ void func_27(int iParam0, int iParam1, int iParam2) // Position - 0x69C
 	return;
 }
 
-int func_28() // Position - 0x6C4
+int func_28() // Position - 0x6C4 (1732)
 {
 	return Global_1574926;
 }
 
-int _STAT_GET_PACKED_INT(int iParam0, int iParam1) // Position - 0x6D0
+int _STAT_GET_PACKED_INT(int iParam0, int iParam1) // Position - 0x6D0 (1744)
 {
 	if (iParam1 == -1)
 		iParam1 = func_28();
@@ -453,12 +453,12 @@ int _STAT_GET_PACKED_INT(int iParam0, int iParam1) // Position - 0x6D0
 	return STATS::GET_PACKED_STAT_INT_CODE(iParam0, iParam1);
 }
 
-BOOL func_30() // Position - 0x6EC
+BOOL func_30() // Position - 0x6EC (1772)
 {
 	return !IS_BIT_SET(Global_1845221[PLAYER::PLAYER_ID() /*889*/].f_871, 4) && !func_31(true);
 }
 
-BOOL func_31(BOOL bParam0) // Position - 0x710
+BOOL func_31(BOOL bParam0) // Position - 0x710 (1808)
 {
 	if (*Global_4718592.f_118493 == 6 || *Global_4718592.f_118493 == 7)
 	{
@@ -472,12 +472,12 @@ BOOL func_31(BOOL bParam0) // Position - 0x710
 	return false;
 }
 
-BOOL func_32() // Position - 0x760
+BOOL func_32() // Position - 0x760 (1888)
 {
 	return Global_76640;
 }
 
-BOOL func_33(int iParam0) // Position - 0x76C
+BOOL func_33(int iParam0) // Position - 0x76C (1900)
 {
 	if (iParam0 == 1)
 		if (Global_21066.f_1 > 3)
@@ -488,7 +488,7 @@ BOOL func_33(int iParam0) // Position - 0x76C
 		else
 			return false;
 
-	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(-754107665) > 0)
+	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("cellphone_flashhand")) > 0)
 		return true;
 
 	if (Global_21066.f_1 > 3)
@@ -497,22 +497,22 @@ BOOL func_33(int iParam0) // Position - 0x76C
 	return false;
 }
 
-BOOL func_34(int* piParam0) // Position - 0x7C3
+BOOL func_34(int* piParam0) // Position - 0x7C3 (1987)
 {
 	if (func_56(piParam0))
 	{
 		switch (piParam0->f_2)
 		{
-			case 1181327175:
+			case joaat("akula"):
 				return _STAT_GET_PACKED_INT(19004, -1) < 3;
 		
-			case 295054921:
+			case joaat("annihilator2"):
 				return _STAT_GET_PACKED_INT(36624, -1) < 3;
 		
 			case 239897677:
 				return _STAT_GET_PACKED_INT(36625, -1) < 3;
 		
-			case -1988428699:
+			case joaat("terbyte"):
 				return false;
 		
 			default:
@@ -523,25 +523,25 @@ BOOL func_34(int* piParam0) // Position - 0x7C3
 	return true;
 }
 
-void func_35(int* piParam0) // Position - 0x823
+void func_35(int* piParam0) // Position - 0x823 (2083)
 {
 	if (!HUD::IS_HELP_MESSAGE_BEING_DISPLAYED())
 		if (func_23(piParam0->f_2))
-			_DISPLAY_HELP_TEXT("STEALTH_WARN_S", 3000);
+			_DISPLAY_HELP_TEXT("STEALTH_WARN_S" /*All weapons are unavailable while the vehicle is in Stealth Mode.*/, 3000);
 		else
 			_DISPLAY_HELP_TEXT("STEALTH_WARN" /*All pilot and passenger weapons are unavailable while the vehicle is in Stealth Mode.*/, 3000);
 
 	return;
 }
 
-void _DISPLAY_HELP_TEXT(char* text, int iParam1) // Position - 0x855
+void _DISPLAY_HELP_TEXT(char* text, int iParam1) // Position - 0x855 (2133)
 {
 	HUD::BEGIN_TEXT_COMMAND_DISPLAY_HELP(text);
 	HUD::END_TEXT_COMMAND_DISPLAY_HELP(0, false, true, iParam1);
 	return;
 }
 
-BOOL func_37(int* piParam0) // Position - 0x86C
+BOOL func_37(int* piParam0) // Position - 0x86C (2156)
 {
 	int num;
 
@@ -576,15 +576,15 @@ BOOL func_37(int* piParam0) // Position - 0x86C
 	return false;
 }
 
-int func_38(int* piParam0) // Position - 0x910
+int func_38(int* piParam0) // Position - 0x910 (2320)
 {
 	if (!func_39(piParam0))
 		return 4;
 
 	switch (piParam0->f_2)
 	{
-		case 1181327175:
-		case 295054921:
+		case joaat("akula"):
+		case joaat("annihilator2"):
 		case 239897677:
 			switch (piParam0->f_4)
 			{
@@ -604,12 +604,12 @@ int func_38(int* piParam0) // Position - 0x910
 	return 4;
 }
 
-BOOL func_39(int* piParam0) // Position - 0x966
+BOOL func_39(int* piParam0) // Position - 0x966 (2406)
 {
 	return ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()) && !ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false);
 }
 
-void func_40() // Position - 0x985
+void func_40() // Position - 0x985 (2437)
 {
 	PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_ATTACK, true);
 	PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_VEH_GUN_LR, true);
@@ -626,7 +626,7 @@ void func_40() // Position - 0x985
 	return;
 }
 
-void func_41(int* piParam0) // Position - 0x9ED
+void func_41(int* piParam0) // Position - 0x9ED (2541)
 {
 	int num;
 
@@ -647,18 +647,18 @@ void func_41(int* piParam0) // Position - 0x9ED
 	return;
 }
 
-char* func_42(int* piParam0) // Position - 0xAB6
+char* func_42(int* piParam0) // Position - 0xAB6 (2742)
 {
 	if (func_56(piParam0))
 		if (func_23(piParam0->f_2))
-			return "STEALTH_ON_S";
+			return "STEALTH_ON_S" /*Press ~INPUT_VEH_ROOF~ to disable Stealth Mode.*/;
 		else
 			return "STEALTH_ON" /*Press ~INPUT_VEH_ROOF~ to disable Stealth Mode.*/;
 
 	return "STEALTH_ON_P" /*The Pilot has turned on Stealth Mode. All pilot and passenger weapons are unavailable as the ~a~ will not appear on enemy radars or maps.*/;
 }
 
-void func_43(int* piParam0, int iParam1) // Position - 0xAE7
+void func_43(int* piParam0, int iParam1) // Position - 0xAE7 (2791)
 {
 	if (func_55(piParam0))
 		return;
@@ -672,12 +672,12 @@ void func_43(int* piParam0, int iParam1) // Position - 0xAE7
 	return;
 }
 
-BOOL func_44(int* piParam0) // Position - 0xB22
+BOOL func_44(int* piParam0) // Position - 0xB22 (2850)
 {
 	return !func_9(piParam0, 0) && func_9(piParam0, 1);
 }
 
-void func_45(BOOL bParam0) // Position - 0xB3E
+void func_45(BOOL bParam0) // Position - 0xB3E (2878)
 {
 	if (bParam0)
 		MISC::SET_BIT(&(Global_1845221[PLAYER::PLAYER_ID() /*889*/].f_871), 6);
@@ -687,7 +687,7 @@ void func_45(BOOL bParam0) // Position - 0xB3E
 	return;
 }
 
-BOOL func_46() // Position - 0xB74
+BOOL func_46() // Position - 0xB74 (2932)
 {
 	if (Global_1845075)
 		return false;
@@ -695,7 +695,7 @@ BOOL func_46() // Position - 0xB74
 	return IS_BIT_SET(Global_1845221[PLAYER::PLAYER_ID() /*889*/].f_871, 5);
 }
 
-void func_47(int* piParam0) // Position - 0xB97
+void func_47(int* piParam0) // Position - 0xB97 (2967)
 {
 	func_5(&(piParam0->f_6), 0);
 
@@ -711,37 +711,37 @@ void func_47(int* piParam0) // Position - 0xB97
 	return;
 }
 
-void func_48() // Position - 0xBDE
+void func_48() // Position - 0xBDE (3038)
 {
 	MISC::SET_BIT(&(Global_1845221[PLAYER::PLAYER_ID() /*889*/].f_871), 1);
 	return;
 }
 
-BOOL func_49(int* piParam0) // Position - 0xBF9
+BOOL func_49(int* piParam0) // Position - 0xBF9 (3065)
 {
 	return func_9(piParam0, 0) && !func_9(piParam0, 1);
 }
 
-void func_50(int* piParam0) // Position - 0xC15
+void func_50(int* piParam0) // Position - 0xC15 (3093)
 {
 	func_25(&(piParam0->f_6), 1);
 	return;
 }
 
-void func_51(int* piParam0, BOOL bParam1) // Position - 0xC26
+void func_51(int* piParam0, BOOL bParam1) // Position - 0xC26 (3110)
 {
 	func_52(piParam0->f_1, bParam1);
 	return;
 }
 
-void func_52(Vehicle veParam0, BOOL bParam1) // Position - 0xC38
+void func_52(Vehicle veParam0, BOOL bParam1) // Position - 0xC38 (3128)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(veParam0) && VEHICLE::IS_VEHICLE_DRIVEABLE(veParam0, false))
 	{
 		switch (ENTITY::GET_ENTITY_MODEL(veParam0))
 		{
-			case 1181327175:
-			case 295054921:
+			case joaat("akula"):
+			case joaat("annihilator2"):
 				VEHICLE::SET_DEPLOY_FOLDING_WINGS(veParam0, !bParam1, false);
 				break;
 		
@@ -754,27 +754,27 @@ void func_52(Vehicle veParam0, BOOL bParam1) // Position - 0xC38
 	return;
 }
 
-BOOL func_53() // Position - 0xC8B
+BOOL func_53() // Position - 0xC8B (3211)
 {
 	return IS_BIT_SET(Global_1845221[PLAYER::PLAYER_ID() /*889*/].f_871, 3);
 }
 
-BOOL func_54(int* piParam0) // Position - 0xCA3
+BOOL func_54(int* piParam0) // Position - 0xCA3 (3235)
 {
 	return func_9(piParam0, 0);
 }
 
-BOOL func_55(int* piParam0) // Position - 0xCB2
+BOOL func_55(int* piParam0) // Position - 0xCB2 (3250)
 {
 	return func_9(piParam0, 2);
 }
 
-BOOL func_56(int* piParam0) // Position - 0xCC1
+BOOL func_56(int* piParam0) // Position - 0xCC1 (3265)
 {
 	return func_39(piParam0) && piParam0->f_3 == PLAYER::PLAYER_PED_ID() || VEHICLE::GET_PED_IN_VEHICLE_SEAT(piParam0->f_1, -1, false) == PLAYER::PLAYER_PED_ID();
 }
 
-void func_57(int* piParam0) // Position - 0xCF2
+void func_57(int* piParam0) // Position - 0xCF2 (3314)
 {
 	if (func_10(piParam0) && func_33(0) || func_32())
 	{
@@ -798,7 +798,7 @@ void func_57(int* piParam0) // Position - 0xCF2
 	return;
 }
 
-void func_58(int* piParam0) // Position - 0xD5A
+void func_58(int* piParam0) // Position - 0xD5A (3418)
 {
 	if (func_54(piParam0))
 		if (func_8(piParam0))
@@ -813,7 +813,7 @@ void func_58(int* piParam0) // Position - 0xD5A
 	return;
 }
 
-void func_59(int* piParam0) // Position - 0xDB7
+void func_59(int* piParam0) // Position - 0xDB7 (3511)
 {
 	func_7(true, true);
 	func_6(true, -1, true);
@@ -821,12 +821,12 @@ void func_59(int* piParam0) // Position - 0xDB7
 	return;
 }
 
-BOOL func_60() // Position - 0xDD5
+BOOL func_60() // Position - 0xDD5 (3541)
 {
 	return IS_BIT_SET(Global_1845221[PLAYER::PLAYER_ID() /*889*/].f_871, 2);
 }
 
-BOOL func_61(int* piParam0) // Position - 0xDED
+BOOL func_61(int* piParam0) // Position - 0xDED (3565)
 {
 	if (!func_39(piParam0))
 		return true;
@@ -852,7 +852,7 @@ BOOL func_61(int* piParam0) // Position - 0xDED
 	return false;
 }
 
-BOOL func_62(Player plParam0) // Position - 0xE60
+BOOL func_62(Player plParam0) // Position - 0xE60 (3680)
 {
 	if (plParam0 > -1)
 	{
@@ -867,7 +867,7 @@ BOOL func_62(Player plParam0) // Position - 0xE60
 	return false;
 }
 
-int func_63(int iParam0) // Position - 0xEA9
+int func_63(int iParam0) // Position - 0xEA9 (3753)
 {
 	switch (iParam0)
 	{
@@ -1064,7 +1064,7 @@ int func_63(int iParam0) // Position - 0xEA9
 	return 6;
 }
 
-BOOL func_64(Player plParam0) // Position - 0x11EC
+BOOL func_64(Player plParam0) // Position - 0x11EC (4588)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX() && _NETWORK_IS_PLAYER_VALID(plParam0, true, true))
 		return IS_BIT_SET(Global_2657991[plParam0 /*467*/].f_324, 3);
@@ -1072,7 +1072,7 @@ BOOL func_64(Player plParam0) // Position - 0x11EC
 	return false;
 }
 
-BOOL _NETWORK_IS_PLAYER_VALID(Player player, BOOL bIsPlaying, BOOL bUnk) // Position - 0x121D
+BOOL _NETWORK_IS_PLAYER_VALID(Player player, BOOL bIsPlaying, BOOL bUnk) // Position - 0x121D (4637)
 {
 	Player player;
 
@@ -1099,12 +1099,12 @@ BOOL _NETWORK_IS_PLAYER_VALID(Player player, BOOL bIsPlaying, BOOL bUnk) // Posi
 	return false;
 }
 
-Player _INVALID_PLAYER_INDEX() // Position - 0x127D
+Player _INVALID_PLAYER_INDEX() // Position - 0x127D (4733)
 {
 	return -1;
 }
 
-BOOL func_67(Player plParam0) // Position - 0x1286
+BOOL func_67(Player plParam0) // Position - 0x1286 (4742)
 {
 	if (IS_BIT_SET(Global_1845221[plParam0 /*889*/].f_268.f_34, 14))
 		return true;
@@ -1115,7 +1115,7 @@ BOOL func_67(Player plParam0) // Position - 0x1286
 	return false;
 }
 
-BOOL func_68(Player plParam0, BOOL bParam1, BOOL bParam2) // Position - 0x12BF
+BOOL func_68(Player plParam0, BOOL bParam1, BOOL bParam2) // Position - 0x12BF (4799)
 {
 	if (plParam0 == _INVALID_PLAYER_INDEX())
 		return false;
@@ -1134,14 +1134,14 @@ BOOL func_68(Player plParam0, BOOL bParam1, BOOL bParam2) // Position - 0x12BF
 	return false;
 }
 
-BOOL func_69(int iParam0) // Position - 0x1323
+BOOL func_69(int iParam0) // Position - 0x1323 (4899)
 {
 	switch (iParam0)
 	{
-		case 1181327175:
-		case 295054921:
+		case joaat("akula"):
+		case joaat("annihilator2"):
 		case 239897677:
-		case -1988428699:
+		case joaat("terbyte"):
 			return true;
 	
 		default:
@@ -1151,12 +1151,12 @@ BOOL func_69(int iParam0) // Position - 0x1323
 	return false;
 }
 
-BOOL func_70(int* piParam0) // Position - 0x134F
+BOOL func_70(int* piParam0) // Position - 0x134F (4943)
 {
 	return ENTITY::DOES_ENTITY_EXIST(piParam0->f_1) && VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_1, false);
 }
 
-void func_71(int* piParam0) // Position - 0x136D
+void func_71(int* piParam0) // Position - 0x136D (4973)
 {
 	BOOL flag;
 	BOOL flag2;
@@ -1228,7 +1228,7 @@ void func_71(int* piParam0) // Position - 0x136D
 	return;
 }
 
-void func_72(int* piParam0) // Position - 0x14C4
+void func_72(int* piParam0) // Position - 0x14C4 (5316)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_3) && func_73(NETWORK::NETWORK_GET_PLAYER_INDEX_FROM_PED(piParam0->f_3)))
 		func_25(piParam0, 0);
@@ -1238,12 +1238,12 @@ void func_72(int* piParam0) // Position - 0x14C4
 	return;
 }
 
-BOOL func_73(Player plParam0) // Position - 0x14F9
+BOOL func_73(Player plParam0) // Position - 0x14F9 (5369)
 {
 	return plParam0 != -1 && IS_BIT_SET(Global_1845221[plParam0 /*889*/].f_871, 1);
 }
 
-BOOL func_74(int* piParam0) // Position - 0x1518
+BOOL func_74(int* piParam0) // Position - 0x1518 (5400)
 {
 	BOOL flag;
 
@@ -1255,8 +1255,8 @@ BOOL func_74(int* piParam0) // Position - 0x1518
 	
 		switch (piParam0->f_2)
 		{
-			case 1181327175:
-			case 295054921:
+			case joaat("akula"):
+			case joaat("annihilator2"):
 				flag = !VEHICLE::ARE_FOLDING_WINGS_DEPLOYED(piParam0->f_1);
 				break;
 		
@@ -1264,7 +1264,7 @@ BOOL func_74(int* piParam0) // Position - 0x1518
 				flag = !VEHICLE::_ARE_MISSILE_BAYS_DEPLOYED(piParam0->f_1);
 				break;
 		
-			case -1988428699:
+			case joaat("terbyte"):
 				flag = ENTITY::GET_ENTITY_SPEED(piParam0->f_1) == 0f;
 				break;
 		}
@@ -1282,40 +1282,40 @@ BOOL func_74(int* piParam0) // Position - 0x1518
 	return flag;
 }
 
-void func_75(int* piParam0) // Position - 0x15AC
+void func_75(int* piParam0) // Position - 0x15AC (5548)
 {
 	func_25(&(piParam0->f_6), 4);
 	piParam0->f_6.f_1 = MISC::GET_GAME_TIMER();
 	return;
 }
 
-BOOL func_76(int* piParam0) // Position - 0x15C7
+BOOL func_76(int* piParam0) // Position - 0x15C7 (5575)
 {
 	return MISC::GET_GAME_TIMER() - piParam0->f_6.f_1 >= 200;
 }
 
-BOOL func_77(int* piParam0) // Position - 0x15DD
+BOOL func_77(int* piParam0) // Position - 0x15DD (5597)
 {
 	return func_9(&(piParam0->f_6), 4);
 }
 
-void func_78(int* piParam0) // Position - 0x15EE
+void func_78(int* piParam0) // Position - 0x15EE (5614)
 {
 	func_5(&(piParam0->f_6), 4);
 	return;
 }
 
-BOOL func_79() // Position - 0x15FF
+BOOL func_79() // Position - 0x15FF (5631)
 {
 	return IS_BIT_SET(Global_1845221[PLAYER::PLAYER_ID() /*889*/].f_871, 1);
 }
 
-BOOL func_80() // Position - 0x1617
+BOOL func_80() // Position - 0x1617 (5655)
 {
 	return !func_31(true);
 }
 
-int _GET_VEHICLE_SEAT_PED_IS_IN(Ped ped, BOOL includeLastVehicle) // Position - 0x1625
+int _GET_VEHICLE_SEAT_PED_IS_IN(Ped ped, BOOL includeLastVehicle) // Position - 0x1625 (5669)
 {
 	Vehicle vehiclePedIsIn;
 	int vehicleModelNumberOfSeats;
@@ -1353,7 +1353,7 @@ int _GET_VEHICLE_SEAT_PED_IS_IN(Ped ped, BOOL includeLastVehicle) // Position - 
 	return seatIndex;
 }
 
-void func_82(int* piParam0) // Position - 0x16AA
+void func_82(int* piParam0) // Position - 0x16AA (5802)
 {
 	*piParam0 = 0;
 	piParam0->f_1 = 0;
@@ -1363,7 +1363,7 @@ void func_82(int* piParam0) // Position - 0x16AA
 	return;
 }
 
-BOOL func_83() // Position - 0x16CA
+BOOL func_83() // Position - 0x16CA (5834)
 {
 	if (_SHOULD_NETWORK_SCRIPT_TERMINATE())
 		return true;
@@ -1371,7 +1371,7 @@ BOOL func_83() // Position - 0x16CA
 	return false;
 }
 
-BOOL _SHOULD_NETWORK_SCRIPT_TERMINATE() // Position - 0x16DE
+BOOL _SHOULD_NETWORK_SCRIPT_TERMINATE() // Position - 0x16DE (5854)
 {
 	if (Global_1575056 == 0)
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
@@ -1403,7 +1403,7 @@ BOOL _SHOULD_NETWORK_SCRIPT_TERMINATE() // Position - 0x16DE
 	return false;
 }
 
-Hash _GET_CURRENT_SESSION_TYPE_SCRIPT_HASH() // Position - 0x1762
+Hash _GET_CURRENT_SESSION_TYPE_SCRIPT_HASH() // Position - 0x1762 (5986)
 {
 	switch (func_87())
 	{
@@ -1411,37 +1411,37 @@ Hash _GET_CURRENT_SESSION_TYPE_SCRIPT_HASH() // Position - 0x1762
 			return func_86();
 	
 		case 2:
-			return -47565502;
+			return joaat("creator");
 	}
 
 	return 0;
 }
 
-Hash func_86() // Position - 0x1795
+Hash func_86() // Position - 0x1795 (6037)
 {
 	switch (Global_2699111)
 	{
 		case 0:
-			return -931834499;
+			return joaat("freemode");
 	
 		default:
 		
 	}
 
-	return -931834499;
+	return joaat("freemode");
 }
 
-int func_87() // Position - 0x17B9
+int func_87() // Position - 0x17B9 (6073)
 {
 	return Global_33087;
 }
 
-BOOL func_88() // Position - 0x17C4
+BOOL func_88() // Position - 0x17C4 (6084)
 {
 	return Global_2684718.f_700;
 }
 
-BOOL _DOES_EVENT_OF_TYPE_EXIST(int iParam0) // Position - 0x17D3
+BOOL _DOES_EVENT_OF_TYPE_EXIST(int iParam0) // Position - 0x17D3 (6099)
 {
 	if (SCRIPT::GET_EVENT_EXISTS(SCRIPT_EVENT_QUEUE_NETWORK, iParam0))
 		return true;
@@ -1449,17 +1449,17 @@ BOOL _DOES_EVENT_OF_TYPE_EXIST(int iParam0) // Position - 0x17D3
 	return false;
 }
 
-BOOL func_90() // Position - 0x17EA
+BOOL func_90() // Position - 0x17EA (6122)
 {
 	return Global_2696416;
 }
 
-BOOL func_91() // Position - 0x17F6
+BOOL func_91() // Position - 0x17F6 (6134)
 {
 	return Global_2684718.f_695;
 }
 
-BOOL func_92(int* piParam0) // Position - 0x1805
+BOOL func_92(int* piParam0) // Position - 0x1805 (6149)
 {
 	BOOL flag;
 
@@ -1499,7 +1499,7 @@ BOOL func_92(int* piParam0) // Position - 0x1805
 	return true;
 }
 
-BOOL func_93() // Position - 0x187F
+BOOL func_93() // Position - 0x187F (6271)
 {
 	if (func_46() && func_94())
 		return true;
@@ -1507,7 +1507,7 @@ BOOL func_93() // Position - 0x187F
 	return false;
 }
 
-BOOL func_94() // Position - 0x189C
+BOOL func_94() // Position - 0x189C (6300)
 {
 	return IS_BIT_SET(Global_1845221[PLAYER::PLAYER_ID() /*889*/].f_871, 6);
 }

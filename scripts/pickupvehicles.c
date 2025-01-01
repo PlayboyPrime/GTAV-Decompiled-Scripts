@@ -32,7 +32,7 @@
 	int iLocal_30 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -64,7 +64,7 @@ void main() // Position - 0x0
 	{
 		SYSTEM::WAIT(0);
 	
-		if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(-1543351171) == 0)
+		if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("docks_setup")) == 0)
 		{
 			if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 				if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
@@ -76,7 +76,7 @@ void main() // Position - 0x0
 			{
 				if (VEHICLE::IS_VEHICLE_DRIVEABLE(veLocal_26, false))
 				{
-					if (VEHICLE::IS_VEHICLE_MODEL(veLocal_26, 444583674))
+					if (VEHICLE::IS_VEHICLE_MODEL(veLocal_26, joaat("handler")))
 					{
 						PAD::SET_INPUT_EXCLUSIVE(PLAYER_CONTROL, INPUT_CONTEXT);
 					
@@ -84,8 +84,8 @@ void main() // Position - 0x0
 						{
 							if (iLocal_30 == 0)
 							{
-								if (!ENTITY::DOES_ENTITY_EXIST(obLocal_27) || ENTITY::DOES_ENTITY_EXIST(obLocal_27) && OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(ENTITY::GET_ENTITY_COORDS(veLocal_26, true), 15f, 874602658, true, false, true) != obLocal_27)
-									obLocal_27 = OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(ENTITY::GET_ENTITY_COORDS(veLocal_26, true), 15f, 874602658, true, false, true);
+								if (!ENTITY::DOES_ENTITY_EXIST(obLocal_27) || ENTITY::DOES_ENTITY_EXIST(obLocal_27) && OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(ENTITY::GET_ENTITY_COORDS(veLocal_26, true), 15f, joaat("prop_contr_03b_ld"), true, false, true) != obLocal_27)
+									obLocal_27 = OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(ENTITY::GET_ENTITY_COORDS(veLocal_26, true), 15f, joaat("prop_contr_03b_ld"), true, false, true);
 							
 								if (ENTITY::DOES_ENTITY_EXIST(obLocal_27))
 								{
@@ -124,7 +124,7 @@ void main() // Position - 0x0
 	return;
 }
 
-BOOL func_1(var uParam0, int iParam1) // Position - 0x18E
+BOOL func_1(var uParam0, int iParam1) // Position - 0x18E (398)
 {
 	int gameTimer;
 
@@ -136,13 +136,13 @@ BOOL func_1(var uParam0, int iParam1) // Position - 0x18E
 	return false;
 }
 
-void func_2() // Position - 0x1AC
+void func_2() // Position - 0x1AC (428)
 {
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;
 }
 
-int func_3(int iParam0) // Position - 0x1B8
+int func_3(int iParam0) // Position - 0x1B8 (440)
 {
 	int num;
 	int offset;
@@ -167,7 +167,7 @@ int func_3(int iParam0) // Position - 0x1B8
 	return 0;
 }
 
-int func_4(int iParam0) // Position - 0x20F
+int func_4(int iParam0) // Position - 0x20F (527)
 {
 	int num;
 	int offset;

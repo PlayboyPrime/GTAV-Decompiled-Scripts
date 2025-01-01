@@ -41,7 +41,7 @@
 	var uScriptParam_22 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -94,7 +94,7 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, int iParam4) // Position - 0xDA
+void func_1(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, int iParam4) // Position - 0xDA (218)
 {
 	if (iParam0 != 198)
 	{
@@ -112,7 +112,7 @@ void func_1(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, int iParam4) /
 	return;
 }
 
-void func_2(int iParam0, int iParam1) // Position - 0x132
+void func_2(int iParam0, int iParam1) // Position - 0x132 (306)
 {
 	switch (iParam0)
 	{
@@ -163,7 +163,7 @@ void func_2(int iParam0, int iParam1) // Position - 0x132
 	return;
 }
 
-void func_3(int iParam0, BOOL bParam1) // Position - 0x211
+void func_3(int iParam0, BOOL bParam1) // Position - 0x211 (529)
 {
 	if (bParam1)
 		MISC::SET_BIT(&Global_112770, iParam0);
@@ -174,7 +174,7 @@ void func_3(int iParam0, BOOL bParam1) // Position - 0x211
 	return;
 }
 
-BOOL func_4(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position - 0x23A
+BOOL func_4(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position - 0x23A (570)
 {
 	BOOL flag;
 	int num;
@@ -465,7 +465,7 @@ BOOL func_4(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position - 
 	return flag;
 }
 
-BOOL func_5() // Position - 0xB9F
+BOOL func_5() // Position - 0xB9F (2975)
 {
 	if (func_7() == -1 || func_7() == 999 && !(func_6() == 0))
 		return true;
@@ -473,17 +473,17 @@ BOOL func_5() // Position - 0xB9F
 	return false;
 }
 
-int func_6() // Position - 0xBCF
+int func_6() // Position - 0xBCF (3023)
 {
 	return Global_33088;
 }
 
-int func_7() // Position - 0xBDA
+int func_7() // Position - 0xBDA (3034)
 {
 	return Global_33087;
 }
 
-int func_8(var uParam0, int iParam1) // Position - 0xBE5
+int func_8(var uParam0, int iParam1) // Position - 0xBE5 (3045)
 {
 	int i;
 
@@ -734,22 +734,22 @@ int func_8(var uParam0, int iParam1) // Position - 0xBE5
 	
 		case 29:
 			uParam0->f_3 = 4;
-			uParam0->f_4[0] = -842986252;
-			uParam0->f_4[1] = -1404869155;
+			uParam0->f_4[0] = joaat("dt1_05_build1_h");
+			uParam0->f_4[1] = joaat("dt1_05_build1_damage");
 			*uParam0 = { 136.004f, -749.287f, 153.302f };
 			break;
 	
 		case 30:
 			uParam0->f_3 = 4;
-			uParam0->f_4[0] = -112041596;
-			uParam0->f_4[1] = -519800699;
+			uParam0->f_4[0] = joaat("dt1_05_build1_lod");
+			uParam0->f_4[1] = joaat("dt1_05_build1_damage_lod");
 			*uParam0 = { 136.004f, -749.287f, 153.302f };
 			break;
 	
 		case 31:
 			uParam0->f_3 = 4;
-			uParam0->f_4[0] = -186270611;
-			uParam0->f_4[1] = -1701919363;
+			uParam0->f_4[0] = joaat("dt1_05_slod");
+			uParam0->f_4[1] = joaat("dt1_05_damage_slod");
 			*uParam0 = { 178.534f, -668.835f, 37.2113f };
 			break;
 	
@@ -2116,7 +2116,7 @@ int func_8(var uParam0, int iParam1) // Position - 0xBE5
 	return 1;
 }
 
-BOOL func_9() // Position - 0x4424
+BOOL func_9() // Position - 0x4424 (17444)
 {
 	if (MISC::IS_NEXT_WEATHER_TYPE("RAIN") || MISC::IS_NEXT_WEATHER_TYPE("THUNDER") || MISC::IS_PREV_WEATHER_TYPE("RAIN") || MISC::IS_PREV_WEATHER_TYPE("THUNDER"))
 		return true;
@@ -2124,7 +2124,7 @@ BOOL func_9() // Position - 0x4424
 	return false;
 }
 
-void func_10() // Position - 0x4466
+void func_10() // Position - 0x4466 (17510)
 {
 	func_1(152, 0, 1, true, 0);
 

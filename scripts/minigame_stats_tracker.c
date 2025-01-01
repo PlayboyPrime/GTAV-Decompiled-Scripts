@@ -117,7 +117,7 @@
 	var uScriptParam_67 = 1092616192;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	int i;
 
@@ -284,14 +284,14 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1(int iParam0) // Position - 0x447
+void func_1(int iParam0) // Position - 0x447 (1095)
 {
 	Global_79800 = iParam0;
 	Global_79801 = iParam0;
 	return;
 }
 
-float func_2(int* piParam0) // Position - 0x45B
+float func_2(int* piParam0) // Position - 0x45B (1115)
 {
 	if (func_5(piParam0))
 		if (func_4(piParam0))
@@ -302,7 +302,7 @@ float func_2(int* piParam0) // Position - 0x45B
 	return piParam0->f_1;
 }
 
-float func_3(BOOL bParam0) // Position - 0x497
+float func_3(BOOL bParam0) // Position - 0x497 (1175)
 {
 	float num;
 	float num2;
@@ -328,34 +328,34 @@ float func_3(BOOL bParam0) // Position - 0x497
 	return SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
 }
 
-BOOL func_4(int* piParam0) // Position - 0x4EF
+BOOL func_4(int* piParam0) // Position - 0x4EF (1263)
 {
 	return IS_BIT_SET(*piParam0, 2);
 }
 
-BOOL func_5(int* piParam0) // Position - 0x4FC
+BOOL func_5(int* piParam0) // Position - 0x4FC (1276)
 {
 	return IS_BIT_SET(*piParam0, 1);
 }
 
-void func_6(int iParam0, int iParam1) // Position - 0x509
+void func_6(int iParam0, int iParam1) // Position - 0x509 (1289)
 {
 	func_7(iParam0, iParam1);
 	return;
 }
 
-void func_7(int iParam0, int iParam1) // Position - 0x519
+void func_7(int iParam0, int iParam1) // Position - 0x519 (1305)
 {
 	*iParam0 = *iParam0 || iParam1;
 	return;
 }
 
-BOOL func_8(int iParam0, int iParam1) // Position - 0x52A
+BOOL func_8(int iParam0, int iParam1) // Position - 0x52A (1322)
 {
 	return iParam0 && iParam1 != false;
 }
 
-void func_9(int* piParam0) // Position - 0x539
+void func_9(int* piParam0) // Position - 0x539 (1337)
 {
 	if (!func_5(piParam0))
 		func_10(piParam0);
@@ -363,13 +363,13 @@ void func_9(int* piParam0) // Position - 0x539
 	return;
 }
 
-void func_10(int* piParam0) // Position - 0x551
+void func_10(int* piParam0) // Position - 0x551 (1361)
 {
 	func_11(piParam0, 0f);
 	return;
 }
 
-void func_11(int* piParam0, float fParam1) // Position - 0x560
+void func_11(int* piParam0, float fParam1) // Position - 0x560 (1376)
 {
 	piParam0->f_1 = func_3(IS_BIT_SET(*piParam0, 4)) - fParam1;
 	MISC::SET_BIT(piParam0, 1);
@@ -378,7 +378,7 @@ void func_11(int* piParam0, float fParam1) // Position - 0x560
 	return;
 }
 
-void func_12(int iParam0) // Position - 0x58B
+void func_12(int iParam0) // Position - 0x58B (1419)
 {
 	if (func_17())
 		return;
@@ -408,7 +408,7 @@ void func_12(int iParam0) // Position - 0x58B
 	return;
 }
 
-BOOL func_13() // Position - 0x615
+BOOL func_13() // Position - 0x615 (1557)
 {
 	if (Global_21066.f_1 == 1 || Global_21066.f_1 == 0)
 		return true;
@@ -416,7 +416,7 @@ BOOL func_13() // Position - 0x615
 	return false;
 }
 
-void func_14(BOOL bParam0, BOOL bParam1) // Position - 0x63C
+void func_14(BOOL bParam0, BOOL bParam1) // Position - 0x63C (1596)
 {
 	if (bParam0)
 	{
@@ -445,7 +445,7 @@ void func_14(BOOL bParam0, BOOL bParam1) // Position - 0x63C
 	return;
 }
 
-BOOL func_15(int iParam0) // Position - 0x6B0
+BOOL func_15(int iParam0) // Position - 0x6B0 (1712)
 {
 	if (iParam0 == 1)
 		if (Global_21066.f_1 > 3)
@@ -456,7 +456,7 @@ BOOL func_15(int iParam0) // Position - 0x6B0
 		else
 			return false;
 
-	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(-754107665) > 0)
+	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("cellphone_flashhand")) > 0)
 		return true;
 
 	if (Global_21066.f_1 > 3)
@@ -465,24 +465,24 @@ BOOL func_15(int iParam0) // Position - 0x6B0
 	return false;
 }
 
-BOOL func_16() // Position - 0x707
+BOOL func_16() // Position - 0x707 (1799)
 {
 	return IS_BIT_SET(Global_1957675, 5);
 }
 
-BOOL func_17() // Position - 0x715
+BOOL func_17() // Position - 0x715 (1813)
 {
 	return IS_BIT_SET(Global_1957675, 19);
 }
 
-void func_18(const char* sParam0) // Position - 0x724
+void func_18(const char* sParam0) // Position - 0x724 (1828)
 {
 	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(sParam0);
 	GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 	return;
 }
 
-void func_19() // Position - 0x736
+void func_19() // Position - 0x736 (1846)
 {
 	GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_44);
 	Global_33232 = false;

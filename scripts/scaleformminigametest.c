@@ -46,7 +46,7 @@
 	float fLocal_44 = 0f;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -113,7 +113,7 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1(int iParam0) // Position - 0x13F
+void func_1(int iParam0) // Position - 0x13F (319)
 {
 	if (Global_21045 == 0)
 	{
@@ -350,7 +350,7 @@ void func_1(int iParam0) // Position - 0x13F
 	return;
 }
 
-void func_2() // Position - 0x43D
+void func_2() // Position - 0x43D (1085)
 {
 	if (CAM::DOES_CAM_EXIST(caLocal_17))
 		CAM::DESTROY_CAM(caLocal_17, false);
@@ -364,7 +364,7 @@ void func_2() // Position - 0x43D
 	return;
 }
 
-void func_3(BOOL bParam0) // Position - 0x47A
+void func_3(BOOL bParam0) // Position - 0x47A (1146)
 {
 	if (bParam0)
 	{
@@ -387,7 +387,7 @@ void func_3(BOOL bParam0) // Position - 0x47A
 	return;
 }
 
-void func_4(int iParam0) // Position - 0x4DD
+void func_4(int iParam0) // Position - 0x4DD (1245)
 {
 	if (func_8())
 		return;
@@ -417,7 +417,7 @@ void func_4(int iParam0) // Position - 0x4DD
 	return;
 }
 
-BOOL func_5() // Position - 0x567
+BOOL func_5() // Position - 0x567 (1383)
 {
 	if (Global_21066.f_1 == 1 || Global_21066.f_1 == 0)
 		return true;
@@ -425,7 +425,7 @@ BOOL func_5() // Position - 0x567
 	return false;
 }
 
-void func_6(BOOL bParam0, BOOL bParam1) // Position - 0x58E
+void func_6(BOOL bParam0, BOOL bParam1) // Position - 0x58E (1422)
 {
 	if (bParam0)
 	{
@@ -454,17 +454,17 @@ void func_6(BOOL bParam0, BOOL bParam1) // Position - 0x58E
 	return;
 }
 
-BOOL func_7() // Position - 0x602
+BOOL func_7() // Position - 0x602 (1538)
 {
 	return IS_BIT_SET(Global_1957675, 5);
 }
 
-BOOL func_8() // Position - 0x610
+BOOL func_8() // Position - 0x610 (1552)
 {
 	return IS_BIT_SET(Global_1957675, 19);
 }
 
-BOOL func_9(int iParam0) // Position - 0x61F
+BOOL func_9(int iParam0) // Position - 0x61F (1567)
 {
 	if (iParam0 == 1)
 		if (Global_21066.f_1 > 3)
@@ -475,7 +475,7 @@ BOOL func_9(int iParam0) // Position - 0x61F
 		else
 			return false;
 
-	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(-754107665) > 0)
+	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("cellphone_flashhand")) > 0)
 		return true;
 
 	if (Global_21066.f_1 > 3)
@@ -484,7 +484,7 @@ BOOL func_9(int iParam0) // Position - 0x61F
 	return false;
 }
 
-void func_10() // Position - 0x676
+void func_10() // Position - 0x676 (1654)
 {
 	if (Global_21066.f_1 == 9 || Global_21066.f_1 == 10)
 	{

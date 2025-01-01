@@ -37,7 +37,7 @@
 	int iLocal_35 = 0;
 #endregion
 
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	int i;
 	int num;
@@ -204,7 +204,7 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1(const char* sParam0, char* sParam1, var uParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, var uParam9) // Position - 0x472
+void func_1(const char* sParam0, char* sParam1, var uParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, var uParam9) // Position - 0x472 (1138)
 {
 	int i;
 
@@ -259,20 +259,20 @@ void func_1(const char* sParam0, char* sParam1, var uParam2, int iParam3, int iP
 	return;
 }
 
-BOOL func_2(const char* sParam0, const char* sParam1) // Position - 0x644
+BOOL func_2(const char* sParam0, const char* sParam1) // Position - 0x644 (1604)
 {
 	HUD::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(sParam0);
 	HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(sParam1);
 	return HUD::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(0);
 }
 
-BOOL _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(const char* message) // Position - 0x65D
+BOOL _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(const char* message) // Position - 0x65D (1629)
 {
 	HUD::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(message);
 	return HUD::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(0);
 }
 
-BOOL func_4() // Position - 0x670
+BOOL func_4() // Position - 0x670 (1648)
 {
 	if (CUTSCENE::IS_CUTSCENE_PLAYING())
 		return false;
@@ -306,15 +306,15 @@ BOOL func_4() // Position - 0x670
 	return true;
 }
 
-BOOL func_5() // Position - 0x6FF
+BOOL func_5() // Position - 0x6FF (1791)
 {
-	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(-1424752554) > 0)
+	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("player_timetable_scene")) > 0)
 		return true;
 
 	return false;
 }
 
-void func_6() // Position - 0x719
+void func_6() // Position - 0x719 (1817)
 {
 	int i;
 
@@ -341,7 +341,7 @@ void func_6() // Position - 0x719
 	return;
 }
 
-void func_7(int iParam0) // Position - 0x830
+void func_7(int iParam0) // Position - 0x830 (2096)
 {
 	TEXT_LABEL_ASSIGN_STRING(&Global_114135.f_20414[iParam0 /*16*/], "", 16);
 	TEXT_LABEL_ASSIGN_STRING(&(Global_114135.f_20414[iParam0 /*16*/].f_4), "", 16);
@@ -356,7 +356,7 @@ void func_7(int iParam0) // Position - 0x830
 	return;
 }
 
-void func_8(int iParam0, int iParam1) // Position - 0x8C8
+void func_8(int iParam0, int iParam1) // Position - 0x8C8 (2248)
 {
 	Global_114135.f_20414[iParam0 /*16*/] = { Global_114135.f_20414[iParam1 /*16*/] };
 	Global_114135.f_20414[iParam0 /*16*/].f_4 = { Global_114135.f_20414[iParam1 /*16*/].f_4 };
@@ -371,7 +371,7 @@ void func_8(int iParam0, int iParam1) // Position - 0x8C8
 	return;
 }
 
-void func_9(int iParam0, int iParam1) // Position - 0x9D8
+void func_9(int iParam0, int iParam1) // Position - 0x9D8 (2520)
 {
 	if (iParam0 == 235 || iParam0 == 0)
 		return;
@@ -381,7 +381,7 @@ void func_9(int iParam0, int iParam1) // Position - 0x9D8
 	return;
 }
 
-void func_10(const char* sParam0, const char* sParam1) // Position - 0xA15
+void func_10(const char* sParam0, const char* sParam1) // Position - 0xA15 (2581)
 {
 	HUD::BEGIN_TEXT_COMMAND_DISPLAY_HELP(sParam0);
 	HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(sParam1);
@@ -389,20 +389,20 @@ void func_10(const char* sParam0, const char* sParam1) // Position - 0xA15
 	return;
 }
 
-void func_11(const char* sParam0) // Position - 0xA31
+void func_11(const char* sParam0) // Position - 0xA31 (2609)
 {
 	HUD::BEGIN_TEXT_COMMAND_DISPLAY_HELP(sParam0);
 	HUD::END_TEXT_COMMAND_DISPLAY_HELP(0, true, true, -1);
 	return;
 }
 
-eCharacter _GET_CURRENT_PLAYER_CHARACTER() // Position - 0xA47
+eCharacter _GET_CURRENT_PLAYER_CHARACTER() // Position - 0xA47 (2631)
 {
 	func_13();
 	return Global_114135.f_2367.f_539.f_4321;
 }
 
-void func_13() // Position - 0xA60
+void func_13() // Position - 0xA60 (2656)
 {
 	eCharacter character;
 
@@ -435,12 +435,12 @@ void func_13() // Position - 0xA60
 	return;
 }
 
-BOOL func_14(int iParam0) // Position - 0xB5D
+BOOL func_14(int iParam0) // Position - 0xB5D (2909)
 {
 	return Global_44181 == iParam0;
 }
 
-eCharacter _GET_PLAYER_CHARACTER_FROM_PED(Ped pedParam0) // Position - 0xB6B
+eCharacter _GET_PLAYER_CHARACTER_FROM_PED(Ped pedParam0) // Position - 0xB6B (2923)
 {
 	eCharacter i;
 	Hash entityModel;
@@ -459,7 +459,7 @@ eCharacter _GET_PLAYER_CHARACTER_FROM_PED(Ped pedParam0) // Position - 0xB6B
 	return _CHAR_NULL;
 }
 
-Hash _GET_CHARACTER_MODEL(eCharacter character) // Position - 0xBA8
+Hash _GET_CHARACTER_MODEL(eCharacter character) // Position - 0xBA8 (2984)
 {
 	if (func_18(character))
 		return func_17(character);
@@ -469,23 +469,23 @@ Hash _GET_CHARACTER_MODEL(eCharacter character) // Position - 0xBA8
 	return 0;
 }
 
-Hash func_17(eCharacter echParam0) // Position - 0xBCD
+Hash func_17(eCharacter echParam0) // Position - 0xBCD (3021)
 {
 	return Global_2201[echParam0 /*29*/];
 }
 
-BOOL func_18(eCharacter echParam0) // Position - 0xBDC
+BOOL func_18(eCharacter echParam0) // Position - 0xBDC (3036)
 {
 	return echParam0 < CHAR_MULTIPLAYER;
 }
 
-eCharacter _GET_CURRENT_PLAYER_CHARACTER_0() // Position - 0xBE8
+eCharacter _GET_CURRENT_PLAYER_CHARACTER_0() // Position - 0xBE8 (3048)
 {
 	func_13();
 	return Global_114135.f_2367.f_539.f_4321;
 }
 
-BOOL func_20(const char* sParam0) // Position - 0xC01
+BOOL func_20(const char* sParam0) // Position - 0xC01 (3073)
 {
 	if (HUD::IS_HELP_MESSAGE_BEING_DISPLAYED())
 		return false;
@@ -524,7 +524,7 @@ BOOL func_20(const char* sParam0) // Position - 0xC01
 	return true;
 }
 
-BOOL func_21() // Position - 0xC8B
+BOOL func_21() // Position - 0xC8B (3211)
 {
 	if (Global_79800)
 		return true;
@@ -534,7 +534,7 @@ BOOL func_21() // Position - 0xC8B
 	return false;
 }
 
-BOOL func_22() // Position - 0xCB5
+BOOL func_22() // Position - 0xCB5 (3253)
 {
 	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 		return Global_99141.f_44 == 1;
@@ -542,7 +542,7 @@ BOOL func_22() // Position - 0xCB5
 	return false;
 }
 
-void func_23() // Position - 0xCD1
+void func_23() // Position - 0xCD1 (3281)
 {
 	if (Global_112772)
 		if (MISC::ARE_STRINGS_EQUAL(&(uLocal_18.f_4), ""))

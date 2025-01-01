@@ -1,5 +1,5 @@
 // Program registers 537 globals at index 11 starting from Global_2883584
-void main() // Position - 0x0
+void main() // Position - 0x0 (0)
 {
 	int num;
 	int sizeOfSaveData;
