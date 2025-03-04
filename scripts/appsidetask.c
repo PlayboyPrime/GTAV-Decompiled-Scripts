@@ -50,23 +50,23 @@ void main() // Position - 0x0 (0)
 	fLocal_27 = 0f;
 	fLocal_28 = 0f;
 	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
-	Global_23491 = 0;
-	Global_21283 = 0;
+	Global_23508 = 0;
+	Global_21300 = 0;
 	func_18();
-	Global_21066.f_1 = 7;
-	func_17(Global_21047, "DISPLAY_VIEW", 14f, -1082130432, -1082130432, -1082130432, -1082130432);
-	func_16(Global_21047, "SET_HEADER", "CELL_4" /*Sidetasks*/, 0, 0, 0, 0);
+	Global_21083.f_1 = 7;
+	func_17(Global_21064, "DISPLAY_VIEW", 14f, -1082130432, -1082130432, -1082130432, -1082130432);
+	func_16(Global_21064, "SET_HEADER", "CELL_4" /*Sidetasks*/, 0, 0, 0, 0);
 
 	while (true)
 	{
 		SYSTEM::WAIT(0);
 	
-		if (Global_21066.f_1 != 9)
+		if (Global_21083.f_1 != 9)
 		{
-			switch (Global_21066.f_1)
+			switch (Global_21083.f_1)
 			{
 				case 7:
-					if (Global_23491 == 0)
+					if (Global_23508 == 0)
 					{
 						func_15();
 						func_14();
@@ -75,7 +75,7 @@ void main() // Position - 0x0 (0)
 					break;
 			
 				case 8:
-					if (Global_23491 == 1)
+					if (Global_23508 == 1)
 						func_5();
 					break;
 			
@@ -87,19 +87,19 @@ void main() // Position - 0x0 (0)
 					break;
 			}
 		
-			if (Global_23491 == 0)
+			if (Global_23508 == 0)
 			{
 				if (func_4())
 					func_3();
 			}
-			else if (func_2(FRONTEND_CONTROL, Global_21034, 0))
+			else if (func_2(FRONTEND_CONTROL, Global_21051, 0))
 			{
-				Global_21044 = 1;
-				Global_23491 = 0;
-				Global_21066.f_1 = 7;
+				Global_21061 = 1;
+				Global_23508 = 0;
+				Global_21083.f_1 = 7;
 				func_18();
-				func_17(Global_21047, "DISPLAY_VIEW", 14f, -1082130432, -1082130432, -1082130432, -1082130432);
-				func_16(Global_21047, "SET_HEADER", "CELL_4" /*Sidetasks*/, 0, 0, 0, 0);
+				func_17(Global_21064, "DISPLAY_VIEW", 14f, -1082130432, -1082130432, -1082130432, -1082130432);
+				func_16(Global_21064, "SET_HEADER", "CELL_4" /*Sidetasks*/, 0, 0, 0, 0);
 			}
 		}
 	
@@ -112,9 +112,9 @@ void main() // Position - 0x0 (0)
 
 BOOL func_1() // Position - 0x163 (355)
 {
-	if (Global_21066.f_1 == 1 || Global_21066.f_1 == 3 || Global_21066.f_1 == 0 || Global_21010 == 1)
+	if (Global_21083.f_1 == 1 || Global_21083.f_1 == 3 || Global_21083.f_1 == 0 || Global_21027 == 1)
 	{
-		Global_21053 = 1;
+		Global_21070 = 1;
 		return true;
 	}
 
@@ -146,9 +146,9 @@ void func_3() // Position - 0x218 (536)
 
 BOOL func_4() // Position - 0x224 (548)
 {
-	if (Global_9542 == 1 || Global_21066.f_1 < 7)
+	if (Global_9559 == 1 || Global_21083.f_1 < 7)
 	{
-		Global_21053 = 1;
+		Global_21070 = 1;
 		return true;
 	}
 
@@ -170,38 +170,38 @@ void func_6() // Position - 0x277 (631)
 	fLocal_28 = fLocal_26;
 	func_10(255, 255, 255, 205);
 	func_9();
-	func_8(fLocal_27, fLocal_28, &(Global_2201[Global_23713[iLocal_23 /*9*/] /*29*/].f_3), 0);
+	func_8(fLocal_27, fLocal_28, &(Global_2201[Global_23730[iLocal_23 /*9*/] /*29*/].f_3), 0);
 	fLocal_27 = fLocal_27 + 0.07f;
 	func_10(255, 255, 255, 205);
 
-	if (Global_23713[iLocal_23 /*9*/].f_2.f_1 < 10)
-		func_7(fLocal_27, fLocal_28, "CELL_506" /*~1~:0~1~*/, Global_23713[iLocal_23 /*9*/].f_2.f_2, Global_23713[iLocal_23 /*9*/].f_2.f_1);
+	if (Global_23730[iLocal_23 /*9*/].f_2.f_1 < 10)
+		func_7(fLocal_27, fLocal_28, "CELL_506" /*~1~:0~1~*/, Global_23730[iLocal_23 /*9*/].f_2.f_2, Global_23730[iLocal_23 /*9*/].f_2.f_1);
 	else
-		func_7(fLocal_27, fLocal_28, "CELL_503" /*~1~:~1~*/, Global_23713[iLocal_23 /*9*/].f_2.f_2, Global_23713[iLocal_23 /*9*/].f_2.f_1);
+		func_7(fLocal_27, fLocal_28, "CELL_503" /*~1~:~1~*/, Global_23730[iLocal_23 /*9*/].f_2.f_2, Global_23730[iLocal_23 /*9*/].f_2.f_1);
 
 	fLocal_27 = fLocal_27 + 0.07f;
 	func_10(255, 255, 255, 205);
-	func_7(fLocal_27, fLocal_28, "CELL_505" /*~1~/~1~*/, Global_23713[iLocal_23 /*9*/].f_2.f_3, Global_23713[iLocal_23 /*9*/].f_2.f_4);
+	func_7(fLocal_27, fLocal_28, "CELL_505" /*~1~/~1~*/, Global_23730[iLocal_23 /*9*/].f_2.f_3, Global_23730[iLocal_23 /*9*/].f_2.f_4);
 	fLocal_27 = fLocal_25;
 	func_10(255, 255, 255, 205);
 	fLocal_28 = fLocal_28 + 0.02f;
 
-	if (Global_23544[Global_23713[iLocal_23 /*9*/].f_1 /*42*/].f_8 == 0)
+	if (Global_23561[Global_23730[iLocal_23 /*9*/].f_1 /*42*/].f_8 == 0)
 		func_9();
 
 	HUD::SET_TEXT_WRAP(0f, 0.93f);
-	func_8(fLocal_27, fLocal_28, &(Global_23544[Global_23713[iLocal_23 /*9*/].f_1 /*42*/].f_4), 0);
+	func_8(fLocal_27, fLocal_28, &(Global_23561[Global_23730[iLocal_23 /*9*/].f_1 /*42*/].f_4), 0);
 	fLocal_28 = fLocal_28 + 0.07f;
 
-	for (i = 1; i <= Global_23544[Global_23713[iLocal_23 /*9*/].f_1 /*42*/].f_9; i = i + 1)
+	for (i = 1; i <= Global_23561[Global_23730[iLocal_23 /*9*/].f_1 /*42*/].f_9; i = i + 1)
 	{
 		func_10(255, 255, 255, 255);
 		fLocal_28 = fLocal_28 + 0.04f;
 	
-		if (Global_23544[Global_23713[iLocal_23 /*9*/].f_1 /*42*/].f_32[i] == -1)
-			func_8(fLocal_27, fLocal_28, &Global_23544[Global_23713[iLocal_23 /*9*/].f_1 /*42*/].f_10[i /*4*/], 0);
+		if (Global_23561[Global_23730[iLocal_23 /*9*/].f_1 /*42*/].f_32[i] == -1)
+			func_8(fLocal_27, fLocal_28, &Global_23561[Global_23730[iLocal_23 /*9*/].f_1 /*42*/].f_10[i /*4*/], 0);
 		else
-			func_7(fLocal_27, fLocal_28, &Global_23544[Global_23713[iLocal_23 /*9*/].f_1 /*42*/].f_10[i /*4*/], Global_23544[Global_23713[iLocal_23 /*9*/].f_1 /*42*/].f_27[i], Global_23544[Global_23713[iLocal_23 /*9*/].f_1 /*42*/].f_32[i]);
+			func_7(fLocal_27, fLocal_28, &Global_23561[Global_23730[iLocal_23 /*9*/].f_1 /*42*/].f_10[i /*4*/], Global_23561[Global_23730[iLocal_23 /*9*/].f_1 /*42*/].f_27[i], Global_23561[Global_23730[iLocal_23 /*9*/].f_1 /*42*/].f_32[i]);
 	}
 
 	return;
@@ -244,15 +244,15 @@ void func_10(int iParam0, int iParam1, int iParam2, int iParam3) // Position - 0
 
 void func_11() // Position - 0x4FC (1276)
 {
-	if (func_2(FRONTEND_CONTROL, Global_21035, 0))
+	if (func_2(FRONTEND_CONTROL, Global_21052, 0))
 	{
 		iLocal_23 = uLocal_16[iLocal_22];
-		Global_23491 = 1;
-		func_12(Global_21047, "SET_DATA_SLOT", 15f, 0f, -1f, -1f, -1f, "CELL_287" /*Send Photo(s)*/, "CELL_280" /*Take Photo*/, "CELL_285" /*Move*/, "CELL_284" /*Zoom*/, 0);
-		func_17(Global_21047, "DISPLAY_VIEW", 15f, -1082130432, -1082130432, -1082130432, -1082130432);
-		func_16(Global_21047, "SET_HEADER", "CELL_4" /*Sidetasks*/, 0, 0, 0, 0);
-		Global_21066.f_1 = 8;
-		Global_23491 = 1;
+		Global_23508 = 1;
+		func_12(Global_21064, "SET_DATA_SLOT", 15f, 0f, -1f, -1f, -1f, "CELL_287" /*Send Photo(s)*/, "CELL_280" /*Take Photo*/, "CELL_285" /*Move*/, "CELL_284" /*Zoom*/, 0);
+		func_17(Global_21064, "DISPLAY_VIEW", 15f, -1082130432, -1082130432, -1082130432, -1082130432);
+		func_16(Global_21064, "SET_HEADER", "CELL_4" /*Sidetasks*/, 0, 0, 0, 0);
+		Global_21083.f_1 = 8;
+		Global_23508 = 1;
 	}
 
 	return;
@@ -324,7 +324,7 @@ void func_14() // Position - 0x63F (1599)
 
 	if (bLocal_29 == false)
 	{
-		if (func_2(FRONTEND_CONTROL, Global_21042, 0))
+		if (func_2(FRONTEND_CONTROL, Global_21059, 0))
 		{
 			if (iLocal_22 > 0)
 				iLocal_22 = iLocal_22 - 1;
@@ -333,7 +333,7 @@ void func_14() // Position - 0x63F (1599)
 			SYSTEM::SETTIMERA(0);
 		}
 	
-		if (func_2(FRONTEND_CONTROL, Global_21043, 0))
+		if (func_2(FRONTEND_CONTROL, Global_21060, 0))
 		{
 			iLocal_22 = iLocal_22 + 1;
 		
@@ -364,18 +364,18 @@ void func_15() // Position - 0x6DC (1756)
 		if (num == iLocal_22)
 			func_9();
 	
-		func_8(fLocal_27, fLocal_28, &(Global_2201[Global_23713[uLocal_16[num] /*9*/] /*29*/].f_3), 0);
+		func_8(fLocal_27, fLocal_28, &(Global_2201[Global_23730[uLocal_16[num] /*9*/] /*29*/].f_3), 0);
 		fLocal_27 = fLocal_27 + 0.07f;
 		func_10(255, 255, 255, 205);
 	
-		if (Global_23713[uLocal_16[num] /*9*/].f_2.f_1 < 10)
-			func_7(fLocal_27, fLocal_28, "CELL_506" /*~1~:0~1~*/, Global_23713[uLocal_16[num] /*9*/].f_2.f_2, Global_23713[uLocal_16[num] /*9*/].f_2.f_1);
+		if (Global_23730[uLocal_16[num] /*9*/].f_2.f_1 < 10)
+			func_7(fLocal_27, fLocal_28, "CELL_506" /*~1~:0~1~*/, Global_23730[uLocal_16[num] /*9*/].f_2.f_2, Global_23730[uLocal_16[num] /*9*/].f_2.f_1);
 		else
-			func_7(fLocal_27, fLocal_28, "CELL_503" /*~1~:~1~*/, Global_23713[uLocal_16[num] /*9*/].f_2.f_2, Global_23713[uLocal_16[num] /*9*/].f_2.f_1);
+			func_7(fLocal_27, fLocal_28, "CELL_503" /*~1~:~1~*/, Global_23730[uLocal_16[num] /*9*/].f_2.f_2, Global_23730[uLocal_16[num] /*9*/].f_2.f_1);
 	
 		fLocal_27 = fLocal_27 + 0.07f;
 		func_10(255, 255, 255, 205);
-		func_7(fLocal_27, fLocal_28, "CELL_505" /*~1~/~1~*/, Global_23713[uLocal_16[num] /*9*/].f_2.f_3, Global_23713[uLocal_16[num] /*9*/].f_2.f_4);
+		func_7(fLocal_27, fLocal_28, "CELL_505" /*~1~/~1~*/, Global_23730[uLocal_16[num] /*9*/].f_2.f_3, Global_23730[uLocal_16[num] /*9*/].f_2.f_4);
 		fLocal_27 = fLocal_25;
 		func_10(255, 255, 255, 205);
 	
@@ -384,7 +384,7 @@ void func_15() // Position - 0x6DC (1756)
 	
 		fLocal_28 = fLocal_28 + 0.02f;
 		HUD::SET_TEXT_WRAP(0f, 0.93f);
-		func_8(fLocal_27, fLocal_28, &Global_23544[Global_23713[uLocal_16[num] /*9*/].f_1 /*42*/], 0);
+		func_8(fLocal_27, fLocal_28, &Global_23561[Global_23730[uLocal_16[num] /*9*/].f_1 /*42*/], 0);
 		fLocal_28 = fLocal_28 + 0.05f;
 		num = num + 1;
 	}
@@ -448,17 +448,17 @@ void func_18() // Position - 0x8FD (2301)
 	{
 		num = 0;
 		num2 = 3;
-		Global_23713[num2 /*9*/].f_2 = -1;
-		Global_23713[num2 /*9*/].f_2.f_1 = 0;
-		Global_23713[num2 /*9*/].f_2.f_2 = 0;
-		Global_23713[num2 /*9*/].f_2.f_3 = 0;
-		Global_23713[num2 /*9*/].f_2.f_5 = 0;
+		Global_23730[num2 /*9*/].f_2 = -1;
+		Global_23730[num2 /*9*/].f_2.f_1 = 0;
+		Global_23730[num2 /*9*/].f_2.f_2 = 0;
+		Global_23730[num2 /*9*/].f_2.f_3 = 0;
+		Global_23730[num2 /*9*/].f_2.f_5 = 0;
 	
 		while (num < 4)
 		{
 			if (unk[num] == 0)
-				if (Global_23713[num /*9*/].f_8 != 0)
-					if (func_19(Global_23713[num /*9*/].f_2, Global_23713[num2 /*9*/].f_2))
+				if (Global_23730[num /*9*/].f_8 != 0)
+					if (func_19(Global_23730[num /*9*/].f_2, Global_23730[num2 /*9*/].f_2))
 						num2 = num;
 		
 			num = num + 1;
@@ -467,11 +467,11 @@ void func_18() // Position - 0x8FD (2301)
 		uLocal_16[i] = num2;
 		unk[num2] = 1;
 	
-		if (Global_23713[i /*9*/].f_8 != 0)
+		if (Global_23730[i /*9*/].f_8 != 0)
 			iLocal_21 = iLocal_21 + 1;
 	}
 
-	func_12(Global_21047, "SET_DATA_SLOT", 14f, 0f, 25f, -1f, -1f, "CELL_287" /*Send Photo(s)*/, "CELL_280" /*Take Photo*/, 0, 0, 0);
+	func_12(Global_21064, "SET_DATA_SLOT", 14f, 0f, 25f, -1f, -1f, "CELL_287" /*Send Photo(s)*/, "CELL_280" /*Take Photo*/, 0, 0, 0);
 	return;
 }
 

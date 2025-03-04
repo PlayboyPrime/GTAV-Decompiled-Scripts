@@ -214,14 +214,14 @@ void func_6(var uParam0) // Position - 0x1DB (475)
 
 int _SHOULD_NETWORK_SCRIPT_TERMINATE() // Position - 0x214 (532)
 {
-	if (Global_1575056 == false)
+	if (Global_1575058 == false)
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			return 1;
 
 	if (func_14())
 		return 1;
 
-	if (Global_2699004)
+	if (Global_2699022)
 		return 1;
 
 	if (func_13())
@@ -260,7 +260,7 @@ Hash _GET_CURRENT_SESSION_TYPE_SCRIPT_HASH() // Position - 0x298 (664)
 
 Hash func_9() // Position - 0x2CB (715)
 {
-	switch (Global_2699111)
+	switch (Global_2699130)
 	{
 		case 0:
 			return joaat("freemode");
@@ -274,12 +274,12 @@ Hash func_9() // Position - 0x2CB (715)
 
 int func_10() // Position - 0x2EF (751)
 {
-	return Global_33087;
+	return Global_33105;
 }
 
 BOOL func_11() // Position - 0x2FA (762)
 {
-	return Global_2684718.f_700;
+	return Global_2684721.f_700;
 }
 
 BOOL _DOES_EVENT_OF_TYPE_EXIST(int iParam0) // Position - 0x309 (777)
@@ -292,12 +292,12 @@ BOOL _DOES_EVENT_OF_TYPE_EXIST(int iParam0) // Position - 0x309 (777)
 
 BOOL func_13() // Position - 0x320 (800)
 {
-	return Global_2696416;
+	return Global_2696433;
 }
 
 BOOL func_14() // Position - 0x32C (812)
 {
-	return Global_2684718.f_695;
+	return Global_2684721.f_695;
 }
 
 void func_15() // Position - 0x33B (827)
@@ -312,7 +312,7 @@ void func_16() // Position - 0x348 (840)
 	_NETWORK_ENSURE_SCRIPT_IS_NETWORKED(0, -1, false);
 	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&uLocal_33, 21, 0);
 
-	if (!_NETWORK_WAIT_FOR_HOST_BROADCAST_DATA())
+	if (!func_17())
 		func_3();
 
 	MISC::SET_THIS_SCRIPT_CAN_BE_PAUSED(false);
@@ -323,16 +323,14 @@ void func_16() // Position - 0x348 (840)
 	return;
 }
 
-BOOL _NETWORK_WAIT_FOR_HOST_BROADCAST_DATA() // Position - 0x38C (908)
+BOOL func_17() // Position - 0x38C (908)
 {
-	int num;
+	var unk;
 
-	num = 0;
+	_STOPWATCH_INITIALIZE(&unk, true, false);
 
 	while (true)
 	{
-		num = num + 1;
-	
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			return false;
 	
@@ -345,7 +343,7 @@ BOOL _NETWORK_WAIT_FOR_HOST_BROADCAST_DATA() // Position - 0x38C (908)
 		if (_DOES_EVENT_OF_TYPE_EXIST(157))
 			return false;
 	
-		if (num >= 3600)
+		if (_STOPWATCH_HAS_TIME_PASSED(&unk, 120000, true))
 			return false;
 	
 		SYSTEM::WAIT(0);
@@ -354,7 +352,41 @@ BOOL _NETWORK_WAIT_FOR_HOST_BROADCAST_DATA() // Position - 0x38C (908)
 	return false;
 }
 
-int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTerminate) // Position - 0x3E5 (997)
+BOOL _STOPWATCH_HAS_TIME_PASSED(var pStopwatch, int millis, BOOL useLocalTimer) // Position - 0x3EA (1002)
+{
+	if (millis == -1)
+		return true;
+
+	_STOPWATCH_INITIALIZE(pStopwatch, useLocalTimer, false);
+
+	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !useLocalTimer)
+		if (MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), *pStopwatch)) >= millis)
+			return true;
+	else if (MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(MISC::GET_GAME_TIMER(), *pStopwatch)) >= millis)
+		return true;
+
+	return false;
+}
+
+void _STOPWATCH_INITIALIZE(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateTime) // Position - 0x448 (1096)
+{
+	if (pStopwatch->f_1 == 0)
+	{
+		if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !useLocalTimer)
+			if (!useAccurateTime)
+				*pStopwatch = NETWORK::GET_NETWORK_TIME();
+			else
+				*pStopwatch = NETWORK::GET_NETWORK_TIME_ACCURATE();
+		else
+			*pStopwatch = MISC::GET_GAME_TIMER();
+	
+		pStopwatch->f_1 = 1;
+	}
+
+	return;
+}
+
+int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTerminate) // Position - 0x48D (1165)
 {
 	int i;
 
@@ -366,7 +398,7 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 			else
 				return 0;
 	
-		if (!func_19(false))
+		if (!func_21(false))
 		{
 			if (iParam0 == 0)
 			{
@@ -418,9 +450,9 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 	return 1;
 }
 
-BOOL func_19(BOOL bParam0) // Position - 0x4FB (1275)
+BOOL func_21(BOOL bParam0) // Position - 0x5A3 (1443)
 {
 	bParam0;
-	return Global_1575056;
+	return Global_1575058;
 }
 

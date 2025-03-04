@@ -1864,7 +1864,7 @@ void func_33(var uParam0) // Position - 0x1C43 (7235)
 
 int func_34() // Position - 0x1CC4 (7364)
 {
-	return func_35(Global_112842.f_20, Global_112842.f_29);
+	return func_35(Global_112869.f_20, Global_112869.f_29);
 }
 
 int func_35(int iParam0, int iParam1) // Position - 0x1CDC (7388)
@@ -1888,7 +1888,7 @@ int func_35(int iParam0, int iParam1) // Position - 0x1CDC (7388)
 
 var func_36() // Position - 0x1D16 (7446)
 {
-	return Global_112842.f_20;
+	return Global_112869.f_20;
 }
 
 void func_37(var uParam0) // Position - 0x1D24 (7460)
@@ -1964,7 +1964,7 @@ void func_40(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 
 void func_41(int iParam0) // Position - 0x1E61 (7777)
 {
-	Global_112842.f_22 = iParam0;
+	Global_112869.f_22 = iParam0;
 	return;
 }
 

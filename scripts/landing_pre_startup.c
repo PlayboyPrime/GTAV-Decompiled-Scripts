@@ -25,6 +25,125 @@ void main() // Position - 0x0 (0)
 	iLocal_9 = 1;
 	iLocal_10 = 12;
 	iLocal_11 = 12;
+	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
+
+	if (unk_0x7F87B6CE3D8D9DD8())
+	{
+		SCRIPT::REQUEST_SCRIPT(func_4());
+		func_2(0);
+	}
+
+	while (unk_0xB37FC2FB7418367C())
+	{
+		SYSTEM::WAIT(0);
+	}
+
+	while (!unk_0x0E50FCE4525E3D72())
+	{
+		SYSTEM::WAIT(0);
+	}
+
+	func_1();
 	return;
+}
+
+void func_1() // Position - 0x66 (102)
+{
+	char* scriptName;
+
+	scriptName = func_4();
+	SCRIPT::REQUEST_SCRIPT(scriptName);
+
+	while (!SCRIPT::HAS_SCRIPT_LOADED(scriptName))
+	{
+		SCRIPT::REQUEST_SCRIPT(scriptName);
+		SYSTEM::WAIT(0);
+	}
+
+	SYSTEM::START_NEW_SCRIPT(scriptName, DEFAULT);
+	SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED(scriptName);
+	return;
+}
+
+void func_2(int iParam0) // Position - 0xA2 (162)
+{
+	int i;
+
+	for (i = 0; i < 13; i = i + 1)
+	{
+		SCRIPT::REQUEST_SCRIPT_WITH_NAME_HASH(func_3(i));
+	}
+
+	switch (iParam0)
+	{
+		case 0:
+			SCRIPT::REQUEST_SCRIPT_WITH_NAME_HASH(joaat("standard_global_reg"));
+			SCRIPT::REQUEST_SCRIPT_WITH_NAME_HASH(joaat("standard_global_init"));
+			break;
+	}
+
+	return;
+}
+
+Hash func_3(int iParam0) // Position - 0xE9 (233)
+{
+	switch (iParam0)
+	{
+		case 0:
+			return joaat("mp_registration");
+	
+		case 1:
+			return joaat("mp_fm_registration");
+	
+		case 2:
+			return joaat("tunables_registration");
+	
+		case 3:
+			return joaat("sc_lb_global_block");
+	
+		case 4:
+			return joaat("mp_save_game_global_block");
+	
+		case 5:
+			return joaat("mp_prop_global_block");
+	
+		case 6:
+			return joaat("mp_prop_special_global_block");
+	
+		case 7:
+			return joaat("title_update_registration");
+	
+		case 8:
+			return joaat("title_update_registration_2");
+	
+		case 9:
+			return joaat("globals_fmmc_struct_registration");
+	
+		case 10:
+			return joaat("globals_fmmcstruct2_registration");
+	
+		case 11:
+			return joaat("sp_dlc_registration");
+	
+		case 12:
+			return joaat("sp_pilotschool_reg");
+	
+		default:
+		
+	}
+
+	return -1;
+}
+
+char* func_4() // Position - 0x1AF (431)
+{
+	char* str;
+
+	str = "startup";
+
+	if (!unk_0x7F87B6CE3D8D9DD8())
+		str = "startup_install";
+
+	return str;
 }
 

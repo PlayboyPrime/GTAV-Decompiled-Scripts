@@ -161,7 +161,7 @@ void main() // Position - 0x0 (0)
 				break;
 		
 			case 4:
-				if (Global_98591)
+				if (Global_98616)
 					iLocal_96 = 5;
 			
 				func_4();

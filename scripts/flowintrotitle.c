@@ -7,11 +7,11 @@
 void main() // Position - 0x0 (0)
 {
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(83))
-		func_10();
+		func_9();
 
 	STREAMING::SET_GAME_PAUSES_FOR_STREAMING(false);
-	MISC::CLEAR_BIT(&(Global_114135.f_10020.f_25), 1);
-	func_7();
+	MISC::CLEAR_BIT(&(Global_114162.f_10020.f_25), 1);
+	func_6();
 	SCRIPT::SET_NO_LOADING_SCREEN(true);
 
 	if (!CAM::IS_SCREEN_FADED_OUT())
@@ -21,24 +21,24 @@ void main() // Position - 0x0 (0)
 
 	while (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(iLocal_0))
 	{
-		func_7();
+		func_6();
 		SYSTEM::WAIT(0);
 	}
 
 	while (!CAM::IS_SCREEN_FADED_OUT())
 	{
-		func_7();
+		func_6();
 		SYSTEM::WAIT(0);
 	}
 
-	func_6("TITLE", 0f, 1f, 1.5f, 1f, 0f, 1.5f, 15f);
+	func_5("TITLE", 0f, 1f, 1.5f, 1f, 0f, 1.5f, 15f);
 	iLocal_1 = MISC::GET_GAME_TIMER() + 8000 + SYSTEM::ROUND(2f * 1000f);
 
 	while (!CUTSCENE::IS_CUTSCENE_PLAYING())
 	{
-		func_7();
+		func_6();
 	
-		if (!IS_BIT_SET(Global_114135.f_10020.f_25, 1))
+		if (!IS_BIT_SET(Global_114162.f_10020.f_25, 1))
 		{
 			GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(iLocal_0, 255, 255, 255, 255, 0);
 		
@@ -46,71 +46,57 @@ void main() // Position - 0x0 (0)
 			{
 				if (MISC::GET_GAME_TIMER() > iLocal_1)
 				{
-					func_5("TITLE");
+					func_4("TITLE");
 					bLocal_2 = true;
 					iLocal_1 = MISC::GET_GAME_TIMER() + SYSTEM::ROUND(2f * 1000f);
 				}
 			}
 			else if (MISC::GET_GAME_TIMER() > iLocal_1)
 			{
-				MISC::SET_BIT(&(Global_114135.f_10020.f_25), 1);
-			
-				if (MISC::HAS_GAME_INSTALLED_THIS_SESSION() || MISC::IS_PC_VERSION())
-				{
-					func_4(1, 1);
-					func_2();
-				}
-				else
-				{
-					func_1();
-				}
+				MISC::SET_BIT(&(Global_114162.f_10020.f_25), 1);
+				func_3(1, 1);
+				func_1();
 			}
 		}
 	
 		SYSTEM::WAIT(0);
 	}
 
-	func_10();
+	func_9();
 	return;
 }
 
-void func_1() // Position - 0x13B (315)
-{
-	Global_101727 = 1;
-	return;
-}
-
-int func_2() // Position - 0x148 (328)
+int func_1() // Position - 0x123 (291)
 {
 	if (_IS_MISSION_REPEAT_ACTIVE(false))
 		return 0;
 
-	if (Global_101727.f_8)
-		if (Global_101727.f_10 > 0)
+	if (Global_101752.f_8)
+		if (Global_101752.f_10 > 0)
 			return 0;
-	else if (Global_101727.f_10 > 1)
+	else if (Global_101752.f_10 > 1)
 		return 0;
 
-	Global_101727.f_10 = Global_101727.f_10 + 1;
+	Global_101752.f_10 = Global_101752.f_10 + 1;
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x193 (403)
+BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x16E (366)
 {
 	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
-	return IS_BIT_SET(Global_79788, 0);
+	return IS_BIT_SET(Global_79813, 0);
 }
 
-void func_4(int iParam0, int iParam1) // Position - 0x1BB (443)
+void func_3(int iParam0, int iParam1) // Position - 0x196 (406)
 {
-	Global_101727.f_7 = iParam0;
-	Global_101727.f_8 = iParam1;
+	Global_101752.f_7 = iParam0;
+	Global_101752.f_8 = iParam1;
 	return;
 }
 
-void func_5(char* sParam0) // Position - 0x1D3 (467)
+void func_4(char* sParam0) // Position - 0x1AE (430)
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iLocal_0, "HIDE_LOGO");
 	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING("STRING");
@@ -120,7 +106,7 @@ void func_5(char* sParam0) // Position - 0x1D3 (467)
 	return;
 }
 
-void func_6(char* sParam0, float fParam1, float fParam2, float fParam3, float fParam4, float fParam5, float fParam6, float fParam7) // Position - 0x1FA (506)
+void func_5(char* sParam0, float fParam1, float fParam2, float fParam3, float fParam4, float fParam5, float fParam6, float fParam7) // Position - 0x1D5 (469)
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iLocal_0, "SHOW_LOGO");
 	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING("STRING");
@@ -137,31 +123,31 @@ void func_6(char* sParam0, float fParam1, float fParam2, float fParam3, float fP
 	return;
 }
 
-void func_7() // Position - 0x24B (587)
+void func_6() // Position - 0x226 (550)
 {
 	HUD::HIDE_LOADING_ON_FADE_THIS_FRAME();
 	PAD::DISABLE_CONTROL_ACTION(FRONTEND_CONTROL, INPUT_FRONTEND_PAUSE, true);
 	GRAPHICS::SET_SCRIPT_GFX_DRAW_ORDER(7);
+	func_7();
+	return;
+}
+
+void func_7() // Position - 0x243 (579)
+{
+	RECORDING::REPLAY_PREVENT_RECORDING_THIS_FRAME();
 	func_8();
 	return;
 }
 
-void func_8() // Position - 0x268 (616)
+void func_8() // Position - 0x253 (595)
 {
-	RECORDING::REPLAY_PREVENT_RECORDING_THIS_FRAME();
-	func_9();
+	Global_23848.f_134 = 1;
 	return;
 }
 
-void func_9() // Position - 0x278 (632)
+void func_9() // Position - 0x261 (609)
 {
-	Global_23831.f_134 = 1;
-	return;
-}
-
-void func_10() // Position - 0x286 (646)
-{
-	MISC::SET_BIT(&(Global_114135.f_10020.f_25), 1);
+	MISC::SET_BIT(&(Global_114162.f_10020.f_25), 1);
 
 	if (iLocal_0 != 0)
 		GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_0);
