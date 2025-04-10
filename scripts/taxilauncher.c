@@ -465,7 +465,7 @@ void func_5() // Position - 0x22D (557)
 	STREAMING::REMOVE_ANIM_DICT(&uLocal_268);
 
 	if (iLocal_93 != -1)
-		_CONTEXT_REMOVE_HELP_TEXT(&iLocal_93);
+		func_8(&iLocal_93);
 
 	if (_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("TXM_H01" /*Press ~INPUT_CONTEXT~ to hail a taxi.*/))
 	{
@@ -610,7 +610,7 @@ BOOL _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(char* message) // Position - 0x62A (1
 	return HUD::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(0);
 }
 
-void _CONTEXT_REMOVE_HELP_TEXT(var uParam0) // Position - 0x63D (1597)
+void func_8(var uParam0) // Position - 0x63D (1597)
 {
 	int num;
 
@@ -1606,7 +1606,7 @@ void func_43() // Position - 0x1809 (6153)
 			}
 		
 			if (iLocal_93 != -1)
-				_CONTEXT_REMOVE_HELP_TEXT(&iLocal_93);
+				func_8(&iLocal_93);
 		
 			iLocal_53 = 0;
 		}
@@ -1975,7 +1975,7 @@ BOOL func_54(Ped pedParam0, BOOL bParam1) // Position - 0x1EF5 (7925)
 		}
 	}
 
-	if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+	if (func_55())
 	{
 		func_56("\\ntaxi_functions - IS_ANY_DIALOGUE_PLAYING - IS_ANY_CONVERSATION_ONGOING_OR_QUEUED()\\n");
 		return true;
@@ -2018,7 +2018,7 @@ BOOL func_54(Ped pedParam0, BOOL bParam1) // Position - 0x1EF5 (7925)
 	return false;
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x1FD0 (8144)
+BOOL func_55() // Position - 0x1FD0 (8144)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -2079,7 +2079,7 @@ void func_58() // Position - 0x2013 (8211)
 							func_60();
 							func_59();
 							iLocal_95 = MISC::GET_GAME_TIMER();
-							_CONTEXT_REMOVE_HELP_TEXT(&iLocal_93);
+							func_8(&iLocal_93);
 						
 							if (func_63(&veLocal_276))
 							{
@@ -2285,7 +2285,7 @@ void _CONTEXT_ADD_HELP_TEXT(var uParam0, int iParam1, char* sParam2, int iParam3
 	if (STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS())
 	{
 		if (!(*uParam0 == -1))
-			_CONTEXT_REMOVE_HELP_TEXT(uParam0);
+			func_8(uParam0);
 	
 		return;
 	}
@@ -5805,11 +5805,11 @@ BOOL func_126(int iParam0, int iParam1) // Position - 0x863E (34366)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_127() // Position - 0x8676 (34422)

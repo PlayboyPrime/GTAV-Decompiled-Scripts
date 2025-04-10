@@ -498,14 +498,14 @@ void main() // Position - 0x0 (0)
 									}
 									else if (!func_111(iLocal_92, 2048) || !HUD::IS_HELP_MESSAGE_BEING_DISPLAYED())
 									{
-										_CONTEXT_REMOVE_HELP_TEXT(&iLocal_94);
+										func_67(&iLocal_94);
 										func_113(&iLocal_92, 2048);
 									}
 								
 									if (func_65(iLocal_94, true))
 									{
 										sLocal_99 = sLocal_99;
-										_CONTEXT_REMOVE_HELP_TEXT(&iLocal_94);
+										func_67(&iLocal_94);
 										func_113(&iLocal_92, 2048);
 										SCRIPT::REQUEST_SCRIPT(&uLocal_67);
 										PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), false, SPC_REMOVE_FIRES | 16 | 32);
@@ -515,7 +515,7 @@ void main() // Position - 0x0 (0)
 								else
 								{
 									sLocal_99 = sLocal_99;
-									_CONTEXT_REMOVE_HELP_TEXT(&iLocal_94);
+									func_67(&iLocal_94);
 									func_113(&iLocal_92, 2048);
 									SCRIPT::REQUEST_SCRIPT(&uLocal_67);
 									PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), false, SPC_REMOVE_FIRES | 16 | 32);
@@ -528,7 +528,7 @@ void main() // Position - 0x0 (0)
 						{
 							if (iLocal_94 != -1)
 							{
-								_CONTEXT_REMOVE_HELP_TEXT(&iLocal_94);
+								func_67(&iLocal_94);
 								func_113(&iLocal_92, 2048);
 								HUD::CLEAR_HELP(false);
 							}
@@ -544,7 +544,7 @@ void main() // Position - 0x0 (0)
 					if (SCRIPT::HAS_SCRIPT_LOADED(&uLocal_67))
 					{
 						if (iLocal_94 != -1)
-							_CONTEXT_REMOVE_HELP_TEXT(&iLocal_94);
+							func_67(&iLocal_94);
 					
 						num = 2;
 						flag = false;
@@ -713,7 +713,7 @@ void main() // Position - 0x0 (0)
 						func_105(iLocal_103, false, false);
 				
 					if (iLocal_94 != -1)
-						_CONTEXT_REMOVE_HELP_TEXT(&iLocal_94);
+						func_67(&iLocal_94);
 				
 					if (!MISC::IS_STRING_NULL_OR_EMPTY(sLocal_99))
 						if (_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(sLocal_99))
@@ -918,11 +918,11 @@ void func_9() // Position - 0xE59 (3673)
 {
 	var textLabel;
 
-	if (MISC::IS_XBOX360_VERSION() || IS_XBOX_PLATFORM())
+	if (MISC::IS_XBOX360_VERSION() || func_11())
 	{
 		NETWORK::NETWORK_SET_RICH_PRESENCE(StackVal, 0, 0, 0);
 	}
-	else if (MISC::IS_PS3_VERSION() || IS_PLAYSTATION_PLATFORM() || MISC::IS_PC_VERSION())
+	else if (MISC::IS_PS3_VERSION() || func_10() || MISC::IS_PC_VERSION())
 	{
 		TEXT_LABEL_ASSIGN_STRING(&textLabel, "PRESENCE_0_STR" /*Playing story*/, 24);
 		NETWORK::NETWORK_SET_RICH_PRESENCE_STRING(0, &textLabel);
@@ -931,12 +931,12 @@ void func_9() // Position - 0xE59 (3673)
 	return;
 }
 
-BOOL IS_PLAYSTATION_PLATFORM() // Position - 0xEA5 (3749)
+BOOL func_10() // Position - 0xEA5 (3749)
 {
 	return MISC::IS_ORBIS_VERSION() || MISC::IS_PROSPERO_VERSION();
 }
 
-BOOL IS_XBOX_PLATFORM() // Position - 0xEBB (3771)
+BOOL func_11() // Position - 0xEBB (3771)
 {
 	return MISC::IS_DURANGO_VERSION() || MISC::IS_SCARLETT_VERSION();
 }
@@ -1015,13 +1015,13 @@ void func_19(char* sParam0, int iParam1, int iParam2) // Position - 0xFA6 (4006)
 	}
 
 	TEXT_LABEL_ASSIGN_STRING(&Global_98758, sParam0, 64);
-	STATS::PLAYSTATS_MISSION_STARTED(sParam0, iParam1, iParam2, _IS_MISSION_REPEAT_ACTIVE(false));
+	STATS::PLAYSTATS_MISSION_STARTED(sParam0, iParam1, iParam2, func_20(false));
 	return;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0xFE7 (4071)
+BOOL func_20(BOOL bParam0) // Position - 0xFE7 (4071)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -1100,12 +1100,12 @@ void func_22(int iParam0) // Position - 0x114D (4429)
 	int num;
 	var textLabel;
 
-	if (MISC::IS_XBOX360_VERSION() || IS_XBOX_PLATFORM())
+	if (MISC::IS_XBOX360_VERSION() || func_11())
 	{
 		num = iParam0;
 		NETWORK::NETWORK_SET_RICH_PRESENCE(8, &num, 1, 1);
 	}
-	else if (MISC::IS_PS3_VERSION() || IS_PLAYSTATION_PLATFORM() || MISC::IS_PC_VERSION())
+	else if (MISC::IS_PS3_VERSION() || func_10() || MISC::IS_PC_VERSION())
 	{
 		TEXT_LABEL_ASSIGN_STRING(&textLabel, "SPMG_", 24);
 		TEXT_LABEL_APPEND_INT(&textLabel, iParam0, 24);
@@ -1290,7 +1290,7 @@ void func_30(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uPa
 		
 			if (flag)
 			{
-				if (!_IS_NULL_VECTOR(fParam11))
+				if (!func_31(fParam11))
 				{
 					if (VEHICLE::IS_VEHICLE_DRIVEABLE(playersLastVehicle, false))
 					{
@@ -1393,7 +1393,7 @@ void func_30(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uPa
 	return;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x1801 (6145)
+BOOL func_31(float fParam0, var uParam1, var uParam2) // Position - 0x1801 (6145)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -2076,12 +2076,12 @@ void func_61(BOOL bParam0, BOOL bParam1) // Position - 0x2575 (9589)
 
 BOOL func_62() // Position - 0x25E9 (9705)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_63() // Position - 0x25F7 (9719)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_64(char* sParam0) // Position - 0x2606 (9734)
@@ -2149,7 +2149,7 @@ int func_66(int iParam0) // Position - 0x26D4 (9940)
 	return -1;
 }
 
-void _CONTEXT_REMOVE_HELP_TEXT(var uParam0) // Position - 0x270F (9999)
+void func_67(var uParam0) // Position - 0x270F (9999)
 {
 	int num;
 
@@ -2187,7 +2187,7 @@ void _CONTEXT_ADD_HELP_TEXT(var uParam0, int iParam1, char* sParam2, int iParam3
 	if (STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS())
 	{
 		if (!(*uParam0 == -1))
-			_CONTEXT_REMOVE_HELP_TEXT(uParam0);
+			func_67(uParam0);
 	
 		return;
 	}
@@ -2270,11 +2270,11 @@ BOOL func_72(int iParam0, int iParam1) // Position - 0x2901 (10497)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 BOOL func_73() // Position - 0x2939 (10553)
@@ -2872,7 +2872,7 @@ void func_115(BOOL bParam0) // Position - 0x3871 (14449)
 		if (iLocal_103 != 263)
 			func_105(iLocal_103, 0, false);
 
-	_CONTEXT_REMOVE_HELP_TEXT(&iLocal_94);
+	func_67(&iLocal_94);
 
 	if (func_111(iLocal_92, 2))
 	{

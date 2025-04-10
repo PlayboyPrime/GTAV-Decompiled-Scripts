@@ -3020,9 +3020,9 @@ void func_65() // Position - 0x31AB (12715)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -3195,11 +3195,11 @@ BOOL func_76(int iParam0, int iParam1) // Position - 0x34F5 (13557)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_77() // Position - 0x352D (13613)
@@ -4363,7 +4363,7 @@ void func_131(BOOL bParam0, BOOL bParam1) // Position - 0x4BA1 (19361)
 
 BOOL func_132() // Position - 0x4C15 (19477)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_133(int iParam0) // Position - 0x4C23 (19491)
@@ -4388,7 +4388,7 @@ BOOL func_133(int iParam0) // Position - 0x4C23 (19491)
 
 BOOL func_134() // Position - 0x4C7A (19578)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 int func_135(var uParam0, char* sParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6) // Position - 0x4C89 (19593)
@@ -31896,11 +31896,11 @@ struct<5> func_248(int iParam0) // Position - 0x1EEF7 (126711)
 			break;
 	}
 
-	_IS_NULL_VECTOR(unk);
+	func_249(unk);
 	return unk;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x21B59 (138073)
+BOOL func_249(float fParam0, var uParam1, var uParam2) // Position - 0x21B59 (138073)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -32659,7 +32659,7 @@ void func_269() // Position - 0x22CAA (142506)
 	if (SCRIPT::HAS_SCRIPT_LOADED("buddyDeathResponse"))
 		SYSTEM::START_NEW_SCRIPT("buddyDeathResponse", DEFAULT);
 
-	if (Global_114162.f_9089 || _IS_MISSION_REPEAT_ACTIVE(false))
+	if (Global_114162.f_9089 || func_278(false))
 	{
 		if (!func_277())
 		{
@@ -33217,9 +33217,9 @@ BOOL func_277() // Position - 0x23ACB (146123)
 	return true;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x23B09 (146185)
+BOOL func_278(BOOL bParam0) // Position - 0x23B09 (146185)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -33236,7 +33236,7 @@ void func_279(BOOL bParam0, BOOL bParam1) // Position - 0x23B31 (146225)
 
 	if (bParam0)
 	{
-		if (_IS_MISSION_REPEAT_ACTIVE(false) && Global_79811.f_1 == 1 && func_280(Global_79811))
+		if (func_278(false) && Global_79811.f_1 == 1 && func_280(Global_79811))
 		{
 		}
 		else
@@ -33245,7 +33245,7 @@ void func_279(BOOL bParam0, BOOL bParam1) // Position - 0x23B31 (146225)
 		}
 	}
 
-	if (Global_114162.f_9089 || _IS_MISSION_REPEAT_ACTIVE(false))
+	if (Global_114162.f_9089 || func_278(false))
 	{
 		num = func_276();
 		num2 = Global_92440[num /*5*/];

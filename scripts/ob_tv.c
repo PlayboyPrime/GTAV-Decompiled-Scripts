@@ -203,7 +203,7 @@ void main() // Position - 0x0 (0)
 								if (func_45() || Global_33166[iLocal_41 /*11*/].f_5)
 									iLocal_27 = 2;
 							else
-								_CONTEXT_REMOVE_HELP_TEXT(&iLocal_40);
+								func_44(&iLocal_40);
 							break;
 					
 						case 2:
@@ -211,7 +211,7 @@ void main() // Position - 0x0 (0)
 						
 							if (!func_65(iLocal_41))
 							{
-								_CONTEXT_REMOVE_HELP_TEXT(&iLocal_40);
+								func_44(&iLocal_40);
 							
 								if (_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("TV_HLP1" /*Press ~INPUT_CONTEXT~ to turn on the TV.*/))
 									HUD::CLEAR_HELP(true);
@@ -306,7 +306,7 @@ void main() // Position - 0x0 (0)
 							func_1();
 						
 							if (iLocal_40 != -1)
-								_CONTEXT_REMOVE_HELP_TEXT(&iLocal_40);
+								func_44(&iLocal_40);
 						
 							Global_33166[iLocal_41 /*11*/].f_5 = 0;
 							Global_33166[iLocal_41 /*11*/].f_4 = 0;
@@ -637,7 +637,7 @@ BOOL func_16() // Position - 0xA0A (2570)
 			}
 			else if (func_27(iLocal_40, true))
 			{
-				_CONTEXT_REMOVE_HELP_TEXT(&iLocal_40);
+				func_44(&iLocal_40);
 				func_56(&uLocal_24);
 				Global_33166[iLocal_41 /*11*/].f_7 = 0;
 			
@@ -655,7 +655,7 @@ BOOL func_16() // Position - 0xA0A (2570)
 				HUD::CLEAR_HELP(true);
 		
 			func_2();
-			_CONTEXT_REMOVE_HELP_TEXT(&iLocal_40);
+			func_44(&iLocal_40);
 		}
 	}
 
@@ -670,7 +670,7 @@ void func_17() // Position - 0xB16 (2838)
 	
 		if (PAD::IS_CONTROL_JUST_PRESSED(FRONTEND_CONTROL, INPUT_SCRIPT_RUP))
 		{
-			_CONTEXT_REMOVE_HELP_TEXT(&iLocal_40);
+			func_44(&iLocal_40);
 			_CONTEXT_ADD_HELP_TEXT(&iLocal_40, 3, "TV_HLP6" /*Press ~INPUT_SCRIPT_RUP~ to stop using the TV controls.~n~Use ~INPUT_SCRIPT_LEFT_AXIS_X~ to change the channel.~n~Use ~INPUT_SCRIPT_LEFT_AXIS_Y~ to change the volume.~n~Press ~INPUT_CONTEXT~ to turn off the TV.~n~*/, 0, 0, 0, 0);
 			func_26();
 		}
@@ -694,7 +694,7 @@ void func_17() // Position - 0xB16 (2838)
 	
 		if (PAD::IS_CONTROL_JUST_PRESSED(FRONTEND_CONTROL, INPUT_SCRIPT_RUP) || PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL) && PAD::IS_DISABLED_CONTROL_JUST_RELEASED(FRONTEND_CONTROL, INPUT_FRONTEND_PAUSE_ALTERNATE))
 		{
-			_CONTEXT_REMOVE_HELP_TEXT(&iLocal_40);
+			func_44(&iLocal_40);
 			func_4();
 		}
 	}
@@ -779,7 +779,7 @@ void func_20(BOOL bParam0, BOOL bParam1) // Position - 0xC8D (3213)
 
 BOOL func_21() // Position - 0xD01 (3329)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_22(int iParam0) // Position - 0xD0F (3343)
@@ -804,7 +804,7 @@ BOOL func_22(int iParam0) // Position - 0xD0F (3343)
 
 BOOL func_23() // Position - 0xD66 (3430)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_24(BOOL bParam0, BOOL bParam1) // Position - 0xD75 (3445)
@@ -1024,7 +1024,7 @@ void _CONTEXT_ADD_HELP_TEXT(var uParam0, int iParam1, char* sParam2, int iParam3
 	if (STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS())
 	{
 		if (!(*uParam0 == -1))
-			_CONTEXT_REMOVE_HELP_TEXT(uParam0);
+			func_44(uParam0);
 	
 		return;
 	}
@@ -1091,11 +1091,11 @@ BOOL func_31(int iParam0, int iParam1) // Position - 0x121D (4637)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 float func_32(var uParam0) // Position - 0x1255 (4693)
@@ -1189,7 +1189,7 @@ void func_38() // Position - 0x1381 (4993)
 	if (_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("TV_HLP1" /*Press ~INPUT_CONTEXT~ to turn on the TV.*/) || _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("TV_HLP2" /*Use ~INPUT_SCRIPT_LEFT_AXIS_X~ to change the channel.~n~Use ~INPUT_SCRIPT_LEFT_AXIS_Y~ to change the volume.~n~Press ~INPUT_NEXT_CAMERA~ to change view.~n~Press ~INPUT_CONTEXT~ to stop watching.~n~*/) || _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("TV_HLP5" /*Press ~INPUT_SCRIPT_RUP~ to use the TV controls.~n~Press ~INPUT_CONTEXT~ to turn off the TV.~n~*/) || _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("TV_HLP6" /*Press ~INPUT_SCRIPT_RUP~ to stop using the TV controls.~n~Use ~INPUT_SCRIPT_LEFT_AXIS_X~ to change the channel.~n~Use ~INPUT_SCRIPT_LEFT_AXIS_Y~ to change the volume.~n~Press ~INPUT_CONTEXT~ to turn off the TV.~n~*/))
 		HUD::CLEAR_HELP(true);
 
-	_CONTEXT_REMOVE_HELP_TEXT(&iLocal_40);
+	func_44(&iLocal_40);
 	GRAPHICS::SET_TV_CHANNEL(-1);
 	SYSTEM::WAIT(0);
 	func_3();
@@ -1326,7 +1326,7 @@ BOOL _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(char* message) // Position - 0x15C5 (
 	return HUD::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(0);
 }
 
-void _CONTEXT_REMOVE_HELP_TEXT(var uParam0) // Position - 0x15D8 (5592)
+void func_44(var uParam0) // Position - 0x15D8 (5592)
 {
 	int num;
 
@@ -1359,43 +1359,43 @@ BOOL func_45() // Position - 0x162F (5679)
 {
 	if (func_32(&uLocal_24) < 1f)
 	{
-		_CONTEXT_REMOVE_HELP_TEXT(&iLocal_40);
+		func_44(&iLocal_40);
 		return false;
 	}
 
 	if (!ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), uLocal_86, 1f, 1f, 1.5f, false, true, 0) || !PED::IS_PED_HEADING_TOWARDS_POSITION(PLAYER::PLAYER_PED_ID(), uLocal_29, 90f) || PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()))
 	{
-		_CONTEXT_REMOVE_HELP_TEXT(&iLocal_40);
+		func_44(&iLocal_40);
 		return false;
 	}
 
 	if (INTERIOR::GET_INTERIOR_FROM_ENTITY(obLocal_35) != INTERIOR::GET_INTERIOR_FROM_ENTITY(PLAYER::PLAYER_PED_ID()))
 	{
-		_CONTEXT_REMOVE_HELP_TEXT(&iLocal_40);
+		func_44(&iLocal_40);
 		return false;
 	}
 
 	if (func_31(8, -1))
 	{
-		_CONTEXT_REMOVE_HELP_TEXT(&iLocal_40);
+		func_44(&iLocal_40);
 		return false;
 	}
 
 	if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 	{
-		_CONTEXT_REMOVE_HELP_TEXT(&iLocal_40);
+		func_44(&iLocal_40);
 		return false;
 	}
 
 	if (Global_98616)
 	{
-		_CONTEXT_REMOVE_HELP_TEXT(&iLocal_40);
+		func_44(&iLocal_40);
 		return false;
 	}
 
 	if (Global_33166[iLocal_41 /*11*/].f_8)
 	{
-		_CONTEXT_REMOVE_HELP_TEXT(&iLocal_40);
+		func_44(&iLocal_40);
 		return false;
 	}
 
@@ -1407,7 +1407,7 @@ BOOL func_45() // Position - 0x162F (5679)
 
 	if (func_27(iLocal_40, true))
 	{
-		_CONTEXT_REMOVE_HELP_TEXT(&iLocal_40);
+		func_44(&iLocal_40);
 		func_56(&uLocal_24);
 		Global_33166[iLocal_41 /*11*/].f_7 = 1;
 	
@@ -1636,7 +1636,7 @@ void func_47() // Position - 0x1844 (6212)
 
 int func_48() // Position - 0x1D02 (7426)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_49(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -1649,9 +1649,9 @@ int func_48() // Position - 0x1D02 (7426)
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x1D4D (7501)
+BOOL func_49(BOOL bParam0) // Position - 0x1D4D (7501)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -1987,7 +1987,7 @@ void func_69() // Position - 0x244D (9293)
 	if (iLocal_41 == -1)
 		SCRIPT::TERMINATE_THIS_THREAD();
 
-	_CONTEXT_REMOVE_HELP_TEXT(&iLocal_40);
+	func_44(&iLocal_40);
 
 	if (iLocal_41 != -1)
 	{

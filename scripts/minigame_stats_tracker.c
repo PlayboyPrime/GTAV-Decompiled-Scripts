@@ -467,12 +467,12 @@ BOOL func_15(int iParam0) // Position - 0x6B0 (1712)
 
 BOOL func_16() // Position - 0x707 (1799)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_17() // Position - 0x715 (1813)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_18(const char* sParam0) // Position - 0x724 (1828)

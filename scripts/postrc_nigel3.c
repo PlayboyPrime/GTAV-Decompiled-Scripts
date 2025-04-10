@@ -273,7 +273,7 @@ void func_1() // Position - 0xF6 (246)
 			break;
 	
 		case 1:
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (!func_2())
 			{
 				iLocal_185 = MISC::GET_GAME_TIMER();
 				iLocal_19 = 0;
@@ -284,7 +284,7 @@ void func_1() // Position - 0xF6 (246)
 	return;
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x1A6 (422)
+BOOL func_2() // Position - 0x1A6 (422)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -497,9 +497,9 @@ void func_5() // Position - 0x4E4 (1252)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -677,11 +677,11 @@ BOOL func_17(int iParam0, int iParam1) // Position - 0x83C (2108)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_18() // Position - 0x874 (2164)

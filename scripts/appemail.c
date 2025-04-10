@@ -1001,7 +1001,7 @@ BOOL func_28(var uParam0) // Position - 0x13A1 (5025)
 
 BOOL func_29() // Position - 0x13D0 (5072)
 {
-	return IS_BIT_SET(Global_1668458, 4);
+	return IS_BIT_SET(Global_1668459, 4);
 }
 
 BOOL func_30() // Position - 0x13DE (5086)
@@ -4984,7 +4984,7 @@ void func_98(BOOL bParam0) // Position - 0x5E67 (24167)
 	var b;
 	var a;
 
-	if (MISC::IS_XBOX360_VERSION() || IS_XBOX_PLATFORM())
+	if (MISC::IS_XBOX360_VERSION() || func_99())
 		HUD::GET_HUD_COLOUR(HUD_COLOUR_BLUE, &r, &g, &b, &a);
 	else
 		HUD::GET_HUD_COLOUR(HUD_COLOUR_PINKLIGHT, &r, &g, &b, &a);
@@ -5009,7 +5009,7 @@ void func_98(BOOL bParam0) // Position - 0x5E67 (24167)
 	return;
 }
 
-BOOL IS_XBOX_PLATFORM() // Position - 0x5EE5 (24293)
+BOOL func_99() // Position - 0x5EE5 (24293)
 {
 	return MISC::IS_DURANGO_VERSION() || MISC::IS_SCARLETT_VERSION();
 }
@@ -5021,7 +5021,7 @@ void func_100(BOOL bParam0) // Position - 0x5EFB (24315)
 	var b;
 	var a;
 
-	if (MISC::IS_XBOX360_VERSION() || IS_XBOX_PLATFORM())
+	if (MISC::IS_XBOX360_VERSION() || func_99())
 		HUD::GET_HUD_COLOUR(HUD_COLOUR_RED, &r, &g, &b, &a);
 	else
 		HUD::GET_HUD_COLOUR(HUD_COLOUR_RED, &r, &g, &b, &a);
@@ -5053,7 +5053,7 @@ void func_101(BOOL bParam0) // Position - 0x5F75 (24437)
 	var b;
 	var a;
 
-	if (MISC::IS_XBOX360_VERSION() || IS_XBOX_PLATFORM())
+	if (MISC::IS_XBOX360_VERSION() || func_99())
 		HUD::GET_HUD_COLOUR(HUD_COLOUR_GREEN, &r, &g, &b, &a);
 	else
 		HUD::GET_HUD_COLOUR(HUD_COLOUR_BLUE, &r, &g, &b, &a);

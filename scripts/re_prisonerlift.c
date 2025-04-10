@@ -512,7 +512,7 @@ void main() // Position - 0x0 (0)
 													{
 														if (!bLocal_100)
 														{
-															if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+															if (!func_90())
 															{
 																_CONVERSATION_ADD_LINE(&uLocal_146, "PRI2AU", "PRI2_ASK", 4, 0, 0, 0);
 																bLocal_100 = true;
@@ -659,7 +659,7 @@ void main() // Position - 0x0 (0)
 											func_93();
 										}
 									
-										if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+										if (!func_90())
 											func_16();
 										break;
 								
@@ -1143,7 +1143,7 @@ void func_8() // Position - 0x1256 (4694)
 			
 				if (!bLocal_109)
 				{
-					if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+					if (!func_90())
 					{
 						if (func_9())
 							_CONVERSATION_ADD_LINE(&uLocal_146, "PRI1AU", "PRI1_UVH2", 4, 0, 0, 0);
@@ -1421,7 +1421,7 @@ void func_15() // Position - 0x177A (6010)
 		func_93();
 	}
 
-	if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+	if (!func_90())
 		func_16();
 
 	return;
@@ -1454,7 +1454,7 @@ void func_17() // Position - 0x18CC (6348)
 
 int func_18() // Position - 0x18D9 (6361)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_19(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -1467,9 +1467,9 @@ int func_18() // Position - 0x18D9 (6361)
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x1924 (6436)
+BOOL func_19(BOOL bParam0) // Position - 0x1924 (6436)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -2972,7 +2972,7 @@ void func_65() // Position - 0x3997 (14743)
 			
 				if (iLocal_54 == 0)
 				{
-					if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+					if (!func_90())
 					{
 						if (_CONVERSATION_ADD_LINE(&uLocal_146, "PRI1AU", "PRI1_CH", 4, 0, 0, 0))
 						{
@@ -3113,7 +3113,7 @@ void func_70() // Position - 0x3EAD (16045)
 	{
 		if (!PED::IS_PED_INJURED(pedLocal_70))
 		{
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (!func_90())
 			{
 				if (func_9())
 					_CONVERSATION_ADD_LINE(&uLocal_146, "PRI2AU", "PRI2_THREAT", 4, 0, 0, 0);
@@ -3372,9 +3372,9 @@ void func_76() // Position - 0x4348 (17224)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -3547,11 +3547,11 @@ BOOL func_87(int iParam0, int iParam1) // Position - 0x4692 (18066)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_88() // Position - 0x46CA (18122)
@@ -3609,7 +3609,7 @@ void func_89(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, 
 	return;
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x4777 (18295)
+BOOL func_90() // Position - 0x4777 (18295)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -3683,7 +3683,7 @@ void func_92() // Position - 0x47DA (18394)
 					TASK::TASK_PERFORM_SEQUENCE(pedLocal_70, iLocal_72);
 					TASK::CLEAR_SEQUENCE_TASK(&iLocal_72);
 				
-					if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+					if (!func_90())
 					{
 						if (func_9())
 							_CONVERSATION_ADD_LINE(&uLocal_146, "PRI1AU", "PRI1_UVH2", 4, 0, 0, 0);
@@ -3712,7 +3712,7 @@ void func_92() // Position - 0x47DA (18394)
 					}
 				}
 			
-				if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+				if (!func_90())
 				{
 					if (!PED::IS_PED_INJURED(pedLocal_70))
 					{
@@ -3733,7 +3733,7 @@ void func_92() // Position - 0x47DA (18394)
 					{
 						if (iLocal_54 == 0)
 						{
-							if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+							if (!func_90())
 							{
 								if (_GET_CURRENT_PLAYER_CHARACTER() == CHAR_MICHAEL)
 									if (func_9())
@@ -3782,7 +3782,7 @@ void func_92() // Position - 0x47DA (18394)
 	
 		case 4:
 			if (iLocal_54 == 0)
-				if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+				if (!func_90())
 					if (_CONVERSATION_ADD_LINE(&uLocal_146, "PRI1AU", "PRI1_SH", 4, 0, 0, 0))
 						iLocal_106 = iLocal_106 + 1;
 			else
@@ -5730,7 +5730,7 @@ BOOL func_135(var uParam0, var uParam1, var uParam2, int iParam3, int iParam4, B
 		if (!Global_114162.f_9089)
 			return false;
 	
-		if (_IS_MISSION_REPEAT_ACTIVE(false))
+		if (func_19(false))
 			return false;
 	
 		if (func_125())

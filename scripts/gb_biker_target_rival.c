@@ -835,7 +835,7 @@ int func_26(Player plParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Positio
 
 	playerTeam = PLAYER::GET_PLAYER_TEAM(plParam0);
 
-	if (func_41() || func_40() && func_38() && Global_1685224.f_1)
+	if (func_41() || func_40() && func_38() && Global_1685225.f_1)
 		if (bParam1)
 			return func_37(iParam2, playerTeam);
 		else
@@ -2237,7 +2237,7 @@ void func_91(Player plParam0, int iParam1, BOOL bParam2, BOOL bParam3) // Positi
 void func_92() // Position - 0x28C6 (10438)
 {
 	Global_2647040.f_1656 = 1;
-	Global_1944436.f_4125 = 1;
+	Global_1944438.f_4125 = 1;
 	return;
 }
 

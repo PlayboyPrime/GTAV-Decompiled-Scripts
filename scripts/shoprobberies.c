@@ -1133,7 +1133,7 @@ void func_6() // Position - 0x4C5 (1221)
 			if (iLocal_51 >= 13)
 			{
 				if (pedLocal_66.f_2.f_12)
-					if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+					if (!func_20())
 						iLocal_62 = 7;
 				else
 					iLocal_62 = 8;
@@ -1217,7 +1217,7 @@ void func_6() // Position - 0x4C5 (1221)
 			}
 			else if (func_9(&(pedLocal_66.f_477)) > 1.5f)
 			{
-				if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+				if (!func_20())
 				{
 					if (iLocal_58 != 12)
 					{
@@ -1536,7 +1536,7 @@ void func_19() // Position - 0x106D (4205)
 	return;
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x10F5 (4341)
+BOOL func_20() // Position - 0x10F5 (4341)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -2036,7 +2036,7 @@ void func_37() // Position - 0x1CD9 (7385)
 			break;
 	
 		case 36:
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (!func_20())
 			{
 				if (!ENTITY::IS_ENTITY_DEAD(pedLocal_66.f_2, false))
 					func_48(pedLocal_66.f_2, "SHOP_THREATENED", 3);
@@ -2046,7 +2046,7 @@ void func_37() // Position - 0x1CD9 (7385)
 			break;
 	
 		case 9:
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (!func_20())
 			{
 				if (!ENTITY::IS_ENTITY_DEAD(pedLocal_66.f_2, false))
 					func_48(pedLocal_66.f_2, "BUMP", 3);
@@ -2056,7 +2056,7 @@ void func_37() // Position - 0x1CD9 (7385)
 			break;
 	
 		case 10:
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (!func_20())
 			{
 				if (!ENTITY::IS_ENTITY_DEAD(pedLocal_66.f_2, false))
 					func_48(pedLocal_66.f_2, "GENERIC_FRIGHTENED_HIGH", 3);
@@ -2066,7 +2066,7 @@ void func_37() // Position - 0x1CD9 (7385)
 			break;
 	
 		case 11:
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (!func_20())
 			{
 				if (!ENTITY::IS_ENTITY_DEAD(pedLocal_66.f_2, false))
 					func_48(pedLocal_66.f_2, "SHOP_BRAVE", 3);
@@ -2256,7 +2256,7 @@ void func_37() // Position - 0x1CD9 (7385)
 			break;
 	
 		case 27:
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (!func_20())
 			{
 				if (!ENTITY::IS_ENTITY_DEAD(pedLocal_66.f_2, false))
 					func_48(pedLocal_66.f_2, "SCREAM_PANIC", 3);
@@ -2291,7 +2291,7 @@ void func_37() // Position - 0x1CD9 (7385)
 			break;
 	
 		case 31:
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (!func_20())
 				iLocal_51 = 37;
 			break;
 	
@@ -2317,7 +2317,7 @@ void func_37() // Position - 0x1CD9 (7385)
 			break;
 	
 		case 34:
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (!func_20())
 			{
 				if (!ENTITY::IS_ENTITY_DEAD(pedLocal_66.f_2, false))
 					func_48(pedLocal_66.f_2, "SHOP_SELL", 3);
@@ -2327,7 +2327,7 @@ void func_37() // Position - 0x1CD9 (7385)
 			break;
 	
 		case 35:
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (!func_20())
 			{
 				if (!ENTITY::IS_ENTITY_DEAD(pedLocal_66.f_2, false))
 					func_48(pedLocal_66.f_2, "SHOP_STEAL", 3);
@@ -3275,7 +3275,7 @@ void func_67() // Position - 0x35B4 (13748)
 						HUD::CLEAR_HELP(true);
 				
 					pedLocal_66.f_102.f_22 = -1;
-					_CONTEXT_REMOVE_HELP_TEXT(&(pedLocal_66.f_469));
+					func_202(&(pedLocal_66.f_469));
 					iLocal_64 = 0;
 				}
 				else if (!_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("SHR_MENU" /*Press ~INPUT_CONTEXT~ to shop.~n~*/) && !_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("SHR_HOLDUP_1" /*Rob the cash register by pointing a weapon at the shop clerk.*/) && func_205() && !_CONTEXT_IS_HELP_TEXT_BEING_DISPLAYED(pedLocal_66.f_469, 0))
@@ -3292,7 +3292,7 @@ void func_67() // Position - 0x35B4 (13748)
 					
 						MISC::SET_BIT(&(pedLocal_66.f_162.f_18), 1);
 						func_13(&(pedLocal_66.f_102.f_53));
-						_CONTEXT_REMOVE_HELP_TEXT(&(pedLocal_66.f_469));
+						func_202(&(pedLocal_66.f_469));
 						func_198(23, true);
 					
 						if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !PED::IS_PED_INJURED(pedLocal_66.f_2))
@@ -3554,13 +3554,13 @@ void func_67() // Position - 0x35B4 (13748)
 		if (_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("SHR_SNACKS" /*Press ~INPUT_CONTEXT~ to buy a snack.~n~Hold ~INPUT_CONTEXT~ to steal a snack.*/))
 		{
 			HUD::CLEAR_HELP(true);
-			_CONTEXT_REMOVE_HELP_TEXT(&(pedLocal_66.f_469));
+			func_202(&(pedLocal_66.f_469));
 		}
 	
 		if (_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("SHR_MENU" /*Press ~INPUT_CONTEXT~ to shop.~n~*/))
 		{
 			HUD::CLEAR_HELP(true);
-			_CONTEXT_REMOVE_HELP_TEXT(&(pedLocal_66.f_469));
+			func_202(&(pedLocal_66.f_469));
 		}
 	
 		if (IS_BIT_SET(pedLocal_66.f_162.f_18, 1) && iLocal_622 < 2)
@@ -6721,7 +6721,7 @@ void func_121(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 
 void func_122(int iParam0) // Position - 0x8D53 (36179)
 {
-	Global_1675263.f_1163 = iParam0;
+	Global_1675264.f_1163 = iParam0;
 	return;
 }
 
@@ -6810,7 +6810,7 @@ void func_126(BOOL bParam0, BOOL bParam1) // Position - 0x8E48 (36424)
 
 BOOL func_127() // Position - 0x8EBC (36540)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_128(int iParam0) // Position - 0x8ECA (36554)
@@ -6835,7 +6835,7 @@ BOOL func_128(int iParam0) // Position - 0x8ECA (36554)
 
 BOOL func_129() // Position - 0x8F21 (36641)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 float func_130(int iParam0) // Position - 0x8F30 (36656)
@@ -8145,11 +8145,11 @@ BOOL func_170(int iParam0, int iParam1) // Position - 0xA755 (42837)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 char* func_171(int iParam0) // Position - 0xA78D (42893)
@@ -9304,7 +9304,7 @@ BOOL _CONTEXT_IS_HELP_TEXT_BEING_DISPLAYED(int iParam0, int iParam1) // Position
 	return flag;
 }
 
-void _CONTEXT_REMOVE_HELP_TEXT(var uParam0) // Position - 0xC1CD (49613)
+void func_202(var uParam0) // Position - 0xC1CD (49613)
 {
 	int num;
 
@@ -9342,7 +9342,7 @@ void _CONTEXT_ADD_HELP_TEXT(var uParam0, int iParam1, char* sParam2, int iParam3
 	if (STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS())
 	{
 		if (!(*uParam0 == -1))
-			_CONTEXT_REMOVE_HELP_TEXT(uParam0);
+			func_202(uParam0);
 	
 		return;
 	}
@@ -9704,7 +9704,7 @@ void func_215() // Position - 0xC9A2 (51618)
 					if (_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("SHR_ROBTILL" /*Press ~INPUT_CONTEXT~ to take money.*/))
 						HUD::CLEAR_HELP(true);
 				
-					_CONTEXT_REMOVE_HELP_TEXT(&(pedLocal_66.f_469));
+					func_202(&(pedLocal_66.f_469));
 					currentPedWeapon = WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &hLocal_626, true);
 				
 					if (currentPedWeapon)
@@ -9734,7 +9734,7 @@ void func_215() // Position - 0xC9A2 (51618)
 				if (_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("SHR_ROBTILL" /*Press ~INPUT_CONTEXT~ to take money.*/))
 					HUD::CLEAR_HELP(true);
 			
-				_CONTEXT_REMOVE_HELP_TEXT(&(pedLocal_66.f_469));
+				func_202(&(pedLocal_66.f_469));
 				iLocal_622 = 0;
 			}
 			break;
@@ -10108,7 +10108,7 @@ void func_217() // Position - 0xD1AF (53679)
 
 int func_218() // Position - 0xD66D (54893)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_219(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -10121,9 +10121,9 @@ int func_218() // Position - 0xD66D (54893)
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0xD6B8 (54968)
+BOOL func_219(BOOL bParam0) // Position - 0xD6B8 (54968)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -15058,7 +15058,7 @@ void func_345(var uParam0, var uParam1, var uParam2) // Position - 0x1516D (8638
 	TEXT_LABEL_ASSIGN_STRING(&unk[0 /*6*/], "SP", 24);
 	TEXT_LABEL_COPY(&unk[1 /*6*/], { func_347(uParam0) }, 6);
 
-	if (_LEADERBOARDS2_TRY_BEGIN_WRITE_DATA(276, &unk, &unk20, 2, -1, false, false))
+	if (func_346(276, &unk, &unk20, 2, -1, false, false))
 	{
 		STATS::LEADERBOARDS_WRITE_ADD_COLUMN(131, *uParam2, SYSTEM::TO_FLOAT(*uParam2));
 		STATS::LEADERBOARDS_WRITE_ADD_COLUMN(114, value, SYSTEM::TO_FLOAT(value));
@@ -15067,7 +15067,7 @@ void func_345(var uParam0, var uParam1, var uParam2) // Position - 0x1516D (8638
 	return;
 }
 
-BOOL _LEADERBOARDS2_TRY_BEGIN_WRITE_DATA(int iParam0, var uParam1, var uParam2, int iParam3, int iParam4, BOOL bParam5, BOOL bParam6) // Position - 0x151EA (86506)
+BOOL func_346(int iParam0, var uParam1, var uParam2, int iParam3, int iParam4, BOOL bParam5, BOOL bParam6) // Position - 0x151EA (86506)
 {
 	int num;
 	int i;

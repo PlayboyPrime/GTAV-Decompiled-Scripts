@@ -831,7 +831,7 @@ void func_25() // Position - 0xB7E (2942)
 
 void func_26() // Position - 0xB92 (2962)
 {
-	if (MISC::IS_XBOX360_VERSION() || IS_XBOX_PLATFORM() || MISC::IS_PC_VERSION())
+	if (MISC::IS_XBOX360_VERSION() || func_27() || MISC::IS_PC_VERSION())
 	{
 		GRAPHICS::CLEAR_STATUS_OF_SORTED_LIST_OPERATION();
 	
@@ -854,7 +854,7 @@ void func_26() // Position - 0xB92 (2962)
 	return;
 }
 
-BOOL IS_XBOX_PLATFORM() // Position - 0xBDC (3036)
+BOOL func_27() // Position - 0xBDC (3036)
 {
 	return MISC::IS_DURANGO_VERSION() || MISC::IS_SCARLETT_VERSION();
 }

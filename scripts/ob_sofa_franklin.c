@@ -913,9 +913,9 @@ void func_6() // Position - 0xA06 (2566)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -1093,11 +1093,11 @@ BOOL func_18(int iParam0, int iParam1) // Position - 0xD60 (3424)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_19() // Position - 0xD98 (3480)
@@ -1456,7 +1456,7 @@ void func_22() // Position - 0xEE0 (3808)
 			func_59(false, true);
 			GRAPHICS::SET_TV_PLAYER_WATCHING_THIS_FRAME(PLAYER::PLAYER_PED_ID());
 		
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (!func_58())
 				GRAPHICS::ENABLE_MOVIE_SUBTITLES(true);
 		
 			if (PAD::IS_CONTROL_JUST_PRESSED(FRONTEND_CONTROL, INPUT_CONTEXT))
@@ -1631,7 +1631,7 @@ void func_22() // Position - 0xEE0 (3808)
 					if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(iLocal_328))
 					{
 						if (PED::GET_SYNCHRONIZED_SCENE_PHASE(iLocal_328) > 0.55f)
-							if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+							if (func_58())
 								func_51();
 					
 						func_50(0);
@@ -2787,7 +2787,7 @@ BOOL func_57(BOOL bParam0) // Position - 0x3264 (12900)
 	return false;
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x32B0 (12976)
+BOOL func_58() // Position - 0x32B0 (12976)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;

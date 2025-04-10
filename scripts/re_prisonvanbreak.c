@@ -847,7 +847,7 @@ void func_7() // Position - 0xEF0 (3824)
 {
 	!bLocal_47;
 
-	while (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+	while (func_37())
 	{
 		SYSTEM::WAIT(0);
 	}
@@ -871,7 +871,7 @@ void func_8() // Position - 0xF2B (3883)
 
 int func_9() // Position - 0xF38 (3896)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_10(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -884,9 +884,9 @@ int func_9() // Position - 0xF38 (3896)
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0xF83 (3971)
+BOOL func_10(BOOL bParam0) // Position - 0xF83 (3971)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -1821,7 +1821,7 @@ BOOL func_36() // Position - 0x2299 (8857)
 	return true;
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x22A2 (8866)
+BOOL func_37() // Position - 0x22A2 (8866)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -2058,9 +2058,9 @@ void func_41() // Position - 0x2671 (9841)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -2239,11 +2239,11 @@ BOOL func_53(int iParam0, int iParam1) // Position - 0x29D4 (10708)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_54() // Position - 0x2A0C (10764)
@@ -2908,7 +2908,7 @@ void func_67(Vehicle veParam0, var uParam1, int iParam2, float fParam3) // Posit
 
 void func_68(Ped pedParam0) // Position - 0x39FB (14843)
 {
-	if (!PED::IS_PED_INJURED(pedParam0) && !_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && SYSTEM::TIMERA() > 12000)
+	if (!PED::IS_PED_INJURED(pedParam0) && !func_37() && SYSTEM::TIMERA() > 12000)
 	{
 		_CONVERSATION_INITIALIZE_ACTOR(&uLocal_52, 4, pedParam0, "RECSBCop1", 0, 1);
 	
@@ -3313,7 +3313,7 @@ BOOL func_70(char* sParam0) // Position - 0x449A (17562)
 {
 	var string2;
 
-	if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+	if (func_37())
 	{
 		TEXT_LABEL_COPY(&string2, { func_71() }, 4);
 	
@@ -3471,7 +3471,7 @@ void func_73() // Position - 0x4533 (17715)
 			{
 				if (bLocal_48)
 				{
-					if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+					if (!func_37())
 					{
 						if (!PED::IS_PED_INJURED(iLocal_224[0]))
 						{
@@ -3498,7 +3498,7 @@ void func_73() // Position - 0x4533 (17715)
 				}
 				else if (!bLocal_262)
 				{
-					if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+					if (!func_37())
 					{
 						if (!PED::IS_PED_INJURED(iLocal_224[0]))
 						{
@@ -4301,7 +4301,7 @@ void func_88() // Position - 0x5A3A (23098)
 
 	if (func_87() && !bLocal_262 && !bLocal_264)
 	{
-		if (iLocal_281 == 0 && !_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+		if (iLocal_281 == 0 && !func_37())
 		{
 			SYSTEM::SETTIMERA(0);
 		
@@ -4316,7 +4316,7 @@ void func_88() // Position - 0x5A3A (23098)
 			SYSTEM::SETTIMERA(0);
 		}
 	
-		if (iLocal_281 == 1 && !_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+		if (iLocal_281 == 1 && !func_37())
 		{
 			SYSTEM::SETTIMERA(0);
 		
@@ -4344,7 +4344,7 @@ void func_88() // Position - 0x5A3A (23098)
 			SYSTEM::SETTIMERA(0);
 		}
 	
-		if (iLocal_281 == 2 && SYSTEM::TIMERA() > 2000 && !_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+		if (iLocal_281 == 2 && SYSTEM::TIMERA() > 2000 && !func_37())
 		{
 			if (!PED::IS_PED_INJURED(pedLocal_220))
 			{
@@ -4361,7 +4361,7 @@ void func_88() // Position - 0x5A3A (23098)
 			iLocal_281 = iLocal_281 + 1;
 		}
 	
-		if (iLocal_281 == 3 && SYSTEM::TIMERA() > 2000 && !_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+		if (iLocal_281 == 3 && SYSTEM::TIMERA() > 2000 && !func_37())
 		{
 			if (!bLocal_48)
 			{
@@ -4781,7 +4781,7 @@ BOOL func_95(var uParam0, var uParam1, var uParam2, int iParam3, int iParam4, BO
 		if (!Global_114162.f_9089)
 			return false;
 	
-		if (_IS_MISSION_REPEAT_ACTIVE(false))
+		if (func_10(false))
 			return false;
 	
 		if (func_142())

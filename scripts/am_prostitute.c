@@ -411,7 +411,7 @@ void func_2() // Position - 0x232 (562)
 
 BOOL func_3() // Position - 0x414 (1044)
 {
-	return Global_1963573;
+	return Global_1963575;
 }
 
 BOOL func_4() // Position - 0x420 (1056)
@@ -437,7 +437,7 @@ void func_5() // Position - 0x46E (1134)
 
 	eventData = 666659573;
 	eventData.f_1 = PLAYER::PLAYER_ID();
-	playerBits = _GET_LOBBY_SCRIPT_EVENT_BITS(true, true);
+	playerBits = func_6(true, true);
 
 	if (playerBits != 0)
 		SCRIPT::_SEND_TU_SCRIPT_EVENT_NEW(1, &eventData, 3, playerBits, eventData);
@@ -445,7 +445,7 @@ void func_5() // Position - 0x46E (1134)
 	return;
 }
 
-int _GET_LOBBY_SCRIPT_EVENT_BITS(BOOL includeLocalPlayer, BOOL includeSpectators) // Position - 0x49F (1183)
+int func_6(BOOL bParam0, BOOL bParam1) // Position - 0x49F (1183)
 {
 	var address;
 	int i;
@@ -456,8 +456,8 @@ int _GET_LOBBY_SCRIPT_EVENT_BITS(BOOL includeLocalPlayer, BOOL includeSpectators
 		player = PLAYER::INT_TO_PLAYERINDEX(i);
 	
 		if (_NETWORK_IS_PLAYER_VALID(player, false, false))
-			if (player != PLAYER::PLAYER_ID() || includeLocalPlayer)
-				if (includeSpectators)
+			if (player != PLAYER::PLAYER_ID() || bParam0)
+				if (bParam1)
 					MISC::SET_BIT(&address, i);
 				else if (!func_7(player, 0))
 					MISC::SET_BIT(&address, i);
@@ -1247,8 +1247,8 @@ void func_47() // Position - 0x12B4 (4788)
 
 void func_48() // Position - 0x12C0 (4800)
 {
-	if (IS_BIT_SET(Global_1668458, 4))
-		MISC::CLEAR_BIT(&Global_1668458, 4);
+	if (IS_BIT_SET(Global_1668459, 4))
+		MISC::CLEAR_BIT(&Global_1668459, 4);
 
 	return;
 }
@@ -1288,7 +1288,7 @@ BOOL func_52(Player plParam0) // Position - 0x1344 (4932)
 void func_53(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, var uParam14, var uParam15, var uParam16, var uParam17, var uParam18, var uParam19, var uParam20) // Position - 0x136D (4973)
 {
 	func_56(func_57(uParam0), uParam0);
-	_NETWORK_ENSURE_SCRIPT_IS_NETWORKED(0, -1, false);
+	func_54(0, -1, false);
 	NETWORK::NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES(&uLocal_56, 97, 0);
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
@@ -1300,14 +1300,14 @@ void func_53(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	return;
 }
 
-int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTerminate) // Position - 0x13B0 (5040)
+int func_54(int iParam0, int iParam1, BOOL bParam2) // Position - 0x13B0 (5040)
 {
 	int i;
 
 	for (i = NETWORK::NETWORK_GET_SCRIPT_STATUS(); i != 2; i = NETWORK::NETWORK_GET_SCRIPT_STATUS())
 	{
 		if (i == 3 || i == 4 || i == 5 || i == 6)
-			if (!bNoTerminate)
+			if (!bParam2)
 				func_47();
 			else
 				return 0;
@@ -1317,26 +1317,26 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 			if (iParam0 == 0)
 			{
 				if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
-					if (!bNoTerminate)
+					if (!bParam2)
 						func_47();
 					else
 						return 0;
 			
 				if (func_44())
-					if (!bNoTerminate)
+					if (!bParam2)
 						func_47();
 					else
 						return 0;
 			
 				if (_DOES_EVENT_OF_TYPE_EXIST(157))
-					if (!bNoTerminate)
+					if (!bParam2)
 						func_47();
 					else
 						return 0;
 			}
 			else if (!NETWORK::NETWORK_IS_IN_SESSION())
 			{
-				if (!bNoTerminate)
+				if (!bParam2)
 					func_47();
 				else
 					return 0;
@@ -1351,12 +1351,12 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 
 	if (iParam0 == 0)
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
-			if (!bNoTerminate)
+			if (!bParam2)
 				func_47();
 			else
 				return 0;
 	else if (!NETWORK::NETWORK_IS_IN_SESSION())
-		if (!bNoTerminate)
+		if (!bParam2)
 			func_47();
 		else
 			return 0;

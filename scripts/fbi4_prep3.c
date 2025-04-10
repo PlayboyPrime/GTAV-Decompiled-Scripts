@@ -239,7 +239,7 @@ void func_1() // Position - 0xC7 (199)
 			HUD::CLEAR_PRINTS();
 			HUD::CLEAR_HELP(true);
 			func_21();
-			_TRIGGER_MISSION_FAIL(1);
+			func_5(1);
 			iLocal_78 = 1;
 			break;
 	
@@ -288,11 +288,11 @@ void func_4(char* sParam0) // Position - 0x15E (350)
 	return;
 }
 
-void _TRIGGER_MISSION_FAIL(int iParam0) // Position - 0x174 (372)
+void func_5(int iParam0) // Position - 0x174 (372)
 {
 	int num;
 
-	if (Global_114162.f_9089 || _IS_MISSION_REPEAT_ACTIVE(false))
+	if (Global_114162.f_9089 || func_20(false))
 	{
 		num = func_19();
 	
@@ -915,9 +915,9 @@ int func_19() // Position - 0x10D2 (4306)
 	return -1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x1104 (4356)
+BOOL func_20(BOOL bParam0) // Position - 0x1104 (4356)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -1259,7 +1259,7 @@ void func_40(BOOL bParam0, BOOL bParam1) // Position - 0x166E (5742)
 
 	if (bParam0)
 	{
-		if (_IS_MISSION_REPEAT_ACTIVE(false) && Global_79811.f_1 == 1 && func_41(Global_79811))
+		if (func_20(false) && Global_79811.f_1 == 1 && func_41(Global_79811))
 		{
 		}
 		else
@@ -1268,7 +1268,7 @@ void func_40(BOOL bParam0, BOOL bParam1) // Position - 0x166E (5742)
 		}
 	}
 
-	if (Global_114162.f_9089 || _IS_MISSION_REPEAT_ACTIVE(false))
+	if (Global_114162.f_9089 || func_20(false))
 	{
 		num = func_19();
 		num2 = Global_92440[num /*5*/];
@@ -1595,7 +1595,7 @@ BOOL func_47(Hash hParam0, BOOL bParam1, int iParam2) // Position - 0x1E59 (7769
 
 	if (hParam0 == joaat("hotknife") || hParam0 == joaat("carbonrs") || hParam0 == joaat("khamelion"))
 	{
-		if (IS_XBOX_PLATFORM() || MISC::IS_PC_VERSION() || IS_PLAYSTATION_PLATFORM())
+		if (func_52() || MISC::IS_PC_VERSION() || func_51())
 		{
 		}
 		else if (!func_54())
@@ -1690,7 +1690,7 @@ BOOL func_50(Hash hParam0, int iParam1) // Position - 0x20B9 (8377)
 		return true;
 
 	if (!Global_2707807 && iParam1 >= 0 && iParam1 <= 547)
-		if (IS_BIT_SET(Global_1586542[iParam1 /*143*/].f_104, 2))
+		if (IS_BIT_SET(Global_1586543[iParam1 /*143*/].f_104, 2))
 			return true;
 
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();
@@ -1783,12 +1783,12 @@ BOOL func_50(Hash hParam0, int iParam1) // Position - 0x20B9 (8377)
 	return false;
 }
 
-BOOL IS_PLAYSTATION_PLATFORM() // Position - 0x22E6 (8934)
+BOOL func_51() // Position - 0x22E6 (8934)
 {
 	return MISC::IS_ORBIS_VERSION() || MISC::IS_PROSPERO_VERSION();
 }
 
-BOOL IS_XBOX_PLATFORM() // Position - 0x22FC (8956)
+BOOL func_52() // Position - 0x22FC (8956)
 {
 	return MISC::IS_DURANGO_VERSION() || MISC::IS_SCARLETT_VERSION();
 }
@@ -3729,7 +3729,7 @@ void func_108() // Position - 0x50B1 (20657)
 		case 0:
 			if (func_112(iLocal_77, bLocal_80))
 			{
-				if (_IS_MISSION_REPEAT_ACTIVE(false))
+				if (func_20(false))
 					func_25(500, true);
 			
 				iLocal_78 = 2;
@@ -31300,10 +31300,10 @@ int func_230(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 			
 				if (IS_BIT_SET(Global_79347[1 /*14*/].f_6, 6) && FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Global_2883588, joaat("CREW_COL"), 11))
 				{
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 0);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 1);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 2);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 3);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 0);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 1);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 2);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 3);
 				}
 			
 				num9 = func_213(pedParam0, 11);
@@ -36976,7 +36976,7 @@ void func_280(Ped pedParam0, BOOL bParam1, BOOL bParam2, int iParam3, BOOL bPara
 		if (bParam2)
 			flag2 = false;
 	
-		if (!bParam4 || num != func_32() || Global_1983503)
+		if (!bParam4 || num != func_32() || Global_1983505)
 		{
 			characterType = func_321(pedParam0);
 		
@@ -37035,7 +37035,7 @@ void func_281(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPar
 	int num;
 	int decorationIndex;
 
-	if (!Global_1983502)
+	if (!Global_1983504)
 		func_282(&pedParam0);
 
 	i = 0;
@@ -37043,7 +37043,7 @@ void func_281(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPar
 
 	for (i = 0; i < 27; i = i + 1)
 	{
-		num = Global_1983474[i];
+		num = Global_1983476[i];
 	
 		if (num <= -1)
 		{
@@ -37097,7 +37097,7 @@ void func_282(var uParam0) // Position - 0x2FA92 (195218)
 
 	for (i = 0; i < 27; i = i + 1)
 	{
-		Global_1983474[i] = -1;
+		Global_1983476[i] = -1;
 	}
 
 	i = 0;
@@ -37124,7 +37124,7 @@ void func_282(var uParam0) // Position - 0x2FA92 (195218)
 		}
 	}
 
-	Global_1983502 = true;
+	Global_1983504 = true;
 	return;
 }
 
@@ -37139,20 +37139,20 @@ void func_283(int iParam0, BOOL bParam1) // Position - 0x2FB38 (195384)
 	{
 		if (bParam1)
 		{
-			if (Global_1983474[i] == iParam0)
+			if (Global_1983476[i] == iParam0)
 				return;
-			else if (Global_1983474[i] == -1)
+			else if (Global_1983476[i] == -1)
 				num = i;
 		}
-		else if (Global_1983474[i] == iParam0)
+		else if (Global_1983476[i] == iParam0)
 		{
-			Global_1983474[i] = -1;
+			Global_1983476[i] = -1;
 			return;
 		}
 	}
 
 	if (bParam1 && num >= 0)
-		Global_1983474[num] = iParam0;
+		Global_1983476[num] = iParam0;
 
 	return;
 }
@@ -49397,7 +49397,7 @@ BOOL func_323(Ped pedParam0) // Position - 0x3FE0B (261643)
 int func_324(int iParam0) // Position - 0x3FE87 (261767)
 {
 	if (func_325(true))
-		return Global_1685348;
+		return Global_1685349;
 
 	if (iParam0 <= -1 || iParam0 >= 4)
 		return -1;
@@ -86136,7 +86136,7 @@ void func_434() // Position - 0x69118 (430360)
 	if (SCRIPT::HAS_SCRIPT_LOADED("buddyDeathResponse"))
 		SYSTEM::START_NEW_SCRIPT("buddyDeathResponse", DEFAULT);
 
-	if (Global_114162.f_9089 || _IS_MISSION_REPEAT_ACTIVE(false))
+	if (Global_114162.f_9089 || func_20(false))
 	{
 		if (!func_435())
 		{

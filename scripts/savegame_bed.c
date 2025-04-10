@@ -693,7 +693,7 @@ void func_14(BOOL bParam0, BOOL bParam1) // Position - 0x701 (1793)
 
 BOOL func_15() // Position - 0x775 (1909)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_16(int iParam0) // Position - 0x783 (1923)
@@ -718,7 +718,7 @@ BOOL func_16(int iParam0) // Position - 0x783 (1923)
 
 BOOL func_17() // Position - 0x7DA (2010)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_18() // Position - 0x7E9 (2025)
@@ -6078,10 +6078,10 @@ int func_95(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 			
 				if (IS_BIT_SET(Global_79347[1 /*14*/].f_6, 6) && FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Global_2883588, joaat("CREW_COL"), 11))
 				{
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 0);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 1);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 2);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 3);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 0);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 1);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 2);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 3);
 				}
 			
 				num9 = func_67(pedParam0, 11);
@@ -12175,7 +12175,7 @@ void func_146(Ped pedParam0, BOOL bParam1, BOOL bParam2, int iParam3, BOOL bPara
 		if (bParam2)
 			flag2 = false;
 	
-		if (!bParam4 || num != func_74() || Global_1983503)
+		if (!bParam4 || num != func_74() || Global_1983505)
 		{
 			characterType = func_188(pedParam0);
 		
@@ -12234,7 +12234,7 @@ void func_147(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPar
 	int num;
 	int decorationIndex;
 
-	if (!Global_1983502)
+	if (!Global_1983504)
 		func_148(&pedParam0);
 
 	i = 0;
@@ -12242,7 +12242,7 @@ void func_147(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPar
 
 	for (i = 0; i < 27; i = i + 1)
 	{
-		num = Global_1983474[i];
+		num = Global_1983476[i];
 	
 		if (num <= -1)
 		{
@@ -12296,7 +12296,7 @@ void func_148(var uParam0) // Position - 0x168B4 (92340)
 
 	for (i = 0; i < 27; i = i + 1)
 	{
-		Global_1983474[i] = -1;
+		Global_1983476[i] = -1;
 	}
 
 	i = 0;
@@ -12323,7 +12323,7 @@ void func_148(var uParam0) // Position - 0x168B4 (92340)
 		}
 	}
 
-	Global_1983502 = true;
+	Global_1983504 = true;
 	return;
 }
 
@@ -12338,20 +12338,20 @@ void func_149(int iParam0, BOOL bParam1) // Position - 0x1695A (92506)
 	{
 		if (bParam1)
 		{
-			if (Global_1983474[i] == iParam0)
+			if (Global_1983476[i] == iParam0)
 				return;
-			else if (Global_1983474[i] == -1)
+			else if (Global_1983476[i] == -1)
 				num = i;
 		}
-		else if (Global_1983474[i] == iParam0)
+		else if (Global_1983476[i] == iParam0)
 		{
-			Global_1983474[i] = -1;
+			Global_1983476[i] = -1;
 			return;
 		}
 	}
 
 	if (bParam1 && num >= 0)
-		Global_1983474[num] = iParam0;
+		Global_1983476[num] = iParam0;
 
 	return;
 }
@@ -24639,7 +24639,7 @@ BOOL func_190(Ped pedParam0) // Position - 0x26BA7 (158631)
 int func_191(int iParam0) // Position - 0x26C23 (158755)
 {
 	if (func_192(true))
-		return Global_1685348;
+		return Global_1685349;
 
 	if (iParam0 <= -1 || iParam0 >= 4)
 		return -1;
@@ -89467,12 +89467,12 @@ void func_434() // Position - 0x6D530 (447792)
 
 	if (!flag)
 		if (iLocal_250 != -1)
-			_CONTEXT_REMOVE_HELP_TEXT(&iLocal_250);
+			func_435(&iLocal_250);
 
 	return;
 }
 
-void _CONTEXT_REMOVE_HELP_TEXT(var uParam0) // Position - 0x6D6C9 (448201)
+void func_435(var uParam0) // Position - 0x6D6C9 (448201)
 {
 	int num;
 
@@ -89585,7 +89585,7 @@ void _CONTEXT_ADD_HELP_TEXT(var uParam0, int iParam1, char* sParam2, int iParam3
 	if (STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS())
 	{
 		if (!(*uParam0 == -1))
-			_CONTEXT_REMOVE_HELP_TEXT(uParam0);
+			func_435(uParam0);
 	
 		return;
 	}
@@ -90102,7 +90102,7 @@ eCharacter _GET_CURRENT_PLAYER_CHARACTER_0() // Position - 0x6EA79 (453241)
 void func_453() // Position - 0x6EA92 (453266)
 {
 	if (iLocal_250 != -1)
-		_CONTEXT_REMOVE_HELP_TEXT(&iLocal_250);
+		func_435(&iLocal_250);
 
 	func_437();
 

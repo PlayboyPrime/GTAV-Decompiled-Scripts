@@ -711,18 +711,18 @@ BOOL func_17() // Position - 0x818 (2072)
 
 int func_18() // Position - 0x824 (2084)
 {
-	if (IS_BIT_SET(Global_1673706.f_102, 1))
+	if (IS_BIT_SET(Global_1673707.f_102, 1))
 		return 1;
 
-	if (IS_BIT_SET(Global_1673706.f_102, 2))
+	if (IS_BIT_SET(Global_1673707.f_102, 2))
 	{
-		MISC::CLEAR_BIT(&(Global_1673706.f_102), 2);
+		MISC::CLEAR_BIT(&(Global_1673707.f_102), 2);
 		return 2;
 	}
 
-	if (IS_BIT_SET(Global_1673706.f_102, 3))
+	if (IS_BIT_SET(Global_1673707.f_102, 3))
 	{
-		MISC::CLEAR_BIT(&(Global_1673706.f_102), 3);
+		MISC::CLEAR_BIT(&(Global_1673707.f_102), 3);
 		return 3;
 	}
 

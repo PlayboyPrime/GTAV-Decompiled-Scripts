@@ -5395,7 +5395,7 @@ void func_170(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 			}
 		}
 	
-		if (!_IS_NULL_VECTOR(*uParam2))
+		if (!func_172(*uParam2))
 			uParam1->f_1583[i /*3*/] = { *uParam2 };
 		else
 			uParam1->f_1583[i /*3*/] = { func_285(&(uParam1->f_247)) };
@@ -5416,7 +5416,7 @@ void func_171(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 	return;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x7BB4 (31668)
+BOOL func_172(float fParam0, var uParam1, var uParam2) // Position - 0x7BB4 (31668)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -5458,7 +5458,7 @@ void func_175(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 			}
 		}
 	
-		if (!_IS_NULL_VECTOR(*uParam2))
+		if (!func_172(*uParam2))
 			uParam1->f_1583[i /*3*/] = { *uParam2 };
 		else
 			uParam1->f_1583[i /*3*/] = { func_285(&(uParam1->f_247)) };
@@ -7988,12 +7988,12 @@ void func_298(BOOL bParam0, BOOL bParam1) // Position - 0xBB92 (48018)
 
 BOOL func_299() // Position - 0xBC06 (48134)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_300() // Position - 0xBC14 (48148)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 BOOL func_301(int iParam0) // Position - 0xBC23 (48163)
@@ -9400,7 +9400,7 @@ void func_330() // Position - 0x1021F (66079)
 	if (SCRIPT::HAS_SCRIPT_LOADED("buddyDeathResponse"))
 		SYSTEM::START_NEW_SCRIPT("buddyDeathResponse", DEFAULT);
 
-	if (Global_114162.f_9089 || _IS_MISSION_REPEAT_ACTIVE(false))
+	if (Global_114162.f_9089 || func_339(false))
 	{
 		if (!func_338())
 		{
@@ -9958,9 +9958,9 @@ BOOL func_338() // Position - 0x11042 (69698)
 	return true;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x11080 (69760)
+BOOL func_339(BOOL bParam0) // Position - 0x11080 (69760)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);

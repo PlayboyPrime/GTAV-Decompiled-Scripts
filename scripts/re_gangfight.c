@@ -593,7 +593,7 @@ BOOL func_6(char* sParam0) // Position - 0x661 (1633)
 {
 	var string2;
 
-	if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+	if (func_8())
 	{
 		TEXT_LABEL_COPY(&string2, { func_7() }, 4);
 	
@@ -616,7 +616,7 @@ struct<6> func_7() // Position - 0x689 (1673)
 	return unk;
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x6AD (1709)
+BOOL func_8() // Position - 0x6AD (1709)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -662,7 +662,7 @@ void func_9() // Position - 0x6CF (1743)
 					}
 				}
 			
-				if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+				if (!func_8())
 					if (_CONVERSATION_ADD_LINE(&uLocal_83, "RECGFAU", "RECGF_BIKERS", 4, 0, 0, 0))
 						iLocal_46 = iLocal_46 + 1;
 			}
@@ -741,7 +741,7 @@ void func_9() // Position - 0x6CF (1743)
 			if (!PED::IS_PED_INJURED(pedLocal_66))
 				if (ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), pedLocal_66, 6f, 6f, 6f, false, true, 0))
 					if (PED::IS_PED_FACING_PED(pedLocal_66, PLAYER::PLAYER_PED_ID(), 60f))
-						if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+						if (!func_8())
 							if (_CONVERSATION_ADD_LINE(&uLocal_83, "RECGFAU", "RECGF_END", 4, 0, 0, 0))
 								iLocal_46 = iLocal_46 + 1;
 		
@@ -791,7 +791,7 @@ void func_9() // Position - 0x6CF (1743)
 			break;
 	
 		case 7:
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (!func_8())
 			{
 				_CONVERSATION_ADD_LINE(&uLocal_83, "RECGFAU", "RECGF_END2", 4, 0, 0, 0);
 				func_10();
@@ -804,7 +804,7 @@ void func_9() // Position - 0x6CF (1743)
 
 void func_10() // Position - 0xB8D (2957)
 {
-	while (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+	while (func_8())
 	{
 		SYSTEM::WAIT(0);
 	}
@@ -828,7 +828,7 @@ void func_11() // Position - 0xBC1 (3009)
 
 int func_12() // Position - 0xBCE (3022)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_13(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -841,9 +841,9 @@ int func_12() // Position - 0xBCE (3022)
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0xC19 (3097)
+BOOL func_13(BOOL bParam0) // Position - 0xC19 (3097)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -2006,9 +2006,9 @@ void func_44() // Position - 0x2291 (8849)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -2187,11 +2187,11 @@ BOOL func_56(int iParam0, int iParam1) // Position - 0x25F4 (9716)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_57() // Position - 0x262C (9772)
@@ -2285,7 +2285,7 @@ void func_59() // Position - 0x26D9 (9945)
 			break;
 	
 		case 3:
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (!func_8())
 			{
 				if (_GET_CURRENT_PLAYER_CHARACTER() == CHAR_MICHAEL)
 					_CONVERSATION_ADD_LINE(&uLocal_83, "RECGFAU", "RECGF_JABM", 4, 0, 0, 0);
@@ -2305,7 +2305,7 @@ void func_59() // Position - 0x26D9 (9945)
 				{
 					if (!ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), pedLocal_66, 8f, 8f, 8f, false, true, 0))
 					{
-						if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+						if (!func_8())
 						{
 							if (_CONVERSATION_ADD_LINE(&uLocal_83, "RECGFAU", "RECGF_STASH", 4, 0, 0, 0))
 							{
@@ -2330,7 +2330,7 @@ void func_59() // Position - 0x26D9 (9945)
 			break;
 	
 		case 5:
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (!func_8())
 			{
 				if (_GET_CURRENT_PLAYER_CHARACTER() == CHAR_MICHAEL)
 					_CONVERSATION_ADD_LINE(&uLocal_83, "RECGFAU", "RECGF_STASHM", 4, 0, 0, 0);
@@ -2766,7 +2766,7 @@ void func_67() // Position - 0x355D (13661)
 		case 0:
 			if (ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), pedLocal_66, 45f, 45f, 20f, false, true, 0))
 			{
-				if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+				if (!func_8())
 				{
 					if (_GET_CURRENT_PLAYER_CHARACTER() == CHAR_MICHAEL)
 						_CONVERSATION_ADD_LINE(&uLocal_83, "RECGFAU", "RECGF_COMM", 4, 0, 0, 0);
@@ -2788,7 +2788,7 @@ void func_67() // Position - 0x355D (13661)
 			break;
 	
 		case 2:
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (!func_8())
 			{
 				_CONVERSATION_ADD_LINE(&uLocal_83, "RECGFAU", "RECGF_SHUTUP", 4, 0, 0, 0);
 				SYSTEM::SETTIMERA(0);
@@ -2799,7 +2799,7 @@ void func_67() // Position - 0x355D (13661)
 		case 3:
 			if (!PED::IS_PED_INJURED(pedLocal_66) && !PED::IS_PED_INJURED(iLocal_67[0]) && !PED::IS_PED_INJURED(iLocal_67[1]))
 			{
-				if (SYSTEM::TIMERA() > 5000 && !bLocal_54 && !_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+				if (SYSTEM::TIMERA() > 5000 && !bLocal_54 && !func_8())
 				{
 					_CONVERSATION_ADD_LINE(&uLocal_83, "RECGFAU", "RECGF_PAYUP", 4, 0, 0, 0);
 					bLocal_54 = true;
@@ -3414,7 +3414,7 @@ BOOL func_83() // Position - 0x3FDA (16346)
 					if (HUD::DOES_BLIP_EXIST(uLocal_59[1]))
 						HUD::SHOW_HEIGHT_ON_BLIP(uLocal_59[1], true);
 				
-					if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() || func_6("RECGF_SHUTUP") || func_6("RECGF_PAYUP"))
+					if (!func_8() || func_6("RECGF_SHUTUP") || func_6("RECGF_PAYUP"))
 					{
 						if (iLocal_47 == -1)
 						{
@@ -4565,7 +4565,7 @@ BOOL func_104(var uParam0, var uParam1, var uParam2, int iParam3, int iParam4, B
 		if (!Global_114162.f_9089)
 			return false;
 	
-		if (_IS_MISSION_REPEAT_ACTIVE(false))
+		if (func_13(false))
 			return false;
 	
 		if (func_93())

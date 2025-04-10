@@ -433,7 +433,7 @@ void main() // Position - 0x0 (0)
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		NETWORK::NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, false, -1);
-		_NETWORK_ENSURE_SCRIPT_IS_NETWORKED(0, -1, false);
+		func_83(0, -1, false);
 		MISC::SET_THIS_SCRIPT_CAN_BE_PAUSED(false);
 	}
 
@@ -576,7 +576,7 @@ void func_2() // Position - 0x30E (782)
 				{
 					if (func_46(iLocal_332, true))
 					{
-						_CONTEXT_REMOVE_HELP_TEXT(&iLocal_332);
+						func_44(&iLocal_332);
 						func_43();
 						func_41();
 					
@@ -607,7 +607,7 @@ void func_2() // Position - 0x30E (782)
 				}
 				else
 				{
-					_CONTEXT_REMOVE_HELP_TEXT(&iLocal_332);
+					func_44(&iLocal_332);
 				
 					if (_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("SA_BED_IN" /*Press ~INPUT_CONTEXT~ to get into bed.~n~*/))
 						HUD::CLEAR_HELP(true);
@@ -809,8 +809,8 @@ void func_3(int iParam0) // Position - 0xA35 (2613)
 
 void func_4() // Position - 0xA66 (2662)
 {
-	if (IS_BIT_SET(Global_1668458, 4))
-		MISC::CLEAR_BIT(&Global_1668458, 4);
+	if (IS_BIT_SET(Global_1668459, 4))
+		MISC::CLEAR_BIT(&Global_1668459, 4);
 
 	return;
 }
@@ -901,13 +901,13 @@ void func_13(BOOL bParam0) // Position - 0xB68 (2920)
 
 void func_14(int iParam0, int iParam1) // Position - 0xBB9 (3001)
 {
-	MISC::SET_BIT(&(Global_1673706.f_1047), iParam0);
+	MISC::SET_BIT(&(Global_1673707.f_1047), iParam0);
 
 	switch (iParam0)
 	{
 		case 5:
 			if (iParam1 > -1)
-				Global_1673706.f_170[iParam1] = 1;
+				Global_1673707.f_170[iParam1] = 1;
 			break;
 	}
 
@@ -1535,16 +1535,16 @@ void func_41() // Position - 0x165E (5726)
 {
 	func_42();
 
-	if (!IS_BIT_SET(Global_1668458, 4))
-		MISC::SET_BIT(&Global_1668458, 4);
+	if (!IS_BIT_SET(Global_1668459, 4))
+		MISC::SET_BIT(&Global_1668459, 4);
 
 	return;
 }
 
 void func_42() // Position - 0x167D (5757)
 {
-	MISC::CLEAR_BIT(&Global_1668458, 0);
-	MISC::CLEAR_BIT(&Global_1668458, 1);
+	MISC::CLEAR_BIT(&Global_1668459, 0);
+	MISC::CLEAR_BIT(&Global_1668459, 1);
 	return;
 }
 
@@ -1556,7 +1556,7 @@ void func_43() // Position - 0x1697 (5783)
 	return;
 }
 
-void _CONTEXT_REMOVE_HELP_TEXT(var uParam0) // Position - 0x16B6 (5814)
+void func_44(var uParam0) // Position - 0x16B6 (5814)
 {
 	int num;
 
@@ -1719,7 +1719,7 @@ void _CONTEXT_ADD_HELP_TEXT(var uParam0, int iParam1, char* sParam2, int iParam3
 	if (STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS())
 	{
 		if (!(*uParam0 == -1))
-			_CONTEXT_REMOVE_HELP_TEXT(uParam0);
+			func_44(uParam0);
 	
 		return;
 	}
@@ -1768,12 +1768,12 @@ void _CONTEXT_ADD_HELP_TEXT(var uParam0, int iParam1, char* sParam2, int iParam3
 
 BOOL func_50() // Position - 0x1A67 (6759)
 {
-	return Global_1963587;
+	return Global_1963589;
 }
 
 BOOL func_51(Player plParam0) // Position - 0x1A73 (6771)
 {
-	return IS_BIT_SET(Global_1673706.f_241.f_136[func_53(9) /*33*/][plParam0], func_52(9));
+	return IS_BIT_SET(Global_1673707.f_241.f_136[func_53(9) /*33*/][plParam0], func_52(9));
 }
 
 int func_52(int iParam0) // Position - 0x1A96 (6806)
@@ -2112,14 +2112,14 @@ int func_82() // Position - 0x20A0 (8352)
 	return Global_2640053;
 }
 
-int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTerminate) // Position - 0x20AC (8364)
+int func_83(int iParam0, int iParam1, BOOL bParam2) // Position - 0x20AC (8364)
 {
 	int i;
 
 	for (i = NETWORK::NETWORK_GET_SCRIPT_STATUS(); i != 2; i = NETWORK::NETWORK_GET_SCRIPT_STATUS())
 	{
 		if (i == 3 || i == 4 || i == 5 || i == 6)
-			if (!bNoTerminate)
+			if (!bParam2)
 				func_85();
 			else
 				return 0;
@@ -2129,26 +2129,26 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 			if (iParam0 == 0)
 			{
 				if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
-					if (!bNoTerminate)
+					if (!bParam2)
 						func_85();
 					else
 						return 0;
 			
 				if (func_81())
-					if (!bNoTerminate)
+					if (!bParam2)
 						func_85();
 					else
 						return 0;
 			
 				if (_DOES_EVENT_OF_TYPE_EXIST(157))
-					if (!bNoTerminate)
+					if (!bParam2)
 						func_85();
 					else
 						return 0;
 			}
 			else if (!NETWORK::NETWORK_IS_IN_SESSION())
 			{
-				if (!bNoTerminate)
+				if (!bParam2)
 					func_85();
 				else
 					return 0;
@@ -2163,12 +2163,12 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 
 	if (iParam0 == 0)
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
-			if (!bNoTerminate)
+			if (!bParam2)
 				func_85();
 			else
 				return 0;
 	else if (!NETWORK::NETWORK_IS_IN_SESSION())
-		if (!bNoTerminate)
+		if (!bParam2)
 			func_85();
 		else
 			return 0;
@@ -2348,7 +2348,7 @@ BOOL func_90(int iParam0, int iParam1) // Position - 0x2252 (8786)
 void func_91() // Position - 0x2433 (9267)
 {
 	if (iLocal_332 > -1)
-		_CONTEXT_REMOVE_HELP_TEXT(&iLocal_332);
+		func_44(&iLocal_332);
 
 	if (_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("SA_BED_IN" /*Press ~INPUT_CONTEXT~ to get into bed.~n~*/) || _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("SA_BED_OUT" /*Press ~INPUT_SCRIPT_RUP~ to get out of bed.~n~*/))
 		HUD::CLEAR_HELP(true);

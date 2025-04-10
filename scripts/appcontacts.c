@@ -4873,9 +4873,9 @@ void func_12() // Position - 0x2091 (8337)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -5131,11 +5131,11 @@ BOOL func_30(int iParam0, int iParam1) // Position - 0x257C (9596)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_31() // Position - 0x25B4 (9652)
@@ -5330,12 +5330,12 @@ BOOL func_38(int iParam0) // Position - 0x286A (10346)
 
 BOOL func_39() // Position - 0x28C1 (10433)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_40() // Position - 0x28CF (10447)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_41() // Position - 0x28DE (10462)
@@ -5487,7 +5487,7 @@ int func_44(int iParam0, BOOL bParam1, int iParam2) // Position - 0x2AB0 (10928)
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("respawn_controller")) > 0)
 		return 13;
 
-	if (_IS_MISSION_REPEAT_ACTIVE(bParam1))
+	if (func_77(bParam1))
 		return 3;
 
 	if (PED::IS_PED_FALLING(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()))
@@ -7409,11 +7409,11 @@ struct<5> func_53(int iParam0) // Position - 0x3707 (14087)
 			break;
 	}
 
-	_IS_NULL_VECTOR(unk);
+	func_54(unk);
 	return unk;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x636A (25450)
+BOOL func_54(float fParam0, var uParam1, var uParam2) // Position - 0x636A (25450)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -8216,9 +8216,9 @@ BOOL func_76(int iParam0, int iParam1) // Position - 0x76C6 (30406)
 	return iParam0 && iParam1 != false;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x76D5 (30421)
+BOOL func_77(BOOL bParam0) // Position - 0x76D5 (30421)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -9460,7 +9460,7 @@ BOOL func_120(var uParam0) // Position - 0x8FAF (36783)
 
 BOOL func_121() // Position - 0x8FDE (36830)
 {
-	return IS_BIT_SET(Global_1668458, 4);
+	return IS_BIT_SET(Global_1668459, 4);
 }
 
 BOOL func_122() // Position - 0x8FEC (36844)
@@ -11884,10 +11884,10 @@ void func_194(var uParam0) // Position - 0xC63D (50749)
 			flag = false;
 	
 		if (NETWORK::NETWORK_IS_IN_PLATFORM_PARTY())
-			if (IS_XBOX_PLATFORM())
+			if (func_201())
 				if (NETWORK::NETWORK_IS_IN_PLATFORM_PARTY_CHAT())
 					flag = false;
-			else if (IS_PLAYSTATION_PLATFORM())
+			else if (func_200())
 				flag = false;
 	
 		if (flag)
@@ -12170,12 +12170,12 @@ BOOL func_199(int iParam0) // Position - 0xCC90 (52368)
 	return false;
 }
 
-BOOL IS_PLAYSTATION_PLATFORM() // Position - 0xCCE0 (52448)
+BOOL func_200() // Position - 0xCCE0 (52448)
 {
 	return MISC::IS_ORBIS_VERSION() || MISC::IS_PROSPERO_VERSION();
 }
 
-BOOL IS_XBOX_PLATFORM() // Position - 0xCCF6 (52470)
+BOOL func_201() // Position - 0xCCF6 (52470)
 {
 	return MISC::IS_DURANGO_VERSION() || MISC::IS_SCARLETT_VERSION();
 }
@@ -12198,12 +12198,12 @@ BOOL func_202(Player plParam0) // Position - 0xCD0C (52492)
 			return false;
 	}
 
-	if (MISC::IS_PS3_VERSION() || IS_PLAYSTATION_PLATFORM())
+	if (MISC::IS_PS3_VERSION() || func_200())
 		if (NETWORK::NETWORK_HAVE_COMMUNICATION_PRIVILEGES(0, player))
 			if (NETWORK::NETWORK_HAVE_ONLINE_PRIVILEGES())
 				return true;
 
-	if (MISC::IS_XBOX360_VERSION() || IS_XBOX_PLATFORM())
+	if (MISC::IS_XBOX360_VERSION() || func_201())
 	{
 		if (plParam0 == PLAYER::PLAYER_ID())
 		{
@@ -12562,7 +12562,7 @@ void func_210() // Position - 0xD0EE (53486)
 						case 2:
 							if (_STOPWATCH_IS_INITIALIZED(&Global_2739945.f_399[uLocal_305[uLocal_305.f_2936] /*2*/]))
 							{
-								if (!_STOPWATCH_HAS_TIME_PASSED(&Global_2739945.f_399[uLocal_305[uLocal_305.f_2936] /*2*/], 30000, false))
+								if (!func_298(&Global_2739945.f_399[uLocal_305[uLocal_305.f_2936] /*2*/], 30000, false))
 								{
 									if (func_286(false, false, true, true))
 										func_276("CELL_MP_1009H" /*There is a short wait before you can send another message to ~a~.*/, PLAYER::GET_PLAYER_NAME(uLocal_305[uLocal_305.f_2936]), func_277(uLocal_305[uLocal_305.f_2936], -2, false, false, false), -1);
@@ -12783,7 +12783,7 @@ void func_210() // Position - 0xD0EE (53486)
 					{
 						if (Global_2747169.f_33 == -1)
 						{
-							if (_STOPWATCH_HAS_TIME_PASSED(&(uLocal_305.f_2979), 40000, true))
+							if (func_298(&(uLocal_305.f_2979), 40000, true))
 							{
 								func_316(true);
 								func_302();
@@ -12825,11 +12825,11 @@ void func_210() // Position - 0xD0EE (53486)
 			else if (!_STOPWATCH_IS_INITIALIZED(&(uLocal_305.f_2979)))
 			{
 				_STOPWATCH_DESTROY(&(uLocal_305.f_2979));
-				_STOPWATCH_INITIALIZE(&(uLocal_305.f_2979), true, false);
+				func_270(&(uLocal_305.f_2979), true, false);
 			}
 			else
 			{
-				if (_STOPWATCH_HAS_TIME_PASSED(&(uLocal_305.f_2979), 15000, true))
+				if (func_298(&(uLocal_305.f_2979), 15000, true))
 				{
 					func_302();
 					func_87();
@@ -12852,7 +12852,7 @@ void func_210() // Position - 0xD0EE (53486)
 				{
 					if (func_269(&uLocal_305, &(uLocal_305.f_2983)))
 					{
-						_STOPWATCH_RESET(&(uLocal_305.f_2979), true, false);
+						func_268(&(uLocal_305.f_2979), true, false);
 						uLocal_305.f_2978 = 0;
 						uLocal_305.f_2977 = 1;
 					
@@ -12881,7 +12881,7 @@ void func_210() // Position - 0xD0EE (53486)
 					iLocal_3305.f_2 = 0;
 					iLocal_3305.f_1 = 0;
 					iLocal_3324 = 0;
-					_STOPWATCH_RESET(&Global_2739945.f_399[uLocal_305[uLocal_305.f_2936] /*2*/], false, false);
+					func_268(&Global_2739945.f_399[uLocal_305[uLocal_305.f_2936] /*2*/], false, false);
 				
 					if (MISC::IS_STRING_NULL_OR_EMPTY(&uLocal_3308))
 					{
@@ -12972,11 +12972,11 @@ int func_211(char* sParam0, Player plParam1, BOOL bParam2, BOOL bParam3, BOOL bP
 						if (bParam6)
 							playerName = { func_218(&playerName) };
 					
-						num = HUD::END_TEXT_COMMAND_THEFEED_POST_CREWTAG_WITH_GAME_NAME(flag, NETWORK::NETWORK_CLAN_IS_ROCKSTAR_CLAN(&Global_2707696, 35), &(Global_2707696.f_17), Global_2707696.f_30, isLeader, false, Global_2707696, &playerName, Global_1576243, Global_1576244, Global_1576245);
+						num = HUD::END_TEXT_COMMAND_THEFEED_POST_CREWTAG_WITH_GAME_NAME(flag, NETWORK::NETWORK_CLAN_IS_ROCKSTAR_CLAN(&Global_2707696, 35), &(Global_2707696.f_17), Global_2707696.f_30, isLeader, false, Global_2707696, &playerName, Global_1576244, Global_1576245, Global_1576246);
 					}
 					else
 					{
-						num = HUD::END_TEXT_COMMAND_THEFEED_POST_CREWTAG(flag, NETWORK::NETWORK_CLAN_IS_ROCKSTAR_CLAN(&Global_2707696, 35), &(Global_2707696.f_17), Global_2707696.f_30, isLeader, false, Global_2707696, Global_1576243, Global_1576244, Global_1576245);
+						num = HUD::END_TEXT_COMMAND_THEFEED_POST_CREWTAG(flag, NETWORK::NETWORK_CLAN_IS_ROCKSTAR_CLAN(&Global_2707696, 35), &(Global_2707696.f_17), Global_2707696.f_30, isLeader, false, Global_2707696, Global_1576244, Global_1576245, Global_1576246);
 					}
 				}
 				else
@@ -13474,7 +13474,7 @@ int func_227(Player plParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Positi
 
 	playerTeam = PLAYER::GET_PLAYER_TEAM(plParam0);
 
-	if (func_237() || func_236() && func_234() && Global_1685224.f_1)
+	if (func_237() || func_236() && func_234() && Global_1685225.f_1)
 		if (bParam1)
 			return func_233(iParam2, playerTeam);
 		else
@@ -14476,7 +14476,7 @@ BOOL func_261(var uParam0, int* piParam1, var uParam2, BOOL bParam3, BOOL bParam
 						windowTitle = "FMMC_KEY_TIP14N" /*Yacht Name*/;
 					}
 				
-					if (IS_XBOX_PLATFORM())
+					if (func_201())
 						maxInputLength2 = 21;
 					else
 						maxInputLength2 = 20;
@@ -14540,7 +14540,7 @@ BOOL func_261(var uParam0, int* piParam1, var uParam2, BOOL bParam3, BOOL bParam
 					else
 						windowTitle = "FMMC_KEY_TIP15F" /*Forbidden Text. Try again (MAX 15 characters):*/;
 				
-					if (MISC::IS_XBOX360_VERSION() || IS_XBOX_PLATFORM())
+					if (MISC::IS_XBOX360_VERSION() || func_201())
 						maxInputLength2 = 16;
 					else
 						maxInputLength2 = 15;
@@ -14567,7 +14567,7 @@ BOOL func_261(var uParam0, int* piParam1, var uParam2, BOOL bParam3, BOOL bParam
 					if (bParam23)
 						windowTitle = "ACID_NAME_TIP5s";
 				
-					if (MISC::IS_XBOX360_VERSION() || IS_XBOX_PLATFORM())
+					if (MISC::IS_XBOX360_VERSION() || func_201())
 						maxInputLength2 = 16;
 					else
 						maxInputLength2 = 15;
@@ -14594,7 +14594,7 @@ BOOL func_261(var uParam0, int* piParam1, var uParam2, BOOL bParam3, BOOL bParam
 					if (bParam23)
 						windowTitle = "LAB_NAME_TIP5s";
 				
-					if (MISC::IS_XBOX360_VERSION() || IS_XBOX_PLATFORM())
+					if (MISC::IS_XBOX360_VERSION() || func_201())
 						maxInputLength2 = 16;
 					else
 						maxInputLength2 = 15;
@@ -14622,7 +14622,7 @@ BOOL func_261(var uParam0, int* piParam1, var uParam2, BOOL bParam3, BOOL bParam
 					else
 						windowTitle = "CSTM_TLTIP_TIP4" /*Forbidden Text. Try again (MAX 15 characters):*/;
 				
-					if (MISC::IS_XBOX360_VERSION() || IS_XBOX_PLATFORM())
+					if (MISC::IS_XBOX360_VERSION() || func_201())
 						maxInputLength2 = 16;
 					else
 						maxInputLength2 = 15;
@@ -14866,7 +14866,7 @@ BOOL func_261(var uParam0, int* piParam1, var uParam2, BOOL bParam3, BOOL bParam
 						SOCIALCLUB::SC_PROFANITY_CHECK_STRING(MISC::GET_ONSCREEN_KEYBOARD_RESULT(), piParam1);
 					}
 				
-					if (IS_XBOX_PLATFORM())
+					if (func_201())
 					{
 						if (!NETWORK::NETWORK_IS_SIGNED_ONLINE() || func_263() == false || func_262() == 1)
 						{
@@ -14964,17 +14964,17 @@ void func_267(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 	return;
 }
 
-void _STOPWATCH_RESET(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateTime) // Position - 0x102B5 (66229)
+void func_268(var uParam0, BOOL bParam1, BOOL bParam2) // Position - 0x102B5 (66229)
 {
-	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !useLocalTimer)
-		if (!useAccurateTime)
-			*pStopwatch = NETWORK::GET_NETWORK_TIME();
+	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !bParam1)
+		if (!bParam2)
+			*uParam0 = NETWORK::GET_NETWORK_TIME();
 		else
-			*pStopwatch = NETWORK::GET_NETWORK_TIME_ACCURATE();
+			*uParam0 = NETWORK::GET_NETWORK_TIME_ACCURATE();
 	else
-		*pStopwatch = MISC::GET_GAME_TIMER();
+		*uParam0 = MISC::GET_GAME_TIMER();
 
-	pStopwatch->f_1 = 1;
+	uParam0->f_1 = 1;
 	return;
 }
 
@@ -14994,19 +14994,19 @@ BOOL func_269(var uParam0, char* sParam1) // Position - 0x102F2 (66290)
 	return false;
 }
 
-void _STOPWATCH_INITIALIZE(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateTime) // Position - 0x10333 (66355)
+void func_270(var uParam0, BOOL bParam1, BOOL bParam2) // Position - 0x10333 (66355)
 {
-	if (pStopwatch->f_1 == 0)
+	if (uParam0->f_1 == 0)
 	{
-		if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !useLocalTimer)
-			if (!useAccurateTime)
-				*pStopwatch = NETWORK::GET_NETWORK_TIME();
+		if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !bParam1)
+			if (!bParam2)
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			else
-				*pStopwatch = NETWORK::GET_NETWORK_TIME_ACCURATE();
+				*uParam0 = NETWORK::GET_NETWORK_TIME_ACCURATE();
 		else
-			*pStopwatch = MISC::GET_GAME_TIMER();
+			*uParam0 = MISC::GET_GAME_TIMER();
 	
-		pStopwatch->f_1 = 1;
+		uParam0->f_1 = 1;
 	}
 
 	return;
@@ -15270,7 +15270,7 @@ BOOL func_286(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	if (bParam2 && HUD::IS_HELP_MESSAGE_BEING_DISPLAYED())
 		return false;
 
-	if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+	if (func_297())
 		return false;
 
 	if (!CAM::IS_SCREEN_FADED_IN())
@@ -15389,7 +15389,7 @@ BOOL func_296() // Position - 0x10AEE (68334)
 	return IS_BIT_SET(Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_36.f_18, 0);
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x10B07 (68359)
+BOOL func_297() // Position - 0x10B07 (68359)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -15397,17 +15397,17 @@ BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x10B07 (68359)
 	return false;
 }
 
-BOOL _STOPWATCH_HAS_TIME_PASSED(var pStopwatch, int millis, BOOL useLocalTimer) // Position - 0x10B29 (68393)
+BOOL func_298(var uParam0, int iParam1, BOOL bParam2) // Position - 0x10B29 (68393)
 {
-	if (millis == -1)
+	if (iParam1 == -1)
 		return true;
 
-	_STOPWATCH_INITIALIZE(pStopwatch, useLocalTimer, false);
+	func_270(uParam0, bParam2, false);
 
-	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !useLocalTimer)
-		if (MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), *pStopwatch)) >= millis)
+	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !bParam2)
+		if (MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 			return true;
-	else if (MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(MISC::GET_GAME_TIMER(), *pStopwatch)) >= millis)
+	else if (MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(MISC::GET_GAME_TIMER(), *uParam0)) >= iParam1)
 		return true;
 
 	return false;
@@ -16601,7 +16601,7 @@ void func_325() // Position - 0x124C0 (74944)
 							{
 								uLocal_305.f_34[num /*29*/] = { gamerHandle };
 							
-								if (IS_XBOX_PLATFORM())
+								if (func_201())
 									TEXT_LABEL_ASSIGN_STRING(&(uLocal_305.f_34[num /*29*/].f_13), NETWORK::NETWORK_GET_FRIEND_DISPLAY_NAME(i), 64);
 								else
 									TEXT_LABEL_ASSIGN_STRING(&(uLocal_305.f_34[num /*29*/].f_13), NETWORK::NETWORK_GET_FRIEND_NAME(i), 64);
@@ -17213,7 +17213,7 @@ void func_341() // Position - 0x13014 (77844)
 							{
 								uLocal_305.f_34[num /*29*/] = { gamerHandle };
 							
-								if (IS_XBOX_PLATFORM())
+								if (func_201())
 									TEXT_LABEL_ASSIGN_STRING(&(uLocal_305.f_34[num /*29*/].f_13), NETWORK::NETWORK_GET_FRIEND_DISPLAY_NAME(i), 64);
 								else
 									TEXT_LABEL_ASSIGN_STRING(&(uLocal_305.f_34[num /*29*/].f_13), NETWORK::NETWORK_GET_FRIEND_NAME(i), 64);

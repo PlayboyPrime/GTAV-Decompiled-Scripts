@@ -456,12 +456,12 @@ void func_6(BOOL bParam0, BOOL bParam1) // Position - 0x58E (1422)
 
 BOOL func_7() // Position - 0x602 (1538)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_8() // Position - 0x610 (1552)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 BOOL func_9(int iParam0) // Position - 0x61F (1567)

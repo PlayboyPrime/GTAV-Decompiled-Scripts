@@ -168,7 +168,7 @@ void main() // Position - 0x0 (0)
 
 int func_1() // Position - 0x2F3 (755)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_2(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -181,9 +181,9 @@ int func_1() // Position - 0x2F3 (755)
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x33E (830)
+BOOL func_2(BOOL bParam0) // Position - 0x33E (830)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -271,7 +271,7 @@ int func_8(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int 
 	int num;
 	int address;
 
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_2(false))
 		return 0;
 
 	if (iParam5 < 0)
@@ -652,7 +652,7 @@ void func_20() // Position - 0xBE8 (3048)
 		func_16(1, "CELL_1" /*Texts*/, 1, "appTextMessage", 2, 1, 1, 0, 0);
 		func_16(4, "CELL_23" /*Check List*/, 2, "appChecklist", 39, 1, 1, 0, 0);
 	
-		if (Global_44199 == 15 && _IS_MISSION_REPEAT_ACTIVE(false) == false && Global_8924 == 0)
+		if (Global_44199 == 15 && func_2(false) == false && Global_8924 == 0)
 		{
 			func_16(20, "CELL_32" /*Quick Save*/, 3, "appSettings", 43, 1, 1, 0, 0);
 			Global_21304 = 0;
@@ -911,7 +911,7 @@ BOOL func_39(var uParam0) // Position - 0x1355 (4949)
 
 BOOL func_40() // Position - 0x1384 (4996)
 {
-	return IS_BIT_SET(Global_1668458, 4);
+	return IS_BIT_SET(Global_1668459, 4);
 }
 
 int func_41(int iParam0, eCharacter echParam1) // Position - 0x1392 (5010)
@@ -991,12 +991,12 @@ void func_44(BOOL bParam0, BOOL bParam1) // Position - 0x146D (5229)
 
 BOOL func_45() // Position - 0x14E1 (5345)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_46() // Position - 0x14EF (5359)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 BOOL func_47() // Position - 0x14FE (5374)
@@ -1108,7 +1108,7 @@ int func_56(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int
 {
 	int num;
 
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_2(false))
 		return 0;
 
 	if (iParam2 < 3)

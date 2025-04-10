@@ -623,9 +623,9 @@ void func_10() // Position - 0x647 (1607)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -881,11 +881,11 @@ BOOL func_28(int iParam0, int iParam1) // Position - 0xB32 (2866)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_29() // Position - 0xB6A (2922)
@@ -947,20 +947,20 @@ BOOL func_31() // Position - 0xC17 (3095)
 {
 	if (Global_2883694)
 		if (func_26(0))
-			if (Global_3407872 || _IS_MISSION_REPEAT_ACTIVE(false))
+			if (Global_3407872 || func_32(false))
 				return true;
 
 	if (Global_2883693)
 		if (func_26(0))
-			if (Global_3932160 || _IS_MISSION_REPEAT_ACTIVE(false))
+			if (Global_3932160 || func_32(false))
 				return true;
 
 	return false;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0xC6A (3178)
+BOOL func_32(BOOL bParam0) // Position - 0xC6A (3178)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);

@@ -745,7 +745,7 @@ void main() // Position - 0x0 (0)
 							}
 							else if (ENTITY::IS_ENTITY_AT_ENTITY(iLocal_194[i], PLAYER::PLAYER_PED_ID(), 30f, 30f, 30f, false, true, 0))
 							{
-								if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+								if (!func_116())
 								{
 									if (iLocal_189 < MISC::GET_GAME_TIMER())
 									{
@@ -983,12 +983,12 @@ void func_6(BOOL bParam0, BOOL bParam1) // Position - 0x6FA (1786)
 
 BOOL func_7() // Position - 0x76E (1902)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_8() // Position - 0x77C (1916)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 BOOL func_9(int iParam0) // Position - 0x78B (1931)
@@ -3307,9 +3307,9 @@ void func_103() // Position - 0x2F6B (12139)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -3474,11 +3474,11 @@ BOOL func_113(int iParam0, int iParam1) // Position - 0x3290 (12944)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_114() // Position - 0x32C8 (13000)
@@ -3536,7 +3536,7 @@ void func_115(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4,
 	return;
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x3375 (13173)
+BOOL func_116() // Position - 0x3375 (13173)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -7482,7 +7482,7 @@ void func_194() // Position - 0x8121 (33057)
 		
 			if (SYSTEM::TIMERB() > 2000 && SYSTEM::TIMERB() < 2100)
 				if (Global_114162.f_24999.f_5 == 1 || Global_114162.f_24999.f_5 == 2)
-					if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+					if (!func_116())
 						_CONVERSATION_ADD_LINE(&uLocal_409, "ACULTAU", sLocal_407, 4, 0, 0, 0);
 		
 			if (PED::GET_SYNCHRONIZED_SCENE_PHASE(iLocal_186) > fLocal_183)
@@ -7577,7 +7577,7 @@ void func_194() // Position - 0x8121 (33057)
 			break;
 	
 		case 5:
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() || SYSTEM::TIMERB() > 7000)
+			if (!func_116() || SYSTEM::TIMERB() > 7000)
 			{
 				func_136();
 			

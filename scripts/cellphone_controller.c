@@ -494,8 +494,8 @@ void main() // Position - 0x0 (0)
 	
 		if (Global_79564)
 			if (iLocal_92 == 0)
-				if (IS_BIT_SET(Global_1977671, 0))
-					if (_STOPWATCH_HAS_TIME_PASSED(&uLocal_93, 10000, false))
+				if (IS_BIT_SET(Global_1977673, 0))
+					if (func_71(&uLocal_93, 10000, false))
 						if (func_68())
 							iLocal_92 = 1;
 	
@@ -1921,7 +1921,7 @@ BOOL func_45(var uParam0) // Position - 0x21D9 (8665)
 
 BOOL func_46() // Position - 0x2208 (8712)
 {
-	return IS_BIT_SET(Global_1668458, 4);
+	return IS_BIT_SET(Global_1668459, 4);
 }
 
 BOOL func_47() // Position - 0x2216 (8726)
@@ -2562,35 +2562,35 @@ int func_70(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x2E77 (1189
 	return num;
 }
 
-BOOL _STOPWATCH_HAS_TIME_PASSED(var pStopwatch, int millis, BOOL useLocalTimer) // Position - 0x2ED9 (11993)
+BOOL func_71(var uParam0, int iParam1, BOOL bParam2) // Position - 0x2ED9 (11993)
 {
-	if (millis == -1)
+	if (iParam1 == -1)
 		return true;
 
-	_STOPWATCH_INITIALIZE(pStopwatch, useLocalTimer, false);
+	func_72(uParam0, bParam2, false);
 
-	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !useLocalTimer)
-		if (MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), *pStopwatch)) >= millis)
+	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !bParam2)
+		if (MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 			return true;
-	else if (MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(MISC::GET_GAME_TIMER(), *pStopwatch)) >= millis)
+	else if (MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(MISC::GET_GAME_TIMER(), *uParam0)) >= iParam1)
 		return true;
 
 	return false;
 }
 
-void _STOPWATCH_INITIALIZE(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateTime) // Position - 0x2F37 (12087)
+void func_72(var uParam0, BOOL bParam1, BOOL bParam2) // Position - 0x2F37 (12087)
 {
-	if (pStopwatch->f_1 == 0)
+	if (uParam0->f_1 == 0)
 	{
-		if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !useLocalTimer)
-			if (!useAccurateTime)
-				*pStopwatch = NETWORK::GET_NETWORK_TIME();
+		if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !bParam1)
+			if (!bParam2)
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			else
-				*pStopwatch = NETWORK::GET_NETWORK_TIME_ACCURATE();
+				*uParam0 = NETWORK::GET_NETWORK_TIME_ACCURATE();
 		else
-			*pStopwatch = MISC::GET_GAME_TIMER();
+			*uParam0 = MISC::GET_GAME_TIMER();
 	
-		pStopwatch->f_1 = 1;
+		uParam0->f_1 = 1;
 	}
 
 	return;
@@ -2841,11 +2841,11 @@ void func_74(int iParam0, char* sParam1) // Position - 0x3656 (13910)
 	num = 0;
 	func_75(Global_4542454[iParam0 /*296*/].f_49, sParam1);
 
-	if (IS_BIT_SET(Global_1982058, 0))
+	if (IS_BIT_SET(Global_1982060, 0))
 	{
 		TEXT_LABEL_APPEND_STRING(sParam1, "p", 16);
 		HUD::BEGIN_TEXT_COMMAND_THEFEED_POST(sParam1);
-		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1982059[num /*4*/]);
+		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1982061[num /*4*/]);
 		num = num + 1;
 	}
 	else
@@ -2858,7 +2858,7 @@ void func_74(int iParam0, char* sParam1) // Position - 0x3656 (13910)
 		switch (Global_4542454[iParam0 /*296*/].f_32)
 		{
 			case 13:
-				HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1982059[num /*4*/]);
+				HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1982061[num /*4*/]);
 				break;
 		}
 	
@@ -3803,7 +3803,7 @@ int func_89(eCharacter echParam0, char* sParam1, int iParam2, int iParam3, char*
 		}
 	}
 
-	if (Global_1973529 != -1 && echParam0 == Global_1973529)
+	if (Global_1973531 != -1 && echParam0 == Global_1973531)
 		num2 = 1;
 
 	func_90(echParam0, sParam1, num2, func_95(PLAYER::PLAYER_ID()));
@@ -3823,18 +3823,18 @@ void func_90(eCharacter echParam0, char* sParam1, BOOL bParam2, var uParam3) // 
 	character.f_3 = 0;
 	character.f_4 = bParam2;
 	character.f_5 = uParam3;
-	character.f_6 = Global_1973512.f_7;
-	character.f_7 = Global_1973512.f_8;
-	character.f_8 = Global_1973512.f_9;
-	character.f_9 = Global_1973512.f_10;
-	character.f_10 = Global_1973512.f_11;
-	character.f_11 = Global_1973512.f_12;
-	character.f_12 = Global_1973512.f_13;
-	character.f_13 = Global_1973512.f_14;
+	character.f_6 = Global_1973514.f_7;
+	character.f_7 = Global_1973514.f_8;
+	character.f_8 = Global_1973514.f_9;
+	character.f_9 = Global_1973514.f_10;
+	character.f_10 = Global_1973514.f_11;
+	character.f_11 = Global_1973514.f_12;
+	character.f_12 = Global_1973514.f_13;
+	character.f_13 = Global_1973514.f_14;
 	STATS::PLAYSTATS_NPC_PHONE(&character);
 
 	if (bParam2)
-		Global_1973529 = -1;
+		Global_1973531 = -1;
 
 	return;
 }
@@ -4436,12 +4436,12 @@ void func_111(BOOL bParam0, BOOL bParam1) // Position - 0x56DC (22236)
 
 BOOL func_112() // Position - 0x5750 (22352)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_113() // Position - 0x575E (22366)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_114() // Position - 0x576D (22381)
@@ -4593,7 +4593,7 @@ int func_117(int iParam0, BOOL bParam1, int iParam2) // Position - 0x593F (22847
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("respawn_controller")) > 0)
 		return 13;
 
-	if (_IS_MISSION_REPEAT_ACTIVE(bParam1))
+	if (func_146(bParam1))
 		return 3;
 
 	if (PED::IS_PED_FALLING(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()))
@@ -6515,11 +6515,11 @@ struct<5> func_126(int iParam0) // Position - 0x6596 (26006)
 			break;
 	}
 
-	_IS_NULL_VECTOR(unk);
+	func_127(unk);
 	return unk;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x91F7 (37367)
+BOOL func_127(float fParam0, var uParam1, var uParam2) // Position - 0x91F7 (37367)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -7273,9 +7273,9 @@ BOOL func_145(int iParam0, int iParam1) // Position - 0xA4EF (42223)
 	return iParam0 && iParam1 != false;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0xA4FE (42238)
+BOOL func_146(BOOL bParam0) // Position - 0xA4FE (42238)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -7410,7 +7410,7 @@ void func_155() // Position - 0xA6B5 (42677)
 		func_32(1, "CELL_1" /*Texts*/, 1, "appTextMessage", 2, 1, 1, 0, 0);
 		func_32(4, "CELL_23" /*Check List*/, 2, "appChecklist", 39, 1, 1, 0, 0);
 	
-		if (Global_44199 == 15 && _IS_MISSION_REPEAT_ACTIVE(false) == false && Global_8924 == 0)
+		if (Global_44199 == 15 && func_146(false) == false && Global_8924 == 0)
 		{
 			func_32(20, "CELL_32" /*Quick Save*/, 3, "appSettings", 43, 1, 1, 0, 0);
 			Global_21304 = 0;

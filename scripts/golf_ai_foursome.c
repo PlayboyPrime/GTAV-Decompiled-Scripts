@@ -987,7 +987,7 @@ void func_10(var uParam0, float fParam1, float fParam2, float fParam3, int iPara
 {
 	bParam5;
 
-	if (!_IS_NULL_VECTOR(fParam1))
+	if (!func_16(fParam1))
 	{
 		if (iParam4 == 3)
 			if (func_13(fParam1))
@@ -1094,7 +1094,7 @@ Vector3 func_15(int iParam0) // Position - 0x162C (5676)
 	return 0f, 0f, 0f;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x1731 (5937)
+BOOL func_16(float fParam0, var uParam1, var uParam2) // Position - 0x1731 (5937)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -5681,12 +5681,12 @@ BOOL _NETWORK_IS_PLAYER_VALID(Player player, BOOL bIsPlaying, BOOL bUnk) // Posi
 
 BOOL func_221() // Position - 0x810C (33036)
 {
-	return IS_BIT_SET(Global_4718592.f_30, 12) && IS_BIT_SET(Global_1965891, 12) && Global_1965890 == 8;
+	return IS_BIT_SET(Global_4718592.f_30, 12) && IS_BIT_SET(Global_1965893, 12) && Global_1965892 == 8;
 }
 
 BOOL func_222() // Position - 0x8135 (33077)
 {
-	return IS_BIT_SET(Global_4718592.f_30, 12) && IS_BIT_SET(Global_1965891, 0);
+	return IS_BIT_SET(Global_4718592.f_30, 12) && IS_BIT_SET(Global_1965893, 0);
 }
 
 BOOL func_223(Player plParam0, BOOL bParam1, BOOL bParam2) // Position - 0x8151 (33105)

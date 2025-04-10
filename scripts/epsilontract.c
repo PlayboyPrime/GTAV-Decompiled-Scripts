@@ -1670,7 +1670,7 @@ BOOL func_34(Ped pedParam0, Vector3 vParam1, var uParam2, var uParam3, float fPa
 
 int func_35() // Position - 0x1C4E (7246)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_36(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -1683,9 +1683,9 @@ int func_35() // Position - 0x1C4E (7246)
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x1C99 (7321)
+BOOL func_36(BOOL bParam0) // Position - 0x1C99 (7321)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);

@@ -2395,12 +2395,12 @@ void func_81(int iParam0) // Position - 0x2CB9 (11449)
 	int num;
 	var textLabel;
 
-	if (MISC::IS_XBOX360_VERSION() || IS_XBOX_PLATFORM())
+	if (MISC::IS_XBOX360_VERSION() || func_83())
 	{
 		num = iParam0;
 		NETWORK::NETWORK_SET_RICH_PRESENCE(8, &num, 1, 1);
 	}
-	else if (MISC::IS_PS3_VERSION() || IS_PLAYSTATION_PLATFORM() || MISC::IS_PC_VERSION())
+	else if (MISC::IS_PS3_VERSION() || func_82() || MISC::IS_PC_VERSION())
 	{
 		TEXT_LABEL_ASSIGN_STRING(&textLabel, "SPMG_", 24);
 		TEXT_LABEL_APPEND_INT(&textLabel, iParam0, 24);
@@ -2411,12 +2411,12 @@ void func_81(int iParam0) // Position - 0x2CB9 (11449)
 	return;
 }
 
-BOOL IS_PLAYSTATION_PLATFORM() // Position - 0x2D1A (11546)
+BOOL func_82() // Position - 0x2D1A (11546)
 {
 	return MISC::IS_ORBIS_VERSION() || MISC::IS_PROSPERO_VERSION();
 }
 
-BOOL IS_XBOX_PLATFORM() // Position - 0x2D30 (11568)
+BOOL func_83() // Position - 0x2D30 (11568)
 {
 	return MISC::IS_DURANGO_VERSION() || MISC::IS_SCARLETT_VERSION();
 }
@@ -5629,7 +5629,7 @@ Vector3 func_118(int iParam0, BOOL bParam1) // Position - 0x7BF7 (31735)
 			return 2714.5466f, -354.2701f, -55.1867f;
 	
 		case 50:
-			return Global_1966473;
+			return Global_1966475;
 	
 		case 51:
 			return 1100f, 220f, -50f;
@@ -5682,8 +5682,8 @@ Vector3 func_118(int iParam0, BOOL bParam1) // Position - 0x7BF7 (31735)
 
 Vector3 func_119() // Position - 0x8375 (33653)
 {
-	if (!_IS_NULL_VECTOR(Global_1950936))
-		return Global_1950936;
+	if (!func_121(Global_1950938))
+		return Global_1950938;
 
 	switch (func_120())
 	{
@@ -5789,7 +5789,7 @@ int func_120() // Position - 0x8670 (34416)
 	return Global_2652571.f_2706;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x867F (34431)
+BOOL func_121(float fParam0, var uParam1, var uParam2) // Position - 0x867F (34431)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -7028,7 +7028,7 @@ BOOL func_148(Hash hParam0, BOOL bParam1, int iParam2) // Position - 0xA4B4 (421
 
 	if (hParam0 == joaat("hotknife") || hParam0 == joaat("carbonrs") || hParam0 == joaat("khamelion"))
 	{
-		if (IS_XBOX_PLATFORM() || MISC::IS_PC_VERSION() || IS_PLAYSTATION_PLATFORM())
+		if (func_83() || MISC::IS_PC_VERSION() || func_82())
 		{
 		}
 		else if (!func_153())
@@ -7123,7 +7123,7 @@ BOOL func_151(Hash hParam0, int iParam1) // Position - 0xA71C (42780)
 		return true;
 
 	if (!Global_2707807 && iParam1 >= 0 && iParam1 <= 547)
-		if (IS_BIT_SET(Global_1586542[iParam1 /*143*/].f_104, 2))
+		if (IS_BIT_SET(Global_1586543[iParam1 /*143*/].f_104, 2))
 			return true;
 
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();
@@ -8834,11 +8834,11 @@ BOOL func_185(int iParam0, int iParam1) // Position - 0xD1E1 (53729)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 BOOL func_186() // Position - 0xD219 (53785)

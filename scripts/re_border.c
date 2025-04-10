@@ -675,7 +675,7 @@ void func_6() // Position - 0x40E (1038)
 
 int func_7() // Position - 0x8CC (2252)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_8(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -688,9 +688,9 @@ int func_7() // Position - 0x8CC (2252)
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x917 (2327)
+BOOL func_8(BOOL bParam0) // Position - 0x917 (2327)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -1400,7 +1400,7 @@ int func_34() // Position - 0x15CC (5580)
 {
 	int i;
 
-	if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+	if (!func_55())
 	{
 		for (i = 0; i < 3; i = i + 1)
 		{
@@ -1480,7 +1480,7 @@ int func_34() // Position - 0x15CC (5580)
 					}
 					else if (!bLocal_62)
 					{
-						if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && !TASK::IS_PED_IN_WRITHE(uLocal_83[i]))
+						if (!func_55() && !TASK::IS_PED_IN_WRITHE(uLocal_83[i]))
 						{
 							PED::SET_RELATIONSHIP_BETWEEN_GROUPS(5, hLocal_95, joaat("PLAYER"));
 							PED::SET_PED_COMBAT_ATTRIBUTES(uLocal_83[i], BF_CanDoDrivebys, true);
@@ -1499,7 +1499,7 @@ int func_34() // Position - 0x15CC (5580)
 							SYSTEM::SETTIMERA(0);
 						}
 					}
-					else if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+					else if (!func_55())
 					{
 						if (!bLocal_64)
 						{
@@ -1749,9 +1749,9 @@ void func_38() // Position - 0x1C84 (7300)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -1924,11 +1924,11 @@ BOOL func_49(int iParam0, int iParam1) // Position - 0x1FCE (8142)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_50() // Position - 0x2006 (8198)
@@ -2029,7 +2029,7 @@ void func_54(var uParam0, int iParam1) // Position - 0x216C (8556)
 	return;
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x2189 (8585)
+BOOL func_55() // Position - 0x2189 (8585)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -3689,7 +3689,7 @@ BOOL func_91(var uParam0, var uParam1, var uParam2, int iParam3, int iParam4, BO
 		if (!Global_114162.f_9089)
 			return false;
 	
-		if (_IS_MISSION_REPEAT_ACTIVE(false))
+		if (func_8(false))
 			return false;
 	
 		if (func_81())

@@ -3903,10 +3903,10 @@ int func_65(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 			
 				if (IS_BIT_SET(Global_79347[1 /*14*/].f_6, 6) && FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Global_2883588, joaat("CREW_COL"), 11))
 				{
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 0);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 1);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 2);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 3);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 0);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 1);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 2);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 3);
 				}
 			
 				num9 = func_41(pedParam0, 11);
@@ -10000,7 +10000,7 @@ void func_116(Ped pedParam0, BOOL bParam1, BOOL bParam2, int iParam3, BOOL bPara
 		if (bParam2)
 			flag2 = false;
 	
-		if (!bParam4 || num != func_12() || Global_1983503)
+		if (!bParam4 || num != func_12() || Global_1983505)
 		{
 			characterType = func_159(pedParam0);
 		
@@ -10059,7 +10059,7 @@ void func_117(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPar
 	int num;
 	int decorationIndex;
 
-	if (!Global_1983502)
+	if (!Global_1983504)
 		func_118(&pedParam0);
 
 	i = 0;
@@ -10067,7 +10067,7 @@ void func_117(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPar
 
 	for (i = 0; i < 27; i = i + 1)
 	{
-		num = Global_1983474[i];
+		num = Global_1983476[i];
 	
 		if (num <= -1)
 		{
@@ -10121,7 +10121,7 @@ void func_118(var uParam0) // Position - 0x127C8 (75720)
 
 	for (i = 0; i < 27; i = i + 1)
 	{
-		Global_1983474[i] = -1;
+		Global_1983476[i] = -1;
 	}
 
 	i = 0;
@@ -10148,7 +10148,7 @@ void func_118(var uParam0) // Position - 0x127C8 (75720)
 		}
 	}
 
-	Global_1983502 = true;
+	Global_1983504 = true;
 	return;
 }
 
@@ -10163,20 +10163,20 @@ void func_119(int iParam0, BOOL bParam1) // Position - 0x1286E (75886)
 	{
 		if (bParam1)
 		{
-			if (Global_1983474[i] == iParam0)
+			if (Global_1983476[i] == iParam0)
 				return;
-			else if (Global_1983474[i] == -1)
+			else if (Global_1983476[i] == -1)
 				num = i;
 		}
-		else if (Global_1983474[i] == iParam0)
+		else if (Global_1983476[i] == iParam0)
 		{
-			Global_1983474[i] = -1;
+			Global_1983476[i] = -1;
 			return;
 		}
 	}
 
 	if (bParam1 && num >= 0)
-		Global_1983474[num] = iParam0;
+		Global_1983476[num] = iParam0;
 
 	return;
 }
@@ -22469,7 +22469,7 @@ BOOL func_161(Ped pedParam0) // Position - 0x22B67 (142183)
 int func_162(int iParam0) // Position - 0x22BE3 (142307)
 {
 	if (func_163(true))
-		return Global_1685348;
+		return Global_1685349;
 
 	if (iParam0 <= -1 || iParam0 >= 4)
 		return -1;
@@ -85139,7 +85139,7 @@ Vector3 func_357(int iParam0, BOOL bParam1) // Position - 0x669D6 (420310)
 			return 2714.5466f, -354.2701f, -55.1867f;
 	
 		case 50:
-			return Global_1966473;
+			return Global_1966475;
 	
 		case 51:
 			return 1100f, 220f, -50f;
@@ -85192,8 +85192,8 @@ Vector3 func_357(int iParam0, BOOL bParam1) // Position - 0x669D6 (420310)
 
 Vector3 func_358() // Position - 0x67150 (422224)
 {
-	if (!_IS_NULL_VECTOR(Global_1950936))
-		return Global_1950936;
+	if (!func_360(Global_1950938))
+		return Global_1950938;
 
 	switch (func_359())
 	{
@@ -85299,7 +85299,7 @@ int func_359() // Position - 0x6744B (422987)
 	return Global_2652571.f_2706;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x6745A (423002)
+BOOL func_360(float fParam0, var uParam1, var uParam2) // Position - 0x6745A (423002)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -86301,7 +86301,7 @@ Vector3 func_380(int iParam0) // Position - 0x6904E (430158)
 	{
 		unk = { func_383(iParam0, _GET_CURRENT_PLAYER_CHARACTER()) };
 	
-		if (_IS_NULL_VECTOR(unk))
+		if (func_360(unk))
 			unk = { func_383(iParam0, CHAR_MICHAEL) };
 	}
 
@@ -88456,7 +88456,7 @@ void func_398(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 
 void func_399(int iParam0) // Position - 0x6CF01 (446209)
 {
-	Global_1675263.f_1163 = iParam0;
+	Global_1675264.f_1163 = iParam0;
 	return;
 }
 
@@ -88545,12 +88545,12 @@ void func_403(BOOL bParam0, BOOL bParam1) // Position - 0x6CFF6 (446454)
 
 BOOL func_404() // Position - 0x6D06A (446570)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_405() // Position - 0x6D078 (446584)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 float func_406(int iParam0) // Position - 0x6D087 (446599)
@@ -89948,11 +89948,11 @@ BOOL func_446(int iParam0, int iParam1) // Position - 0x6EB7B (453499)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 BOOL func_447(var uParam0, BOOL bParam1, int iParam2) // Position - 0x6EBB3 (453555)
@@ -90336,7 +90336,7 @@ int func_452(int iParam0, BOOL bParam1, int iParam2) // Position - 0x6F254 (4552
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("respawn_controller")) > 0)
 		return 13;
 
-	if (_IS_MISSION_REPEAT_ACTIVE(bParam1))
+	if (func_474(bParam1))
 		return 3;
 
 	if (PED::IS_PED_FALLING(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()))
@@ -92258,7 +92258,7 @@ struct<5> func_461(int iParam0) // Position - 0x6FEB4 (458420)
 			break;
 	}
 
-	_IS_NULL_VECTOR(unk);
+	func_360(unk);
 	return unk;
 }
 
@@ -92775,9 +92775,9 @@ BOOL func_473(int iParam0) // Position - 0x73C02 (474114)
 	return func_8(iParam0, 20, true);
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x73C13 (474131)
+BOOL func_474(BOOL bParam0) // Position - 0x73C13 (474131)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);

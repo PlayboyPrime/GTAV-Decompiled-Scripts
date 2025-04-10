@@ -707,7 +707,7 @@ void main() // Position - 0x0 (0)
 
 	func_748();
 
-	if (_IS_MISSION_REPLAY_IN_PROGRESS())
+	if (func_747())
 	{
 		func_738(&uLocal_94, 1, true, false);
 		num = func_737();
@@ -1126,9 +1126,9 @@ void func_5() // Position - 0x7DC (2012)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -1384,11 +1384,11 @@ BOOL func_23(int iParam0, int iParam1) // Position - 0xCC7 (3271)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_24() // Position - 0xCFF (3327)
@@ -1857,7 +1857,7 @@ void func_45(int iParam0, BOOL bParam1) // Position - 0x136F (4975)
 
 int func_46() // Position - 0x14A3 (5283)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_47(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -1870,9 +1870,9 @@ int func_46() // Position - 0x14A3 (5283)
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x14EE (5358)
+BOOL func_47(BOOL bParam0) // Position - 0x14EE (5358)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -31928,11 +31928,11 @@ void func_206() // Position - 0x22AB9 (142009)
 {
 	var textLabel;
 
-	if (MISC::IS_XBOX360_VERSION() || IS_XBOX_PLATFORM())
+	if (MISC::IS_XBOX360_VERSION() || func_208())
 	{
 		NETWORK::NETWORK_SET_RICH_PRESENCE(StackVal, 0, 0, 0);
 	}
-	else if (MISC::IS_PS3_VERSION() || IS_PLAYSTATION_PLATFORM() || MISC::IS_PC_VERSION())
+	else if (MISC::IS_PS3_VERSION() || func_207() || MISC::IS_PC_VERSION())
 	{
 		TEXT_LABEL_ASSIGN_STRING(&textLabel, "PRESENCE_0_STR" /*Playing story*/, 24);
 		NETWORK::NETWORK_SET_RICH_PRESENCE_STRING(0, &textLabel);
@@ -31941,12 +31941,12 @@ void func_206() // Position - 0x22AB9 (142009)
 	return;
 }
 
-BOOL IS_PLAYSTATION_PLATFORM() // Position - 0x22B06 (142086)
+BOOL func_207() // Position - 0x22B06 (142086)
 {
 	return MISC::IS_ORBIS_VERSION() || MISC::IS_PROSPERO_VERSION();
 }
 
-BOOL IS_XBOX_PLATFORM() // Position - 0x22B1C (142108)
+BOOL func_208() // Position - 0x22B1C (142108)
 {
 	return MISC::IS_DURANGO_VERSION() || MISC::IS_SCARLETT_VERSION();
 }
@@ -40330,7 +40330,7 @@ BOOL func_305(int iParam0, int iParam1) // Position - 0x2DD69 (187753)
 	if (iParam1 == 1 && HUD::IS_MESSAGE_BEING_DISPLAYED() && MISC::GET_PROFILE_SETTING(203) > 0)
 		return false;
 
-	if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+	if (func_306())
 		return false;
 
 	if (iParam0 == 1 && !MISC::ARE_STRINGS_EQUAL(&uLocal_390, ""))
@@ -40339,7 +40339,7 @@ BOOL func_305(int iParam0, int iParam1) // Position - 0x2DD69 (187753)
 	return true;
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x2DDC3 (187843)
+BOOL func_306() // Position - 0x2DDC3 (187843)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -42218,7 +42218,7 @@ BOOL func_372(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x307AE (1
 		}
 	}
 
-	if (Global_1957267)
+	if (Global_1957269)
 		return false;
 
 	if (func_373(PLAYER::PLAYER_ID()))
@@ -42378,7 +42378,7 @@ void func_382(var uParam0, Vehicle veParam1, Vector3 vParam2, var uParam3, var u
 	eScriptLookAtFlags flags;
 	int num;
 
-	if (Global_1582037 == 1)
+	if (Global_1582038 == 1)
 		return;
 
 	if (ENTITY::IS_ENTITY_DEAD(veParam1, false))
@@ -42947,7 +42947,7 @@ void func_401() // Position - 0x318F7 (202999)
 		}
 		else if (!WEAPON::HAS_PED_GOT_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_STUNGUN"), false))
 		{
-			if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (func_306())
 			{
 				string1 = { func_402() };
 			
@@ -45771,7 +45771,7 @@ Vector3 func_443(int iParam0, BOOL bParam1) // Position - 0x35C08 (220168)
 			return 2714.5466f, -354.2701f, -55.1867f;
 	
 		case 50:
-			return Global_1966473;
+			return Global_1966475;
 	
 		case 51:
 			return 1100f, 220f, -50f;
@@ -45824,8 +45824,8 @@ Vector3 func_443(int iParam0, BOOL bParam1) // Position - 0x35C08 (220168)
 
 Vector3 func_444() // Position - 0x36382 (222082)
 {
-	if (!_IS_NULL_VECTOR(Global_1950936))
-		return Global_1950936;
+	if (!func_446(Global_1950938))
+		return Global_1950938;
 
 	switch (func_445())
 	{
@@ -45931,7 +45931,7 @@ int func_445() // Position - 0x3667D (222845)
 	return Global_2652571.f_2706;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x3668C (222860)
+BOOL func_446(float fParam0, var uParam1, var uParam2) // Position - 0x3668C (222860)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -47070,7 +47070,7 @@ void func_482() // Position - 0x38185 (229765)
 					}
 					else
 					{
-						if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && !HUD::DOES_BLIP_EXIST(blLocal_404))
+						if (!func_306() && !HUD::DOES_BLIP_EXIST(blLocal_404))
 						{
 							blLocal_404 = func_486(veLocal_403, true, 5);
 						
@@ -47262,7 +47262,7 @@ void func_488() // Position - 0x384F2 (230642)
 {
 	var string1;
 
-	if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+	if (func_306())
 	{
 		string1 = { func_491() };
 	
@@ -48200,7 +48200,7 @@ void func_530() // Position - 0x399DA (235994)
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(&uLocal_390, ""))
 		{
-			if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (func_306())
 			{
 				uLocal_396 = { func_402() };
 			
@@ -48269,7 +48269,7 @@ void func_533() // Position - 0x39B4F (236367)
 			func_604();
 			iLocal_168 = 0;
 		
-			if (CAM::IS_SCREEN_FADED_IN() && !_IS_MISSION_REPLAY_IN_PROGRESS() && _DOES_ENTITY_EXIST_AND_IS_ALIVE(uLocal_94.f_28[0]) && func_319(PLAYER::PLAYER_PED_ID(), uLocal_94.f_28[0], true) > 7f && !ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), 329.28726f, 3403.3022f, 34.502598f, 336.4215f, 3385.2556f, 39.40556f, 20f, false, true, 0))
+			if (CAM::IS_SCREEN_FADED_IN() && !func_747() && _DOES_ENTITY_EXIST_AND_IS_ALIVE(uLocal_94.f_28[0]) && func_319(PLAYER::PLAYER_PED_ID(), uLocal_94.f_28[0], true) > 7f && !ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), 329.28726f, 3403.3022f, 34.502598f, 336.4215f, 3385.2556f, 39.40556f, 20f, false, true, 0))
 			{
 				CAM::SET_GAMEPLAY_ENTITY_HINT(uLocal_94.f_28[0], 0f, 0f, 0f, true, -1, 3000, 2000, 0);
 				CAM::SET_GAMEPLAY_HINT_FOLLOW_DISTANCE_SCALAR(0.45f);
@@ -49276,7 +49276,7 @@ BOOL func_561(Hash hParam0, BOOL bParam1, int iParam2) // Position - 0x3B236 (24
 
 	if (hParam0 == joaat("hotknife") || hParam0 == joaat("carbonrs") || hParam0 == joaat("khamelion"))
 	{
-		if (IS_XBOX_PLATFORM() || MISC::IS_PC_VERSION() || IS_PLAYSTATION_PLATFORM())
+		if (func_208() || MISC::IS_PC_VERSION() || func_207())
 		{
 		}
 		else if (!func_566())
@@ -49371,7 +49371,7 @@ BOOL func_564(Hash hParam0, int iParam1) // Position - 0x3B49F (242847)
 		return true;
 
 	if (!Global_2707807 && iParam1 >= 0 && iParam1 <= 547)
-		if (IS_BIT_SET(Global_1586542[iParam1 /*143*/].f_104, 2))
+		if (IS_BIT_SET(Global_1586543[iParam1 /*143*/].f_104, 2))
 			return true;
 
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();
@@ -50612,7 +50612,7 @@ void func_584(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uP
 		
 			if (flag)
 			{
-				if (!_IS_NULL_VECTOR(fParam11))
+				if (!func_446(fParam11))
 				{
 					if (VEHICLE::IS_VEHICLE_DRIVEABLE(playersLastVehicle, false))
 					{
@@ -50880,7 +50880,7 @@ BOOL func_591(int iParam0, int iParam1, int iParam2) // Position - 0x3DD6E (2532
 
 	func_593();
 
-	if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+	if (func_306())
 	{
 		func_516();
 		num = 0;
@@ -51102,12 +51102,12 @@ void func_601(BOOL bParam0, BOOL bParam1) // Position - 0x3E1B4 (254388)
 
 BOOL func_602() // Position - 0x3E228 (254504)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_603() // Position - 0x3E236 (254518)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_604() // Position - 0x3E245 (254533)
@@ -52045,7 +52045,7 @@ void func_626(int iParam0, int iParam1, int iParam2) // Position - 0x3F250 (2586
 
 void func_627(Vehicle veParam0, int iParam1, int iParam2) // Position - 0x3F284 (258692)
 {
-	if (_IS_MISSION_REPLAY_IN_PROGRESS() && func_546())
+	if (func_747() && func_546())
 	{
 		while (Global_101708 != 6)
 		{
@@ -52133,7 +52133,7 @@ void func_630(var uParam0, Vector3 vParam1, var uParam2, var uParam3, float fPar
 
 	num = 1;
 
-	if (!_IS_MISSION_REPLAY_IN_PROGRESS() || !func_729())
+	if (!func_747() || !func_729())
 		num = 0;
 
 	if (num == 1)
@@ -55093,7 +55093,7 @@ BOOL func_666(Vehicle veParam0) // Position - 0x43C94 (277652)
 			if (DECORATOR::DECOR_EXIST_ON(veParam0, "Player_Vehicle"))
 				if (DECORATOR::DECOR_GET_INT(veParam0, "Player_Vehicle") == NETWORK::NETWORK_HASH_FROM_PLAYER_HANDLE(PLAYER::PLAYER_ID()))
 					if (func_668() != -1 && func_668() < 547)
-						if (!func_667(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1586542[func_668() /*143*/].f_66)
+						if (!func_667(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1586543[func_668() /*143*/].f_66)
 							return true;
 					else
 						return true;
@@ -56786,7 +56786,7 @@ void func_735(BOOL bParam0, int iParam1, int iParam2) // Position - 0x464A3 (287
 
 void func_736(float fParam0, float fParam1, float fParam2, float fParam3, int iParam4, int iParam5) // Position - 0x46502 (288002)
 {
-	if (_IS_MISSION_REPLAY_IN_PROGRESS())
+	if (func_747())
 	{
 		MISC::SET_THIS_SCRIPT_CAN_BE_PAUSED(false);
 		MISC::CLEAR_BIT(&(Global_101713.f_20), 2);
@@ -56929,7 +56929,7 @@ void func_746(var uParam0, int iParam1) // Position - 0x466F8 (288504)
 	return;
 }
 
-BOOL _IS_MISSION_REPLAY_IN_PROGRESS() // Position - 0x46739 (288569)
+BOOL func_747() // Position - 0x46739 (288569)
 {
 	if (Global_101713 == 10 || Global_101713 == 9)
 		return true;
@@ -57014,7 +57014,7 @@ BOOL func_751() // Position - 0x4691F (289055)
 	HUD::CLEAR_ADDITIONAL_TEXT(3, true);
 	HUD::CLEAR_ADDITIONAL_TEXT(2, true);
 
-	if (!_IS_MISSION_REPEAT_ACTIVE(false))
+	if (!func_47(false))
 	{
 		if (Global_113249[num /*10*/].f_5 && Global_113249[num /*10*/].f_6)
 			Global_113249[num /*10*/].f_6 = 0;

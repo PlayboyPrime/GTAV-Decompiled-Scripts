@@ -2123,7 +2123,7 @@ void func_12() // Position - 0x522 (1314)
 					if (MISC::ARE_STRINGS_EQUAL(&Global_76641, "HARDCODED_4207156"))
 					{
 						Global_21083.f_1 = 3;
-						Global_1963584 = 1;
+						Global_1963586 = 1;
 					}
 					else
 					{
@@ -2841,7 +2841,7 @@ BOOL func_35(var uParam0) // Position - 0x1686 (5766)
 
 BOOL func_36() // Position - 0x16B5 (5813)
 {
-	return IS_BIT_SET(Global_1668458, 4);
+	return IS_BIT_SET(Global_1668459, 4);
 }
 
 BOOL func_37() // Position - 0x16C3 (5827)
@@ -3917,11 +3917,11 @@ void func_61(int iParam0) // Position - 0x2F4E (12110)
 	TEXT_LABEL_ASSIGN_STRING(&componentType, "", 16);
 	func_62(Global_4542454[iParam0 /*296*/].f_49, &componentType);
 
-	if (IS_BIT_SET(Global_1982058, 0))
+	if (IS_BIT_SET(Global_1982060, 0))
 	{
 		TEXT_LABEL_APPEND_STRING(&componentType, "p", 16);
 		GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(&componentType);
-		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1982059[num /*4*/]);
+		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1982061[num /*4*/]);
 		num = num + 1;
 	}
 	else
@@ -3934,7 +3934,7 @@ void func_61(int iParam0) // Position - 0x2F4E (12110)
 		switch (Global_4542454[iParam0 /*296*/].f_32)
 		{
 			case 13:
-				HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1982059[num /*4*/]);
+				HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1982061[num /*4*/]);
 				break;
 		}
 	
@@ -4117,7 +4117,7 @@ void func_65() // Position - 0x326E (12910)
 				if (func_66(&uLocal_60[i /*6*/]))
 				{
 					TEXT_LABEL_ASSIGN_STRING(&uLocal_44, "BAT_CASE_", 64);
-					TEXT_LABEL_APPEND_INT(&uLocal_44, Global_1963576, 64);
+					TEXT_LABEL_APPEND_INT(&uLocal_44, Global_1963578, 64);
 				}
 				else
 				{
@@ -5090,11 +5090,11 @@ BOOL func_87(int iParam0) // Position - 0x4822 (18466)
 
 BOOL func_88() // Position - 0x4879 (18553)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_89() // Position - 0x4887 (18567)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 

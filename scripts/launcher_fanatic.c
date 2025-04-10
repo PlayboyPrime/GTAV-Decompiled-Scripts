@@ -224,7 +224,7 @@ void main() // Position - 0x0 (0)
 	{
 		SYSTEM::WAIT(0);
 	
-		if (!IS_RC_FINE_AND_IN_RANGE(&num, 1))
+		if (!func_219(&num, 1))
 			func_286(&num, true);
 	
 		func_218(num);
@@ -289,14 +289,14 @@ BOOL func_2(Any* panParam0) // Position - 0x2F8 (760)
 	const char* str;
 	var unk32;
 
-	if (!_IS_MISSION_REPLAY_IN_PROGRESS())
+	if (!func_179())
 	{
 		while (!func_170(*panParam0))
 		{
 			if (func_169(*panParam0))
 				func_157();
 		
-			if (!IS_RC_FINE_AND_IN_RANGE(panParam0, *panParam0 != 2))
+			if (!func_219(panParam0, *panParam0 != 2))
 			{
 				func_302("LAUNCH_RC_MISSION - NOT IS_RC_FINE_AND_IN_RANGE() [TERMINATING]");
 				return false;
@@ -306,7 +306,7 @@ BOOL func_2(Any* panParam0) // Position - 0x2F8 (760)
 		}
 	}
 
-	if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+	if (func_156())
 		func_154();
 
 	if (!func_123(panParam0))
@@ -320,7 +320,7 @@ BOOL func_2(Any* panParam0) // Position - 0x2F8 (760)
 	func_117(&unk32, str.f_3, 0);
 	func_114(*panParam0);
 
-	if (!_IS_MISSION_REPLAY_IN_PROGRESS())
+	if (!func_179())
 		if (panParam0->f_16 == 2)
 			func_22(&(panParam0->f_1), 0);
 		else
@@ -4926,7 +4926,7 @@ Vector3 func_79(int iParam0, BOOL bParam1) // Position - 0x6BBA (27578)
 			return 2714.5466f, -354.2701f, -55.1867f;
 	
 		case 50:
-			return Global_1966473;
+			return Global_1966475;
 	
 		case 51:
 			return 1100f, 220f, -50f;
@@ -4979,8 +4979,8 @@ Vector3 func_79(int iParam0, BOOL bParam1) // Position - 0x6BBA (27578)
 
 Vector3 func_80() // Position - 0x7334 (29492)
 {
-	if (!_IS_NULL_VECTOR(Global_1950936))
-		return Global_1950936;
+	if (!func_82(Global_1950938))
+		return Global_1950938;
 
 	switch (func_81())
 	{
@@ -5086,7 +5086,7 @@ int func_81() // Position - 0x762F (30255)
 	return Global_2652571.f_2706;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x763E (30270)
+BOOL func_82(float fParam0, var uParam1, var uParam2) // Position - 0x763E (30270)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -6106,12 +6106,12 @@ void func_114(int iParam0) // Position - 0x8F14 (36628)
 	int num;
 	var textLabel;
 
-	if (MISC::IS_XBOX360_VERSION() || IS_XBOX_PLATFORM())
+	if (MISC::IS_XBOX360_VERSION() || func_116())
 	{
 		num = iParam0;
 		NETWORK::NETWORK_SET_RICH_PRESENCE(9, &num, 1, 1);
 	}
-	else if (MISC::IS_PS3_VERSION() || IS_PLAYSTATION_PLATFORM() || MISC::IS_PC_VERSION())
+	else if (MISC::IS_PS3_VERSION() || func_115() || MISC::IS_PC_VERSION())
 	{
 		TEXT_LABEL_ASSIGN_STRING(&textLabel, "SPRC_", 24);
 		TEXT_LABEL_APPEND_INT(&textLabel, iParam0, 24);
@@ -6122,12 +6122,12 @@ void func_114(int iParam0) // Position - 0x8F14 (36628)
 	return;
 }
 
-BOOL IS_PLAYSTATION_PLATFORM() // Position - 0x8F77 (36727)
+BOOL func_115() // Position - 0x8F77 (36727)
 {
 	return MISC::IS_ORBIS_VERSION() || MISC::IS_PROSPERO_VERSION();
 }
 
-BOOL IS_XBOX_PLATFORM() // Position - 0x8F8D (36749)
+BOOL func_116() // Position - 0x8F8D (36749)
 {
 	return MISC::IS_DURANGO_VERSION() || MISC::IS_SCARLETT_VERSION();
 }
@@ -6141,13 +6141,13 @@ void func_117(char* sParam0, Any anParam1, int iParam2) // Position - 0x8FA3 (36
 	}
 
 	TEXT_LABEL_ASSIGN_STRING(&Global_98758, sParam0, 64);
-	STATS::PLAYSTATS_MISSION_STARTED(sParam0, anParam1, iParam2, _IS_MISSION_REPEAT_ACTIVE(false));
+	STATS::PLAYSTATS_MISSION_STARTED(sParam0, anParam1, iParam2, func_118(false));
 	return;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x8FE5 (36837)
+BOOL func_118(BOOL bParam0) // Position - 0x8FE5 (36837)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -6978,7 +6978,7 @@ void func_124(int iParam0) // Position - 0xAB1D (43805)
 		if (func_136(PLAYER::PLAYER_PED_ID()))
 			func_127(PLAYER::PLAYER_PED_ID());
 
-	if (!_IS_MISSION_REPLAY_IN_PROGRESS())
+	if (!func_179())
 	{
 		if (iParam0 < 63)
 		{
@@ -7546,7 +7546,7 @@ void func_155() // Position - 0xB4BA (46266)
 	return;
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0xB511 (46353)
+BOOL func_156() // Position - 0xB511 (46353)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -7744,7 +7744,7 @@ void func_165(BOOL bParam0, BOOL bParam1) // Position - 0xB882 (47234)
 
 BOOL func_166() // Position - 0xB8F6 (47350)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_167(int iParam0) // Position - 0xB904 (47364)
@@ -7769,7 +7769,7 @@ BOOL func_167(int iParam0) // Position - 0xB904 (47364)
 
 BOOL func_168() // Position - 0xB95B (47451)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 BOOL func_169(int iParam0) // Position - 0xB96A (47466)
@@ -8072,7 +8072,7 @@ int func_178(const char* sParam0, int iParam1) // Position - 0xBDCD (48589)
 	return -1;
 }
 
-BOOL _IS_MISSION_REPLAY_IN_PROGRESS() // Position - 0xBE16 (48662)
+BOOL func_179() // Position - 0xBE16 (48662)
 {
 	if (Global_101713 == 10 || Global_101713 == 9)
 		return true;
@@ -8791,11 +8791,11 @@ BOOL func_196(int iParam0, int iParam1) // Position - 0xD4D0 (54480)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 BOOL func_197() // Position - 0xD508 (54536)
@@ -8820,7 +8820,7 @@ void func_199(var uParam0) // Position - 0xD530 (54576)
 	{
 		if (_DOES_ENTITY_EXIST_AND_IS_ALIVE(uParam0->f_28[0]))
 		{
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (!func_156())
 			{
 				func_200(uParam0->f_28[0], "PUSHUP_BREATH", "MARYANN", 6, false);
 				iLocal_95 = MISC::GET_GAME_TIMER();
@@ -8966,7 +8966,7 @@ int func_202(var uParam0, var uParam1, var uParam2, var uParam3, char* sParam4, 
 {
 	var unk;
 
-	if (_DOES_ENTITY_EXIST_AND_IS_ALIVE(PLAYER::PLAYER_PED_ID()) && _DOES_ENTITY_EXIST_AND_IS_ALIVE(uParam0->f_28[0]) && !_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && MISC::GET_GAME_TIMER() - uParam0->f_60 > iParam8 && func_206(PLAYER::PLAYER_PED_ID(), uParam1, true) < iParam9)
+	if (_DOES_ENTITY_EXIST_AND_IS_ALIVE(PLAYER::PLAYER_PED_ID()) && _DOES_ENTITY_EXIST_AND_IS_ALIVE(uParam0->f_28[0]) && !func_156() && MISC::GET_GAME_TIMER() - uParam0->f_60 > iParam8 && func_206(PLAYER::PLAYER_PED_ID(), uParam1, true) < iParam9)
 	{
 		unk = 16;
 		_CONVERSATION_INITIALIZE_ACTOR(&unk, iParam6, uParam0->f_28[0], sParam7, 0, 1);
@@ -9069,7 +9069,7 @@ BOOL func_207(var uParam0, var uParam1, var uParam2, var uParam3, char* sParam4,
 
 	if (func_190(2))
 	{
-		if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+		if (!func_156())
 		{
 			if (_DOES_ENTITY_EXIST_AND_IS_ALIVE(PLAYER::PLAYER_PED_ID()) && _DOES_ENTITY_EXIST_AND_IS_ALIVE(uParam0->f_28[0]) && MISC::GET_GAME_TIMER() - uParam0->f_60 > iParam8 && func_206(PLAYER::PLAYER_PED_ID(), uParam1, true) < 20f)
 			{
@@ -9308,7 +9308,7 @@ void func_218(int iParam0) // Position - 0xDDB4 (56756)
 	return;
 }
 
-BOOL IS_RC_FINE_AND_IN_RANGE(Any* panParam0, BOOL bParam1) // Position - 0xDDDC (56796)
+BOOL func_219(Any* panParam0, BOOL bParam1) // Position - 0xDDDC (56796)
 {
 	var unk;
 
@@ -9859,7 +9859,7 @@ BOOL func_229(var uParam0, BOOL bParam1, int iParam2) // Position - 0xE99E (5980
 							else
 								func_226(uParam0);
 						
-							if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+							if (func_156())
 								func_154();
 						
 							func_302("STEP_5_COMMON_RCfineAndInRange - Random character is being pushed by car [TERMINATING]");
@@ -10513,7 +10513,7 @@ BOOL func_255() // Position - 0xF72C (63276)
 
 BOOL func_256(int iParam0) // Position - 0xF76A (63338)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_118(false))
 		if (Global_79811.f_1 == 7)
 			if (Global_79811 == iParam0)
 				return true;
@@ -11090,7 +11090,7 @@ BOOL func_274(int iParam0) // Position - 0x10401 (66561)
 		return false;
 	}
 
-	if (!Global_114162.f_9089 && !_IS_MISSION_REPEAT_ACTIVE(true))
+	if (!Global_114162.f_9089 && !func_118(true))
 	{
 		func_302("STEP_3_COMMON_CanRCLaunch - Script denied, game flow is not active");
 		return false;

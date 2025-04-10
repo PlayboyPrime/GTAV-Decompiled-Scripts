@@ -254,7 +254,7 @@ void main() // Position - 0x0 (0)
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(83))
 		func_30();
 
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_29(false))
 		func_30();
 
 	pedLocal_44 = pedScriptParam_0;
@@ -342,7 +342,7 @@ void main() // Position - 0x0 (0)
 				if (_GET_CURRENT_PLAYER_CHARACTER() == CHAR_MICHAEL)
 					if (num < 4f)
 						if (MISC::GET_GAME_TIMER() > iLocal_215)
-							if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+							if (!func_21())
 								if (_CONVERSATION_ADD_LINE(&uLocal_49, "JHFAUD", "JHF_LEAVE", 3, 0, 0, 0))
 									iLocal_215 = MISC::GET_GAME_TIMER() + 25000;
 			
@@ -627,9 +627,9 @@ void func_6() // Position - 0x835 (2101)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -807,11 +807,11 @@ BOOL func_18(int iParam0, int iParam1) // Position - 0xB8D (2957)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_19() // Position - 0xBC5 (3013)
@@ -869,7 +869,7 @@ void func_20(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, 
 	return;
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0xC72 (3186)
+BOOL func_21() // Position - 0xC72 (3186)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -982,9 +982,9 @@ void _CONVERSATION_INITIALIZE_ACTOR(var uParam0, int iParam1, Ped pedParam2, cha
 	return;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0xEC2 (3778)
+BOOL func_29(BOOL bParam0) // Position - 0xEC2 (3778)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);

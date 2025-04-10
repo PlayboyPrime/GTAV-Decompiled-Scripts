@@ -2052,7 +2052,7 @@ Hash func_50(eCharacter echParam0) // Position - 0x1D32 (7474)
 
 void func_51() // Position - 0x1D41 (7489)
 {
-	while (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+	while (func_73())
 	{
 		SYSTEM::WAIT(0);
 	}
@@ -2076,7 +2076,7 @@ void func_52() // Position - 0x1D75 (7541)
 
 int func_53() // Position - 0x1D82 (7554)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_54(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -2089,9 +2089,9 @@ int func_53() // Position - 0x1D82 (7554)
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x1DCD (7629)
+BOOL func_54(BOOL bParam0) // Position - 0x1DCD (7629)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -2920,7 +2920,7 @@ BOOL func_72() // Position - 0x2EEF (12015)
 	return true;
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x2EF8 (12024)
+BOOL func_73() // Position - 0x2EF8 (12024)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -3075,7 +3075,7 @@ void func_79(Vehicle veParam0, Vehicle veParam1, var uParam2, var uParam3, var u
 			{
 				if (func_81(veParam0, veParam1, true) > fParam11 && MISC::GET_DISTANCE_BETWEEN_COORDS(ENTITY::GET_ENTITY_COORDS(veParam1, true), *uParam2, true) > 20f)
 				{
-					if (!_IS_NULL_VECTOR(*uParam2))
+					if (!func_80(*uParam2))
 					{
 						if (!CAM::IS_SPHERE_VISIBLE(*uParam2, 3f))
 						{
@@ -3092,7 +3092,7 @@ void func_79(Vehicle veParam0, Vehicle veParam1, var uParam2, var uParam3, var u
 						{
 							offsetFromCoordAndHeadingInWorldCoords = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(uLocal_111, fLocal_110, fParam7) };
 						
-							if (!_IS_NULL_VECTOR(offsetFromCoordAndHeadingInWorldCoords))
+							if (!func_80(offsetFromCoordAndHeadingInWorldCoords))
 							{
 								if (!CAM::IS_SPHERE_VISIBLE(offsetFromCoordAndHeadingInWorldCoords, 2f))
 								{
@@ -3121,7 +3121,7 @@ void func_79(Vehicle veParam0, Vehicle veParam1, var uParam2, var uParam3, var u
 	return;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x33B6 (13238)
+BOOL func_80(float fParam0, var uParam1, var uParam2) // Position - 0x33B6 (13238)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -3514,7 +3514,7 @@ void func_86() // Position - 0x3667 (13927)
 			break;
 	
 		case 6:
-			if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (func_73())
 			{
 				fLocal_118 = MISC::GET_RANDOM_FLOAT_IN_RANGE(1.5f, 2.5f);
 				fLocal_119 = MISC::GET_RANDOM_FLOAT_IN_RANGE(2f, 4f);
@@ -3742,9 +3742,9 @@ void func_89() // Position - 0x4228 (16936)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -3917,11 +3917,11 @@ BOOL func_100(int iParam0, int iParam1) // Position - 0x4572 (17778)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_101() // Position - 0x45AA (17834)
@@ -4307,7 +4307,7 @@ void func_107() // Position - 0x4FC9 (20425)
 			{
 				if (ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), pedLocal_134, 10f, 10f, 6f, false, true, 0))
 				{
-					if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+					if (!func_73())
 					{
 						_CONVERSATION_ADD_LINE(&uLocal_269, "REDGWAU", "REDGW_NKILLD", 4, 0, 0, 0);
 					
@@ -4328,7 +4328,7 @@ void func_107() // Position - 0x4FC9 (20425)
 			break;
 	
 		case 2:
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() || SYSTEM::TIMERB() > 4000)
+			if (!func_73() || SYSTEM::TIMERB() > 4000)
 			{
 				if (!PED::IS_PED_INJURED(pedLocal_134))
 				{
@@ -4521,7 +4521,7 @@ void func_111() // Position - 0x5227 (21031)
 		
 			iLocal_124 = MISC::GET_GAME_TIMER();
 		
-			if (iLocal_124 - iLocal_125 > 6000 && !_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (iLocal_124 - iLocal_125 > 6000 && !func_73())
 			{
 				!PED::IS_PED_INJURED(uLocal_135[6]);
 				!PED::IS_PED_INJURED(uLocal_135[7]);
@@ -6238,7 +6238,7 @@ BOOL func_143(var uParam0, var uParam1, var uParam2, int iParam3, int iParam4, B
 		if (!Global_114162.f_9089)
 			return false;
 	
-		if (_IS_MISSION_REPEAT_ACTIVE(false))
+		if (func_54(false))
 			return false;
 	
 		if (func_133())

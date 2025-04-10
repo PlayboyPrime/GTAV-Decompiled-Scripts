@@ -492,14 +492,14 @@ void main() // Position - 0x0 (0)
 									}
 									else if (!func_120(iLocal_92, 2048) || !HUD::IS_HELP_MESSAGE_BEING_DISPLAYED())
 									{
-										_CONTEXT_REMOVE_HELP_TEXT(&iLocal_94);
+										func_78(&iLocal_94);
 										func_124(&iLocal_92, 2048);
 									}
 								
 									if (func_76(iLocal_94, true))
 									{
 										sLocal_99 = sLocal_99;
-										_CONTEXT_REMOVE_HELP_TEXT(&iLocal_94);
+										func_78(&iLocal_94);
 										func_124(&iLocal_92, 2048);
 										SCRIPT::REQUEST_SCRIPT(&uLocal_67);
 										PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), false, SPC_REMOVE_FIRES | 16 | 32);
@@ -509,7 +509,7 @@ void main() // Position - 0x0 (0)
 								else
 								{
 									sLocal_99 = sLocal_99;
-									_CONTEXT_REMOVE_HELP_TEXT(&iLocal_94);
+									func_78(&iLocal_94);
 									func_124(&iLocal_92, 2048);
 									SCRIPT::REQUEST_SCRIPT(&uLocal_67);
 									PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), false, SPC_REMOVE_FIRES | 16 | 32);
@@ -522,7 +522,7 @@ void main() // Position - 0x0 (0)
 						{
 							if (iLocal_94 != -1)
 							{
-								_CONTEXT_REMOVE_HELP_TEXT(&iLocal_94);
+								func_78(&iLocal_94);
 								func_124(&iLocal_92, 2048);
 								HUD::CLEAR_HELP(false);
 							}
@@ -538,7 +538,7 @@ void main() // Position - 0x0 (0)
 					if (SCRIPT::HAS_SCRIPT_LOADED(&uLocal_67))
 					{
 						if (iLocal_94 != -1)
-							_CONTEXT_REMOVE_HELP_TEXT(&iLocal_94);
+							func_78(&iLocal_94);
 					
 						num = 2;
 						flag = false;
@@ -697,7 +697,7 @@ void main() // Position - 0x0 (0)
 						func_114(iLocal_103, false, false);
 				
 					if (iLocal_94 != -1)
-						_CONTEXT_REMOVE_HELP_TEXT(&iLocal_94);
+						func_78(&iLocal_94);
 				
 					if (!MISC::IS_STRING_NULL_OR_EMPTY(sLocal_99))
 						if (_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(sLocal_99))
@@ -806,7 +806,7 @@ void func_4() // Position - 0xB0D (2829)
 
 int func_5() // Position - 0xB7C (2940)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_6(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -819,9 +819,9 @@ int func_5() // Position - 0xB7C (2940)
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0xBC7 (3015)
+BOOL func_6(BOOL bParam0) // Position - 0xBC7 (3015)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -3219,11 +3219,11 @@ void func_30() // Position - 0x56D3 (22227)
 {
 	var textLabel;
 
-	if (MISC::IS_XBOX360_VERSION() || IS_XBOX_PLATFORM())
+	if (MISC::IS_XBOX360_VERSION() || func_32())
 	{
 		NETWORK::NETWORK_SET_RICH_PRESENCE(StackVal, 0, 0, 0);
 	}
-	else if (MISC::IS_PS3_VERSION() || IS_PLAYSTATION_PLATFORM() || MISC::IS_PC_VERSION())
+	else if (MISC::IS_PS3_VERSION() || func_31() || MISC::IS_PC_VERSION())
 	{
 		TEXT_LABEL_ASSIGN_STRING(&textLabel, "PRESENCE_0_STR" /*Playing story*/, 24);
 		NETWORK::NETWORK_SET_RICH_PRESENCE_STRING(0, &textLabel);
@@ -3232,12 +3232,12 @@ void func_30() // Position - 0x56D3 (22227)
 	return;
 }
 
-BOOL IS_PLAYSTATION_PLATFORM() // Position - 0x5720 (22304)
+BOOL func_31() // Position - 0x5720 (22304)
 {
 	return MISC::IS_ORBIS_VERSION() || MISC::IS_PROSPERO_VERSION();
 }
 
-BOOL IS_XBOX_PLATFORM() // Position - 0x5736 (22326)
+BOOL func_32() // Position - 0x5736 (22326)
 {
 	return MISC::IS_DURANGO_VERSION() || MISC::IS_SCARLETT_VERSION();
 }
@@ -3317,7 +3317,7 @@ void func_40(char* sParam0, int iParam1, int iParam2) // Position - 0x5825 (2256
 	}
 
 	TEXT_LABEL_ASSIGN_STRING(&Global_98758, sParam0, 64);
-	STATS::PLAYSTATS_MISSION_STARTED(sParam0, iParam1, iParam2, _IS_MISSION_REPEAT_ACTIVE(false));
+	STATS::PLAYSTATS_MISSION_STARTED(sParam0, iParam1, iParam2, func_6(false));
 	return;
 }
 
@@ -3394,12 +3394,12 @@ void func_42(int iParam0) // Position - 0x59B9 (22969)
 	int num;
 	var textLabel;
 
-	if (MISC::IS_XBOX360_VERSION() || IS_XBOX_PLATFORM())
+	if (MISC::IS_XBOX360_VERSION() || func_32())
 	{
 		num = iParam0;
 		NETWORK::NETWORK_SET_RICH_PRESENCE(8, &num, 1, 1);
 	}
-	else if (MISC::IS_PS3_VERSION() || IS_PLAYSTATION_PLATFORM() || MISC::IS_PC_VERSION())
+	else if (MISC::IS_PS3_VERSION() || func_31() || MISC::IS_PC_VERSION())
 	{
 		TEXT_LABEL_ASSIGN_STRING(&textLabel, "SPMG_", 24);
 		TEXT_LABEL_APPEND_INT(&textLabel, iParam0, 24);
@@ -4095,7 +4095,7 @@ void func_75(int iParam0) // Position - 0x65C2 (26050)
 		}
 	
 		iLocal_103 = 263;
-		_CONTEXT_REMOVE_HELP_TEXT(&iLocal_94);
+		func_78(&iLocal_94);
 		iLocal_93 = 9;
 	}
 
@@ -4160,7 +4160,7 @@ int func_77(int iParam0) // Position - 0x66BD (26301)
 	return -1;
 }
 
-void _CONTEXT_REMOVE_HELP_TEXT(var uParam0) // Position - 0x66F8 (26360)
+void func_78(var uParam0) // Position - 0x66F8 (26360)
 {
 	int num;
 
@@ -4198,7 +4198,7 @@ void _CONTEXT_ADD_HELP_TEXT(var uParam0, int iParam1, char* sParam2, int iParam3
 	if (STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS())
 	{
 		if (!(*uParam0 == -1))
-			_CONTEXT_REMOVE_HELP_TEXT(uParam0);
+			func_78(uParam0);
 	
 		return;
 	}
@@ -4288,11 +4288,11 @@ BOOL func_84(int iParam0, int iParam1) // Position - 0x68FD (26877)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 BOOL func_85() // Position - 0x6935 (26933)
@@ -4656,7 +4656,7 @@ void func_105() // Position - 0x7365 (29541)
 		{
 			func_107(iLocal_133, i, &unk7, &unk10, &num);
 		
-			if (!_IS_NULL_VECTOR(unk7))
+			if (!func_106(unk7))
 				iLocal_134[i] = PATHFIND::ADD_NAVMESH_BLOCKING_OBJECT(unk7, unk10, num, false, 7);
 		}
 	}
@@ -4664,7 +4664,7 @@ void func_105() // Position - 0x7365 (29541)
 	return;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x7754 (30548)
+BOOL func_106(float fParam0, var uParam1, var uParam2) // Position - 0x7754 (30548)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -5208,7 +5208,7 @@ void func_126(BOOL bParam0) // Position - 0x819C (33180)
 		if (iLocal_103 != 263)
 			func_114(iLocal_103, 0, false);
 
-	_CONTEXT_REMOVE_HELP_TEXT(&iLocal_94);
+	func_78(&iLocal_94);
 
 	if (func_120(iLocal_92, 2))
 	{

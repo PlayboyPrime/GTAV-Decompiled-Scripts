@@ -1419,7 +1419,7 @@ void main() // Position - 0x0 (0)
 			case 5:
 				if (!flag || !_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("SHRINK_BROKE"))
 				{
-					_TRIGGER_MISSION_FAIL(0);
+					func_1(0);
 					func_139();
 				}
 				break;
@@ -1429,11 +1429,11 @@ void main() // Position - 0x0 (0)
 	return;
 }
 
-void _TRIGGER_MISSION_FAIL(int iParam0) // Position - 0x316 (790)
+void func_1(int iParam0) // Position - 0x316 (790)
 {
 	int num;
 
-	if (Global_114162.f_9089 || _IS_MISSION_REPEAT_ACTIVE(false))
+	if (Global_114162.f_9089 || func_9(false))
 	{
 		num = func_8();
 	
@@ -1973,9 +1973,9 @@ int func_8() // Position - 0x10D3 (4307)
 	return -1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x1105 (4357)
+BOOL func_9(BOOL bParam0) // Position - 0x1105 (4357)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -1998,7 +1998,7 @@ void func_11(BOOL bParam0, BOOL bParam1) // Position - 0x1140 (4416)
 
 	if (bParam0)
 	{
-		if (_IS_MISSION_REPEAT_ACTIVE(false) && Global_79811.f_1 == 1 && func_12(Global_79811))
+		if (func_9(false) && Global_79811.f_1 == 1 && func_12(Global_79811))
 		{
 		}
 		else
@@ -2007,7 +2007,7 @@ void func_11(BOOL bParam0, BOOL bParam1) // Position - 0x1140 (4416)
 		}
 	}
 
-	if (Global_114162.f_9089 || _IS_MISSION_REPEAT_ACTIVE(false))
+	if (Global_114162.f_9089 || func_9(false))
 	{
 		num = func_8();
 		num2 = Global_92440[num /*5*/];
@@ -3514,12 +3514,12 @@ BOOL func_65(int iParam0) // Position - 0x2B69 (11113)
 
 BOOL func_66() // Position - 0x2BC0 (11200)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_67() // Position - 0x2BCE (11214)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_68(int iParam0) // Position - 0x2BDD (11229)
@@ -4011,11 +4011,11 @@ BOOL func_89(int iParam0, int iParam1) // Position - 0x3436 (13366)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_90() // Position - 0x346E (13422)
@@ -5646,7 +5646,7 @@ void func_144() // Position - 0x51F3 (20979)
 	if (SCRIPT::HAS_SCRIPT_LOADED("buddyDeathResponse"))
 		SYSTEM::START_NEW_SCRIPT("buddyDeathResponse", DEFAULT);
 
-	if (Global_114162.f_9089 || _IS_MISSION_REPEAT_ACTIVE(false))
+	if (Global_114162.f_9089 || func_9(false))
 	{
 		if (!func_145())
 		{

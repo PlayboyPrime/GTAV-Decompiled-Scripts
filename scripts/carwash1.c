@@ -1586,7 +1586,7 @@ void func_19() // Position - 0xFBA (4026)
 
 int func_20() // Position - 0x1478 (5240)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_21(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -1599,9 +1599,9 @@ int func_20() // Position - 0x1478 (5240)
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x14C3 (5315)
+BOOL func_21(BOOL bParam0) // Position - 0x14C3 (5315)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -1794,7 +1794,7 @@ void func_35(var uParam0, var uParam1, BOOL bParam2, BOOL bParam3, int iParam4, 
 	CAM::SET_CAM_ACTIVE(*uParam1, true);
 	CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 
-	if (!bParam3 && uParam0->f_20 > 0 && !_IS_NULL_VECTOR(uParam0->f_1[1 /*3*/]))
+	if (!bParam3 && uParam0->f_20 > 0 && !func_36(uParam0->f_1[1 /*3*/]))
 	{
 		vector = { uParam0->f_1[1 /*3*/] };
 	
@@ -1814,7 +1814,7 @@ void func_35(var uParam0, var uParam1, BOOL bParam2, BOOL bParam3, int iParam4, 
 	return;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x18AF (6319)
+BOOL func_36(float fParam0, var uParam1, var uParam2) // Position - 0x18AF (6319)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -3974,7 +3974,7 @@ void func_49(BOOL bParam0, BOOL bParam1) // Position - 0x5DBE (23998)
 
 BOOL func_50() // Position - 0x5E32 (24114)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_51(int iParam0) // Position - 0x5E40 (24128)
@@ -3999,7 +3999,7 @@ BOOL func_51(int iParam0) // Position - 0x5E40 (24128)
 
 BOOL func_52() // Position - 0x5E97 (24215)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 BOOL func_53(var uParam0, Vehicle veParam1) // Position - 0x5EA6 (24230)
@@ -4895,7 +4895,7 @@ void func_94(var uParam0, const char* sParam1) // Position - 0x7005 (28677)
 		uParam0->f_13 = sParam1;
 
 	func_78(uParam0);
-	_IS_NULL_VECTOR(uLocal_67);
+	func_36(uLocal_67);
 
 	if (uParam0->f_1 == 0)
 	{
@@ -38308,7 +38308,7 @@ BOOL func_343(var uParam0) // Position - 0x2C88A (182410)
 	if (uParam0->f_15 == 360f)
 		return 1;
 
-	if (_IS_NULL_VECTOR(uParam0->f_12))
+	if (func_36(uParam0->f_12))
 		return 1;
 
 	if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
@@ -38658,7 +38658,7 @@ BOOL func_366(Player plParam0) // Position - 0x2CEA9 (183977)
 
 BOOL func_367() // Position - 0x2CECC (184012)
 {
-	if (IS_BIT_SET(Global_1668458, 0) || IS_BIT_SET(Global_1668458, 1))
+	if (IS_BIT_SET(Global_1668459, 0) || IS_BIT_SET(Global_1668459, 1))
 		return true;
 
 	return false;
@@ -39229,9 +39229,9 @@ void func_390(var uParam0, int iParam1) // Position - 0x2DBA1 (187297)
 		return;
 	}
 
-	if (MISC::IS_PS3_VERSION() || IS_PLAYSTATION_PLATFORM())
+	if (MISC::IS_PS3_VERSION() || func_392())
 		uParam0->f_2 = "CWASH_POOR_PSN" /*It costs $~1~ to use the Car Wash.~n~You can buy additional GTA dollars from PlayStation®Store in the Pause Menu.*/;
-	else if (MISC::IS_XBOX360_VERSION() || IS_XBOX_PLATFORM())
+	else if (MISC::IS_XBOX360_VERSION() || func_391())
 		uParam0->f_2 = "CWASH_POOR_XBX" /*It costs $~1~ to use the Car Wash.~n~You can buy additional GTA dollars from the Xbox Store in the Pause Menu.*/;
 	else
 		uParam0->f_2 = "CWASH_POOR_STD" /*It costs $~1~ to use the Car Wash.~n~You can buy additional GTA dollars from the Store in the Pause Menu.*/;
@@ -39239,12 +39239,12 @@ void func_390(var uParam0, int iParam1) // Position - 0x2DBA1 (187297)
 	return;
 }
 
-BOOL IS_XBOX_PLATFORM() // Position - 0x2DC41 (187457)
+BOOL func_391() // Position - 0x2DC41 (187457)
 {
 	return MISC::IS_DURANGO_VERSION() || MISC::IS_SCARLETT_VERSION();
 }
 
-BOOL IS_PLAYSTATION_PLATFORM() // Position - 0x2DC57 (187479)
+BOOL func_392() // Position - 0x2DC57 (187479)
 {
 	return MISC::IS_ORBIS_VERSION() || MISC::IS_PROSPERO_VERSION();
 }

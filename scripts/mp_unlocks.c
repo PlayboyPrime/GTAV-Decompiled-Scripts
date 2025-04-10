@@ -224,7 +224,7 @@ void main() // Position - 0x0 (0)
 	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
 	GRAPHICS::SET_SCRIPT_GFX_DRAW_ORDER(1);
 
-	if (IS_XBOX_PLATFORM() || IS_PLAYSTATION_PLATFORM() || MISC::IS_PC_VERSION())
+	if (func_89() || func_88() || MISC::IS_PC_VERSION())
 		iLocal_173 = 40;
 
 	switch (iScriptParam_0)
@@ -1962,7 +1962,7 @@ int func_57(int iParam0) // Position - 0x2993 (10643)
 			return Global_794744.f_154887[0];
 	
 		case 12:
-			if (func_59() || func_58() || MISC::IS_PC_VERSION() || IS_PLAYSTATION_PLATFORM() || IS_XBOX_PLATFORM())
+			if (func_59() || func_58() || MISC::IS_PC_VERSION() || func_88() || func_89())
 			{
 				num = num + 2;
 				num = num + 2;
@@ -2758,17 +2758,17 @@ BOOL func_82(eControlAction ecaParam0) // Position - 0x3767 (14183)
 	num = func_20(action);
 	offset = func_9(action);
 
-	if (PAD::IS_CONTROL_JUST_RELEASED(FRONTEND_CONTROL, ecaParam0) || PAD::IS_DISABLED_CONTROL_JUST_RELEASED(FRONTEND_CONTROL, ecaParam0) || func_83(ecaParam0, &(Global_1673706.f_1060), 1))
+	if (PAD::IS_CONTROL_JUST_RELEASED(FRONTEND_CONTROL, ecaParam0) || PAD::IS_DISABLED_CONTROL_JUST_RELEASED(FRONTEND_CONTROL, ecaParam0) || func_83(ecaParam0, &(Global_1673707.f_1060), 1))
 	{
-		if (!IS_BIT_SET(Global_1673706.f_1049[num], offset))
+		if (!IS_BIT_SET(Global_1673707.f_1049[num], offset))
 		{
-			MISC::SET_BIT(&Global_1673706.f_1049[num], offset);
+			MISC::SET_BIT(&Global_1673707.f_1049[num], offset);
 			return true;
 		}
 	}
-	else if (IS_BIT_SET(Global_1673706.f_1049[num], offset))
+	else if (IS_BIT_SET(Global_1673707.f_1049[num], offset))
 	{
-		MISC::CLEAR_BIT(&Global_1673706.f_1049[num], offset);
+		MISC::CLEAR_BIT(&Global_1673707.f_1049[num], offset);
 	}
 
 	return false;
@@ -2866,7 +2866,7 @@ void func_84() // Position - 0x395E (14686)
 	
 		if (controlValue > 180)
 		{
-			if (_STOPWATCH_HAS_TIME_PASSED(&uLocal_166, iLocal_168, false))
+			if (func_86(&uLocal_166, iLocal_168, false))
 			{
 				if (bLocal_170)
 				{
@@ -2886,7 +2886,7 @@ void func_84() // Position - 0x395E (14686)
 		}
 		else if (controlValue < 80)
 		{
-			if (_STOPWATCH_HAS_TIME_PASSED(&uLocal_166, iLocal_168, false))
+			if (func_86(&uLocal_166, iLocal_168, false))
 			{
 				if (bLocal_170)
 				{
@@ -2919,46 +2919,46 @@ void _STOPWATCH_DESTROY(var uParam0) // Position - 0x3A1B (14875)
 	return;
 }
 
-BOOL _STOPWATCH_HAS_TIME_PASSED(var pStopwatch, int millis, BOOL useLocalTimer) // Position - 0x3A28 (14888)
+BOOL func_86(var uParam0, int iParam1, BOOL bParam2) // Position - 0x3A28 (14888)
 {
-	if (millis == -1)
+	if (iParam1 == -1)
 		return true;
 
-	_STOPWATCH_INITIALIZE(pStopwatch, useLocalTimer, false);
+	func_87(uParam0, bParam2, false);
 
-	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !useLocalTimer)
-		if (MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), *pStopwatch)) >= millis)
+	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !bParam2)
+		if (MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 			return true;
-	else if (MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(MISC::GET_GAME_TIMER(), *pStopwatch)) >= millis)
+	else if (MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(MISC::GET_GAME_TIMER(), *uParam0)) >= iParam1)
 		return true;
 
 	return false;
 }
 
-void _STOPWATCH_INITIALIZE(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateTime) // Position - 0x3A86 (14982)
+void func_87(var uParam0, BOOL bParam1, BOOL bParam2) // Position - 0x3A86 (14982)
 {
-	if (pStopwatch->f_1 == 0)
+	if (uParam0->f_1 == 0)
 	{
-		if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !useLocalTimer)
-			if (!useAccurateTime)
-				*pStopwatch = NETWORK::GET_NETWORK_TIME();
+		if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !bParam1)
+			if (!bParam2)
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			else
-				*pStopwatch = NETWORK::GET_NETWORK_TIME_ACCURATE();
+				*uParam0 = NETWORK::GET_NETWORK_TIME_ACCURATE();
 		else
-			*pStopwatch = MISC::GET_GAME_TIMER();
+			*uParam0 = MISC::GET_GAME_TIMER();
 	
-		pStopwatch->f_1 = 1;
+		uParam0->f_1 = 1;
 	}
 
 	return;
 }
 
-BOOL IS_PLAYSTATION_PLATFORM() // Position - 0x3ACB (15051)
+BOOL func_88() // Position - 0x3ACB (15051)
 {
 	return MISC::IS_ORBIS_VERSION() || MISC::IS_PROSPERO_VERSION();
 }
 
-BOOL IS_XBOX_PLATFORM() // Position - 0x3AE1 (15073)
+BOOL func_89() // Position - 0x3AE1 (15073)
 {
 	return MISC::IS_DURANGO_VERSION() || MISC::IS_SCARLETT_VERSION();
 }

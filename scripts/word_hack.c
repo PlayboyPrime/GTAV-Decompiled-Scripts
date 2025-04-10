@@ -862,7 +862,7 @@ void main() // Position - 0x0 (0)
 	while (true)
 	{
 		SYSTEM::WAIT(0);
-		func_1(&uScriptParam_0, &Global_1982759, &uLocal_49, &uLocal_106);
+		func_1(&uScriptParam_0, &Global_1982761, &uLocal_49, &uLocal_106);
 	}
 
 	return;
@@ -979,21 +979,21 @@ void func_8(int* piParam0) // Position - 0x234 (564)
 {
 	*piParam0 = 0;
 	piParam0->f_1 = 0;
-	_STOPWATCH_RESET(&(piParam0->f_2), false, false);
+	func_9(&(piParam0->f_2), false, false);
 	return;
 }
 
-void _STOPWATCH_RESET(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateTime) // Position - 0x24F (591)
+void func_9(var uParam0, BOOL bParam1, BOOL bParam2) // Position - 0x24F (591)
 {
-	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !useLocalTimer)
-		if (!useAccurateTime)
-			*pStopwatch = NETWORK::GET_NETWORK_TIME();
+	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !bParam1)
+		if (!bParam2)
+			*uParam0 = NETWORK::GET_NETWORK_TIME();
 		else
-			*pStopwatch = NETWORK::GET_NETWORK_TIME_ACCURATE();
+			*uParam0 = NETWORK::GET_NETWORK_TIME_ACCURATE();
 	else
-		*pStopwatch = MISC::GET_GAME_TIMER();
+		*uParam0 = MISC::GET_GAME_TIMER();
 
-	pStopwatch->f_1 = 1;
+	uParam0->f_1 = 1;
 	return;
 }
 
@@ -2067,7 +2067,7 @@ void func_59(int* piParam0, var uParam1) // Position - 0x179B (6043)
 
 void func_60(int iParam0) // Position - 0x18A5 (6309)
 {
-	Global_1675263.f_1163 = iParam0;
+	Global_1675264.f_1163 = iParam0;
 	return;
 }
 
@@ -2100,7 +2100,7 @@ void func_61(var uParam0, var uParam1, var uParam2, BOOL bParam3) // Position - 
 		func_67(uParam2);
 	}
 
-	if (Global_1577952 < 2)
+	if (Global_1577953 < 2)
 		func_66(1);
 
 	if (*uParam2 == 0)
@@ -2290,20 +2290,20 @@ void func_65(const char* sParam0) // Position - 0x1CAD (7341)
 
 void func_66(int iParam0) // Position - 0x1CBB (7355)
 {
-	Global_1577952 = iParam0;
+	Global_1577953 = iParam0;
 	return;
 }
 
 void func_67(var uParam0) // Position - 0x1CC9 (7369)
 {
-	Global_1982835 = 0;
+	Global_1982837 = 0;
 	uParam0->f_692 = 0;
 	return;
 }
 
 BOOL func_68(var uParam0) // Position - 0x1CDC (7388)
 {
-	return Global_1982835 || uParam0->f_692;
+	return Global_1982837 || uParam0->f_692;
 }
 
 struct<9> func_69() // Position - 0x1CF3 (7411)
@@ -2370,7 +2370,7 @@ void func_71(var uParam0) // Position - 0x1D87 (7559)
 	uParam0->f_697 = 0f;
 	uParam0->f_698 = 0f;
 	uParam0->f_699 = 1f;
-	Global_1982835 = 0;
+	Global_1982837 = 0;
 	return;
 }
 
@@ -2717,7 +2717,7 @@ void func_92(BOOL bParam0, BOOL bParam1) // Position - 0x242C (9260)
 
 BOOL func_93() // Position - 0x24A0 (9376)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_94(int iParam0) // Position - 0x24AE (9390)
@@ -2742,18 +2742,18 @@ BOOL func_94(int iParam0) // Position - 0x24AE (9390)
 
 BOOL func_95() // Position - 0x2505 (9477)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_96(int iParam0, int iParam1) // Position - 0x2514 (9492)
 {
-	MISC::SET_BIT(&(Global_1673706.f_1047), iParam0);
+	MISC::SET_BIT(&(Global_1673707.f_1047), iParam0);
 
 	switch (iParam0)
 	{
 		case 5:
 			if (iParam1 > -1)
-				Global_1673706.f_170[iParam1] = 1;
+				Global_1673707.f_170[iParam1] = 1;
 			break;
 	}
 
@@ -2971,7 +2971,7 @@ void func_110(int* piParam0) // Position - 0x2804 (10244)
 void func_111(int* piParam0, int* piParam1) // Position - 0x2849 (10313)
 {
 	if (_STOPWATCH_IS_INITIALIZED(&(piParam0->f_2)))
-		piParam1->f_46 = piParam0->f_1 - _STOPWATCH_GET_TIME_PASSED(&(piParam0->f_2), false, false);
+		piParam1->f_46 = piParam0->f_1 - func_112(&(piParam0->f_2), false, false);
 
 	if (piParam1->f_46 <= 0)
 	{
@@ -2983,15 +2983,15 @@ void func_111(int* piParam0, int* piParam1) // Position - 0x2849 (10313)
 	return;
 }
 
-int _STOPWATCH_GET_TIME_PASSED(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateTime) // Position - 0x289D (10397)
+int func_112(var uParam0, BOOL bParam1, BOOL bParam2) // Position - 0x289D (10397)
 {
-	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !useLocalTimer)
-		if (!useAccurateTime)
-			return NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), *pStopwatch);
+	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !bParam1)
+		if (!bParam2)
+			return NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), *uParam0);
 		else
-			return NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME_ACCURATE(), *pStopwatch);
+			return NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME_ACCURATE(), *uParam0);
 
-	return NETWORK::GET_TIME_DIFFERENCE(MISC::GET_GAME_TIMER(), *pStopwatch);
+	return NETWORK::GET_TIME_DIFFERENCE(MISC::GET_GAME_TIMER(), *uParam0);
 }
 
 BOOL _STOPWATCH_IS_INITIALIZED(var uParam0) // Position - 0x28E4 (10468)
@@ -3191,7 +3191,7 @@ void func_122(int* piParam0, int* piParam1, var uParam2) // Position - 0x2C45 (1
 {
 	if (func_133())
 	{
-		_STOPWATCH_INITIALIZE(&(piParam0->f_2), false, false);
+		func_132(&(piParam0->f_2), false, false);
 		func_131(uParam2);
 		func_124(piParam1);
 		func_100(piParam1, 1);
@@ -3593,19 +3593,19 @@ void func_131(var uParam0) // Position - 0x348A (13450)
 	return;
 }
 
-void _STOPWATCH_INITIALIZE(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateTime) // Position - 0x34CD (13517)
+void func_132(var uParam0, BOOL bParam1, BOOL bParam2) // Position - 0x34CD (13517)
 {
-	if (pStopwatch->f_1 == 0)
+	if (uParam0->f_1 == 0)
 	{
-		if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !useLocalTimer)
-			if (!useAccurateTime)
-				*pStopwatch = NETWORK::GET_NETWORK_TIME();
+		if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !bParam1)
+			if (!bParam2)
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			else
-				*pStopwatch = NETWORK::GET_NETWORK_TIME_ACCURATE();
+				*uParam0 = NETWORK::GET_NETWORK_TIME_ACCURATE();
 		else
-			*pStopwatch = MISC::GET_GAME_TIMER();
+			*uParam0 = MISC::GET_GAME_TIMER();
 	
-		pStopwatch->f_1 = 1;
+		uParam0->f_1 = 1;
 	}
 
 	return;

@@ -2517,7 +2517,7 @@ void main() // Position - 0x0 (0)
 	fLocal_29 = 140f;
 	fLocal_30 = 180f;
 	iLocal_33 = 3;
-	Global_1579736 = 1;
+	Global_1579737 = 1;
 	func_46();
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
@@ -2543,7 +2543,7 @@ void main() // Position - 0x0 (0)
 	{
 		func_37();
 	
-		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS() || _SHOULD_NETWORK_SCRIPT_TERMINATE() || Global_1579736 == 0 || func_28())
+		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS() || _SHOULD_NETWORK_SCRIPT_TERMINATE() || Global_1579737 == 0 || func_28())
 			func_25();
 	
 		func_3();
@@ -3654,7 +3654,7 @@ void func_21(var uParam0) // Position - 0x133A (4922)
 
 BOOL func_22(var uParam0) // Position - 0x138A (5002)
 {
-	if (_IS_NULL_VECTOR(uParam0->f_40))
+	if (func_24(uParam0->f_40))
 		return false;
 
 	if (uParam0->f_48 <= func_23())
@@ -3671,7 +3671,7 @@ var func_23() // Position - 0x13B3 (5043)
 	return unk;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x13C3 (5059)
+BOOL func_24(float fParam0, var uParam1, var uParam2) // Position - 0x13C3 (5059)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -3709,7 +3709,7 @@ void func_27() // Position - 0x1414 (5140)
 
 BOOL func_28() // Position - 0x1439 (5177)
 {
-	return !Global_1579732 && NETWORK::NETWORK_IS_ACTIVITY_SESSION();
+	return !Global_1579733 && NETWORK::NETWORK_IS_ACTIVITY_SESSION();
 }
 
 BOOL _SHOULD_NETWORK_SCRIPT_TERMINATE() // Position - 0x144F (5199)
@@ -7103,7 +7103,7 @@ int func_43() // Position - 0x83FE (33790)
 
 int func_44() // Position - 0x840E (33806)
 {
-	if (Global_1579732)
+	if (Global_1579733)
 		return 1;
 
 	return 0;
@@ -7125,25 +7125,25 @@ int func_45(var uParam0) // Position - 0x8422 (33826)
 
 void func_46() // Position - 0x8474 (33908)
 {
-	while (!NETWORK::NETWORK_TRY_TO_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, false, Global_1579751))
+	while (!NETWORK::NETWORK_TRY_TO_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, false, Global_1579752))
 	{
 		SYSTEM::WAIT(0);
 	}
 
-	Global_1579751 = Global_1579751 + 1;
-	_NETWORK_ENSURE_SCRIPT_IS_NETWORKED(0, -1, false);
+	Global_1579752 = Global_1579752 + 1;
+	func_47(0, -1, false);
 	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&iLocal_38, 3, 0);
 	return;
 }
 
-int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTerminate) // Position - 0x84AD (33965)
+int func_47(int iParam0, int iParam1, BOOL bParam2) // Position - 0x84AD (33965)
 {
 	int i;
 
 	for (i = NETWORK::NETWORK_GET_SCRIPT_STATUS(); i != 2; i = NETWORK::NETWORK_GET_SCRIPT_STATUS())
 	{
 		if (i == 3 || i == 4 || i == 5 || i == 6)
-			if (!bNoTerminate)
+			if (!bParam2)
 				func_26();
 			else
 				return 0;
@@ -7153,26 +7153,26 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 			if (iParam0 == 0)
 			{
 				if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
-					if (!bNoTerminate)
+					if (!bParam2)
 						func_26();
 					else
 						return 0;
 			
 				if (func_36())
-					if (!bNoTerminate)
+					if (!bParam2)
 						func_26();
 					else
 						return 0;
 			
 				if (_DOES_EVENT_OF_TYPE_EXIST(157))
-					if (!bNoTerminate)
+					if (!bParam2)
 						func_26();
 					else
 						return 0;
 			}
 			else if (!NETWORK::NETWORK_IS_IN_SESSION())
 			{
-				if (!bNoTerminate)
+				if (!bParam2)
 					func_26();
 				else
 					return 0;
@@ -7187,12 +7187,12 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 
 	if (iParam0 == 0)
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
-			if (!bNoTerminate)
+			if (!bParam2)
 				func_26();
 			else
 				return 0;
 	else if (!NETWORK::NETWORK_IS_IN_SESSION())
-		if (!bNoTerminate)
+		if (!bParam2)
 			func_26();
 		else
 			return 0;

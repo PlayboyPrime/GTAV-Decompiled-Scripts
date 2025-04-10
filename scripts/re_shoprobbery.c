@@ -738,7 +738,7 @@ void main() // Position - 0x0 (0)
 														PED::SET_PED_KEEP_TASK(iLocal_115[0], true);
 													}
 												
-													if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+													if (!func_139())
 														_CONVERSATION_ADD_LINE(&uLocal_230, "REROBAU", "REROB_CLAWAY", 4, 0, 0, 0);
 												
 													bLocal_162 = true;
@@ -1197,7 +1197,7 @@ void main() // Position - 0x0 (0)
 											}
 										}
 									
-										if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+										if (!func_139())
 											iLocal_44 = 2;
 										break;
 								}
@@ -3170,7 +3170,7 @@ void func_61() // Position - 0x363E (13886)
 
 int func_62() // Position - 0x364B (13899)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_63(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -3183,9 +3183,9 @@ int func_62() // Position - 0x364B (13899)
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x3696 (13974)
+BOOL func_63(BOOL bParam0) // Position - 0x3696 (13974)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -7111,9 +7111,9 @@ void func_125() // Position - 0x9604 (38404)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -7286,11 +7286,11 @@ BOOL func_136(int iParam0, int iParam1) // Position - 0x9950 (39248)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_137() // Position - 0x9988 (39304)
@@ -7348,7 +7348,7 @@ void func_138(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4,
 	return;
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x9A35 (39477)
+BOOL func_139() // Position - 0x9A35 (39477)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -7440,12 +7440,12 @@ void func_142(BOOL bParam0, BOOL bParam1) // Position - 0x9B44 (39748)
 
 BOOL func_143() // Position - 0x9BB8 (39864)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_144() // Position - 0x9BC6 (39878)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 BOOL func_145(int iParam0) // Position - 0x9BD5 (39893)
@@ -7840,7 +7840,7 @@ void func_161() // Position - 0xA308 (41736)
 
 	if (bLocal_152 && !bLocal_153 && !bLocal_138)
 	{
-		if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+		if (!func_139())
 		{
 			if (_GET_CURRENT_PLAYER_CHARACTER() == CHAR_MICHAEL)
 				_CONVERSATION_ADD_LINE(&uLocal_230, "REROBAU", "REROB_MDS", 4, 0, 0, 0);
@@ -7855,7 +7855,7 @@ void func_161() // Position - 0xA308 (41736)
 
 	if (!bLocal_138)
 	{
-		if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+		if (!func_139())
 			if (bLocal_153 && !bLocal_154)
 				if (iLocal_47 == 1)
 					if (func_179(&uLocal_230, "REROBAU", "REROB_CH2", "REROB_CH2_3", 4, 0, 0))
@@ -7866,7 +7866,7 @@ void func_161() // Position - 0xA308 (41736)
 	
 		if (iLocal_47 == 1)
 		{
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (!func_139())
 			{
 				if (!bLocal_155)
 				{
@@ -10531,7 +10531,7 @@ BOOL func_210(var uParam0, var uParam1, var uParam2, int iParam3, int iParam4, B
 		if (!Global_114162.f_9089)
 			return false;
 	
-		if (_IS_MISSION_REPEAT_ACTIVE(false))
+		if (func_63(false))
 			return false;
 	
 		if (func_200())

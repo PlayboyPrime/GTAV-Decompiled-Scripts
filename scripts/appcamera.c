@@ -860,10 +860,10 @@ void main() // Position - 0x0 (0)
 			
 				if (iLocal_153 == 7)
 				{
-					if (MISC::IS_XBOX360_VERSION() || IS_XBOX_PLATFORM())
+					if (MISC::IS_XBOX360_VERSION() || func_5())
 						HUD::SET_WARNING_MESSAGE_WITH_HEADER("CELL_CAM_ALERT" /*ALERT*/, "CELL_CAM_TEMP_3X" /*To save Snapmatic phone app photos to the Gallery you must be signed in to Xbox LIVE*/, iLocal_150, "", false, -1, "", "", true, 0);
 				
-					if (MISC::IS_PS3_VERSION() || IS_PLAYSTATION_PLATFORM())
+					if (MISC::IS_PS3_VERSION() || func_4())
 						HUD::SET_WARNING_MESSAGE_WITH_HEADER("CELL_CAM_ALERT" /*ALERT*/, "CELL_CAM_TEMP_3P" /*To save Snapmatic phone app photos to the Gallery you must be signed in to PSN℠*/, iLocal_150, "", false, -1, "", "", true, 0);
 				
 					if (MISC::IS_PC_VERSION())
@@ -930,7 +930,7 @@ void main() // Position - 0x0 (0)
 				}
 				else if (iLocal_153 == 7)
 				{
-					if (IS_PLAYSTATION_PLATFORM())
+					if (func_4())
 					{
 						if (PAD::IS_CONTROL_JUST_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_ACCEPT))
 						{
@@ -948,7 +948,7 @@ void main() // Position - 0x0 (0)
 						iLocal_109 = 0;
 					}
 				
-					if (!IS_PLAYSTATION_PLATFORM())
+					if (!func_4())
 					{
 						if (PAD::IS_CONTROL_JUST_PRESSED(FRONTEND_CONTROL, Global_21055))
 						{
@@ -1089,12 +1089,12 @@ int func_3() // Position - 0x129A (4762)
 	return 0;
 }
 
-BOOL IS_PLAYSTATION_PLATFORM() // Position - 0x12DD (4829)
+BOOL func_4() // Position - 0x12DD (4829)
 {
 	return MISC::IS_ORBIS_VERSION() || MISC::IS_PROSPERO_VERSION();
 }
 
-BOOL IS_XBOX_PLATFORM() // Position - 0x12F3 (4851)
+BOOL func_5() // Position - 0x12F3 (4851)
 {
 	return MISC::IS_DURANGO_VERSION() || MISC::IS_SCARLETT_VERSION();
 }
@@ -2278,7 +2278,7 @@ void func_29() // Position - 0x2A1D (10781)
 			{
 				if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false) || PED::GET_PED_PARACHUTE_STATE(PLAYER::PLAYER_PED_ID()) == 2)
 				{
-					if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL) || IS_PLAYSTATION_PLATFORM())
+					if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL) || func_4())
 						func_78(iLocal_139, "SET_DATA_SLOT", 2f, PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(PLAYER_CONTROL, INPUT_CELLPHONE_CAMERA_SELFIE, true), "CELL_SP_2NP_XB" /*Normal Mode (Press)*/);
 					else
 						func_78(iLocal_139, "SET_DATA_SLOT", 2f, PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(PLAYER_CONTROL, INPUT_CELLPHONE_CAMERA_SELFIE, true), "CELL_SP_2NP_XB" /*Normal Mode (Press)*/);
@@ -2289,7 +2289,7 @@ void func_29() // Position - 0x2A1D (10781)
 				}
 				else
 				{
-					if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL) || IS_PLAYSTATION_PLATFORM())
+					if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL) || func_4())
 						func_78(iLocal_139, "SET_DATA_SLOT", 2f, PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(PLAYER_CONTROL, INPUT_CELLPHONE_CAMERA_SELFIE, true), "CELL_SP_2NP_XB" /*Normal Mode (Press)*/);
 					else
 						func_78(iLocal_139, "SET_DATA_SLOT", 2f, PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(PLAYER_CONTROL, INPUT_CELLPHONE_CAMERA_SELFIE, true), "CELL_SP_2NP_XB" /*Normal Mode (Press)*/);
@@ -2368,7 +2368,7 @@ void func_29() // Position - 0x2A1D (10781)
 			else
 			{
 				if (!func_186())
-					if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL) || IS_PLAYSTATION_PLATFORM())
+					if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL) || func_4())
 						func_78(iLocal_139, "SET_DATA_SLOT", 2f, PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(PLAYER_CONTROL, INPUT_CELLPHONE_CAMERA_SELFIE, true), "CELL_SP_1NP_XB" /*Self Portrait (Press)*/);
 					else
 						func_78(iLocal_139, "SET_DATA_SLOT", 2f, PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(PLAYER_CONTROL, INPUT_CELLPHONE_CAMERA_SELFIE, true), "CELL_SP_1NP_XB" /*Self Portrait (Press)*/);
@@ -6329,7 +6329,7 @@ void func_51(float fParam0) // Position - 0xAB9C (43932)
 
 void func_52() // Position - 0xABC6 (43974)
 {
-	if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL) || IS_PLAYSTATION_PLATFORM())
+	if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL) || func_4())
 		func_78(iLocal_139, "SET_DATA_SLOT", 2f, PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(PLAYER_CONTROL, INPUT_CELLPHONE_CAMERA_SELFIE, true), "CELL_SP_2NP_XB" /*Normal Mode (Press)*/);
 	else
 		func_78(iLocal_139, "SET_DATA_SLOT", 2f, PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(PLAYER_CONTROL, INPUT_CELLPHONE_CAMERA_SELFIE, true), "CELL_SP_2NP_XB" /*Normal Mode (Press)*/);
@@ -6403,7 +6403,7 @@ void func_55() // Position - 0xADCC (44492)
 			{
 				if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false) || PED::GET_PED_PARACHUTE_STATE(PLAYER::PLAYER_PED_ID()) == 2)
 				{
-					if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL) || IS_PLAYSTATION_PLATFORM())
+					if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL) || func_4())
 						func_78(iLocal_139, "SET_DATA_SLOT", 2f, PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(PLAYER_CONTROL, INPUT_CELLPHONE_CAMERA_SELFIE, true), "CELL_SP_2NP_XB" /*Normal Mode (Press)*/);
 					else
 						func_78(iLocal_139, "SET_DATA_SLOT", 2f, PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(PLAYER_CONTROL, INPUT_CELLPHONE_CAMERA_SELFIE, true), "CELL_SP_2NP_XB" /*Normal Mode (Press)*/);
@@ -6420,7 +6420,7 @@ void func_55() // Position - 0xADCC (44492)
 				}
 				else
 				{
-					if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL) || IS_PLAYSTATION_PLATFORM())
+					if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL) || func_4())
 						func_78(iLocal_139, "SET_DATA_SLOT", 2f, PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(PLAYER_CONTROL, INPUT_CELLPHONE_CAMERA_SELFIE, true), "CELL_SP_2NP_XB" /*Normal Mode (Press)*/);
 					else
 						func_78(iLocal_139, "SET_DATA_SLOT", 2f, PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(PLAYER_CONTROL, INPUT_CELLPHONE_CAMERA_SELFIE, true), "CELL_SP_2NP_XB" /*Normal Mode (Press)*/);
@@ -6480,7 +6480,7 @@ void func_55() // Position - 0xADCC (44492)
 			else if (!(PED::GET_PED_PARACHUTE_STATE(PLAYER::PLAYER_PED_ID()) == 2))
 			{
 				if (!func_186())
-					if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL) || IS_PLAYSTATION_PLATFORM())
+					if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL) || func_4())
 						func_78(iLocal_139, "SET_DATA_SLOT", 2f, PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(PLAYER_CONTROL, INPUT_CELLPHONE_CAMERA_SELFIE, true), "CELL_SP_1NP_XB" /*Self Portrait (Press)*/);
 					else
 						func_78(iLocal_139, "SET_DATA_SLOT", 2f, PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(PLAYER_CONTROL, INPUT_CELLPHONE_CAMERA_SELFIE, true), "CELL_SP_1NP_XB" /*Self Portrait (Press)*/);
@@ -6505,7 +6505,7 @@ void func_55() // Position - 0xADCC (44492)
 				else
 				{
 					if (!func_186())
-						if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL) || IS_PLAYSTATION_PLATFORM())
+						if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL) || func_4())
 							func_78(iLocal_139, "SET_DATA_SLOT", 2f, PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(PLAYER_CONTROL, INPUT_CELLPHONE_CAMERA_SELFIE, true), "CELL_SP_1NP_XB" /*Self Portrait (Press)*/);
 						else
 							func_78(iLocal_139, "SET_DATA_SLOT", 2f, PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(PLAYER_CONTROL, INPUT_CELLPHONE_CAMERA_SELFIE, true), "CELL_SP_1NP_XB" /*Self Portrait (Press)*/);
@@ -6637,7 +6637,7 @@ void func_63(char* sParam0) // Position - 0xB4B4 (46260)
 
 void func_64() // Position - 0xB4C6 (46278)
 {
-	if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL) || IS_PLAYSTATION_PLATFORM())
+	if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL) || func_4())
 		func_78(iLocal_139, "SET_DATA_SLOT", 2f, PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(PLAYER_CONTROL, INPUT_CELLPHONE_CAMERA_SELFIE, true), "CELL_SP_2NP_XB" /*Normal Mode (Press)*/);
 	else
 		func_78(iLocal_139, "SET_DATA_SLOT", 2f, PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(PLAYER_CONTROL, INPUT_CELLPHONE_CAMERA_SELFIE, true), "CELL_SP_2NP_XB" /*Normal Mode (Press)*/);
@@ -6658,7 +6658,7 @@ void func_64() // Position - 0xB4C6 (46278)
 
 void func_65() // Position - 0xB575 (46453)
 {
-	if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL) || IS_PLAYSTATION_PLATFORM())
+	if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL) || func_4())
 		func_78(iLocal_139, "SET_DATA_SLOT", 3f, PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(PLAYER_CONTROL, INPUT_CELLPHONE_CAMERA_SELFIE, true), "CELL_SP_2NP_XB" /*Normal Mode (Press)*/);
 	else
 		func_78(iLocal_139, "SET_DATA_SLOT", 3f, PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(PLAYER_CONTROL, INPUT_CELLPHONE_CAMERA_SELFIE, true), "CELL_SP_2NP_XB" /*Normal Mode (Press)*/);
@@ -6680,8 +6680,8 @@ void func_65() // Position - 0xB575 (46453)
 
 const char* func_66() // Position - 0xB627 (46631)
 {
-	if (!MISC::IS_STRING_NULL_OR_EMPTY(&Global_1965236))
-		return func_77(&Global_1965236);
+	if (!MISC::IS_STRING_NULL_OR_EMPTY(&Global_1965238))
+		return func_77(&Global_1965238);
 
 	if (func_76())
 		return "FHHUD_SENDLES" /*Send to Lester*/;
@@ -6689,7 +6689,7 @@ const char* func_66() // Position - 0xB627 (46631)
 	if (func_74())
 		return "CSH_PHONEC" /*Send to Pavel*/;
 
-	if (func_73(PLAYER::PLAYER_ID(), 275) && Global_1965229)
+	if (func_73(PLAYER::PLAYER_ID(), 275) && Global_1965231)
 		return "RE_SS_SNDOMG" /*Send to Omega*/;
 
 	switch (func_72(PLAYER::PLAYER_ID()))
@@ -6860,7 +6860,7 @@ BOOL func_76() // Position - 0xB89E (47262)
 			break;
 	}
 
-	if (Global_1973437)
+	if (Global_1973439)
 		return true;
 
 	return false;
@@ -8383,7 +8383,7 @@ BOOL func_122(var uParam0) // Position - 0xDBAA (56234)
 
 BOOL func_123() // Position - 0xDBD9 (56281)
 {
-	return IS_BIT_SET(Global_1668458, 4);
+	return IS_BIT_SET(Global_1668459, 4);
 }
 
 BOOL func_124() // Position - 0xDBE7 (56295)
@@ -8765,9 +8765,9 @@ void func_133(BOOL bParam0) // Position - 0xE3BC (58300)
 {
 	if (bParam0)
 		if (!func_146())
-			MISC::SET_BIT(&Global_1958238, 17);
+			MISC::SET_BIT(&Global_1958240, 17);
 	else if (func_146())
-		MISC::CLEAR_BIT(&Global_1958238, 17);
+		MISC::CLEAR_BIT(&Global_1958240, 17);
 
 	return;
 }
@@ -8793,16 +8793,16 @@ void func_135(BOOL bParam0) // Position - 0xE461 (58465)
 {
 	if (bParam0)
 		if (!func_136())
-			MISC::SET_BIT(&Global_1958238, 18);
+			MISC::SET_BIT(&Global_1958240, 18);
 	else if (func_136())
-		MISC::CLEAR_BIT(&Global_1958238, 18);
+		MISC::CLEAR_BIT(&Global_1958240, 18);
 
 	return;
 }
 
 BOOL func_136() // Position - 0xE494 (58516)
 {
-	return IS_BIT_SET(Global_1958238, 18);
+	return IS_BIT_SET(Global_1958240, 18);
 }
 
 void func_137(BOOL bParam0, BOOL bParam1) // Position - 0xE4A3 (58531)
@@ -8858,7 +8858,7 @@ void func_139(BOOL bParam0) // Position - 0xE56E (58734)
 {
 	if (*Global_4718592.f_187456 == 0 && *Global_4718592.f_187457 == 0 && !Global_1939652)
 		if (func_140(PLAYER::PLAYER_ID()) && bParam0)
-			Global_1973510 = 1;
+			Global_1973512 = 1;
 		else
 			GRAPHICS::CLEAR_TIMECYCLE_MODIFIER();
 
@@ -9185,7 +9185,7 @@ BOOL func_145() // Position - 0xEBD5 (60373)
 
 BOOL func_146() // Position - 0xEBEE (60398)
 {
-	return IS_BIT_SET(Global_1958238, 17);
+	return IS_BIT_SET(Global_1958240, 17);
 }
 
 void func_147() // Position - 0xEBFD (60413)
@@ -9640,7 +9640,7 @@ BOOL func_172() // Position - 0xF428 (62504)
 
 BOOL func_173() // Position - 0xF44F (62543)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_174() // Position - 0xF45E (62558)
@@ -9848,7 +9848,7 @@ void _DISPLAY_HELP_TEXT(char* text, int iParam1) // Position - 0xF7F6 (63478)
 
 BOOL func_186() // Position - 0xF80D (63501)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 void func_187() // Position - 0xF81B (63515)

@@ -650,7 +650,7 @@ void func_5() // Position - 0x604 (1540)
 
 int func_6() // Position - 0x611 (1553)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_7(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -663,9 +663,9 @@ int func_6() // Position - 0x611 (1553)
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x65C (1628)
+BOOL func_7(BOOL bParam0) // Position - 0x65C (1628)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -1633,7 +1633,7 @@ void func_36() // Position - 0x19D9 (6617)
 {
 	if (iLocal_112 == 0)
 	{
-		if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+		if (!func_57())
 		{
 			if (_DOES_ENTITY_EXIST_AND_IS_ALIVE(uLocal_45[0 /*20*/].f_1))
 			{
@@ -1659,7 +1659,7 @@ void func_36() // Position - 0x19D9 (6617)
 	}
 	else if (iLocal_113 == 0)
 	{
-		if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+		if (!func_57())
 		{
 			if (_DOES_ENTITY_EXIST_AND_IS_ALIVE(uLocal_45[0 /*20*/].f_1))
 			{
@@ -2017,9 +2017,9 @@ void func_41() // Position - 0x1FF6 (8182)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -2192,11 +2192,11 @@ BOOL func_52(int iParam0, int iParam1) // Position - 0x2340 (9024)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_53() // Position - 0x2378 (9080)
@@ -2287,7 +2287,7 @@ void _CONVERSATION_INITIALIZE_ACTOR(var uParam0, int iParam1, Ped pedParam2, cha
 	return;
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x24D9 (9433)
+BOOL func_57() // Position - 0x24D9 (9433)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -7477,7 +7477,7 @@ BOOL func_145(var uParam0, var uParam1, var uParam2, int iParam3, int iParam4, B
 		if (!Global_114162.f_9089)
 			return false;
 	
-		if (_IS_MISSION_REPEAT_ACTIVE(false))
+		if (func_7(false))
 			return false;
 	
 		if (func_91())

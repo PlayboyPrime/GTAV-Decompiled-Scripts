@@ -695,7 +695,7 @@ BOOL func_10(var uParam0) // Position - 0xBA5 (2981)
 	if (uParam0->f_15 == 360f)
 		return 1;
 
-	if (_IS_NULL_VECTOR(uParam0->f_12))
+	if (func_12(uParam0->f_12))
 		return 1;
 
 	if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
@@ -726,7 +726,7 @@ float func_11(float fParam0, var uParam1, var uParam2, var uParam3, var uParam4,
 	return (fParam0 * uParam3) + (fParam0.f_1 * uParam3.f_1);
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0xC65 (3173)
+BOOL func_12(float fParam0, var uParam1, var uParam2) // Position - 0xC65 (3173)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -1250,7 +1250,7 @@ BOOL func_51(Player plParam0) // Position - 0x157E (5502)
 
 BOOL func_52() // Position - 0x15A1 (5537)
 {
-	if (IS_BIT_SET(Global_1668458, 0) || IS_BIT_SET(Global_1668458, 1))
+	if (IS_BIT_SET(Global_1668459, 0) || IS_BIT_SET(Global_1668459, 1))
 		return true;
 
 	return false;
@@ -1760,9 +1760,9 @@ void func_69(var uParam0, int iParam1) // Position - 0x2239 (8761)
 		return;
 	}
 
-	if (MISC::IS_PS3_VERSION() || IS_PLAYSTATION_PLATFORM())
+	if (MISC::IS_PS3_VERSION() || func_71())
 		uParam0->f_2 = "CWASH_POOR_PSN" /*It costs $~1~ to use the Car Wash.~n~You can buy additional GTA dollars from PlayStation®Store in the Pause Menu.*/;
-	else if (MISC::IS_XBOX360_VERSION() || IS_XBOX_PLATFORM())
+	else if (MISC::IS_XBOX360_VERSION() || func_70())
 		uParam0->f_2 = "CWASH_POOR_XBX" /*It costs $~1~ to use the Car Wash.~n~You can buy additional GTA dollars from the Xbox Store in the Pause Menu.*/;
 	else
 		uParam0->f_2 = "CWASH_POOR_STD" /*It costs $~1~ to use the Car Wash.~n~You can buy additional GTA dollars from the Store in the Pause Menu.*/;
@@ -1770,12 +1770,12 @@ void func_69(var uParam0, int iParam1) // Position - 0x2239 (8761)
 	return;
 }
 
-BOOL IS_XBOX_PLATFORM() // Position - 0x22CD (8909)
+BOOL func_70() // Position - 0x22CD (8909)
 {
 	return MISC::IS_DURANGO_VERSION() || MISC::IS_SCARLETT_VERSION();
 }
 
-BOOL IS_PLAYSTATION_PLATFORM() // Position - 0x22E3 (8931)
+BOOL func_71() // Position - 0x22E3 (8931)
 {
 	return MISC::IS_ORBIS_VERSION() || MISC::IS_PROSPERO_VERSION();
 }

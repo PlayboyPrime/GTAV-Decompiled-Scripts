@@ -175,7 +175,7 @@ BOOL func_3() // Position - 0x24E (590)
 {
 	var unk;
 
-	if (_DOES_ENTITY_EXIST_AND_IS_ALIVE(PLAYER::PLAYER_PED_ID()) && _DOES_ENTITY_EXIST_AND_IS_ALIVE(obLocal_41) && !_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && MISC::GET_GAME_TIMER() > iLocal_44 && func_8(PLAYER::PLAYER_PED_ID(), obLocal_41, true) < 20f && !MISC::GET_MISSION_FLAG())
+	if (_DOES_ENTITY_EXIST_AND_IS_ALIVE(PLAYER::PLAYER_PED_ID()) && _DOES_ENTITY_EXIST_AND_IS_ALIVE(obLocal_41) && !func_9() && MISC::GET_GAME_TIMER() > iLocal_44 && func_8(PLAYER::PLAYER_PED_ID(), obLocal_41, true) < 20f && !MISC::GET_MISSION_FLAG())
 	{
 		unk = 16;
 		_CONVERSATION_INITIALIZE_ACTOR(&unk, 0, obLocal_41, "BARRY", 0, 1);
@@ -313,7 +313,7 @@ float func_8(Ped pedParam0, Object obParam1, BOOL bParam2) // Position - 0x470 (
 	return MISC::GET_DISTANCE_BETWEEN_COORDS(entityCoords, entityCoords2, bParam2);
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x4CE (1230)
+BOOL func_9() // Position - 0x4CE (1230)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;

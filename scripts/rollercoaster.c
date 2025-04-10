@@ -1914,12 +1914,12 @@ void func_23(BOOL bParam0, BOOL bParam1) // Position - 0x163C (5692)
 
 BOOL func_24() // Position - 0x16B0 (5808)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_25() // Position - 0x16BE (5822)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 BOOL func_26(int iParam0) // Position - 0x16CD (5837)
@@ -2358,7 +2358,7 @@ void func_35(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uPa
 		
 			if (flag)
 			{
-				if (!_IS_NULL_VECTOR(fParam11))
+				if (!func_36(fParam11))
 				{
 					if (VEHICLE::IS_VEHICLE_DRIVEABLE(playersLastVehicle, false))
 					{
@@ -2461,7 +2461,7 @@ void func_35(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uPa
 	return;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x2F94 (12180)
+BOOL func_36(float fParam0, var uParam1, var uParam2) // Position - 0x2F94 (12180)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -33403,7 +33403,7 @@ void func_236() // Position - 0x2485F (149599)
 
 int func_237() // Position - 0x24D1D (150813)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_238(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -33416,9 +33416,9 @@ int func_237() // Position - 0x24D1D (150813)
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x24D68 (150888)
+BOOL func_238(BOOL bParam0) // Position - 0x24D68 (150888)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);

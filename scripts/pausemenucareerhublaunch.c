@@ -363,12 +363,12 @@ BOOL func_4(int iParam0) // Position - 0x317 (791)
 
 BOOL func_5() // Position - 0x36E (878)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_6() // Position - 0x37C (892)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_7() // Position - 0x38B (907)
@@ -385,43 +385,43 @@ int func_8() // Position - 0x398 (920)
 
 	hash = 0;
 
-	if (IS_BIT_SET(Global_1982266, 0))
+	if (IS_BIT_SET(Global_1982268, 0))
 		hash = -1627077503;
-	else if (IS_BIT_SET(Global_1982266, 1))
+	else if (IS_BIT_SET(Global_1982268, 1))
 		hash = joaat("youga4");
-	else if (IS_BIT_SET(Global_1982266, 2))
+	else if (IS_BIT_SET(Global_1982268, 2))
 		hash = joaat("turismo2");
-	else if (IS_BIT_SET(Global_1982266, 3))
+	else if (IS_BIT_SET(Global_1982268, 3))
 		hash = joaat("winky");
-	else if (IS_BIT_SET(Global_1982266, 4))
+	else if (IS_BIT_SET(Global_1982268, 4))
 		hash = joaat("furia");
-	else if (IS_BIT_SET(Global_1982266, 5))
+	else if (IS_BIT_SET(Global_1982268, 5))
 		hash = joaat("paragon");
-	else if (IS_BIT_SET(Global_1982266, 6))
+	else if (IS_BIT_SET(Global_1982268, 6))
 		hash = joaat("barrage");
-	else if (IS_BIT_SET(Global_1982266, 7))
+	else if (IS_BIT_SET(Global_1982268, 7))
 		hash = joaat("stafford");
-	else if (IS_BIT_SET(Global_1982266, 8))
+	else if (IS_BIT_SET(Global_1982268, 8))
 		hash = joaat("havok");
-	else if (IS_BIT_SET(Global_1982266, 9))
+	else if (IS_BIT_SET(Global_1982268, 9))
 		hash = joaat("dune3");
-	else if (IS_BIT_SET(Global_1982266, 10))
+	else if (IS_BIT_SET(Global_1982268, 10))
 		hash = joaat("nero2");
-	else if (IS_BIT_SET(Global_1982266, 11))
+	else if (IS_BIT_SET(Global_1982268, 11))
 		hash = joaat("daemon");
-	else if (IS_BIT_SET(Global_1982266, 12))
+	else if (IS_BIT_SET(Global_1982268, 12))
 		hash = joaat("windsor2");
-	else if (IS_BIT_SET(Global_1982266, 13))
+	else if (IS_BIT_SET(Global_1982268, 13))
 		hash = joaat("kuruma2");
-	else if (IS_BIT_SET(Global_1982266, 14))
+	else if (IS_BIT_SET(Global_1982268, 14))
 		hash = joaat("slamtruck");
-	else if (IS_BIT_SET(Global_1982266, 15))
+	else if (IS_BIT_SET(Global_1982268, 15))
 		hash = joaat("speedo5");
-	else if (IS_BIT_SET(Global_1982266, 16))
+	else if (IS_BIT_SET(Global_1982268, 16))
 		hash = joaat("buzzard");
-	else if (IS_BIT_SET(Global_1982266, 17))
+	else if (IS_BIT_SET(Global_1982268, 17))
 		hash = 1307736079;
-	else if (IS_BIT_SET(Global_1982266, 18))
+	else if (IS_BIT_SET(Global_1982268, 18))
 		hash = -973016778;
 
 	if (hash != 0 && func_106(hash, -1))
@@ -494,13 +494,13 @@ int func_9(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, BO
 								return num6;
 					}
 				}
-				else if (Global_1586542[num6 /*143*/].f_66 == 0)
+				else if (Global_1586543[num6 /*143*/].f_66 == 0)
 				{
 					return num5;
 				}
 				else if (bParam1)
 				{
-					if (IS_BIT_SET(Global_1586542[num6 /*143*/].f_104, 0))
+					if (IS_BIT_SET(Global_1586543[num6 /*143*/].f_104, 0))
 						return num5;
 				}
 			}
@@ -690,13 +690,13 @@ int func_10(int iParam0, int iParam1, int iParam2, BOOL bParam3, Hash hParam4, i
 										return num;
 							}
 						}
-						else if (Global_1586542[num /*143*/].f_66 == 0)
+						else if (Global_1586543[num /*143*/].f_66 == 0)
 						{
 							return num2;
 						}
 						else if (bParam3)
 						{
-							if (IS_BIT_SET(Global_1586542[num /*143*/].f_104, 0))
+							if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 0))
 								return num2;
 						}
 					}
@@ -725,7 +725,7 @@ int func_10(int iParam0, int iParam1, int iParam2, BOOL bParam3, Hash hParam4, i
 						if (bParam7)
 							if (func_64(func_67(4, num), iParam6) == 0)
 								return num2;
-						else if (Global_1586542[num /*143*/].f_66 == 0)
+						else if (Global_1586543[num /*143*/].f_66 == 0)
 							return num2;
 					else
 						return num2;
@@ -755,7 +755,7 @@ int func_10(int iParam0, int iParam1, int iParam2, BOOL bParam3, Hash hParam4, i
 								if (IS_BIT_SET(num3, 0))
 									return num2;
 							}
-							else if (IS_BIT_SET(Global_1586542[num /*143*/].f_104, 0))
+							else if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 0))
 							{
 								return num2;
 							}
@@ -789,7 +789,7 @@ int func_10(int iParam0, int iParam1, int iParam2, BOOL bParam3, Hash hParam4, i
 							if (IS_BIT_SET(num3, 1) && !IS_BIT_SET(num3, 2))
 								return num2;
 						}
-						else if (IS_BIT_SET(Global_1586542[num /*143*/].f_104, 1) && !IS_BIT_SET(Global_1586542[num /*143*/].f_104, 2))
+						else if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 1) && !IS_BIT_SET(Global_1586543[num /*143*/].f_104, 2))
 						{
 							return num2;
 						}
@@ -836,18 +836,18 @@ int func_10(int iParam0, int iParam1, int iParam2, BOOL bParam3, Hash hParam4, i
 									return num2;
 							}
 						}
-						else if (Global_1586542[num /*143*/].f_66 == 0)
+						else if (Global_1586543[num /*143*/].f_66 == 0)
 						{
 							return num2;
 						}
 						else if (bParam3)
 						{
-							if (IS_BIT_SET(Global_1586542[num /*143*/].f_104, 0))
+							if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 0))
 								return num2;
-							else if (IS_BIT_SET(Global_1586542[num /*143*/].f_104, 1))
+							else if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 1))
 								return num2;
 						}
-						else if (IS_BIT_SET(Global_1586542[num /*143*/].f_104, 1))
+						else if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 1))
 						{
 							return num2;
 						}
@@ -1517,28 +1517,28 @@ BOOL func_24() // Position - 0x1CD7 (7383)
 
 BOOL func_25() // Position - 0x1D06 (7430)
 {
-	if (!IS_BIT_SET(Global_1963591.f_3, 3) && !IS_BIT_SET(Global_1963591.f_3, 2) && MISC::GET_FRAME_COUNT() % Global_262145.f_31169 == 0)
-		MISC::SET_BIT(&(Global_1963591.f_3), 2);
+	if (!IS_BIT_SET(Global_1963593.f_3, 3) && !IS_BIT_SET(Global_1963593.f_3, 2) && MISC::GET_FRAME_COUNT() % Global_262145.f_31169 == 0)
+		MISC::SET_BIT(&(Global_1963593.f_3), 2);
 
-	if (!IS_BIT_SET(Global_1963591.f_3, 1) || IS_BIT_SET(Global_1963591.f_3, 2) && !NETWORK::IS_COMMERCE_STORE_OPEN() && !NETWORK::IS_COMMERCE_DATA_FETCH_IN_PROGRESS())
+	if (!IS_BIT_SET(Global_1963593.f_3, 1) || IS_BIT_SET(Global_1963593.f_3, 2) && !NETWORK::IS_COMMERCE_STORE_OPEN() && !NETWORK::IS_COMMERCE_DATA_FETCH_IN_PROGRESS())
 	{
 		if (unk_0x483F6369B8CEE24B())
 		{
-			unk_0x9FA18B5CD8803086(&Global_1963591);
-			MISC::SET_BIT(&(Global_1963591.f_3), 1);
+			unk_0x9FA18B5CD8803086(&Global_1963593);
+			MISC::SET_BIT(&(Global_1963593.f_3), 1);
 		
-			if (IS_BIT_SET(Global_1963591.f_3, 2))
-				MISC::CLEAR_BIT(&(Global_1963591.f_3), 2);
+			if (IS_BIT_SET(Global_1963593.f_3, 2))
+				MISC::CLEAR_BIT(&(Global_1963593.f_3), 2);
 		}
 	}
 
-	if (Global_1963591)
+	if (Global_1963593)
 		if (!IS_BIT_SET(Global_2657994[PLAYER::PLAYER_ID() /*467*/].f_203, 31))
 			MISC::SET_BIT(&(Global_2657994[PLAYER::PLAYER_ID() /*467*/].f_203), 31);
 	else if (IS_BIT_SET(Global_2657994[PLAYER::PLAYER_ID() /*467*/].f_203, 31))
 		MISC::CLEAR_BIT(&(Global_2657994[PLAYER::PLAYER_ID() /*467*/].f_203), 31);
 
-	return Global_1963591;
+	return Global_1963593;
 }
 
 BOOL func_26(int iParam0) // Position - 0x1DFF (7679)
@@ -1917,7 +1917,7 @@ BOOL func_44(Player plParam0) // Position - 0x247A (9338)
 		return IS_BIT_SET(func_64(9618, -1), 0);
 
 	if (plParam0 != -1)
-		return IS_BIT_SET(Global_1977873[plParam0 /*128*/].f_1, 0);
+		return IS_BIT_SET(Global_1977875[plParam0 /*128*/].f_1, 0);
 
 	return false;
 }
@@ -1941,7 +1941,7 @@ BOOL func_47(Player plParam0) // Position - 0x24E7 (9447)
 		return IS_BIT_SET(func_64(8726, -1), 4);
 
 	if (plParam0 != -1)
-		return IS_BIT_SET(Global_1971259[plParam0 /*68*/].f_40, 4);
+		return IS_BIT_SET(Global_1971261[plParam0 /*68*/].f_40, 4);
 
 	return false;
 }
@@ -2004,13 +2004,13 @@ int func_51(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, int iParam4, B
 									return num2;
 						}
 					}
-					else if (Global_1586542[num2 /*143*/].f_66 == 0)
+					else if (Global_1586543[num2 /*143*/].f_66 == 0)
 					{
 						return iParam0;
 					}
 					else if (bParam2)
 					{
-						if (IS_BIT_SET(Global_1586542[num2 /*143*/].f_104, 0))
+						if (IS_BIT_SET(Global_1586543[num2 /*143*/].f_104, 0))
 							return iParam0;
 					}
 				}
@@ -2035,7 +2035,7 @@ int func_51(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, int iParam4, B
 					if (bParam5)
 						if (func_64(func_67(4, num2), iParam4) == 0)
 							return iParam0;
-					else if (Global_1586542[num2 /*143*/].f_66 == 0)
+					else if (Global_1586543[num2 /*143*/].f_66 == 0)
 						return iParam0;
 				else
 					return iParam0;
@@ -2061,7 +2061,7 @@ int func_51(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, int iParam4, B
 							if (IS_BIT_SET(num, 0))
 								return iParam0;
 						}
-						else if (IS_BIT_SET(Global_1586542[num2 /*143*/].f_104, 0))
+						else if (IS_BIT_SET(Global_1586543[num2 /*143*/].f_104, 0))
 						{
 							return iParam0;
 						}
@@ -2091,7 +2091,7 @@ int func_51(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, int iParam4, B
 						if (IS_BIT_SET(num, 1) && !IS_BIT_SET(num, 2))
 							return iParam0;
 					}
-					else if (IS_BIT_SET(Global_1586542[num2 /*143*/].f_104, 1) && !IS_BIT_SET(Global_1586542[num2 /*143*/].f_104, 2))
+					else if (IS_BIT_SET(Global_1586543[num2 /*143*/].f_104, 1) && !IS_BIT_SET(Global_1586543[num2 /*143*/].f_104, 2))
 					{
 						return iParam0;
 					}
@@ -2134,18 +2134,18 @@ int func_51(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, int iParam4, B
 								return iParam0;
 						}
 					}
-					else if (Global_1586542[num2 /*143*/].f_66 == 0)
+					else if (Global_1586543[num2 /*143*/].f_66 == 0)
 					{
 						return iParam0;
 					}
 					else if (bParam2)
 					{
-						if (IS_BIT_SET(Global_1586542[num2 /*143*/].f_104, 0))
+						if (IS_BIT_SET(Global_1586543[num2 /*143*/].f_104, 0))
 							return iParam0;
-						else if (IS_BIT_SET(Global_1586542[num2 /*143*/].f_104, 1))
+						else if (IS_BIT_SET(Global_1586543[num2 /*143*/].f_104, 1))
 							return iParam0;
 					}
-					else if (IS_BIT_SET(Global_1586542[num2 /*143*/].f_104, 1))
+					else if (IS_BIT_SET(Global_1586543[num2 /*143*/].f_104, 1))
 					{
 						return iParam0;
 					}
@@ -14899,13 +14899,13 @@ int func_86(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, i
 				if (!func_84(hParam2, num))
 				{
 				}
-				else if (Global_1586542[num /*143*/].f_66 == 0)
+				else if (Global_1586543[num /*143*/].f_66 == 0)
 				{
 					return num;
 				}
 				else if (bParam1)
 				{
-					if (IS_BIT_SET(Global_1586542[num /*143*/].f_104, 0))
+					if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 0))
 						return num;
 				}
 			}
@@ -14919,7 +14919,7 @@ int func_86(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, i
 				if (!func_84(hParam2, num))
 				{
 				}
-				else if (Global_1586542[num /*143*/].f_66 == 0)
+				else if (Global_1586543[num /*143*/].f_66 == 0)
 				{
 					return num;
 				}
@@ -14934,7 +14934,7 @@ int func_86(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, i
 					if (!func_84(hParam2, num))
 					{
 					}
-					else if (IS_BIT_SET(Global_1586542[num /*143*/].f_104, 0))
+					else if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 0))
 					{
 						return num;
 					}
@@ -14948,11 +14948,11 @@ int func_86(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, i
 				if (!func_84(hParam2, num))
 				{
 				}
-				else if (IS_BIT_SET(Global_1586542[num /*143*/].f_104, 1) && !IS_BIT_SET(Global_1586542[num /*143*/].f_104, 2))
+				else if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 1) && !IS_BIT_SET(Global_1586543[num /*143*/].f_104, 2))
 				{
 					return num;
 				}
-				else if (IS_BIT_SET(Global_1586542[num /*143*/].f_104, 1))
+				else if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 1))
 				{
 				}
 			}
@@ -14966,18 +14966,18 @@ int func_86(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, i
 				if (!func_84(hParam2, num))
 				{
 				}
-				else if (Global_1586542[num /*143*/].f_66 == 0)
+				else if (Global_1586543[num /*143*/].f_66 == 0)
 				{
 					return num;
 				}
 				else if (bParam1)
 				{
-					if (IS_BIT_SET(Global_1586542[num /*143*/].f_104, 0))
+					if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 0))
 						return num;
-					else if (IS_BIT_SET(Global_1586542[num /*143*/].f_104, 1))
+					else if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 1))
 						return num;
 				}
-				else if (IS_BIT_SET(Global_1586542[num /*143*/].f_104, 1))
+				else if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 1))
 				{
 					return num;
 				}
@@ -15029,9 +15029,9 @@ int func_88(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, BOOL bParam4, 
 					return iParam0;
 				else
 					return iParam0;
-			else if (Global_1586542[iParam0 /*143*/].f_66 == joaat("hauler2") || Global_1586542[iParam0 /*143*/].f_66 == joaat("phantom3"))
+			else if (Global_1586543[iParam0 /*143*/].f_66 == joaat("hauler2") || Global_1586543[iParam0 /*143*/].f_66 == joaat("phantom3"))
 				return iParam0;
-			else if (Global_1586542[iParam0 /*143*/].f_66 == 0)
+			else if (Global_1586543[iParam0 /*143*/].f_66 == 0)
 				return iParam0;
 			else
 				return iParam0;
@@ -15114,13 +15114,13 @@ int func_88(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, BOOL bParam4, 
 				if (!func_84(hParam3, iParam0))
 				{
 				}
-				else if (Global_1586542[iParam0 /*143*/].f_66 == 0)
+				else if (Global_1586543[iParam0 /*143*/].f_66 == 0)
 				{
 					return iParam0;
 				}
 				else if (bParam2)
 				{
-					if (IS_BIT_SET(Global_1586542[iParam0 /*143*/].f_104, 0))
+					if (IS_BIT_SET(Global_1586543[iParam0 /*143*/].f_104, 0))
 						return iParam0;
 				}
 				break;
@@ -15129,7 +15129,7 @@ int func_88(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, BOOL bParam4, 
 				if (!func_84(hParam3, iParam0))
 				{
 				}
-				else if (Global_1586542[iParam0 /*143*/].f_66 == 0)
+				else if (Global_1586543[iParam0 /*143*/].f_66 == 0)
 				{
 					return iParam0;
 				}
@@ -15139,7 +15139,7 @@ int func_88(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, BOOL bParam4, 
 					if (!func_84(hParam3, iParam0))
 					{
 					}
-					else if (IS_BIT_SET(Global_1586542[iParam0 /*143*/].f_104, 0))
+					else if (IS_BIT_SET(Global_1586543[iParam0 /*143*/].f_104, 0))
 					{
 						return iParam0;
 					}
@@ -15148,11 +15148,11 @@ int func_88(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, BOOL bParam4, 
 				if (!func_84(hParam3, iParam0))
 				{
 				}
-				else if (IS_BIT_SET(Global_1586542[iParam0 /*143*/].f_104, 1) && !IS_BIT_SET(Global_1586542[iParam0 /*143*/].f_104, 2))
+				else if (IS_BIT_SET(Global_1586543[iParam0 /*143*/].f_104, 1) && !IS_BIT_SET(Global_1586543[iParam0 /*143*/].f_104, 2))
 				{
 					return iParam0;
 				}
-				else if (IS_BIT_SET(Global_1586542[iParam0 /*143*/].f_104, 1))
+				else if (IS_BIT_SET(Global_1586543[iParam0 /*143*/].f_104, 1))
 				{
 				}
 				break;
@@ -15161,18 +15161,18 @@ int func_88(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, BOOL bParam4, 
 				if (!func_84(hParam3, iParam0))
 				{
 				}
-				else if (Global_1586542[iParam0 /*143*/].f_66 == 0)
+				else if (Global_1586543[iParam0 /*143*/].f_66 == 0)
 				{
 					return iParam0;
 				}
 				else if (bParam2)
 				{
-					if (IS_BIT_SET(Global_1586542[iParam0 /*143*/].f_104, 0))
+					if (IS_BIT_SET(Global_1586543[iParam0 /*143*/].f_104, 0))
 						return iParam0;
-					else if (IS_BIT_SET(Global_1586542[iParam0 /*143*/].f_104, 1))
+					else if (IS_BIT_SET(Global_1586543[iParam0 /*143*/].f_104, 1))
 						return iParam0;
 				}
-				else if (IS_BIT_SET(Global_1586542[iParam0 /*143*/].f_104, 1))
+				else if (IS_BIT_SET(Global_1586543[iParam0 /*143*/].f_104, 1))
 				{
 					return iParam0;
 				}

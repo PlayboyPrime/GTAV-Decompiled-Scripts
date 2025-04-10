@@ -576,7 +576,7 @@ void main() // Position - 0x0 (0)
 									func_124();
 								}
 							
-								if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+								if (!func_123())
 								{
 									if (iLocal_127 < MISC::GET_GAME_TIMER())
 									{
@@ -634,7 +634,7 @@ void main() // Position - 0x0 (0)
 										{
 											if (ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), pedLocal_70, 15f, 15f, 15f, false, true, 0))
 											{
-												if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+												if (!func_123())
 												{
 													_CONVERSATION_ADD_LINE(&uLocal_152, "REHOMAU", "REHOM_THNK", 4, 0, 0, 0);
 													bLocal_88 = false;
@@ -674,13 +674,13 @@ void main() // Position - 0x0 (0)
 							
 								if (!bLocal_90)
 								{
-									if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+									if (!func_123())
 										if (_CONVERSATION_ADD_LINE(&uLocal_152, "REHOMAU", "REHOM_ASK", 4, 0, 0, 0))
 											bLocal_90 = true;
 								}
 								else if (!bLocal_89)
 								{
-									if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+									if (!func_123())
 									{
 										if (_GET_CURRENT_PLAYER_CHARACTER() == CHAR_MICHAEL)
 											_CONVERSATION_ADD_LINE(&uLocal_152, "REHOMAU", "REHOM_RES1_M", 4, 0, 0, 0);
@@ -709,7 +709,7 @@ void main() // Position - 0x0 (0)
 							
 								if (bLocal_89 && func_113())
 								{
-									if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+									if (!func_123())
 									{
 										func_111();
 										SYSTEM::WAIT(0);
@@ -959,7 +959,7 @@ void func_3(int iParam0) // Position - 0xD66 (3430)
 
 void func_4() // Position - 0xD74 (3444)
 {
-	while (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+	while (func_123())
 	{
 		SYSTEM::WAIT(0);
 	}
@@ -983,7 +983,7 @@ void func_5() // Position - 0xDA9 (3497)
 
 int func_6() // Position - 0xDB6 (3510)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_7(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -996,9 +996,9 @@ int func_6() // Position - 0xDB6 (3510)
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0xE01 (3585)
+BOOL func_7(BOOL bParam0) // Position - 0xE01 (3585)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -3572,9 +3572,9 @@ void func_80() // Position - 0x3CD0 (15568)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -3747,11 +3747,11 @@ BOOL func_91(int iParam0, int iParam1) // Position - 0x401A (16410)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_92() // Position - 0x4052 (16466)
@@ -3894,7 +3894,7 @@ void func_96() // Position - 0x42B3 (17075)
 	if (!func_97())
 		func_75(true);
 
-	if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+	if (!func_123())
 	{
 		switch (iLocal_128)
 		{
@@ -3981,7 +3981,7 @@ BOOL func_98(char* sParam0) // Position - 0x4549 (17737)
 {
 	var string2;
 
-	if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+	if (func_123())
 	{
 		TEXT_LABEL_COPY(&string2, { func_77() }, 4);
 	
@@ -4405,7 +4405,7 @@ BOOL _GET_RANDOM_BOOL() // Position - 0x4C1A (19482)
 	return false;
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x4C38 (19512)
+BOOL func_123() // Position - 0x4C38 (19512)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -4785,7 +4785,7 @@ void func_134() // Position - 0x5112 (20754)
 						{
 							if (PED::GET_SYNCHRONIZED_SCENE_PHASE(iLocal_147) > 0.98f)
 							{
-								if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+								if (!func_123())
 								{
 									if (PED::IS_PED_FACING_PED(iLocal_50[0], pedLocal_70, 10f))
 									{
@@ -4818,7 +4818,7 @@ void func_134() // Position - 0x5112 (20754)
 				{
 					if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(iLocal_147))
 					{
-						if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+						if (!func_123())
 						{
 							if (PED::IS_PED_FACING_PED(iLocal_50[0], pedLocal_70, 10f))
 							{
@@ -5054,7 +5054,7 @@ void func_134() // Position - 0x5112 (20754)
 			
 				if (!PED::IS_PED_INJURED(iLocal_50[0]))
 				{
-					if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && !bLocal_112)
+					if (!func_123() && !bLocal_112)
 					{
 						if (_GET_RANDOM_BOOL())
 							_CONVERSATION_ADD_LINE(&uLocal_152, "REHOMAU", "REHOM_AWAY1", 4, 0, 0, 0);
@@ -5077,7 +5077,7 @@ void func_134() // Position - 0x5112 (20754)
 
 void func_135() // Position - 0x5AC7 (23239)
 {
-	if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+	if (!func_123())
 	{
 		if (VEHICLE::IS_VEHICLE_DRIVEABLE(veLocal_63, false))
 		{
@@ -7129,7 +7129,7 @@ BOOL func_177(var uParam0, var uParam1, var uParam2, int iParam3, int iParam4, B
 		if (!Global_114162.f_9089)
 			return false;
 	
-		if (_IS_MISSION_REPEAT_ACTIVE(false))
+		if (func_7(false))
 			return false;
 	
 		if (func_167())

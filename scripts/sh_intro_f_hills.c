@@ -29262,7 +29262,7 @@ BOOL func_150(int iParam0, int iParam1, int iParam2) // Position - 0x1F53B (1283
 
 	func_155();
 
-	if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+	if (func_154())
 	{
 		func_152();
 		num = 0;
@@ -29324,7 +29324,7 @@ void func_153() // Position - 0x1F642 (128578)
 	return;
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x1F699 (128665)
+BOOL func_154() // Position - 0x1F699 (128665)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;

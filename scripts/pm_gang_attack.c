@@ -348,7 +348,7 @@ void main() // Position - 0x0 (0)
 	{
 		SYSTEM::WAIT(0);
 	
-		if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+		if (func_53())
 			iLocal_271 = -1;
 		else if (iLocal_271 == -1)
 			iLocal_271 = MISC::GET_GAME_TIMER();
@@ -507,7 +507,7 @@ BOOL func_2() // Position - 0x41A (1050)
 		return false;
 
 	if (HUD::IS_SUBTITLE_PREFERENCE_SWITCHED_ON())
-		if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && !func_3())
+		if (func_53() && !func_3())
 			return false;
 
 	return true;
@@ -970,9 +970,9 @@ void func_12() // Position - 0xD53 (3411)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -1228,11 +1228,11 @@ BOOL func_30(int iParam0, int iParam1) // Position - 0x123E (4670)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_31() // Position - 0x1276 (4726)
@@ -1474,7 +1474,7 @@ int func_36() // Position - 0x1574 (5492)
 
 BOOL func_37() // Position - 0x15E8 (5608)
 {
-	if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+	if (func_53())
 		return false;
 
 	if (HUD::IS_SUBTITLE_PREFERENCE_SWITCHED_ON())
@@ -1507,7 +1507,7 @@ void func_39(Ped pedParam0, Vector3 vParam1, var uParam2, var uParam3) // Positi
 
 	WEAPON::GET_CURRENT_PED_WEAPON(pedParam0, &weaponHash, true);
 
-	if (!_IS_NULL_VECTOR(vParam1))
+	if (!func_42(vParam1))
 	{
 		WEAPON::GET_CURRENT_PED_WEAPON(pedParam0, &weaponHash2, true);
 	
@@ -1577,7 +1577,7 @@ Vector3 func_41(Vector3 vParam0, var uParam1, var uParam2, float fParam3) // Pos
 	return 0f, 0f, 0f;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x18A1 (6305)
+BOOL func_42(float fParam0, var uParam1, var uParam2) // Position - 0x18A1 (6305)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -2020,7 +2020,7 @@ void func_52(Ped pedParam0, float fParam1, float fParam2, float fParam3, float f
 	return;
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x25AA (9642)
+BOOL func_53() // Position - 0x25AA (9642)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;

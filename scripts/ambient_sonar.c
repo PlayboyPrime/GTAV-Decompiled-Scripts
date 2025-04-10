@@ -1118,7 +1118,7 @@ void func_27() // Position - 0xD86 (3462)
 		func_16(1, "CELL_1" /*Texts*/, 1, "appTextMessage", 2, 1, 1, 0, 0);
 		func_16(4, "CELL_23" /*Check List*/, 2, "appChecklist", 39, 1, 1, 0, 0);
 	
-		if (Global_44199 == 15 && _IS_MISSION_REPEAT_ACTIVE(false) == false && Global_8924 == 0)
+		if (Global_44199 == 15 && func_48(false) == false && Global_8924 == 0)
 		{
 			func_16(20, "CELL_32" /*Quick Save*/, 3, "appSettings", 43, 1, 1, 0, 0);
 			Global_21304 = 0;
@@ -1377,12 +1377,12 @@ BOOL func_46(var uParam0) // Position - 0x14F3 (5363)
 
 BOOL func_47() // Position - 0x1522 (5410)
 {
-	return IS_BIT_SET(Global_1668458, 4);
+	return IS_BIT_SET(Global_1668459, 4);
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x1530 (5424)
+BOOL func_48(BOOL bParam0) // Position - 0x1530 (5424)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -1847,7 +1847,7 @@ void func_67() // Position - 0x1A0C (6668)
 
 int func_68() // Position - 0x1ECA (7882)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_48(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -3370,12 +3370,12 @@ void func_99(BOOL bParam0, BOOL bParam1) // Position - 0x39F3 (14835)
 
 BOOL func_100() // Position - 0x3A67 (14951)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_101() // Position - 0x3A75 (14965)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_102() // Position - 0x3A84 (14980)

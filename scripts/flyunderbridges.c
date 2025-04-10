@@ -315,7 +315,7 @@ void main() // Position - 0x0 (0)
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(34))
 		SCRIPT::TERMINATE_THIS_THREAD();
 
-	if (func_54(13) || func_54(14) || _IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_54(13) || func_54(14) || func_53(false))
 		SCRIPT::TERMINATE_THIS_THREAD();
 
 	func_31();
@@ -503,7 +503,7 @@ void func_1() // Position - 0x52F (1327)
 
 int func_2() // Position - 0x609 (1545)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_53(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -2158,9 +2158,9 @@ int func_52() // Position - 0x3813 (14355)
 	return num;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x3891 (14481)
+BOOL func_53(BOOL bParam0) // Position - 0x3891 (14481)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);

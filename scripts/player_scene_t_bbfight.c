@@ -834,9 +834,9 @@ void func_5() // Position - 0x533 (1331)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -1014,11 +1014,11 @@ BOOL func_17(int iParam0, int iParam1) // Position - 0x889 (2185)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_18() // Position - 0x8C1 (2241)
@@ -1605,7 +1605,7 @@ BOOL func_29(Entity eParam0, float fParam1) // Position - 0x1637 (5687)
 					{
 						vector2 = { func_31(i, j) };
 					
-						if (!_IS_NULL_VECTOR(vector2))
+						if (!func_30(vector2))
 							if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(eParam0, true), vector2) < fParam1 * fParam1)
 								return true;
 					}
@@ -1617,7 +1617,7 @@ BOOL func_29(Entity eParam0, float fParam1) // Position - 0x1637 (5687)
 	return false;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x16F3 (5875)
+BOOL func_30(float fParam0, var uParam1, var uParam2) // Position - 0x16F3 (5875)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;

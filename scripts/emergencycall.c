@@ -117,10 +117,10 @@ void main() // Position - 0x0 (0)
 				
 					if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 					{
-						if (func_8(PLAYER::PLAYER_ID(), false) && func_4(PLAYER::PLAYER_ID()) == 5 && Global_1963522)
+						if (func_8(PLAYER::PLAYER_ID(), false) && func_4(PLAYER::PLAYER_ID()) == 5 && Global_1963524)
 						{
-							if (Global_1963523 == 0)
-								Global_1963523 = 1;
+							if (Global_1963525 == 0)
+								Global_1963525 = 1;
 						
 							iLocal_41 = 5;
 						}
@@ -150,7 +150,7 @@ void main() // Position - 0x0 (0)
 					}
 					else if (MISC::CREATE_INCIDENT(DT_FireDepartment, uLocal_43, 4, 3f, &iLocal_47, 0, 0))
 					{
-						if (Global_98185.f_358 == MISC::GET_HASH_KEY("AGENCY_PREP_1") || SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(MISC::GET_HASH_KEY("agency_prep1")) > 0 && _IS_MISSION_REPEAT_ACTIVE(false))
+						if (Global_98185.f_358 == MISC::GET_HASH_KEY("AGENCY_PREP_1") || SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(MISC::GET_HASH_KEY("agency_prep1")) > 0 && func_3(false))
 							Global_98185.f_358 = MISC::GET_HASH_KEY("AHP1_TRUCKCALLED");
 						else if (func_2(67) && !func_2(68))
 							Global_98115 = 1;
@@ -191,9 +191,9 @@ BOOL func_2(int iParam0) // Position - 0x28C (652)
 	return Global_114162.f_9089.f_330[iParam0 /*6*/];
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x2B8 (696)
+BOOL func_3(BOOL bParam0) // Position - 0x2B8 (696)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -534,12 +534,12 @@ BOOL func_16(int iParam0) // Position - 0x8A2 (2210)
 
 BOOL func_17() // Position - 0x8F9 (2297)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_18() // Position - 0x907 (2311)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 int func_19() // Position - 0x916 (2326)

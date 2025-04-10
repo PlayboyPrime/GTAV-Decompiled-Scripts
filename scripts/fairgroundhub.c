@@ -174,7 +174,7 @@ void main() // Position - 0x0 (0)
 	iLocal_36 = 3;
 	unk = { uScriptParam_0.f_1[0 /*3*/] };
 	num = 4;
-	_IS_NULL_VECTOR(unk);
+	func_80(unk);
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(195))
 		func_78();
@@ -717,7 +717,7 @@ BOOL func_9(var uParam0) // Position - 0xCA2 (3234)
 	if (uParam0->f_15 == 360f)
 		return 1;
 
-	if (_IS_NULL_VECTOR(uParam0->f_12))
+	if (func_80(uParam0->f_12))
 		return 1;
 
 	if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
@@ -1264,7 +1264,7 @@ BOOL func_49(Player plParam0) // Position - 0x1651 (5713)
 
 BOOL func_50() // Position - 0x1674 (5748)
 {
-	if (IS_BIT_SET(Global_1668458, 0) || IS_BIT_SET(Global_1668458, 1))
+	if (IS_BIT_SET(Global_1668459, 0) || IS_BIT_SET(Global_1668459, 1))
 		return true;
 
 	return false;
@@ -3576,7 +3576,7 @@ void func_79(var uParam0) // Position - 0x6104 (24836)
 	return;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x6110 (24848)
+BOOL func_80(float fParam0, var uParam1, var uParam2) // Position - 0x6110 (24848)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;

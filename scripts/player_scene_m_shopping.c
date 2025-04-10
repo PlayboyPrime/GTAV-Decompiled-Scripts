@@ -1509,9 +1509,9 @@ void func_18() // Position - 0x1547 (5447)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -1689,11 +1689,11 @@ BOOL func_30(int iParam0, int iParam1) // Position - 0x189D (6301)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_31() // Position - 0x18D5 (6357)
@@ -1755,14 +1755,14 @@ BOOL func_33(char* sParam0, int iParam1) // Position - 0x1982 (6530)
 {
 	if (HUD::HAS_THIS_ADDITIONAL_TEXT_LOADED(sParam0, iParam1))
 		return true;
-	else if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && !AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
+	else if (!func_34() && !AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
 		if (!HUD::IS_STREAMING_ADDITIONAL_TEXT(iParam1))
 			HUD::REQUEST_ADDITIONAL_TEXT(sParam0, iParam1);
 
 	return false;
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x19C1 (6593)
+BOOL func_34() // Position - 0x19C1 (6593)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -4050,7 +4050,7 @@ int func_96(eCharacter echParam0, char* sParam1, int iParam2, int iParam3, char*
 		}
 	}
 
-	if (Global_1973529 != -1 && echParam0 == Global_1973529)
+	if (Global_1973531 != -1 && echParam0 == Global_1973531)
 		num2 = 1;
 
 	func_97(echParam0, sParam1, num2, func_98(PLAYER::PLAYER_ID()));
@@ -4070,18 +4070,18 @@ void func_97(eCharacter echParam0, char* sParam1, BOOL bParam2, var uParam3) // 
 	character.f_3 = 0;
 	character.f_4 = bParam2;
 	character.f_5 = uParam3;
-	character.f_6 = Global_1973512.f_7;
-	character.f_7 = Global_1973512.f_8;
-	character.f_8 = Global_1973512.f_9;
-	character.f_9 = Global_1973512.f_10;
-	character.f_10 = Global_1973512.f_11;
-	character.f_11 = Global_1973512.f_12;
-	character.f_12 = Global_1973512.f_13;
-	character.f_13 = Global_1973512.f_14;
+	character.f_6 = Global_1973514.f_7;
+	character.f_7 = Global_1973514.f_8;
+	character.f_8 = Global_1973514.f_9;
+	character.f_9 = Global_1973514.f_10;
+	character.f_10 = Global_1973514.f_11;
+	character.f_11 = Global_1973514.f_12;
+	character.f_12 = Global_1973514.f_13;
+	character.f_13 = Global_1973514.f_14;
 	STATS::PLAYSTATS_NPC_PHONE(&character);
 
 	if (bParam2)
-		Global_1973529 = -1;
+		Global_1973531 = -1;
 
 	return;
 }
@@ -4727,7 +4727,7 @@ BOOL func_114(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, e
 {
 	int num;
 
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_117(false))
 		return false;
 
 	if (iParam6 < 0)
@@ -4839,9 +4839,9 @@ int func_116(int iParam0) // Position - 0x531E (21278)
 	return 7;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x5388 (21384)
+BOOL func_117(BOOL bParam0) // Position - 0x5388 (21384)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -7955,7 +7955,7 @@ BOOL func_162(Hash hParam0, BOOL bParam1, int iParam2) // Position - 0xA60A (425
 
 	if (hParam0 == joaat("hotknife") || hParam0 == joaat("carbonrs") || hParam0 == joaat("khamelion"))
 	{
-		if (IS_XBOX_PLATFORM() || MISC::IS_PC_VERSION() || IS_PLAYSTATION_PLATFORM())
+		if (func_167() || MISC::IS_PC_VERSION() || func_166())
 		{
 		}
 		else if (!func_169())
@@ -8050,7 +8050,7 @@ BOOL func_165(Hash hParam0, int iParam1) // Position - 0xA872 (43122)
 		return true;
 
 	if (!Global_2707807 && iParam1 >= 0 && iParam1 <= 547)
-		if (IS_BIT_SET(Global_1586542[iParam1 /*143*/].f_104, 2))
+		if (IS_BIT_SET(Global_1586543[iParam1 /*143*/].f_104, 2))
 			return true;
 
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();
@@ -8143,12 +8143,12 @@ BOOL func_165(Hash hParam0, int iParam1) // Position - 0xA872 (43122)
 	return false;
 }
 
-BOOL IS_PLAYSTATION_PLATFORM() // Position - 0xAA9F (43679)
+BOOL func_166() // Position - 0xAA9F (43679)
 {
 	return MISC::IS_ORBIS_VERSION() || MISC::IS_PROSPERO_VERSION();
 }
 
-BOOL IS_XBOX_PLATFORM() // Position - 0xAAB5 (43701)
+BOOL func_167() // Position - 0xAAB5 (43701)
 {
 	return MISC::IS_DURANGO_VERSION() || MISC::IS_SCARLETT_VERSION();
 }

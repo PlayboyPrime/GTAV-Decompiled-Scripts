@@ -482,7 +482,7 @@ void func_16(BOOL bParam0) // Position - 0x6C0 (1728)
 	var string1;
 	char* string2;
 
-	if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+	if (func_23())
 	{
 		string1 = { func_22() };
 		string2 = func_21();
@@ -565,7 +565,7 @@ struct<6> func_22() // Position - 0x7BE (1982)
 	return unk;
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x7E2 (2018)
+BOOL func_23() // Position - 0x7E2 (2018)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -1065,7 +1065,7 @@ int func_43(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uPar
 
 	if (iLocal_82 < iLocal_83)
 	{
-		if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+		if (!func_23())
 		{
 			if (SYSTEM::VDIST2(vParam3, vParam0) < iParam7 * iParam7)
 			{

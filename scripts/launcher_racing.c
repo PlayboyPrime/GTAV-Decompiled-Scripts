@@ -609,7 +609,7 @@ char* func_3(int iParam0) // Position - 0x213 (531)
 				break;
 		}
 	}
-	else if (IS_PLAYSTATION_PLATFORM())
+	else if (func_5())
 	{
 		switch (iParam0)
 		{
@@ -650,7 +650,7 @@ char* func_3(int iParam0) // Position - 0x213 (531)
 				break;
 		}
 	}
-	else if (IS_XBOX_PLATFORM())
+	else if (func_4())
 	{
 		switch (iParam0)
 		{
@@ -736,12 +736,12 @@ char* func_3(int iParam0) // Position - 0x213 (531)
 	return str;
 }
 
-BOOL IS_XBOX_PLATFORM() // Position - 0x4EF (1263)
+BOOL func_4() // Position - 0x4EF (1263)
 {
 	return MISC::IS_DURANGO_VERSION() || MISC::IS_SCARLETT_VERSION();
 }
 
-BOOL IS_PLAYSTATION_PLATFORM() // Position - 0x505 (1285)
+BOOL func_5() // Position - 0x505 (1285)
 {
 	return MISC::IS_ORBIS_VERSION() || MISC::IS_PROSPERO_VERSION();
 }
@@ -754,9 +754,9 @@ char* func_6() // Position - 0x51B (1307)
 		str = "SPRACE";
 	else if (MISC::IS_XBOX360_VERSION())
 		str = "2535285330962926";
-	else if (IS_PLAYSTATION_PLATFORM())
+	else if (func_5())
 		str = "SPRACE";
-	else if (IS_XBOX_PLATFORM())
+	else if (func_4())
 		str = "2535285330962926";
 	else if (MISC::IS_PC_VERSION())
 		str = "SPRACE";
@@ -833,7 +833,7 @@ void func_11() // Position - 0x5C0 (1472)
 
 void func_12() // Position - 0x66F (1647)
 {
-	if (!_IS_MISSION_REPEAT_ACTIVE(false))
+	if (!func_13(false))
 	{
 		SCRIPT::REQUEST_SCRIPT("mission_Race");
 	
@@ -851,9 +851,9 @@ void func_12() // Position - 0x66F (1647)
 	return;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x6C4 (1732)
+BOOL func_13(BOOL bParam0) // Position - 0x6C4 (1732)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -4562,7 +4562,7 @@ void func_89(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4
 
 void func_90(int iParam0) // Position - 0x5D03 (23811)
 {
-	Global_1675263.f_1163 = iParam0;
+	Global_1675264.f_1163 = iParam0;
 	return;
 }
 
@@ -4643,7 +4643,7 @@ void func_93(BOOL bParam0, BOOL bParam1) // Position - 0x5DD1 (24017)
 
 BOOL func_94() // Position - 0x5E45 (24133)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_95(int iParam0) // Position - 0x5E53 (24147)
@@ -4668,7 +4668,7 @@ BOOL func_95(int iParam0) // Position - 0x5E53 (24147)
 
 BOOL func_96() // Position - 0x5EAA (24234)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 float func_97(int iParam0) // Position - 0x5EB9 (24249)
@@ -6039,11 +6039,11 @@ BOOL func_138(int iParam0, int iParam1) // Position - 0x78E6 (30950)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_139(int iParam0, BOOL bParam1, int iParam2) // Position - 0x791E (31006)

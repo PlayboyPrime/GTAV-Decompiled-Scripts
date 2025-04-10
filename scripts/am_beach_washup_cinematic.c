@@ -486,7 +486,7 @@ void func_27(BOOL bParam0, BOOL bParam1) // Position - 0x691 (1681)
 
 BOOL func_28() // Position - 0x705 (1797)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_29(int iParam0) // Position - 0x713 (1811)
@@ -511,7 +511,7 @@ BOOL func_29(int iParam0) // Position - 0x713 (1811)
 
 BOOL func_30() // Position - 0x76A (1898)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_31(BOOL bParam0) // Position - 0x779 (1913)
@@ -534,13 +534,13 @@ void func_31(BOOL bParam0) // Position - 0x779 (1913)
 
 void func_32(int iParam0, int iParam1) // Position - 0x7CA (1994)
 {
-	MISC::SET_BIT(&(Global_1673706.f_1047), iParam0);
+	MISC::SET_BIT(&(Global_1673707.f_1047), iParam0);
 
 	switch (iParam0)
 	{
 		case 5:
 			if (iParam1 > -1)
-				Global_1673706.f_170[iParam1] = 1;
+				Global_1673707.f_170[iParam1] = 1;
 			break;
 	}
 

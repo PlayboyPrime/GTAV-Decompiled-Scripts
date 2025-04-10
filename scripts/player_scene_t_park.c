@@ -1933,12 +1933,12 @@ void func_10(BOOL bParam0, BOOL bParam1) // Position - 0x251F (9503)
 
 BOOL func_11() // Position - 0x2593 (9619)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_12() // Position - 0x25A1 (9633)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 BOOL func_13(int iParam0) // Position - 0x25B0 (9648)

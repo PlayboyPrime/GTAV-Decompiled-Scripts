@@ -383,7 +383,7 @@ BOOL func_1() // Position - 0x1BA (442)
 		case 2:
 			if (!ENTITY::IS_ENTITY_DEAD(pedLocal_36, false))
 			{
-				if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+				if (!func_3())
 				{
 					TASK::CLEAR_SEQUENCE_TASK(&taskSequenceId);
 					TASK::OPEN_SEQUENCE_TASK(&taskSequenceId);
@@ -446,7 +446,7 @@ void func_2() // Position - 0x465 (1125)
 	return;
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x4DD (1245)
+BOOL func_3() // Position - 0x4DD (1245)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -659,9 +659,9 @@ void func_6() // Position - 0x81B (2075)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -917,11 +917,11 @@ BOOL func_24(int iParam0, int iParam1) // Position - 0xD06 (3334)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_25() // Position - 0xD3E (3390)
@@ -1028,7 +1028,7 @@ BOOL func_28() // Position - 0xE6C (3692)
 			_CONVERSATION_INITIALIZE_ACTOR(&uLocal_61, 3, pedLocal_36, "TONYA", 1, 1);
 			func_30();
 		
-			if (!_IS_NULL_VECTOR(uLocal_55))
+			if (!func_29(uLocal_55))
 			{
 				if (TASK::GET_SCRIPT_TASK_STATUS(pedLocal_36, SCRIPT_TASK_FOLLOW_NAV_MESH_TO_COORD) != 1)
 				{
@@ -1044,7 +1044,7 @@ BOOL func_28() // Position - 0xE6C (3692)
 	return false;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0xF43 (3907)
+BOOL func_29(float fParam0, var uParam1, var uParam2) // Position - 0xF43 (3907)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -1060,7 +1060,7 @@ void func_30() // Position - 0xF6D (3949)
 	{
 		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedLocal_36, true) };
 	
-		if (_IS_NULL_VECTOR(uLocal_55))
+		if (func_29(uLocal_55))
 		{
 			fLocal_59 = SYSTEM::VDIST(entityCoords, uLocal_47);
 			fLocal_60 = SYSTEM::VDIST(entityCoords, uLocal_51);

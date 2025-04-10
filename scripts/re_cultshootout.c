@@ -829,7 +829,7 @@ void func_25() // Position - 0x9A9 (2473)
 	AUDIO::TRIGGER_MUSIC_EVENT("RE20_END");
 	func_23(1);
 
-	while (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+	while (func_56())
 	{
 		SYSTEM::WAIT(0);
 	}
@@ -854,7 +854,7 @@ void func_26() // Position - 0x9F5 (2549)
 
 int func_27() // Position - 0xA02 (2562)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_28(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -867,9 +867,9 @@ int func_27() // Position - 0xA02 (2562)
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0xA4D (2637)
+BOOL func_28(BOOL bParam0) // Position - 0xA4D (2637)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -1810,7 +1810,7 @@ BOOL func_55() // Position - 0x1D71 (7537)
 	return true;
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x1D7A (7546)
+BOOL func_56() // Position - 0x1D7A (7546)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -2253,7 +2253,7 @@ void func_71() // Position - 0x239F (9119)
 						{
 							if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), uLocal_71, uLocal_74, fLocal_77, false, true, 0) || ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), 2205.9185f, 5633.4546f, 55.7472f, 15f, 15f, 40f, false, true, 0))
 							{
-								if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+								if (!func_56())
 								{
 									_CONVERSATION_INITIALIZE_ACTOR(&uLocal_129, 3, iLocal_101[iLocal_123], "SalvadorGang", 0, 1);
 									_CONVERSATION_ADD_LINE(&uLocal_129, "RECSHAU", "RECSH_GOAW", 4, 0, 0, 0);
@@ -2324,7 +2324,7 @@ void func_71() // Position - 0x239F (9119)
 					{
 						if (MISC::GET_GAME_TIMER() - iLocal_128 > 6000)
 						{
-							if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+							if (!func_56())
 							{
 								_CONVERSATION_INITIALIZE_ACTOR(&uLocal_129, 3, iLocal_101[iLocal_123], "SalvadorGang", 0, 1);
 								_CONVERSATION_ADD_LINE(&uLocal_129, "RECSHAU", "RECSH_GOAW", 4, 0, 0, 0);
@@ -2337,7 +2337,7 @@ void func_71() // Position - 0x239F (9119)
 					{
 						if (MISC::GET_GAME_TIMER() - iLocal_128 > 12000)
 						{
-							if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+							if (!func_56())
 							{
 								_CONVERSATION_INITIALIZE_ACTOR(&uLocal_129, 3, iLocal_101[iLocal_123], "SalvadorGang", 0, 1);
 								_CONVERSATION_ADD_LINE(&uLocal_129, "RECSHAU", "RECSH_GOAW", 4, 0, 0, 0);
@@ -2479,7 +2479,7 @@ void func_71() // Position - 0x239F (9119)
 					
 						if (!bLocal_97)
 						{
-							if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+							if (!func_56())
 							{
 								_CONVERSATION_INITIALIZE_ACTOR(&uLocal_129, 3, iLocal_101[iLocal_123], "SalvadorGang", 0, 1);
 								_CONVERSATION_ADD_LINE(&uLocal_129, "RECSHAU", "RECSH_STASH", 4, 0, 0, 0);
@@ -2743,9 +2743,9 @@ void func_76() // Position - 0x2FFD (12285)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -2924,11 +2924,11 @@ BOOL func_88(int iParam0, int iParam1) // Position - 0x3360 (13152)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_89() // Position - 0x3398 (13208)
@@ -4218,7 +4218,7 @@ BOOL func_115(var uParam0, var uParam1, var uParam2, int iParam3, int iParam4, B
 		if (!Global_114162.f_9089)
 			return false;
 	
-		if (_IS_MISSION_REPEAT_ACTIVE(false))
+		if (func_28(false))
 			return false;
 	
 		if (func_105())

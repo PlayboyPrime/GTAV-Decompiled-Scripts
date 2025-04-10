@@ -299,7 +299,7 @@ void main() // Position - 0x0 (0)
 		if (!_IS_EXCLUSIVE_CONTENT_UNLOCKED())
 			SCRIPT::TERMINATE_THIS_THREAD();
 	
-		if (_IS_MISSION_REPEAT_ACTIVE(false))
+		if (func_80(false))
 			SCRIPT::TERMINATE_THIS_THREAD();
 	
 		if (func_79(14))
@@ -359,7 +359,7 @@ void func_1() // Position - 0xF8 (248)
 
 int func_2() // Position - 0x1C5 (453)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_80(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -1767,12 +1767,12 @@ void func_39(BOOL bParam0, BOOL bParam1) // Position - 0x1E04 (7684)
 
 BOOL func_40() // Position - 0x1E78 (7800)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_41() // Position - 0x1E86 (7814)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_42() // Position - 0x1E95 (7829)
@@ -2990,9 +2990,9 @@ BOOL func_79(int iParam0) // Position - 0x38B7 (14519)
 	return Global_44199 == iParam0;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x38C5 (14533)
+BOOL func_80(BOOL bParam0) // Position - 0x38C5 (14533)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);

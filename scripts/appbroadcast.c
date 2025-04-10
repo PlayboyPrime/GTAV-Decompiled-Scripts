@@ -138,13 +138,13 @@ void func_3() // Position - 0x14A (330)
 			if (Global_2696372)
 			{
 				NETWORK::NETWORK_OVERRIDE_SEND_RESTRICTIONS_ALL(false);
-				func_10(1080503477, _GET_LOBBY_SCRIPT_EVENT_BITS(true, true));
+				func_10(1080503477, func_11(true, true));
 				Global_2696372 = false;
 			}
 			else
 			{
 				NETWORK::NETWORK_OVERRIDE_SEND_RESTRICTIONS_ALL(true);
-				func_10(1793940769, _GET_LOBBY_SCRIPT_EVENT_BITS(true, true));
+				func_10(1793940769, func_11(true, true));
 				Global_2696372 = true;
 			}
 		
@@ -245,12 +245,12 @@ BOOL func_7(int iParam0) // Position - 0x2CB (715)
 
 BOOL func_8() // Position - 0x322 (802)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_9() // Position - 0x330 (816)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_10(int iParam0, int iParam1) // Position - 0x33F (831)
@@ -269,7 +269,7 @@ void func_10(int iParam0, int iParam1) // Position - 0x33F (831)
 	return;
 }
 
-int _GET_LOBBY_SCRIPT_EVENT_BITS(BOOL includeLocalPlayer, BOOL includeSpectators) // Position - 0x386 (902)
+int func_11(BOOL bParam0, BOOL bParam1) // Position - 0x386 (902)
 {
 	int address;
 	int i;
@@ -280,8 +280,8 @@ int _GET_LOBBY_SCRIPT_EVENT_BITS(BOOL includeLocalPlayer, BOOL includeSpectators
 		player = PLAYER::INT_TO_PLAYERINDEX(i);
 	
 		if (_NETWORK_IS_PLAYER_VALID(player, false, false))
-			if (player != PLAYER::PLAYER_ID() || includeLocalPlayer)
-				if (includeSpectators)
+			if (player != PLAYER::PLAYER_ID() || bParam0)
+				if (bParam1)
 					MISC::SET_BIT(&address, i);
 				else if (!func_12(player, 0))
 					MISC::SET_BIT(&address, i);

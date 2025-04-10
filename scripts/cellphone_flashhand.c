@@ -290,7 +290,7 @@ void main() // Position - 0x0 (0)
 		Global_21009 = 0.195f;
 		Global_21010 = 0.05f;
 	
-		if (MISC::IS_XBOX360_VERSION() || IS_XBOX_PLATFORM() || MISC::IS_PC_VERSION())
+		if (MISC::IS_XBOX360_VERSION() || func_158() || MISC::IS_PC_VERSION())
 		{
 			HUD::GET_HUD_COLOUR(HUD_COLOUR_GREEN, &iLocal_106, &iLocal_107, &iLocal_108, &uLocal_109);
 			func_157(Global_21064, "SET_SOFT_KEYS_COLOUR", 2f, SYSTEM::TO_FLOAT(iLocal_106), SYSTEM::TO_FLOAT(iLocal_107), SYSTEM::TO_FLOAT(iLocal_108), -1082130432);
@@ -722,7 +722,7 @@ void main() // Position - 0x0 (0)
 	
 		if (Global_21304 == 0)
 		{
-			if (Global_44199 != 15 || Global_8924 == 1 || _IS_MISSION_REPEAT_ACTIVE(false))
+			if (Global_44199 != 15 || Global_8924 == 1 || func_103(false))
 			{
 				if (!Global_21302)
 				{
@@ -740,7 +740,7 @@ void main() // Position - 0x0 (0)
 				Global_21304 = 1;
 			}
 		}
-		else if (Global_44199 == 15 && _IS_MISSION_REPEAT_ACTIVE(false) == false && Global_8924 == 0)
+		else if (Global_44199 == 15 && func_103(false) == false && Global_8924 == 0)
 		{
 			if (!Global_21302)
 			{
@@ -1604,7 +1604,7 @@ BOOL func_6(int iParam0) // Position - 0x211F (8479)
 
 BOOL func_7() // Position - 0x2176 (8566)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_8() // Position - 0x2184 (8580)
@@ -3943,7 +3943,7 @@ void func_50() // Position - 0x4194 (16788)
 
 BOOL func_51() // Position - 0x4726 (18214)
 {
-	if (IS_BIT_SET(Global_1668458, 0) || IS_BIT_SET(Global_1668458, 1))
+	if (IS_BIT_SET(Global_1668459, 0) || IS_BIT_SET(Global_1668459, 1))
 		return true;
 
 	return false;
@@ -4120,7 +4120,7 @@ void func_52() // Position - 0x4748 (18248)
 					
 						if (Global_21086 == 23)
 						{
-							MISC::SET_BIT(&Global_1668458, 0);
+							MISC::SET_BIT(&Global_1668459, 0);
 							return;
 						}
 					
@@ -4252,7 +4252,7 @@ void func_54(var uParam0) // Position - 0x4CE6 (19686)
 		if (!_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("HROBA_INGNG_BLK" /*The Darnell Inc. phone app is unavailable while working for another Boss.*/))
 			_DISPLAY_HELP_TEXT("HROBA_INGNG_BLK" /*The Darnell Inc. phone app is unavailable while working for another Boss.*/, -1);
 	}
-	else if (func_68(PLAYER::PLAYER_ID()) || func_64(PLAYER::PLAYER_ID()) || func_63() || func_61(PLAYER::PLAYER_ID()) || func_59() || func_77(false) || func_58() || Global_1057440 != -1 || Global_1845270[PLAYER::PLAYER_ID() /*892*/] == 5 || func_55(PLAYER::PLAYER_ID(), true, false) || Global_1983510)
+	else if (func_68(PLAYER::PLAYER_ID()) || func_64(PLAYER::PLAYER_ID()) || func_63() || func_61(PLAYER::PLAYER_ID()) || func_59() || func_77(false) || func_58() || Global_1057440 != -1 || Global_1845270[PLAYER::PLAYER_ID() /*892*/] == 5 || func_55(PLAYER::PLAYER_ID(), true, false) || Global_1983512)
 	{
 		*uParam0 = 1;
 	
@@ -5250,9 +5250,9 @@ BOOL func_102() // Position - 0x61D8 (25048)
 	return false;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x61F5 (25077)
+BOOL func_103(BOOL bParam0) // Position - 0x61F5 (25077)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -5298,7 +5298,7 @@ BOOL func_105() // Position - 0x62A7 (25255)
 
 BOOL func_106() // Position - 0x62CE (25294)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_107() // Position - 0x62DD (25309)
@@ -5595,7 +5595,7 @@ BOOL func_119() // Position - 0x68C9 (26825)
 
 BOOL func_120() // Position - 0x68F5 (26869)
 {
-	return IS_BIT_SET(Global_1668458, 4);
+	return IS_BIT_SET(Global_1668459, 4);
 }
 
 void func_121() // Position - 0x6903 (26883)
@@ -5999,7 +5999,7 @@ void func_131() // Position - 0x7142 (28994)
 		func_42(1, "CELL_1" /*Texts*/, 1, "appTextMessage", 2, 1, 1, 0, 0);
 		func_42(4, "CELL_23" /*Check List*/, 2, "appChecklist", 39, 1, 1, 0, 0);
 	
-		if (Global_44199 == 15 && _IS_MISSION_REPEAT_ACTIVE(false) == false && Global_8924 == 0)
+		if (Global_44199 == 15 && func_103(false) == false && Global_8924 == 0)
 		{
 			func_42(20, "CELL_32" /*Quick Save*/, 3, "appSettings", 43, 1, 1, 0, 0);
 			Global_21304 = 0;
@@ -6158,7 +6158,7 @@ BOOL func_135() // Position - 0x7808 (30728)
 
 int func_136() // Position - 0x7813 (30739)
 {
-	if (IS_PLAYSTATION_PLATFORM())
+	if (func_137())
 	{
 		if (!NETWORK::NETWORK_IS_NP_AVAILABLE())
 		{
@@ -6179,7 +6179,7 @@ int func_136() // Position - 0x7813 (30739)
 	return 1;
 }
 
-BOOL IS_PLAYSTATION_PLATFORM() // Position - 0x785B (30811)
+BOOL func_137() // Position - 0x785B (30811)
 {
 	return MISC::IS_ORBIS_VERSION() || MISC::IS_PROSPERO_VERSION();
 }
@@ -6734,7 +6734,7 @@ void func_157(int iParam0, char* sParam1, float fParam2, int iParam3, int iParam
 	return;
 }
 
-BOOL IS_XBOX_PLATFORM() // Position - 0x82BC (33468)
+BOOL func_158() // Position - 0x82BC (33468)
 {
 	return MISC::IS_DURANGO_VERSION() || MISC::IS_SCARLETT_VERSION();
 }

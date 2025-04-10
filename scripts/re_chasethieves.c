@@ -1100,9 +1100,9 @@ void func_7() // Position - 0x716 (1814)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -1358,11 +1358,11 @@ BOOL func_25(int iParam0, int iParam1) // Position - 0xC01 (3073)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_26() // Position - 0xC39 (3129)
@@ -1789,7 +1789,7 @@ void func_39() // Position - 0x12DB (4827)
 				func_225(0);
 				func_224();
 			
-				if (!PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), true) && !_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && STREAMING::HAS_ANIM_DICT_LOADED(sLocal_225) && STREAMING::HAS_MODEL_LOADED(joaat("prop_ld_wallet_01")))
+				if (!PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), true) && !func_223() && STREAMING::HAS_ANIM_DICT_LOADED(sLocal_225) && STREAMING::HAS_MODEL_LOADED(joaat("prop_ld_wallet_01")))
 				{
 					if (iLocal_589 == -1)
 						iLocal_589 = MISC::GET_GAME_TIMER();
@@ -1941,7 +1941,7 @@ void func_39() // Position - 0x12DB (4827)
 			case 3:
 				if (iLocal_72 == 0)
 				{
-					if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_RESP", 4, 0, 0, 0))
+					if (!func_223() && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_RESP", 4, 0, 0, 0))
 						iLocal_72 = 1;
 				}
 				else
@@ -3499,7 +3499,7 @@ void func_96() // Position - 0x33C9 (13257)
 		PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(pedLocal_85, false, false);
 		TASK::OPEN_SEQUENCE_TASK(&iLocal_184);
 	
-		if (_IS_NULL_VECTOR(uLocal_180) || !_DOES_ENTITY_EXIST_AND_IS_ALIVE(veLocal_179))
+		if (func_97(uLocal_180) || !_DOES_ENTITY_EXIST_AND_IS_ALIVE(veLocal_179))
 		{
 			TASK::TASK_START_SCENARIO_IN_PLACE(0, "WORLD_HUMAN_STAND_MOBILE", 0, true);
 		}
@@ -3517,7 +3517,7 @@ void func_96() // Position - 0x33C9 (13257)
 	return;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x3468 (13416)
+BOOL func_97(float fParam0, var uParam1, var uParam2) // Position - 0x3468 (13416)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -32093,7 +32093,7 @@ void func_222(BOOL bParam0) // Position - 0x22215 (139797)
 	return;
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x22254 (139860)
+BOOL func_223() // Position - 0x22254 (139860)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -32192,7 +32192,7 @@ void func_227(BOOL bParam0, BOOL bParam1) // Position - 0x22384 (140164)
 
 BOOL func_228() // Position - 0x223F8 (140280)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_229(int iParam0) // Position - 0x22406 (140294)
@@ -32217,7 +32217,7 @@ BOOL func_229(int iParam0) // Position - 0x22406 (140294)
 
 BOOL func_230() // Position - 0x2245D (140381)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_231(int iParam0) // Position - 0x2246C (140396)
@@ -32502,7 +32502,7 @@ void func_244() // Position - 0x229A5 (141733)
 				break;
 		
 			case 1:
-				if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+				if (!func_223())
 				{
 					func_231(0);
 					iLocal_77 = iLocal_77 + 1;
@@ -32568,7 +32568,7 @@ void func_247() // Position - 0x22B52 (142162)
 	{
 		if (iLocal_66 == 1)
 		{
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && SYSTEM::TIMERA() > 8000 && ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), pedLocal_85, 12f, 12f, 5f, false, false, 0))
+			if (!func_223() && SYSTEM::TIMERA() > 8000 && ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), pedLocal_85, 12f, 12f, 5f, false, false, 0))
 			{
 				TASK::OPEN_SEQUENCE_TASK(&iLocal_184);
 				TASK::TASK_LOOK_AT_ENTITY(0, PLAYER::PLAYER_PED_ID(), -1, SLF_WHILE_NOT_IN_FOV, 2);
@@ -32884,7 +32884,7 @@ void func_256() // Position - 0x230E0 (143584)
 
 	if (iLocal_70 == 1)
 	{
-		if (iLocal_196 == 0 && !_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && func_104(&uLocal_246, "RECHAAU", "RECHA_TK", "RECHA_TK_1", 4, 0, 0))
+		if (iLocal_196 == 0 && !func_223() && func_104(&uLocal_246, "RECHAAU", "RECHA_TK", "RECHA_TK_1", 4, 0, 0))
 			iLocal_196 = 1;
 	
 		if (_DOES_ENTITY_EXIST_AND_IS_ALIVE(pedLocal_85) && !ENTITY::IS_ENTITY_PLAYING_ANIM(pedLocal_85, sLocal_587, "pickup_low", 3))
@@ -32978,7 +32978,7 @@ void func_258() // Position - 0x23321 (144161)
 	
 		if (iLocal_191 == 0)
 		{
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_HLP", 4, 0, 0, 0))
+			if (!func_223() && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_HLP", 4, 0, 0, 0))
 			{
 				SYSTEM::SETTIMERA(0);
 				iLocal_191 = 1;
@@ -32988,7 +32988,7 @@ void func_258() // Position - 0x23321 (144161)
 		{
 			func_264(blLocal_172, pedLocal_80, fLocal_588, 1061158912, false);
 		
-			if (iLocal_71 == 0 && _DOES_ENTITY_EXIST_AND_IS_ALIVE(PLAYER::PLAYER_PED_ID()) && !_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && _DOES_ENTITY_EXIST_AND_IS_ALIVE(pedLocal_90) && func_263(PLAYER::PLAYER_PED_ID(), pedLocal_90, true) < 30f && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_SPOT", 4, 0, 0, 0))
+			if (iLocal_71 == 0 && _DOES_ENTITY_EXIST_AND_IS_ALIVE(PLAYER::PLAYER_PED_ID()) && !func_223() && _DOES_ENTITY_EXIST_AND_IS_ALIVE(pedLocal_90) && func_263(PLAYER::PLAYER_PED_ID(), pedLocal_90, true) < 30f && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_SPOT", 4, 0, 0, 0))
 				iLocal_71 = 1;
 		}
 	
@@ -33039,7 +33039,7 @@ void func_260() // Position - 0x234C6 (144582)
 		switch (iLocal_75)
 		{
 			case 0:
-				if (iLocal_195 == 0 && !_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), pedLocal_85, 40f, 40f, 40f, false, false, 0) && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_GET", 4, 0, 0, 0))
+				if (iLocal_195 == 0 && !func_223() && ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), pedLocal_85, 40f, 40f, 40f, false, false, 0) && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_GET", 4, 0, 0, 0))
 					iLocal_195 = 1;
 			
 				if (TASK::GET_SCRIPT_TASK_STATUS(pedLocal_85, SCRIPT_TASK_PLAY_ANIM) == 7 && TASK::GET_SCRIPT_TASK_STATUS(pedLocal_85, SCRIPT_TASK_PERFORM_SEQUENCE) == 7)
@@ -33052,7 +33052,7 @@ void func_260() // Position - 0x234C6 (144582)
 				break;
 		
 			case 1:
-				if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && MISC::GET_GAME_TIMER() - iLocal_76 > 1000 && ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), pedLocal_85, 20f, 20f, 20f, false, false, 0) && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_PCA", 4, 0, 0, 0))
+				if (!func_223() && MISC::GET_GAME_TIMER() - iLocal_76 > 1000 && ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), pedLocal_85, 20f, 20f, 20f, false, false, 0) && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_PCA", 4, 0, 0, 0))
 				{
 					iLocal_76 = MISC::GET_GAME_TIMER();
 					iLocal_218 = 2;
@@ -33061,7 +33061,7 @@ void func_260() // Position - 0x234C6 (144582)
 				break;
 		
 			case 2:
-				if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && MISC::GET_GAME_TIMER() - iLocal_76 > 5000 && ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), pedLocal_85, 20f, 20f, 20f, false, false, 0) && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_PCB", 4, 0, 0, 0))
+				if (!func_223() && MISC::GET_GAME_TIMER() - iLocal_76 > 5000 && ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), pedLocal_85, 20f, 20f, 20f, false, false, 0) && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_PCB", 4, 0, 0, 0))
 				{
 					iLocal_76 = MISC::GET_GAME_TIMER();
 					iLocal_218 = 3;
@@ -33070,7 +33070,7 @@ void func_260() // Position - 0x234C6 (144582)
 				break;
 		
 			case 3:
-				if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && MISC::GET_GAME_TIMER() - iLocal_76 > 6000 && ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), pedLocal_85, 20f, 20f, 20f, false, false, 0) && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_PCC", 4, 0, 0, 0))
+				if (!func_223() && MISC::GET_GAME_TIMER() - iLocal_76 > 6000 && ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), pedLocal_85, 20f, 20f, 20f, false, false, 0) && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_PCC", 4, 0, 0, 0))
 				{
 					iLocal_76 = MISC::GET_GAME_TIMER();
 					iLocal_218 = 4;
@@ -33079,7 +33079,7 @@ void func_260() // Position - 0x234C6 (144582)
 				break;
 		
 			case 4:
-				if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && MISC::GET_GAME_TIMER() - iLocal_76 > 6000 && ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), pedLocal_85, 15f, 15f, 15f, false, false, 0) && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_PCD", 4, 0, 0, 0))
+				if (!func_223() && MISC::GET_GAME_TIMER() - iLocal_76 > 6000 && ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), pedLocal_85, 15f, 15f, 15f, false, false, 0) && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_PCD", 4, 0, 0, 0))
 				{
 					iLocal_218 = 5;
 					iLocal_75 = iLocal_75 + 1;
@@ -33087,17 +33087,17 @@ void func_260() // Position - 0x234C6 (144582)
 				break;
 		
 			case 5:
-				if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+				if (!func_223())
 					iLocal_75 = 100;
 				break;
 		
 			case 6:
-				if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_SRP", 4, 0, 0, 0))
+				if (!func_223() && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_SRP", 4, 0, 0, 0))
 					iLocal_75 = iLocal_75 + 1;
 				break;
 		
 			case 7:
-				if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_GO", 4, 0, 0, 0))
+				if (!func_223() && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_GO", 4, 0, 0, 0))
 				{
 					func_231(0);
 					iLocal_75 = 100;
@@ -33107,7 +33107,7 @@ void func_260() // Position - 0x234C6 (144582)
 			case 8:
 				iLocal_190 = 1;
 			
-				if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_INT", 4, 0, 0, 0))
+				if (!func_223() && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_INT", 4, 0, 0, 0))
 				{
 					TASK::TASK_TURN_PED_TO_FACE_ENTITY(pedLocal_85, PLAYER::PLAYER_PED_ID(), 0);
 					iLocal_75 = iLocal_75 + 1;
@@ -33115,7 +33115,7 @@ void func_260() // Position - 0x234C6 (144582)
 				break;
 		
 			case 9:
-				if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_RES", 4, 0, 0, 0))
+				if (!func_223() && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_RES", 4, 0, 0, 0))
 				{
 					iLocal_76 = MISC::GET_GAME_TIMER();
 					iLocal_75 = iLocal_218;
@@ -33319,7 +33319,7 @@ void func_265() // Position - 0x23B06 (146182)
 			if (iLocal_74 == -1)
 				iLocal_74 = MISC::GET_GAME_TIMER();
 		
-			if (iLocal_73 < 4 && MISC::GET_GAME_TIMER() - iLocal_74 > 10000 && _DOES_ENTITY_EXIST_AND_IS_ALIVE(PLAYER::PLAYER_PED_ID()) && !PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false) && !_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && !PED::IS_PED_INJURED(pedLocal_80) && func_263(PLAYER::PLAYER_PED_ID(), pedLocal_80, true) < 40f && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_YELL", 4, 0, 0, 0))
+			if (iLocal_73 < 4 && MISC::GET_GAME_TIMER() - iLocal_74 > 10000 && _DOES_ENTITY_EXIST_AND_IS_ALIVE(PLAYER::PLAYER_PED_ID()) && !PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false) && !func_223() && !PED::IS_PED_INJURED(pedLocal_80) && func_263(PLAYER::PLAYER_PED_ID(), pedLocal_80, true) < 40f && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_YELL", 4, 0, 0, 0))
 			{
 				iLocal_73 = iLocal_73 + 1;
 				iLocal_74 = MISC::GET_GAME_TIMER();
@@ -33336,7 +33336,7 @@ void func_265() // Position - 0x23B06 (146182)
 
 void func_266() // Position - 0x23D2C (146732)
 {
-	if (iLocal_189 == 1 && MISC::GET_GAME_TIMER() - iLocal_78 > 8000 && !_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && _DOES_ENTITY_EXIST_AND_IS_ALIVE(pedLocal_80) && _DOES_ENTITY_EXIST_AND_IS_ALIVE(pedLocal_85) && ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), pedLocal_80, 20f, 20f, 20f, false, true, 0) && !ENTITY::IS_ENTITY_AT_ENTITY(pedLocal_80, pedLocal_85, 30f, 30f, 30f, false, true, 0) && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_taunt", 4, 0, 0, 0))
+	if (iLocal_189 == 1 && MISC::GET_GAME_TIMER() - iLocal_78 > 8000 && !func_223() && _DOES_ENTITY_EXIST_AND_IS_ALIVE(pedLocal_80) && _DOES_ENTITY_EXIST_AND_IS_ALIVE(pedLocal_85) && ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), pedLocal_80, 20f, 20f, 20f, false, true, 0) && !ENTITY::IS_ENTITY_AT_ENTITY(pedLocal_80, pedLocal_85, 30f, 30f, 30f, false, true, 0) && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_taunt", 4, 0, 0, 0))
 		iLocal_78 = MISC::GET_GAME_TIMER();
 
 	return;
@@ -33977,7 +33977,7 @@ BOOL func_283(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x24B05 (1
 		}
 	}
 
-	if (Global_1957267)
+	if (Global_1957269)
 		return false;
 
 	if (func_284(PLAYER::PLAYER_ID()))
@@ -34117,7 +34117,7 @@ void func_292(var uParam0, Ped pedParam1, Vector3 vParam2, var uParam3, var uPar
 	eScriptLookAtFlags flags;
 	int num;
 
-	if (Global_1582037 == 1)
+	if (Global_1582038 == 1)
 		return;
 
 	if (ENTITY::IS_ENTITY_DEAD(pedParam1, false))
@@ -34651,7 +34651,7 @@ void func_312() // Position - 0x258D2 (153810)
 	
 		if (_DOES_ENTITY_EXIST_AND_IS_ALIVE(pedLocal_85))
 		{
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_STO", 4, 0, 0, 0) || func_263(PLAYER::PLAYER_PED_ID(), pedLocal_85, true) < 20f)
+			if (!func_223() && _CONVERSATION_ADD_LINE(&uLocal_246, "RECHAAU", "RECHA_STO", 4, 0, 0, 0) || func_263(PLAYER::PLAYER_PED_ID(), pedLocal_85, true) < 20f)
 			{
 				TASK::OPEN_SEQUENCE_TASK(&iLocal_184);
 				TASK::TASK_PLAY_ANIM(0, sLocal_581, sLocal_582, 1090519040, -4f, 8200, 0, 0, false, false, false);
@@ -36138,7 +36138,7 @@ void func_344() // Position - 0x2815A (164186)
 	PED::SET_PED_CONFIG_FLAG(pedLocal_85, 285, true);
 	AUDIO::SET_AMBIENT_VOICE_NAME(pedLocal_85, "S_M_Y_BusBoy_01_WHITE_MINI_01");
 
-	if (!_IS_NULL_VECTOR(uLocal_180))
+	if (!func_97(uLocal_180))
 	{
 		veLocal_179 = VEHICLE::CREATE_VEHICLE(hLocal_223, uLocal_180, fLocal_183, true, true, false);
 		VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(veLocal_179, 1084227584);
@@ -36970,7 +36970,7 @@ BOOL func_368(var uParam0, var uParam1, var uParam2, int iParam3, int iParam4, B
 		if (!Global_114162.f_9089)
 			return false;
 	
-		if (_IS_MISSION_REPEAT_ACTIVE(false))
+		if (func_407(false))
 			return false;
 	
 		if (func_340())
@@ -37758,9 +37758,9 @@ BOOL func_406() // Position - 0x2A833 (174131)
 	return false;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x2A877 (174199)
+BOOL func_407(BOOL bParam0) // Position - 0x2A877 (174199)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -38836,7 +38836,7 @@ void func_433() // Position - 0x2B7FD (178173)
 
 int func_434() // Position - 0x2BCBB (179387)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_407(false))
 		return 0;
 
 	if (Global_101752.f_8)

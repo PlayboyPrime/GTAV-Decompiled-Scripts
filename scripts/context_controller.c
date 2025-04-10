@@ -767,11 +767,11 @@ BOOL func_20(int iParam0, int iParam1) // Position - 0x9A2 (2466)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 BOOL func_21(BOOL bParam0) // Position - 0x9DA (2522)
@@ -1114,7 +1114,7 @@ void func_35() // Position - 0xE8D (3725)
 		unk[0 /*13*/].f_11 = Global_1835511[11];
 		unk[0 /*13*/].f_12 = Global_1835511[12];
 	
-		if (MISC::IS_XBOX360_VERSION() || IS_XBOX_PLATFORM())
+		if (MISC::IS_XBOX360_VERSION() || func_40())
 		{
 			if (!bLocal_126)
 				if (NETWORK::NETWORK_GAMERTAG_FROM_HANDLE_START(&unk[0 /*13*/]))
@@ -1134,7 +1134,7 @@ void func_35() // Position - 0xE8D (3725)
 				}
 			}
 		}
-		else if (MISC::IS_PS3_VERSION() || IS_PLAYSTATION_PLATFORM())
+		else if (MISC::IS_PS3_VERSION() || func_37())
 		{
 			if (IS_GAMER_HANDLE_VALID(unk[0 /*13*/]))
 			{
@@ -1191,7 +1191,7 @@ BOOL IS_GAMER_HANDLE_VALID(var uParam0, var uParam1, var uParam2, var uParam3, v
 	return NETWORK::NETWORK_IS_HANDLE_VALID(&uParam0, 13);
 }
 
-BOOL IS_PLAYSTATION_PLATFORM() // Position - 0x10B7 (4279)
+BOOL func_37() // Position - 0x10B7 (4279)
 {
 	return MISC::IS_ORBIS_VERSION() || MISC::IS_PROSPERO_VERSION();
 }
@@ -1213,7 +1213,7 @@ int func_39() // Position - 0x10E3 (4323)
 	return num;
 }
 
-BOOL IS_XBOX_PLATFORM() // Position - 0x10F0 (4336)
+BOOL func_40() // Position - 0x10F0 (4336)
 {
 	return MISC::IS_DURANGO_VERSION() || MISC::IS_SCARLETT_VERSION();
 }

@@ -690,7 +690,7 @@ void main() // Position - 0x0 (0)
 				break;
 		
 			case 6:
-				if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+				if (!func_23())
 				{
 					_CONVERSATION_ADD_LINE(&uLocal_122, "OJTXAUD", "OJTX_DIS_JOB", 8, 0, 0, 0);
 					num = 7;
@@ -698,7 +698,7 @@ void main() // Position - 0x0 (0)
 				break;
 		
 			case 7:
-				if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+				if (!func_23())
 				{
 					TEXT_LABEL_ASSIGN_STRING(&unk7, "OJTX_ACCEPT", 24);
 					func_24(&unk7, true);
@@ -711,7 +711,7 @@ void main() // Position - 0x0 (0)
 			case 8:
 				if (func_72())
 				{
-					if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+					if (!func_23())
 					{
 						bLocal_112 = false;
 					
@@ -736,7 +736,7 @@ void main() // Position - 0x0 (0)
 				}
 				else
 				{
-					if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+					if (func_23())
 						func_20();
 				
 					bLocal_112 = false;
@@ -834,11 +834,11 @@ void func_2() // Position - 0x9EB (2539)
 {
 	var textLabel;
 
-	if (MISC::IS_XBOX360_VERSION() || IS_XBOX_PLATFORM())
+	if (MISC::IS_XBOX360_VERSION() || func_4())
 	{
 		NETWORK::NETWORK_SET_RICH_PRESENCE(StackVal, 0, 0, 0);
 	}
-	else if (MISC::IS_PS3_VERSION() || IS_PLAYSTATION_PLATFORM() || MISC::IS_PC_VERSION())
+	else if (MISC::IS_PS3_VERSION() || func_3() || MISC::IS_PC_VERSION())
 	{
 		TEXT_LABEL_ASSIGN_STRING(&textLabel, "PRESENCE_0_STR" /*Playing story*/, 24);
 		NETWORK::NETWORK_SET_RICH_PRESENCE_STRING(0, &textLabel);
@@ -847,12 +847,12 @@ void func_2() // Position - 0x9EB (2539)
 	return;
 }
 
-BOOL IS_PLAYSTATION_PLATFORM() // Position - 0xA37 (2615)
+BOOL func_3() // Position - 0xA37 (2615)
 {
 	return MISC::IS_ORBIS_VERSION() || MISC::IS_PROSPERO_VERSION();
 }
 
-BOOL IS_XBOX_PLATFORM() // Position - 0xA4D (2637)
+BOOL func_4() // Position - 0xA4D (2637)
 {
 	return MISC::IS_DURANGO_VERSION() || MISC::IS_SCARLETT_VERSION();
 }
@@ -890,7 +890,7 @@ void func_7() // Position - 0xAAE (2734)
 
 int func_8() // Position - 0xABB (2747)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_9(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -903,9 +903,9 @@ int func_8() // Position - 0xABB (2747)
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0xB06 (2822)
+BOOL func_9(BOOL bParam0) // Position - 0xB06 (2822)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -1289,7 +1289,7 @@ Hash func_22() // Position - 0x12E8 (4840)
 	return joaat("taxi");
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x12F5 (4853)
+BOOL func_23() // Position - 0x12F5 (4853)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -1898,9 +1898,9 @@ void func_38() // Position - 0x1ED3 (7891)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -2132,11 +2132,11 @@ BOOL func_54(int iParam0, int iParam1) // Position - 0x2373 (9075)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_55(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x23AB (9131)

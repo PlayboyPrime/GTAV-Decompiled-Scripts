@@ -189,7 +189,7 @@ void func_3(int iParam0) // Position - 0x2F0 (752)
 
 int func_4() // Position - 0x302 (770)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_5(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -202,9 +202,9 @@ int func_4() // Position - 0x302 (770)
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x34D (845)
+BOOL func_5(BOOL bParam0) // Position - 0x34D (845)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -589,7 +589,7 @@ BOOL func_13(Hash hParam0, BOOL bParam1, int iParam2) // Position - 0xC26 (3110)
 
 	if (hParam0 == joaat("hotknife") || hParam0 == joaat("carbonrs") || hParam0 == joaat("khamelion"))
 	{
-		if (IS_XBOX_PLATFORM() || MISC::IS_PC_VERSION() || IS_PLAYSTATION_PLATFORM())
+		if (func_18() || MISC::IS_PC_VERSION() || func_17())
 		{
 		}
 		else if (!func_20())
@@ -684,7 +684,7 @@ BOOL func_16(Hash hParam0, int iParam1) // Position - 0xE8A (3722)
 		return true;
 
 	if (!Global_2707807 && iParam1 >= 0 && iParam1 <= 547)
-		if (IS_BIT_SET(Global_1586542[iParam1 /*143*/].f_104, 2))
+		if (IS_BIT_SET(Global_1586543[iParam1 /*143*/].f_104, 2))
 			return true;
 
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();
@@ -777,12 +777,12 @@ BOOL func_16(Hash hParam0, int iParam1) // Position - 0xE8A (3722)
 	return false;
 }
 
-BOOL IS_PLAYSTATION_PLATFORM() // Position - 0x10B7 (4279)
+BOOL func_17() // Position - 0x10B7 (4279)
 {
 	return MISC::IS_ORBIS_VERSION() || MISC::IS_PROSPERO_VERSION();
 }
 
-BOOL IS_XBOX_PLATFORM() // Position - 0x10CD (4301)
+BOOL func_18() // Position - 0x10CD (4301)
 {
 	return MISC::IS_DURANGO_VERSION() || MISC::IS_SCARLETT_VERSION();
 }
@@ -5445,7 +5445,7 @@ BOOL func_96(Vehicle veParam0) // Position - 0x825F (33375)
 			if (DECORATOR::DECOR_EXIST_ON(veParam0, "Player_Vehicle"))
 				if (DECORATOR::DECOR_GET_INT(veParam0, "Player_Vehicle") == NETWORK::NETWORK_HASH_FROM_PLAYER_HANDLE(PLAYER::PLAYER_ID()))
 					if (func_98() != -1 && func_98() < 547)
-						if (!func_97(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1586542[func_98() /*143*/].f_66)
+						if (!func_97(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1586543[func_98() /*143*/].f_66)
 							return true;
 					else
 						return true;

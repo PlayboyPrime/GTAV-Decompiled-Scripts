@@ -490,7 +490,7 @@ void func_4(int iParam0, BOOL bParam1) // Position - 0x557 (1367)
 
 int func_5() // Position - 0x68B (1675)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_6(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -503,9 +503,9 @@ int func_5() // Position - 0x68B (1675)
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x6D6 (1750)
+BOOL func_6(BOOL bParam0) // Position - 0x6D6 (1750)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -30638,11 +30638,11 @@ void func_171() // Position - 0x21DCF (138703)
 {
 	var textLabel;
 
-	if (MISC::IS_XBOX360_VERSION() || IS_XBOX_PLATFORM())
+	if (MISC::IS_XBOX360_VERSION() || func_173())
 	{
 		NETWORK::NETWORK_SET_RICH_PRESENCE(StackVal, 0, 0, 0);
 	}
-	else if (MISC::IS_PS3_VERSION() || IS_PLAYSTATION_PLATFORM() || MISC::IS_PC_VERSION())
+	else if (MISC::IS_PS3_VERSION() || func_172() || MISC::IS_PC_VERSION())
 	{
 		TEXT_LABEL_ASSIGN_STRING(&textLabel, "PRESENCE_0_STR" /*Playing story*/, 24);
 		NETWORK::NETWORK_SET_RICH_PRESENCE_STRING(0, &textLabel);
@@ -30651,12 +30651,12 @@ void func_171() // Position - 0x21DCF (138703)
 	return;
 }
 
-BOOL IS_PLAYSTATION_PLATFORM() // Position - 0x21E1C (138780)
+BOOL func_172() // Position - 0x21E1C (138780)
 {
 	return MISC::IS_ORBIS_VERSION() || MISC::IS_PROSPERO_VERSION();
 }
 
-BOOL IS_XBOX_PLATFORM() // Position - 0x21E32 (138802)
+BOOL func_173() // Position - 0x21E32 (138802)
 {
 	return MISC::IS_DURANGO_VERSION() || MISC::IS_SCARLETT_VERSION();
 }
@@ -34529,7 +34529,7 @@ BOOL func_244(Hash hParam0, BOOL bParam1, int iParam2) // Position - 0x285B4 (16
 
 	if (hParam0 == joaat("hotknife") || hParam0 == joaat("carbonrs") || hParam0 == joaat("khamelion"))
 	{
-		if (IS_XBOX_PLATFORM() || MISC::IS_PC_VERSION() || IS_PLAYSTATION_PLATFORM())
+		if (func_173() || MISC::IS_PC_VERSION() || func_172())
 		{
 		}
 		else if (!func_249())
@@ -34624,7 +34624,7 @@ BOOL func_247(Hash hParam0, int iParam1) // Position - 0x2881C (165916)
 		return true;
 
 	if (!Global_2707807 && iParam1 >= 0 && iParam1 <= 547)
-		if (IS_BIT_SET(Global_1586542[iParam1 /*143*/].f_104, 2))
+		if (IS_BIT_SET(Global_1586543[iParam1 /*143*/].f_104, 2))
 			return true;
 
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();
@@ -36525,7 +36525,7 @@ void func_288(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uP
 		
 			if (flag)
 			{
-				if (!_IS_NULL_VECTOR(fParam11))
+				if (!func_289(fParam11))
 				{
 					if (VEHICLE::IS_VEHICLE_DRIVEABLE(playersLastVehicle, false))
 					{
@@ -36628,7 +36628,7 @@ void func_288(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uP
 	return;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x2B946 (178502)
+BOOL func_289(float fParam0, var uParam1, var uParam2) // Position - 0x2B946 (178502)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -36796,7 +36796,7 @@ BOOL func_295(int iParam0, int iParam1, int iParam2) // Position - 0x2BDDE (1796
 
 	func_300();
 
-	if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+	if (func_299())
 	{
 		func_297();
 		num = 0;
@@ -36858,7 +36858,7 @@ void func_298() // Position - 0x2BEE5 (179941)
 	return;
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x2BF3C (180028)
+BOOL func_299() // Position - 0x2BF3C (180028)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -37143,7 +37143,7 @@ void func_314(BOOL bParam0, BOOL bParam1) // Position - 0x2C42D (181293)
 
 BOOL func_315() // Position - 0x2C4A1 (181409)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_316(int iParam0) // Position - 0x2C4AF (181423)
@@ -37168,7 +37168,7 @@ BOOL func_316(int iParam0) // Position - 0x2C4AF (181423)
 
 BOOL func_317() // Position - 0x2C506 (181510)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_318(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10) // Position - 0x2C515 (181525)

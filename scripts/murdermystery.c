@@ -190,7 +190,7 @@ void func_1() // Position - 0x15D (349)
 		case 2:
 		case 3:
 			if (!func_77(iLocal_83))
-				if (func_74() && !func_73() && func_72() && !_IS_MISSION_REPEAT_ACTIVE(false))
+				if (func_74() && !func_73() && func_72() && !func_71(false))
 					if (iLocal_85 != 0)
 						if (GRAPHICS::IS_TRACKED_POINT_VISIBLE(iLocal_85))
 							func_69(iLocal_83, true, false);
@@ -201,7 +201,7 @@ void func_1() // Position - 0x15D (349)
 				PED::SET_PED_CAPSULE(pedLocal_76, 0.75f);
 		
 			if (!func_77(4))
-				if (func_74() && func_72() && !_IS_MISSION_REPEAT_ACTIVE(false))
+				if (func_74() && func_72() && !func_71(false))
 					func_69(4, true, false);
 			break;
 	
@@ -209,7 +209,7 @@ void func_1() // Position - 0x15D (349)
 			if (func_64())
 				func_35();
 		
-			if (!func_77(5) && iLocal_71 == 4 && func_72() && !_IS_MISSION_REPEAT_ACTIVE(false))
+			if (!func_77(5) && iLocal_71 == 4 && func_72() && !func_71(false))
 				func_69(5, true, false);
 			break;
 	
@@ -242,7 +242,7 @@ void func_1() // Position - 0x15D (349)
 			
 				if (func_22(6))
 				{
-					if (!func_77(6) && func_72() && !_IS_MISSION_REPEAT_ACTIVE(false))
+					if (!func_77(6) && func_72() && !func_71(false))
 					{
 						func_7(134, 4, true);
 						func_69(6, true, false);
@@ -708,7 +708,7 @@ void func_25(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uPa
 		
 			if (flag)
 			{
-				if (!_IS_NULL_VECTOR(fParam11))
+				if (!func_26(fParam11))
 				{
 					if (VEHICLE::IS_VEHICLE_DRIVEABLE(playersLastVehicle, false))
 					{
@@ -811,7 +811,7 @@ void func_25(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uPa
 	return;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0xF05 (3845)
+BOOL func_26(float fParam0, var uParam1, var uParam2) // Position - 0xF05 (3845)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -2801,7 +2801,7 @@ struct<5> func_40(int iParam0) // Position - 0x1875 (6261)
 			break;
 	}
 
-	_IS_NULL_VECTOR(unk);
+	func_26(unk);
 	return unk;
 }
 
@@ -3553,12 +3553,12 @@ void func_58(BOOL bParam0, BOOL bParam1) // Position - 0x5572 (21874)
 
 BOOL func_59() // Position - 0x55E6 (21990)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_60() // Position - 0x55F4 (22004)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_61() // Position - 0x5603 (22019)
@@ -3606,7 +3606,7 @@ BOOL func_64() // Position - 0x5668 (22120)
 	if (PLAYER::GET_PLAYER_WANTED_LEVEL(PLAYER::PLAYER_ID()) > 0 && iLocal_70 == 0)
 		return false;
 
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_71(false))
 		return false;
 
 	if (func_66())
@@ -3690,7 +3690,7 @@ void func_69(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x57BC (2246
 
 int func_70() // Position - 0x5800 (22528)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_71(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -3703,9 +3703,9 @@ int func_70() // Position - 0x5800 (22528)
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x584B (22603)
+BOOL func_71(BOOL bParam0) // Position - 0x584B (22603)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);

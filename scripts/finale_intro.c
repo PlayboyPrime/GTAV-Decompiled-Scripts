@@ -83,7 +83,7 @@ void func_2(BOOL bParam0, BOOL bParam1) // Position - 0x8E (142)
 
 	if (bParam0)
 	{
-		if (_IS_MISSION_REPEAT_ACTIVE(false) && Global_79811.f_1 == 1 && func_4(Global_79811))
+		if (func_5(false) && Global_79811.f_1 == 1 && func_4(Global_79811))
 		{
 		}
 		else
@@ -92,7 +92,7 @@ void func_2(BOOL bParam0, BOOL bParam1) // Position - 0x8E (142)
 		}
 	}
 
-	if (Global_114162.f_9089 || _IS_MISSION_REPEAT_ACTIVE(false))
+	if (Global_114162.f_9089 || func_5(false))
 	{
 		num = func_3();
 		num2 = Global_92440[num /*5*/];
@@ -154,9 +154,9 @@ BOOL func_4(int iParam0) // Position - 0x190 (400)
 	return false;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x1CE (462)
+BOOL func_5(BOOL bParam0) // Position - 0x1CE (462)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -3301,7 +3301,7 @@ BOOL func_47(Vehicle veParam0) // Position - 0x4DA3 (19875)
 			if (DECORATOR::DECOR_EXIST_ON(veParam0, "Player_Vehicle"))
 				if (DECORATOR::DECOR_GET_INT(veParam0, "Player_Vehicle") == NETWORK::NETWORK_HASH_FROM_PLAYER_HANDLE(PLAYER::PLAYER_ID()))
 					if (func_49() != -1 && func_49() < 547)
-						if (!func_48(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1586542[func_49() /*143*/].f_66)
+						if (!func_48(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1586543[func_49() /*143*/].f_66)
 							return true;
 					else
 						return true;
@@ -3898,7 +3898,7 @@ BOOL func_67(Hash hParam0, BOOL bParam1, int iParam2) // Position - 0x5D8A (2394
 
 	if (hParam0 == joaat("hotknife") || hParam0 == joaat("carbonrs") || hParam0 == joaat("khamelion"))
 	{
-		if (IS_XBOX_PLATFORM() || MISC::IS_PC_VERSION() || IS_PLAYSTATION_PLATFORM())
+		if (func_72() || MISC::IS_PC_VERSION() || func_71())
 		{
 		}
 		else if (!func_74())
@@ -3993,7 +3993,7 @@ BOOL func_70(Hash hParam0, int iParam1) // Position - 0x5FF2 (24562)
 		return true;
 
 	if (!Global_2707807 && iParam1 >= 0 && iParam1 <= 547)
-		if (IS_BIT_SET(Global_1586542[iParam1 /*143*/].f_104, 2))
+		if (IS_BIT_SET(Global_1586543[iParam1 /*143*/].f_104, 2))
 			return true;
 
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();
@@ -4086,12 +4086,12 @@ BOOL func_70(Hash hParam0, int iParam1) // Position - 0x5FF2 (24562)
 	return false;
 }
 
-BOOL IS_PLAYSTATION_PLATFORM() // Position - 0x621F (25119)
+BOOL func_71() // Position - 0x621F (25119)
 {
 	return MISC::IS_ORBIS_VERSION() || MISC::IS_PROSPERO_VERSION();
 }
 
-BOOL IS_XBOX_PLATFORM() // Position - 0x6235 (25141)
+BOOL func_72() // Position - 0x6235 (25141)
 {
 	return MISC::IS_DURANGO_VERSION() || MISC::IS_SCARLETT_VERSION();
 }
@@ -4882,7 +4882,7 @@ void func_102(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uP
 		
 			if (flag)
 			{
-				if (!_IS_NULL_VECTOR(fParam11))
+				if (!func_103(fParam11))
 				{
 					if (VEHICLE::IS_VEHICLE_DRIVEABLE(playersLastVehicle, false))
 					{
@@ -4985,7 +4985,7 @@ void func_102(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uP
 	return;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x74B1 (29873)
+BOOL func_103(float fParam0, var uParam1, var uParam2) // Position - 0x74B1 (29873)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -31435,7 +31435,7 @@ void func_224() // Position - 0x22D9B (142747)
 	if (SCRIPT::HAS_SCRIPT_LOADED("buddyDeathResponse"))
 		SYSTEM::START_NEW_SCRIPT("buddyDeathResponse", DEFAULT);
 
-	if (Global_114162.f_9089 || _IS_MISSION_REPEAT_ACTIVE(false))
+	if (Global_114162.f_9089 || func_5(false))
 	{
 		if (!func_231())
 		{

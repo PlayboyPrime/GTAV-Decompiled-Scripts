@@ -867,13 +867,13 @@ void main() // Position - 0x0 (0)
 								else
 									str = "RESNA_THX2";
 							
-								if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+								if (!func_91())
 									if (_CONVERSATION_ADD_LINE(&uLocal_174, sLocal_385, str, 8, 0, 0, 0))
 										iLocal_383 = iLocal_383 + 1;
 								break;
 						
 							case 3:
-								if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+								if (!func_91())
 									if (_CONVERSATION_ADD_LINE(&uLocal_174, sLocal_385, "RESNA_THX3", 8, 0, 0, 0))
 										iLocal_383 = iLocal_383 + 1;
 								break;
@@ -1105,7 +1105,7 @@ void main() // Position - 0x0 (0)
 								bLocal_365 = true;
 							}
 						}
-						else if (MISC::GET_GAME_TIMER() - iLocal_117 > 2000 && !_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+						else if (MISC::GET_GAME_TIMER() - iLocal_117 > 2000 && !func_91())
 						{
 							if (!bLocal_97)
 							{
@@ -1298,7 +1298,7 @@ BOOL func_2() // Position - 0x14F3 (5363)
 				break;
 		
 			case 1:
-				if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+				if (!func_91())
 				{
 					TASK::OPEN_SEQUENCE_TASK(&taskSequenceId);
 				
@@ -1576,7 +1576,7 @@ void func_15() // Position - 0x1C7D (7293)
 
 int func_16() // Position - 0x1C8A (7306)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_17(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -1589,9 +1589,9 @@ int func_16() // Position - 0x1C8A (7306)
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x1CD5 (7381)
+BOOL func_17(BOOL bParam0) // Position - 0x1CD5 (7381)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -2643,7 +2643,7 @@ void func_49() // Position - 0x315A (12634)
 					}
 				}
 			
-				if (!_IS_NULL_VECTOR(uLocal_414[i /*7*/]))
+				if (!func_50(uLocal_414[i /*7*/]))
 				{
 					if (!ENTITY::IS_ENTITY_OCCLUDED(iLocal_154[i]))
 					{
@@ -2688,7 +2688,7 @@ void func_49() // Position - 0x315A (12634)
 	return;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x34F8 (13560)
+BOOL func_50(float fParam0, var uParam1, var uParam2) // Position - 0x34F8 (13560)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -3052,7 +3052,7 @@ void func_64() // Position - 0x3BE2 (15330)
 				switch (iLocal_386)
 				{
 					case 0:
-						if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+						if (!func_91())
 							iLocal_386 = iLocal_386 + 1;
 						break;
 				
@@ -3063,7 +3063,7 @@ void func_64() // Position - 0x3BE2 (15330)
 						break;
 				
 					case 2:
-						if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+						if (!func_91())
 							if (func_12())
 								if (func_85("RESNA_RESP", 0))
 									iLocal_386 = iLocal_386 + 1;
@@ -3079,7 +3079,7 @@ void func_64() // Position - 0x3BE2 (15330)
 						break;
 				
 					case 4:
-						if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+						if (!func_91())
 							func_6(1);
 						break;
 				}
@@ -3097,7 +3097,7 @@ void func_64() // Position - 0x3BE2 (15330)
 							break;
 					
 						case 1:
-							if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+							if (!func_91())
 								iLocal_386 = iLocal_386 + 1;
 							break;
 					
@@ -3122,7 +3122,7 @@ void func_64() // Position - 0x3BE2 (15330)
 							break;
 					
 						case 5:
-							if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+							if (!func_91())
 								func_6(2);
 							break;
 					}
@@ -3157,7 +3157,7 @@ void func_64() // Position - 0x3BE2 (15330)
 							break;
 					
 						case 4:
-							if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+							if (!func_91())
 								func_6(5);
 							break;
 					}
@@ -3176,7 +3176,7 @@ void func_64() // Position - 0x3BE2 (15330)
 							break;
 					
 						case 1:
-							if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+							if (!func_91())
 								if (func_12())
 									if (func_85("RESNA_B5", 0))
 										iLocal_386 = iLocal_386 + 1;
@@ -3188,7 +3188,7 @@ void func_64() // Position - 0x3BE2 (15330)
 							break;
 					
 						case 3:
-							if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+							if (!func_91())
 								func_6(5);
 							break;
 					}
@@ -3217,7 +3217,7 @@ void func_64() // Position - 0x3BE2 (15330)
 							break;
 					
 						case 3:
-							if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+							if (!func_91())
 								func_6(5);
 							break;
 					}
@@ -3257,7 +3257,7 @@ void func_64() // Position - 0x3BE2 (15330)
 						break;
 				
 					case 2:
-						if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+						if (!func_91())
 						{
 							iLocal_387 = MISC::GET_GAME_TIMER();
 							iLocal_386 = iLocal_386 + 1;
@@ -3297,7 +3297,7 @@ void func_64() // Position - 0x3BE2 (15330)
 						break;
 				
 					case 1:
-						if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+						if (!func_91())
 							if (func_12())
 								if (func_85("RESNA_B3", 0))
 									iLocal_386 = iLocal_386 + 1;
@@ -3310,7 +3310,7 @@ void func_64() // Position - 0x3BE2 (15330)
 						break;
 				
 					case 3:
-						if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+						if (!func_91())
 							if (func_12())
 								if (func_85("RESNA_B3B", 0))
 									iLocal_386 = iLocal_386 + 1;
@@ -3323,7 +3323,7 @@ void func_64() // Position - 0x3BE2 (15330)
 						break;
 				
 					case 5:
-						if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+						if (!func_91())
 							if (func_12())
 								if (func_85("RESNA_B3C", 0))
 									iLocal_386 = iLocal_386 + 1;
@@ -3336,14 +3336,14 @@ void func_64() // Position - 0x3BE2 (15330)
 						break;
 				
 					case 7:
-						if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+						if (!func_91())
 							iLocal_386 = iLocal_386 + 1;
 						break;
 				
 					case 8:
 						if (func_12())
 							if (_GET_CURRENT_PLAYER_CHARACTER() == CHAR_TREVOR)
-								if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+								if (!func_91())
 									if (func_85("RESNA_B3D", 0))
 										iLocal_386 = iLocal_386 + 1;
 							else if (_GET_CURRENT_PLAYER_CHARACTER() == CHAR_MICHAEL)
@@ -3354,7 +3354,7 @@ void func_64() // Position - 0x3BE2 (15330)
 						break;
 				
 					case 9:
-						if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+						if (!func_91())
 							func_6(6);
 						break;
 				}
@@ -3405,7 +3405,7 @@ void func_64() // Position - 0x3BE2 (15330)
 				break;
 		}
 	}
-	else if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+	else if (func_91())
 	{
 		if (bLocal_374 && !bLocal_375)
 		{
@@ -3544,7 +3544,7 @@ BOOL func_67(char* sParam0, BOOL bParam1) // Position - 0x48AB (18603)
 		{
 			if (iLocal_382 == -1)
 			{
-				if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+				if (!func_91())
 					iLocal_382 = MISC::GET_GAME_TIMER();
 			}
 			else if (MISC::GET_GAME_TIMER() - iLocal_382 > 500)
@@ -3772,9 +3772,9 @@ void func_70() // Position - 0x4C8F (19599)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -3947,11 +3947,11 @@ BOOL func_81(int iParam0, int iParam1) // Position - 0x4FD9 (20441)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_82() // Position - 0x5011 (20497)
@@ -4117,7 +4117,7 @@ BOOL func_90() // Position - 0x5299 (21145)
 	return Global_33344;
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x52A4 (21156)
+BOOL func_91() // Position - 0x52A4 (21156)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -5383,7 +5383,7 @@ BOOL func_134(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x6AB9 (27
 		}
 	}
 
-	if (Global_1957267)
+	if (Global_1957269)
 		return false;
 
 	if (func_135(PLAYER::PLAYER_ID()))
@@ -5543,7 +5543,7 @@ void func_144(var uParam0, Vehicle veParam1, Vector3 vParam2, var uParam3, var u
 	eScriptLookAtFlags flags;
 	int num;
 
-	if (Global_1582037 == 1)
+	if (Global_1582038 == 1)
 		return;
 
 	if (ENTITY::IS_ENTITY_DEAD(veParam1, false))
@@ -8048,7 +8048,7 @@ void func_206() // Position - 0xAA01 (43521)
 						else
 						{
 							if (!bLocal_78)
-								if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(iLocal_116) && SYSTEM::VDIST(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), ENTITY::GET_ENTITY_COORDS(veLocal_153, false)) < 30f && !_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && PED::GET_SYNCHRONIZED_SCENE_PHASE(iLocal_116) > 0.1f && PED::GET_SYNCHRONIZED_SCENE_PHASE(iLocal_116) < 0.4f)
+								if (PED::IS_SYNCHRONIZED_SCENE_RUNNING(iLocal_116) && SYSTEM::VDIST(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), ENTITY::GET_ENTITY_COORDS(veLocal_153, false)) < 30f && !func_91() && PED::GET_SYNCHRONIZED_SCENE_PHASE(iLocal_116) > 0.1f && PED::GET_SYNCHRONIZED_SCENE_PHASE(iLocal_116) < 0.4f)
 									if (_CONVERSATION_ADD_LINE(&uLocal_174, sLocal_385, "RESNA_HELP", 4, func_208(), 0, 0))
 										bLocal_78 = true;
 						
@@ -8297,7 +8297,7 @@ BOOL func_217(var uParam0, var uParam1, var uParam2, int iParam3, int iParam4, B
 		if (!Global_114162.f_9089)
 			return false;
 	
-		if (_IS_MISSION_REPEAT_ACTIVE(false))
+		if (func_17(false))
 			return false;
 	
 		if (func_186())

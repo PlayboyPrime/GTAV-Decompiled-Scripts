@@ -332,12 +332,12 @@ void func_9(BOOL bParam0, BOOL bParam1) // Position - 0x5AD (1453)
 
 BOOL func_10() // Position - 0x621 (1569)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_11() // Position - 0x62F (1583)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 BOOL func_12(int iParam0) // Position - 0x63E (1598)

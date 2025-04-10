@@ -1295,7 +1295,7 @@ BOOL func_55(var uParam0, int* piParam1, var uParam2, BOOL bParam3, BOOL bParam4
 						windowTitle = "FMMC_KEY_TIP14N" /*Yacht Name*/;
 					}
 				
-					if (IS_XBOX_PLATFORM())
+					if (func_59())
 						maxInputLength2 = 21;
 					else
 						maxInputLength2 = 20;
@@ -1359,7 +1359,7 @@ BOOL func_55(var uParam0, int* piParam1, var uParam2, BOOL bParam3, BOOL bParam4
 					else
 						windowTitle = "FMMC_KEY_TIP15F" /*Forbidden Text. Try again (MAX 15 characters):*/;
 				
-					if (MISC::IS_XBOX360_VERSION() || IS_XBOX_PLATFORM())
+					if (MISC::IS_XBOX360_VERSION() || func_59())
 						maxInputLength2 = 16;
 					else
 						maxInputLength2 = 15;
@@ -1386,7 +1386,7 @@ BOOL func_55(var uParam0, int* piParam1, var uParam2, BOOL bParam3, BOOL bParam4
 					if (bParam23)
 						windowTitle = "ACID_NAME_TIP5s";
 				
-					if (MISC::IS_XBOX360_VERSION() || IS_XBOX_PLATFORM())
+					if (MISC::IS_XBOX360_VERSION() || func_59())
 						maxInputLength2 = 16;
 					else
 						maxInputLength2 = 15;
@@ -1413,7 +1413,7 @@ BOOL func_55(var uParam0, int* piParam1, var uParam2, BOOL bParam3, BOOL bParam4
 					if (bParam23)
 						windowTitle = "LAB_NAME_TIP5s";
 				
-					if (MISC::IS_XBOX360_VERSION() || IS_XBOX_PLATFORM())
+					if (MISC::IS_XBOX360_VERSION() || func_59())
 						maxInputLength2 = 16;
 					else
 						maxInputLength2 = 15;
@@ -1441,7 +1441,7 @@ BOOL func_55(var uParam0, int* piParam1, var uParam2, BOOL bParam3, BOOL bParam4
 					else
 						windowTitle = "CSTM_TLTIP_TIP4" /*Forbidden Text. Try again (MAX 15 characters):*/;
 				
-					if (MISC::IS_XBOX360_VERSION() || IS_XBOX_PLATFORM())
+					if (MISC::IS_XBOX360_VERSION() || func_59())
 						maxInputLength2 = 16;
 					else
 						maxInputLength2 = 15;
@@ -1685,7 +1685,7 @@ BOOL func_55(var uParam0, int* piParam1, var uParam2, BOOL bParam3, BOOL bParam4
 						SOCIALCLUB::SC_PROFANITY_CHECK_STRING(MISC::GET_ONSCREEN_KEYBOARD_RESULT(), piParam1);
 					}
 				
-					if (IS_XBOX_PLATFORM())
+					if (func_59())
 					{
 						if (!NETWORK::NETWORK_IS_SIGNED_ONLINE() || func_57() == false || func_56() == 1)
 						{
@@ -1758,7 +1758,7 @@ BOOL func_58() // Position - 0x1B92 (7058)
 	return Global_2696947;
 }
 
-BOOL IS_XBOX_PLATFORM() // Position - 0x1B9E (7070)
+BOOL func_59() // Position - 0x1B9E (7070)
 {
 	return MISC::IS_DURANGO_VERSION() || MISC::IS_SCARLETT_VERSION();
 }
@@ -6039,7 +6039,7 @@ void func_202(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 
 void func_203(int iParam0) // Position - 0x7E3E (32318)
 {
-	Global_1675263.f_1163 = iParam0;
+	Global_1675264.f_1163 = iParam0;
 	return;
 }
 
@@ -6128,7 +6128,7 @@ void func_207(BOOL bParam0, BOOL bParam1) // Position - 0x7F33 (32563)
 
 BOOL func_208() // Position - 0x7FA7 (32679)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_209(int iParam0) // Position - 0x7FB5 (32693)
@@ -6153,7 +6153,7 @@ BOOL func_209(int iParam0) // Position - 0x7FB5 (32693)
 
 BOOL func_210() // Position - 0x800E (32782)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 float func_211(int iParam0) // Position - 0x801D (32797)
@@ -6723,11 +6723,11 @@ BOOL func_233(int iParam0, int iParam1) // Position - 0x8AEA (35562)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_234(var uParam0, int iParam1) // Position - 0x8B22 (35618)

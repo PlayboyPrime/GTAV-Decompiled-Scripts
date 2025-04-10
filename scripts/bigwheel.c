@@ -869,7 +869,7 @@ void func_9(var uParam0, var uParam1, BOOL bParam2, BOOL bParam3, int iParam4, i
 	CAM::SET_CAM_ACTIVE(*uParam1, true);
 	CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 
-	if (!bParam3 && uParam0->f_20 > 0 && !_IS_NULL_VECTOR(uParam0->f_1[1 /*3*/]))
+	if (!bParam3 && uParam0->f_20 > 0 && !func_10(uParam0->f_1[1 /*3*/]))
 	{
 		vector = { uParam0->f_1[1 /*3*/] };
 	
@@ -889,7 +889,7 @@ void func_9(var uParam0, var uParam1, BOOL bParam2, BOOL bParam3, int iParam4, i
 	return;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0xCFA (3322)
+BOOL func_10(float fParam0, var uParam1, var uParam2) // Position - 0xCFA (3322)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -3764,7 +3764,7 @@ void func_53(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uPa
 		
 			if (flag)
 			{
-				if (!_IS_NULL_VECTOR(fParam11))
+				if (!func_10(fParam11))
 				{
 					if (VEHICLE::IS_VEHICLE_DRIVEABLE(playersLastVehicle, false))
 					{
@@ -33199,12 +33199,12 @@ void func_208(BOOL bParam0, BOOL bParam1) // Position - 0x26222 (156194)
 
 BOOL func_209() // Position - 0x26296 (156310)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_210() // Position - 0x262A4 (156324)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 BOOL func_211(int iParam0) // Position - 0x262B3 (156339)
@@ -33504,7 +33504,7 @@ void func_215() // Position - 0x2653B (156987)
 
 int func_216() // Position - 0x269F9 (158201)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_217(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -33517,9 +33517,9 @@ int func_216() // Position - 0x269F9 (158201)
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x26A44 (158276)
+BOOL func_217(BOOL bParam0) // Position - 0x26A44 (158276)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);

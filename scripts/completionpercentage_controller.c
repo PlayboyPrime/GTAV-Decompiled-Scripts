@@ -31103,7 +31103,7 @@ void func_153() // Position - 0x2302D (143405)
 
 int func_154() // Position - 0x234EB (144619)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_155(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -31116,9 +31116,9 @@ int func_154() // Position - 0x234EB (144619)
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x23536 (144694)
+BOOL func_155(BOOL bParam0) // Position - 0x23536 (144694)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);

@@ -960,7 +960,7 @@ int func_2(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int 
 	int num2;
 	int num3;
 
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_11(false))
 		return 0;
 
 	if (iParam4 < 0)
@@ -1158,9 +1158,9 @@ int func_10(int iParam0) // Position - 0xFE1 (4065)
 	return 7;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x104B (4171)
+BOOL func_11(BOOL bParam0) // Position - 0x104B (4171)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -29691,7 +29691,7 @@ void func_190() // Position - 0x1EE11 (126481)
 
 int func_191() // Position - 0x1EEF6 (126710)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_11(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -29887,7 +29887,7 @@ int func_201(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 {
 	int num;
 
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_11(false))
 		return 0;
 
 	if (iParam4 < 0)
@@ -32921,7 +32921,7 @@ int func_266(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 	int num;
 	int i;
 
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_11(false))
 		return 0;
 
 	if (iParam5 < 0)
@@ -33419,7 +33419,7 @@ void func_295(int iParam0) // Position - 0x253DD (152541)
 {
 	int num;
 
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_11(false))
 		return;
 
 	num = iParam0;
@@ -34354,7 +34354,7 @@ int func_322(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 	int num;
 	int address;
 
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_11(false))
 		return 0;
 
 	if (iParam8 < 0)
@@ -34498,7 +34498,7 @@ int func_325(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 	int num;
 	int address;
 
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_11(false))
 		return 0;
 
 	if (iParam5 < 0)
@@ -34641,7 +34641,7 @@ void func_329() // Position - 0x270CE (159950)
 	}
 	else
 	{
-		!_IS_MISSION_REPEAT_ACTIVE(false);
+		!func_11(false);
 	}
 
 	return;
@@ -34988,7 +34988,7 @@ void func_352() // Position - 0x2771B (161563)
 	int outValue;
 	var outValue2;
 
-	if (!_IS_MISSION_REPEAT_ACTIVE(false))
+	if (!func_11(false))
 	{
 		STATS::STAT_GET_FLOAT(joaat("SP0_DIST_RUNNING"), &outValue2, -1);
 		Global_114162.f_2367.f_539.f_2355[0] = outValue2;
@@ -36767,7 +36767,7 @@ void func_423() // Position - 0x29B89 (170889)
 {
 	func_13(546458037);
 
-	if (!_IS_MISSION_REPEAT_ACTIVE(false))
+	if (!func_11(false))
 		func_417("AM_H_CHOP" /*Chop is now at Franklin's house. Franklin can interact with Chop at ~BLIP_CHOP~*/, 0, 3000, -1, 10000, 2, 0, 0, 0);
 
 	func_258(63, 1);
@@ -37084,7 +37084,7 @@ int func_428(int iParam0, char* sParam1, int iParam2, int iParam3, char* sParam4
 		}
 	}
 
-	if (Global_1973529 != -1 && iParam0 == Global_1973529)
+	if (Global_1973531 != -1 && iParam0 == Global_1973531)
 		num2 = 1;
 
 	func_429(iParam0, sParam1, num2, func_434(PLAYER::PLAYER_ID()));
@@ -37104,18 +37104,18 @@ void func_429(int iParam0, char* sParam1, BOOL bParam2, var uParam3) // Position
 	num.f_3 = 0;
 	num.f_4 = bParam2;
 	num.f_5 = uParam3;
-	num.f_6 = Global_1973512.f_7;
-	num.f_7 = Global_1973512.f_8;
-	num.f_8 = Global_1973512.f_9;
-	num.f_9 = Global_1973512.f_10;
-	num.f_10 = Global_1973512.f_11;
-	num.f_11 = Global_1973512.f_12;
-	num.f_12 = Global_1973512.f_13;
-	num.f_13 = Global_1973512.f_14;
+	num.f_6 = Global_1973514.f_7;
+	num.f_7 = Global_1973514.f_8;
+	num.f_8 = Global_1973514.f_9;
+	num.f_9 = Global_1973514.f_10;
+	num.f_10 = Global_1973514.f_11;
+	num.f_11 = Global_1973514.f_12;
+	num.f_12 = Global_1973514.f_13;
+	num.f_13 = Global_1973514.f_14;
 	STATS::PLAYSTATS_NPC_PHONE(&num);
 
 	if (bParam2)
-		Global_1973529 = -1;
+		Global_1973531 = -1;
 
 	return;
 }
@@ -37725,7 +37725,7 @@ void func_451() // Position - 0x2AED3 (175827)
 		func_13(546458037);
 		func_13(1674644829);
 	
-		if (!_IS_MISSION_REPEAT_ACTIVE(false))
+		if (!func_11(false))
 		{
 			func_417("AM_H_CHOP" /*Chop is now at Franklin's house. Franklin can interact with Chop at ~BLIP_CHOP~*/, 0, 3000, -1, 10000, 2, 0, 0, 0);
 			func_201(1674644829, 1, 2, 19, 10000, 10000, -1, 0, -1, 524288, 1);
@@ -37746,7 +37746,7 @@ void func_451() // Position - 0x2AED3 (175827)
 
 	Global_114162.f_20122.f_264 = 1;
 
-	if (!_IS_MISSION_REPEAT_ACTIVE(false))
+	if (!func_11(false))
 		func_417("AM_H_HILLS" /*Franklin has been moved into a new house in Vinewood Hills at ~BLIP_SAFEHOUSE~ This location can now be used to save progress and change clothes.*/, 2, 3000, -1, 10000, 2, 0, 0, 0);
 
 	return;
@@ -58459,7 +58459,7 @@ BOOL func_556(Vehicle veParam0) // Position - 0x4EF29 (323369)
 			if (DECORATOR::DECOR_EXIST_ON(veParam0, "Player_Vehicle"))
 				if (DECORATOR::DECOR_GET_INT(veParam0, "Player_Vehicle") == NETWORK::NETWORK_HASH_FROM_PLAYER_HANDLE(PLAYER::PLAYER_ID()))
 					if (func_558() != -1 && func_558() < 547)
-						if (!func_557(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1586542[func_558() /*143*/].f_66)
+						if (!func_557(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1586543[func_558() /*143*/].f_66)
 							return true;
 					else
 						return true;

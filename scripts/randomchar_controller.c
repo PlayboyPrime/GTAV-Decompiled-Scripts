@@ -2231,7 +2231,7 @@ int func_72(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int
 {
 	int num;
 
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_74(false))
 		return 0;
 
 	if (iParam4 < 0)
@@ -2308,9 +2308,9 @@ int func_73(int iParam0) // Position - 0x384D (14413)
 	return 7;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x38B7 (14519)
+BOOL func_74(BOOL bParam0) // Position - 0x38B7 (14519)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);

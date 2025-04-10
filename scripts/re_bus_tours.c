@@ -731,7 +731,7 @@ void func_2() // Position - 0x252 (594)
 	{
 		if (bLocal_535)
 		{
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (!func_91())
 			{
 				if (iLocal_506 < 14)
 					func_90(&uLocal_341, "BUSTOAU", "BUSTO_RAMB", uLocal_512[iLocal_506], 4, 0, 0);
@@ -985,9 +985,9 @@ void func_5() // Position - 0x6DA (1754)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -1243,11 +1243,11 @@ BOOL func_23(int iParam0, int iParam1) // Position - 0xBC5 (3013)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_24() // Position - 0xBFD (3069)
@@ -1876,7 +1876,7 @@ void func_43(BOOL bParam0, BOOL bParam1) // Position - 0x1796 (6038)
 
 BOOL func_44() // Position - 0x180A (6154)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_45(int iParam0) // Position - 0x1818 (6168)
@@ -1901,7 +1901,7 @@ BOOL func_45(int iParam0) // Position - 0x1818 (6168)
 
 BOOL func_46() // Position - 0x186F (6255)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_47() // Position - 0x187E (6270)
@@ -2012,7 +2012,7 @@ void func_47() // Position - 0x187E (6270)
 			
 				if (iLocal_311 - iLocal_312 > 5000)
 				{
-					if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+					if (!func_91())
 					{
 						bLocal_315 = false;
 						iLocal_312 = MISC::GET_GAME_TIMER();
@@ -2202,7 +2202,7 @@ void func_51() // Position - 0x1FFA (8186)
 
 int func_52() // Position - 0x2007 (8199)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_53(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -2215,9 +2215,9 @@ int func_52() // Position - 0x2007 (8199)
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x2052 (8274)
+BOOL func_53(BOOL bParam0) // Position - 0x2052 (8274)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -3380,7 +3380,7 @@ void func_87() // Position - 0x3605 (13829)
 		
 			if (iLocal_311 - iLocal_312 > 2000)
 			{
-				if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+				if (!func_91())
 				{
 					iLocal_312 = MISC::GET_GAME_TIMER();
 					iLocal_313 = 2;
@@ -3389,7 +3389,7 @@ void func_87() // Position - 0x3605 (13829)
 			break;
 	
 		case 2:
-			if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (func_91())
 				GRAPHICS::DRAW_DEBUG_TEXT_2D("IS_ANY_CONVERSATION_ONGOING_OR_QUEUED", 0.02f, 0.2f, 0f, 0, 0, 255, 255);
 		
 			if (bLocal_537)
@@ -3430,7 +3430,7 @@ void func_87() // Position - 0x3605 (13829)
 			
 				if (iLocal_311 - iLocal_312 > 10000)
 				{
-					if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+					if (!func_91())
 					{
 						if (func_90(&uLocal_341, "BUSTOAU", "BUSTO_RAMB", uLocal_512[iLocal_506], 4, 0, 0))
 						{
@@ -3535,7 +3535,7 @@ BOOL func_90(var uParam0, char* sParam1, char* sParam2, char* sParam3, int iPara
 	return func_4(sParam2, iParam4, false);
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x3A73 (14963)
+BOOL func_91() // Position - 0x3A73 (14963)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -6748,7 +6748,7 @@ BOOL func_174() // Position - 0x84C6 (33990)
 	}
 
 	if (CLOCK::GET_CLOCK_HOURS() >= 19 || CLOCK::GET_CLOCK_HOURS() <= 6)
-		if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+		if (!func_91())
 			if (_CONVERSATION_ADD_LINE(&uLocal_341, "BUSTOAU", "BUSTO_TIME", 4, 0, 0, 0))
 				return true;
 
@@ -6783,7 +6783,7 @@ void func_176() // Position - 0x8652 (34386)
 	
 		if (iLocal_311 - iLocal_312 > 10000)
 		{
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (!func_91())
 				_CONVERSATION_ADD_LINE(&uLocal_341, "BUSTOAU", "BUSTO_STREET", 4, 0, 0, 0);
 		
 			iLocal_312 = MISC::GET_GAME_TIMER();
@@ -7511,7 +7511,7 @@ BOOL func_203(var uParam0, var uParam1, var uParam2, int iParam3, int iParam4, B
 		if (!Global_114162.f_9089)
 			return false;
 	
-		if (_IS_MISSION_REPEAT_ACTIVE(false))
+		if (func_53(false))
 			return false;
 	
 		if (func_158())

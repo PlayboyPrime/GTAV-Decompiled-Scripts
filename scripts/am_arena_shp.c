@@ -2559,19 +2559,19 @@ void func_36() // Position - 0x4C9D (19613)
 
 	for (i = 0; i < 6; i = i + 1)
 	{
-		Global_1982763[i] = 0;
-		TEXT_LABEL_ASSIGN_STRING(&Global_1982763.f_7[i /*4*/], "", 16);
+		Global_1982765[i] = 0;
+		TEXT_LABEL_ASSIGN_STRING(&Global_1982765.f_7[i /*4*/], "", 16);
 	}
 
-	Global_1982763.f_32 = 0;
+	Global_1982765.f_32 = 0;
 
 	for (i = 0; i < 3; i = i + 1)
 	{
-		TEXT_LABEL_ASSIGN_INT(&Global_1982763.f_33[i /*8*/], 0, 32);
-		TEXT_LABEL_ASSIGN_STRING(&Global_1982763.f_58[i /*4*/], "", 16);
+		TEXT_LABEL_ASSIGN_INT(&Global_1982765.f_33[i /*8*/], 0, 32);
+		TEXT_LABEL_ASSIGN_STRING(&Global_1982765.f_58[i /*4*/], "", 16);
 	}
 
-	Global_1982763.f_71 = 0;
+	Global_1982765.f_71 = 0;
 	return;
 }
 
@@ -2582,7 +2582,7 @@ void func_37(int iParam0, Hash hParam1, char* sParam2, char* sParam3) // Positio
 
 	TEXT_LABEL_ASSIGN_STRING(&unk, sParam2, 32);
 	TEXT_LABEL_ASSIGN_STRING(&unk9, sParam3, 32);
-	MONEY::_NETWORK_EARN_GENERIC(iParam0, hParam1, &unk, &unk9, &Global_1982763);
+	MONEY::_NETWORK_EARN_GENERIC(iParam0, hParam1, &unk, &unk9, &Global_1982765);
 	return;
 }
 
@@ -2590,12 +2590,12 @@ void func_38(int iParam0, Hash hParam1, BOOL bParam2) // Position - 0x4D2F (1975
 {
 	if (bParam2)
 		func_36();
-	else if (Global_1982763.f_32 == 6)
+	else if (Global_1982765.f_32 == 6)
 		return;
 
-	Global_1982763[Global_1982763.f_32] = hParam1;
-	TEXT_LABEL_ASSIGN_STRING(&Global_1982763.f_7[Global_1982763.f_32 /*4*/], func_39(iParam0), 16);
-	Global_1982763.f_32 = Global_1982763.f_32 + 1;
+	Global_1982765[Global_1982765.f_32] = hParam1;
+	TEXT_LABEL_ASSIGN_STRING(&Global_1982765.f_7[Global_1982765.f_32 /*4*/], func_39(iParam0), 16);
+	Global_1982765.f_32 = Global_1982765.f_32 + 1;
 	return;
 }
 
@@ -2812,7 +2812,7 @@ void func_48(int iParam0, BOOL bParam1, BOOL bParam2, Hash hParam3, Hash hParam4
 
 	TEXT_LABEL_ASSIGN_STRING(&unk, sParam5, 32);
 	TEXT_LABEL_ASSIGN_STRING(&unk9, sParam6, 32);
-	MONEY::_NETWORK_SPENT_GENERIC(iParam0, bParam1, bParam2, hParam3, hParam4, &unk, &unk9, &Global_1982763);
+	MONEY::_NETWORK_SPENT_GENERIC(iParam0, bParam1, bParam2, hParam3, hParam4, &unk, &unk9, &Global_1982765);
 
 	if (bParam7)
 		if (_NETSHOPPING_SHOULD_USE_TRANSACTION_SYSTEM())
@@ -2985,12 +2985,12 @@ void func_58(int iParam0, char* sParam1, BOOL bParam2) // Position - 0x543F (215
 {
 	if (bParam2)
 		func_36();
-	else if (Global_1982763.f_71 == 3)
+	else if (Global_1982765.f_71 == 3)
 		return;
 
-	TEXT_LABEL_ASSIGN_STRING(&Global_1982763.f_33[Global_1982763.f_71 /*8*/], sParam1, 32);
-	TEXT_LABEL_ASSIGN_STRING(&Global_1982763.f_58[Global_1982763.f_71 /*4*/], func_39(iParam0), 16);
-	Global_1982763.f_71 = Global_1982763.f_71 + 1;
+	TEXT_LABEL_ASSIGN_STRING(&Global_1982765.f_33[Global_1982765.f_71 /*8*/], sParam1, 32);
+	TEXT_LABEL_ASSIGN_STRING(&Global_1982765.f_58[Global_1982765.f_71 /*4*/], func_39(iParam0), 16);
+	Global_1982765.f_71 = Global_1982765.f_71 + 1;
 	return;
 }
 
@@ -3024,26 +3024,26 @@ void func_61(int iParam0, Hash hParam1, BOOL bParam2) // Position - 0x5515 (2178
 	if (_NETSHOPPING_SHOULD_USE_TRANSACTION_SYSTEM() && bParam2)
 	{
 		_STOPWATCH_DESTROY(&Global_1836302);
-		_STOPWATCH_INITIALIZE(&Global_1836302, false, false);
+		func_62(&Global_1836302, false, false);
 		Global_1836304 = 5000;
 	}
 
 	return;
 }
 
-void _STOPWATCH_INITIALIZE(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateTime) // Position - 0x5564 (21860)
+void func_62(var uParam0, BOOL bParam1, BOOL bParam2) // Position - 0x5564 (21860)
 {
-	if (pStopwatch->f_1 == 0)
+	if (uParam0->f_1 == 0)
 	{
-		if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !useLocalTimer)
-			if (!useAccurateTime)
-				*pStopwatch = NETWORK::GET_NETWORK_TIME();
+		if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !bParam1)
+			if (!bParam2)
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			else
-				*pStopwatch = NETWORK::GET_NETWORK_TIME_ACCURATE();
+				*uParam0 = NETWORK::GET_NETWORK_TIME_ACCURATE();
 		else
-			*pStopwatch = MISC::GET_GAME_TIMER();
+			*uParam0 = MISC::GET_GAME_TIMER();
 	
-		pStopwatch->f_1 = 1;
+		uParam0->f_1 = 1;
 	}
 
 	return;

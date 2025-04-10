@@ -40,14 +40,14 @@ void main() // Position - 0x0 (0)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		if (IS_BIT_SET(Global_1686553, 1))
+		if (IS_BIT_SET(Global_1686554, 1))
 		{
 			func_25();
 		}
 		else
 		{
 			NETWORK::NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, false, -1);
-			_NETWORK_ENSURE_SCRIPT_IS_NETWORKED(0, -1, false);
+			func_22(0, -1, false);
 			MISC::SET_THIS_SCRIPT_CAN_BE_PAUSED(false);
 			iLocal_20 = 1;
 		}
@@ -240,13 +240,13 @@ BOOL func_6(float fParam0, var uParam1, var uParam2, float fParam3, var uParam4,
 
 BOOL func_7(var uParam0) // Position - 0x45E (1118)
 {
-	if (*uParam0 == 123 || _IS_NULL_VECTOR(uParam0->f_1) || uParam0->f_4 == 0)
+	if (*uParam0 == 123 || func_8(uParam0->f_1) || uParam0->f_4 == 0)
 		return false;
 
 	return true;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x490 (1168)
+BOOL func_8(float fParam0, var uParam1, var uParam2) // Position - 0x490 (1168)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -435,14 +435,14 @@ BOOL func_21() // Position - 0x6F8 (1784)
 	return Global_2684721.f_695;
 }
 
-int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTerminate) // Position - 0x707 (1799)
+int func_22(int iParam0, int iParam1, BOOL bParam2) // Position - 0x707 (1799)
 {
 	int i;
 
 	for (i = NETWORK::NETWORK_GET_SCRIPT_STATUS(); i != 2; i = NETWORK::NETWORK_GET_SCRIPT_STATUS())
 	{
 		if (i == 3 || i == 4 || i == 5 || i == 6)
-			if (!bNoTerminate)
+			if (!bParam2)
 				func_24();
 			else
 				return 0;
@@ -452,26 +452,26 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 			if (iParam0 == 0)
 			{
 				if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
-					if (!bNoTerminate)
+					if (!bParam2)
 						func_24();
 					else
 						return 0;
 			
 				if (func_21())
-					if (!bNoTerminate)
+					if (!bParam2)
 						func_24();
 					else
 						return 0;
 			
 				if (_DOES_EVENT_OF_TYPE_EXIST(157))
-					if (!bNoTerminate)
+					if (!bParam2)
 						func_24();
 					else
 						return 0;
 			}
 			else if (!NETWORK::NETWORK_IS_IN_SESSION())
 			{
-				if (!bNoTerminate)
+				if (!bParam2)
 					func_24();
 				else
 					return 0;
@@ -486,12 +486,12 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 
 	if (iParam0 == 0)
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
-			if (!bNoTerminate)
+			if (!bParam2)
 				func_24();
 			else
 				return 0;
 	else if (!NETWORK::NETWORK_IS_IN_SESSION())
-		if (!bNoTerminate)
+		if (!bParam2)
 			func_24();
 		else
 			return 0;

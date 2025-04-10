@@ -524,7 +524,7 @@ int func_8() // Position - 0x477 (1143)
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("creator")) > 0)
 		return 1;
 
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_25(false))
 		return 0;
 
 	if (func_24(Global_113186, 256))
@@ -895,9 +895,9 @@ BOOL func_24(int iParam0, int iParam1) // Position - 0xC8F (3215)
 	return iParam0 && iParam1 != false;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0xC9E (3230)
+BOOL func_25(BOOL bParam0) // Position - 0xC9E (3230)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);

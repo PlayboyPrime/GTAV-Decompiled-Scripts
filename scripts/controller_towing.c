@@ -5007,7 +5007,7 @@ Vector3 func_80(int iParam0, BOOL bParam1) // Position - 0x6DEA (28138)
 			return 2714.5466f, -354.2701f, -55.1867f;
 	
 		case 50:
-			return Global_1966473;
+			return Global_1966475;
 	
 		case 51:
 			return 1100f, 220f, -50f;
@@ -5060,8 +5060,8 @@ Vector3 func_80(int iParam0, BOOL bParam1) // Position - 0x6DEA (28138)
 
 Vector3 func_81() // Position - 0x7564 (30052)
 {
-	if (!_IS_NULL_VECTOR(Global_1950936))
-		return Global_1950936;
+	if (!func_83(Global_1950938))
+		return Global_1950938;
 
 	switch (func_82())
 	{
@@ -5167,7 +5167,7 @@ int func_82() // Position - 0x785F (30815)
 	return Global_2652571.f_2706;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x786E (30830)
+BOOL func_83(float fParam0, var uParam1, var uParam2) // Position - 0x786E (30830)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -6495,7 +6495,7 @@ void func_126() // Position - 0x95DF (38367)
 	switch (iLocal_72)
 	{
 		case 1:
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (!func_150())
 			{
 				if (!HUD::IS_HELP_MESSAGE_BEING_DISPLAYED() && !func_149(&uLocal_60))
 				{
@@ -6511,7 +6511,7 @@ void func_126() // Position - 0x95DF (38367)
 			break;
 	
 		case 0:
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (!func_150())
 			{
 				_CONVERSATION_INITIALIZE_ACTOR(&uLocal_82, 4, 0, "TOWDISPATCH", 0, 1);
 			
@@ -6521,7 +6521,7 @@ void func_126() // Position - 0x95DF (38367)
 			break;
 	
 		case 2:
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (!func_150())
 				iLocal_72 = 3;
 		
 			if (!PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
@@ -6774,9 +6774,9 @@ void func_130() // Position - 0x9A61 (39521)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -6944,11 +6944,11 @@ BOOL func_140(int iParam0, int iParam1) // Position - 0x9DA2 (40354)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_141() // Position - 0x9DDA (40410)
@@ -7095,7 +7095,7 @@ BOOL func_149(int* piParam0) // Position - 0x9FFD (40957)
 	return IS_BIT_SET(*piParam0, 1);
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0xA00A (40970)
+BOOL func_150() // Position - 0xA00A (40970)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -7154,7 +7154,7 @@ void func_154(var uParam0, Ped pedParam1) // Position - 0xA0D1 (41169)
 		{
 			if (PAD::IS_CONTROL_JUST_PRESSED(PLAYER_CONTROL, INPUT_VEH_HORN) || PAD::IS_DISABLED_CONTROL_PRESSED(PLAYER_CONTROL, INPUT_VEH_HORN))
 			{
-				if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && !HUD::IS_HELP_MESSAGE_BEING_DISPLAYED() && !func_122(0) && !func_60(6) && !func_60(7) && !(PLAYER::GET_PLAYER_WANTED_LEVEL(PLAYER::PLAYER_ID()) > 0) && _GET_CURRENT_PLAYER_CHARACTER_0() == CHAR_FRANKLIN)
+				if (!func_150() && !HUD::IS_HELP_MESSAGE_BEING_DISPLAYED() && !func_122(0) && !func_60(6) && !func_60(7) && !(PLAYER::GET_PLAYER_WANTED_LEVEL(PLAYER::PLAYER_ID()) > 0) && _GET_CURRENT_PLAYER_CHARACTER_0() == CHAR_FRANKLIN)
 				{
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_82, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_82, 4, 0, "TOWDISPATCH", 0, 1);

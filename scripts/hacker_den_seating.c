@@ -396,7 +396,7 @@ void func_1(var uParam0) // Position - 0xBE (190)
 			break;
 	
 		case 1:
-			Global_1944419 = 0;
+			Global_1944421 = 0;
 		
 			if (func_57(uParam0))
 			{
@@ -408,9 +408,9 @@ void func_1(var uParam0) // Position - 0xBE (190)
 		case 2:
 			if (func_56(PLAYER::PLAYER_PED_ID(), &uParam0->f_16[uParam0->f_9 /*15*/]) && func_55(PLAYER::PLAYER_PED_ID(), uParam0->f_16[uParam0->f_9 /*15*/].f_3))
 			{
-				if (func_54(uParam0) || func_50(uParam0) || func_49(uParam0) || !func_48(uParam0) || func_46(PLAYER::PLAYER_ID()) || PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), true) || PED::IS_PED_IN_COMBAT(PLAYER::PLAYER_PED_ID(), 0) || PED::IS_PED_IN_MELEE_COMBAT(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_PERFORMING_MELEE_ACTION(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) || IS_BIT_SET(Global_1944436.f_4, 2))
+				if (func_54(uParam0) || func_50(uParam0) || func_49(uParam0) || !func_48(uParam0) || func_46(PLAYER::PLAYER_ID()) || PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), true) || PED::IS_PED_IN_COMBAT(PLAYER::PLAYER_PED_ID(), 0) || PED::IS_PED_IN_MELEE_COMBAT(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_PERFORMING_MELEE_ACTION(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) || IS_BIT_SET(Global_1944438.f_4, 2))
 				{
-					MISC::SET_BIT(&(Global_1944436.f_3), 16);
+					MISC::SET_BIT(&(Global_1944438.f_3), 16);
 				
 					if (func_50(uParam0))
 					{
@@ -418,7 +418,7 @@ void func_1(var uParam0) // Position - 0xBE (190)
 					}
 					else
 					{
-						_CONTEXT_REMOVE_HELP_TEXT(&(uParam0->f_6));
+						func_43(&(uParam0->f_6));
 						func_42(uParam0);
 						func_59(uParam0, 1);
 					}
@@ -430,7 +430,7 @@ void func_1(var uParam0) // Position - 0xBE (190)
 				}
 				else if (PAD::IS_CONTROL_JUST_PRESSED(PLAYER_CONTROL, INPUT_CONTEXT))
 				{
-					_CONTEXT_REMOVE_HELP_TEXT(&(uParam0->f_6));
+					func_43(&(uParam0->f_6));
 					func_39(uParam0);
 					func_59(uParam0, 3);
 				}
@@ -819,7 +819,7 @@ BOOL func_11(Ped pedParam0) // Position - 0xB7D (2941)
 
 BOOL func_12() // Position - 0xBDA (3034)
 {
-	if (IS_BIT_SET(Global_1668458, 0) || IS_BIT_SET(Global_1668458, 1))
+	if (IS_BIT_SET(Global_1668459, 0) || IS_BIT_SET(Global_1668459, 1))
 		return true;
 
 	return false;
@@ -863,14 +863,14 @@ void func_16(var uParam0, const char* sParam1) // Position - 0xCDB (3291)
 	uParam0->f_8 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(func_36(uParam0), func_35(uParam0), 2, true, false, 1065353216, 0, 1.12f);
 	NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), uParam0->f_8, sParam1, "exit", 4f, -4f, 9, 0, 1148846080, 0);
 	NETWORK::NETWORK_START_SYNCHRONISED_SCENE(uParam0->f_8);
-	_CONTEXT_REMOVE_HELP_TEXT(&(uParam0->f_6));
+	func_43(&(uParam0->f_6));
 	func_59(uParam0, 8);
 	return;
 }
 
 BOOL func_17() // Position - 0xD3D (3389)
 {
-	return IS_BIT_SET(Global_1944436.f_3, 25);
+	return IS_BIT_SET(Global_1944438.f_3, 25);
 }
 
 BOOL func_18(var uParam0, int iParam1) // Position - 0xD4E (3406)
@@ -1056,7 +1056,7 @@ void func_29(BOOL bParam0, BOOL bParam1) // Position - 0xFBE (4030)
 
 BOOL func_30() // Position - 0x1032 (4146)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_31(int iParam0) // Position - 0x1040 (4160)
@@ -1081,7 +1081,7 @@ BOOL func_31(int iParam0) // Position - 0x1040 (4160)
 
 BOOL func_32() // Position - 0x1097 (4247)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_33(int iParam0) // Position - 0x10A6 (4262)
@@ -1481,7 +1481,7 @@ void func_42(var uParam0) // Position - 0x16C7 (5831)
 {
 	if (uParam0->f_6 != -1)
 	{
-		_CONTEXT_REMOVE_HELP_TEXT(&(uParam0->f_6));
+		func_43(&(uParam0->f_6));
 		uParam0->f_6 = -1;
 		HUD::CLEAR_HELP(true);
 	}
@@ -1489,7 +1489,7 @@ void func_42(var uParam0) // Position - 0x16C7 (5831)
 	return;
 }
 
-void _CONTEXT_REMOVE_HELP_TEXT(var uParam0) // Position - 0x16E9 (5865)
+void func_43(var uParam0) // Position - 0x16E9 (5865)
 {
 	int num;
 
@@ -1545,7 +1545,7 @@ void _CONTEXT_ADD_HELP_TEXT(var uParam0, int iParam1, char* sParam2, int iParam3
 	if (STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS())
 	{
 		if (!(*uParam0 == -1))
-			_CONTEXT_REMOVE_HELP_TEXT(uParam0);
+			func_43(uParam0);
 	
 		return;
 	}
@@ -1794,7 +1794,7 @@ BOOL func_65() // Position - 0x1C56 (7254)
 
 BOOL func_66() // Position - 0x1C62 (7266)
 {
-	if (CAM::IS_SCREEN_FADED_OUT() && !func_80() && !IS_BIT_SET(Global_1944436.f_6, 10))
+	if (CAM::IS_SCREEN_FADED_OUT() && !func_80() && !IS_BIT_SET(Global_1944438.f_6, 10))
 		return true;
 
 	if (func_77(PLAYER::PLAYER_ID()) && CAM::IS_SCREEN_FADED_OUT())
@@ -1960,7 +1960,7 @@ void func_83(var uParam0) // Position - 0x1EE8 (7912)
 {
 	int localSceneFromNetworkId;
 
-	_CONTEXT_REMOVE_HELP_TEXT(&(uParam0->f_6));
+	func_43(&(uParam0->f_6));
 	func_42(uParam0);
 
 	if (uParam0->f_13 > 2)
@@ -2480,7 +2480,7 @@ BOOL func_101() // Position - 0x279D (10141)
 		return false;
 
 	NETWORK::NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, false, Global_2657994[PLAYER::PLAYER_ID() /*467*/].f_324.f_11);
-	_NETWORK_ENSURE_SCRIPT_IS_NETWORKED(0, -1, false);
+	func_110(0, -1, false);
 	func_109();
 	func_102();
 	return true;
@@ -2614,14 +2614,14 @@ void func_109() // Position - 0x2AEC (10988)
 	return;
 }
 
-int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTerminate) // Position - 0x2AF4 (10996)
+int func_110(int iParam0, int iParam1, BOOL bParam2) // Position - 0x2AF4 (10996)
 {
 	int i;
 
 	for (i = NETWORK::NETWORK_GET_SCRIPT_STATUS(); i != 2; i = NETWORK::NETWORK_GET_SCRIPT_STATUS())
 	{
 		if (i == 3 || i == 4 || i == 5 || i == 6)
-			if (!bNoTerminate)
+			if (!bParam2)
 				func_82();
 			else
 				return 0;
@@ -2631,26 +2631,26 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 			if (iParam0 == 0)
 			{
 				if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
-					if (!bNoTerminate)
+					if (!bParam2)
 						func_82();
 					else
 						return 0;
 			
 				if (func_76())
-					if (!bNoTerminate)
+					if (!bParam2)
 						func_82();
 					else
 						return 0;
 			
 				if (_DOES_EVENT_OF_TYPE_EXIST(157))
-					if (!bNoTerminate)
+					if (!bParam2)
 						func_82();
 					else
 						return 0;
 			}
 			else if (!NETWORK::NETWORK_IS_IN_SESSION())
 			{
-				if (!bNoTerminate)
+				if (!bParam2)
 					func_82();
 				else
 					return 0;
@@ -2665,12 +2665,12 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 
 	if (iParam0 == 0)
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
-			if (!bNoTerminate)
+			if (!bParam2)
 				func_82();
 			else
 				return 0;
 	else if (!NETWORK::NETWORK_IS_IN_SESSION())
-		if (!bNoTerminate)
+		if (!bParam2)
 			func_82();
 		else
 			return 0;

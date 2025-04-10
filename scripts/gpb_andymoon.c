@@ -829,7 +829,7 @@ void main() // Position - 0x0 (0)
 		
 			case 1:
 				GRAPHICS::DRAW_DEBUG_TEXT_2D("WAIT_FOR_ANIM_TO_BE_LOADED", 0.02f, 0.15f, 0f, 0, 0, 255, 255);
-				flag3 = _CONVERSATION_IS_DIALOGUE_IN_PROGRESS();
+				flag3 = func_61();
 			
 				if (bLocal_502)
 					if (flag3)
@@ -941,7 +941,7 @@ void main() // Position - 0x0 (0)
 		
 			case 9:
 				GRAPHICS::DRAW_DEBUG_TEXT_2D("MOVE_TO_NEXT_MONOLOGUE", 0.02f, 0.1f, 0f, 0, 0, 255, 255);
-				flag = _CONVERSATION_IS_DIALOGUE_IN_PROGRESS();
+				flag = func_61();
 				flag2 = func_62();
 				func_51(Global_114107[iLocal_249]);
 			
@@ -992,7 +992,7 @@ void main() // Position - 0x0 (0)
 				}
 				else
 				{
-					if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+					if (!func_61())
 						flag5 = true;
 				
 					func_32();
@@ -1079,7 +1079,7 @@ void main() // Position - 0x0 (0)
 			
 				if (!(iLocal_244 < func_15()) || num6 > 10f)
 				{
-					if (num6 > 10f && _CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+					if (num6 > 10f && func_61())
 						func_13();
 				
 					iLocal_248 = 16;
@@ -1206,12 +1206,12 @@ void main() // Position - 0x0 (0)
 					if (!func_76(num8))
 						func_67(MISC::GET_HASH_KEY(SCRIPT::GET_THIS_SCRIPT_NAME()), false);
 			
-				_CONTEXT_REMOVE_HELP_TEXT(&iLocal_296);
+				func_2(&iLocal_296);
 			}
 		}
 		else if (iLocal_296 != -1)
 		{
-			_CONTEXT_REMOVE_HELP_TEXT(&iLocal_296);
+			func_2(&iLocal_296);
 		}
 	
 		func_1();
@@ -1219,7 +1219,7 @@ void main() // Position - 0x0 (0)
 	}
 
 	if (iLocal_296 != -1)
-		_CONTEXT_REMOVE_HELP_TEXT(&iLocal_296);
+		func_2(&iLocal_296);
 
 	if (HUD::DOES_BLIP_EXIST(blLocal_246))
 		func_79(&blLocal_246);
@@ -1264,7 +1264,7 @@ void func_1() // Position - 0x11FC (4604)
 	return;
 }
 
-void _CONTEXT_REMOVE_HELP_TEXT(var uParam0) // Position - 0x1204 (4612)
+void func_2(var uParam0) // Position - 0x1204 (4612)
 {
 	int num;
 
@@ -1380,7 +1380,7 @@ void _CONTEXT_ADD_HELP_TEXT(var uParam0, int iParam1, char* sParam2, int iParam3
 	if (STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS())
 	{
 		if (!(*uParam0 == -1))
-			_CONTEXT_REMOVE_HELP_TEXT(uParam0);
+			func_2(uParam0);
 	
 		return;
 	}
@@ -2040,9 +2040,9 @@ void func_35() // Position - 0x1E8E (7822)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -2215,11 +2215,11 @@ BOOL func_46(int iParam0, int iParam1) // Position - 0x21D6 (8662)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_47(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x220E (8718)
@@ -2458,7 +2458,7 @@ BOOL func_60() // Position - 0x259D (9629)
 	return hasAnimDictLoaded;
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x25B0 (9648)
+BOOL func_61() // Position - 0x25B0 (9648)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return 1;
@@ -3295,7 +3295,7 @@ void func_113(int iParam0) // Position - 0x34A0 (13472)
 	}
 
 	if (iLocal_296 != -1)
-		_CONTEXT_REMOVE_HELP_TEXT(&iLocal_296);
+		func_2(&iLocal_296);
 
 	if (HUD::DOES_BLIP_EXIST(blLocal_246))
 		func_114(&blLocal_246);

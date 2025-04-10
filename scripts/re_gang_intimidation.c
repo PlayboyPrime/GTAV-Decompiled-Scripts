@@ -562,7 +562,7 @@ void main() // Position - 0x0 (0)
 					num = 6;
 			
 				if (bLocal_52)
-					if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+					if (!func_75())
 						num2 = 6;
 			
 				if (PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
@@ -851,7 +851,7 @@ int func_1(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var 
 			
 				!HUD::DOES_BLIP_EXIST(blLocal_223);
 			
-				while (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+				while (func_75())
 				{
 					SYSTEM::WAIT(0);
 				}
@@ -886,7 +886,7 @@ void func_2() // Position - 0x1096 (4246)
 
 int func_3() // Position - 0x10A3 (4259)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_4(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -899,9 +899,9 @@ int func_3() // Position - 0x10A3 (4259)
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x10EE (4334)
+BOOL func_4(BOOL bParam0) // Position - 0x10EE (4334)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -1909,7 +1909,7 @@ BOOL func_35(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 		case 0:
 			if (func_36(iLocal_249, 0))
 			{
-				if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+				if (!func_75())
 				{
 					if (_GET_CURRENT_PLAYER_CHARACTER() == CHAR_MICHAEL)
 					{
@@ -1937,7 +1937,7 @@ BOOL func_35(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 			{
 				if (TASK::GET_SCRIPT_TASK_STATUS(pedParam6, SCRIPT_TASK_PERFORM_SEQUENCE) == 7 || ENTITY::IS_ENTITY_AT_ENTITY(pedParam6, PLAYER::PLAYER_PED_ID(), 8f, 8f, 8f, false, true, 0))
 				{
-					if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+					if (!func_75())
 					{
 						_CONVERSATION_ADD_LINE(&uLocal_53, "REGIAU", "REGIN_KILL", 4, 0, 0, 0);
 						SYSTEM::SETTIMERA(0);
@@ -1993,7 +1993,7 @@ BOOL func_35(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 			break;
 	
 		case 3:
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (!func_75())
 			{
 				if (_GET_CURRENT_PLAYER_CHARACTER() == CHAR_MICHAEL)
 					_CONVERSATION_ADD_LINE(&uLocal_53, "REGIAU", "REGIN_REALM", 4, 0, 0, 0);
@@ -2364,9 +2364,9 @@ void func_47() // Position - 0x2D49 (11593)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -2539,11 +2539,11 @@ BOOL func_58(int iParam0, int iParam1) // Position - 0x3095 (12437)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_59(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x30CD (12493)
@@ -2722,7 +2722,7 @@ BOOL func_60(Ped pedParam0, var uParam1) // Position - 0x3123 (12579)
 			break;
 	
 		case 2:
-			if (!PED::IS_PED_INJURED(pedParam0) && !_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (!PED::IS_PED_INJURED(pedParam0) && !func_75())
 			{
 				if (_CONVERSATION_ADD_LINE(&uLocal_53, "REGIAU", "REGIN_LR1G", 4, 0, 0, 0))
 				{
@@ -2778,7 +2778,7 @@ BOOL func_60(Ped pedParam0, var uParam1) // Position - 0x3123 (12579)
 			func_76();
 			SYSTEM::WAIT(0);
 		
-			if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+			if (!func_75())
 			{
 				_CONVERSATION_ADD_LINE(&uLocal_53, "REGIAU", "REGIN_THRT", 4, 0, 0, 0);
 				iLocal_253 = 5;
@@ -3256,7 +3256,7 @@ BOOL func_74(Vector3 vParam0, var uParam1, var uParam2, int iParam3) // Position
 	return false;
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x4035 (16437)
+BOOL func_75() // Position - 0x4035 (16437)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -4737,7 +4737,7 @@ BOOL func_119(var uParam0, var uParam1, var uParam2, int iParam3, int iParam4, B
 		if (!Global_114162.f_9089)
 			return false;
 	
-		if (_IS_MISSION_REPEAT_ACTIVE(false))
+		if (func_4(false))
 			return false;
 	
 		if (func_108())

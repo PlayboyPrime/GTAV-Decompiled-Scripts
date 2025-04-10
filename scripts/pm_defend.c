@@ -1408,7 +1408,7 @@ BOOL func_18(var uParam0, var uParam1) // Position - 0xE02 (3586)
 
 BOOL func_19(float fParam0, var uParam1, var uParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10) // Position - 0xE64 (3684)
 {
-	if (_IS_NULL_VECTOR(fParam0))
+	if (func_20(fParam0))
 		return false;
 
 	if (iParam3 > 0f)
@@ -1440,7 +1440,7 @@ BOOL func_19(float fParam0, var uParam1, var uParam2, int iParam3, int iParam4, 
 	return true;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0xF54 (3924)
+BOOL func_20(float fParam0, var uParam1, var uParam2) // Position - 0xF54 (3924)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -1694,10 +1694,10 @@ void func_29(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 
 void func_30(var uParam0) // Position - 0x15B7 (5559)
 {
-	if (!_IS_NULL_VECTOR(uParam0->f_76) && !_IS_NULL_VECTOR(uParam0->f_79))
+	if (!func_20(uParam0->f_76) && !func_20(uParam0->f_79))
 		uParam0->f_82 = PED::ADD_SCENARIO_BLOCKING_AREA(uParam0->f_76 - uParam0->f_79, uParam0->f_76.f_1 - uParam0->f_79.f_1, uParam0->f_76.f_2 - uParam0->f_79.f_2, uParam0->f_76 + uParam0->f_79, uParam0->f_76.f_1 + uParam0->f_79.f_1, uParam0->f_76.f_2 + uParam0->f_79.f_2, false, true, true, true, 1);
 
-	if (!_IS_NULL_VECTOR(uParam0->f_72) && !(uParam0->f_75 <= 0f))
+	if (!func_20(uParam0->f_72) && !(uParam0->f_75 <= 0f))
 		MISC::CLEAR_AREA(uParam0->f_72, uParam0->f_75, true, false, false, false);
 
 	return;

@@ -2161,9 +2161,9 @@ void func_49() // Position - 0x21FB (8699)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -2409,11 +2409,11 @@ BOOL func_65(int iParam0, int iParam1) // Position - 0x26BC (9916)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_66() // Position - 0x26F4 (9972)
@@ -2697,7 +2697,7 @@ void func_79() // Position - 0x2A9A (10906)
 BOOL func_80() // Position - 0x2B25 (11045)
 {
 	if (func_109(joaat("cuban800")) && func_109(joaat("S_M_M_Pilot_02")))
-		if (_STOPWATCH_HAS_TIME_PASSED(&uLocal_186, 4000, false))
+		if (func_107(&uLocal_186, 4000, false))
 			if (func_83() && func_81())
 				return true;
 
@@ -3069,7 +3069,7 @@ Vector3 func_92(Player plParam0) // Position - 0x3423 (13347)
 
 	player = plParam0;
 
-	if (func_97() && Global_1845270[player /*892*/].f_867 && !_IS_NULL_VECTOR(Global_1845270[player /*892*/].f_868))
+	if (func_97() && Global_1845270[player /*892*/].f_867 && !func_96(Global_1845270[player /*892*/].f_868))
 		return Global_1845270[player /*892*/].f_868;
 
 	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION() || func_95(false) && func_94())
@@ -3085,7 +3085,7 @@ Vector3 _GET_PLAYER_COORDS(Player plParam0) // Position - 0x3498 (13464)
 
 BOOL func_94() // Position - 0x34AB (13483)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_95(BOOL bParam0) // Position - 0x34B9 (13497)
@@ -3094,7 +3094,7 @@ BOOL func_95(BOOL bParam0) // Position - 0x34B9 (13497)
 	return Global_1575058;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x34CA (13514)
+BOOL func_96(float fParam0, var uParam1, var uParam2) // Position - 0x34CA (13514)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -3253,35 +3253,35 @@ Vector3 func_106(Vector3 vParam0, var uParam1, var uParam2, float fParam3) // Po
 	return 0f, 0f, 0f;
 }
 
-BOOL _STOPWATCH_HAS_TIME_PASSED(var pStopwatch, int millis, BOOL useLocalTimer) // Position - 0x3824 (14372)
+BOOL func_107(var uParam0, int iParam1, BOOL bParam2) // Position - 0x3824 (14372)
 {
-	if (millis == -1)
+	if (iParam1 == -1)
 		return true;
 
-	_STOPWATCH_INITIALIZE(pStopwatch, useLocalTimer, false);
+	func_108(uParam0, bParam2, false);
 
-	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !useLocalTimer)
-		if (MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), *pStopwatch)) >= millis)
+	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !bParam2)
+		if (MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), *uParam0)) >= iParam1)
 			return true;
-	else if (MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(MISC::GET_GAME_TIMER(), *pStopwatch)) >= millis)
+	else if (MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(MISC::GET_GAME_TIMER(), *uParam0)) >= iParam1)
 		return true;
 
 	return false;
 }
 
-void _STOPWATCH_INITIALIZE(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateTime) // Position - 0x3882 (14466)
+void func_108(var uParam0, BOOL bParam1, BOOL bParam2) // Position - 0x3882 (14466)
 {
-	if (pStopwatch->f_1 == 0)
+	if (uParam0->f_1 == 0)
 	{
-		if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !useLocalTimer)
-			if (!useAccurateTime)
-				*pStopwatch = NETWORK::GET_NETWORK_TIME();
+		if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !bParam1)
+			if (!bParam2)
+				*uParam0 = NETWORK::GET_NETWORK_TIME();
 			else
-				*pStopwatch = NETWORK::GET_NETWORK_TIME_ACCURATE();
+				*uParam0 = NETWORK::GET_NETWORK_TIME_ACCURATE();
 		else
-			*pStopwatch = MISC::GET_GAME_TIMER();
+			*uParam0 = MISC::GET_GAME_TIMER();
 	
-		pStopwatch->f_1 = 1;
+		uParam0->f_1 = 1;
 	}
 
 	return;
@@ -3309,7 +3309,7 @@ void func_111(var uParam0) // Position - 0x390E (14606)
 {
 	if (!uParam0->f_1)
 		if (NETWORK::NETWORK_IS_HOST_OF_THIS_SCRIPT())
-			_STOPWATCH_INITIALIZE(uParam0, false, false);
+			func_108(uParam0, false, false);
 
 	return;
 }
@@ -3379,7 +3379,7 @@ void func_113() // Position - 0x3982 (14722)
 						{
 							if (ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), NETWORK::NET_TO_OBJ(iLocal_59.f_4), 10f, 10f, 10f, false, true, 0))
 							{
-								if (_STOPWATCH_HAS_TIME_PASSED(&uLocal_184, 20000, false))
+								if (func_107(&uLocal_184, 20000, false))
 								{
 									if (!iLocal_59.f_18)
 										_DISPLAY_HELP_TEXT("AMD_HELP3" /*~s~To pick up the ammo crate ~HUD_COLOUR_GREEN~~BLIP_GANG_ATTACK_PACKAGE~ ~s~you need to equip a weapon that requires ammo.~n~If you are unarmed ammo will be added to your last weapon if possible.*/, -1);
@@ -3665,7 +3665,7 @@ BOOL func_123(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4
 	int num;
 	int num2;
 
-	if (!IS_BIT_SET(Global_1686553, 0))
+	if (!IS_BIT_SET(Global_1686554, 0))
 		return 0;
 
 	if (bParam2 && !bParam3 && iParam1 <= func_127(iParam0) - func_126(iParam0, false))
@@ -3725,13 +3725,13 @@ int func_125(int iParam0) // Position - 0x42E7 (17127)
 	switch (iParam0)
 	{
 		case 0:
-			return Global_1686553.f_1;
+			return Global_1686554.f_1;
 	
 		case 1:
-			return Global_1686553.f_2;
+			return Global_1686554.f_2;
 	
 		case 2:
-			return Global_1686553.f_3;
+			return Global_1686554.f_3;
 	}
 
 	return 0;
@@ -3775,13 +3775,13 @@ int func_127(int iParam0) // Position - 0x43CA (17354)
 	switch (iParam0)
 	{
 		case 0:
-			return Global_1686561;
-	
-		case 1:
 			return Global_1686562;
 	
-		case 2:
+		case 1:
 			return Global_1686563;
+	
+		case 2:
+			return Global_1686564;
 	}
 
 	return 0;
@@ -4030,7 +4030,7 @@ void func_144() // Position - 0x4674 (18036)
 	
 		MISC::CLEAR_BIT(&(Global_2739945.f_920), 2);
 		iLocal_59 = 4;
-		func_148(_GET_LOBBY_SCRIPT_EVENT_BITS(true, true), 8, _INVALID_PLAYER_INDEX());
+		func_148(func_149(true, true), 8, _INVALID_PLAYER_INDEX());
 	}
 
 	func_147();
@@ -4083,7 +4083,7 @@ void func_148(int iParam0, int iParam1, Player plParam2) // Position - 0x4800 (1
 	return;
 }
 
-int _GET_LOBBY_SCRIPT_EVENT_BITS(BOOL includeLocalPlayer, BOOL includeSpectators) // Position - 0x483A (18490)
+int func_149(BOOL bParam0, BOOL bParam1) // Position - 0x483A (18490)
 {
 	int address;
 	int i;
@@ -4094,8 +4094,8 @@ int _GET_LOBBY_SCRIPT_EVENT_BITS(BOOL includeLocalPlayer, BOOL includeSpectators
 		player = PLAYER::INT_TO_PLAYERINDEX(i);
 	
 		if (_NETWORK_IS_PLAYER_VALID(player, false, false))
-			if (player != PLAYER::PLAYER_ID() || includeLocalPlayer)
-				if (includeSpectators)
+			if (player != PLAYER::PLAYER_ID() || bParam0)
+				if (bParam1)
 					MISC::SET_BIT(&address, i);
 				else if (!func_90(player, 0))
 					MISC::SET_BIT(&address, i);
@@ -4112,7 +4112,7 @@ BOOL func_150(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 	NETWORK::RESERVE_NETWORK_MISSION_PEDS(1);
 	NETWORK::RESERVE_NETWORK_MISSION_VEHICLES(1);
 	NETWORK::RESERVE_NETWORK_MISSION_OBJECTS(2);
-	_NETWORK_ENSURE_SCRIPT_IS_NETWORKED(0, -1, false);
+	func_152(0, -1, false);
 	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&iLocal_59, 23, 0);
 	NETWORK::NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES(&uLocal_82, 97, 0);
 
@@ -4164,7 +4164,7 @@ BOOL func_151() // Position - 0x49E3 (18915)
 {
 	var unk;
 
-	_STOPWATCH_INITIALIZE(&unk, true, false);
+	func_108(&unk, true, false);
 
 	while (true)
 	{
@@ -4180,7 +4180,7 @@ BOOL func_151() // Position - 0x49E3 (18915)
 		if (_DOES_EVENT_OF_TYPE_EXIST(157))
 			return false;
 	
-		if (_STOPWATCH_HAS_TIME_PASSED(&unk, 120000, true))
+		if (func_107(&unk, 120000, true))
 			return false;
 	
 		SYSTEM::WAIT(0);
@@ -4189,14 +4189,14 @@ BOOL func_151() // Position - 0x49E3 (18915)
 	return false;
 }
 
-int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTerminate) // Position - 0x4A41 (19009)
+int func_152(int iParam0, int iParam1, BOOL bParam2) // Position - 0x4A41 (19009)
 {
 	int i;
 
 	for (i = NETWORK::NETWORK_GET_SCRIPT_STATUS(); i != 2; i = NETWORK::NETWORK_GET_SCRIPT_STATUS())
 	{
 		if (i == 3 || i == 4 || i == 5 || i == 6)
-			if (!bNoTerminate)
+			if (!bParam2)
 				func_145();
 			else
 				return 0;
@@ -4206,26 +4206,26 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 			if (iParam0 == 0)
 			{
 				if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
-					if (!bNoTerminate)
+					if (!bParam2)
 						func_145();
 					else
 						return 0;
 			
 				if (func_142())
-					if (!bNoTerminate)
+					if (!bParam2)
 						func_145();
 					else
 						return 0;
 			
 				if (_DOES_EVENT_OF_TYPE_EXIST(157))
-					if (!bNoTerminate)
+					if (!bParam2)
 						func_145();
 					else
 						return 0;
 			}
 			else if (!NETWORK::NETWORK_IS_IN_SESSION())
 			{
-				if (!bNoTerminate)
+				if (!bParam2)
 					func_145();
 				else
 					return 0;
@@ -4240,12 +4240,12 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 
 	if (iParam0 == 0)
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
-			if (!bNoTerminate)
+			if (!bParam2)
 				func_145();
 			else
 				return 0;
 	else if (!NETWORK::NETWORK_IS_IN_SESSION())
-		if (!bNoTerminate)
+		if (!bParam2)
 			func_145();
 		else
 			return 0;

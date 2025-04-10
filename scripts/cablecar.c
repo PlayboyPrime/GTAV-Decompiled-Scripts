@@ -517,8 +517,8 @@ void main() // Position - 0x0 (0)
 	uLocal_362.f_25 = MISC::GET_GAME_TIMER() + iLocal_71;
 	func_293(bLocal_438);
 	func_292(fLocal_437);
-	_IS_NULL_VECTOR(uLocal_434);
-	_IS_NULL_VECTOR(uLocal_431);
+	func_291(uLocal_434);
+	func_291(uLocal_431);
 
 	while (true)
 	{
@@ -1879,7 +1879,7 @@ void func_31(BOOL bParam0, BOOL bParam1) // Position - 0x1EC9 (7881)
 
 BOOL func_32() // Position - 0x1F3D (7997)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_33(int iParam0) // Position - 0x1F4B (8011)
@@ -1904,7 +1904,7 @@ BOOL func_33(int iParam0) // Position - 0x1F4B (8011)
 
 BOOL func_34() // Position - 0x1FA2 (8098)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_35(var uParam0, BOOL bParam1) // Position - 0x1FB1 (8113)
@@ -2408,7 +2408,7 @@ void func_47() // Position - 0x2630 (9776)
 
 int func_48() // Position - 0x2AEE (10990)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_49(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -2421,9 +2421,9 @@ int func_48() // Position - 0x2AEE (10990)
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x2B39 (11065)
+BOOL func_49(BOOL bParam0) // Position - 0x2B39 (11065)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -32961,7 +32961,7 @@ void func_256(var uParam0, var uParam1) // Position - 0x23ED5 (147157)
 	if (*uParam0 == 0)
 		return;
 
-	if (uParam0->f_20 <= 0 || _IS_NULL_VECTOR(uParam0->f_1[1 /*3*/]))
+	if (uParam0->f_20 <= 0 || func_291(uParam0->f_1[1 /*3*/]))
 	{
 		func_257(uParam0, uParam1, false, false, 1, 1);
 		return;
@@ -33012,7 +33012,7 @@ void func_257(var uParam0, var uParam1, BOOL bParam2, BOOL bParam3, int iParam4,
 	CAM::SET_CAM_ACTIVE(*uParam1, true);
 	CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 
-	if (!bParam3 && uParam0->f_20 > 0 && !_IS_NULL_VECTOR(uParam0->f_1[1 /*3*/]))
+	if (!bParam3 && uParam0->f_20 > 0 && !func_291(uParam0->f_1[1 /*3*/]))
 	{
 		vector = { uParam0->f_1[1 /*3*/] };
 	
@@ -34175,7 +34175,7 @@ void func_290(var uParam0) // Position - 0x25EE9 (155369)
 	return;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x25F08 (155400)
+BOOL func_291(float fParam0, var uParam1, var uParam2) // Position - 0x25F08 (155400)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;

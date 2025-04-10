@@ -1465,9 +1465,9 @@ void func_6() // Position - 0x16E6 (5862)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -1723,11 +1723,11 @@ BOOL func_24(int iParam0, int iParam1) // Position - 0x1BD3 (7123)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_25() // Position - 0x1C0B (7179)
@@ -2109,7 +2109,7 @@ BOOL func_37(float fParam0, float fParam1, float fParam2, float fParam3, float f
 
 	num = 0;
 
-	if (!_IS_NULL_VECTOR(fParam0 + fParam3))
+	if (!func_38(fParam0 + fParam3))
 		if (FIRE::IS_EXPLOSION_IN_AREA(5, fParam3, fParam0) || FIRE::IS_EXPLOSION_IN_AREA(2, fParam3, fParam0) && !bParam10 || FIRE::IS_EXPLOSION_IN_AREA(20, fParam3, fParam0) && !bParam10 || FIRE::IS_EXPLOSION_IN_AREA(4, fParam3, fParam0) || FIRE::IS_EXPLOSION_IN_AREA(28, fParam3, fParam0) && !bParam10 || FIRE::IS_EXPLOSION_IN_AREA(32, fParam3, fParam0) || FIRE::IS_EXPLOSION_IN_AREA(25, fParam3, fParam0) || FIRE::IS_EXPLOSION_IN_AREA(9, fParam3, fParam0) || FIRE::IS_EXPLOSION_IN_AREA(3, fParam3, fParam0) && !bParam10 || FIRE::IS_EXPLOSION_IN_AREA(6, fParam3, fParam0) && !bParam10 || FIRE::IS_EXPLOSION_IN_AREA(0, fParam3, fParam0) || FIRE::IS_EXPLOSION_IN_AREA(1, fParam3, fParam0) || FIRE::IS_EXPLOSION_IN_AREA(23, fParam3, fParam0) || FIRE::IS_EXPLOSION_IN_AREA(34, fParam3, fParam0) || FIRE::IS_EXPLOSION_IN_AREA(14, fParam3, fParam0) || FIRE::IS_EXPLOSION_IN_AREA(30, fParam3, fParam0) && !bParam10 || FIRE::IS_EXPLOSION_IN_AREA(12, fParam3, fParam0) && !bParam10 || FIRE::IS_EXPLOSION_IN_AREA(7, fParam3, fParam0) || FIRE::IS_EXPLOSION_IN_AREA(21, fParam3, fParam0) && !bParam10 || FIRE::IS_EXPLOSION_IN_AREA(18, fParam3, fParam0) && !bParam10 || FIRE::IS_EXPLOSION_IN_AREA(15, fParam3, fParam0) || FIRE::IS_EXPLOSION_IN_AREA(10, fParam3, fParam0) || FIRE::IS_EXPLOSION_IN_AREA(27, fParam3, fParam0))
 			num = 1;
 	else if (FIRE::IS_EXPLOSION_IN_SPHERE(5, fParam6, iParam9) || FIRE::IS_EXPLOSION_IN_SPHERE(2, fParam6, iParam9) && !bParam10 || FIRE::IS_EXPLOSION_IN_SPHERE(20, fParam6, iParam9) && !bParam10 || FIRE::IS_EXPLOSION_IN_SPHERE(4, fParam6, iParam9) || FIRE::IS_EXPLOSION_IN_SPHERE(28, fParam6, iParam9) && !bParam10 || FIRE::IS_EXPLOSION_IN_SPHERE(32, fParam6, iParam9) || FIRE::IS_EXPLOSION_IN_SPHERE(25, fParam6, iParam9) || FIRE::IS_EXPLOSION_IN_SPHERE(9, fParam6, iParam9) || FIRE::IS_EXPLOSION_IN_SPHERE(3, fParam6, iParam9) && !bParam10 || FIRE::IS_EXPLOSION_IN_SPHERE(6, fParam6, iParam9) && !bParam10 || FIRE::IS_EXPLOSION_IN_SPHERE(0, fParam6, iParam9) || FIRE::IS_EXPLOSION_IN_SPHERE(1, fParam6, iParam9) || FIRE::IS_EXPLOSION_IN_SPHERE(23, fParam6, iParam9) || FIRE::IS_EXPLOSION_IN_SPHERE(34, fParam6, iParam9) || FIRE::IS_EXPLOSION_IN_SPHERE(14, fParam6, iParam9) || FIRE::IS_EXPLOSION_IN_SPHERE(30, fParam6, iParam9) && !bParam10 || FIRE::IS_EXPLOSION_IN_SPHERE(12, fParam6, iParam9) && !bParam10 || FIRE::IS_EXPLOSION_IN_SPHERE(7, fParam6, iParam9) || FIRE::IS_EXPLOSION_IN_SPHERE(21, fParam6, iParam9) && !bParam10 || FIRE::IS_EXPLOSION_IN_SPHERE(18, fParam6, iParam9) && !bParam10 || FIRE::IS_EXPLOSION_IN_SPHERE(15, fParam6, iParam9) || FIRE::IS_EXPLOSION_IN_SPHERE(10, fParam6, iParam9) || FIRE::IS_EXPLOSION_IN_SPHERE(27, fParam6, iParam9))
@@ -2118,7 +2118,7 @@ BOOL func_37(float fParam0, float fParam1, float fParam2, float fParam3, float f
 	return num;
 }
 
-BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x2867 (10343)
+BOOL func_38(float fParam0, var uParam1, var uParam2) // Position - 0x2867 (10343)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -2576,7 +2576,7 @@ void func_48() // Position - 0x3057 (12375)
 
 int func_49() // Position - 0x3515 (13589)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_50(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -2589,9 +2589,9 @@ int func_49() // Position - 0x3515 (13589)
 	return 1;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x3560 (13664)
+BOOL func_50(BOOL bParam0) // Position - 0x3560 (13664)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
@@ -3398,7 +3398,7 @@ void func_71() // Position - 0x41EF (16879)
 					}
 				
 					if ((float)MISC::GET_GAME_TIMER() - iLocal_498 > MISC::GET_RANDOM_FLOAT_IN_RANGE(10000f, 15000f))
-						if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && func_27() < 30f)
+						if (!func_73() && func_27() < 30f)
 							if (WEAPON::IS_PED_ARMED(PLAYER::PLAYER_PED_ID(), 4))
 								if (_CONVERSATION_ADD_LINE(&uLocal_138, sLocal_137, "RESEC_SHT2", 8, 0, 0, 0))
 									iLocal_498 = MISC::GET_GAME_TIMER();
@@ -3474,7 +3474,7 @@ BOOL func_72() // Position - 0x46BF (18111)
 	return uLocal_479[0] || uLocal_479[1];
 }
 
-BOOL _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() // Position - 0x474C (18252)
+BOOL func_73() // Position - 0x474C (18252)
 {
 	if (Global_22442 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
@@ -3597,7 +3597,7 @@ void func_77(int iParam0, BOOL bParam1) // Position - 0x490A (18698)
 					
 						TASK::OPEN_SEQUENCE_TASK(&taskSequenceId);
 					
-						if (func_72() || _IS_NULL_VECTOR(uLocal_499))
+						if (func_72() || func_38(uLocal_499))
 						{
 							TASK::TASK_GO_TO_COORD_WHILE_AIMING_AT_ENTITY(0, unk3[i /*3*/], PLAYER::PLAYER_PED_ID(), 2f, false, 1056964608, 1082130432, true, 0, false, joaat("FIRING_PATTERN_FULL_AUTO"), 20000);
 							TASK::TASK_AIM_GUN_AT_ENTITY(0, PLAYER::PLAYER_PED_ID(), -1, true);
@@ -4377,7 +4377,7 @@ void func_94() // Position - 0x5EF6 (24310)
 				break;
 		
 			case 2:
-				if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+				if (!func_73())
 				{
 					if (_CONVERSATION_ADD_LINE(&uLocal_138, sLocal_137, "RESEC_CAR2", 8, 0, 0, 0))
 					{
@@ -4388,7 +4388,7 @@ void func_94() // Position - 0x5EF6 (24310)
 				break;
 		
 			case 3:
-				if (SYSTEM::TIMERA() > 12000 && !_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && _CONVERSATION_ADD_LINE(&uLocal_138, sLocal_137, "RESEC_CAR3", 8, 0, 0, 0))
+				if (SYSTEM::TIMERA() > 12000 && !func_73() && _CONVERSATION_ADD_LINE(&uLocal_138, sLocal_137, "RESEC_CAR3", 8, 0, 0, 0))
 				{
 					SYSTEM::SETTIMERA(0);
 					iLocal_48 = iLocal_48 + 1;
@@ -4396,7 +4396,7 @@ void func_94() // Position - 0x5EF6 (24310)
 				break;
 		
 			case 4:
-				if (SYSTEM::TIMERA() > 7000 && !_CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && _CONVERSATION_ADD_LINE(&uLocal_138, sLocal_137, "RESEC_CAR4", 8, 0, 0, 0))
+				if (SYSTEM::TIMERA() > 7000 && !func_73() && _CONVERSATION_ADD_LINE(&uLocal_138, sLocal_137, "RESEC_CAR4", 8, 0, 0, 0))
 				{
 					SYSTEM::SETTIMERA(0);
 					func_68(8);
@@ -4565,7 +4565,7 @@ void func_96() // Position - 0x6288 (25224)
 				func_77(-1, true);
 			
 				if ((float)MISC::GET_GAME_TIMER() - iLocal_498 > MISC::GET_RANDOM_FLOAT_IN_RANGE(5000f, 7500f))
-					if (!_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
+					if (!func_73())
 						if (_CONVERSATION_ADD_LINE(&uLocal_138, sLocal_137, "RESEC_WARN", 8, 0, 0, 0))
 							iLocal_498 = MISC::GET_GAME_TIMER();
 			
@@ -5010,7 +5010,7 @@ BOOL func_112(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x6E84 (28
 		}
 	}
 
-	if (Global_1957267)
+	if (Global_1957269)
 		return false;
 
 	if (func_113(PLAYER::PLAYER_ID()))
@@ -5572,7 +5572,7 @@ void func_131(var uParam0, Object obParam1, Vector3 vParam2, var uParam3, var uP
 	eScriptLookAtFlags flags;
 	int num;
 
-	if (Global_1582037 == 1)
+	if (Global_1582038 == 1)
 		return;
 
 	if (ENTITY::IS_ENTITY_DEAD(obParam1, false))
@@ -8077,7 +8077,7 @@ BOOL func_191(var uParam0, var uParam1, var uParam2, int iParam3, int iParam4, B
 		if (!Global_114162.f_9089)
 			return false;
 	
-		if (_IS_MISSION_REPEAT_ACTIVE(false))
+		if (func_50(false))
 			return false;
 	
 		if (func_177())

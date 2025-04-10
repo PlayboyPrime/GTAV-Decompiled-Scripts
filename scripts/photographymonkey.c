@@ -531,7 +531,7 @@ void main() // Position - 0x0 (0)
 		if (func_107() && iLocal_45 == 0)
 			iLocal_45 = 2;
 	
-		if (!_IS_MISSION_REPEAT_ACTIVE(false) && !func_105(14))
+		if (!func_106(false) && !func_105(14))
 		{
 			if (iLocal_45 == 0)
 			{
@@ -716,7 +716,7 @@ void func_4(BOOL bParam0) // Position - 0x4CA (1226)
 
 int func_5() // Position - 0x4ED (1261)
 {
-	if (_IS_MISSION_REPEAT_ACTIVE(false))
+	if (func_106(false))
 		return 0;
 
 	if (Global_101752.f_8)
@@ -26786,9 +26786,9 @@ BOOL func_105(int iParam0) // Position - 0x1B2FF (111359)
 	return Global_44199 == iParam0;
 }
 
-BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x1B30D (111373)
+BOOL func_106(BOOL bParam0) // Position - 0x1B30D (111373)
 {
-	if (!bExcludeBenchmark && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
+	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
 	return IS_BIT_SET(Global_79813, 0);
