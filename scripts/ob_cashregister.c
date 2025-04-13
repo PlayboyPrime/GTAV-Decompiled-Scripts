@@ -40,7 +40,7 @@ void main() // Position - 0x0 (0)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		if (IS_BIT_SET(Global_1686554, 1))
+		if (IS_BIT_SET(Global_1686502, 1))
 		{
 			func_25();
 		}
@@ -184,25 +184,25 @@ struct<5> func_3(Hash hParam0, Vector3 vParam1, var uParam2, var uParam3, int iP
 
 	if (bParam7)
 	{
-		Global_1907308[num2 /*310*/].f_102.f_21[num /*14*/].f_12 = SCRIPT::GET_HASH_OF_THIS_SCRIPT_NAME();
-		Global_1907308[num2 /*310*/].f_102.f_21[num /*14*/].f_13 = NETWORK::NETWORK_GET_POSITION_HASH_OF_THIS_SCRIPT();
+		Global_1907163[num2 /*306*/].f_102.f_21[num /*14*/].f_12 = SCRIPT::GET_HASH_OF_THIS_SCRIPT_NAME();
+		Global_1907163[num2 /*306*/].f_102.f_21[num /*14*/].f_13 = NETWORK::NETWORK_GET_POSITION_HASH_OF_THIS_SCRIPT();
 	
-		if (Global_1907308[num2 /*310*/].f_102.f_21[num /*14*/].f_13 == 0)
+		if (Global_1907163[num2 /*306*/].f_102.f_21[num /*14*/].f_13 == 0)
 		{
-			Global_1907308[num2 /*310*/].f_102.f_21[num /*14*/].f_13 = NETWORK::NETWORK_GET_INSTANCE_ID_OF_THIS_SCRIPT();
-			Global_1907308[num2 /*310*/].f_102.f_21[num /*14*/].f_11 = 1;
+			Global_1907163[num2 /*306*/].f_102.f_21[num /*14*/].f_13 = NETWORK::NETWORK_GET_INSTANCE_ID_OF_THIS_SCRIPT();
+			Global_1907163[num2 /*306*/].f_102.f_21[num /*14*/].f_11 = 1;
 		}
 		else
 		{
-			Global_1907308[num2 /*310*/].f_102.f_21[num /*14*/].f_11 = 2;
+			Global_1907163[num2 /*306*/].f_102.f_21[num /*14*/].f_11 = 2;
 		}
 	}
 
-	Global_1907308[num2 /*310*/].f_102.f_21[num /*14*/] = { hash };
-	Global_1907308[num2 /*310*/].f_102.f_21[num /*14*/].f_5 = { vParam1 };
-	Global_1907308[num2 /*310*/].f_102.f_21[num /*14*/].f_8 = iParam4;
-	Global_1907308[num2 /*310*/].f_102.f_21[num /*14*/].f_9 = iParam5;
-	Global_1907308[num2 /*310*/].f_102.f_21[num /*14*/].f_10 = hParam6;
+	Global_1907163[num2 /*306*/].f_102.f_21[num /*14*/] = { hash };
+	Global_1907163[num2 /*306*/].f_102.f_21[num /*14*/].f_5 = { vParam1 };
+	Global_1907163[num2 /*306*/].f_102.f_21[num /*14*/].f_8 = iParam4;
+	Global_1907163[num2 /*306*/].f_102.f_21[num /*14*/].f_9 = iParam5;
+	Global_1907163[num2 /*306*/].f_102.f_21[num /*14*/].f_10 = hParam6;
 	return hash;
 }
 
@@ -215,7 +215,7 @@ int func_4(var uParam0) // Position - 0x399 (921)
 
 	for (i = 0; i < 10; i = i + 1)
 	{
-		if (func_5(uParam0, &Global_2652571.f_2452[i /*16*/]))
+		if (func_5(uParam0, &Global_2652568.f_2452[i /*16*/]))
 			return i;
 	}
 
@@ -266,7 +266,7 @@ int func_9(int iParam0) // Position - 0x4BA (1210)
 
 	for (i = 0; i < 10; i = i + 1)
 	{
-		if (!func_7(&Global_1907308[iParam0 /*310*/].f_102.f_21[i /*14*/]))
+		if (!func_7(&Global_1907163[iParam0 /*306*/].f_102.f_21[i /*14*/]))
 		{
 			num = i;
 			break;
@@ -285,7 +285,7 @@ int func_10() // Position - 0x506 (1286)
 
 	for (i = 0; i < 10; i = i + 1)
 	{
-		if (!func_7(&Global_2652571.f_2452[i /*16*/]))
+		if (!func_7(&Global_2652568.f_2452[i /*16*/]))
 		{
 			num = i;
 			break;
@@ -320,7 +320,7 @@ int func_11(int iParam0) // Position - 0x540 (1344)
 
 int func_12() // Position - 0x590 (1424)
 {
-	return Global_262145.f_30289;
+	return Global_262145.f_30251;
 }
 
 int func_13(int iParam0, int iParam1) // Position - 0x59F (1439)
@@ -349,14 +349,14 @@ int func_13(int iParam0, int iParam1) // Position - 0x59F (1439)
 
 BOOL _SHOULD_NETWORK_SCRIPT_TERMINATE() // Position - 0x5E0 (1504)
 {
-	if (Global_1575058 == false)
+	if (Global_1575056 == false)
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			return true;
 
 	if (func_21())
 		return true;
 
-	if (Global_2699022)
+	if (Global_2699004)
 		return true;
 
 	if (func_20())
@@ -395,7 +395,7 @@ Hash _GET_CURRENT_SESSION_TYPE_SCRIPT_HASH() // Position - 0x664 (1636)
 
 Hash func_16() // Position - 0x697 (1687)
 {
-	switch (Global_2699130)
+	switch (Global_2699111)
 	{
 		case 0:
 			return joaat("freemode");
@@ -409,12 +409,12 @@ Hash func_16() // Position - 0x697 (1687)
 
 int func_17() // Position - 0x6BB (1723)
 {
-	return Global_33105;
+	return Global_33087;
 }
 
 BOOL func_18() // Position - 0x6C6 (1734)
 {
-	return Global_2684721.f_700;
+	return Global_2684718.f_700;
 }
 
 BOOL _DOES_EVENT_OF_TYPE_EXIST(int iParam0) // Position - 0x6D5 (1749)
@@ -427,12 +427,12 @@ BOOL _DOES_EVENT_OF_TYPE_EXIST(int iParam0) // Position - 0x6D5 (1749)
 
 BOOL func_20() // Position - 0x6EC (1772)
 {
-	return Global_2696433;
+	return Global_2696416;
 }
 
 BOOL func_21() // Position - 0x6F8 (1784)
 {
-	return Global_2684721.f_695;
+	return Global_2684718.f_695;
 }
 
 int func_22(int iParam0, int iParam1, BOOL bParam2) // Position - 0x707 (1799)
@@ -502,7 +502,7 @@ int func_22(int iParam0, int iParam1, BOOL bParam2) // Position - 0x707 (1799)
 BOOL func_23(BOOL bParam0) // Position - 0x81D (2077)
 {
 	bParam0;
-	return Global_1575058;
+	return Global_1575056;
 }
 
 void func_24() // Position - 0x82E (2094)
