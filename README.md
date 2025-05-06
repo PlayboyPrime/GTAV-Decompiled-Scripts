@@ -1,5 +1,5 @@
 # GTAV-Decompiled-Scripts
-## Current Version: 3504
+## Current Version: 3521
 
 ## Tools Used
 - [GTA-V-Script-Decompiler](https://github.com/maybegreat48/GTA-V-Script-Decompiler)
