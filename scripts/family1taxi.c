@@ -83,7 +83,7 @@ void main() // Position - 0x0 (0)
 	while (!func_9(18))
 	{
 		func_1();
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	func_10();
@@ -105,7 +105,7 @@ void func_1() // Position - 0xA4 (164)
 		case 1:
 			if (SCRIPT::HAS_SCRIPT_LOADED("taxiService"))
 			{
-				SYSTEM::START_NEW_SCRIPT("taxiService", SPECIAL_ABILITY);
+				BUILTIN::START_NEW_SCRIPT("taxiService", SPECIAL_ABILITY);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("taxiService");
 				iLocal_46 = 2;
 			}

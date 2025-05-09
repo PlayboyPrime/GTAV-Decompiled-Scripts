@@ -394,17 +394,17 @@ void func_3(var uParam0, var uParam1) // Position - 0x1B3 (435)
 		HUD::SET_BLIP_SCALE(*uParam0, 0.44f);
 		HUD::SET_BLIP_PRIORITY(*uParam0, 13 + 1);
 		HUD::SET_BLIP_HIDDEN_ON_LEGEND(*uParam0, true);
-		HUD::SET_BLIP_ROTATION(*uParam0, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(finalRenderedCamRot, finalRenderedCamRot.f_1)));
+		HUD::SET_BLIP_ROTATION(*uParam0, BUILTIN::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(finalRenderedCamRot, finalRenderedCamRot.f_1)));
 		HUD::SET_BLIP_HIDDEN_ON_LEGEND(*uParam1, true);
-		HUD::SET_BLIP_ROTATION(*uParam1, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(finalRenderedCamRot, finalRenderedCamRot.f_1)));
+		HUD::SET_BLIP_ROTATION(*uParam1, BUILTIN::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(finalRenderedCamRot, finalRenderedCamRot.f_1)));
 	}
 	else
 	{
 		HUD::SET_BLIP_COORDS(*uParam0, finalRenderedCamCoord);
-		HUD::SET_BLIP_ROTATION(*uParam0, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(finalRenderedCamRot, finalRenderedCamRot.f_1)));
+		HUD::SET_BLIP_ROTATION(*uParam0, BUILTIN::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(finalRenderedCamRot, finalRenderedCamRot.f_1)));
 		HUD::SET_BLIP_DISPLAY(*uParam0, 5);
 		HUD::SET_BLIP_COORDS(*uParam1, finalRenderedCamCoord);
-		HUD::SET_BLIP_ROTATION(*uParam1, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(finalRenderedCamRot, finalRenderedCamRot.f_1)));
+		HUD::SET_BLIP_ROTATION(*uParam1, BUILTIN::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(finalRenderedCamRot, finalRenderedCamRot.f_1)));
 		HUD::SET_BLIP_DISPLAY(*uParam1, 5);
 	}
 
@@ -603,11 +603,11 @@ Vector3 func_7(float fParam0, var uParam1, var uParam2) // Position - 0x670 (164
 {
 	float num;
 
-	num = SYSTEM::COS(fParam0);
-	num.f_1 = SYSTEM::COS(fParam0.f_2);
-	num.f_2 = SYSTEM::SIN(fParam0);
+	num = BUILTIN::COS(fParam0);
+	num.f_1 = BUILTIN::COS(fParam0.f_2);
+	num.f_2 = BUILTIN::SIN(fParam0);
 	num.f_1 = num.f_1 * num;
-	num = num * -SYSTEM::SIN(fParam0.f_2);
+	num = num * -BUILTIN::SIN(fParam0.f_2);
 	return num;
 }
 
@@ -1507,7 +1507,7 @@ void func_43(const char* sParam0, const char* sParam1, int iParam2, const char* 
 				AUDIO::STOP_SOUND(iParam4);
 		}
 	
-		num = SYSTEM::VMAG(vParam13);
+		num = BUILTIN::VMAG(vParam13);
 	
 		if (num > 0f)
 		{
@@ -1542,7 +1542,7 @@ void func_43(const char* sParam0, const char* sParam1, int iParam2, const char* 
 		
 			if (!flag)
 			{
-				num2 = SYSTEM::TO_FLOAT(ENTITY::GET_ENTITY_MAX_HEALTH(vehiclePedIsIn));
+				num2 = BUILTIN::TO_FLOAT(ENTITY::GET_ENTITY_MAX_HEALTH(vehiclePedIsIn));
 				flag = (float)iParam16 / num2 > 0.1f;
 			}
 		
@@ -1552,7 +1552,7 @@ void func_43(const char* sParam0, const char* sParam1, int iParam2, const char* 
 		}
 	
 		if (iParam10 != -1)
-			if ((float)ENTITY::GET_ENTITY_HEALTH(vehicle) / SYSTEM::TO_FLOAT(ENTITY::GET_ENTITY_MAX_HEALTH(vehicle)) < 0.15f || (float)ENTITY::GET_ENTITY_HEALTH(vehiclePedIsIn) / SYSTEM::TO_FLOAT(ENTITY::GET_ENTITY_MAX_HEALTH(vehiclePedIsIn)) < 0.15f)
+			if ((float)ENTITY::GET_ENTITY_HEALTH(vehicle) / BUILTIN::TO_FLOAT(ENTITY::GET_ENTITY_MAX_HEALTH(vehicle)) < 0.15f || (float)ENTITY::GET_ENTITY_HEALTH(vehiclePedIsIn) / BUILTIN::TO_FLOAT(ENTITY::GET_ENTITY_MAX_HEALTH(vehiclePedIsIn)) < 0.15f)
 				if (AUDIO::HAS_SOUND_FINISHED(iParam10))
 					AUDIO::PLAY_SOUND_FRONTEND(iParam10, sParam11, sParam1, true);
 			else if (!AUDIO::HAS_SOUND_FINISHED(iParam10))
@@ -1582,8 +1582,8 @@ Vector3 func_46(float fParam0, var uParam1, var uParam2, float fParam3) // Posit
 	float num2;
 	float num3;
 
-	num2 = SYSTEM::SIN(fParam3);
-	num3 = SYSTEM::COS(fParam3);
+	num2 = BUILTIN::SIN(fParam3);
+	num3 = BUILTIN::COS(fParam3);
 	num = (fParam0 * num3) - (fParam0.f_1 * num2);
 	num.f_1 = (fParam0 * num2) + (fParam0.f_1 * num3);
 	num.f_2 = fParam0.f_2;
@@ -1620,7 +1620,7 @@ struct<4> func_47(Cam caParam0, var uParam1, var uParam2, var uParam3, var uPara
 		if (MISC::ABSF(disabledControlNormal) < 0.06f)
 			disabledControlNormal = 0f;
 	
-		if (SYSTEM::VMAG(vector) < 0.06f)
+		if (BUILTIN::VMAG(vector) < 0.06f)
 			vector = { 0f, 0f, 0f };
 	}
 
@@ -1998,7 +1998,7 @@ BOOL func_66(int iParam0, float fParam1, float fParam2, float fParam3, var uPara
 		{
 			if (!NETWORK::NETWORK_IS_SCRIPT_ACTIVE("AM_MP_DRONE", instance_id, true, 0))
 			{
-				iLocal_48 = SYSTEM::START_NEW_SCRIPT_WITH_NAME_HASH_AND_ARGS(joaat("am_mp_drone"), &instance_id, 12, DEFAULT);
+				iLocal_48 = BUILTIN::START_NEW_SCRIPT_WITH_NAME_HASH_AND_ARGS(joaat("am_mp_drone"), &instance_id, 12, DEFAULT);
 				SCRIPT::SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(joaat("am_mp_drone"));
 				_STOPWATCH_DESTROY(&uLocal_46);
 			}
@@ -2139,7 +2139,7 @@ void func_73(Entity eParam0, BOOL bParam1, eHudColour ehcParam2) // Position - 0
 	width = func_50(width, 0.015f, width);
 	height = width * GRAPHICS::GET_ASPECT_RATIO(false);
 	HUD::GET_HUD_COLOUR(ehcParam2, &r, &g, &b, &a);
-	alpha = bParam1 && MISC::GET_GAME_TIMER() % 300 < 150 ? SYSTEM::CEIL(SYSTEM::TO_FLOAT(a) / 4f) : a;
+	alpha = bParam1 && MISC::GET_GAME_TIMER() % 300 < 150 ? BUILTIN::CEIL(BUILTIN::TO_FLOAT(a) / 4f) : a;
 	GRAPHICS::DRAW_SPRITE("helicopterhud", "hud_outline", 0f, 0f, width, height, 0f, r, g, b, alpha, false, 0);
 	GRAPHICS::CLEAR_DRAW_ORIGIN();
 	return;
@@ -2226,7 +2226,7 @@ void func_78() // Position - 0x253C (9532)
 	}
 
 	if (caLocal_162.f_22 != -1)
-		if (caLocal_162.f_22.f_4 != caLocal_162.f_22 || ENTITY::IS_ENTITY_DEAD(caLocal_162.f_22, false) || func_79(caLocal_162.f_22) > 0.04f || SYSTEM::VMAG(ENTITY::GET_ENTITY_COORDS(caLocal_162.f_22, true) - caLocal_162.f_4.f_6) > uLocal_66.f_8.f_4)
+		if (caLocal_162.f_22.f_4 != caLocal_162.f_22 || ENTITY::IS_ENTITY_DEAD(caLocal_162.f_22, false) || func_79(caLocal_162.f_22) > 0.04f || BUILTIN::VMAG(ENTITY::GET_ENTITY_COORDS(caLocal_162.f_22, true) - caLocal_162.f_4.f_6) > uLocal_66.f_8.f_4)
 			func_84();
 
 	return;
@@ -2243,7 +2243,7 @@ float func_79(Ped pedParam0) // Position - 0x2624 (9764)
 
 	entityCoords = { entityCoords - { 0f, 0.5f, 0.5f } };
 	entityCoords.f_2 = 0f;
-	return SYSTEM::VMAG2(entityCoords);
+	return BUILTIN::VMAG2(entityCoords);
 }
 
 void func_80(Entity eParam0) // Position - 0x266E (9838)
@@ -2264,7 +2264,7 @@ Vector3 func_81(float fParam0, var uParam1, var uParam2) // Position - 0x26C5 (9
 	float num;
 	float num2;
 
-	num = SYSTEM::VMAG(fParam0);
+	num = BUILTIN::VMAG(fParam0);
 
 	if (num != 0f)
 	{
@@ -2307,7 +2307,7 @@ Vehicle func_82(float fParam0) // Position - 0x2704 (9988)
 		player2 = i;
 		playerPed = PLAYER::GET_PLAYER_PED(player2);
 	
-		if (!NETWORK::NETWORK_IS_PLAYER_ACTIVE(player2) || !_NETWORK_IS_PLAYER_VALID(player2, true, true) || flag && PLAYER::GET_PLAYER_TEAM(player2) == playerTeam || SYSTEM::VMAG2(caLocal_162.f_4.f_6 - ENTITY::GET_ENTITY_COORDS(playerPed, true)) > num2)
+		if (!NETWORK::NETWORK_IS_PLAYER_ACTIVE(player2) || !_NETWORK_IS_PLAYER_VALID(player2, true, true) || flag && PLAYER::GET_PLAYER_TEAM(player2) == playerTeam || BUILTIN::VMAG2(caLocal_162.f_4.f_6 - ENTITY::GET_ENTITY_COORDS(playerPed, true)) > num2)
 		{
 		}
 		else
@@ -2462,7 +2462,7 @@ void func_86() // Position - 0x2912 (10514)
 
 	if (!flag2 && func_90())
 	{
-		caLocal_162.f_19.f_2 = caLocal_162.f_19.f_2 + SYSTEM::ROUND(MISC::GET_FRAME_TIME() * 1000f);
+		caLocal_162.f_19.f_2 = caLocal_162.f_19.f_2 + BUILTIN::ROUND(MISC::GET_FRAME_TIME() * 1000f);
 	
 		if (func_53(&(caLocal_162.f_17), uLocal_66.f_8.f_2, false))
 		{
@@ -2478,7 +2478,7 @@ void func_86() // Position - 0x2912 (10514)
 			unk11 = { { uLocal_66.f_13, uLocal_66.f_13, uLocal_66.f_13 } * func_87(0f, 0f, 0f, 1f) };
 			unk11.f_1 = 0f;
 			unk8 = { unk8 + unk11 };
-			vector2 = { vector + (F2V(SYSTEM::VMAG(vector2 - vector)) * func_7(unk8)) };
+			vector2 = { vector + (F2V(BUILTIN::VMAG(vector2 - vector)) * func_7(unk8)) };
 			vector.f_2 = vector.f_2 - 1f;
 			MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(vector, vector2, uLocal_66.f_8.f_3, false, uLocal_66.f_8, PLAYER::PLAYER_PED_ID(), true, true, -1082130432, uLocal_66.f_95, false, false, 0, true, 0, uLocal_66.f_94 != 0, 0);
 		
@@ -2506,7 +2506,7 @@ Vector3 func_87(float fParam0, float fParam1, float fParam2, float fParam3) // P
 	{
 		vector = { MISC::GET_RANDOM_FLOAT_IN_RANGE(-fParam3, fParam3), MISC::GET_RANDOM_FLOAT_IN_RANGE(-fParam3, fParam3), MISC::GET_RANDOM_FLOAT_IN_RANGE(-fParam3, fParam3) };
 	
-		if (SYSTEM::VDIST2(vector, 0f, 0f, 0f) <= num)
+		if (BUILTIN::VDIST2(vector, 0f, 0f, 0f) <= num)
 			return fParam0 + vector;
 	}
 
@@ -2528,7 +2528,7 @@ Vector3 func_89(Vector3 vParam0, var uParam1, var uParam2, float fParam3) // Pos
 	if (fParam3 == 0f)
 		return 0f, 0f, 0f;
 
-	num = SYSTEM::VMAG(vParam0);
+	num = BUILTIN::VMAG(vParam0);
 
 	if (num != 0f)
 		return vParam0 * { fParam3 / num, fParam3 / num, fParam3 / num };
@@ -3344,7 +3344,7 @@ BOOL func_124() // Position - 0x3C9F (15519)
 
 void func_125() // Position - 0x3CAE (15534)
 {
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	return;
 }
 
@@ -3784,7 +3784,7 @@ int func_156(int iParam0, int iParam1, BOOL bParam2) // Position - 0x4370 (17264
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

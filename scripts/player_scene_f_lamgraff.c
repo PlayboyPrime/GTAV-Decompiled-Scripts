@@ -337,14 +337,14 @@ void main() // Position - 0x0 (0)
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 		func_54();
 
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	func_40();
 	func_37();
 	func_33();
 
 	while (iLocal_236 && func_29(2, 0))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		switch (iLocal_69)
 		{
@@ -1139,7 +1139,7 @@ int func_29(int iParam0, Ped pedParam1) // Position - 0xE07 (3591)
 		if (ENTITY::DOES_ENTITY_EXIST(pedParam1))
 		{
 			entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam1, false) };
-			num = SYSTEM::VDIST(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), entityCoords);
+			num = BUILTIN::VDIST(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), entityCoords);
 		
 			if (num > 250f)
 				if (!ENTITY::IS_ENTITY_DEAD(pedParam1, false))
@@ -1236,7 +1236,7 @@ void func_37() // Position - 0xFB7 (4023)
 
 	while (!ENTITY::DOES_ENTITY_EXIST(Global_101434) || !STREAMING::HAS_MODEL_LOADED(hLocal_239))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	ENTITY::SET_ENTITY_AS_MISSION_ENTITY(Global_101434, true, true);
@@ -3596,7 +3596,7 @@ BOOL func_47(var uParam0) // Position - 0x4F43 (20291)
 		if (IS_BIT_SET(Global_114162.f_7233.f_11[i], 0))
 		{
 			vector = { Global_96891[i /*9*/].f_3 };
-			num3 = SYSTEM::VDIST(entityCoords, vector);
+			num3 = BUILTIN::VDIST(entityCoords, vector);
 		
 			if (num3 > 150f)
 			{

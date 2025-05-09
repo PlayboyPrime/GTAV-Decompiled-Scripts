@@ -12,7 +12,7 @@ void main() // Position - 0x0 (0)
 		case 3:
 			while (true)
 			{
-				SYSTEM::WAIT(5000);
+				BUILTIN::WAIT(5000);
 			}
 			break;
 	

@@ -1131,7 +1131,7 @@ void func_25() // Position - 0xE12 (3602)
 		if (CAM::DOES_CAM_EXIST(uLocal_139.f_61))
 		{
 			camRot = { CAM::GET_CAM_ROT(uLocal_139.f_61, 2) };
-			func_33(SYSTEM::ROUND(-camRot.f_2));
+			func_33(BUILTIN::ROUND(-camRot.f_2));
 		}
 	
 		func_32(uLocal_139.f_33);
@@ -1878,7 +1878,7 @@ void func_50() // Position - 0x1CC0 (7360)
 						{
 							vector = { ENTITY::GET_WORLD_POSITION_OF_ENTITY_BONE(func_31(), entityBoneIndexByName) + func_55(uLocal_139.f_31) };
 							finalRenderedCamRot = { CAM::GET_FINAL_RENDERED_CAM_ROT(2) };
-							unk5 = { -SYSTEM::SIN(finalRenderedCamRot.f_2) * SYSTEM::COS(finalRenderedCamRot), SYSTEM::COS(finalRenderedCamRot.f_2) * SYSTEM::COS(finalRenderedCamRot), SYSTEM::SIN(finalRenderedCamRot) };
+							unk5 = { -BUILTIN::SIN(finalRenderedCamRot.f_2) * BUILTIN::COS(finalRenderedCamRot), BUILTIN::COS(finalRenderedCamRot.f_2) * BUILTIN::COS(finalRenderedCamRot), BUILTIN::SIN(finalRenderedCamRot) };
 							unk8 = { 1f, 1f, 1f };
 							vector2 = { vector + (unk5 * unk8) };
 							MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(vector, vector2, damage, true, func_54(0), PLAYER::PLAYER_PED_ID(), true, true, -1082130432, vehicle, false, false, uLocal_139.f_84[uLocal_139.f_31], true, 0, 1, 0);
@@ -1915,7 +1915,7 @@ void func_50() // Position - 0x1CC0 (7360)
 				vector3 = { ENTITY::GET_WORLD_POSITION_OF_ENTITY_BONE(func_31(), entityBoneIndexByName2) + func_55(uLocal_139.f_31) };
 				finalRenderedCamCoord = { CAM::GET_FINAL_RENDERED_CAM_COORD() };
 				finalRenderedCamRot2 = { CAM::GET_FINAL_RENDERED_CAM_ROT(2) };
-				unk19 = { -SYSTEM::SIN(finalRenderedCamRot2.f_2) * SYSTEM::COS(finalRenderedCamRot2), SYSTEM::COS(finalRenderedCamRot2.f_2) * SYSTEM::COS(finalRenderedCamRot2), SYSTEM::SIN(finalRenderedCamRot2) };
+				unk19 = { -BUILTIN::SIN(finalRenderedCamRot2.f_2) * BUILTIN::COS(finalRenderedCamRot2), BUILTIN::COS(finalRenderedCamRot2.f_2) * BUILTIN::COS(finalRenderedCamRot2), BUILTIN::SIN(finalRenderedCamRot2) };
 				distanceBetweenCoords = { 10f, 10f, 10f };
 			
 				if (!func_51(uLocal_139.f_56))
@@ -2155,7 +2155,7 @@ void func_62() // Position - 0x238B (9099)
 	{
 		finalRenderedCamCoord = { CAM::GET_FINAL_RENDERED_CAM_COORD() };
 		finalRenderedCamRot = { CAM::GET_FINAL_RENDERED_CAM_ROT(2) };
-		unk7 = { -SYSTEM::SIN(finalRenderedCamRot.f_2) * SYSTEM::COS(finalRenderedCamRot), SYSTEM::COS(finalRenderedCamRot.f_2) * SYSTEM::COS(finalRenderedCamRot), SYSTEM::SIN(finalRenderedCamRot) };
+		unk7 = { -BUILTIN::SIN(finalRenderedCamRot.f_2) * BUILTIN::COS(finalRenderedCamRot), BUILTIN::COS(finalRenderedCamRot.f_2) * BUILTIN::COS(finalRenderedCamRot), BUILTIN::SIN(finalRenderedCamRot) };
 		unk10 = { 300f, 300f, 300f };
 		vector = { finalRenderedCamCoord + (unk7 * unk10) };
 		vector2 = { finalRenderedCamCoord + (unk7 * { 1f, 1f, 1f }) };
@@ -2740,7 +2740,7 @@ int func_78() // Position - 0x2F56 (12118)
 
 float func_79(float fParam0, var uParam1, var uParam2) // Position - 0x2FF4 (12276)
 {
-	return SYSTEM::SQRT((fParam0 * fParam0) + (fParam0.f_1 * fParam0.f_1) + (fParam0.f_2 * fParam0.f_2));
+	return BUILTIN::SQRT((fParam0 * fParam0) + (fParam0.f_1 * fParam0.f_1) + (fParam0.f_2 * fParam0.f_2));
 }
 
 BOOL func_80(Vehicle veParam0) // Position - 0x3019 (12313)
@@ -3080,22 +3080,22 @@ void func_91() // Position - 0x3606 (13830)
 		}
 		else
 		{
-			value3 = SYSTEM::FLOOR(PAD::GET_DISABLED_CONTROL_UNBOUND_NORMAL(PLAYER_CONTROL, INPUT_SCALED_LOOK_UD) * -num11);
-			value2 = SYSTEM::FLOOR(PAD::GET_DISABLED_CONTROL_UNBOUND_NORMAL(PLAYER_CONTROL, INPUT_SCALED_LOOK_LR) * num11);
+			value3 = BUILTIN::FLOOR(PAD::GET_DISABLED_CONTROL_UNBOUND_NORMAL(PLAYER_CONTROL, INPUT_SCALED_LOOK_UD) * -num11);
+			value2 = BUILTIN::FLOOR(PAD::GET_DISABLED_CONTROL_UNBOUND_NORMAL(PLAYER_CONTROL, INPUT_SCALED_LOOK_LR) * num11);
 		}
 	
-		value = SYSTEM::FLOOR(PAD::GET_DISABLED_CONTROL_NORMAL(PLAYER_CONTROL, INPUT_SNIPER_ZOOM) * num11);
+		value = BUILTIN::FLOOR(PAD::GET_DISABLED_CONTROL_NORMAL(PLAYER_CONTROL, INPUT_SNIPER_ZOOM) * num11);
 	
 		if (!PAD::IS_USING_KEYBOARD_AND_MOUSE(PLAYER_CONTROL))
 		{
-			num12 = SYSTEM::ROUND((float)num12 * num11);
+			num12 = BUILTIN::ROUND((float)num12 * num11);
 		
 			if (MISC::ABSI(value) < num12)
 				value = 0;
 		
 			vector = { (float)value3, (float)value2, 0f };
 		
-			if (SYSTEM::VMAG(vector) < (float)num12)
+			if (BUILTIN::VMAG(vector) < (float)num12)
 			{
 				value3 = 0;
 				value2 = 0;
@@ -3116,8 +3116,8 @@ void func_91() // Position - 0x3606 (13830)
 		}
 		else
 		{
-			uLocal_139[2] = SYSTEM::TO_FLOAT(value3) * uLocal_139.f_59 * num2 * SYSTEM::TIMESTEP();
-			uLocal_139[3] = SYSTEM::TO_FLOAT(value2) * uLocal_139.f_59 * num2 * num13 * SYSTEM::TIMESTEP();
+			uLocal_139[2] = BUILTIN::TO_FLOAT(value3) * uLocal_139.f_59 * num2 * BUILTIN::TIMESTEP();
+			uLocal_139[3] = BUILTIN::TO_FLOAT(value2) * uLocal_139.f_59 * num2 * num13 * BUILTIN::TIMESTEP();
 		}
 	
 		uLocal_139[3] = func_95(uLocal_139[3], value4, num9);
@@ -3252,7 +3252,7 @@ void func_91() // Position - 0x3606 (13830)
 				CAM::ATTACH_CAM_TO_VEHICLE_BONE(uLocal_139.f_61, func_31(), 0, true, uLocal_139.f_53, 0f, uLocal_139.f_53.f_2, func_92(), true);
 		}
 	
-		uLocal_139.f_59 = uLocal_139.f_59 + ((SYSTEM::TO_FLOAT(value) / 5f) * SYSTEM::TIMESTEP() * num);
+		uLocal_139.f_59 = uLocal_139.f_59 + ((BUILTIN::TO_FLOAT(value) / 5f) * BUILTIN::TIMESTEP() * num);
 	
 		if (uLocal_139.f_59 > num7)
 			uLocal_139.f_59 = num7;
@@ -3276,7 +3276,7 @@ void func_91() // Position - 0x3606 (13830)
 					if (AUDIO::HAS_SOUND_FINISHED(soundId))
 						AUDIO::PLAY_SOUND_FRONTEND(soundId, "COP_HELI_CAM_ZOOM", 0, true);
 				
-					AUDIO::SET_VARIABLE_ON_SOUND(soundId, "Ctrl", SYSTEM::TO_FLOAT(value));
+					AUDIO::SET_VARIABLE_ON_SOUND(soundId, "Ctrl", BUILTIN::TO_FLOAT(value));
 				
 					if (value < 0)
 						AUDIO::SET_VARIABLE_ON_SOUND(soundId, "Dir", -1f);
@@ -3292,7 +3292,7 @@ void func_91() // Position - 0x3606 (13830)
 		
 			vector2 = { -{ PAD::GET_DISABLED_CONTROL_UNBOUND_NORMAL(PLAYER_CONTROL, INPUT_SCALED_LOOK_LR), 0f, PAD::GET_DISABLED_CONTROL_UNBOUND_NORMAL(PLAYER_CONTROL, INPUT_SCALED_LOOK_UD) } };
 		
-			if (SYSTEM::VMAG(vector2) > 0f)
+			if (BUILTIN::VMAG(vector2) > 0f)
 			{
 				soundId2 = uLocal_139.f_30;
 			
@@ -3301,7 +3301,7 @@ void func_91() // Position - 0x3606 (13830)
 					if (AUDIO::HAS_SOUND_FINISHED(soundId2))
 						AUDIO::PLAY_SOUND_FRONTEND(soundId2, "COP_HELI_CAM_TURN", 0, true);
 				
-					AUDIO::SET_VARIABLE_ON_SOUND(soundId2, "Ctrl", SYSTEM::VMAG(vector2));
+					AUDIO::SET_VARIABLE_ON_SOUND(soundId2, "Ctrl", BUILTIN::VMAG(vector2));
 				}
 			}
 			else
@@ -3536,17 +3536,17 @@ void func_104() // Position - 0x3FB6 (16310)
 			HUD::SET_BLIP_SCALE(uLocal_139.f_109, 0.44f);
 			HUD::SET_BLIP_PRIORITY(uLocal_139.f_109, 13 + 1);
 			HUD::SET_BLIP_HIDDEN_ON_LEGEND(uLocal_139.f_109, true);
-			HUD::SET_BLIP_ROTATION(uLocal_139.f_109, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(finalRenderedCamRot, finalRenderedCamRot.f_1)));
+			HUD::SET_BLIP_ROTATION(uLocal_139.f_109, BUILTIN::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(finalRenderedCamRot, finalRenderedCamRot.f_1)));
 			HUD::SET_BLIP_HIDDEN_ON_LEGEND(uLocal_139.f_108, true);
-			HUD::SET_BLIP_ROTATION(uLocal_139.f_108, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(finalRenderedCamRot, finalRenderedCamRot.f_1)));
+			HUD::SET_BLIP_ROTATION(uLocal_139.f_108, BUILTIN::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(finalRenderedCamRot, finalRenderedCamRot.f_1)));
 		}
 		else
 		{
 			HUD::SET_BLIP_COORDS(uLocal_139.f_109, finalRenderedCamCoord);
-			HUD::SET_BLIP_ROTATION(uLocal_139.f_109, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(finalRenderedCamRot, finalRenderedCamRot.f_1)));
+			HUD::SET_BLIP_ROTATION(uLocal_139.f_109, BUILTIN::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(finalRenderedCamRot, finalRenderedCamRot.f_1)));
 			HUD::SET_BLIP_DISPLAY(uLocal_139.f_109, 5);
 			HUD::SET_BLIP_COORDS(uLocal_139.f_108, finalRenderedCamCoord);
-			HUD::SET_BLIP_ROTATION(uLocal_139.f_108, SYSTEM::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(finalRenderedCamRot, finalRenderedCamRot.f_1)));
+			HUD::SET_BLIP_ROTATION(uLocal_139.f_108, BUILTIN::ROUND(MISC::GET_HEADING_FROM_VECTOR_2D(finalRenderedCamRot, finalRenderedCamRot.f_1)));
 			HUD::SET_BLIP_DISPLAY(uLocal_139.f_108, 5);
 		}
 	}
@@ -3746,11 +3746,11 @@ Vector3 func_108(float fParam0, var uParam1, var uParam2) // Position - 0x44D7 (
 {
 	float num;
 
-	num = SYSTEM::COS(fParam0);
-	num.f_1 = SYSTEM::COS(fParam0.f_2);
-	num.f_2 = SYSTEM::SIN(fParam0);
+	num = BUILTIN::COS(fParam0);
+	num.f_1 = BUILTIN::COS(fParam0.f_2);
+	num.f_2 = BUILTIN::SIN(fParam0);
 	num.f_1 = num.f_1 * num;
-	num = num * -SYSTEM::SIN(fParam0.f_2);
+	num = num * -BUILTIN::SIN(fParam0.f_2);
 	return num;
 }
 
@@ -3822,7 +3822,7 @@ BOOL func_114() // Position - 0x4566 (17766)
 						camCoord = { CAM::GET_CAM_COORD(uLocal_139.f_61) };
 					
 						if (MISC::GET_GROUND_Z_FOR_3D_COORD(camCoord, &groundZ, false, false))
-							if (SYSTEM::VDIST(camCoord, camCoord, camCoord.f_1, groundZ) < 2f)
+							if (BUILTIN::VDIST(camCoord, camCoord, camCoord.f_1, groundZ) < 2f)
 								return true;
 					}
 				
@@ -5143,7 +5143,7 @@ BOOL func_178() // Position - 0x60FF (24831)
 				entityCoords = { ENTITY::GET_ENTITY_COORDS(vehiclePedIsIn, true) };
 			
 				if (MISC::GET_GROUND_Z_FOR_3D_COORD(entityCoords, &groundZ, false, false))
-					if (SYSTEM::VDIST(entityCoords, entityCoords, entityCoords.f_1, groundZ) < 3f)
+					if (BUILTIN::VDIST(entityCoords, entityCoords, entityCoords.f_1, groundZ) < 3f)
 						return true;
 			}
 		}
@@ -5412,7 +5412,7 @@ BOOL func_199() // Position - 0x66E9 (26345)
 
 void func_200() // Position - 0x66F8 (26360)
 {
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	return;
 }
 
@@ -5714,7 +5714,7 @@ BOOL func_212() // Position - 0x6B82 (27522)
 		if (func_57(&unk, 120000, true))
 			return false;
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return false;
@@ -5763,7 +5763,7 @@ int func_213(int iParam0, int iParam1, BOOL bParam2) // Position - 0x6BE0 (27616
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

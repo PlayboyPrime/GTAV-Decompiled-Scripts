@@ -188,7 +188,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		if (Global_21083.f_1 != 9)
 		{
@@ -299,7 +299,7 @@ void func_4() // Position - 0x1E2 (482)
 	{
 		while (num < 5)
 		{
-			func_7(Global_21064, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(18), SYSTEM::TO_FLOAT(iLocal_113), SYSTEM::TO_FLOAT(0), -1f, -1f, &uLocal_129[num /*6*/], 0, 0, 0, 0);
+			func_7(Global_21064, "SET_DATA_SLOT", BUILTIN::TO_FLOAT(18), BUILTIN::TO_FLOAT(iLocal_113), BUILTIN::TO_FLOAT(0), -1f, -1f, &uLocal_129[num /*6*/], 0, 0, 0, 0);
 			uLocal_118[iLocal_113] = num;
 			iLocal_113 = iLocal_113 + 1;
 			num = num + 1;
@@ -323,7 +323,7 @@ void func_4() // Position - 0x1E2 (482)
 			{
 				if (uLocal_160[num2] == 0)
 				{
-					func_7(Global_21064, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(18), SYSTEM::TO_FLOAT(iLocal_113), SYSTEM::TO_FLOAT(0), -1f, -1f, &uLocal_129[num2 /*6*/], 0, 0, 0, 0);
+					func_7(Global_21064, "SET_DATA_SLOT", BUILTIN::TO_FLOAT(18), BUILTIN::TO_FLOAT(iLocal_113), BUILTIN::TO_FLOAT(0), -1f, -1f, &uLocal_129[num2 /*6*/], 0, 0, 0, 0);
 					uLocal_118[iLocal_113] = num2;
 					iLocal_113 = iLocal_113 + 1;
 					uLocal_160[num2] = 1;
@@ -338,7 +338,7 @@ void func_4() // Position - 0x1E2 (482)
 	}
 
 	if (iLocal_113 == 0)
-		func_7(Global_21064, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(18), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(0), -1f, -1f, "CELL_3092" /*No progress made.*/, 0, 0, 0, 0);
+		func_7(Global_21064, "SET_DATA_SLOT", BUILTIN::TO_FLOAT(18), BUILTIN::TO_FLOAT(0), BUILTIN::TO_FLOAT(0), -1f, -1f, "CELL_3092" /*No progress made.*/, 0, 0, 0, 0);
 	else
 		bLocal_128 = true;
 
@@ -395,19 +395,19 @@ void func_6(const char* sParam0) // Position - 0x45B (1115)
 void func_7(int iParam0, char* sParam1, float fParam2, float fParam3, float fParam4, float fParam5, float fParam6, char* sParam7, const char* sParam8, const char* sParam9, const char* sParam10, const char* sParam11) // Position - 0x46D (1133)
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, sParam1);
-	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::ROUND(fParam2));
+	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(BUILTIN::ROUND(fParam2));
 
 	if (fParam3 != -1f)
-		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::ROUND(fParam3));
+		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(BUILTIN::ROUND(fParam3));
 
 	if (fParam4 != -1f)
-		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::ROUND(fParam4));
+		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(BUILTIN::ROUND(fParam4));
 
 	if (fParam5 != -1f)
-		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::ROUND(fParam5));
+		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(BUILTIN::ROUND(fParam5));
 
 	if (fParam6 != -1f)
-		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::ROUND(fParam6));
+		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(BUILTIN::ROUND(fParam6));
 
 	if (!MISC::IS_STRING_NULL_OR_EMPTY(sParam7))
 		func_6(sParam7);
@@ -468,7 +468,7 @@ void func_10() // Position - 0x5B3 (1459)
 		
 			while (!GRAPHICS::IS_SCALEFORM_MOVIE_METHOD_RETURN_VALUE_READY(iLocal_127))
 			{
-				SYSTEM::WAIT(0);
+				BUILTIN::WAIT(0);
 			}
 		
 			scaleformMovieMethodReturnValueInt = GRAPHICS::GET_SCALEFORM_MOVIE_METHOD_RETURN_VALUE_INT(iLocal_127);
@@ -606,7 +606,7 @@ void func_15() // Position - 0x858 (2136)
 		
 			while (!GRAPHICS::IS_SCALEFORM_MOVIE_METHOD_RETURN_VALUE_READY(iLocal_127))
 			{
-				SYSTEM::WAIT(0);
+				BUILTIN::WAIT(0);
 			}
 		
 			iLocal_126 = GRAPHICS::GET_SCALEFORM_MOVIE_METHOD_RETURN_VALUE_INT(iLocal_127);
@@ -643,13 +643,13 @@ void func_16() // Position - 0x8CD (2253)
 
 	if (func_17(0))
 	{
-		func_7(Global_21064, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(18), SYSTEM::TO_FLOAT(value), SYSTEM::TO_FLOAT(0), -1f, -1f, "CELL_229" /*On Active Mission*/, 0, 0, 0, 0);
+		func_7(Global_21064, "SET_DATA_SLOT", BUILTIN::TO_FLOAT(18), BUILTIN::TO_FLOAT(value), BUILTIN::TO_FLOAT(0), -1f, -1f, "CELL_229" /*On Active Mission*/, 0, 0, 0, 0);
 	}
 	else
 	{
 		while (value < Global_96689)
 		{
-			func_7(Global_21064, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(18), SYSTEM::TO_FLOAT(value), SYSTEM::TO_FLOAT(0), -1f, -1f, &Global_96480[value /*4*/], 0, 0, 0, 0);
+			func_7(Global_21064, "SET_DATA_SLOT", BUILTIN::TO_FLOAT(18), BUILTIN::TO_FLOAT(value), BUILTIN::TO_FLOAT(0), -1f, -1f, &Global_96480[value /*4*/], 0, 0, 0, 0);
 			iLocal_113 = iLocal_113 + 1;
 			uLocal_18[value] = value;
 			value = value + 1;
@@ -1274,7 +1274,7 @@ struct<2> func_24(int iParam0) // Position - 0x13E1 (5089)
 void func_25() // Position - 0x144A (5194)
 {
 	if (bLocal_116)
-		if (SYSTEM::TIMERA() > 50)
+		if (BUILTIN::TIMERA() > 50)
 			bLocal_116 = false;
 
 	if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL))
@@ -1307,7 +1307,7 @@ void func_25() // Position - 0x144A (5194)
 		
 			func_28();
 			bLocal_116 = true;
-			SYSTEM::SETTIMERA(0);
+			BUILTIN::SETTIMERA(0);
 		}
 	
 		if (func_9(FRONTEND_CONTROL, Global_21060, 0))
@@ -1319,7 +1319,7 @@ void func_25() // Position - 0x144A (5194)
 		
 			func_26();
 			bLocal_116 = true;
-			SYSTEM::SETTIMERA(0);
+			BUILTIN::SETTIMERA(0);
 		}
 	}
 
@@ -1328,7 +1328,7 @@ void func_25() // Position - 0x144A (5194)
 
 void func_26() // Position - 0x14F7 (5367)
 {
-	func_33(Global_21064, "SET_INPUT_EVENT", SYSTEM::TO_FLOAT(3), -1082130432, -1082130432, -1082130432, -1082130432);
+	func_33(Global_21064, "SET_INPUT_EVENT", BUILTIN::TO_FLOAT(3), -1082130432, -1082130432, -1082130432, -1082130432);
 	AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Navigate", &Global_21072, true);
 	func_27();
 	return;
@@ -1347,7 +1347,7 @@ void func_27() // Position - 0x1534 (5428)
 
 void func_28() // Position - 0x1557 (5463)
 {
-	func_33(Global_21064, "SET_INPUT_EVENT", SYSTEM::TO_FLOAT(1), -1082130432, -1082130432, -1082130432, -1082130432);
+	func_33(Global_21064, "SET_INPUT_EVENT", BUILTIN::TO_FLOAT(1), -1082130432, -1082130432, -1082130432, -1082130432);
 	AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Navigate", &Global_21072, true);
 	func_29();
 	return;
@@ -1367,8 +1367,8 @@ void func_29() // Position - 0x1594 (5524)
 void func_30() // Position - 0x15B7 (5559)
 {
 	func_33(Global_21064, "SET_DATA_SLOT_EMPTY", 18f, -1082130432, -1082130432, -1082130432, -1082130432);
-	func_7(Global_21064, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(18), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(0), -1f, -1f, "CELL_3301" /*Open Missions*/, 0, 0, 0, 0);
-	func_7(Global_21064, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(18), SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(0), -1f, -1f, "CELL_3302" /*Progress*/, 0, 0, 0, 0);
+	func_7(Global_21064, "SET_DATA_SLOT", BUILTIN::TO_FLOAT(18), BUILTIN::TO_FLOAT(0), BUILTIN::TO_FLOAT(0), -1f, -1f, "CELL_3301" /*Open Missions*/, 0, 0, 0, 0);
+	func_7(Global_21064, "SET_DATA_SLOT", BUILTIN::TO_FLOAT(18), BUILTIN::TO_FLOAT(1), BUILTIN::TO_FLOAT(0), -1f, -1f, "CELL_3302" /*Progress*/, 0, 0, 0, 0);
 	iLocal_113 = 2;
 	func_33(Global_21064, "DISPLAY_VIEW", 18f, -1082130432, -1082130432, -1082130432, -1082130432);
 	func_5(Global_21064, "SET_HEADER", "CELL_23" /*Check List*/, 0, 0, 0, 0);
@@ -1412,19 +1412,19 @@ void func_32(int iParam0, char* sParam1, int iParam2, int iParam3) // Position -
 void func_33(int iParam0, char* sParam1, float fParam2, int iParam3, int iParam4, int iParam5, int iParam6) // Position - 0x1772 (6002)
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, sParam1);
-	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::ROUND(fParam2));
+	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(BUILTIN::ROUND(fParam2));
 
 	if (iParam3 != -1f)
-		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::ROUND(iParam3));
+		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(BUILTIN::ROUND(iParam3));
 
 	if (iParam4 != -1f)
-		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::ROUND(iParam4));
+		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(BUILTIN::ROUND(iParam4));
 
 	if (iParam5 != -1f)
-		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::ROUND(iParam5));
+		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(BUILTIN::ROUND(iParam5));
 
 	if (iParam6 != -1f)
-		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::ROUND(iParam6));
+		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(BUILTIN::ROUND(iParam6));
 
 	GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 	return;

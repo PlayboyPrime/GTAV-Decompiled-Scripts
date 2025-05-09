@@ -109,7 +109,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		if (BRAIN::IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE())
 		{
@@ -146,11 +146,11 @@ void main() // Position - 0x0 (0)
 
 void func_1() // Position - 0xE7 (231)
 {
-	if (SYSTEM::TIMERB() > 7000)
+	if (BUILTIN::TIMERB() > 7000)
 	{
 		if (ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), fLocal_43, 10f, 10f, 10f, false, true, 0) && !ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), fLocal_43, 3f, 3f, 3f, false, true, 0))
 		{
-			SYSTEM::SETTIMERB(0);
+			BUILTIN::SETTIMERB(0);
 			uLocal_46 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
 			TASK::OPEN_SEQUENCE_TASK(&iLocal_52);
 			TASK::TASK_TURN_PED_TO_FACE_COORD(0, uLocal_46, 0);
@@ -166,7 +166,7 @@ void func_1() // Position - 0xE7 (231)
 		if (ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), fLocal_43, 3f, 3f, 3f, false, true, 0))
 		{
 			uLocal_46 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
-			SYSTEM::SETTIMERB(0);
+			BUILTIN::SETTIMERB(0);
 			TASK::OPEN_SEQUENCE_TASK(&iLocal_52);
 			TASK::TASK_TURN_PED_TO_FACE_COORD(0, uLocal_46, 0);
 			TASK::TASK_PLAY_ANIM(0, "amb@BUSKER", "SAX_loop_A", 8f, -8f, -1, 0, 0, false, false, false);
@@ -193,14 +193,14 @@ void func_2() // Position - 0x1FD (509)
 	
 		while (!STREAMING::HAS_MODEL_LOADED(joaat("A_F_M_BevHills_02")) || !STREAMING::HAS_MODEL_LOADED(joaat("G_M_Y_MexGoon_02")))
 		{
-			SYSTEM::WAIT(0);
+			BUILTIN::WAIT(0);
 		}
 	
 		STREAMING::REQUEST_ANIM_DICT("amb@BUSKER");
 	
 		while (!STREAMING::HAS_ANIM_DICT_LOADED("amb@BUSKER"))
 		{
-			SYSTEM::WAIT(0);
+			BUILTIN::WAIT(0);
 		}
 	
 		uLocal_46.f_2 = fLocal_43.f_2 - 1f;

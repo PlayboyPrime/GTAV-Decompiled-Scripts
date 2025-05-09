@@ -172,7 +172,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 		func_1();
 	}
 
@@ -234,7 +234,7 @@ int func_3(int iParam0, int iParam1, BOOL bParam2) // Position - 0xBB (187)
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

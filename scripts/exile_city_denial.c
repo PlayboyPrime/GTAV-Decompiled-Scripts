@@ -71,8 +71,8 @@ void main() // Position - 0x0 (0)
 
 	func_42(18);
 	func_41();
-	SYSTEM::SETTIMERA(0);
-	SYSTEM::SETTIMERB(0);
+	BUILTIN::SETTIMERA(0);
+	BUILTIN::SETTIMERB(0);
 	numUnits = 2;
 	num = 0;
 
@@ -117,7 +117,7 @@ void main() // Position - 0x0 (0)
 				
 					while (!PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 					{
-						SYSTEM::WAIT(1000);
+						BUILTIN::WAIT(1000);
 					}
 				
 					bLocal_29 = false;
@@ -130,8 +130,8 @@ void main() // Position - 0x0 (0)
 	{
 		if (num > 0)
 		{
-			num = num - SYSTEM::TIMERA();
-			SYSTEM::SETTIMERA(0);
+			num = num - BUILTIN::TIMERA();
+			BUILTIN::SETTIMERA(0);
 		
 			if (num < 0)
 				num = 0;
@@ -194,7 +194,7 @@ void main() // Position - 0x0 (0)
 							break;
 					
 						default:
-							SYSTEM::WAIT(0);
+							BUILTIN::WAIT(0);
 							break;
 					}
 				
@@ -212,7 +212,7 @@ void main() // Position - 0x0 (0)
 					
 						while (INTERIOR::IS_VALID_INTERIOR(interiorFromEntity))
 						{
-							SYSTEM::WAIT(5000);
+							BUILTIN::WAIT(5000);
 							PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID());
 						
 							if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
@@ -274,9 +274,9 @@ void main() // Position - 0x0 (0)
 						if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 							MISC::CREATE_INCIDENT_WITH_ENTITY(DT_Gangs, PLAYER::PLAYER_PED_ID(), numUnits, 0f, &iLocal_31, 0, 0);
 	
-		if (bLocal_27 && SYSTEM::TIMERB() > 60000)
+		if (bLocal_27 && BUILTIN::TIMERB() > 60000)
 		{
-			SYSTEM::SETTIMERB(0);
+			BUILTIN::SETTIMERB(0);
 			numUnits = numUnits + MISC::GET_RANDOM_INT_IN_RANGE(1, 2);
 		
 			if (numUnits < 8)
@@ -303,7 +303,7 @@ void main() // Position - 0x0 (0)
 		
 			while (_GET_CURRENT_PLAYER_CHARACTER() == CHAR_FRANKLIN)
 			{
-				SYSTEM::WAIT(2000);
+				BUILTIN::WAIT(2000);
 			}
 		
 			func_41();
@@ -311,9 +311,9 @@ void main() // Position - 0x0 (0)
 		}
 	
 		if (bLocal_27)
-			SYSTEM::WAIT(0);
+			BUILTIN::WAIT(0);
 		else
-			SYSTEM::WAIT(10000);
+			BUILTIN::WAIT(10000);
 	
 		if (func_1(12) && !func_9(12))
 		{
@@ -322,7 +322,7 @@ void main() // Position - 0x0 (0)
 		
 			while (func_9(0) || func_9(4))
 			{
-				SYSTEM::WAIT(8000);
+				BUILTIN::WAIT(8000);
 			}
 		}
 	}

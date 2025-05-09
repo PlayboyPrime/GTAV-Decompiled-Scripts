@@ -269,7 +269,7 @@ float func_3(BOOL bParam0) // Position - 0x298 (664)
 
 	if (bParam0)
 	{
-		num = SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER());
+		num = BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER());
 		num2 = num / 1000f;
 		return num2;
 	}
@@ -277,12 +277,12 @@ float func_3(BOOL bParam0) // Position - 0x298 (664)
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		networkTime = NETWORK::GET_NETWORK_TIME();
-		num3 = SYSTEM::TO_FLOAT(networkTime);
+		num3 = BUILTIN::TO_FLOAT(networkTime);
 		num4 = num3 / 1000f;
 		return num4;
 	}
 
-	return SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
+	return BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
 }
 
 BOOL func_4(int* piParam0) // Position - 0x2F0 (752)
@@ -807,7 +807,7 @@ BOOL func_30() // Position - 0x13DF (5087)
 			break;
 	
 		case 1:
-			if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), 1693.1636f, 2559.6162f, 44.5649f) >= 1030225f)
+			if (BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), 1693.1636f, 2559.6162f, 44.5649f) >= 1030225f)
 				iLocal_139 = 2;
 			break;
 	
@@ -858,7 +858,7 @@ BOOL func_34() // Position - 0x14FB (5371)
 	if (NETWORK::NETWORK_GET_NUM_PARTICIPANTS() > 1)
 		return false;
 
-	if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), 1693.1636f, 2559.6162f, 44.5649f) >= 1030225f)
+	if (BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), 1693.1636f, 2559.6162f, 44.5649f) >= 1030225f)
 		return true;
 
 	return false;
@@ -949,7 +949,7 @@ BOOL func_41() // Position - 0x1649 (5705)
 
 void func_42() // Position - 0x1658 (5720)
 {
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	return;
 }
 
@@ -1005,7 +1005,7 @@ BOOL func_46() // Position - 0x16CA (5834)
 		if (func_47(&unk, 120000, true))
 			return false;
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return false;
@@ -1088,7 +1088,7 @@ int func_49(int iParam0, int iParam1, BOOL bParam2) // Position - 0x17CB (6091)
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

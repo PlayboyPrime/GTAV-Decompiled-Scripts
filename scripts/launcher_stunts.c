@@ -212,7 +212,7 @@ void main() // Position - 0x0 (0)
 
 	while (!Global_39538)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (!func_111(iLocal_92, 8))
@@ -263,13 +263,13 @@ void main() // Position - 0x0 (0)
 		if (ENTITY::DOES_ENTITY_EXIST(pedLocal_83) && !ENTITY::IS_ENTITY_DEAD(pedLocal_83, false))
 		{
 			uLocal_85 = { ENTITY::GET_ENTITY_COORDS(pedLocal_83, true) };
-			fLocal_91 = SYSTEM::VDIST2(uLocal_85, uScriptParam_0.f_1[0 /*3*/]);
+			fLocal_91 = BUILTIN::VDIST2(uLocal_85, uScriptParam_0.f_1[0 /*3*/]);
 			fLocal_91 = fLocal_91;
 			uLocal_109 = { uLocal_85 };
 			uLocal_112 = { uScriptParam_0.f_1[0 /*3*/] };
 			uLocal_109.f_2 = 0f;
 			uLocal_112.f_2 = 0f;
-			fLocal_108 = SYSTEM::VDIST2(uLocal_109, uLocal_112);
+			fLocal_108 = BUILTIN::VDIST2(uLocal_109, uLocal_112);
 		
 			switch (iLocal_93)
 			{
@@ -620,7 +620,7 @@ void main() // Position - 0x0 (0)
 				
 					if (!SCRIPT::IS_THREAD_ACTIVE(iLocal_50))
 					{
-						STATS::PLAYSTATS_ODDJOB_DONE(SYSTEM::ROUND(func_13(&uLocal_105) * 1000f), iLocal_97, false);
+						STATS::PLAYSTATS_ODDJOB_DONE(BUILTIN::ROUND(func_13(&uLocal_105) * 1000f), iLocal_97, false);
 						func_12(&uLocal_105);
 						func_113(&iLocal_92, 256);
 						func_9();
@@ -781,7 +781,7 @@ void main() // Position - 0x0 (0)
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -834,7 +834,7 @@ void func_4() // Position - 0xC24 (3108)
 	while (CAM::IS_CAM_INTERPOLATING(camFrom) || CAM::IS_CAM_INTERPOLATING(camTo))
 	{
 		HUD::HIDE_HUD_AND_RADAR_THIS_FRAME();
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	CAM::STOP_RENDERING_SCRIPT_CAMS_USING_CATCH_UP(false, 0, 3, 0);
@@ -970,7 +970,7 @@ float func_14(BOOL bParam0) // Position - 0xF23 (3875)
 
 	if (bParam0)
 	{
-		num = SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER());
+		num = BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER());
 		num2 = num / 1000f;
 		return num2;
 	}
@@ -978,12 +978,12 @@ float func_14(BOOL bParam0) // Position - 0xF23 (3875)
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		networkTime = NETWORK::GET_NETWORK_TIME();
-		num3 = SYSTEM::TO_FLOAT(networkTime);
+		num3 = BUILTIN::TO_FLOAT(networkTime);
 		num4 = num3 / 1000f;
 		return num4;
 	}
 
-	return SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
+	return BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
 }
 
 BOOL func_15(int* piParam0) // Position - 0xF7B (3963)
@@ -1186,7 +1186,7 @@ int func_27() // Position - 0x1221 (4641)
 	if (ENTITY::DOES_ENTITY_EXIST(playersLastVehicle))
 		VEHICLE::SET_VEHICLE_DOORS_LOCKED(playersLastVehicle, 1);
 
-	num = SYSTEM::START_NEW_SCRIPT(&uLocal_51, essLocal_95);
+	num = BUILTIN::START_NEW_SCRIPT(&uLocal_51, essLocal_95);
 	SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED(&uLocal_51);
 	return num;
 }
@@ -1640,7 +1640,7 @@ Vector3 func_42(float fParam0, var uParam1, var uParam2) // Position - 0x1EA7 (7
 	float num;
 	float num2;
 
-	num = SYSTEM::VMAG(fParam0);
+	num = BUILTIN::VMAG(fParam0);
 
 	if (num != 0f)
 	{
@@ -2602,7 +2602,7 @@ BOOL func_103() // Position - 0x33F2 (13298)
 		return false;
 
 	entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
-	num = SYSTEM::VDIST2(entityCoords, uLocal_88);
+	num = BUILTIN::VDIST2(entityCoords, uLocal_88);
 
 	if (num < 10f * 10f)
 		return true;

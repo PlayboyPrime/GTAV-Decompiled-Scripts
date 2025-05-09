@@ -283,7 +283,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 		func_40();
 	
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
@@ -322,7 +322,7 @@ void main() // Position - 0x0 (0)
 								bLocal_56 = false;
 						}
 					
-						if (SYSTEM::TIMERA() > 125)
+						if (BUILTIN::TIMERA() > 125)
 						{
 							iLocal_35 = iLocal_68 + 1;
 						
@@ -462,7 +462,7 @@ void main() // Position - 0x0 (0)
 							if (iLocal_68 == 8)
 								iLocal_68 = 0;
 						
-							SYSTEM::SETTIMERA(0);
+							BUILTIN::SETTIMERA(0);
 						}
 					}
 					break;
@@ -1191,7 +1191,7 @@ BOOL func_34(int iParam0) // Position - 0x1088 (4232)
 
 BOOL func_35(int iParam0, Vector3 vParam1, var uParam2, var uParam3) // Position - 0x109E (4254)
 {
-	return SYSTEM::VDIST2(vParam1, func_37(iParam0)) < func_36(iParam0);
+	return BUILTIN::VDIST2(vParam1, func_37(iParam0)) < func_36(iParam0);
 }
 
 float func_36(int iParam0) // Position - 0x10BB (4283)

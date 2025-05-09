@@ -255,7 +255,7 @@ void func_1() // Position - 0x78 (120)
 
 	if (uLocal_20.f_65.f_18 > 0 && !func_14())
 	{
-		num2 = 1000 / SYSTEM::ROUND(MISC::GET_FRAME_TIME() * 1000f);
+		num2 = 1000 / BUILTIN::ROUND(MISC::GET_FRAME_TIME() * 1000f);
 	
 		if (MISC::GET_FRAME_COUNT() - uLocal_20.f_65.f_18 > num2 * 10)
 			uLocal_20.f_65.f_18 = -1;
@@ -3257,13 +3257,13 @@ void func_81(int iParam0) // Position - 0x5892 (22674)
 
 int func_82(var uParam0) // Position - 0x59BE (22974)
 {
-	*uParam0 = SYSTEM::SHIFT_LEFT(1, 2);
+	*uParam0 = BUILTIN::SHIFT_LEFT(1, 2);
 	return 5410420;
 }
 
 Hash func_83() // Position - 0x59D3 (22995)
 {
-	return SYSTEM::SHIFT_LEFT(1, 25);
+	return BUILTIN::SHIFT_LEFT(1, 25);
 }
 
 BOOL _SHOULD_NETWORK_SCRIPT_TERMINATE() // Position - 0x59E2 (23010)
@@ -3356,7 +3356,7 @@ BOOL func_91() // Position - 0x5AFA (23290)
 
 void func_92() // Position - 0x5B09 (23305)
 {
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	return;
 }
 

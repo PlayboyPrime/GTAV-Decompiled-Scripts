@@ -294,7 +294,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		if (!_IS_EXCLUSIVE_CONTENT_UNLOCKED())
 			SCRIPT::TERMINATE_THIS_THREAD();
@@ -1420,7 +1420,7 @@ float func_18(BOOL bParam0) // Position - 0x1834 (6196)
 
 	if (bParam0)
 	{
-		num = SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER());
+		num = BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER());
 		num2 = num / 1000f;
 		return num2;
 	}
@@ -1428,12 +1428,12 @@ float func_18(BOOL bParam0) // Position - 0x1834 (6196)
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		networkTime = NETWORK::GET_NETWORK_TIME();
-		num3 = SYSTEM::TO_FLOAT(networkTime);
+		num3 = BUILTIN::TO_FLOAT(networkTime);
 		num4 = num3 / 1000f;
 		return num4;
 	}
 
-	return SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
+	return BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
 }
 
 BOOL func_19(int* piParam0) // Position - 0x188C (6284)
@@ -1459,7 +1459,7 @@ void func_21() // Position - 0x18A6 (6310)
 				
 					while (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(iLocal_230))
 					{
-						SYSTEM::WAIT(0);
+						BUILTIN::WAIT(0);
 					}
 				
 					GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iLocal_230, "SHOW_BRIDGES_KNIVES_PROGRESS");
@@ -1471,7 +1471,7 @@ void func_21() // Position - 0x18A6 (6310)
 					GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 					iLocal_247 = func_26();
 					Global_33342 = iLocal_247;
-					SYSTEM::SETTIMERB(0);
+					BUILTIN::SETTIMERB(0);
 					AUDIO::PLAY_SOUND_FRONTEND(-1, "UNDER_THE_BRIDGE", "HUD_AWARDS", true);
 				}
 			
@@ -1480,13 +1480,13 @@ void func_21() // Position - 0x18A6 (6310)
 			break;
 	
 		case 1:
-			if (SYSTEM::TIMERB() > 7500 || CAM::IS_SCREEN_FADED_OUT() || !PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()) || func_29() || !PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()) || func_25() || func_24())
+			if (BUILTIN::TIMERB() > 7500 || CAM::IS_SCREEN_FADED_OUT() || !PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()) || func_29() || !PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()) || func_25() || func_24())
 			{
 				GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iLocal_230, "SHARD_ANIM_OUT");
 				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
 				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(0.33f);
 				GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_79 = 2;
 			}
 			else
@@ -1499,7 +1499,7 @@ void func_21() // Position - 0x18A6 (6310)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 500 || CAM::IS_SCREEN_FADED_OUT() || !PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()) || func_29() || !PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()) || func_25() || func_24())
+			if (BUILTIN::TIMERB() > 500 || CAM::IS_SCREEN_FADED_OUT() || !PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()) || func_29() || !PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()) || func_25() || func_24())
 			{
 				iLocal_79 = 3;
 			}

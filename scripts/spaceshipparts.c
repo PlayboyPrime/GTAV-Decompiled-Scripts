@@ -648,7 +648,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 		func_46(PLAYER::PLAYER_PED_ID());
 	
 		if (func_16(&uLocal_40, &iLocal_53) || func_15(107) == 1)
@@ -1253,7 +1253,7 @@ int func_26(var uParam0, var uParam1, Vector3 vParam2, var uParam3, var uParam4)
 
 	if (OBJECT::DOES_PICKUP_EXIST(uParam1->[num /*11*/].f_1))
 	{
-		if (SYSTEM::VDIST2(vParam2, OBJECT::GET_PICKUP_COORDS(uParam1->[num /*11*/].f_1)) > 60f * 60f || func_6(13) || func_6(14))
+		if (BUILTIN::VDIST2(vParam2, OBJECT::GET_PICKUP_COORDS(uParam1->[num /*11*/].f_1)) > 60f * 60f || func_6(13) || func_6(14))
 		{
 			func_27(&(uParam1->[num /*11*/].f_1));
 			uParam1->[num /*11*/].f_1 = 0;
@@ -1560,7 +1560,7 @@ BOOL func_41(Pickup pkParam0) // Position - 0x1381 (4993)
 			entityModel = ENTITY::GET_ENTITY_MODEL(vehiclePedIsIn);
 		
 			if (entityModel == joaat("submersible") || entityModel == joaat("submersible2"))
-				if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), OBJECT::GET_PICKUP_COORDS(pkParam0)) < 5f * 5f || ENTITY::IS_ENTITY_TOUCHING_ENTITY(PLAYER::PLAYER_PED_ID(), OBJECT::GET_PICKUP_OBJECT(pkParam0)))
+				if (BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), OBJECT::GET_PICKUP_COORDS(pkParam0)) < 5f * 5f || ENTITY::IS_ENTITY_TOUCHING_ENTITY(PLAYER::PLAYER_PED_ID(), OBJECT::GET_PICKUP_OBJECT(pkParam0)))
 					return true;
 		}
 	}
@@ -1589,14 +1589,14 @@ void func_43(var uParam0, Hash hParam1, Hash hParam2, BOOL bParam3, BOOL bParam4
 			{
 				if (!OBJECT::DOES_PICKUP_EXIST(uParam0->f_1))
 				{
-					if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), uParam0->f_3) <= 50f * 50f)
+					if (BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), uParam0->f_3) <= 50f * 50f)
 					{
 						STREAMING::REQUEST_MODEL(hParam1);
 					
 						while (!STREAMING::HAS_MODEL_LOADED(hParam1))
 						{
 							STREAMING::REQUEST_MODEL(hParam1);
-							SYSTEM::WAIT(0);
+							BUILTIN::WAIT(0);
 						}
 					
 						if (bParam3)
@@ -1643,10 +1643,10 @@ void func_44(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x1547 (54
 	
 		while (!INTERIOR::IS_INTERIOR_READY(interiorAtCoords))
 		{
-			SYSTEM::WAIT(0);
+			BUILTIN::WAIT(0);
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 		INTERIOR::UNPIN_INTERIOR(interiorAtCoords);
 	}
 

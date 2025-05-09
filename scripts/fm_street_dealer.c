@@ -2393,7 +2393,7 @@ void func_30(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4
 													num49 = 0.02f;
 													HUD::SET_TEXT_SCALE(0f, 0.35f * 0.7f);
 													HUD::SET_TEXT_COLOUR(255, 255, 255, 150);
-													GRAPHICS::DRAW_RECT(num24 - (num49 * 0.6f), num25 + (num47 * 0.75f), 0.0175f, 0.035f, SYSTEM::FLOOR(value), SYSTEM::FLOOR(value), SYSTEM::FLOOR(value), SYSTEM::FLOOR(value2), false);
+													GRAPHICS::DRAW_RECT(num24 - (num49 * 0.6f), num25 + (num47 * 0.75f), 0.0175f, 0.035f, BUILTIN::FLOOR(value), BUILTIN::FLOOR(value), BUILTIN::FLOOR(value), BUILTIN::FLOOR(value2), false);
 													HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT(&text);
 													HUD::ADD_TEXT_COMPONENT_INTEGER(Global_23987.f_6341 + num22);
 													func_59(num24 - num49, num25 + num48, 0);
@@ -2939,7 +2939,7 @@ void func_43(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, int iParam4
 	{
 		if (bParam0)
 		{
-			HUD::SET_TEXT_COLOUR(0, 0, 0, SYSTEM::FLOOR(255f * 0.8f));
+			HUD::SET_TEXT_COLOUR(0, 0, 0, BUILTIN::FLOOR(255f * 0.8f));
 		}
 		else
 		{
@@ -4051,7 +4051,7 @@ void func_70(int iParam0, BOOL bParam1) // Position - 0x5939 (22841)
 {
 	int num;
 
-	num = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(iParam0) / 32f);
+	num = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(iParam0) / 32f);
 
 	if (bParam1)
 		MISC::SET_BIT(&Global_23987.f_6618[num], iParam0 - (num * 32));
@@ -4074,27 +4074,27 @@ void func_71(BOOL bParam0, int* piParam1, int* piParam2, var uParam3) // Positio
 	}
 
 	GRAPHICS::GET_ACTUAL_SCREEN_RESOLUTION(piParam1, piParam2);
-	num = SYSTEM::TO_FLOAT(*piParam1);
-	value = SYSTEM::TO_FLOAT(*piParam2);
+	num = BUILTIN::TO_FLOAT(*piParam1);
+	value = BUILTIN::TO_FLOAT(*piParam2);
 	aspectRatio = GRAPHICS::GET_ASPECT_RATIO(false);
 
 	if (func_72(*piParam1, *piParam2))
 	{
 		*uParam3 = 1f;
-		*piParam1 = SYSTEM::ROUND(value * aspectRatio);
-		*piParam2 = SYSTEM::ROUND(value);
+		*piParam1 = BUILTIN::ROUND(value * aspectRatio);
+		*piParam2 = BUILTIN::ROUND(value);
 		return;
 	}
 
 	*uParam3 = num / value / aspectRatio;
-	*piParam1 = SYSTEM::ROUND(num / *uParam3);
-	*piParam2 = SYSTEM::ROUND(value / *uParam3);
+	*piParam1 = BUILTIN::ROUND(num / *uParam3);
+	*piParam2 = BUILTIN::ROUND(value / *uParam3);
 	return;
 }
 
 BOOL func_72(int iParam0, int iParam1) // Position - 0x5A0D (23053)
 {
-	return SYSTEM::TO_FLOAT(iParam0) / SYSTEM::TO_FLOAT(iParam1) > 3.5f;
+	return BUILTIN::TO_FLOAT(iParam0) / BUILTIN::TO_FLOAT(iParam1) > 3.5f;
 }
 
 BOOL func_73(int iParam0, BOOL bParam1, BOOL bParam2, var uParam3, var uParam4, BOOL bParam5) // Position - 0x5A28 (23080)
@@ -8398,7 +8398,7 @@ int func_198(Player plParam0, int iParam1, int iParam2, BOOL bParam3) // Positio
 					value = value + Global_262145.f_17334;
 			
 				if (!MISC::IS_STRING_NULL_OR_EMPTY(func_201(plParam0)))
-					value = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(value) * 1.05f);
+					value = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(value) * 1.05f);
 			
 				value = value * iParam2;
 				break;
@@ -8972,7 +8972,7 @@ void func_222(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	if (num4 >= x && num4 <= x2 && num5 >= y && num5 <= y2)
 	{
 		num6 = num5 - y;
-		num10 = SYSTEM::FLOOR(num6 / 0.034722f);
+		num10 = BUILTIN::FLOOR(num6 / 0.034722f);
 	
 		if (Global_23987.f_6336 == -1)
 		{
@@ -10687,7 +10687,7 @@ BOOL func_310() // Position - 0xD62E (54830)
 {
 	float num;
 
-	num = SYSTEM::VDIST(Global_2672942.f_4.f_11, iLocal_253.f_2);
+	num = BUILTIN::VDIST(Global_2672942.f_4.f_11, iLocal_253.f_2);
 
 	if (num > func_311())
 		return true;
@@ -10853,7 +10853,7 @@ int func_323() // Position - 0xD8E9 (55529)
 
 BOOL func_324() // Position - 0xD8FF (55551)
 {
-	return func_328(526, -1) || unk_0xB233964AC562A357() && func_327() != 0 && !func_325(0);
+	return func_328(526, -1) || MISC::HAS_FINALIZED_CHOSEN_CRIMINAL_CAREER() && func_327() != 0 && !func_325(0);
 }
 
 BOOL func_325(int iParam0) // Position - 0xD92F (55599)
@@ -10882,7 +10882,7 @@ int func_326(int iParam0, int iParam1) // Position - 0xD946 (55622)
 
 int func_327() // Position - 0xD975 (55669)
 {
-	return unk_0xA0A0D77ECEDD4136();
+	return MISC::GET_CHOSEN_CRIMINAL_CAREER();
 }
 
 BOOL func_328(int iParam0, int iParam1) // Position - 0xD981 (55681)
@@ -11036,7 +11036,7 @@ BOOL func_341() // Position - 0xDBA6 (56230)
 
 void func_342() // Position - 0xDBB5 (56245)
 {
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	return;
 }
 
@@ -11208,7 +11208,7 @@ void func_349(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4) /
 
 Vector3 func_350(float fParam0) // Position - 0xDFB9 (57273)
 {
-	return -SYSTEM::SIN(fParam0), SYSTEM::COS(fParam0), 0f;
+	return -BUILTIN::SIN(fParam0), BUILTIN::COS(fParam0), 0f;
 }
 
 int func_351(int iParam0) // Position - 0xDFCF (57295)
@@ -11717,7 +11717,7 @@ BOOL func_354() // Position - 0xEA2D (59949)
 		if (func_21(&unk, 120000, true))
 			return false;
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return false;
@@ -11766,7 +11766,7 @@ int func_355(int iParam0, int iParam1, BOOL bParam2) // Position - 0xEA8B (60043
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

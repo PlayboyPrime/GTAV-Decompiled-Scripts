@@ -252,14 +252,14 @@ void main() // Position - 0x0 (0)
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 		func_52();
 
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	func_23();
 	func_22();
 	func_18();
 
 	while (iLocal_70 && func_8(2, 0))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		switch (iLocal_68)
 		{
@@ -303,7 +303,7 @@ BOOL func_2() // Position - 0x11B (283)
 	if (!func_3(&unk))
 	{
 		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedLocal_71, false) };
-		num = SYSTEM::VDIST2(uLocal_175 + uLocal_180, entityCoords);
+		num = BUILTIN::VDIST2(uLocal_175 + uLocal_180, entityCoords);
 	
 		if (num < 4.5f * 4.5f)
 		{
@@ -381,7 +381,7 @@ BOOL func_4() // Position - 0x1B6 (438)
 				PED::SET_PED_INTO_VEHICLE(Global_101434, veLocal_73, 2);
 		
 			ENTITY::STOP_SYNCHRONIZED_ENTITY_ANIM(veLocal_73, -8f, true);
-			SYSTEM::WAIT(100);
+			BUILTIN::WAIT(100);
 		
 			if (!func_3(&unk))
 			{
@@ -461,7 +461,7 @@ int func_8(int iParam0, Ped pedParam1) // Position - 0x36D (877)
 		if (ENTITY::DOES_ENTITY_EXIST(pedParam1))
 		{
 			entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam1, false) };
-			num = SYSTEM::VDIST(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), entityCoords);
+			num = BUILTIN::VDIST(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), entityCoords);
 		
 			if (num > 250f)
 				if (!ENTITY::IS_ENTITY_DEAD(pedParam1, false))
@@ -643,7 +643,7 @@ void func_22() // Position - 0x6A5 (1701)
 			veLocal_73 = VEHICLE::GET_RANDOM_VEHICLE_IN_SPHERE(uLocal_180 + uLocal_172, 15f, hLocal_74, 2);
 	
 		num = num + 1;
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	ENTITY::SET_ENTITY_AS_MISSION_ENTITY(Global_101434, true, true);
@@ -2890,7 +2890,7 @@ BOOL func_29(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4, va
 						*uParam3 = { Global_101420[iParam0 /*3*/] - Global_114162.f_2367.f_539.f_2300[iParam0 /*3*/] };
 						*uParam4 = Global_101430[iParam0] - Global_114162.f_2367.f_539.f_2310[iParam0];
 					
-						if (SYSTEM::VMAG2(*uParam3) > 5f * 5f)
+						if (BUILTIN::VMAG2(*uParam3) > 5f * 5f)
 						{
 							*uParam3 = { 0f, 0f, 0f };
 							*uParam4 = 0f;
@@ -2902,7 +2902,7 @@ BOOL func_29(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4, va
 				*uParam3 = { Global_101420[iParam0 /*3*/] - Global_114162.f_2367.f_539.f_2300[iParam0 /*3*/] };
 				*uParam4 = Global_101430[iParam0] - Global_114162.f_2367.f_539.f_2310[iParam0];
 			
-				if (SYSTEM::VMAG2(*uParam3) < 0.5f * 0.5f)
+				if (BUILTIN::VMAG2(*uParam3) < 0.5f * 0.5f)
 					*uParam3 = { *uParam3 * { 1.5f, 1.5f, 1.5f } };
 			}
 			else
@@ -2921,7 +2921,7 @@ BOOL func_29(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4, va
 				*uParam3 = { Global_101420[iParam0 /*3*/] - Global_114162.f_2367.f_539.f_2300[iParam0 /*3*/] };
 				*uParam4 = Global_101430[iParam0] - Global_114162.f_2367.f_539.f_2310[iParam0];
 			
-				if (SYSTEM::VMAG2(*uParam3) < 0.5f * 0.5f)
+				if (BUILTIN::VMAG2(*uParam3) < 0.5f * 0.5f)
 					*uParam3 = { *uParam3 * { 1.5f, 1.5f, 1.5f } };
 			}
 			else
@@ -2940,7 +2940,7 @@ BOOL func_29(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4, va
 				*uParam3 = { Global_101420[iParam0 /*3*/] - Global_114162.f_2367.f_539.f_2300[iParam0 /*3*/] };
 				*uParam4 = Global_101430[iParam0] - Global_114162.f_2367.f_539.f_2310[iParam0];
 			
-				if (SYSTEM::VMAG2(*uParam3) < 0.5f * 0.5f)
+				if (BUILTIN::VMAG2(*uParam3) < 0.5f * 0.5f)
 					*uParam3 = { *uParam3 * { 1.5f, 1.5f, 1.5f } };
 			}
 			else
@@ -4689,13 +4689,13 @@ BOOL func_32(Hash hParam0, BOOL bParam1, int iParam2) // Position - 0x7C97 (3189
 	}
 	else
 	{
-		for (i = 0; i < FILES::GET_NUM_DLC_VEHICLES(); i = i + 1)
+		for (i = 0; i < EXTRAMETADATA::GET_NUM_DLC_VEHICLES(); i = i + 1)
 		{
-			if (FILES::GET_DLC_VEHICLE_DATA(i, &outData))
+			if (EXTRAMETADATA::GET_DLC_VEHICLE_DATA(i, &outData))
 			{
 				if (hParam0 == outData.f_1)
 				{
-					if (FILES::IS_CONTENT_ITEM_LOCKED(outData))
+					if (EXTRAMETADATA::IS_CONTENT_ITEM_LOCKED(outData))
 						return false;
 				
 					break;
@@ -5130,7 +5130,7 @@ BOOL func_45(var uParam0) // Position - 0x86C0 (34496)
 		if (IS_BIT_SET(Global_114162.f_7233.f_11[i], 0))
 		{
 			vector = { Global_96891[i /*9*/].f_3 };
-			num3 = SYSTEM::VDIST(entityCoords, vector);
+			num3 = BUILTIN::VDIST(entityCoords, vector);
 		
 			if (num3 > 150f)
 			{

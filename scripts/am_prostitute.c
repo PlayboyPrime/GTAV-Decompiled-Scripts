@@ -254,7 +254,7 @@ void func_1() // Position - 0x100 (256)
 				{
 					if (uLocal_56[i /*3*/].f_2)
 					{
-						if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), ENTITY::GET_ENTITY_COORDS(playerPed, true)) <= 22500f)
+						if (BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), ENTITY::GET_ENTITY_COORDS(playerPed, true)) <= 22500f)
 						{
 							if (!bLocal_54)
 							{
@@ -372,7 +372,7 @@ void func_2() // Position - 0x232 (562)
 			if (SCRIPT::HAS_SCRIPT_LOADED("pb_prostitute") && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("pb_prostitute")) <= 0 && !NETWORK::NETWORK_IS_SCRIPT_ACTIVE("pb_prostitute", PLAYER::NETWORK_PLAYER_ID_TO_INT(), true, 0))
 			{
 				args = func_13(num);
-				iLocal_55 = SYSTEM::START_NEW_SCRIPT_WITH_ARGS("pb_prostitute", &args, 1, FRIEND);
+				iLocal_55 = BUILTIN::START_NEW_SCRIPT_WITH_ARGS("pb_prostitute", &args, 1, FRIEND);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("pb_prostitute");
 				iLocal_50 = 0;
 			}
@@ -621,8 +621,8 @@ Ped func_14() // Position - 0x65D (1629)
 					entityCoords = { ENTITY::GET_ENTITY_COORDS(func_13(num), false) };
 					entityCoords2 = { ENTITY::GET_ENTITY_COORDS(ped, false) };
 					entityCoords3 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) };
-					num2 = SYSTEM::VDIST(entityCoords, entityCoords3);
-					num3 = SYSTEM::VDIST(entityCoords3, entityCoords2);
+					num2 = BUILTIN::VDIST(entityCoords, entityCoords3);
+					num3 = BUILTIN::VDIST(entityCoords3, entityCoords2);
 				
 					if (num2 > num3)
 						if (num2 - num3 > 25f)
@@ -1206,7 +1206,7 @@ BOOL func_44() // Position - 0x1213 (4627)
 
 void func_45() // Position - 0x1222 (4642)
 {
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	return;
 }
 
@@ -1343,7 +1343,7 @@ int func_54(int iParam0, int iParam1, BOOL bParam2) // Position - 0x13B0 (5040)
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

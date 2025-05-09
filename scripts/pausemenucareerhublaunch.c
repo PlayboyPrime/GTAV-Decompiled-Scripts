@@ -214,7 +214,7 @@ void main() // Position - 0x0 (0)
 		case 3:
 			while (true)
 			{
-				SYSTEM::WAIT(0);
+				BUILTIN::WAIT(0);
 			
 				if (!Global_78331)
 					HUD::PAUSE_MENU_ACTIVATE_CONTEXT(-1868898341);
@@ -1522,9 +1522,9 @@ BOOL func_25() // Position - 0x1D06 (7430)
 
 	if (!IS_BIT_SET(Global_1963593.f_3, 1) || IS_BIT_SET(Global_1963593.f_3, 2) && !NETWORK::IS_COMMERCE_STORE_OPEN() && !NETWORK::IS_COMMERCE_DATA_FETCH_IN_PROGRESS())
 	{
-		if (unk_0x483F6369B8CEE24B())
+		if (NETWORK::NETWORK_HAS_SC_MEMBERSHIP_INFO())
 		{
-			unk_0x9FA18B5CD8803086(&Global_1963593);
+			NETWORK::NETWORK_GET_SC_MEMBERSHIP_INFO(&Global_1963593);
 			MISC::SET_BIT(&(Global_1963593.f_3), 1);
 		
 			if (IS_BIT_SET(Global_1963593.f_3, 2))

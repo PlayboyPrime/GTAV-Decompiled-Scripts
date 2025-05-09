@@ -999,7 +999,7 @@ float func_14(BOOL bParam0) // Position - 0x9B6 (2486)
 
 	if (bParam0)
 	{
-		num = SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER());
+		num = BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER());
 		num2 = num / 1000f;
 		return num2;
 	}
@@ -1007,12 +1007,12 @@ float func_14(BOOL bParam0) // Position - 0x9B6 (2486)
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		networkTime = NETWORK::GET_NETWORK_TIME();
-		num3 = SYSTEM::TO_FLOAT(networkTime);
+		num3 = BUILTIN::TO_FLOAT(networkTime);
 		num4 = num3 / 1000f;
 		return num4;
 	}
 
-	return SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
+	return BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
 }
 
 BOOL func_15(int* piParam0) // Position - 0xA0E (2574)
@@ -1691,7 +1691,7 @@ BOOL func_45() // Position - 0x1F1A (7962)
 			if (func_28(PLAYER::PLAYER_ID()) == 225 || func_28(PLAYER::PLAYER_ID()) == 233 || func_122(PLAYER::PLAYER_ID()) || Global_1836740 || func_24() || NETWORK::NETWORK_IS_ACTIVITY_SESSION() && func_10())
 				VEHICLE::SET_VEHICLE_MODEL_IS_SUPPRESSED(joaat("rhino"), true);
 		
-			if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), -2076.3735f, 3112.294f, 33.13584f) >= 1030225f)
+			if (BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), -2076.3735f, 3112.294f, 33.13584f) >= 1030225f)
 				uLocal_391.f_6 = 4;
 			break;
 	
@@ -3083,12 +3083,12 @@ void func_112(int iParam0) // Position - 0x3E86 (16006)
 		case 1:
 			if (!func_52(uLocal_134[NETWORK::PARTICIPANT_ID_TO_INT() /*8*/].f_1[iParam0], 1))
 				if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
-					if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(ped, true)) <= 900f)
+					if (BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(ped, true)) <= 900f)
 						func_51(&uLocal_134[NETWORK::PARTICIPANT_ID_TO_INT() /*8*/].f_1[iParam0], 1);
 			break;
 	
 		case 2:
-			if (!func_52(uLocal_134[NETWORK::PARTICIPANT_ID_TO_INT() /*8*/].f_1[iParam0], 2) && SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(ped, true)) <= 900f && !_IS_PLAYER_IN_ANIMAL_FORM(PLAYER::PLAYER_ID()))
+			if (!func_52(uLocal_134[NETWORK::PARTICIPANT_ID_TO_INT() /*8*/].f_1[iParam0], 2) && BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(ped, true)) <= 900f && !_IS_PLAYER_IN_ANIMAL_FORM(PLAYER::PLAYER_ID()))
 			{
 				_CONVERSATION_INITIALIZE_ACTOR(&(uLocal_391.f_7), 4, ped, "ARMY_Guard01", 0, 1);
 				_CONVERSATION_ADD_LINE_0(&(uLocal_391.f_7), "ARMYAUD", "ARMY_WRN1", 12, 0, 0, 0);
@@ -3108,7 +3108,7 @@ void func_112(int iParam0) // Position - 0x3E86 (16006)
 			break;
 	
 		case 4:
-			if (!func_52(uLocal_134[NETWORK::PARTICIPANT_ID_TO_INT() /*8*/].f_1[iParam0], 8) && SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), ENTITY::GET_ENTITY_COORDS(ped, true)) <= 900f && PLAYER::GET_PLAYER_WANTED_LEVEL(PLAYER::PLAYER_ID()) < 1)
+			if (!func_52(uLocal_134[NETWORK::PARTICIPANT_ID_TO_INT() /*8*/].f_1[iParam0], 8) && BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), ENTITY::GET_ENTITY_COORDS(ped, true)) <= 900f && PLAYER::GET_PLAYER_WANTED_LEVEL(PLAYER::PLAYER_ID()) < 1)
 			{
 				if (!func_19(&uLocal_391))
 					func_16(&uLocal_391);
@@ -3126,7 +3126,7 @@ void func_112(int iParam0) // Position - 0x3E86 (16006)
 		
 			if (!func_52(uLocal_134[NETWORK::PARTICIPANT_ID_TO_INT() /*8*/].f_1[iParam0], 16))
 			{
-				if (func_113(iParam0) && SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), ENTITY::GET_ENTITY_COORDS(ped, true)) <= 900f)
+				if (func_113(iParam0) && BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), ENTITY::GET_ENTITY_COORDS(ped, true)) <= 900f)
 				{
 					func_51(&uLocal_134[NETWORK::PARTICIPANT_ID_TO_INT() /*8*/].f_1[iParam0], 16);
 				
@@ -3139,14 +3139,14 @@ void func_112(int iParam0) // Position - 0x3E86 (16006)
 		
 			if (func_52(uLocal_134[NETWORK::PARTICIPANT_ID_TO_INT() /*8*/].f_1[iParam0], 1))
 				if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
-					if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(ped, true)) > 900f)
+					if (BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(ped, true)) > 900f)
 						func_47(&uLocal_134[NETWORK::PARTICIPANT_ID_TO_INT() /*8*/].f_1[iParam0], 1);
 			break;
 	
 		case 5:
 			if (!func_52(uLocal_134[NETWORK::PARTICIPANT_ID_TO_INT() /*8*/].f_1[iParam0], 16))
 			{
-				if (func_113(iParam0) && SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), ENTITY::GET_ENTITY_COORDS(ped, true)) <= 900f)
+				if (func_113(iParam0) && BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), ENTITY::GET_ENTITY_COORDS(ped, true)) <= 900f)
 				{
 					func_51(&uLocal_134[NETWORK::PARTICIPANT_ID_TO_INT() /*8*/].f_1[iParam0], 16);
 				
@@ -3159,7 +3159,7 @@ void func_112(int iParam0) // Position - 0x3E86 (16006)
 		
 			if (func_52(uLocal_134[NETWORK::PARTICIPANT_ID_TO_INT() /*8*/].f_1[iParam0], 1))
 				if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
-					if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(ped, true)) > 900f)
+					if (BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(ped, true)) > 900f)
 						func_47(&uLocal_134[NETWORK::PARTICIPANT_ID_TO_INT() /*8*/].f_1[iParam0], 1);
 		
 			if (!func_114(iParam0, SCRIPT_TASK_AIM_GUN_AT_ENTITY))
@@ -3212,7 +3212,7 @@ BOOL func_113(int iParam0) // Position - 0x435F (17247)
 	if (PLAYER::IS_PLAYER_TARGETTING_ENTITY(PLAYER::PLAYER_ID(), ped))
 		return true;
 
-	if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(ped, true)) <= 64f)
+	if (BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(ped, true)) <= 64f)
 		return true;
 
 	return false;
@@ -3254,7 +3254,7 @@ Ped func_115(int iParam0) // Position - 0x444B (17483)
 		
 			if (!ENTITY::IS_ENTITY_DEAD(playerPed, false))
 			{
-				num2 = SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(playerPed, true), ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_ENT(uLocal_107[iParam0]), true));
+				num2 = BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(playerPed, true), ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_ENT(uLocal_107[iParam0]), true));
 			
 				if (num2 < num)
 				{
@@ -3443,7 +3443,7 @@ BOOL func_129() // Position - 0x481C (18460)
 	if (NETWORK::NETWORK_GET_NUM_PARTICIPANTS() > 1)
 		return false;
 
-	if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), -2076.3735f, 3112.294f, 33.13584f) >= 1030225f)
+	if (BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), -2076.3735f, 3112.294f, 33.13584f) >= 1030225f)
 		return true;
 
 	return false;
@@ -3743,7 +3743,7 @@ void func_137(Vector3 vParam0, var uParam1, var uParam2, float fParam3, Hash hPa
 
 	if (func_138(PLAYER::PLAYER_ID(), vParam0, hParam4) > -1)
 	{
-		if (Global_2635516.f_3231[1 /*6*/].f_5 == veParam5 && Global_2635516.f_3231[1 /*6*/].f_4 == hParam4 && SYSTEM::VDIST(Global_2635516.f_3231[1 /*6*/], vParam0) < 0.5f)
+		if (Global_2635516.f_3231[1 /*6*/].f_5 == veParam5 && Global_2635516.f_3231[1 /*6*/].f_4 == hParam4 && BUILTIN::VDIST(Global_2635516.f_3231[1 /*6*/], vParam0) < 0.5f)
 			return;
 	
 		for (i = 0; i < 2; i = i + 1)
@@ -3780,7 +3780,7 @@ int func_138(Player plParam0, var uParam1, var uParam2, var uParam3, Hash hParam
 				if (MISC::ABSF(Global_2648917.f_461[player /*11*/][i /*5*/].f_2 - vector.f_2) < 2f)
 					vector.f_2 = Global_2648917.f_461[player /*11*/][i /*5*/].f_2;
 			
-				if (SYSTEM::VDIST(Global_2648917.f_461[player /*11*/][i /*5*/], vector) < 0.5f)
+				if (BUILTIN::VDIST(Global_2648917.f_461[player /*11*/][i /*5*/], vector) < 0.5f)
 					return i;
 			}
 		}
@@ -3807,7 +3807,7 @@ Vector3 func_140(int iParam0) // Position - 0x5017 (20503)
 	if (ENTITY::IS_ENTITY_DEAD(playerPed, false))
 		return 0f, 0f, 0f;
 
-	offsetFromCoordAndHeadingInWorldCoords = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(ENTITY::GET_ENTITY_COORDS(playerPed, true), ENTITY::GET_ENTITY_HEADING(playerPed), 0f, -250f, 40f * SYSTEM::TO_FLOAT(iParam0)) };
+	offsetFromCoordAndHeadingInWorldCoords = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(ENTITY::GET_ENTITY_COORDS(playerPed, true), ENTITY::GET_ENTITY_HEADING(playerPed), 0f, -250f, 40f * BUILTIN::TO_FLOAT(iParam0)) };
 
 	if (offsetFromCoordAndHeadingInWorldCoords.f_2 < 100f)
 		offsetFromCoordAndHeadingInWorldCoords.f_2 = 100f;
@@ -4790,7 +4790,7 @@ BOOL func_179(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x6917 (269
 
 void func_180() // Position - 0x692B (26923)
 {
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	return;
 }
 
@@ -4887,7 +4887,7 @@ BOOL func_185() // Position - 0x6A67 (27239)
 		if (func_104(&unk, 120000, true))
 			return false;
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return false;
@@ -4936,7 +4936,7 @@ int func_186(int iParam0, int iParam1, BOOL bParam2) // Position - 0x6AC5 (27333
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

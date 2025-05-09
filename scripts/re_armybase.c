@@ -638,9 +638,9 @@ void main() // Position - 0x0 (0)
 				if (bLocal_539)
 				{
 					func_38();
-					SYSTEM::WAIT(100);
+					BUILTIN::WAIT(100);
 					func_3();
-					SYSTEM::WAIT(100);
+					BUILTIN::WAIT(100);
 					func_1();
 				}
 				else
@@ -654,7 +654,7 @@ void main() // Position - 0x0 (0)
 				break;
 		}
 	
-		SYSTEM::WAIT(iLocal_536);
+		BUILTIN::WAIT(iLocal_536);
 	}
 
 	return;
@@ -781,7 +781,7 @@ void func_1() // Position - 0x29B (667)
 						if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 							entityCoords2 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
 					
-						if (ENTITY::IS_ENTITY_OCCLUDED(pedLocal_411) && !CAM::IS_SPHERE_VISIBLE(uLocal_419, 50f) && SYSTEM::VDIST2(entityCoords2, entityCoords) > 10000f)
+						if (ENTITY::IS_ENTITY_OCCLUDED(pedLocal_411) && !CAM::IS_SPHERE_VISIBLE(uLocal_419, 50f) && BUILTIN::VDIST2(entityCoords2, entityCoords) > 10000f)
 						{
 							MISC::CLEAR_AREA_OF_VEHICLES(uLocal_419, 10f, false, false, false, false, false, false, 0);
 							ENTITY::SET_ENTITY_COORDS(pedLocal_411, uLocal_419, true, false, false, true);
@@ -1179,7 +1179,7 @@ float func_7(BOOL bParam0) // Position - 0x101D (4125)
 
 	if (bParam0)
 	{
-		num = SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER());
+		num = BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER());
 		num2 = num / 1000f;
 		return num2;
 	}
@@ -1187,12 +1187,12 @@ float func_7(BOOL bParam0) // Position - 0x101D (4125)
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		networkTime = NETWORK::GET_NETWORK_TIME();
-		num3 = SYSTEM::TO_FLOAT(networkTime);
+		num3 = BUILTIN::TO_FLOAT(networkTime);
 		num4 = num3 / 1000f;
 		return num4;
 	}
 
-	return SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
+	return BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
 }
 
 BOOL func_8(int* piParam0) // Position - 0x1075 (4213)
@@ -1786,7 +1786,7 @@ void func_35() // Position - 0x19B5 (6581)
 				if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 					entityCoords2 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
 			
-				if (ENTITY::IS_ENTITY_OCCLUDED(pedLocal_222) && !CAM::IS_SPHERE_VISIBLE(uLocal_230, 50f) && SYSTEM::VDIST2(entityCoords2, entityCoords) > 10000f)
+				if (ENTITY::IS_ENTITY_OCCLUDED(pedLocal_222) && !CAM::IS_SPHERE_VISIBLE(uLocal_230, 50f) && BUILTIN::VDIST2(entityCoords2, entityCoords) > 10000f)
 				{
 					MISC::CLEAR_AREA_OF_VEHICLES(uLocal_230, 10f, false, false, false, false, false, false, 0);
 					ENTITY::SET_ENTITY_COORDS(pedLocal_222, uLocal_230, true, false, false, true);
@@ -2661,7 +2661,7 @@ BOOL func_54() // Position - 0x390E (14606)
 
 	while (!STREAMING::HAS_MODEL_LOADED(joaat("S_M_Y_Marine_01")))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))

@@ -401,7 +401,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		if (Global_1929778)
 		{
@@ -2390,9 +2390,9 @@ BOOL func_1(int* piParam0, int* piParam1) // Position - 0xD8 (216)
 		if (!piParam0->f_291)
 		{
 			if (piParam0->f_293)
-				piParam0->f_289 = SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER() - piParam0->f_13);
+				piParam0->f_289 = BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER() - piParam0->f_13);
 			else
-				piParam0->f_289 = SYSTEM::TO_FLOAT(func_37(piParam0));
+				piParam0->f_289 = BUILTIN::TO_FLOAT(func_37(piParam0));
 		
 			piParam0->f_290 = func_8(piParam0);
 		}
@@ -2633,17 +2633,17 @@ float func_8(int* piParam0) // Position - 0x3C3E (15422)
 	{
 		if (func_88(piParam0))
 		{
-			num = SYSTEM::TO_FLOAT(piParam0->f_27 + CUTSCENE::GET_CUTSCENE_TIME());
+			num = BUILTIN::TO_FLOAT(piParam0->f_27 + CUTSCENE::GET_CUTSCENE_TIME());
 		
 			if (CUTSCENE::GET_CUTSCENE_CONCAT_SECTION_PLAYING() > 2)
 			{
-				num2 = (num - 134735f) / SYSTEM::TO_FLOAT(52633);
+				num2 = (num - 134735f) / BUILTIN::TO_FLOAT(52633);
 				num = 83986f + (num2 * 50715f);
 			}
 		}
 		else
 		{
-			num = SYSTEM::TO_FLOAT(piParam0->f_27 + CUTSCENE::GET_CUTSCENE_TIME());
+			num = BUILTIN::TO_FLOAT(piParam0->f_27 + CUTSCENE::GET_CUTSCENE_TIME());
 		}
 	
 		return num;
@@ -6199,7 +6199,7 @@ void _STOPWATCH_DESTROY(var uParam0) // Position - 0x957E (38270)
 
 Vector3 func_137(float fParam0, float fParam1, float fParam2) // Position - 0x958B (38283)
 {
-	return -SYSTEM::SIN(fParam0.f_2) * SYSTEM::COS(fParam0), SYSTEM::COS(fParam0.f_2) * SYSTEM::COS(fParam0), SYSTEM::SIN(fParam0);
+	return -BUILTIN::SIN(fParam0.f_2) * BUILTIN::COS(fParam0), BUILTIN::COS(fParam0.f_2) * BUILTIN::COS(fParam0), BUILTIN::SIN(fParam0);
 }
 
 int func_138() // Position - 0x95B8 (38328)
@@ -9358,7 +9358,7 @@ void func_194(int iParam0) // Position - 0xE1F4 (57844)
 	func_197();
 
 	if (iParam0 == 0)
-		if (LOADINGSCREEN::LOBBY_AUTO_MULTIPLAYER_FREEMODE())
+		if (LOBBY::LOBBY_AUTO_MULTIPLAYER_FREEMODE())
 			return;
 
 	if (func_196() == 0 || HUD::IS_PAUSE_MENU_ACTIVE())

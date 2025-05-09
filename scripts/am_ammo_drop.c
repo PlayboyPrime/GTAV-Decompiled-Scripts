@@ -1609,7 +1609,7 @@ void func_34(int iParam0, int iParam1, int iParam2, int iParam3) // Position - 0
 	if (num > 0)
 	{
 		num3 = 100f - iParam3;
-		num2 = SYSTEM::FLOOR((float)num * (num3 / 100f));
+		num2 = BUILTIN::FLOOR((float)num * (num3 / 100f));
 	}
 	else
 	{
@@ -2716,10 +2716,10 @@ int func_81() // Position - 0x2B69 (11113)
 				PED::SET_PED_RELATIONSHIP_GROUP_HASH(NETWORK::NET_TO_PED(iLocal_59.f_3), Global_1837369);
 				PED::SET_PED_RANDOM_COMPONENT_VARIATION(NETWORK::NET_TO_PED(iLocal_59.f_3), 0);
 				PED::SET_PED_KEEP_TASK(NETWORK::NET_TO_PED(iLocal_59.f_3), true);
-				ENTITY::SET_ENTITY_HEALTH(NETWORK::NET_TO_PED(iLocal_59.f_3), SYSTEM::ROUND(200f * Global_262145.f_156), 0, 0);
+				ENTITY::SET_ENTITY_HEALTH(NETWORK::NET_TO_PED(iLocal_59.f_3), BUILTIN::ROUND(200f * Global_262145.f_156), 0, 0);
 				func_130();
 				TASK::TASK_PERFORM_SEQUENCE(NETWORK::NET_TO_PED(iLocal_59.f_3), iLocal_181);
-				VEHICLE::SET_TASK_VEHICLE_GOTO_PLANE_MIN_HEIGHT_ABOVE_TERRAIN(NETWORK::NET_TO_VEH(iLocal_59.f_2), SYSTEM::ROUND(50f));
+				VEHICLE::SET_TASK_VEHICLE_GOTO_PLANE_MIN_HEIGHT_ABOVE_TERRAIN(NETWORK::NET_TO_VEH(iLocal_59.f_2), BUILTIN::ROUND(50f));
 			}
 		}
 	}
@@ -2866,7 +2866,7 @@ void func_85(Vector3 vParam0, var uParam1, var uParam2, float fParam3, Hash hPar
 
 	if (func_86(PLAYER::PLAYER_ID(), vParam0, hParam4) > -1)
 	{
-		if (Global_2635516.f_3231[1 /*6*/].f_5 == veParam5 && Global_2635516.f_3231[1 /*6*/].f_4 == hParam4 && SYSTEM::VDIST(Global_2635516.f_3231[1 /*6*/], vParam0) < 0.5f)
+		if (Global_2635516.f_3231[1 /*6*/].f_5 == veParam5 && Global_2635516.f_3231[1 /*6*/].f_4 == hParam4 && BUILTIN::VDIST(Global_2635516.f_3231[1 /*6*/], vParam0) < 0.5f)
 			return;
 	
 		for (i = 0; i < 2; i = i + 1)
@@ -2903,7 +2903,7 @@ int func_86(Player plParam0, var uParam1, var uParam2, var uParam3, Hash hParam4
 				if (MISC::ABSF(Global_2648917.f_461[player /*11*/][i /*5*/].f_2 - vector.f_2) < 2f)
 					vector.f_2 = Global_2648917.f_461[player /*11*/][i /*5*/].f_2;
 			
-				if (SYSTEM::VDIST(Global_2648917.f_461[player /*11*/][i /*5*/], vector) < 0.5f)
+				if (BUILTIN::VDIST(Global_2648917.f_461[player /*11*/][i /*5*/], vector) < 0.5f)
 					return i;
 			}
 		}
@@ -3245,7 +3245,7 @@ Vector3 func_106(Vector3 vParam0, var uParam1, var uParam2, float fParam3) // Po
 	if (fParam3 == 0f)
 		return 0f, 0f, 0f;
 
-	num = SYSTEM::VMAG(vParam0);
+	num = BUILTIN::VMAG(vParam0);
 
 	if (num != 0f)
 		return vParam0 * { fParam3 / num, fParam3 / num, fParam3 / num };
@@ -3942,7 +3942,7 @@ BOOL func_142() // Position - 0x4658 (18008)
 
 void func_143() // Position - 0x4667 (18023)
 {
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	return;
 }
 
@@ -4025,7 +4025,7 @@ void func_144() // Position - 0x4674 (18036)
 			if (num2 == 1 && num3 == 1 && num == 1)
 				i = 9999;
 			else
-				SYSTEM::WAIT(0);
+				BUILTIN::WAIT(0);
 		}
 	
 		MISC::CLEAR_BIT(&(Global_2739945.f_920), 2);
@@ -4183,7 +4183,7 @@ BOOL func_151() // Position - 0x49E3 (18915)
 		if (func_107(&unk, 120000, true))
 			return false;
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return false;
@@ -4232,7 +4232,7 @@ int func_152(int iParam0, int iParam1, BOOL bParam2) // Position - 0x4A41 (19009
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

@@ -206,7 +206,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		switch (iLocal_37)
 		{
@@ -1556,14 +1556,14 @@ void func_29(var uParam0, Hash hParam1, Hash hParam2, BOOL bParam3, BOOL bParam4
 			{
 				if (!OBJECT::DOES_PICKUP_EXIST(uParam0->f_1))
 				{
-					if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), uParam0->f_3) <= 50f * 50f)
+					if (BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), uParam0->f_3) <= 50f * 50f)
 					{
 						STREAMING::REQUEST_MODEL(hParam1);
 					
 						while (!STREAMING::HAS_MODEL_LOADED(hParam1))
 						{
 							STREAMING::REQUEST_MODEL(hParam1);
-							SYSTEM::WAIT(0);
+							BUILTIN::WAIT(0);
 						}
 					
 						if (bParam3)
@@ -1610,10 +1610,10 @@ void func_30(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x1B2E (69
 	
 		while (!INTERIOR::IS_INTERIOR_READY(interiorAtCoords))
 		{
-			SYSTEM::WAIT(0);
+			BUILTIN::WAIT(0);
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 		INTERIOR::UNPIN_INTERIOR(interiorAtCoords);
 	}
 
@@ -1665,7 +1665,7 @@ void func_33(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x1C05 (71
 
 BOOL func_34(Ped pedParam0, Vector3 vParam1, var uParam2, var uParam3, float fParam4, BOOL bParam5) // Position - 0x1C30 (7216)
 {
-	return SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(pedParam0, bParam5), vParam1) <= fParam4 * fParam4;
+	return BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(pedParam0, bParam5), vParam1) <= fParam4 * fParam4;
 }
 
 int func_35() // Position - 0x1C4E (7246)
@@ -1731,7 +1731,7 @@ BOOL func_40(Pickup pkParam0) // Position - 0x1D10 (7440)
 			entityModel = ENTITY::GET_ENTITY_MODEL(vehiclePedIsIn);
 		
 			if (entityModel == joaat("submersible") || entityModel == joaat("submersible2"))
-				if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), OBJECT::GET_PICKUP_COORDS(pkParam0)) < 5f * 5f || ENTITY::IS_ENTITY_TOUCHING_ENTITY(PLAYER::PLAYER_PED_ID(), OBJECT::GET_PICKUP_OBJECT(pkParam0)))
+				if (BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), OBJECT::GET_PICKUP_COORDS(pkParam0)) < 5f * 5f || ENTITY::IS_ENTITY_TOUCHING_ENTITY(PLAYER::PLAYER_PED_ID(), OBJECT::GET_PICKUP_OBJECT(pkParam0)))
 					return true;
 		}
 	}

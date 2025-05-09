@@ -771,14 +771,14 @@ void main() // Position - 0x0 (0)
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 		func_58();
 
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	func_48();
 	func_47();
 	func_43();
 
 	while (iLocal_235 && func_39(4, 0))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		switch (iLocal_68)
 		{
@@ -846,7 +846,7 @@ BOOL func_2() // Position - 0x12E (302)
 
 	entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
 
-	if (SYSTEM::VDIST(entityCoords, uLocal_272) < 100f)
+	if (BUILTIN::VDIST(entityCoords, uLocal_272) < 100f)
 		return false;
 
 	for (i = 0; i < iLocal_236; i = i + 1)
@@ -855,7 +855,7 @@ BOOL func_2() // Position - 0x12E (302)
 		{
 			entityCoords2 = { ENTITY::GET_ENTITY_COORDS(iLocal_236[i], true) };
 		
-			if (SYSTEM::VDIST(entityCoords, entityCoords2) < 100f)
+			if (BUILTIN::VDIST(entityCoords, entityCoords2) < 100f)
 				return false;
 		}
 	}
@@ -1559,7 +1559,7 @@ void func_26(Ped pedParam0, int iParam1) // Position - 0xAF9 (2809)
 				if (TASK::GET_SCRIPT_TASK_STATUS(pedParam0, SCRIPT_TASK_FOLLOW_NAV_MESH_TO_COORD) != 1)
 				{
 					if (uLocal_293[iParam1] == 0f)
-						uLocal_293[iParam1] = SYSTEM::VMAG(uLocal_283[iParam1 /*3*/]) * 0.75f;
+						uLocal_293[iParam1] = BUILTIN::VMAG(uLocal_283[iParam1 /*3*/]) * 0.75f;
 				
 					TASK::TASK_WANDER_IN_AREA(pedParam0, uLocal_272 + uLocal_283[iParam1 /*3*/], uLocal_293[iParam1], 1077936128, 1086324736);
 					iLocal_239[iParam1] = 2;
@@ -1888,7 +1888,7 @@ BOOL func_29(Ped pedParam0) // Position - 0x171C (5916)
 
 	if (iLocal_69 == 237)
 	{
-		num = SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(pedParam0, false), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false));
+		num = BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(pedParam0, false), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false));
 	
 		if (num < 10f * 10f)
 			return true;
@@ -2216,7 +2216,7 @@ int func_39(int iParam0, Entity eParam1) // Position - 0x1D61 (7521)
 		if (ENTITY::DOES_ENTITY_EXIST(eParam1))
 		{
 			entityCoords = { ENTITY::GET_ENTITY_COORDS(eParam1, false) };
-			num = SYSTEM::VDIST(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), entityCoords);
+			num = BUILTIN::VDIST(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), entityCoords);
 		
 			if (num > 250f)
 				if (!ENTITY::IS_ENTITY_DEAD(eParam1, false))
@@ -2366,7 +2366,7 @@ void func_47() // Position - 0x1F11 (7953)
 		if (!flag)
 			num = num + 1;
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	for (i = 0; i < iLocal_236; i = i + 1)
@@ -3685,7 +3685,7 @@ BOOL func_52(var uParam0) // Position - 0x436C (17260)
 		if (IS_BIT_SET(Global_114162.f_7233.f_11[i], 0))
 		{
 			vector = { Global_96891[i /*9*/].f_3 };
-			num3 = SYSTEM::VDIST(entityCoords, vector);
+			num3 = BUILTIN::VDIST(entityCoords, vector);
 		
 			if (num3 > 150f)
 			{

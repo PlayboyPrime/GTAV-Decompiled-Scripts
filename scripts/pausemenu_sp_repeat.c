@@ -249,10 +249,10 @@ void main() // Position - 0x0 (0)
 		
 			while (!SCRIPT::HAS_SCRIPT_WITH_NAME_HASH_LOADED(-43879923))
 			{
-				SYSTEM::WAIT(0);
+				BUILTIN::WAIT(0);
 			}
 		
-			SYSTEM::START_NEW_SCRIPT_WITH_NAME_HASH_AND_ARGS(-43879923, &iScriptParam_0, 4, DEFAULT);
+			BUILTIN::START_NEW_SCRIPT_WITH_NAME_HASH_AND_ARGS(-43879923, &iScriptParam_0, 4, DEFAULT);
 		}
 	
 		SCRIPT::TERMINATE_THIS_THREAD();
@@ -265,10 +265,10 @@ void main() // Position - 0x0 (0)
 		
 			while (!SCRIPT::HAS_SCRIPT_WITH_NAME_HASH_LOADED(1179280373))
 			{
-				SYSTEM::WAIT(0);
+				BUILTIN::WAIT(0);
 			}
 		
-			SYSTEM::START_NEW_SCRIPT_WITH_NAME_HASH_AND_ARGS(1179280373, &iScriptParam_0, 4, DEFAULT);
+			BUILTIN::START_NEW_SCRIPT_WITH_NAME_HASH_AND_ARGS(1179280373, &iScriptParam_0, 4, DEFAULT);
 		}
 	
 		SCRIPT::TERMINATE_THIS_THREAD();
@@ -1659,7 +1659,7 @@ float func_49(int iParam0, int iParam1, BOOL bParam2, int iParam3, int iParam4) 
 		num = iParam4;
 
 	if (iParam3 > -1)
-		value = SYSTEM::TO_FLOAT(iParam3);
+		value = BUILTIN::TO_FLOAT(iParam3);
 
 	if (num == 0)
 	{
@@ -1746,9 +1746,9 @@ float func_52(int iParam0, int iParam1, BOOL bParam2) // Position - 0x191E (6430
 	if (iParam0 == iParam1)
 		return 100f;
 
-	num = SYSTEM::TO_FLOAT(iParam0) / SYSTEM::TO_FLOAT(iParam1);
+	num = BUILTIN::TO_FLOAT(iParam0) / BUILTIN::TO_FLOAT(iParam1);
 	value = (50f * num) + 50f;
-	value = SYSTEM::TO_FLOAT(SYSTEM::CEIL(value));
+	value = BUILTIN::TO_FLOAT(BUILTIN::CEIL(value));
 
 	if (value > 100f)
 		value = 100f;
@@ -3172,7 +3172,7 @@ void func_59(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4, 
 {
 	float value;
 
-	value = (SYSTEM::TO_FLOAT(iParam0) / SYSTEM::TO_FLOAT(iParam1)) * 100f;
+	value = (BUILTIN::TO_FLOAT(iParam0) / BUILTIN::TO_FLOAT(iParam1)) * 100f;
 
 	if (iParam6 != 0)
 	{
@@ -3187,7 +3187,7 @@ void func_59(int iParam0, int iParam1, int iParam2, int iParam3, char* sParam4, 
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iParam2);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iParam3);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(3);
-	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::CEIL(value));
+	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(BUILTIN::CEIL(value));
 
 	if (iParam6 == 0)
 	{
@@ -3241,8 +3241,8 @@ void func_61(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4, 
 	int value;
 	int value2;
 
-	value = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(iParam0) / 60000f);
-	value2 = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(iParam0) / 1000f) - (value * 60);
+	value = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(iParam0) / 60000f);
+	value2 = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(iParam0) / 1000f) - (value * 60);
 
 	if (iParam5 != 0)
 	{

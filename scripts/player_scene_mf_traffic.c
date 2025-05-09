@@ -279,7 +279,7 @@ void main() // Position - 0x0 (0)
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 		func_56();
 
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	func_37();
 	func_33();
 	func_29();
@@ -289,7 +289,7 @@ void main() // Position - 0x0 (0)
 		if (func_16())
 			func_56();
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		switch (iLocal_68)
 		{
@@ -341,7 +341,7 @@ BOOL func_2() // Position - 0x118 (280)
 			{
 				randomFloatInRange = MISC::GET_RANDOM_FLOAT_IN_RANGE(0.5f, 1f);
 				randomFloatInRange2 = MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 0.5f);
-				VEHICLE::START_VEHICLE_HORN(iLocal_76[randomIntInRange], SYSTEM::ROUND(randomFloatInRange * 1000f), 0, false);
+				VEHICLE::START_VEHICLE_HORN(iLocal_76[randomIntInRange], BUILTIN::ROUND(randomFloatInRange * 1000f), 0, false);
 				func_3(&uLocal_240, randomFloatInRange2);
 			}
 		}
@@ -372,7 +372,7 @@ float func_4(BOOL bParam0) // Position - 0x1DD (477)
 
 	if (bParam0)
 	{
-		num = SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER());
+		num = BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER());
 		num2 = num / 1000f;
 		return num2;
 	}
@@ -380,12 +380,12 @@ float func_4(BOOL bParam0) // Position - 0x1DD (477)
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		networkTime = NETWORK::GET_NETWORK_TIME();
-		num3 = SYSTEM::TO_FLOAT(networkTime);
+		num3 = BUILTIN::TO_FLOAT(networkTime);
 		num4 = num3 / 1000f;
 		return num4;
 	}
 
-	return SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
+	return BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
 }
 
 BOOL func_5(var uParam0, float fParam1) // Position - 0x235 (565)
@@ -447,7 +447,7 @@ BOOL func_11() // Position - 0x2C9 (713)
 			{
 				num = MISC::GET_RANDOM_FLOAT_IN_RANGE(0.5f, 1f) * 2f;
 				num2 = MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 0.5f) * 2f;
-				VEHICLE::START_VEHICLE_HORN(iLocal_76[randomIntInRange], SYSTEM::ROUND(num * 1000f), 0, false);
+				VEHICLE::START_VEHICLE_HORN(iLocal_76[randomIntInRange], BUILTIN::ROUND(num * 1000f), 0, false);
 				func_3(&uLocal_240, num2);
 			}
 		}
@@ -668,7 +668,7 @@ int func_20(int iParam0, Entity eParam1) // Position - 0x6DE (1758)
 		if (ENTITY::DOES_ENTITY_EXIST(eParam1))
 		{
 			entityCoords = { ENTITY::GET_ENTITY_COORDS(eParam1, false) };
-			num = SYSTEM::VDIST(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), entityCoords);
+			num = BUILTIN::VDIST(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), entityCoords);
 		
 			if (num > 250f)
 				if (!ENTITY::IS_ENTITY_DEAD(eParam1, false))
@@ -966,7 +966,7 @@ void func_33() // Position - 0xA08 (2568)
 		if (!flag)
 			num = num + 1;
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	for (i = 0; i < 12; i = i + 1)
@@ -1630,7 +1630,7 @@ void func_48(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	for (i = 2; i <= *uParam0 - 1; i = i + 1)
 	{
 		uParam0->[i /*3*/] = { uParam0->[i - 2 /*3*/] };
-		uParam0->[i /*3*/] = { uParam0->[i /*3*/] + (unk * F2V(1f + (SYSTEM::TO_FLOAT(i) / SYSTEM::TO_FLOAT((*uParam0 + 1) - 2)))) };
+		uParam0->[i /*3*/] = { uParam0->[i /*3*/] + (unk * F2V(1f + (BUILTIN::TO_FLOAT(i) / BUILTIN::TO_FLOAT((*uParam0 + 1) - 2)))) };
 		uParam0->[i /*3*/] = { uParam0->[i /*3*/] + func_45(-1090519040, 1056964608) };
 		uParam1->[i] = MISC::GET_RANDOM_FLOAT_IN_RANGE(-22f, -15f);
 	}
@@ -1758,7 +1758,7 @@ BOOL func_50(var uParam0) // Position - 0x2A58 (10840)
 		if (IS_BIT_SET(Global_114162.f_7233.f_11[i], 0))
 		{
 			vector = { Global_96891[i /*9*/].f_3 };
-			num3 = SYSTEM::VDIST(entityCoords, vector);
+			num3 = BUILTIN::VDIST(entityCoords, vector);
 		
 			if (num3 > 150f)
 			{

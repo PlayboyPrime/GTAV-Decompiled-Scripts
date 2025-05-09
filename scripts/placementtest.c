@@ -104,7 +104,7 @@ void main() // Position - 0x0 (0)
 			func_1(&scaleformHandle, false);
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -126,7 +126,7 @@ BOOL func_1(var uParam0, BOOL bParam1) // Position - 0xEF (239)
 	if (uParam0->f_1 == -1)
 		return true;
 
-	if (func_3(&(uParam0->f_2)) * 1000f > SYSTEM::TO_FLOAT(uParam0->f_1))
+	if (func_3(&(uParam0->f_2)) * 1000f > BUILTIN::TO_FLOAT(uParam0->f_1))
 	{
 		func_2(&(uParam0->f_2));
 		return false;
@@ -164,7 +164,7 @@ float func_4(BOOL bParam0) // Position - 0x1C7 (455)
 
 	if (bParam0)
 	{
-		num = SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER());
+		num = BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER());
 		num2 = num / 1000f;
 		return num2;
 	}
@@ -172,12 +172,12 @@ float func_4(BOOL bParam0) // Position - 0x1C7 (455)
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		networkTime = NETWORK::GET_NETWORK_TIME();
-		num3 = SYSTEM::TO_FLOAT(networkTime);
+		num3 = BUILTIN::TO_FLOAT(networkTime);
 		num4 = num3 / 1000f;
 		return num4;
 	}
 
-	return SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
+	return BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
 }
 
 BOOL func_5(var uParam0) // Position - 0x21F (543)

@@ -135,7 +135,7 @@ void main() // Position - 0x0 (0)
 	while (Global_33484)
 	{
 		MISC::GET_GAME_TIMER() % 250 == 0;
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	j = 0;
@@ -309,7 +309,7 @@ void main() // Position - 0x0 (0)
 						{
 							while (!(HUD::GET_NUMBER_OF_ACTIVE_BLIPS() < 150))
 							{
-								SYSTEM::WAIT(2000);
+								BUILTIN::WAIT(2000);
 							}
 						
 							if (IS_BIT_SET(Global_33485[j /*23*/].f_11, 19))
@@ -425,14 +425,14 @@ void main() // Position - 0x0 (0)
 			
 				if (num3 > num7)
 				{
-					SYSTEM::WAIT(0);
+					BUILTIN::WAIT(0);
 					num3 = 0;
 				}
 			
 				if (num2 / 20 > num4)
 				{
 					num4 = num2 / 20;
-					SYSTEM::WAIT(0);
+					BUILTIN::WAIT(0);
 				}
 			}
 		}
@@ -444,7 +444,7 @@ void main() // Position - 0x0 (0)
 		{
 			func_11();
 			func_7();
-			SYSTEM::WAIT(500);
+			BUILTIN::WAIT(500);
 			echLocal_62 = _GET_CURRENT_PLAYER_CHARACTER();
 		}
 	}

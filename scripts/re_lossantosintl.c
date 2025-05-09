@@ -173,7 +173,7 @@ void main() // Position - 0x0 (0)
 				break;
 		}
 	
-		SYSTEM::WAIT(iLocal_97);
+		BUILTIN::WAIT(iLocal_97);
 	}
 
 	return;
@@ -616,7 +616,7 @@ void func_7() // Position - 0xBF2 (3058)
 		
 			if (ENTITY::DOES_ENTITY_EXIST(veLocal_52) && !ENTITY::IS_ENTITY_DEAD(veLocal_52, false))
 				if (!VEHICLE::IS_PLAYBACK_GOING_ON_FOR_VEHICLE(veLocal_52))
-					if (ENTITY::IS_ENTITY_OCCLUDED(veLocal_52) && !CAM::IS_SPHERE_VISIBLE(-1602.0862f, -2674.0386f, 12.9444f, 50f) && SYSTEM::VDIST2(entityCoords, ENTITY::GET_ENTITY_COORDS(veLocal_52, true)) > 62500f)
+					if (ENTITY::IS_ENTITY_OCCLUDED(veLocal_52) && !CAM::IS_SPHERE_VISIBLE(-1602.0862f, -2674.0386f, 12.9444f, 50f) && BUILTIN::VDIST2(entityCoords, ENTITY::GET_ENTITY_COORDS(veLocal_52, true)) > 62500f)
 						iLocal_81 = 1;
 			break;
 	}

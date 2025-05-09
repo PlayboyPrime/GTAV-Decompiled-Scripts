@@ -202,7 +202,7 @@ void main() // Position - 0x0 (0)
 		case 3:
 			while (num == 0)
 			{
-				SYSTEM::WAIT(0);
+				BUILTIN::WAIT(0);
 			
 				if (num2 == 1)
 				{
@@ -358,7 +358,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -3077,7 +3077,7 @@ void func_29(var uParam0, int iParam1) // Position - 0x507C (20604)
 			for (i = 0; i <= 11; i = i + 1)
 			{
 				value = -1;
-				value = SYSTEM::FLOOR((SYSTEM::TO_FLOAT(uParam0->f_221[i]) / SYSTEM::TO_FLOAT(uParam0->f_208[i])) * 100f);
+				value = BUILTIN::FLOOR((BUILTIN::TO_FLOAT(uParam0->f_221[i]) / BUILTIN::TO_FLOAT(uParam0->f_208[i])) * 100f);
 				value = uParam0->f_441[i];
 				value2 = -1;
 			
@@ -4892,7 +4892,7 @@ void func_59(int iParam0, int iParam1) // Position - 0x6FD3 (28627)
 	hash2 = func_62(iParam1);
 	hash3 = func_60(iParam0);
 	num2 = -1;
-	unk_0x9C4B3BAF947660BB(entityCoords, num, hash, hash2, hash3, num2);
+	STATS::_PLAYSTATS_PH_ACTIVITY(entityCoords, num, hash, hash2, hash3, num2);
 	return;
 }
 
@@ -8030,8 +8030,8 @@ void func_84(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	int num;
 	Hash hash;
 	Hash hash2;
-	var unk3;
-	var unk4;
+	Any any;
+	Any any2;
 
 	if (_NETWORK_IS_PLAYER_VALID(PLAYER::PLAYER_ID(), true, false))
 		entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
@@ -8039,9 +8039,9 @@ void func_84(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	num = func_64();
 	hash = func_89(uParam0.f_6 >= uParam0.f_2.f_2);
 	hash2 = func_85(uParam0, uParam0.f_1, uParam0.f_2);
-	unk3 = uParam0.f_6;
-	unk4 = uParam0.f_2.f_2;
-	unk_0x9C4B3BAF947660BB(entityCoords, num, hash, hash2, unk3, unk4);
+	any = uParam0.f_6;
+	any2 = uParam0.f_2.f_2;
+	STATS::_PLAYSTATS_PH_ACTIVITY(entityCoords, num, hash, hash2, any, any2);
 	return;
 }
 
@@ -10835,7 +10835,7 @@ BOOL func_90(int iParam0, int iParam1) // Position - 0xA6F7 (42743)
 					break;
 			
 				case 148:
-					flag = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(func_114(12025, -1) / 60));
+					flag = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(func_114(12025, -1) / 60));
 					break;
 			
 				case 149:
@@ -18398,7 +18398,7 @@ int func_124(int iParam0, Hash hParam1) // Position - 0x156AA (87722)
 {
 	int tattooShopDlcItemIndex;
 
-	tattooShopDlcItemIndex = FILES::GET_TATTOO_SHOP_DLC_ITEM_INDEX(hParam1, -1, iParam0);
+	tattooShopDlcItemIndex = EXTRAMETADATA::GET_TATTOO_SHOP_DLC_ITEM_INDEX(hParam1, -1, iParam0);
 
 	if (tattooShopDlcItemIndex != -1)
 		return 129 + tattooShopDlcItemIndex;
@@ -19309,7 +19309,7 @@ void func_134(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 
 	num5 = func_137(iParam0, num4, iParam2);
 	value = num2 - num5;
 	value2 = num3 - num5;
-	num6 = SYSTEM::FLOOR((SYSTEM::TO_FLOAT(value2) / SYSTEM::TO_FLOAT(value)) * 100f);
+	num6 = BUILTIN::FLOOR((BUILTIN::TO_FLOAT(value2) / BUILTIN::TO_FLOAT(value)) * 100f);
 	func_129(str, str2, str3, str4, num2, num3, num6, iParam1, uParam3, 205, 173);
 	return;
 }
@@ -20795,7 +20795,7 @@ void func_152(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 
 				break;
 		}
 	
-		num6 = SYSTEM::FLOOR((SYSTEM::TO_FLOAT(value2) / SYSTEM::TO_FLOAT(value)) * 100f);
+		num6 = BUILTIN::FLOOR((BUILTIN::TO_FLOAT(value2) / BUILTIN::TO_FLOAT(value)) * 100f);
 	}
 
 	func_129(str, str2, str3, str4, num2, num3, num6, iParam1, uParam3, 205, 173);
@@ -21604,7 +21604,7 @@ void func_168(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 
 	if (func_91(iParam0, -1))
 		num7 = 100;
 	else
-		num7 = SYSTEM::FLOOR((SYSTEM::TO_FLOAT(value2) / SYSTEM::TO_FLOAT(value)) * 100f);
+		num7 = BUILTIN::FLOOR((BUILTIN::TO_FLOAT(value2) / BUILTIN::TO_FLOAT(value)) * 100f);
 
 	func_129(str, str2, str3, str4, num2, num3, num7, iParam1, uParam3, iParam0, 173);
 	return;
@@ -24656,7 +24656,7 @@ void func_180(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 
 	num5 = func_117(iParam0, num4, iParam2);
 	value = num2 - num5;
 	value2 = num3 - num5;
-	num6 = SYSTEM::FLOOR((SYSTEM::TO_FLOAT(value2) / SYSTEM::TO_FLOAT(value)) * 100f);
+	num6 = BUILTIN::FLOOR((BUILTIN::TO_FLOAT(value2) / BUILTIN::TO_FLOAT(value)) * 100f);
 	func_129(str, str2, str3, str4, num2, num3, num6, iParam1, uParam3, 205, iParam0);
 	return;
 }

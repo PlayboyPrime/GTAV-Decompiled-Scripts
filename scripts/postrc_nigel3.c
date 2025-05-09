@@ -211,7 +211,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()) && !ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 		{
@@ -265,7 +265,7 @@ void func_1() // Position - 0xF6 (246)
 					iLocal_19 = 1;
 				}
 			}
-			else if (MISC::GET_GAME_TIMER() - iLocal_185 > 12000 && SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(pedLocal_186, true)) <= 900f)
+			else if (MISC::GET_GAME_TIMER() - iLocal_185 > 12000 && BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(pedLocal_186, true)) <= 900f)
 			{
 				if (_CONVERSATION_ADD_LINE(&uLocal_20, "NIGE3AU", "NIGEL3_REACT", 7, 0, 0, 0))
 					iLocal_19 = 1;
@@ -781,7 +781,7 @@ BOOL func_22() // Position - 0x9EB (2539)
 
 	num = 200f;
 
-	if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(pedLocal_186, true)) >= num * num && !ENTITY::IS_ENTITY_ON_SCREEN(pedLocal_186))
+	if (BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(pedLocal_186, true)) >= num * num && !ENTITY::IS_ENTITY_ON_SCREEN(pedLocal_186))
 		return false;
 
 	return true;

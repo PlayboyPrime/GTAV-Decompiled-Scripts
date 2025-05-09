@@ -43,7 +43,7 @@ void main() // Position - 0x0 (0)
 		{
 			if (VEHICLE::IS_VEHICLE_DRIVEABLE(veLocal_0, false))
 			{
-				num = SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(veLocal_0, true));
+				num = BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(veLocal_0, true));
 			
 				if (num > 90000f)
 					MISC::SET_BIT(&iLocal_2, 1);
@@ -56,7 +56,7 @@ void main() // Position - 0x0 (0)
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	func_1();

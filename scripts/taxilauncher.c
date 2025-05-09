@@ -329,7 +329,7 @@ void main() // Position - 0x0 (0)
 				if (func_144())
 					iLocal_49 = 1;
 				else
-					SYSTEM::WAIT(500);
+					BUILTIN::WAIT(500);
 				break;
 		
 			case 1:
@@ -355,7 +355,7 @@ void main() // Position - 0x0 (0)
 						func_4(false);
 						iLocal_49 = 1;
 						func_1();
-						SYSTEM::WAIT(500);
+						BUILTIN::WAIT(500);
 					}
 				}
 				else
@@ -375,7 +375,7 @@ void main() // Position - 0x0 (0)
 				break;
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -887,7 +887,7 @@ void func_16() // Position - 0xA58 (2648)
 			
 				if (SCRIPT::HAS_SCRIPT_LOADED("taxiService"))
 				{
-					iLocal_267 = SYSTEM::START_NEW_SCRIPT("taxiService", SPECIAL_ABILITY);
+					iLocal_267 = BUILTIN::START_NEW_SCRIPT("taxiService", SPECIAL_ABILITY);
 					SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("taxiService");
 					iLocal_49 = 2;
 				}
@@ -1426,23 +1426,23 @@ BOOL func_34() // Position - 0x143F (5183)
 
 void func_35(var uParam0, var uParam1, var uParam2, var uParam3, BOOL bParam4) // Position - 0x1484 (5252)
 {
-	*uParam0 = SYSTEM::FLOOR(PAD::GET_CONTROL_NORMAL(FRONTEND_CONTROL, INPUT_SCRIPT_LEFT_AXIS_X) * 127f);
-	*uParam1 = SYSTEM::FLOOR(PAD::GET_CONTROL_NORMAL(FRONTEND_CONTROL, INPUT_SCRIPT_LEFT_AXIS_Y) * 127f);
-	*uParam2 = SYSTEM::FLOOR(PAD::GET_CONTROL_NORMAL(FRONTEND_CONTROL, INPUT_SCRIPT_RIGHT_AXIS_X) * 127f);
-	*uParam3 = SYSTEM::FLOOR(PAD::GET_CONTROL_NORMAL(FRONTEND_CONTROL, INPUT_SCRIPT_RIGHT_AXIS_Y) * 127f);
+	*uParam0 = BUILTIN::FLOOR(PAD::GET_CONTROL_NORMAL(FRONTEND_CONTROL, INPUT_SCRIPT_LEFT_AXIS_X) * 127f);
+	*uParam1 = BUILTIN::FLOOR(PAD::GET_CONTROL_NORMAL(FRONTEND_CONTROL, INPUT_SCRIPT_LEFT_AXIS_Y) * 127f);
+	*uParam2 = BUILTIN::FLOOR(PAD::GET_CONTROL_NORMAL(FRONTEND_CONTROL, INPUT_SCRIPT_RIGHT_AXIS_X) * 127f);
+	*uParam3 = BUILTIN::FLOOR(PAD::GET_CONTROL_NORMAL(FRONTEND_CONTROL, INPUT_SCRIPT_RIGHT_AXIS_Y) * 127f);
 
 	if (bParam4)
 	{
 		if ((float)*uParam0 == 0f && (float)*uParam1 == 0f)
 		{
-			*uParam0 = SYSTEM::FLOOR(PAD::GET_DISABLED_CONTROL_NORMAL(FRONTEND_CONTROL, INPUT_SCRIPT_LEFT_AXIS_X) * 127f);
-			*uParam1 = SYSTEM::FLOOR(PAD::GET_DISABLED_CONTROL_NORMAL(FRONTEND_CONTROL, INPUT_SCRIPT_LEFT_AXIS_Y) * 127f);
+			*uParam0 = BUILTIN::FLOOR(PAD::GET_DISABLED_CONTROL_NORMAL(FRONTEND_CONTROL, INPUT_SCRIPT_LEFT_AXIS_X) * 127f);
+			*uParam1 = BUILTIN::FLOOR(PAD::GET_DISABLED_CONTROL_NORMAL(FRONTEND_CONTROL, INPUT_SCRIPT_LEFT_AXIS_Y) * 127f);
 		}
 	
 		if ((float)*uParam2 == 0f && (float)*uParam3 == 0f)
 		{
-			*uParam2 = SYSTEM::FLOOR(PAD::GET_DISABLED_CONTROL_NORMAL(FRONTEND_CONTROL, INPUT_SCRIPT_RIGHT_AXIS_X) * 127f);
-			*uParam3 = SYSTEM::FLOOR(PAD::GET_DISABLED_CONTROL_NORMAL(FRONTEND_CONTROL, INPUT_SCRIPT_RIGHT_AXIS_Y) * 127f);
+			*uParam2 = BUILTIN::FLOOR(PAD::GET_DISABLED_CONTROL_NORMAL(FRONTEND_CONTROL, INPUT_SCRIPT_RIGHT_AXIS_X) * 127f);
+			*uParam3 = BUILTIN::FLOOR(PAD::GET_DISABLED_CONTROL_NORMAL(FRONTEND_CONTROL, INPUT_SCRIPT_RIGHT_AXIS_Y) * 127f);
 		}
 	}
 
@@ -1526,7 +1526,7 @@ BOOL func_37(Ped pedParam0) // Position - 0x16F4 (5876)
 
 BOOL func_38(Vector3 vParam0, var uParam1, var uParam2, float fParam3, float fParam4, float fParam5, float fParam6) // Position - 0x171F (5919)
 {
-	return SYSTEM::VDIST2(vParam0, fParam3) <= fParam6 * fParam6;
+	return BUILTIN::VDIST2(vParam0, fParam3) <= fParam6 * fParam6;
 }
 
 BOOL func_39(Vehicle veParam0) // Position - 0x1739 (5945)
@@ -2622,7 +2622,7 @@ float func_69(float fParam0, float fParam1, float fParam2) // Position - 0x2B4A 
 		return fParam1;
 
 	num = fParam2 - fParam1;
-	fParam0 = fParam0 - ((float)SYSTEM::ROUND((fParam0 - fParam1) / num) * num);
+	fParam0 = fParam0 - ((float)BUILTIN::ROUND((fParam0 - fParam1) / num) * num);
 
 	if (fParam0 < fParam1)
 		fParam0 = fParam0 + num;
@@ -2822,7 +2822,7 @@ float func_77(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 
 	vector = { uParam0 - uParam3 };
 	vector.f_2 = 0f;
-	return SYSTEM::VMAG(vector);
+	return BUILTIN::VMAG(vector);
 }
 
 BOOL func_78(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uParam4, var uParam5) // Position - 0x31D5 (12757)
@@ -2841,7 +2841,7 @@ BOOL func_78(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uPa
 		return true;
 	}
 
-	num = SYSTEM::VDIST(vParam0, vParam3);
+	num = BUILTIN::VDIST(vParam0, vParam3);
 	num = num / 1.75f;
 
 	if (num2 < num)
@@ -2989,7 +2989,7 @@ BOOL func_79(Vector3 vParam0, var uParam1, var uParam2, Vector3* pvParam3, float
 		
 			for (i = 0; i <= 5; i = i + 1)
 			{
-				num3 = SYSTEM::VDIST(unk3[i /*3*/], vector);
+				num3 = BUILTIN::VDIST(unk3[i /*3*/], vector);
 			
 				if (num3 < num2)
 				{
@@ -3595,7 +3595,7 @@ BOOL func_79(Vector3 vParam0, var uParam1, var uParam2, Vector3* pvParam3, float
 	if (vParam0.f_2 == 1f)
 		vector.f_2 = 325f;
 
-	if (SYSTEM::VDIST2(vector, -75.59782f, -818.60815f, 325.1745f) < 58f * 58f)
+	if (BUILTIN::VDIST2(vector, -75.59782f, -818.60815f, 325.1745f) < 58f * 58f)
 	{
 		*pvParam3 = { -142.367f, -895.0251f, 28.191f };
 		*pfParam4 = 71.6555f;
@@ -3912,7 +3912,7 @@ BOOL func_79(Vector3 vParam0, var uParam1, var uParam2, Vector3* pvParam3, float
 
 float func_80(float fParam0, var uParam1, var uParam2, float fParam3, var uParam4, var uParam5) // Position - 0x535A (21338)
 {
-	return SYSTEM::VDIST2(fParam0, fParam0.f_1, 0f, fParam3, fParam3.f_1, 0f);
+	return BUILTIN::VDIST2(fParam0, fParam0.f_1, 0f, fParam3, fParam3.f_1, 0f);
 }
 
 BOOL func_81() // Position - 0x5374 (21364)
@@ -4282,7 +4282,7 @@ BOOL func_91(Vector3 vParam0, var uParam1, var uParam2, int iParam3, int iParam4
 
 BOOL func_92(int iParam0, Vector3 vParam1, var uParam2, var uParam3) // Position - 0x631F (25375)
 {
-	return SYSTEM::VDIST2(vParam1, func_94(iParam0)) < func_93(iParam0);
+	return BUILTIN::VDIST2(vParam1, func_94(iParam0)) < func_93(iParam0);
 }
 
 float func_93(int iParam0) // Position - 0x633C (25404)
@@ -4628,7 +4628,7 @@ BOOL func_102(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uP
 {
 	float num;
 
-	num = SYSTEM::VDIST2(vParam0, vParam3);
+	num = BUILTIN::VDIST2(vParam0, vParam3);
 
 	if (num >= iParam6 * iParam6)
 		return false;
@@ -5179,7 +5179,7 @@ BOOL func_108() // Position - 0x7A74 (31348)
 							if (ENTITY::GET_ENTITY_MODEL(sizeAndVehs[i]) == hLocal_98)
 							{
 								entityCoords = { ENTITY::GET_ENTITY_COORDS(sizeAndVehs[i], false) };
-								num8 = SYSTEM::VDIST2(uLocal_272, entityCoords);
+								num8 = BUILTIN::VDIST2(uLocal_272, entityCoords);
 							
 								if (num8 <= num7 * num7)
 								{
@@ -5212,7 +5212,7 @@ BOOL func_108() // Position - 0x7A74 (31348)
 														entityForwardVector = { ENTITY::GET_ENTITY_FORWARD_VECTOR(PLAYER::PLAYER_PED_ID()) };
 														vector = { entityCoords - uLocal_272 };
 													
-														if (((entityForwardVector * vector) + (entityForwardVector.f_1 * vector.f_1)) / SYSTEM::VDIST(vector, 0f, 0f, 0f) > SYSTEM::COS(120f))
+														if (((entityForwardVector * vector) + (entityForwardVector.f_1 * vector.f_1)) / BUILTIN::VDIST(vector, 0f, 0f, 0f) > BUILTIN::COS(120f))
 														{
 															if (CAM::IS_SPHERE_VISIBLE(entityCoords, 2f))
 																num5 = num5 * 0.5f;
@@ -6036,7 +6036,7 @@ BOOL func_137(Vector3 vParam0, var uParam1, var uParam2, int iParam3) // Positio
 		if (iParam3 >= Global_44200)
 			return false;
 	
-		if (SYSTEM::VDIST2(vParam0, Global_44200[iParam3 /*5*/]) <= Global_44200[iParam3 /*5*/].f_3 * Global_44200[iParam3 /*5*/].f_3)
+		if (BUILTIN::VDIST2(vParam0, Global_44200[iParam3 /*5*/]) <= Global_44200[iParam3 /*5*/].f_3 * Global_44200[iParam3 /*5*/].f_3)
 			return true;
 		else if (Global_44200[iParam3 /*5*/].f_4 != -1)
 			return func_137(vParam0, Global_44200[iParam3 /*5*/].f_4);

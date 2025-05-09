@@ -5871,7 +5871,7 @@ int func_177() // Position - 0x5337 (21303)
 
 BOOL func_178() // Position - 0x534D (21325)
 {
-	return func_173(526, -1) || unk_0xB233964AC562A357() && func_180() != 0 && !func_179(0);
+	return func_173(526, -1) || MISC::HAS_FINALIZED_CHOSEN_CRIMINAL_CAREER() && func_180() != 0 && !func_179(0);
 }
 
 BOOL func_179(int iParam0) // Position - 0x537D (21373)
@@ -5884,7 +5884,7 @@ BOOL func_179(int iParam0) // Position - 0x537D (21373)
 
 int func_180() // Position - 0x5394 (21396)
 {
-	return unk_0xA0A0D77ECEDD4136();
+	return MISC::GET_CHOSEN_CRIMINAL_CAREER();
 }
 
 BOOL func_181(int iParam0) // Position - 0x53A0 (21408)
@@ -8079,7 +8079,7 @@ void func_218(int iParam0, int iParam1) // Position - 0x7BAF (31663)
 	hash2 = func_221(iParam1);
 	hash3 = func_219(iParam0);
 	num2 = -1;
-	unk_0x9C4B3BAF947660BB(entityCoords, num, hash, hash2, hash3, num2);
+	STATS::_PLAYSTATS_PH_ACTIVITY(entityCoords, num, hash, hash2, hash3, num2);
 	return;
 }
 
@@ -11190,8 +11190,8 @@ void func_242(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 	int num;
 	Hash hash;
 	Hash hash2;
-	var unk3;
-	var unk4;
+	Any any;
+	Any any2;
 
 	if (_NETWORK_IS_PLAYER_VALID(PLAYER::PLAYER_ID(), true, false))
 		entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
@@ -11199,9 +11199,9 @@ void func_242(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 	num = func_223();
 	hash = func_247(uParam0.f_6 >= uParam0.f_2.f_2);
 	hash2 = func_243(uParam0, uParam0.f_1, uParam0.f_2);
-	unk3 = uParam0.f_6;
-	unk4 = uParam0.f_2.f_2;
-	unk_0x9C4B3BAF947660BB(entityCoords, num, hash, hash2, unk3, unk4);
+	any = uParam0.f_6;
+	any2 = uParam0.f_2.f_2;
+	STATS::_PLAYSTATS_PH_ACTIVITY(entityCoords, num, hash, hash2, any, any2);
 	return;
 }
 
@@ -13995,7 +13995,7 @@ BOOL func_248(int iParam0, int iParam1) // Position - 0xB23C (45628)
 					break;
 			
 				case 148:
-					flag = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(func_131(12025, -1) / 60));
+					flag = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(func_131(12025, -1) / 60));
 					break;
 			
 				case 149:
@@ -19628,7 +19628,7 @@ void func_368(int iParam0, int iParam1, int iParam2, float fParam3) // Position 
 	if (num > 0)
 	{
 		num3 = 100f - fParam3;
-		num2 = SYSTEM::FLOOR((float)num * (num3 / 100f));
+		num2 = BUILTIN::FLOOR((float)num * (num3 / 100f));
 	}
 	else
 	{
@@ -22463,7 +22463,7 @@ BOOL func_452() // Position - 0x186EF (100079)
 
 void func_453() // Position - 0x186FE (100094)
 {
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	return;
 }
 
@@ -22504,7 +22504,7 @@ BOOL func_455() // Position - 0x1874E (100174)
 		if (func_10(&unk, 120000, true))
 			return false;
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return false;
@@ -22553,7 +22553,7 @@ int func_456(int iParam0, int iParam1, BOOL bParam2) // Position - 0x187AC (1002
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

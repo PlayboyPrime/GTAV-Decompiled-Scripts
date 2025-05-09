@@ -126,7 +126,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 		func_68();
 	
 		if (ENTITY::DOES_ENTITY_EXIST(obScriptParam_0))
@@ -191,14 +191,14 @@ void main() // Position - 0x0 (0)
 								func_56(&uLocal_24);
 								func_54();
 								func_53();
-								SYSTEM::WAIT(0);
+								BUILTIN::WAIT(0);
 								iLocal_27 = 1;
 							}
 							break;
 					
 						case 1:
 							if (PLAYER::IS_PLAYER_WANTED_LEVEL_GREATER(PLAYER::PLAYER_ID(), 0))
-								SYSTEM::WAIT(0);
+								BUILTIN::WAIT(0);
 							else if (ENTITY::IS_ENTITY_STATIC(obLocal_35) && ENTITY::IS_ENTITY_UPRIGHT(obLocal_35, 1119092736))
 								if (func_45() || Global_33166[iLocal_41 /*11*/].f_5)
 									iLocal_27 = 2;
@@ -233,7 +233,7 @@ void main() // Position - 0x0 (0)
 								AUDIO::SET_STATIC_EMITTER_ENABLED(&uLocal_44, false);
 						
 							GRAPHICS::SET_TV_AUDIO_FRONTEND(false);
-							SYSTEM::WAIT(0);
+							BUILTIN::WAIT(0);
 						
 							if (ENTITY::DOES_ENTITY_EXIST(obLocal_38))
 								GRAPHICS::ATTACH_TV_AUDIO_TO_ENTITY(obLocal_38);
@@ -902,11 +902,11 @@ BOOL func_25(BOOL bParam0) // Position - 0xEBC (3772)
 	num = 64;
 	num2 = PAD::GET_CONTROL_VALUE(FRONTEND_CONTROL, INPUT_SCRIPT_LEFT_AXIS_X) - 127;
 
-	if (bParam0 || SYSTEM::TIMERA() > 300)
+	if (bParam0 || BUILTIN::TIMERA() > 300)
 	{
 		if (num2 > 0 + num || num2 < 0 - num)
 		{
-			SYSTEM::SETTIMERA(0);
+			BUILTIN::SETTIMERA(0);
 			return true;
 		}
 	}
@@ -1119,7 +1119,7 @@ float func_33(BOOL bParam0) // Position - 0x1291 (4753)
 
 	if (bParam0)
 	{
-		num = SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER());
+		num = BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER());
 		num2 = num / 1000f;
 		return num2;
 	}
@@ -1127,12 +1127,12 @@ float func_33(BOOL bParam0) // Position - 0x1291 (4753)
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		networkTime = NETWORK::GET_NETWORK_TIME();
-		num3 = SYSTEM::TO_FLOAT(networkTime);
+		num3 = BUILTIN::TO_FLOAT(networkTime);
 		num4 = num3 / 1000f;
 		return num4;
 	}
 
-	return SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
+	return BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
 }
 
 BOOL func_34(var uParam0) // Position - 0x12E9 (4841)
@@ -1191,7 +1191,7 @@ void func_38() // Position - 0x1381 (4993)
 
 	func_44(&iLocal_40);
 	GRAPHICS::SET_TV_CHANNEL(-1);
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	func_3();
 	func_53();
 	return;
@@ -1613,8 +1613,8 @@ void func_47() // Position - 0x1844 (6212)
 	STATS::STAT_SET_INT(joaat("PERCENT_AMBIENT_MISSIONS"), Global_113906, true);
 	STATS::STAT_SET_INT(joaat("PERCENT_ODDJOBS"), Global_113907, true);
 
-	if (value > 0f && SYSTEM::FLOOR(value) < SYSTEM::FLOOR(Global_114162.f_10198.f_3853))
-		func_51(13, SYSTEM::FLOOR(Global_114162.f_10198.f_3853));
+	if (value > 0f && BUILTIN::FLOOR(value) < BUILTIN::FLOOR(Global_114162.f_10198.f_3853))
+		func_51(13, BUILTIN::FLOOR(Global_114162.f_10198.f_3853));
 
 	if (!DATAFILE::DATAFILE_IS_SAVE_PENDING())
 	{
@@ -1694,7 +1694,7 @@ void _STAT_SET_PACKED_BOOL(int iParam0, BOOL bParam1, int iParam2) // Position -
 
 void func_53() // Position - 0x1DEF (7663)
 {
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 
 	if (HUD::IS_NAMED_RENDERTARGET_REGISTERED("tvscreen"))
 	{
@@ -1716,7 +1716,7 @@ void func_54() // Position - 0x1E1B (7707)
 	if (HUD::IS_NAMED_RENDERTARGET_REGISTERED("tvscreen"))
 		HUD::RELEASE_NAMED_RENDERTARGET("tvscreen");
 
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 
 	if (!ENTITY::DOES_ENTITY_EXIST(obLocal_35))
 		func_69();
@@ -1724,7 +1724,7 @@ void func_54() // Position - 0x1E1B (7707)
 	entityModel = ENTITY::GET_ENTITY_MODEL(obLocal_35);
 	HUD::REGISTER_NAMED_RENDERTARGET("tvscreen", false);
 	HUD::LINK_NAMED_RENDERTARGET(entityModel);
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 
 	if (iLocal_41 != 4)
 	{
@@ -1742,7 +1742,7 @@ void func_54() // Position - 0x1E1B (7707)
 			if (!HUD::IS_NAMED_RENDERTARGET_LINKED(entityModel))
 				HUD::LINK_NAMED_RENDERTARGET(entityModel);
 		
-			SYSTEM::WAIT(0);
+			BUILTIN::WAIT(0);
 		}
 	}
 
@@ -1806,7 +1806,7 @@ void func_60() // Position - 0x1FC6 (8134)
 
 	if (ENTITY::GET_ENTITY_MODEL(obLocal_35) == joaat("prop_tv_03"))
 	{
-		if (SYSTEM::VDIST(uLocal_29, -9.541955f, -1440.9166f, 31.346916f) < 3f)
+		if (BUILTIN::VDIST(uLocal_29, -9.541955f, -1440.9166f, 31.346916f) < 3f)
 		{
 			iLocal_41 = 0;
 			uLocal_77 = { -9.8135f, -1440.9128f, 31.3654f };
@@ -1818,7 +1818,7 @@ void func_60() // Position - 0x1FC6 (8134)
 	}
 	else if (ENTITY::GET_ENTITY_MODEL(obLocal_35) == joaat("prop_trev_tv_01"))
 	{
-		if (SYSTEM::VDIST(uLocal_29, 1978.425f, 3819.6572f, 34.26763f) < 3f)
+		if (BUILTIN::VDIST(uLocal_29, 1978.425f, 3819.6572f, 34.26763f) < 3f)
 		{
 			iLocal_41 = 2;
 			uLocal_77 = { 1978.2303f, 3819.6504f, 34.2724f };
@@ -1831,7 +1831,7 @@ void func_60() // Position - 0x1FC6 (8134)
 	}
 	else if (ENTITY::GET_ENTITY_MODEL(obLocal_35) == joaat("prop_tv_flat_01"))
 	{
-		if (SYSTEM::VDIST(uLocal_29, 3.6654f, 529.8486f, 173.6281f) < 3f)
+		if (BUILTIN::VDIST(uLocal_29, 3.6654f, 529.8486f, 173.6281f) < 3f)
 		{
 			iLocal_41 = 1;
 			uLocal_77 = { 2.5724f, 527.9989f, 176.1619f };
@@ -1843,7 +1843,7 @@ void func_60() // Position - 0x1FC6 (8134)
 	}
 	else if (ENTITY::GET_ENTITY_MODEL(obLocal_35) == joaat("prop_tv_flat_02"))
 	{
-		if (SYSTEM::VDIST(uLocal_29, -1160.6947f, -1520.7448f, 10.49168f) < 3f)
+		if (BUILTIN::VDIST(uLocal_29, -1160.6947f, -1520.7448f, 10.49168f) < 3f)
 		{
 			iLocal_41 = 3;
 			uLocal_77 = { -1160.5024f, -1520.7598f, 10.7393f };
@@ -1855,7 +1855,7 @@ void func_60() // Position - 0x1FC6 (8134)
 	}
 	else if (ENTITY::GET_ENTITY_MODEL(obLocal_35) == joaat("v_ilev_mm_screen2") || ENTITY::GET_ENTITY_MODEL(obLocal_35) == joaat("v_ilev_mm_scre_off"))
 	{
-		if (SYSTEM::VDIST(uLocal_29, -802.25275f, 173.03743f, 74.35708f) < 3f)
+		if (BUILTIN::VDIST(uLocal_29, -802.25275f, 173.03743f, 74.35708f) < 3f)
 		{
 			iLocal_41 = 4;
 			uLocal_77 = { -802.8972f, 172.537f, 74.5801f };
@@ -1867,7 +1867,7 @@ void func_60() // Position - 0x1FC6 (8134)
 	}
 	else if (ENTITY::GET_ENTITY_MODEL(obLocal_35) == joaat("des_tvsmash_start"))
 	{
-		if (SYSTEM::VDIST(uLocal_29, -809.962f, 170.919f, 75.7407f) < 3f)
+		if (BUILTIN::VDIST(uLocal_29, -809.962f, 170.919f, 75.7407f) < 3f)
 		{
 			iLocal_41 = 5;
 			uLocal_77 = { -808.3051f, 171.2623f, 77.2822f };
@@ -2006,7 +2006,7 @@ void func_69() // Position - 0x244D (9293)
 	if (_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("TV_HLP1" /*Press ~INPUT_CONTEXT~ to turn on the TV.*/) || _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("TV_HLP5" /*Press ~INPUT_SCRIPT_RUP~ to use the TV controls.~n~Press ~INPUT_CONTEXT~ to turn off the TV.~n~*/) || _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("TV_HLP6" /*Press ~INPUT_SCRIPT_RUP~ to stop using the TV controls.~n~Use ~INPUT_SCRIPT_LEFT_AXIS_X~ to change the channel.~n~Use ~INPUT_SCRIPT_LEFT_AXIS_Y~ to change the volume.~n~Press ~INPUT_CONTEXT~ to turn off the TV.~n~*/))
 		HUD::CLEAR_HELP(true);
 
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	func_70();
 
 	if (AUDIO::IS_AUDIO_SCENE_ACTIVE(&uLocal_60))

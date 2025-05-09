@@ -2582,7 +2582,7 @@ void func_28(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 	
 		case 1:
 			*uParam2 = *uParam2 - *uParam2 & 1073709056;
-			*uParam2 = *uParam2 || SYSTEM::SHIFT_LEFT(iParam1, 15);
+			*uParam2 = *uParam2 || BUILTIN::SHIFT_LEFT(iParam1, 15);
 			return;
 	
 		case 2:
@@ -2592,7 +2592,7 @@ void func_28(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 	
 		case 3:
 			*uParam3 = *uParam3 - *uParam3 & 1073709056;
-			*uParam3 = *uParam3 || SYSTEM::SHIFT_LEFT(iParam1, 15);
+			*uParam3 = *uParam3 || BUILTIN::SHIFT_LEFT(iParam1, 15);
 			return;
 	}
 

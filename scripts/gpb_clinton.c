@@ -607,7 +607,7 @@ void main() // Position - 0x0 (0)
 	if (func_108())
 		func_114(0);
 
-	if (SYSTEM::VMAG2(ENTITY::GET_ENTITY_VELOCITY(PLAYER::PLAYER_PED_ID())) > 1369f && !func_107())
+	if (BUILTIN::VMAG2(ENTITY::GET_ENTITY_VELOCITY(PLAYER::PLAYER_PED_ID())) > 1369f && !func_107())
 		func_114(0);
 
 	if (MISC::GET_GAME_TIMER() < Global_33370 + 10000 && !func_107())
@@ -622,7 +622,7 @@ void main() // Position - 0x0 (0)
 
 	while (!STREAMING::HAS_MODEL_LOADED(hLocal_34))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (!bLocal_434)
@@ -634,7 +634,7 @@ void main() // Position - 0x0 (0)
 
 	while (!STREAMING::HAS_ANIM_DICT_LOADED(&uLocal_322) || !STREAMING::HAS_ANIM_DICT_LOADED(&uLocal_338) || !STREAMING::HAS_MODEL_LOADED(hLocal_34))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	Global_33370 = MISC::GET_GAME_TIMER();
@@ -800,7 +800,7 @@ void main() // Position - 0x0 (0)
 		{
 			if (!PED::IS_PED_INJURED(pedLocal_238) && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 			{
-				if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(pedLocal_238, true)) < 16f)
+				if (BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(pedLocal_238, true)) < 16f)
 				{
 					hashKey = MISC::GET_HASH_KEY(SCRIPT::GET_THIS_SCRIPT_NAME());
 					num7 = func_79(hashKey);
@@ -1165,7 +1165,7 @@ void main() // Position - 0x0 (0)
 		
 			case 24:
 				GRAPHICS::DRAW_DEBUG_TEXT_2D("WAITING_TO_BLEND_INTO_IDLE_BEFORE_FLEEING", 0.02f, 0.1f, 0f, 0, 0, 255, 255);
-				SYSTEM::WAIT(1000);
+				BUILTIN::WAIT(1000);
 				func_10();
 				num = 0;
 				break;
@@ -1215,7 +1215,7 @@ void main() // Position - 0x0 (0)
 		}
 	
 		func_1();
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iLocal_296 != -1)
@@ -1253,7 +1253,7 @@ void main() // Position - 0x0 (0)
 		if (ENTITY::IS_ENTITY_OCCLUDED(pedLocal_238) && func_85(pedLocal_238, PLAYER::PLAYER_PED_ID(), true) > 50f && !BRAIN::IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE())
 			func_114(1);
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -2905,7 +2905,7 @@ BOOL func_86(Ped pedParam0, Ped pedParam1, int iParam2, int iParam3) // Position
 
 	num = func_87(entityForwardVector, unk);
 
-	if (num <= SYSTEM::COS(iParam2 / 2f))
+	if (num <= BUILTIN::COS(iParam2 / 2f))
 		return false;
 
 	return true;
@@ -2921,7 +2921,7 @@ Vector3 func_88(float fParam0, var uParam1, var uParam2) // Position - 0x2F00 (1
 	float num;
 	float num2;
 
-	num = SYSTEM::VMAG(fParam0);
+	num = BUILTIN::VMAG(fParam0);
 
 	if (num != 0f)
 	{

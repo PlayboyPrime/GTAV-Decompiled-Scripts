@@ -145,7 +145,7 @@ void main() // Position - 0x0 (0)
 			entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
 			entityCoords2 = { ENTITY::GET_ENTITY_COORDS(pedLocal_80, true) };
 		
-			if (SYSTEM::VDIST2(entityCoords, entityCoords2) >= 100f * 100f)
+			if (BUILTIN::VDIST2(entityCoords, entityCoords2) >= 100f * 100f)
 				func_56();
 		
 			switch (iLocal_85)
@@ -178,7 +178,7 @@ void main() // Position - 0x0 (0)
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -320,7 +320,7 @@ void func_12(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uPa
 {
 	if (func_51(pedLocal_80))
 		if (!AUDIO::IS_AMBIENT_SPEECH_PLAYING(pedLocal_80))
-			if (SYSTEM::VDIST2(vParam3, vParam0) < 35f * 35f)
+			if (BUILTIN::VDIST2(vParam3, vParam0) < 35f * 35f)
 				func_13(&pedLocal_80, "GENERIC_FRIGHTENED_HIGH", "MAUDE", 3);
 
 	return;
@@ -779,7 +779,7 @@ BOOL func_29(Ped pedParam0, var uParam1, var uParam2, var uParam3, float fParam4
 
 	num = func_30(entityForwardVector, unk);
 
-	if (num <= SYSTEM::COS(fParam4 / 2f))
+	if (num <= BUILTIN::COS(fParam4 / 2f))
 		return false;
 
 	return true;
@@ -795,7 +795,7 @@ Vector3 func_31(float fParam0, var uParam1, var uParam2) // Position - 0xCC9 (32
 	float num;
 	float num2;
 
-	num = SYSTEM::VMAG(fParam0);
+	num = BUILTIN::VMAG(fParam0);
 
 	if (num != 0f)
 	{
@@ -1021,7 +1021,7 @@ BOOL func_39(Object obParam0, Ped pedParam1, int iParam2, int iParam3) // Positi
 
 	num = func_30(entityForwardVector, unk);
 
-	if (num <= SYSTEM::COS(iParam2 / 2f))
+	if (num <= BUILTIN::COS(iParam2 / 2f))
 		return false;
 
 	return true;
@@ -1067,7 +1067,7 @@ int func_43(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uPar
 	{
 		if (!func_23())
 		{
-			if (SYSTEM::VDIST2(vParam3, vParam0) < iParam7 * iParam7)
+			if (BUILTIN::VDIST2(vParam3, vParam0) < iParam7 * iParam7)
 			{
 				if (MISC::GET_GAME_TIMER() - iLocal_81 > iParam6 + MISC::GET_RANDOM_INT_IN_RANGE(0, 2000))
 				{

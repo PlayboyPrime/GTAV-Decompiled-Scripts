@@ -92,7 +92,7 @@ void main() // Position - 0x0 (0)
 				break;
 		
 			func_17(&uLocal_44);
-			SYSTEM::WAIT(0);
+			BUILTIN::WAIT(0);
 		}
 	}
 

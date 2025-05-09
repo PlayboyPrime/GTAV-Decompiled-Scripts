@@ -168,9 +168,9 @@ void main() // Position - 0x0 (0)
 				GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_NUMBER(iLocal_44, "SET_MISSION_TITLE_COLOUR", sScriptParam_0.f_2, sScriptParam_0.f_2, sScriptParam_0.f_2, -1082130432, -1082130432);
 			
 				if (sScriptParam_0.f_5.f_1 != -1f && !MISC::IS_STRING_NULL(sScriptParam_0.f_5.f_2))
-					GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_NUMBER_AND_STRING(iLocal_44, "SET_TOTAL", SYSTEM::TO_FLOAT(sScriptParam_0.f_5), sScriptParam_0.f_5.f_1, -1f, -1f, -1f, sScriptParam_0.f_5.f_2, 0, 0, 0, 0);
+					GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_NUMBER_AND_STRING(iLocal_44, "SET_TOTAL", BUILTIN::TO_FLOAT(sScriptParam_0.f_5), sScriptParam_0.f_5.f_1, -1f, -1f, -1f, sScriptParam_0.f_5.f_2, 0, 0, 0, 0);
 			
-				GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_NUMBER(iLocal_44, "SET_MEDAL", SYSTEM::TO_FLOAT(sScriptParam_0.f_5), -1082130432, -1082130432, -1082130432, -1082130432);
+				GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_NUMBER(iLocal_44, "SET_MEDAL", BUILTIN::TO_FLOAT(sScriptParam_0.f_5), -1082130432, -1082130432, -1082130432, -1082130432);
 				GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_NUMBER(iLocal_44, "SET_SOCIAL_CLUB_INFO", 0f, -1082130432, -1082130432, -1082130432, -1082130432);
 			
 				for (i = 0; i < sScriptParam_0.f_66 + 1; i = i + 1)
@@ -185,7 +185,7 @@ void main() // Position - 0x0 (0)
 						GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
 						GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
 						GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING("STRING");
-						HUD::ADD_TEXT_COMPONENT_SUBSTRING_TIME(SYSTEM::FLOOR(sScriptParam_0.f_9[i /*7*/].f_3 * 1000f), 6);
+						HUD::ADD_TEXT_COMPONENT_SUBSTRING_TIME(BUILTIN::FLOOR(sScriptParam_0.f_9[i /*7*/].f_3 * 1000f), 6);
 						GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 					
 						if (!MISC::IS_STRING_NULL(sScriptParam_0.f_9[i /*7*/].f_5))
@@ -277,7 +277,7 @@ void main() // Position - 0x0 (0)
 				break;
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	func_19();
@@ -312,7 +312,7 @@ float func_3(BOOL bParam0) // Position - 0x497 (1175)
 
 	if (bParam0)
 	{
-		num = SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER());
+		num = BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER());
 		num2 = num / 1000f;
 		return num2;
 	}
@@ -320,12 +320,12 @@ float func_3(BOOL bParam0) // Position - 0x497 (1175)
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		networkTime = NETWORK::GET_NETWORK_TIME();
-		num3 = SYSTEM::TO_FLOAT(networkTime);
+		num3 = BUILTIN::TO_FLOAT(networkTime);
 		num4 = num3 / 1000f;
 		return num4;
 	}
 
-	return SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
+	return BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
 }
 
 BOOL func_4(int* piParam0) // Position - 0x4EF (1263)

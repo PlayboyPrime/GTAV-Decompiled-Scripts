@@ -564,7 +564,7 @@ void func_1() // Position - 0xBB (187)
 		{
 			if (AUDIO::IS_STREAM_PLAYING())
 			{
-				num = SYSTEM::TO_FLOAT(iLocal_447.f_1) / 6f;
+				num = BUILTIN::TO_FLOAT(iLocal_447.f_1) / 6f;
 				AUDIO::SET_VARIABLE_ON_STREAM("PedDensity", num);
 				uLocal_45.f_376 = uLocal_45.f_376 + 1;
 			}
@@ -810,10 +810,10 @@ void func_15(var uParam0, BOOL bParam1) // Position - 0x60C (1548)
 	if (ENTITY::DOES_ENTITY_EXIST(*uParam0))
 	{
 		value = MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), uParam0->f_4));
-		alphaLevel = SYSTEM::ROUND((SYSTEM::TO_FLOAT(value) / 750f) * 255f);
+		alphaLevel = BUILTIN::ROUND((BUILTIN::TO_FLOAT(value) / 750f) * 255f);
 	
 		if (bParam1)
-			alphaLevel = 255 - SYSTEM::ROUND((SYSTEM::TO_FLOAT(value) / 750f) * 255f);
+			alphaLevel = 255 - BUILTIN::ROUND((BUILTIN::TO_FLOAT(value) / 750f) * 255f);
 	
 		ENTITY::SET_ENTITY_ALPHA(*uParam0, alphaLevel, false);
 		func_14(uParam0, alphaLevel);
@@ -5642,7 +5642,7 @@ BOOL func_157() // Position - 0x59AF (22959)
 
 void func_158() // Position - 0x59BE (22974)
 {
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	return;
 }
 
@@ -6151,7 +6151,7 @@ void func_165() // Position - 0x65DA (26074)
 		}
 		else
 		{
-			SYSTEM::WAIT(0);
+			BUILTIN::WAIT(0);
 		}
 	}
 
@@ -6558,7 +6558,7 @@ void func_185() // Position - 0x6D35 (27957)
 {
 	while (!NETWORK::NETWORK_TRY_TO_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, false, Global_1579753))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	Global_1579753 = Global_1579753 + 1;
@@ -6595,7 +6595,7 @@ BOOL func_186() // Position - 0x6D81 (28033)
 		if (func_5(&unk, 120000, true))
 			return false;
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return false;
@@ -6644,7 +6644,7 @@ int func_187(int iParam0, int iParam1, BOOL bParam2) // Position - 0x6DDF (28127
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

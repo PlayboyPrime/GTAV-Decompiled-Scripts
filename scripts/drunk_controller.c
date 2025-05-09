@@ -49,7 +49,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 		func_31(0);
 		func_30();
 		func_23();
@@ -237,7 +237,7 @@ void func_2() // Position - 0xE3 (227)
 					else
 					{
 						if (GRAPHICS::GET_TIMECYCLE_MODIFIER_INDEX() != -1)
-							GRAPHICS::SET_TRANSITION_OUT_OF_TIMECYCLE_MODIFIER(SYSTEM::TO_FLOAT(Global_45378 / 2) / 1000f);
+							GRAPHICS::SET_TRANSITION_OUT_OF_TIMECYCLE_MODIFIER(BUILTIN::TO_FLOAT(Global_45378 / 2) / 1000f);
 					
 						fLocal_16 = -99f;
 						Global_45383 = 0f;
@@ -378,7 +378,7 @@ float func_9() // Position - 0x5A7 (1447)
 		}
 		else
 		{
-			num = SYSTEM::TO_FLOAT(value) / SYSTEM::TO_FLOAT(10);
+			num = BUILTIN::TO_FLOAT(value) / BUILTIN::TO_FLOAT(10);
 		
 			if (num > 1f)
 				num = 1f;
@@ -390,7 +390,7 @@ float func_9() // Position - 0x5A7 (1447)
 	}
 	else
 	{
-		num = SYSTEM::TO_FLOAT(value2) / SYSTEM::TO_FLOAT(5);
+		num = BUILTIN::TO_FLOAT(value2) / BUILTIN::TO_FLOAT(5);
 	
 		if (num > 1f)
 			num = 1f;
@@ -484,7 +484,7 @@ float func_14() // Position - 0x71D (1821)
 
 	if (value <= Global_45378)
 		if (Global_45377 != -1)
-			num = SYSTEM::TO_FLOAT(value) / SYSTEM::TO_FLOAT(Global_45378);
+			num = BUILTIN::TO_FLOAT(value) / BUILTIN::TO_FLOAT(Global_45378);
 
 	return num;
 }
@@ -535,7 +535,7 @@ void func_16(int iParam0) // Position - 0x770 (1904)
 	Global_45196[num /*5*/].f_1 = Global_45165[iParam0 /*6*/].f_1;
 	Global_45196[num /*5*/].f_2 = 0;
 	args = { Global_45165[iParam0 /*6*/] };
-	SYSTEM::START_NEW_SCRIPT_WITH_ARGS("drunk", &args, 6, DEFAULT);
+	BUILTIN::START_NEW_SCRIPT_WITH_ARGS("drunk", &args, 6, DEFAULT);
 	SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("drunk");
 	func_19(iParam0);
 	return;

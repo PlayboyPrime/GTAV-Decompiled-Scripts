@@ -59,14 +59,14 @@ void main() // Position - 0x0 (0)
 
 	while (!AUDIO::LOAD_STREAM("CONSTRUCTION_SITE_STREAM", "FBI_HEIST_SOUNDSET"))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	AUDIO::PLAY_STREAM_FROM_POSITION(-147f, -1005f, 28f);
 
 	while (func_1(70))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	func_4(19);

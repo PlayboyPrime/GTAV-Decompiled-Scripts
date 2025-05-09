@@ -51,7 +51,7 @@ void main() // Position - 0x0 (0)
 
 	while (!STREAMING::HAS_MODEL_LOADED(joaat("cuban800")))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	uLocal_17[0 /*3*/] = { 1169.9758f, 3592.5715f, 32.6481f };
@@ -73,7 +73,7 @@ void main() // Position - 0x0 (0)
 	while (true)
 	{
 		func_1();
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;

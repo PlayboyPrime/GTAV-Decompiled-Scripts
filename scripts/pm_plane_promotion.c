@@ -370,7 +370,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		if (func_145())
 			iLocal_47 = -1;
@@ -461,7 +461,7 @@ void func_1() // Position - 0xC8 (200)
 		else
 			num = -1f;
 	
-		fLocal_328 = fLocal_328 + (num * SYSTEM::TIMESTEP() * 100f);
+		fLocal_328 = fLocal_328 + (num * BUILTIN::TIMESTEP() * 100f);
 		fLocal_328 = func_139(fLocal_328, 0f, 1f);
 		GRAPHICS::SET_PARTICLE_FX_LOOPED_EVOLUTION(iLocal_330, "spawn", fLocal_328, false);
 	}
@@ -2211,7 +2211,7 @@ BOOL func_55(Blip* pblParam0, var uParam1, var uParam2, var uParam3, var uParam4
 	
 		if (VEHICLE::IS_VEHICLE_DRIVEABLE(pblParam0->f_21, false))
 		{
-			if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(pblParam0->f_21, true)) < 400f)
+			if (BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(pblParam0->f_21, true)) < 400f)
 			{
 				if (!PED::IS_PED_SITTING_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID()))
 				{
@@ -3570,13 +3570,13 @@ BOOL func_87(Hash hParam0, BOOL bParam1, int iParam2) // Position - 0x42A2 (1705
 	}
 	else
 	{
-		for (i = 0; i < FILES::GET_NUM_DLC_VEHICLES(); i = i + 1)
+		for (i = 0; i < EXTRAMETADATA::GET_NUM_DLC_VEHICLES(); i = i + 1)
 		{
-			if (FILES::GET_DLC_VEHICLE_DATA(i, &outData))
+			if (EXTRAMETADATA::GET_DLC_VEHICLE_DATA(i, &outData))
 			{
 				if (hParam0 == outData.f_1)
 				{
-					if (FILES::IS_CONTENT_ITEM_LOCKED(outData))
+					if (EXTRAMETADATA::IS_CONTENT_ITEM_LOCKED(outData))
 						return false;
 				
 					break;
@@ -4027,12 +4027,12 @@ void func_105(var uParam0, int iParam1) // Position - 0x4BC1 (19393)
 
 	if (iParam1 < 2011)
 	{
-		*uParam0 = *uParam0 || SYSTEM::SHIFT_LEFT(2011 - iParam1, 26);
+		*uParam0 = *uParam0 || BUILTIN::SHIFT_LEFT(2011 - iParam1, 26);
 		*uParam0 = *uParam0 | -2147483648;
 	}
 	else
 	{
-		*uParam0 = *uParam0 || SYSTEM::SHIFT_LEFT(iParam1 - 2011, 26);
+		*uParam0 = *uParam0 || BUILTIN::SHIFT_LEFT(iParam1 - 2011, 26);
 		*uParam0 = *uParam0 - *uParam0 & -2147483648;
 	}
 
@@ -4061,7 +4061,7 @@ void func_107(var uParam0, int iParam1) // Position - 0x4C7A (19578)
 		return;
 
 	*uParam0 = *uParam0 - *uParam0 & 496;
-	*uParam0 = *uParam0 || SYSTEM::SHIFT_LEFT(iParam1, 4);
+	*uParam0 = *uParam0 || BUILTIN::SHIFT_LEFT(iParam1, 4);
 	return;
 }
 
@@ -4102,7 +4102,7 @@ int func_108(int iParam0, int iParam1) // Position - 0x4CCB (19659)
 
 int func_109(int iParam0) // Position - 0x4D6D (19821)
 {
-	return (SYSTEM::SHIFT_RIGHT(iParam0, 26) & 31 * IS_BIT_SET(iParam0, 31) ? -1 : 1) + 2011;
+	return (BUILTIN::SHIFT_RIGHT(iParam0, 26) & 31 * IS_BIT_SET(iParam0, 31) ? -1 : 1) + 2011;
 }
 
 var func_110(BOOL bParam0, var uParam1, var uParam2) // Position - 0x4D8F (19855)
@@ -4124,7 +4124,7 @@ void func_112(var uParam0, int iParam1) // Position - 0x4DB3 (19891)
 		return;
 
 	*uParam0 = *uParam0 - *uParam0 & 15872;
-	*uParam0 = *uParam0 || SYSTEM::SHIFT_LEFT(iParam1, 9);
+	*uParam0 = *uParam0 || BUILTIN::SHIFT_LEFT(iParam1, 9);
 	return;
 }
 
@@ -4134,7 +4134,7 @@ void func_113(var uParam0, int iParam1) // Position - 0x4DED (19949)
 		return;
 
 	*uParam0 = *uParam0 - *uParam0 & 1032192;
-	*uParam0 = *uParam0 || SYSTEM::SHIFT_LEFT(iParam1, 14);
+	*uParam0 = *uParam0 || BUILTIN::SHIFT_LEFT(iParam1, 14);
 	return;
 }
 
@@ -4144,7 +4144,7 @@ void func_114(var uParam0, int iParam1) // Position - 0x4E28 (20008)
 		return;
 
 	*uParam0 = *uParam0 - *uParam0 & 66060288;
-	*uParam0 = *uParam0 || SYSTEM::SHIFT_LEFT(iParam1, 20);
+	*uParam0 = *uParam0 || BUILTIN::SHIFT_LEFT(iParam1, 20);
 	return;
 }
 
@@ -5833,7 +5833,7 @@ void func_146() // Position - 0x76AE (30382)
 
 	while (!HUD::HAS_ADDITIONAL_TEXT_LOADED(0))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;

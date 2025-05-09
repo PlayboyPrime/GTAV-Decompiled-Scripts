@@ -27,20 +27,20 @@ void main() // Position - 0x0 (0)
 	iLocal_11 = 12;
 	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
 
-	if (unk_0x7F87B6CE3D8D9DD8())
+	if (STREAMING::IS_GAME_INSTALLED())
 	{
 		SCRIPT::REQUEST_SCRIPT(func_4());
 		func_2(0);
 	}
 
-	while (unk_0xB37FC2FB7418367C())
+	while (LANDINGPAGE::IS_LANDING_PAGE_ACTIVE())
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
-	while (!unk_0x0E50FCE4525E3D72())
+	while (!MISC::IS_SESSION_INITIALIZED())
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	func_1();
@@ -57,10 +57,10 @@ void func_1() // Position - 0x66 (102)
 	while (!SCRIPT::HAS_SCRIPT_LOADED(scriptName))
 	{
 		SCRIPT::REQUEST_SCRIPT(scriptName);
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
-	SYSTEM::START_NEW_SCRIPT(scriptName, DEFAULT);
+	BUILTIN::START_NEW_SCRIPT(scriptName, DEFAULT);
 	SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED(scriptName);
 	return;
 }
@@ -141,7 +141,7 @@ char* func_4() // Position - 0x1AF (431)
 
 	str = "startup";
 
-	if (!unk_0x7F87B6CE3D8D9DD8())
+	if (!STREAMING::IS_GAME_INSTALLED())
 		str = "startup_install";
 
 	return str;

@@ -3160,7 +3160,7 @@ void func_61(int iParam0, int iParam1) // Position - 0x316A (12650)
 	hash2 = func_64(iParam1);
 	hash3 = func_62(iParam0);
 	num2 = -1;
-	unk_0x9C4B3BAF947660BB(entityCoords, num, hash, hash2, hash3, num2);
+	STATS::_PLAYSTATS_PH_ACTIVITY(entityCoords, num, hash, hash2, hash3, num2);
 	return;
 }
 
@@ -6271,8 +6271,8 @@ void func_85(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	int num;
 	Hash hash;
 	Hash hash2;
-	var unk3;
-	var unk4;
+	Any any;
+	Any any2;
 
 	if (_NETWORK_IS_PLAYER_VALID(PLAYER::PLAYER_ID(), true, false))
 		entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
@@ -6280,9 +6280,9 @@ void func_85(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	num = func_66();
 	hash = func_90(uParam0.f_6 >= uParam0.f_2.f_2);
 	hash2 = func_86(uParam0, uParam0.f_1, uParam0.f_2);
-	unk3 = uParam0.f_6;
-	unk4 = uParam0.f_2.f_2;
-	unk_0x9C4B3BAF947660BB(entityCoords, num, hash, hash2, unk3, unk4);
+	any = uParam0.f_6;
+	any2 = uParam0.f_2.f_2;
+	STATS::_PLAYSTATS_PH_ACTIVITY(entityCoords, num, hash, hash2, any, any2);
 	return;
 }
 
@@ -9076,7 +9076,7 @@ BOOL func_91(int iParam0, int iParam1) // Position - 0x67F6 (26614)
 					break;
 			
 				case 148:
-					flag = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(func_16(12025, -1) / 60));
+					flag = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(func_16(12025, -1) / 60));
 					break;
 			
 				case 149:
@@ -12382,7 +12382,7 @@ int func_123() // Position - 0xE3FC (58364)
 
 BOOL func_124() // Position - 0xE412 (58386)
 {
-	return func_38(526, -1) || unk_0xB233964AC562A357() && func_126() != 0 && !func_125(0);
+	return func_38(526, -1) || MISC::HAS_FINALIZED_CHOSEN_CRIMINAL_CAREER() && func_126() != 0 && !func_125(0);
 }
 
 BOOL func_125(int iParam0) // Position - 0xE442 (58434)
@@ -12395,7 +12395,7 @@ BOOL func_125(int iParam0) // Position - 0xE442 (58434)
 
 int func_126() // Position - 0xE459 (58457)
 {
-	return unk_0xA0A0D77ECEDD4136();
+	return MISC::GET_CHOSEN_CRIMINAL_CAREER();
 }
 
 void func_127(int iParam0, BOOL bParam1) // Position - 0xE465 (58469)
@@ -12949,8 +12949,8 @@ int func_144(int iParam0, int iParam1) // Position - 0xECFE (60670)
 			value = num;
 		}
 	
-		value3 = ((SYSTEM::TO_FLOAT(value) - SYSTEM::TO_FLOAT(value2)) / 2f) + SYSTEM::TO_FLOAT(value2);
-		num = SYSTEM::ROUND(value3);
+		value3 = ((BUILTIN::TO_FLOAT(value) - BUILTIN::TO_FLOAT(value2)) / 2f) + BUILTIN::TO_FLOAT(value2);
+		num = BUILTIN::ROUND(value3);
 	}
 
 	return 8000;
@@ -14515,7 +14515,7 @@ int func_187(Vehicle veParam0, BOOL bParam1) // Position - 0x1082D (67629)
 	else
 		num4 = 75;
 
-	vehicleDirtLevel = SYSTEM::TO_FLOAT(ENTITY::GET_ENTITY_HEALTH(veParam0)) / 1000f;
+	vehicleDirtLevel = BUILTIN::TO_FLOAT(ENTITY::GET_ENTITY_HEALTH(veParam0)) / 1000f;
 
 	if (vehicleDirtLevel > 0.99f)
 		num6 = 0;
@@ -14600,9 +14600,9 @@ int func_187(Vehicle veParam0, BOOL bParam1) // Position - 0x1082D (67629)
 
 	if (func_189(ENTITY::GET_ENTITY_MODEL(veParam0), 0))
 	{
-		value = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(value) * Global_262145.f_12014);
+		value = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(value) * Global_262145.f_12014);
 	
-		if (value > SYSTEM::FLOOR(4f * Global_262145.f_12014))
+		if (value > BUILTIN::FLOOR(4f * Global_262145.f_12014))
 		{
 			num2 = Global_262145.f_12012;
 			value = value + num2;
@@ -14613,9 +14613,9 @@ int func_187(Vehicle veParam0, BOOL bParam1) // Position - 0x1082D (67629)
 	}
 	else if (func_188(veParam0))
 	{
-		value = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(value) * Global_262145.f_12017);
+		value = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(value) * Global_262145.f_12017);
 	
-		if (value > SYSTEM::FLOOR(4f * Global_262145.f_12017))
+		if (value > BUILTIN::FLOOR(4f * Global_262145.f_12017))
 		{
 			num2 = Global_262145.f_12015;
 			value = value + num2;
@@ -15755,8 +15755,8 @@ Vector3 func_219(float fParam0, var uParam1, var uParam2, float fParam3) // Posi
 	float num2;
 	float num3;
 
-	num2 = SYSTEM::SIN(fParam3);
-	num3 = SYSTEM::COS(fParam3);
+	num2 = BUILTIN::SIN(fParam3);
+	num3 = BUILTIN::COS(fParam3);
 	num = (fParam0 * num3) - (fParam0.f_1 * num2);
 	num.f_1 = (fParam0 * num2) + (fParam0.f_1 * num3);
 	num.f_2 = fParam0.f_2;
@@ -18244,7 +18244,7 @@ BOOL func_307() // Position - 0x16160 (90464)
 
 void func_308() // Position - 0x1616F (90479)
 {
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	return;
 }
 
@@ -18339,7 +18339,7 @@ BOOL func_312() // Position - 0x1628D (90765)
 		if (func_233(&unk, 120000, true))
 			return false;
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return false;
@@ -18388,7 +18388,7 @@ int func_313(int iParam0, int iParam1, BOOL bParam2) // Position - 0x162EB (9085
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

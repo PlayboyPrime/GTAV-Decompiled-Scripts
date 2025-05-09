@@ -908,7 +908,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 		func_54(&uLocal_136);
 	
 		if (func_53() || func_52() || func_51() || func_50())
@@ -2347,35 +2347,35 @@ void func_64(var uParam0) // Position - 0x18F6 (6390)
 	
 		if (controlNormal2 > 0.1f)
 		{
-			if (camCoord + (MISC::ABSF(value * controlNormal2) * SYSTEM::TIMESTEP()) <= 4000f)
+			if (camCoord + (MISC::ABSF(value * controlNormal2) * BUILTIN::TIMESTEP()) <= 4000f)
 			{
 				flag = true;
-				camCoord = camCoord + (MISC::ABSF(value * controlNormal2) * SYSTEM::TIMESTEP());
+				camCoord = camCoord + (MISC::ABSF(value * controlNormal2) * BUILTIN::TIMESTEP());
 			}
 		}
 		else if (controlNormal2 < -0.1f)
 		{
-			if (camCoord - (MISC::ABSF(value * controlNormal2) * SYSTEM::TIMESTEP()) >= -4000f)
+			if (camCoord - (MISC::ABSF(value * controlNormal2) * BUILTIN::TIMESTEP()) >= -4000f)
 			{
 				flag = true;
-				camCoord = camCoord - (MISC::ABSF(value * controlNormal2) * SYSTEM::TIMESTEP());
+				camCoord = camCoord - (MISC::ABSF(value * controlNormal2) * BUILTIN::TIMESTEP());
 			}
 		}
 	
 		if (controlNormal3 > 0.1f)
 		{
-			if (camCoord.f_1 - (MISC::ABSF(value * controlNormal3) * SYSTEM::TIMESTEP()) >= -4000f)
+			if (camCoord.f_1 - (MISC::ABSF(value * controlNormal3) * BUILTIN::TIMESTEP()) >= -4000f)
 			{
 				flag = true;
-				camCoord.f_1 = camCoord.f_1 - (MISC::ABSF(value * controlNormal3) * SYSTEM::TIMESTEP());
+				camCoord.f_1 = camCoord.f_1 - (MISC::ABSF(value * controlNormal3) * BUILTIN::TIMESTEP());
 			}
 		}
 		else if (controlNormal3 < -0.1f)
 		{
-			if (camCoord.f_1 + (MISC::ABSF(value * controlNormal3) * SYSTEM::TIMESTEP()) <= 8000f)
+			if (camCoord.f_1 + (MISC::ABSF(value * controlNormal3) * BUILTIN::TIMESTEP()) <= 8000f)
 			{
 				flag = true;
-				camCoord.f_1 = camCoord.f_1 + (MISC::ABSF(value * controlNormal3) * SYSTEM::TIMESTEP());
+				camCoord.f_1 = camCoord.f_1 + (MISC::ABSF(value * controlNormal3) * BUILTIN::TIMESTEP());
 			}
 		}
 	
@@ -2385,14 +2385,14 @@ void func_64(var uParam0) // Position - 0x18F6 (6390)
 		{
 			if (camCoord.f_2 < num)
 			{
-				camCoord.f_2 = camCoord.f_2 + (MISC::ABSF(value) * SYSTEM::TIMESTEP());
+				camCoord.f_2 = camCoord.f_2 + (MISC::ABSF(value) * BUILTIN::TIMESTEP());
 			
 				if (camCoord.f_2 > num)
 					camCoord.f_2 = num;
 			}
 			else if (camCoord.f_2 > num)
 			{
-				camCoord.f_2 = camCoord.f_2 - (MISC::ABSF(value) * SYSTEM::TIMESTEP());
+				camCoord.f_2 = camCoord.f_2 - (MISC::ABSF(value) * BUILTIN::TIMESTEP());
 			
 				if (camCoord.f_2 < num)
 					camCoord.f_2 = num;
@@ -2524,7 +2524,7 @@ void func_65(var uParam0, var uParam1) // Position - 0x1DD6 (7638)
 
 	if (IS_BIT_SET(uParam0->f_5, 7))
 	{
-		*uParam1 = *uParam1 + (num * SYSTEM::TIMESTEP());
+		*uParam1 = *uParam1 + (num * BUILTIN::TIMESTEP());
 	
 		switch (uParam0->f_7)
 		{
@@ -2567,7 +2567,7 @@ void func_65(var uParam0, var uParam1) // Position - 0x1DD6 (7638)
 	}
 	else if (IS_BIT_SET(uParam0->f_5, 6))
 	{
-		*uParam1 = *uParam1 - (num * SYSTEM::TIMESTEP());
+		*uParam1 = *uParam1 - (num * BUILTIN::TIMESTEP());
 	
 		switch (uParam0->f_7)
 		{
@@ -5682,7 +5682,7 @@ void func_155(int iParam0) // Position - 0x59CD (22989)
 	func_158();
 
 	if (iParam0 == 0)
-		if (LOADINGSCREEN::LOBBY_AUTO_MULTIPLAYER_FREEMODE())
+		if (LOBBY::LOBBY_AUTO_MULTIPLAYER_FREEMODE())
 			return;
 
 	if (func_157() == 0 || HUD::IS_PAUSE_MENU_ACTIVE())
@@ -6977,7 +6977,7 @@ Vector3 func_257(float fParam0, var uParam1, var uParam2) // Position - 0x7010 (
 	float num;
 	float num2;
 
-	num = SYSTEM::VMAG(fParam0);
+	num = BUILTIN::VMAG(fParam0);
 
 	if (num != 0f)
 	{
@@ -7155,7 +7155,7 @@ int func_266(int iParam0, int iParam1, BOOL bParam2) // Position - 0x723C (29244
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

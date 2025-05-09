@@ -41,12 +41,12 @@ void main() // Position - 0x0 (0)
 
 	while (!STREAMING::HAS_MODEL_LOADED(joaat("freight")) || !STREAMING::HAS_MODEL_LOADED(joaat("freightcar")) || !STREAMING::HAS_MODEL_LOADED(joaat("freightgrain")) || !STREAMING::HAS_MODEL_LOADED(joaat("freightcont1")) || !STREAMING::HAS_MODEL_LOADED(joaat("freightcont2")) || !STREAMING::HAS_MODEL_LOADED(joaat("tankercar")) || !STREAMING::HAS_MODEL_LOADED(joaat("metrotrain")))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{

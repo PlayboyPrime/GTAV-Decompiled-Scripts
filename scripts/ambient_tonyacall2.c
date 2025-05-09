@@ -273,7 +273,7 @@ void main() // Position - 0x0 (0)
 		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 			uLocal_44 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
 	
-		if (SYSTEM::VDIST2(uLocal_44, uLocal_41) > fLocal_40)
+		if (BUILTIN::VDIST2(uLocal_44, uLocal_41) > fLocal_40)
 			func_33();
 	
 		switch (iLocal_35)
@@ -303,7 +303,7 @@ void main() // Position - 0x0 (0)
 				break;
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -325,7 +325,7 @@ BOOL func_1() // Position - 0x1BA (442)
 	else
 		entityCoords2 = { 408.5002f, -1624.5825f, 29.2928f };
 
-	if (SYSTEM::VDIST2(entityCoords, entityCoords2) > 10000f || ENTITY::IS_ENTITY_DEAD(pedLocal_36, false) || func_27())
+	if (BUILTIN::VDIST2(entityCoords, entityCoords2) > 10000f || ENTITY::IS_ENTITY_DEAD(pedLocal_36, false) || func_27())
 		return true;
 
 	switch (iLocal_38)
@@ -400,13 +400,13 @@ BOOL func_1() // Position - 0x1BA (442)
 		case 3:
 			func_2();
 		
-			if (SYSTEM::VDIST2(entityCoords, entityCoords2) < 25f)
+			if (BUILTIN::VDIST2(entityCoords, entityCoords2) < 25f)
 			{
 				if (CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(ON_FOOT) != FIRST_PERSON)
 				{
 					if (_CONVERSATION_ADD_LINE(&uLocal_61, "TOWAUD", "TOW_MESS2", 8, 0, 0, 0))
 					{
-						SYSTEM::SETTIMERA(0);
+						BUILTIN::SETTIMERA(0);
 						iLocal_38 = 4;
 					}
 				}
@@ -416,7 +416,7 @@ BOOL func_1() // Position - 0x1BA (442)
 		case 4:
 			func_2();
 		
-			if (SYSTEM::TIMERA() > 10000)
+			if (BUILTIN::TIMERA() > 10000)
 				iLocal_38 = 3;
 			break;
 	}
@@ -1062,8 +1062,8 @@ void func_30() // Position - 0xF6D (3949)
 	
 		if (func_29(uLocal_55))
 		{
-			fLocal_59 = SYSTEM::VDIST(entityCoords, uLocal_47);
-			fLocal_60 = SYSTEM::VDIST(entityCoords, uLocal_51);
+			fLocal_59 = BUILTIN::VDIST(entityCoords, uLocal_47);
+			fLocal_60 = BUILTIN::VDIST(entityCoords, uLocal_51);
 		
 			if (fLocal_59 < fLocal_60)
 			{

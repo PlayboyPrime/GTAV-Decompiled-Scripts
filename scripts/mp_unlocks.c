@@ -232,7 +232,7 @@ void main() // Position - 0x0 (0)
 		case 3:
 			while (iLocal_165 == 0)
 			{
-				SYSTEM::WAIT(0);
+				BUILTIN::WAIT(0);
 				func_84();
 			
 				if (func_82(202))
@@ -279,7 +279,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -1566,7 +1566,7 @@ int func_39() // Position - 0x227D (8829)
 
 BOOL func_40() // Position - 0x2293 (8851)
 {
-	return func_35(526, -1) || unk_0xB233964AC562A357() && func_42() != 0 && !func_41(0);
+	return func_35(526, -1) || MISC::HAS_FINALIZED_CHOSEN_CRIMINAL_CAREER() && func_42() != 0 && !func_41(0);
 }
 
 BOOL func_41(int iParam0) // Position - 0x22C3 (8899)
@@ -1579,7 +1579,7 @@ BOOL func_41(int iParam0) // Position - 0x22C3 (8899)
 
 int func_42() // Position - 0x22DA (8922)
 {
-	return unk_0xA0A0D77ECEDD4136();
+	return MISC::GET_CHOSEN_CRIMINAL_CAREER();
 }
 
 void func_43(var uParam0, int iParam1, BOOL bParam2) // Position - 0x22E6 (8934)
@@ -2264,8 +2264,8 @@ int func_70(int iParam0, int iParam1) // Position - 0x2EB5 (11957)
 			value = num;
 		}
 	
-		value3 = ((SYSTEM::TO_FLOAT(value) - SYSTEM::TO_FLOAT(value2)) / 2f) + SYSTEM::TO_FLOAT(value2);
-		num = SYSTEM::ROUND(value3);
+		value3 = ((BUILTIN::TO_FLOAT(value) - BUILTIN::TO_FLOAT(value2)) / 2f) + BUILTIN::TO_FLOAT(value2);
+		num = BUILTIN::ROUND(value3);
 	}
 
 	return 8000;

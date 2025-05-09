@@ -511,7 +511,7 @@ Vector3 func_15(float fParam0, var uParam1, var uParam2) // Position - 0xBBB (30
 	float num;
 	float num2;
 
-	num = SYSTEM::VMAG(fParam0);
+	num = BUILTIN::VMAG(fParam0);
 
 	if (num != 0f)
 	{
@@ -577,7 +577,7 @@ void func_18() // Position - 0xC6C (3180)
 
 	while (!CUTSCENE::HAS_THIS_CUTSCENE_LOADED("BS_2A_2B_INT"))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;

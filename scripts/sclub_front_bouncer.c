@@ -745,7 +745,7 @@ void main() // Position - 0x0 (0)
 		if (func_3() || Global_113185 && !func_1())
 			func_128();
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -772,7 +772,7 @@ BOOL func_3() // Position - 0x2BA (698)
 	if (func_4(PLAYER::PLAYER_ID()) == 185 && Global_2739945.f_4715 == 2)
 		return true;
 
-	return SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), 114.64f, -1290.34f, 29.68f) > 14400f;
+	return BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), 114.64f, -1290.34f, 29.68f) > 14400f;
 }
 
 int func_4(Player plParam0) // Position - 0x32C (812)
@@ -1192,7 +1192,7 @@ BOOL func_33() // Position - 0xA2D (2605)
 	
 		entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
 		entityCoords2 = { ENTITY::GET_ENTITY_COORDS(pedLocal_68, true) };
-		num = SYSTEM::VDIST2(entityCoords, entityCoords2);
+		num = BUILTIN::VDIST2(entityCoords, entityCoords2);
 	
 		if (num > 15f * 15f)
 			return false;
@@ -1222,7 +1222,7 @@ BOOL func_33() // Position - 0xA2D (2605)
 	
 		if (ENTITY::IS_ENTITY_TOUCHING_ENTITY(PLAYER::PLAYER_PED_ID(), pedLocal_68))
 		{
-			num2 = SYSTEM::VDIST2(func_35(), entityCoords2);
+			num2 = BUILTIN::VDIST2(func_35(), entityCoords2);
 		
 			if (num2 > 0.7f)
 				flag2 = true;
@@ -1292,13 +1292,13 @@ void func_36() // Position - 0xC92 (3218)
 		func_19(4);
 
 	flag2 = false;
-	flag3 = SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), 129.6385f, -1300.0514f, 28.2327f) < 1.5f * 1.5f;
+	flag3 = BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), 129.6385f, -1300.0514f, 28.2327f) < 1.5f * 1.5f;
 
 	if (bLocal_338)
 		if (!PED::IS_PED_INJURED(func_92()))
 			if (!PED::IS_PED_HEADTRACKING_PED(pedLocal_68, func_92()))
 				TASK::TASK_LOOK_AT_ENTITY(pedLocal_68, func_92(), -1, SLF_EXTEND_YAW_LIMIT, 4);
-	else if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(pedLocal_68, true)) < 10f * 10f)
+	else if (BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(pedLocal_68, true)) < 10f * 10f)
 		TASK::TASK_LOOK_AT_ENTITY(pedLocal_68, PLAYER::PLAYER_PED_ID(), 2500, 0, 2);
 
 	if (!func_16(2, -1) && !func_16(4, -1) || !func_16(64, -1) && func_91() && flag3)
@@ -1386,13 +1386,13 @@ void func_37() // Position - 0xF3A (3898)
 	vector = { func_35() };
 	targetHeading = func_43();
 
-	if (SYSTEM::VDIST(ENTITY::GET_ENTITY_COORDS(pedLocal_68, true), vector) > 2f && TASK::GET_SCRIPT_TASK_STATUS(pedLocal_68, SCRIPT_TASK_FOLLOW_NAV_MESH_TO_COORD) != 1)
+	if (BUILTIN::VDIST(ENTITY::GET_ENTITY_COORDS(pedLocal_68, true), vector) > 2f && TASK::GET_SCRIPT_TASK_STATUS(pedLocal_68, SCRIPT_TASK_FOLLOW_NAV_MESH_TO_COORD) != 1)
 		func_42(0);
 
 	switch (func_41())
 	{
 		case 0:
-			if (SYSTEM::VDIST(ENTITY::GET_ENTITY_COORDS(pedLocal_68, true), vector) > 0.3f)
+			if (BUILTIN::VDIST(ENTITY::GET_ENTITY_COORDS(pedLocal_68, true), vector) > 0.3f)
 				TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(pedLocal_68, vector, 1f, -1, 0.1f, 512, targetHeading);
 		
 			func_42(1);
@@ -2619,7 +2619,7 @@ BOOL func_95() // Position - 0x2441 (9281)
 
 	if (!func_1())
 		if (!func_93() && !STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS())
-			if (CAM::IS_SPHERE_VISIBLE(func_35(), 1f) && SYSTEM::VDIST2(func_35(), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)) < 30f * 30f)
+			if (CAM::IS_SPHERE_VISIBLE(func_35(), 1f) && BUILTIN::VDIST2(func_35(), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)) < 30f * 30f)
 				return false;
 
 	if (func_45(&uLocal_342))
@@ -2851,7 +2851,7 @@ void func_105() // Position - 0x27DE (10206)
 void func_106() // Position - 0x285C (10332)
 {
 	if (!PED::IS_PED_INJURED(pedLocal_68) && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !func_18(PLAYER::PLAYER_PED_ID()))
-		uLocal_241[NETWORK::PARTICIPANT_ID_TO_INT() /*3*/].f_2 = SYSTEM::VDIST(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(pedLocal_68, true));
+		uLocal_241[NETWORK::PARTICIPANT_ID_TO_INT() /*3*/].f_2 = BUILTIN::VDIST(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(pedLocal_68, true));
 	else
 		uLocal_241[NETWORK::PARTICIPANT_ID_TO_INT() /*3*/].f_2 = -1f;
 
@@ -3165,7 +3165,7 @@ int func_124(int iParam0, int iParam1, BOOL bParam2) // Position - 0x2CD2 (11474
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

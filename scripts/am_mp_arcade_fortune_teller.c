@@ -3554,7 +3554,7 @@ BOOL func_117() // Position - 0x3580 (13696)
 
 void func_118() // Position - 0x358F (13711)
 {
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	return;
 }
 
@@ -3636,7 +3636,7 @@ BOOL func_124() // Position - 0x3661 (13921)
 		if (func_19(&unk, 120000, true))
 			return false;
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return false;
@@ -3685,7 +3685,7 @@ int func_125(int iParam0, int iParam1, BOOL bParam2) // Position - 0x36BF (14015
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

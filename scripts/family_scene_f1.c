@@ -325,13 +325,13 @@ void main() // Position - 0x0 (0)
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(66))
 		func_54();
 
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	func_53(uScriptParam_0);
 	func_51();
 
 	while (bLocal_51)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 		bLocal_51 = false;
 	
 		if (func_45(CHAR_FRANKLIN, uLocal_80, 1.5f))
@@ -1433,7 +1433,7 @@ void func_36(var uParam0, int* piParam1, var uParam2, var uParam3, Vector3 vPara
 		{
 			offsetFromInteriorInWorldCoords = { INTERIOR::GET_OFFSET_FROM_INTERIOR_IN_WORLD_COORDS(*uParam2, 0f, 0f, 0f) };
 		
-			if (SYSTEM::VDIST2(vParam4, offsetFromInteriorInWorldCoords) < 5f * 5f)
+			if (BUILTIN::VDIST2(vParam4, offsetFromInteriorInWorldCoords) < 5f * 5f)
 				if (!INTERIOR::IS_VALID_INTERIOR(*uParam3))
 					*uParam3 = *uParam2;
 		}
@@ -1474,7 +1474,7 @@ float func_40(BOOL bParam0) // Position - 0x1524 (5412)
 
 	if (bParam0)
 	{
-		num = SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER());
+		num = BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER());
 		num2 = num / 1000f;
 		return num2;
 	}
@@ -1482,12 +1482,12 @@ float func_40(BOOL bParam0) // Position - 0x1524 (5412)
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		networkTime = NETWORK::GET_NETWORK_TIME();
-		num3 = SYSTEM::TO_FLOAT(networkTime);
+		num3 = BUILTIN::TO_FLOAT(networkTime);
 		num4 = num3 / 1000f;
 		return num4;
 	}
 
-	return SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
+	return BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
 }
 
 BOOL func_41(int* piParam0, float fParam1) // Position - 0x157C (5500)

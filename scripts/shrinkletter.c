@@ -231,7 +231,7 @@ void main() // Position - 0x0 (0)
 
 	while (!HUD::HAS_ADDITIONAL_TEXT_LOADED(0))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	while (true)
@@ -251,7 +251,7 @@ void main() // Position - 0x0 (0)
 				while (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(iLocal_51))
 				{
 					func_43();
-					SYSTEM::WAIT(0);
+					BUILTIN::WAIT(0);
 				}
 			
 				HUD::REQUEST_ADDITIONAL_TEXT("REPORT", 3);
@@ -259,7 +259,7 @@ void main() // Position - 0x0 (0)
 				while (!HUD::HAS_ADDITIONAL_TEXT_LOADED(3))
 				{
 					func_43();
-					SYSTEM::WAIT(0);
+					BUILTIN::WAIT(0);
 				}
 			
 				GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iLocal_51, "SET_PLAYER_NAME");
@@ -313,7 +313,7 @@ void main() // Position - 0x0 (0)
 				while (!func_13(&uLocal_68, &uLocal_69, &uLocal_52))
 				{
 					func_43();
-					SYSTEM::WAIT(0);
+					BUILTIN::WAIT(0);
 				}
 			
 				func_12(&uLocal_70);
@@ -335,7 +335,7 @@ void main() // Position - 0x0 (0)
 						func_43();
 						GRAPHICS::SET_SCRIPT_GFX_DRAW_ORDER(1);
 						GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(iLocal_51, 255, 255, 255, 255, 0);
-						SYSTEM::WAIT(0);
+						BUILTIN::WAIT(0);
 					}
 				}
 			
@@ -362,7 +362,7 @@ void main() // Position - 0x0 (0)
 				{
 					GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(iLocal_51, 255, 255, 255, 255, 0);
 					func_43();
-					SYSTEM::WAIT(0);
+					BUILTIN::WAIT(0);
 				}
 			
 				GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_51);
@@ -377,7 +377,7 @@ void main() // Position - 0x0 (0)
 		if (iLocal_50 != 0)
 			func_43();
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;

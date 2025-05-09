@@ -22,17 +22,17 @@ void main() // Position - 0x0 (0)
 	while (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(iLocal_0))
 	{
 		func_6();
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	while (!CAM::IS_SCREEN_FADED_OUT())
 	{
 		func_6();
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	func_5("TITLE", 0f, 1f, 1.5f, 1f, 0f, 1.5f, 15f);
-	iLocal_1 = MISC::GET_GAME_TIMER() + 8000 + SYSTEM::ROUND(2f * 1000f);
+	iLocal_1 = MISC::GET_GAME_TIMER() + 8000 + BUILTIN::ROUND(2f * 1000f);
 
 	while (!CUTSCENE::IS_CUTSCENE_PLAYING())
 	{
@@ -48,7 +48,7 @@ void main() // Position - 0x0 (0)
 				{
 					func_4("TITLE");
 					bLocal_2 = true;
-					iLocal_1 = MISC::GET_GAME_TIMER() + SYSTEM::ROUND(2f * 1000f);
+					iLocal_1 = MISC::GET_GAME_TIMER() + BUILTIN::ROUND(2f * 1000f);
 				}
 			}
 			else if (MISC::GET_GAME_TIMER() > iLocal_1)
@@ -59,7 +59,7 @@ void main() // Position - 0x0 (0)
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	func_9();

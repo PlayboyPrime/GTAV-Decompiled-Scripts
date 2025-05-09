@@ -2305,7 +2305,7 @@ BOOL func_98() // Position - 0x29AE (10670)
 
 void func_99() // Position - 0x29BD (10685)
 {
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	return;
 }
 

@@ -68,7 +68,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(500);
+		BUILTIN::WAIT(500);
 		num2 = 0;
 		entityCoords = { 0f, 0f, 0f };
 	
@@ -164,10 +164,10 @@ void func_1(int iParam0) // Position - 0x14A (330)
 		
 			while (!SCRIPT::HAS_SCRIPT_LOADED(scriptName))
 			{
-				SYSTEM::WAIT(0);
+				BUILTIN::WAIT(0);
 			}
 		
-			Global_33446[iParam0 /*7*/].f_5 = SYSTEM::START_NEW_SCRIPT(scriptName, stackSize);
+			Global_33446[iParam0 /*7*/].f_5 = BUILTIN::START_NEW_SCRIPT(scriptName, stackSize);
 			SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED(scriptName);
 		
 			if (Global_33446[iParam0 /*7*/].f_5 != 0)
@@ -203,7 +203,7 @@ BOOL func_5(int iParam0, Vector3 vParam1, var uParam2, var uParam3) // Position 
 		if (func_9() && !func_6(6))
 			return false;
 
-	if (SYSTEM::VDIST2(vParam1, iParam0->f_2) > iParam0->f_1)
+	if (BUILTIN::VDIST2(vParam1, iParam0->f_2) > iParam0->f_1)
 		return false;
 
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
@@ -390,7 +390,7 @@ BOOL func_12(int iParam0, Vector3 vParam1, var uParam2, var uParam3) // Position
 			else
 				return true;
 
-	if (SYSTEM::VDIST2(Global_33446[iParam0 /*7*/].f_2, vParam1) > Global_33446[iParam0 /*7*/].f_1 + 400f)
+	if (BUILTIN::VDIST2(Global_33446[iParam0 /*7*/].f_2, vParam1) > Global_33446[iParam0 /*7*/].f_1 + 400f)
 		return true;
 
 	return false;

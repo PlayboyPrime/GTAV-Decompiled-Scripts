@@ -95,7 +95,7 @@ void main() // Position - 0x0 (0)
 	while (!STREAMING::HAS_ANIM_DICT_LOADED(sLocal_42) || !HUD::HAS_ADDITIONAL_TEXT_LOADED(7))
 	{
 		PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_LOOK_BEHIND, true);
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_LOOK_BEHIND, true);
@@ -107,7 +107,7 @@ void main() // Position - 0x0 (0)
 	while (!func_13(&obLocal_41, 49, uLocal_50, func_18(1.12f), false))
 	{
 		PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_LOOK_BEHIND, true);
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_LOOK_BEHIND, true);
@@ -137,7 +137,7 @@ void main() // Position - 0x0 (0)
 			func_22(false);
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;

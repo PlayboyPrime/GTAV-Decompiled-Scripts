@@ -69,7 +69,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		if (!BRAIN::IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE())
 			func_26();
@@ -103,7 +103,7 @@ void func_1() // Position - 0x5C (92)
 				if (pickupHash == joaat("PICKUP_MONEY_CASE"))
 					if (bLocal_24)
 						uLocal_3[i] = OBJECT::CREATE_PICKUP(pickupHash, vector, address, value, true, 0);
-				else if (SYSTEM::VDIST2(vector, uLocal_25) > 400f)
+				else if (BUILTIN::VDIST2(vector, uLocal_25) > 400f)
 					if (pickupHash == joaat("PICKUP_ARMOUR_STANDARD"))
 						uLocal_3[i] = OBJECT::CREATE_PICKUP(pickupHash, vector, address, value, true, 0);
 					else if (pickupHash == joaat("PICKUP_WEAPON_GRENADELAUNCHER") || pickupHash == joaat("PICKUP_WEAPON_RPG") || pickupHash == joaat("PICKUP_WEAPON_MG"))
@@ -121,7 +121,7 @@ void func_1() // Position - 0x5C (92)
 				if (pickupHash == joaat("PICKUP_MONEY_CASE"))
 					if (bLocal_24)
 						uLocal_3[i] = OBJECT::CREATE_PICKUP_ROTATE(pickupHash, vector, vector2, address, 10000, 2, true, 0);
-				else if (SYSTEM::VDIST2(vector, uLocal_25) > 400f)
+				else if (BUILTIN::VDIST2(vector, uLocal_25) > 400f)
 					if (pickupHash == joaat("PICKUP_ARMOUR_STANDARD"))
 						uLocal_3[i] = OBJECT::CREATE_PICKUP_ROTATE(pickupHash, vector, vector2, address, -1, 2, true, 0);
 					else if (pickupHash == joaat("PICKUP_WEAPON_GRENADELAUNCHER") || pickupHash == joaat("PICKUP_WEAPON_RPG") || pickupHash == joaat("PICKUP_WEAPON_MG"))
@@ -1040,22 +1040,22 @@ BOOL func_5(int iParam0, int iParam1) // Position - 0x182E (6190)
 
 int func_6(int iParam0) // Position - 0x193A (6458)
 {
-	return SYSTEM::SHIFT_RIGHT(iParam0, 20) & 63;
+	return BUILTIN::SHIFT_RIGHT(iParam0, 20) & 63;
 }
 
 int func_7(int iParam0) // Position - 0x194D (6477)
 {
-	return SYSTEM::SHIFT_RIGHT(iParam0, 14) & 63;
+	return BUILTIN::SHIFT_RIGHT(iParam0, 14) & 63;
 }
 
 int func_8(int iParam0) // Position - 0x1960 (6496)
 {
-	return SYSTEM::SHIFT_RIGHT(iParam0, 9) & 31;
+	return BUILTIN::SHIFT_RIGHT(iParam0, 9) & 31;
 }
 
 int func_9(int iParam0) // Position - 0x1973 (6515)
 {
-	return SYSTEM::SHIFT_RIGHT(iParam0, 4) & 31;
+	return BUILTIN::SHIFT_RIGHT(iParam0, 4) & 31;
 }
 
 int func_10(int iParam0) // Position - 0x1985 (6533)
@@ -1065,7 +1065,7 @@ int func_10(int iParam0) // Position - 0x1985 (6533)
 
 int func_11(int iParam0) // Position - 0x1992 (6546)
 {
-	return (SYSTEM::SHIFT_RIGHT(iParam0, 26) & 31 * IS_BIT_SET(iParam0, 31) ? -1 : 1) + 2011;
+	return (BUILTIN::SHIFT_RIGHT(iParam0, 26) & 31 * IS_BIT_SET(iParam0, 31) ? -1 : 1) + 2011;
 }
 
 var func_12(BOOL bParam0, var uParam1, var uParam2) // Position - 0x19B4 (6580)
@@ -1256,12 +1256,12 @@ void func_17(int iParam0, int iParam1) // Position - 0x1D03 (7427)
 
 	if (iParam1 < 2011)
 	{
-		*iParam0 = *iParam0 || SYSTEM::SHIFT_LEFT(2011 - iParam1, 26);
+		*iParam0 = *iParam0 || BUILTIN::SHIFT_LEFT(2011 - iParam1, 26);
 		*iParam0 = *iParam0 | -2147483648;
 	}
 	else
 	{
-		*iParam0 = *iParam0 || SYSTEM::SHIFT_LEFT(iParam1 - 2011, 26);
+		*iParam0 = *iParam0 || BUILTIN::SHIFT_LEFT(iParam1 - 2011, 26);
 		*iParam0 = *iParam0 - *iParam0 & -2147483648;
 	}
 
@@ -1280,7 +1280,7 @@ void func_18(int iParam0, int iParam1) // Position - 0x1D89 (7561)
 		return;
 
 	*iParam0 = *iParam0 - *iParam0 & 496;
-	*iParam0 = *iParam0 || SYSTEM::SHIFT_LEFT(iParam1, 4);
+	*iParam0 = *iParam0 || BUILTIN::SHIFT_LEFT(iParam1, 4);
 	return;
 }
 
@@ -1300,7 +1300,7 @@ void func_20(int iParam0, int iParam1) // Position - 0x1E0D (7693)
 		return;
 
 	*iParam0 = *iParam0 - *iParam0 & 15872;
-	*iParam0 = *iParam0 || SYSTEM::SHIFT_LEFT(iParam1, 9);
+	*iParam0 = *iParam0 || BUILTIN::SHIFT_LEFT(iParam1, 9);
 	return;
 }
 
@@ -1310,7 +1310,7 @@ void func_21(int iParam0, int iParam1) // Position - 0x1E47 (7751)
 		return;
 
 	*iParam0 = *iParam0 - *iParam0 & 1032192;
-	*iParam0 = *iParam0 || SYSTEM::SHIFT_LEFT(iParam1, 14);
+	*iParam0 = *iParam0 || BUILTIN::SHIFT_LEFT(iParam1, 14);
 	return;
 }
 
@@ -1320,7 +1320,7 @@ void func_22(int iParam0, int iParam1) // Position - 0x1E82 (7810)
 		return;
 
 	*iParam0 = *iParam0 - *iParam0 & 66060288;
-	*iParam0 = *iParam0 || SYSTEM::SHIFT_LEFT(iParam1, 20);
+	*iParam0 = *iParam0 || BUILTIN::SHIFT_LEFT(iParam1, 20);
 	return;
 }
 

@@ -11,11 +11,11 @@ void func_1(char* sParam0, eStackSize essParam1) // Position - 0x15 (21)
 
 	while (!SCRIPT::HAS_SCRIPT_LOADED(sParam0))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 		SCRIPT::REQUEST_SCRIPT(sParam0);
 	}
 
-	SYSTEM::START_NEW_SCRIPT(sParam0, essParam1);
+	BUILTIN::START_NEW_SCRIPT(sParam0, essParam1);
 	return;
 }
 

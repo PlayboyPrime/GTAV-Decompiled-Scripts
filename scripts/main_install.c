@@ -44,7 +44,7 @@ void main() // Position - 0x0 (0)
 
 	while (!STREAMING::HAS_MODEL_LOADED(joaat("CSB_ProlSec")))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	PLAYER::SET_PLAYER_MODEL(PLAYER::PLAYER_ID(), joaat("CSB_ProlSec"));
@@ -62,7 +62,7 @@ void main() // Position - 0x0 (0)
 
 	while (!STREAMING::IS_NEW_LOAD_SCENE_LOADED() && MISC::GET_GAME_TIMER() < num)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	SCRIPT::SHUTDOWN_LOADING_SCREEN();
@@ -81,14 +81,14 @@ void main() // Position - 0x0 (0)
 		HUD::SET_TEXT_SCALE(0.5f, 0.5f);
 		HUD::SET_TEXT_CENTRE(true);
 	
-		if (SYSTEM::TIMERA() > 10000 && HUD::HAS_ADDITIONAL_TEXT_LOADED(0))
+		if (BUILTIN::TIMERA() > 10000 && HUD::HAS_ADDITIONAL_TEXT_LOADED(0))
 		{
 			iLocal_0 = MISC::GET_RANDOM_INT_IN_RANGE(0, 5);
 		
 			if (iLocal_0 - iLocal_1 != 0)
 			{
 				iLocal_1 = iLocal_0;
-				SYSTEM::SETTIMERA(0);
+				BUILTIN::SETTIMERA(0);
 			}
 		}
 		else
@@ -125,7 +125,7 @@ void main() // Position - 0x0 (0)
 			return;
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;

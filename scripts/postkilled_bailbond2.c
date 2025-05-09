@@ -208,7 +208,7 @@ void main() // Position - 0x0 (0)
 			
 				if (func_8(iLocal_77[num]))
 				{
-					if (SYSTEM::VDIST2(entityCoords, ENTITY::GET_ENTITY_COORDS(iLocal_77[num], false)) >= (float)num3 * num3 && ENTITY::IS_ENTITY_OCCLUDED(iLocal_77[num]))
+					if (BUILTIN::VDIST2(entityCoords, ENTITY::GET_ENTITY_COORDS(iLocal_77[num], false)) >= (float)num3 * num3 && ENTITY::IS_ENTITY_OCCLUDED(iLocal_77[num]))
 					{
 						func_7(&uLocal_102[num /*8*/], false);
 						func_6(&iLocal_77[num], true, 0, 1);
@@ -224,7 +224,7 @@ void main() // Position - 0x0 (0)
 				}
 			
 				if (func_3(iLocal_77.f_5[num2]))
-					if (SYSTEM::VDIST2(entityCoords, uLocal_86[num2 /*3*/]) >= (float)num3 * num3)
+					if (BUILTIN::VDIST2(entityCoords, uLocal_86[num2 /*3*/]) >= (float)num3 * num3)
 						if (ENTITY::IS_ENTITY_OCCLUDED(iLocal_77.f_5[num2]) || PED::IS_PED_IN_VEHICLE(PLAYER::PLAYER_PED_ID(), iLocal_77.f_5[num2], false))
 							func_2(&iLocal_77.f_5[num2]);
 				else if (ENTITY::DOES_ENTITY_EXIST(iLocal_77.f_5[num2]))
@@ -247,7 +247,7 @@ void main() // Position - 0x0 (0)
 			gameTimer = MISC::GET_GAME_TIMER();
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;

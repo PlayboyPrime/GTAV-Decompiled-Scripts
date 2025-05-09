@@ -1075,7 +1075,7 @@ void func_19(int iParam0) // Position - 0x4EC (1260)
 
 	if (uLocal_49.f_9 == 1)
 		if (!AUDIO::HAS_SOUND_FINISHED(uLocal_49.f_22))
-			AUDIO::SET_VARIABLE_ON_SOUND(uLocal_49.f_22, "TimeRemaining", SYSTEM::TO_FLOAT(iParam0) / 1000f);
+			AUDIO::SET_VARIABLE_ON_SOUND(uLocal_49.f_22, "TimeRemaining", BUILTIN::TO_FLOAT(iParam0) / 1000f);
 
 	func_20(&num, &unk2, iParam0, 519, 0, false, false);
 	return;
@@ -1203,8 +1203,8 @@ struct<11> func_27(int iParam0) // Position - 0x6F4 (1780)
 			num.f_1 = 0.85f / fLocal_45;
 			num.f_2 = 0.85f;
 			num.f_3 = 255;
-			num.f_4 = SYSTEM::ROUND(func_28(100f, 255f, uLocal_49.f_23));
-			num.f_5 = SYSTEM::ROUND(func_28(100f, 255f, uLocal_49.f_23));
+			num.f_4 = BUILTIN::ROUND(func_28(100f, 255f, uLocal_49.f_23));
+			num.f_5 = BUILTIN::ROUND(func_28(100f, 255f, uLocal_49.f_23));
 			num.f_6 = 255;
 			num.f_7 = 0;
 			num.f_10 = 10;
@@ -1685,7 +1685,7 @@ void func_56(float fParam0, float fParam1, int iParam2, int iParam3) // Position
 	num = 255;
 	num.f_1 = 255;
 	num.f_2 = 255;
-	num.f_3 = SYSTEM::ROUND(func_28(100f, 255f, uLocal_49.f_23));
+	num.f_3 = BUILTIN::ROUND(func_28(100f, 255f, uLocal_49.f_23));
 	num2 = -0.001f;
 	num3 = -0.002f;
 	func_57(&unk, &unk17, num2 + fParam0 + (func_77() * 2f * (float)iParam2), num3 + fParam1 + (func_76() * (float)iParam3), func_60(), func_59(), 0f, &num);
@@ -1703,10 +1703,10 @@ void func_58(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 0
 {
 	int value;
 
-	value = SYSTEM::ROUND(*uParam1 * (float)iLocal_48);
-	*uParam1 = SYSTEM::TO_FLOAT(value) * (1f / (float)iLocal_48);
-	value = SYSTEM::ROUND((*uParam3 * (float)iLocal_48) / 4f) * 4;
-	*uParam3 = SYSTEM::TO_FLOAT(value) * (1f / (float)iLocal_48);
+	value = BUILTIN::ROUND(*uParam1 * (float)iLocal_48);
+	*uParam1 = BUILTIN::TO_FLOAT(value) * (1f / (float)iLocal_48);
+	value = BUILTIN::ROUND((*uParam3 * (float)iLocal_48) / 4f) * 4;
+	*uParam3 = BUILTIN::TO_FLOAT(value) * (1f / (float)iLocal_48);
 	*uParam0 = func_29(*uParam0);
 	*uParam2 = *uParam2 * fLocal_46;
 	return;
@@ -2155,7 +2155,7 @@ void func_78() // Position - 0x15CF (5583)
 {
 	if (uLocal_49.f_24)
 	{
-		uLocal_49.f_23 = uLocal_49.f_23 + (3f * SYSTEM::TIMESTEP());
+		uLocal_49.f_23 = uLocal_49.f_23 + (3f * BUILTIN::TIMESTEP());
 	
 		if (uLocal_49.f_23 >= 1f)
 		{
@@ -2165,7 +2165,7 @@ void func_78() // Position - 0x15CF (5583)
 	}
 	else
 	{
-		uLocal_49.f_23 = uLocal_49.f_23 - (3f * SYSTEM::TIMESTEP());
+		uLocal_49.f_23 = uLocal_49.f_23 - (3f * BUILTIN::TIMESTEP());
 	
 		if (uLocal_49.f_23 <= 0f)
 		{
@@ -3014,7 +3014,7 @@ BOOL func_125() // Position - 0x2528 (9512)
 
 void func_126() // Position - 0x2537 (9527)
 {
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	return;
 }
 

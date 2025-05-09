@@ -339,7 +339,7 @@ void main() // Position - 0x0 (0)
 	{
 		while (!func_73())
 		{
-			SYSTEM::WAIT(0);
+			BUILTIN::WAIT(0);
 			func_9(&uLocal_120);
 		}
 	}
@@ -770,7 +770,7 @@ void func_16(var uParam0) // Position - 0x995 (2453)
 	if (uParam0->f_169.f_4 == 6)
 	{
 		vector = { PAD::GET_CONTROL_NORMAL(PLAYER_CONTROL, INPUT_SCRIPT_LEFT_AXIS_X), PAD::GET_CONTROL_NORMAL(PLAYER_CONTROL, INPUT_SCRIPT_LEFT_AXIS_Y), 0f };
-		num = SYSTEM::VMAG(vector);
+		num = BUILTIN::VMAG(vector);
 	
 		if (uParam0->f_169.f_4 == 6 && !ENTITY::HAS_ANIM_EVENT_FIRED(PLAYER::PLAYER_PED_ID(), joaat("block_interrupt")) && !func_33(&(uParam0->f_169), 12))
 			if (num >= 0.35f && !Global_2711144 && !Global_2711149)
@@ -1805,7 +1805,7 @@ BOOL func_58(var uParam0) // Position - 0x1EE9 (7913)
 
 	for (i = 0; i < 10; i = i + 1)
 	{
-		if (ENTITY::DOES_ENTITY_EXIST(sizeAndPeds[i]) && !PED::IS_PED_INJURED(sizeAndPeds[i]) && ENTITY::IS_ENTITY_VISIBLE(sizeAndPeds[i]) && func_64(sizeAndPeds[i], &uParam0->[uParam0->f_169.f_2 /*14*/]) || SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(sizeAndPeds[i], false), (uParam0->[uParam0->f_169.f_2 /*14*/].f_1 + uParam0->[uParam0->f_169.f_2 /*14*/].f_1.f_3) / { 2f, 2f, 2f }) < 1f)
+		if (ENTITY::DOES_ENTITY_EXIST(sizeAndPeds[i]) && !PED::IS_PED_INJURED(sizeAndPeds[i]) && ENTITY::IS_ENTITY_VISIBLE(sizeAndPeds[i]) && func_64(sizeAndPeds[i], &uParam0->[uParam0->f_169.f_2 /*14*/]) || BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(sizeAndPeds[i], false), (uParam0->[uParam0->f_169.f_2 /*14*/].f_1 + uParam0->[uParam0->f_169.f_2 /*14*/].f_1.f_3) / { 2f, 2f, 2f }) < 1f)
 			return true;
 	}
 
@@ -2136,8 +2136,8 @@ Vector3 func_88(float fParam0, var uParam1, var uParam2, float fParam3) // Posit
 	float num2;
 	float num3;
 
-	num2 = SYSTEM::SIN(fParam3);
-	num3 = SYSTEM::COS(fParam3);
+	num2 = BUILTIN::SIN(fParam3);
+	num3 = BUILTIN::COS(fParam3);
 	num = (fParam0 * num3) - (fParam0.f_1 * num2);
 	num.f_1 = (fParam0 * num2) + (fParam0.f_1 * num3);
 	num.f_2 = fParam0.f_2;
@@ -2333,7 +2333,7 @@ int func_92(int iParam0, int iParam1, BOOL bParam2) // Position - 0x292E (10542)
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

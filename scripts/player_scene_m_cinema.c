@@ -161,14 +161,14 @@ void main() // Position - 0x0 (0)
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 		func_34();
 
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	func_22();
 	func_21();
 	func_17();
 
 	while (iLocal_70 && func_7(1, iLocal_71[0]))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		switch (iLocal_68)
 		{
@@ -207,7 +207,7 @@ BOOL func_2() // Position - 0x10C (268)
 		func_3(iLocal_71[i], i);
 	}
 
-	if (SYSTEM::VDIST(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), uLocal_103) > 100f)
+	if (BUILTIN::VDIST(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), uLocal_103) > 100f)
 		return true;
 
 	return false;
@@ -254,7 +254,7 @@ int func_3(Ped pedParam0, int iParam1) // Position - 0x153 (339)
 			
 				if (!MISC::IS_STRING_NULL_OR_EMPTY(&uLocal_86[iParam1 /*4*/]))
 				{
-					SYSTEM::START_NEW_SCRIPT_WITH_ARGS(&uLocal_86[iParam1 /*4*/], &iLocal_71[iParam1], 1, DEFAULT);
+					BUILTIN::START_NEW_SCRIPT_WITH_ARGS(&uLocal_86[iParam1 /*4*/], &iLocal_71[iParam1], 1, DEFAULT);
 					iLocal_81[iParam1] = 4;
 					return 0;
 				}
@@ -299,7 +299,7 @@ int func_3(Ped pedParam0, int iParam1) // Position - 0x153 (339)
 					return 1;
 				}
 			
-				if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(pedParam0, true), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)) > 50f * 50f)
+				if (BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(pedParam0, true), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)) > 50f * 50f)
 				{
 					iLocal_81[iParam1] = 0;
 					return 1;
@@ -403,7 +403,7 @@ int func_7(int iParam0, Entity eParam1) // Position - 0x431 (1073)
 		if (ENTITY::DOES_ENTITY_EXIST(eParam1))
 		{
 			entityCoords = { ENTITY::GET_ENTITY_COORDS(eParam1, false) };
-			num = SYSTEM::VDIST(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), entityCoords);
+			num = BUILTIN::VDIST(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), entityCoords);
 		
 			if (num > 250f)
 				if (!ENTITY::IS_ENTITY_DEAD(eParam1, false))
@@ -608,7 +608,7 @@ void func_21() // Position - 0x769 (1897)
 		if (!flag)
 			num = num + 1;
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	for (i = 0; i < iLocal_71; i = i + 1)
@@ -2686,7 +2686,7 @@ BOOL func_27(var uParam0) // Position - 0x419C (16796)
 		if (IS_BIT_SET(Global_114162.f_7233.f_11[i], 0))
 		{
 			vector = { Global_96891[i /*9*/].f_3 };
-			num3 = SYSTEM::VDIST(entityCoords, vector);
+			num3 = BUILTIN::VDIST(entityCoords, vector);
 		
 			if (num3 > 150f)
 			{

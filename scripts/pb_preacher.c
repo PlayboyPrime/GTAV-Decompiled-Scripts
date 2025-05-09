@@ -104,7 +104,7 @@ void main() // Position - 0x0 (0)
 	iLocal_38 = 65;
 	iLocal_39 = 49;
 	iLocal_40 = 64;
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	fLocal_43 = { uScriptParam_0.f_1[0 /*3*/] };
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(11))
@@ -112,7 +112,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		if (BRAIN::IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE())
 		{
@@ -149,13 +149,13 @@ void main() // Position - 0x0 (0)
 
 void func_1() // Position - 0xEC (236)
 {
-	if (SYSTEM::TIMERB() > 7000)
+	if (BUILTIN::TIMERB() > 7000)
 	{
 		if (!ENTITY::IS_ENTITY_DEAD(pedLocal_50, false))
 		{
 			if (ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), pedLocal_50, 10f, 10f, 10f, false, true, 0) && iLocal_52 == 0)
 			{
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				uLocal_46 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
 				TASK::OPEN_SEQUENCE_TASK(&iLocal_53);
 				TASK::TASK_TURN_PED_TO_FACE_COORD(0, uLocal_46, 0);
@@ -172,7 +172,7 @@ void func_1() // Position - 0xEC (236)
 			if (ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), pedLocal_50, 3f, 3f, 3f, false, true, 0) && iLocal_51 == 0)
 			{
 				uLocal_46 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				TASK::OPEN_SEQUENCE_TASK(&iLocal_53);
 				TASK::TASK_TURN_PED_TO_FACE_COORD(0, uLocal_46, 0);
 				TASK::TASK_PLAY_ANIM(0, "amb@PREACHER", "PREACH", 8f, -8f, -1, 1, 0, false, false, false);
@@ -195,7 +195,7 @@ void func_2() // Position - 0x1FE (510)
 
 	while (!STREAMING::HAS_MODEL_LOADED(joaat("S_M_M_StrPreach_01")) || !STREAMING::HAS_ANIM_DICT_LOADED("amb@PREACHER"))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	uLocal_46.f_2 = fLocal_43.f_2 - 1f;

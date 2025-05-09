@@ -235,7 +235,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		if (func_81())
 			func_83();
@@ -647,7 +647,7 @@ void func_19(int iParam0) // Position - 0x7F7 (2039)
 
 	while (!SCRIPT::HAS_SCRIPT_LOADED("stripperhome"))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (func_51())
@@ -660,7 +660,7 @@ void func_19(int iParam0) // Position - 0x7F7 (2039)
 			args.f_3 = -1;
 			args.f_4 = 1;
 			args.f_5 = 1;
-			SYSTEM::START_NEW_SCRIPT_WITH_ARGS("stripperhome", &args, 6, DEFAULT);
+			BUILTIN::START_NEW_SCRIPT_WITH_ARGS("stripperhome", &args, 6, DEFAULT);
 			func_29(Global_113155.f_1, -1);
 			Global_113155 = 3;
 		}
@@ -672,7 +672,7 @@ void func_19(int iParam0) // Position - 0x7F7 (2039)
 			while (num == 2)
 			{
 				num = func_24(&iLocal_199, 6, 10, false, 0);
-				SYSTEM::WAIT(0);
+				BUILTIN::WAIT(0);
 			}
 		
 			if (num == 1)
@@ -684,7 +684,7 @@ void func_19(int iParam0) // Position - 0x7F7 (2039)
 				args2.f_3 = iLocal_199;
 				args2.f_4 = 1;
 				args2.f_5 = 0;
-				SYSTEM::START_NEW_SCRIPT_WITH_ARGS("stripperhome", &args2, 6, DEFAULT);
+				BUILTIN::START_NEW_SCRIPT_WITH_ARGS("stripperhome", &args2, 6, DEFAULT);
 				func_29(Global_113155.f_1, -1);
 				Global_113155 = 3;
 			}
@@ -1524,28 +1524,28 @@ int func_48(int iParam0) // Position - 0x1649 (5705)
 	switch (iParam0)
 	{
 		case 0:
-			return SYSTEM::FLOOR(0.95f * 7500f);
+			return BUILTIN::FLOOR(0.95f * 7500f);
 	
 		case 1:
-			return SYSTEM::FLOOR(0.95f * 7500f);
+			return BUILTIN::FLOOR(0.95f * 7500f);
 	
 		case 2:
-			return SYSTEM::FLOOR(0.95f * 7500f);
+			return BUILTIN::FLOOR(0.95f * 7500f);
 	
 		case 3:
-			return SYSTEM::FLOOR(0.95f * 7500f);
+			return BUILTIN::FLOOR(0.95f * 7500f);
 	
 		case 4:
-			return SYSTEM::FLOOR(0.95f * 7500f);
+			return BUILTIN::FLOOR(0.95f * 7500f);
 	
 		case 5:
-			return SYSTEM::FLOOR(0.95f * 7500f);
+			return BUILTIN::FLOOR(0.95f * 7500f);
 	
 		case 6:
-			return SYSTEM::FLOOR(0.95f * 7500f);
+			return BUILTIN::FLOOR(0.95f * 7500f);
 	
 		case 7:
-			return SYSTEM::FLOOR(0.95f * 7500f);
+			return BUILTIN::FLOOR(0.95f * 7500f);
 	}
 
 	return 0;
@@ -1741,28 +1741,28 @@ int func_65(int iParam0) // Position - 0x1AAF (6831)
 	switch (iParam0)
 	{
 		case 0:
-			return SYSTEM::FLOOR(0.8f * 7500f);
+			return BUILTIN::FLOOR(0.8f * 7500f);
 	
 		case 1:
-			return SYSTEM::FLOOR(0.8f * 7500f);
+			return BUILTIN::FLOOR(0.8f * 7500f);
 	
 		case 2:
-			return SYSTEM::FLOOR(0.8f * 7500f);
+			return BUILTIN::FLOOR(0.8f * 7500f);
 	
 		case 3:
-			return SYSTEM::FLOOR(0.8f * 7500f);
+			return BUILTIN::FLOOR(0.8f * 7500f);
 	
 		case 4:
-			return SYSTEM::FLOOR(0.8f * 7500f);
+			return BUILTIN::FLOOR(0.8f * 7500f);
 	
 		case 5:
-			return SYSTEM::FLOOR(0.8f * 7500f);
+			return BUILTIN::FLOOR(0.8f * 7500f);
 	
 		case 6:
-			return SYSTEM::FLOOR(0.8f * 7500f);
+			return BUILTIN::FLOOR(0.8f * 7500f);
 	
 		case 7:
-			return SYSTEM::FLOOR(0.8f * 7500f);
+			return BUILTIN::FLOOR(0.8f * 7500f);
 	
 		default:
 			return 7500;

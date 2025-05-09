@@ -129,10 +129,10 @@ void main() // Position - 0x0 (0)
 		
 			while (!SCRIPT::HAS_SCRIPT_WITH_NAME_HASH_LOADED(131838674))
 			{
-				SYSTEM::WAIT(0);
+				BUILTIN::WAIT(0);
 			}
 		
-			SYSTEM::START_NEW_SCRIPT_WITH_NAME_HASH_AND_ARGS(131838674, &uScriptParam_0, 23, DEFAULT);
+			BUILTIN::START_NEW_SCRIPT_WITH_NAME_HASH_AND_ARGS(131838674, &uScriptParam_0, 23, DEFAULT);
 		}
 	
 		SCRIPT::TERMINATE_THIS_THREAD();
@@ -148,10 +148,10 @@ void main() // Position - 0x0 (0)
 		else
 			num = 1;
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
-	if (SYSTEM::VDIST2(vector, func_1(157)) < SYSTEM::VDIST2(vector, func_1(156)))
+	if (BUILTIN::VDIST2(vector, func_1(157)) < BUILTIN::VDIST2(vector, func_1(156)))
 		scriptName = "carwash2";
 
 	gameTimer = MISC::GET_GAME_TIMER();
@@ -164,7 +164,7 @@ void main() // Position - 0x0 (0)
 		while (!SCRIPT::HAS_SCRIPT_LOADED(scriptName))
 		{
 			SCRIPT::REQUEST_SCRIPT(scriptName);
-			SYSTEM::WAIT(0);
+			BUILTIN::WAIT(0);
 		
 			if (MISC::GET_GAME_TIMER() > gameTimer + 20000)
 				SCRIPT::TERMINATE_THIS_THREAD();
@@ -172,7 +172,7 @@ void main() // Position - 0x0 (0)
 	
 		if (SCRIPT::HAS_SCRIPT_LOADED(scriptName))
 		{
-			SYSTEM::START_NEW_SCRIPT(scriptName, DEFAULT);
+			BUILTIN::START_NEW_SCRIPT(scriptName, DEFAULT);
 			SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED(scriptName);
 		}
 	}

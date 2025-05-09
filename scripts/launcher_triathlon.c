@@ -235,7 +235,7 @@ void main() // Position - 0x0 (0)
 
 	while (!Global_39538)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (!func_120(iLocal_92, 8))
@@ -291,13 +291,13 @@ void main() // Position - 0x0 (0)
 		if (ENTITY::DOES_ENTITY_EXIST(pedLocal_83) && !ENTITY::IS_ENTITY_DEAD(pedLocal_83, false))
 		{
 			uLocal_85 = { ENTITY::GET_ENTITY_COORDS(pedLocal_83, true) };
-			fLocal_91 = SYSTEM::VDIST2(uLocal_85, uScriptParam_0.f_1[0 /*3*/]);
+			fLocal_91 = BUILTIN::VDIST2(uLocal_85, uScriptParam_0.f_1[0 /*3*/]);
 			fLocal_91 = fLocal_91;
 			uLocal_109 = { uLocal_85 };
 			uLocal_112 = { uScriptParam_0.f_1[0 /*3*/] };
 			uLocal_109.f_2 = 0f;
 			uLocal_112.f_2 = 0f;
-			fLocal_108 = SYSTEM::VDIST2(uLocal_109, uLocal_112);
+			fLocal_108 = BUILTIN::VDIST2(uLocal_109, uLocal_112);
 		
 			switch (iLocal_93)
 			{
@@ -613,7 +613,7 @@ void main() // Position - 0x0 (0)
 				
 					if (!SCRIPT::IS_THREAD_ACTIVE(iLocal_50))
 					{
-						STATS::PLAYSTATS_ODDJOB_DONE(SYSTEM::ROUND(func_34(&uLocal_105) * 1000f), iLocal_97, false);
+						STATS::PLAYSTATS_ODDJOB_DONE(BUILTIN::ROUND(func_34(&uLocal_105) * 1000f), iLocal_97, false);
 						func_33(&uLocal_105);
 						func_124(&iLocal_92, 256);
 						func_30();
@@ -765,7 +765,7 @@ void main() // Position - 0x0 (0)
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -3271,7 +3271,7 @@ float func_35(BOOL bParam0) // Position - 0x579E (22430)
 
 	if (bParam0)
 	{
-		num = SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER());
+		num = BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER());
 		num2 = num / 1000f;
 		return num2;
 	}
@@ -3279,12 +3279,12 @@ float func_35(BOOL bParam0) // Position - 0x579E (22430)
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		networkTime = NETWORK::GET_NETWORK_TIME();
-		num3 = SYSTEM::TO_FLOAT(networkTime);
+		num3 = BUILTIN::TO_FLOAT(networkTime);
 		num4 = num3 / 1000f;
 		return num4;
 	}
 
-	return SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
+	return BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
 }
 
 BOOL func_36(int* piParam0) // Position - 0x57F6 (22518)
@@ -3473,7 +3473,7 @@ int func_48() // Position - 0x5ACA (23242)
 	args.f_5 = pedLocal_127;
 	args.f_6 = obLocal_125;
 	args.f_7 = obLocal_126;
-	num = SYSTEM::START_NEW_SCRIPT_WITH_ARGS(&uLocal_51, &args, 8, essLocal_95);
+	num = BUILTIN::START_NEW_SCRIPT_WITH_ARGS(&uLocal_51, &args, 8, essLocal_95);
 	SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED(&uLocal_51);
 	return num;
 }
@@ -3791,7 +3791,7 @@ void func_62() // Position - 0x5FBD (24509)
 
 	if (ENTITY::DOES_ENTITY_EXIST(pedLocal_127))
 		if (!ENTITY::IS_ENTITY_DEAD(pedLocal_127, false) && !ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
-			if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(pedLocal_127, true), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)) <= 144f)
+			if (BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(pedLocal_127, true), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)) <= 144f)
 				if (TASK::GET_SCRIPT_TASK_STATUS(pedLocal_127, SCRIPT_TASK_LOOK_AT_ENTITY) != 1)
 					TASK::TASK_LOOK_AT_ENTITY(pedLocal_127, PLAYER::PLAYER_PED_ID(), -1, 0, 2);
 			else if (TASK::GET_SCRIPT_TASK_STATUS(pedLocal_127, SCRIPT_TASK_LOOK_AT_ENTITY) == 1)
@@ -5152,12 +5152,12 @@ int func_122(Vector3 vParam0, var uParam1, var uParam2, var uParam3) // Position
 	unk[1 /*3*/] = { func_123(1) };
 	unk[0 /*3*/] = { func_123(0) };
 	unk[2 /*3*/] = { func_123(2) };
-	num2 = SYSTEM::VDIST2(unk[0 /*3*/], vParam0);
+	num2 = BUILTIN::VDIST2(unk[0 /*3*/], vParam0);
 	num3 = 0f;
 
 	for (i = 1; i <= 3 - 1; i = i + 1)
 	{
-		num3 = SYSTEM::VDIST2(vParam0, unk[i /*3*/]);
+		num3 = BUILTIN::VDIST2(vParam0, unk[i /*3*/]);
 	
 		if (num3 < num2)
 		{

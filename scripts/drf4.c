@@ -1307,7 +1307,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		switch (iLocal_46)
 		{
@@ -1362,7 +1362,7 @@ void main() // Position - 0x0 (0)
 				{
 					while (!HUD::HAS_ADDITIONAL_TEXT_LOADED(0))
 					{
-						SYSTEM::WAIT(0);
+						BUILTIN::WAIT(0);
 					}
 				
 					_DISPLAY_HELP_TEXT("SHRINK_BROKE", -1);
@@ -1399,7 +1399,7 @@ void main() // Position - 0x0 (0)
 						{
 							while (!HUD::HAS_ADDITIONAL_TEXT_LOADED(0))
 							{
-								SYSTEM::WAIT(0);
+								BUILTIN::WAIT(0);
 							}
 						
 							_DISPLAY_HELP_TEXT("SHRINK_BROKE", -1);
@@ -2312,7 +2312,7 @@ int func_14(int iParam0, int iParam1, int iParam2, int iParam3, BOOL bParam4) //
 	}
 
 	num3 = iParam0;
-	iParam3 = SYSTEM::FLOOR(num * SYSTEM::TO_FLOAT(iParam3));
+	iParam3 = BUILTIN::FLOOR(num * BUILTIN::TO_FLOAT(iParam3));
 	num4 = 0;
 	num5 = iParam3;
 
@@ -3581,7 +3581,7 @@ float func_73(BOOL bParam0) // Position - 0x2C92 (11410)
 
 	if (bParam0)
 	{
-		num = SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER());
+		num = BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER());
 		num2 = num / 1000f;
 		return num2;
 	}
@@ -3589,12 +3589,12 @@ float func_73(BOOL bParam0) // Position - 0x2C92 (11410)
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		networkTime = NETWORK::GET_NETWORK_TIME();
-		num3 = SYSTEM::TO_FLOAT(networkTime);
+		num3 = BUILTIN::TO_FLOAT(networkTime);
 		num4 = num3 / 1000f;
 		return num4;
 	}
 
-	return SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
+	return BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
 }
 
 BOOL func_74(int* piParam0) // Position - 0x2CEA (11498)
@@ -4129,7 +4129,7 @@ void func_95(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 
 	while (!HUD::HAS_ADDITIONAL_TEXT_LOADED(0) || !HUD::HAS_ADDITIONAL_TEXT_LOADED(6))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	_CONVERSATION_INITIALIZE_ACTOR(uParam0, 0, PLAYER::PLAYER_PED_ID(), "MICHAEL", 0, 1);
@@ -5404,7 +5404,7 @@ BOOL func_131(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 
 
 	while (!HUD::HAS_ADDITIONAL_TEXT_LOADED(0) || !HUD::HAS_ADDITIONAL_TEXT_LOADED(6))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (!func_132(uParam1, uParam2, uParam3))
@@ -5451,14 +5451,14 @@ void func_133(var uParam0, int iParam1) // Position - 0x4EEE (20206)
 	if (iParam1 < 0 || iParam1 > 3)
 		return;
 
-	*uParam0 = *uParam0 - *uParam0 && SYSTEM::SHIFT_LEFT(3, 5);
-	*uParam0 = *uParam0 || SYSTEM::SHIFT_LEFT(iParam1, 5);
+	*uParam0 = *uParam0 - *uParam0 && BUILTIN::SHIFT_LEFT(3, 5);
+	*uParam0 = *uParam0 || BUILTIN::SHIFT_LEFT(iParam1, 5);
 	return;
 }
 
 int func_134(var uParam0) // Position - 0x4F29 (20265)
 {
-	return SYSTEM::SHIFT_RIGHT(*uParam0, 5) & 3;
+	return BUILTIN::SHIFT_RIGHT(*uParam0, 5) & 3;
 }
 
 int func_135(int iParam0) // Position - 0x4F3B (20283)
@@ -5644,7 +5644,7 @@ void func_144() // Position - 0x51F3 (20979)
 	int num;
 
 	if (SCRIPT::HAS_SCRIPT_LOADED("buddyDeathResponse"))
-		SYSTEM::START_NEW_SCRIPT("buddyDeathResponse", DEFAULT);
+		BUILTIN::START_NEW_SCRIPT("buddyDeathResponse", DEFAULT);
 
 	if (Global_114162.f_9089 || func_9(false))
 	{
