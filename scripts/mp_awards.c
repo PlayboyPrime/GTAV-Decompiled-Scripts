@@ -202,7 +202,7 @@ void main() // Position - 0x0 (0)
 		case 3:
 			while (num == 0)
 			{
-				SYSTEM::WAIT(0);
+				BUILTIN::WAIT(0);
 			
 				if (num2 == 1)
 				{
@@ -358,7 +358,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -3077,7 +3077,7 @@ void func_29(var uParam0, int iParam1) // Position - 0x507C (20604)
 			for (i = 0; i <= 11; i = i + 1)
 			{
 				value = -1;
-				value = SYSTEM::FLOOR((SYSTEM::TO_FLOAT(uParam0->f_221[i]) / SYSTEM::TO_FLOAT(uParam0->f_208[i])) * 100f);
+				value = BUILTIN::FLOOR((BUILTIN::TO_FLOAT(uParam0->f_221[i]) / BUILTIN::TO_FLOAT(uParam0->f_208[i])) * 100f);
 				value = uParam0->f_441[i];
 				value2 = -1;
 			
@@ -7943,7 +7943,7 @@ int func_59(int iParam0, Hash hParam1) // Position - 0x8E5C (36444)
 {
 	int tattooShopDlcItemIndex;
 
-	tattooShopDlcItemIndex = FILES::GET_TATTOO_SHOP_DLC_ITEM_INDEX(hParam1, -1, iParam0);
+	tattooShopDlcItemIndex = EXTRAMETADATA::GET_TATTOO_SHOP_DLC_ITEM_INDEX(hParam1, -1, iParam0);
 
 	if (tattooShopDlcItemIndex != -1)
 		return 129 + tattooShopDlcItemIndex;
@@ -8862,7 +8862,7 @@ void func_70(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 0
 	num5 = func_73(iParam0, num4, iParam2);
 	value = num2 - num5;
 	value2 = num3 - num5;
-	num6 = SYSTEM::FLOOR((SYSTEM::TO_FLOAT(value2) / SYSTEM::TO_FLOAT(value)) * 100f);
+	num6 = BUILTIN::FLOOR((BUILTIN::TO_FLOAT(value2) / BUILTIN::TO_FLOAT(value)) * 100f);
 	func_65(str, str2, str3, str4, num2, num3, num6, iParam1, uParam3, 205, 173);
 	return;
 }
@@ -10348,7 +10348,7 @@ void func_88(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 0
 				break;
 		}
 	
-		num6 = SYSTEM::FLOOR((SYSTEM::TO_FLOAT(value2) / SYSTEM::TO_FLOAT(value)) * 100f);
+		num6 = BUILTIN::FLOOR((BUILTIN::TO_FLOAT(value2) / BUILTIN::TO_FLOAT(value)) * 100f);
 	}
 
 	func_65(str, str2, str3, str4, num2, num3, num6, iParam1, uParam3, 205, 173);
@@ -11157,7 +11157,7 @@ void func_104(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 
 	if (func_108(iParam0, -1))
 		num7 = 100;
 	else
-		num7 = SYSTEM::FLOOR((SYSTEM::TO_FLOAT(value2) / SYSTEM::TO_FLOAT(value)) * 100f);
+		num7 = BUILTIN::FLOOR((BUILTIN::TO_FLOAT(value2) / BUILTIN::TO_FLOAT(value)) * 100f);
 
 	func_65(str, str2, str3, str4, num2, num3, num7, iParam1, uParam3, iParam0, 173);
 	return;
@@ -14227,7 +14227,7 @@ void func_118(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 
 	num5 = func_52(iParam0, num4, iParam2);
 	value = num2 - num5;
 	value2 = num3 - num5;
-	num6 = SYSTEM::FLOOR((SYSTEM::TO_FLOAT(value2) / SYSTEM::TO_FLOAT(value)) * 100f);
+	num6 = BUILTIN::FLOOR((BUILTIN::TO_FLOAT(value2) / BUILTIN::TO_FLOAT(value)) * 100f);
 	func_65(str, str2, str3, str4, num2, num3, num6, iParam1, uParam3, 205, iParam0);
 	return;
 }

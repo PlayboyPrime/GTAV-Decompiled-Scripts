@@ -290,7 +290,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 		bLocal_246 = false;
 		flag = func_767();
 		Global_2625267.f_3 = 0;
@@ -827,7 +827,7 @@ void func_6(var uParam0, BOOL bParam1) // Position - 0x6F3 (1779)
 			Global_1001983[Global_1001983.f_684 /*3*/] = { func_99(dict2, "area") };
 		
 			if (DATAFILE::DATADICT_GET_TYPE(dict2, "rad") == 2)
-				Global_1001983.f_512[Global_1001983.f_684] = SYSTEM::TO_FLOAT(DATAFILE::DATADICT_GET_INT(dict2, "rad"));
+				Global_1001983.f_512[Global_1001983.f_684] = BUILTIN::TO_FLOAT(DATAFILE::DATADICT_GET_INT(dict2, "rad"));
 			else
 				Global_1001983.f_512[Global_1001983.f_684] = DATAFILE::DATADICT_GET_FLOAT(dict2, "rad");
 		
@@ -1501,8 +1501,8 @@ int func_19(int iParam0, int iParam1) // Position - 0x1AEA (6890)
 			value = num;
 		}
 	
-		value3 = ((SYSTEM::TO_FLOAT(value) - SYSTEM::TO_FLOAT(value2)) / 2f) + SYSTEM::TO_FLOAT(value2);
-		num = SYSTEM::ROUND(value3);
+		value3 = ((BUILTIN::TO_FLOAT(value) - BUILTIN::TO_FLOAT(value2)) / 2f) + BUILTIN::TO_FLOAT(value2);
+		num = BUILTIN::ROUND(value3);
 	}
 
 	return 8000;
@@ -3157,7 +3157,7 @@ int func_95(float fParam0, int iParam1) // Position - 0x3BD7 (15319)
 	if (iParam1 == 0)
 		return -1;
 
-	num = SYSTEM::ROUND(fParam0 * 100f);
+	num = BUILTIN::ROUND(fParam0 * 100f);
 
 	if (num < 0)
 		num = -1;
@@ -3185,12 +3185,12 @@ Vector3 func_98(int iParam0) // Position - 0x3C2C (15404)
 	if (DATAFILE::DATADICT_GET_TYPE(iParam0, "camp") == 3)
 		_float = DATAFILE::DATADICT_GET_FLOAT(iParam0, "camp");
 	else if (DATAFILE::DATADICT_GET_TYPE(iParam0, "camp") == 2)
-		_float = SYSTEM::TO_FLOAT(DATAFILE::DATADICT_GET_INT(iParam0, "camp"));
+		_float = BUILTIN::TO_FLOAT(DATAFILE::DATADICT_GET_INT(iParam0, "camp"));
 
 	if (DATAFILE::DATADICT_GET_TYPE(iParam0, "camh") == 3)
 		_float.f_2 = DATAFILE::DATADICT_GET_FLOAT(iParam0, "camh");
 	else if (DATAFILE::DATADICT_GET_TYPE(iParam0, "camh") == 2)
-		_float.f_2 = SYSTEM::TO_FLOAT(DATAFILE::DATADICT_GET_INT(iParam0, "camh"));
+		_float.f_2 = BUILTIN::TO_FLOAT(DATAFILE::DATADICT_GET_INT(iParam0, "camh"));
 
 	return _float;
 }
@@ -3209,17 +3209,17 @@ Vector3 func_99(int iParam0, char* sParam1) // Position - 0x3CAA (15530)
 		dict = DATAFILE::DATADICT_GET_DICT(iParam0, sParam1);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, "x") == 2)
-			vector = SYSTEM::TO_FLOAT(DATAFILE::DATADICT_GET_INT(dict, "x"));
+			vector = BUILTIN::TO_FLOAT(DATAFILE::DATADICT_GET_INT(dict, "x"));
 		else
 			vector = DATAFILE::DATADICT_GET_FLOAT(dict, "x");
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, "y") == 2)
-			vector.f_1 = SYSTEM::TO_FLOAT(DATAFILE::DATADICT_GET_INT(dict, "y"));
+			vector.f_1 = BUILTIN::TO_FLOAT(DATAFILE::DATADICT_GET_INT(dict, "y"));
 		else
 			vector.f_1 = DATAFILE::DATADICT_GET_FLOAT(dict, "y");
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, "z") == 2)
-			vector.f_2 = SYSTEM::TO_FLOAT(DATAFILE::DATADICT_GET_INT(dict, "z"));
+			vector.f_2 = BUILTIN::TO_FLOAT(DATAFILE::DATADICT_GET_INT(dict, "z"));
 		else
 			vector.f_2 = DATAFILE::DATADICT_GET_FLOAT(dict, "z");
 	}
@@ -6117,15 +6117,15 @@ BOOL func_204(var uParam0, int iParam1, BOOL bParam2, int iParam3) // Position -
 				else
 				{
 					fileDict = DATAFILE::DATAFILE_GET_FILE_DICT(0);
-					Global_1920286.f_10 = SYSTEM::TO_FLOAT(DATAFILE::DATADICT_GET_INT(fileDict, "dt"));
-					Global_1920286.f_11 = SYSTEM::TO_FLOAT(DATAFILE::DATADICT_GET_INT(fileDict, "du"));
+					Global_1920286.f_10 = BUILTIN::TO_FLOAT(DATAFILE::DATADICT_GET_INT(fileDict, "dt"));
+					Global_1920286.f_11 = BUILTIN::TO_FLOAT(DATAFILE::DATADICT_GET_INT(fileDict, "du"));
 					Global_1920286.f_9 = Global_1920286.f_10 / Global_1920286.f_11;
-					Global_1920286.f_13 = SYSTEM::TO_FLOAT(DATAFILE::DATADICT_GET_INT(fileDict, "pt"));
-					Global_1920286.f_14 = SYSTEM::TO_FLOAT(DATAFILE::DATADICT_GET_INT(fileDict, "pu"));
-					Global_1057195 = SYSTEM::ROUND(Global_1920286.f_14);
+					Global_1920286.f_13 = BUILTIN::TO_FLOAT(DATAFILE::DATADICT_GET_INT(fileDict, "pt"));
+					Global_1920286.f_14 = BUILTIN::TO_FLOAT(DATAFILE::DATADICT_GET_INT(fileDict, "pu"));
+					Global_1057195 = BUILTIN::ROUND(Global_1920286.f_14);
 					Global_1920286.f_12 = Global_1920286.f_13 / Global_1920286.f_14;
-					Global_1920286.f_15 = SYSTEM::TO_FLOAT(DATAFILE::DATADICT_GET_INT(fileDict, "qt"));
-					Global_1920286.f_17 = SYSTEM::TO_FLOAT(DATAFILE::DATADICT_GET_INT(fileDict, "qu"));
+					Global_1920286.f_15 = BUILTIN::TO_FLOAT(DATAFILE::DATADICT_GET_INT(fileDict, "qt"));
+					Global_1920286.f_17 = BUILTIN::TO_FLOAT(DATAFILE::DATADICT_GET_INT(fileDict, "qu"));
 					Global_1920286.f_16 = Global_1920286.f_15 / Global_1920286.f_17;
 				}
 			
@@ -10103,7 +10103,7 @@ void func_319(int iParam0) // Position - 0xF41C (62492)
 {
 	if (Global_4980736.f_121122[iParam0 /*1198*/].f_939.f_8 == 0f)
 		if (IS_BIT_SET(Global_4980736.f_121122[iParam0 /*1198*/].f_558, 10) && Global_4980736.f_121122[iParam0 /*1198*/].f_605 != -1)
-			Global_4980736.f_121122[iParam0 /*1198*/].f_939.f_8 = SYSTEM::TO_FLOAT(Global_4980736.f_121122[iParam0 /*1198*/].f_605);
+			Global_4980736.f_121122[iParam0 /*1198*/].f_939.f_8 = BUILTIN::TO_FLOAT(Global_4980736.f_121122[iParam0 /*1198*/].f_605);
 
 	if (func_243(5))
 		MISC::CLEAR_BIT(&(Global_4980736.f_121122[iParam0 /*1198*/].f_566), 13);
@@ -10362,7 +10362,7 @@ void func_330(int iParam0, int iParam1) // Position - 0xFD37 (64823)
 	
 		case 7:
 			if ((float)*Global_4718592.f_187881 != 0f)
-				Global_4980736.f_89301[iParam1 /*169*/].f_106.f_10 = SYSTEM::TO_FLOAT(*Global_4718592.f_187881);
+				Global_4980736.f_89301[iParam1 /*169*/].f_106.f_10 = BUILTIN::TO_FLOAT(*Global_4718592.f_187881);
 			break;
 	}
 
@@ -14254,7 +14254,7 @@ void func_370(int iParam0, BOOL bParam1) // Position - 0x186F0 (100080)
 	
 		if (array39 != 0)
 			if (DATAFILE::DATAARRAY_GET_TYPE(array39, i) == 2)
-				Global_4980736.f_80909[num /*254*/].f_46.f_8 = SYSTEM::TO_FLOAT(DATAFILE::DATAARRAY_GET_INT(array39, i));
+				Global_4980736.f_80909[num /*254*/].f_46.f_8 = BUILTIN::TO_FLOAT(DATAFILE::DATAARRAY_GET_INT(array39, i));
 			else
 				Global_4980736.f_80909[num /*254*/].f_46.f_8 = DATAFILE::DATAARRAY_GET_FLOAT(array39, i);
 		else if (func_488())
@@ -16694,7 +16694,7 @@ void func_392(int iParam0, BOOL bParam1) // Position - 0x1D20B (119307)
 			
 				if (array76 != 0)
 					if (DATAFILE::DATAARRAY_GET_TYPE(array76, i) == 2)
-						Global_4980736.f_99616[num /*615*/].f_141.f_8 = SYSTEM::TO_FLOAT(DATAFILE::DATAARRAY_GET_INT(array76, i));
+						Global_4980736.f_99616[num /*615*/].f_141.f_8 = BUILTIN::TO_FLOAT(DATAFILE::DATAARRAY_GET_INT(array76, i));
 					else
 						Global_4980736.f_99616[num /*615*/].f_141.f_8 = DATAFILE::DATAARRAY_GET_FLOAT(array76, i);
 				else if (func_488())
@@ -28875,7 +28875,7 @@ void func_417(int iParam0, BOOL bParam1) // Position - 0x2F1BB (192955)
 			
 				if (array10 != 0)
 					if (DATAFILE::DATAARRAY_GET_TYPE(array10, i) == 2)
-						Global_4980736.f_7023[num /*636*/].f_33.f_8 = SYSTEM::TO_FLOAT(DATAFILE::DATAARRAY_GET_INT(array10, i));
+						Global_4980736.f_7023[num /*636*/].f_33.f_8 = BUILTIN::TO_FLOAT(DATAFILE::DATAARRAY_GET_INT(array10, i));
 					else if (DATAFILE::DATAARRAY_GET_TYPE(array10, i) == 3)
 						Global_4980736.f_7023[num /*636*/].f_33.f_8 = DATAFILE::DATAARRAY_GET_FLOAT(array10, i);
 				else
@@ -32291,7 +32291,7 @@ void func_459(int iParam0) // Position - 0x399AE (235950)
 		if (array5 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array5, i) == 3)
 			Global_4718592.f_187948[i /*11*/].f_10 = DATAFILE::DATAARRAY_GET_FLOAT(array5, i);
 		else if (DATAFILE::DATAARRAY_GET_TYPE(array5, i) == 2)
-			Global_4718592.f_187948[i /*11*/].f_10 = SYSTEM::TO_FLOAT(DATAFILE::DATAARRAY_GET_INT(array5, i));
+			Global_4718592.f_187948[i /*11*/].f_10 = BUILTIN::TO_FLOAT(DATAFILE::DATAARRAY_GET_INT(array5, i));
 		else
 			Global_4718592.f_187948[i /*11*/].f_10 = 0f;
 	
@@ -36971,7 +36971,7 @@ void func_499(var uParam0) // Position - 0x44879 (280697)
 				func_332(&key, "rSPCPA", i, -1);
 				func_317(&key, &Global_4718592.f_3592[i /*26190*/].f_26136[j], uParam0, &num25, j, 0, 0, -1);
 				func_332(&key, "rWISKST", i, -1);
-				func_317(&key, &Global_4718592.f_3592[i /*26190*/].f_26082[j], uParam0, &num29, j, SYSTEM::CEIL(10f), SYSTEM::CEIL(10f), -1);
+				func_317(&key, &Global_4718592.f_3592[i /*26190*/].f_26082[j], uParam0, &num29, j, BUILTIN::CEIL(10f), BUILTIN::CEIL(10f), -1);
 				func_332(&key, "rWISSSC", i, -1);
 				func_317(&key, &Global_4718592.f_3592[i /*26190*/].f_26100[j], uParam0, &num30, j, 0, 0, -1);
 				func_332(&key, "woAIEPR", i, -1);
@@ -39228,7 +39228,7 @@ void func_505(var uParam0) // Position - 0x4A220 (303648)
 			
 				if (!func_243(7))
 					if (!func_495(&array14, 2, j))
-						Global_4718592.f_3592[i /*26190*/].f_19410[j] = SYSTEM::TO_FLOAT(DATAFILE::DATAARRAY_GET_INT(array14, j));
+						Global_4718592.f_3592[i /*26190*/].f_19410[j] = BUILTIN::TO_FLOAT(DATAFILE::DATAARRAY_GET_INT(array14, j));
 					else
 						Global_4718592.f_3592[i /*26190*/].f_19410[j] = 0f;
 				else if (!func_495(&array14, 3, j))
@@ -42944,7 +42944,7 @@ void func_514(int iParam0, int iParam1, BOOL bParam2) // Position - 0x4F29E (324
 		else if (func_541() || func_539() && func_538())
 		{
 			value = func_543();
-			num2 = SYSTEM::TO_FLOAT(value) / SYSTEM::TO_FLOAT(Global_4718592.f_3522);
+			num2 = BUILTIN::TO_FLOAT(value) / BUILTIN::TO_FLOAT(Global_4718592.f_3522);
 			flag = false;
 		
 			if (Global_4718592.f_3527 == 3)
@@ -49042,7 +49042,7 @@ void func_601(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 			Global_4718592.f_3592[i /*26190*/].f_952[j] = 5;
 			Global_4718592.f_3592[i /*26190*/].f_970[j] = 20;
 			Global_4718592.f_3592[i /*26190*/].f_1896[j] = -1;
-			Global_4718592.f_3592[i /*26190*/].f_26082[j] = SYSTEM::CEIL(10f);
+			Global_4718592.f_3592[i /*26190*/].f_26082[j] = BUILTIN::CEIL(10f);
 			Global_4718592.f_3592[i /*26190*/].f_26154[j] = -1;
 			Global_4718592.f_3592[i /*26190*/].f_26136[j] = 0;
 			Global_4718592.f_3592[i /*26190*/].f_26172[j] = -1;

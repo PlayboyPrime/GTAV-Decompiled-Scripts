@@ -123,7 +123,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 		func_1();
 	}
 
@@ -275,7 +275,7 @@ void func_6() // Position - 0x25A (602)
 		while (!IS_BIT_SET(Global_1836588, 1))
 		{
 			func(&uLocal_23, &iLocal_21);
-			SYSTEM::WAIT(0);
+			BUILTIN::WAIT(0);
 		}
 	
 		return;
@@ -653,7 +653,7 @@ void func_12() // Position - 0xB95 (2965)
 		}
 		else if (iLocal_22 > MISC::GET_FRAME_COUNT())
 		{
-			SYSTEM::WAIT(0);
+			BUILTIN::WAIT(0);
 		}
 		else
 		{
@@ -670,7 +670,7 @@ void func_12() // Position - 0xB95 (2965)
 		
 			if (!flag)
 			{
-				SYSTEM::WAIT(0);
+				BUILTIN::WAIT(0);
 			}
 			else
 			{
@@ -8888,8 +8888,8 @@ int func_94(Vehicle veParam0, int iParam1) // Position - 0xD17E (53630)
 	
 		value = func_95(veParam0, 38) + 1;
 		value2 = func_95(veParam0, 24) + 1;
-		num = SYSTEM::TO_FLOAT(iParam1 + 1) / SYSTEM::TO_FLOAT(value);
-		num2 = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(value2) * num) - 1;
+		num = BUILTIN::TO_FLOAT(iParam1 + 1) / BUILTIN::TO_FLOAT(value);
+		num2 = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(value2) * num) - 1;
 	
 		if (num2 < 0)
 			num2 = 0;

@@ -199,7 +199,7 @@ void main() // Position - 0x0 (0)
 	iLocal_154 = 2;
 
 	if (_DOES_ENTITY_EXIST_AND_IS_ALIVE(PLAYER::PLAYER_PED_ID()))
-		if (SYSTEM::VDIST2(func_60(), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)) < 40000f)
+		if (BUILTIN::VDIST2(func_60(), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)) < 40000f)
 			if (CAM::IS_SCREEN_FADED_IN())
 				if (PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()))
 					Global_114135.f_25077.f_8 = 1;
@@ -232,7 +232,7 @@ void main() // Position - 0x0 (0)
 				break;
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -461,7 +461,7 @@ void func_13() // Position - 0x49C (1180)
 			{
 				func_15(&pedLocal_156, false);
 				func_14(&veLocal_155, false);
-				SYSTEM::START_NEW_SCRIPT("Country_Race", MULTIPLAYER_MISSION);
+				BUILTIN::START_NEW_SCRIPT("Country_Race", MULTIPLAYER_MISSION);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("Country_Race");
 				iLocal_153 = 2;
 			}
@@ -1333,7 +1333,7 @@ BOOL func_42() // Position - 0x1581 (5505)
 
 BOOL func_43() // Position - 0x15C5 (5573)
 {
-	if (!Global_114135.f_25077.f_9 && !Global_114135.f_25077.f_8 && SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), func_60()) < 84100f)
+	if (!Global_114135.f_25077.f_9 && !Global_114135.f_25077.f_8 && BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), func_60()) < 84100f)
 	{
 		Global_114135.f_25077.f_9 = func_54();
 		func_51();
@@ -1355,7 +1355,7 @@ BOOL func_43() // Position - 0x15C5 (5573)
 	}
 	else
 	{
-		if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), func_60()) > 90000f)
+		if (BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), func_60()) > 90000f)
 		{
 			func_15(&pedLocal_156, true);
 			func_14(&veLocal_155, true);
@@ -1408,12 +1408,12 @@ void func_44(BOOL bParam0) // Position - 0x1765 (5989)
 		{
 			while (!STREAMING::HAS_MODEL_LOADED(func_50()))
 			{
-				SYSTEM::WAIT(0);
+				BUILTIN::WAIT(0);
 			}
 		
 			while (!STREAMING::HAS_MODEL_LOADED(joaat("A_M_Y_MotoX_02")))
 			{
-				SYSTEM::WAIT(0);
+				BUILTIN::WAIT(0);
 			}
 		}
 	
@@ -1676,7 +1676,7 @@ void func_56() // Position - 0x1CBC (7356)
 	}
 
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("country_race")) == 0)
-		if (SYSTEM::VDIST2(func_60(), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)) > 160000f)
+		if (BUILTIN::VDIST2(func_60(), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)) > 160000f)
 			func_62(false);
 
 	return;

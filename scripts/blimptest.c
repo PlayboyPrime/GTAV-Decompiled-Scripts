@@ -96,7 +96,7 @@ void main() // Position - 0x0 (0)
 		HUD::SET_TEXT_WRAP(0f, 1f);
 		func_10(0.05f, 0.7f, "PLCHLD_PASS", 0);
 		func_1();
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -308,7 +308,7 @@ void func_11() // Position - 0x494 (1172)
 
 	while (!STREAMING::HAS_MODEL_LOADED(hLocal_44))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (func_6(veLocal_38))
@@ -399,7 +399,7 @@ void func_16() // Position - 0x60F (1551)
 
 	while (!STREAMING::HAS_MODEL_LOADED(hLocal_42))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (func_6(veLocal_38))
@@ -437,7 +437,7 @@ void func_17() // Position - 0x68C (1676)
 
 	while (!STREAMING::HAS_MODEL_LOADED(hLocal_39) || !VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(1, "Blimp_City"))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	rotationOfVehicleRecordingIdAtTime = { VEHICLE::GET_ROTATION_OF_VEHICLE_RECORDING_ID_AT_TIME(VEHICLE::GET_VEHICLE_RECORDING_ID(1, "Blimp_City"), 0f) };

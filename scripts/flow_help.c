@@ -198,7 +198,7 @@ void main() // Position - 0x0 (0)
 			func_23();
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;

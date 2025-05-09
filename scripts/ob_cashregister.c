@@ -59,7 +59,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		if (iLocal_20 == 1)
 			if (_SHOULD_NETWORK_SCRIPT_TERMINATE())
@@ -129,7 +129,7 @@ void func_1() // Position - 0x111 (273)
 
 	while (!STREAMING::HAS_MODEL_LOADED(model))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
@@ -335,8 +335,8 @@ int func_13(int iParam0, int iParam1) // Position - 0x59F (1439)
 		case 1:
 			if (iParam0 > 0)
 			{
-				value = SYSTEM::TO_FLOAT(iParam0) * Global_262145;
-				iParam0 = SYSTEM::ROUND(value);
+				value = BUILTIN::TO_FLOAT(iParam0) * Global_262145;
+				iParam0 = BUILTIN::ROUND(value);
 			}
 			break;
 	
@@ -478,7 +478,7 @@ int func_22(int iParam0, int iParam1, BOOL bParam2) // Position - 0x707 (1799)
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

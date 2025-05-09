@@ -258,7 +258,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		if (flag)
 			if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
@@ -369,10 +369,10 @@ void func_7() // Position - 0x191 (401)
 							
 								while (!SCRIPT::HAS_SCRIPT_LOADED("emergencycall"))
 								{
-									SYSTEM::WAIT(0);
+									BUILTIN::WAIT(0);
 								}
 							
-								SYSTEM::START_NEW_SCRIPT("emergencycall", MINI);
+								BUILTIN::START_NEW_SCRIPT("emergencycall", MINI);
 							}
 						
 							iLocal_42 = 1;
@@ -386,10 +386,10 @@ void func_7() // Position - 0x191 (401)
 						
 							while (!SCRIPT::HAS_SCRIPT_LOADED("emergencycall"))
 							{
-								SYSTEM::WAIT(0);
+								BUILTIN::WAIT(0);
 							}
 						
-							SYSTEM::START_NEW_SCRIPT("emergencycall", MINI);
+							BUILTIN::START_NEW_SCRIPT("emergencycall", MINI);
 						}
 					
 						iLocal_42 = 1;

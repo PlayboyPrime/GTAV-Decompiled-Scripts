@@ -226,7 +226,7 @@ void main() // Position - 0x0 (0)
 		while (!func_59())
 		{
 			func_11(&uLocal_118);
-			SYSTEM::WAIT(0);
+			BUILTIN::WAIT(0);
 		}
 	}
 
@@ -631,7 +631,7 @@ void func_18(var uParam0) // Position - 0x81A (2074)
 	if (uParam0->f_57.f_4 == 6)
 	{
 		vector = { PAD::GET_CONTROL_NORMAL(PLAYER_CONTROL, INPUT_SCRIPT_LEFT_AXIS_X), PAD::GET_CONTROL_NORMAL(PLAYER_CONTROL, INPUT_SCRIPT_LEFT_AXIS_Y), 0f };
-		num = SYSTEM::VMAG(vector);
+		num = BUILTIN::VMAG(vector);
 	
 		if (uParam0->f_57.f_4 == 6 && !ENTITY::HAS_ANIM_EVENT_FIRED(PLAYER::PLAYER_PED_ID(), joaat("block_interrupt")) && !func_8(&(uParam0->f_57), 12))
 			if (num >= 0.35f)
@@ -1578,8 +1578,8 @@ Vector3 func_75(float fParam0, var uParam1, var uParam2, float fParam3) // Posit
 	float num2;
 	float num3;
 
-	num2 = SYSTEM::SIN(fParam3);
-	num3 = SYSTEM::COS(fParam3);
+	num2 = BUILTIN::SIN(fParam3);
+	num3 = BUILTIN::COS(fParam3);
 	num = (fParam0 * num3) - (fParam0.f_1 * num2);
 	num.f_1 = (fParam0 * num2) + (fParam0.f_1 * num3);
 	num.f_2 = fParam0.f_2;
@@ -1725,7 +1725,7 @@ int func_80(int iParam0, int iParam1, BOOL bParam2) // Position - 0x1C2D (7213)
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

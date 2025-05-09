@@ -556,7 +556,7 @@ void main() // Position - 0x0 (0)
 
 	while (!Global_39520)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (!func_162(iLocal_92, 8))
@@ -607,13 +607,13 @@ void main() // Position - 0x0 (0)
 		if (ENTITY::DOES_ENTITY_EXIST(pedLocal_83) && !ENTITY::IS_ENTITY_DEAD(pedLocal_83, false))
 		{
 			uLocal_85 = { ENTITY::GET_ENTITY_COORDS(pedLocal_83, true) };
-			fLocal_91 = SYSTEM::VDIST2(uLocal_85, uScriptParam_0.f_1[0 /*3*/]);
+			fLocal_91 = BUILTIN::VDIST2(uLocal_85, uScriptParam_0.f_1[0 /*3*/]);
 			fLocal_91 = fLocal_91;
 			uLocal_109 = { uLocal_85 };
 			uLocal_112 = { uScriptParam_0.f_1[0 /*3*/] };
 			uLocal_109.f_2 = 0f;
 			uLocal_112.f_2 = 0f;
-			fLocal_108 = SYSTEM::VDIST2(uLocal_109, uLocal_112);
+			fLocal_108 = BUILTIN::VDIST2(uLocal_109, uLocal_112);
 		
 			switch (iLocal_93)
 			{
@@ -920,7 +920,7 @@ void main() // Position - 0x0 (0)
 				
 					if (!SCRIPT::IS_THREAD_ACTIVE(iLocal_50))
 					{
-						STATS::PLAYSTATS_ODDJOB_DONE(SYSTEM::ROUND(func_12(&uLocal_105) * 1000f), iLocal_97, false);
+						STATS::PLAYSTATS_ODDJOB_DONE(BUILTIN::ROUND(func_12(&uLocal_105) * 1000f), iLocal_97, false);
 						func_11(&uLocal_105);
 						func_169(&iLocal_92, 256);
 						func_8();
@@ -1072,7 +1072,7 @@ void main() // Position - 0x0 (0)
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -1208,7 +1208,7 @@ float func_13(BOOL bParam0) // Position - 0xC03 (3075)
 
 	if (bParam0)
 	{
-		num = SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER());
+		num = BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER());
 		num2 = num / 1000f;
 		return num2;
 	}
@@ -1216,12 +1216,12 @@ float func_13(BOOL bParam0) // Position - 0xC03 (3075)
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		networkTime = NETWORK::GET_NETWORK_TIME();
-		num3 = SYSTEM::TO_FLOAT(networkTime);
+		num3 = BUILTIN::TO_FLOAT(networkTime);
 		num4 = num3 / 1000f;
 		return num4;
 	}
 
-	return SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
+	return BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
 }
 
 BOOL func_14(int* piParam0) // Position - 0xC5B (3163)
@@ -1462,7 +1462,7 @@ int func_29() // Position - 0xFF3 (4083)
 			break;
 	}
 
-	num = SYSTEM::START_NEW_SCRIPT_WITH_ARGS(&uLocal_51, &veLocal_285, 170, essLocal_95);
+	num = BUILTIN::START_NEW_SCRIPT_WITH_ARGS(&uLocal_51, &veLocal_285, 170, essLocal_95);
 	SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED(&uLocal_51);
 	return num;
 }
@@ -3496,7 +3496,7 @@ void func_38() // Position - 0x530C (21260)
 
 	while (CAM::IS_SCREEN_FADING_OUT())
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 		func_18(&caLocal_459, veLocal_285);
 	}
 
@@ -3821,7 +3821,7 @@ void func_53() // Position - 0x5807 (22535)
 	if (!bLocal_456)
 	{
 		func_144();
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 		return;
 	}
 
@@ -3855,7 +3855,7 @@ void func_53() // Position - 0x5807 (22535)
 		return;
 	}
 
-	num = SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), func_109(iLocal_119));
+	num = BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), func_109(iLocal_119));
 
 	if (num < 11664f)
 	{
@@ -3911,7 +3911,7 @@ void func_53() // Position - 0x5807 (22535)
 				{
 					if (!PED::IS_PED_INJURED(veLocal_285.f_3) && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 					{
-						if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(veLocal_285.f_3, true)) < 400f)
+						if (BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(veLocal_285.f_3, true)) < 400f)
 						{
 							_CONVERSATION_ADD_LINE(&uLocal_120, "OJBJAUD", func_101(iLocal_119), 8, 0, 0, 0);
 							TASK::TASK_LOOK_AT_ENTITY(veLocal_285.f_3, PLAYER::PLAYER_PED_ID(), 6000, 0, 2);
@@ -3983,7 +3983,7 @@ void func_53() // Position - 0x5807 (22535)
 				
 					while (func_12(&unk) < 1f)
 					{
-						SYSTEM::WAIT(0);
+						BUILTIN::WAIT(0);
 					
 						if (PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_JACKING(PLAYER::PLAYER_PED_ID()))
 						{
@@ -4021,7 +4021,7 @@ void func_53() // Position - 0x5807 (22535)
 				
 					while (!PED::IS_PED_IN_VEHICLE(PLAYER::PLAYER_PED_ID(), veLocal_285, false) && func_55(&uLocal_460) < 2f)
 					{
-						SYSTEM::WAIT(0);
+						BUILTIN::WAIT(0);
 					}
 				
 					func_11(&uLocal_460);
@@ -4058,7 +4058,7 @@ void func_53() // Position - 0x5807 (22535)
 				
 					while (func_12(&unk) < 2f)
 					{
-						SYSTEM::WAIT(0);
+						BUILTIN::WAIT(0);
 						func_18(&caLocal_459, veLocal_285);
 					}
 				}
@@ -4068,7 +4068,7 @@ void func_53() // Position - 0x5807 (22535)
 
 	if (!flag)
 	{
-		if (VEHICLE::IS_VEHICLE_DRIVEABLE(veLocal_285, false) && SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(veLocal_285, true)) < 225f && !PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), true))
+		if (VEHICLE::IS_VEHICLE_DRIVEABLE(veLocal_285, false) && BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(veLocal_285, true)) < 225f && !PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), true))
 		{
 			if (!bLocal_457 || iLocal_119 == 3 && !_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("PLAY_BASEJUMP_B" /*Approach the helicopter and press ~INPUT_ENTER~ to start parachuting.*/) || iLocal_119 != 3 && !_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("PLAY_BASEJUMP_S" /*Approach the helicopter and press ~INPUT_ENTER~ to start parachuting.*/))
 			{
@@ -5908,7 +5908,7 @@ void func_145(float fParam0, float fParam1, float fParam2, float fParam3) // Pos
 	var groundZ;
 	BOOL flag;
 
-	fLocal_91 = SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), fParam0);
+	fLocal_91 = BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), fParam0);
 
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && fLocal_91 > 25f || CAM::IS_SCREEN_FADED_OUT())
 		if (fLocal_91 < 25600f)
@@ -6085,7 +6085,7 @@ BOOL func_154() // Position - 0x8A00 (35328)
 		return false;
 
 	entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
-	num = SYSTEM::VDIST2(entityCoords, uLocal_88);
+	num = BUILTIN::VDIST2(entityCoords, uLocal_88);
 
 	if (num < 10f * 10f)
 		return true;
@@ -6403,7 +6403,7 @@ void func_163() // Position - 0x8E0A (36362)
 
 	func_127(&iLocal_92, 4194304);
 	func_127(&iLocal_92, 16);
-	fLocal_100 = SYSTEM::TO_FLOAT(func_164(iLocal_103)) + 5f;
+	fLocal_100 = BUILTIN::TO_FLOAT(func_164(iLocal_103)) + 5f;
 
 	if (iLocal_103 != 263)
 	{
@@ -6517,7 +6517,7 @@ int func_167(Vector3 vParam0, var uParam1, var uParam2, int iParam3) // Position
 	{
 		if (iParam3 == func_168(i))
 		{
-			num2 = SYSTEM::VDIST2(vParam0, func_109(i));
+			num2 = BUILTIN::VDIST2(vParam0, func_109(i));
 		
 			if (num > num2)
 			{

@@ -302,7 +302,7 @@ BOOL func_14() // Position - 0x32C (812)
 
 void func_15() // Position - 0x33B (827)
 {
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	return;
 }
 
@@ -348,7 +348,7 @@ BOOL _NETWORK_WAIT_FOR_HOST_BROADCAST_DATA() // Position - 0x38C (908)
 		if (num >= 3600)
 			return false;
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return false;
@@ -397,7 +397,7 @@ int func_18(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3E5 (997)
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

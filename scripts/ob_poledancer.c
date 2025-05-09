@@ -28,7 +28,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		if (ENTITY::DOES_ENTITY_EXIST(obScriptParam_0))
 		{

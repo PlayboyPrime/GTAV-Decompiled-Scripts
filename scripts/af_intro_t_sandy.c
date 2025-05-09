@@ -146,16 +146,16 @@ void main() // Position - 0x0 (0)
 								if (entityCoords.f_2 > 39f && entityCoords.f_2 < 43f)
 									iLocal_35 = 1;
 								else
-									SYSTEM::WAIT(100);
+									BUILTIN::WAIT(100);
 							else
-								SYSTEM::WAIT(100);
+								BUILTIN::WAIT(100);
 						else
-							SYSTEM::WAIT(1500);
+							BUILTIN::WAIT(1500);
 					}
 				}
 				else
 				{
-					SYSTEM::WAIT(1500);
+					BUILTIN::WAIT(1500);
 				}
 				break;
 		
@@ -169,7 +169,7 @@ void main() // Position - 0x0 (0)
 				break;
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -204,7 +204,7 @@ void func_2() // Position - 0x230 (560)
 {
 	func_6(-815326385);
 	func_3("SHI_T_SANDY_2" /*Planes you purchase from websites or that you land inside will be stored at ~HUD_COLOUR_TREVOR~~BLIP_HANGAR~~s~~n~Ground vehicles too large for a garage will also be stored here.*/, 0, 0, -1, 10000, 7, 0, 0, 0);
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	func_3("SHI_T_SANDY_3" /*Helicopters purchased from websites or that you land on the helipad will be stored at ~HUD_COLOUR_TREVOR~~BLIP_HELIPAD~*/, 0, 0, -1, 10000, 7, 0, 0, 0);
 	iLocal_35 = 2;
 	return;
@@ -788,17 +788,17 @@ void func_31(var uParam0) // Position - 0xFCE (4046)
 		uParam0->f_47 = { uParam0->f_47 + uParam0->[i /*3*/] };
 	}
 
-	uParam0->f_47 = { uParam0->f_47 / F2V(SYSTEM::TO_FLOAT(i)) };
+	uParam0->f_47 = { uParam0->f_47 / F2V(BUILTIN::TO_FLOAT(i)) };
 
 	for (i = 0; i < uParam0->f_46; i = i + 1)
 	{
-		num = SYSTEM::VDIST2(uParam0->f_47, uParam0->[i /*3*/]);
+		num = BUILTIN::VDIST2(uParam0->f_47, uParam0->[i /*3*/]);
 	
 		if (num > uParam0->f_50)
 			uParam0->f_50 = num;
 	}
 
-	uParam0->f_50 = SYSTEM::SQRT(uParam0->f_50);
+	uParam0->f_50 = BUILTIN::SQRT(uParam0->f_50);
 	uParam0->f_51 = 0;
 	return;
 }

@@ -81,7 +81,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
@@ -270,7 +270,7 @@ void func_10() // Position - 0x3C9 (969)
 		case 1:
 			while (!func_20())
 			{
-				SYSTEM::WAIT(0);
+				BUILTIN::WAIT(0);
 			
 				if (func_19() == 3)
 					iLocal_41 = 3;
@@ -360,7 +360,7 @@ void func_11(Ped pedParam0, Vector3* pvParam1, var uParam2) // Position - 0x462 
 				}
 				else
 				{
-					xOffset = num3 * SYSTEM::TO_FLOAT(outNumLanes / 2);
+					xOffset = num3 * BUILTIN::TO_FLOAT(outNumLanes / 2);
 				
 					if (xOffset == 0f)
 						xOffset = xOffset + num3;
@@ -376,7 +376,7 @@ void func_11(Ped pedParam0, Vector3* pvParam1, var uParam2) // Position - 0x462 
 					xOffset = xOffset + (num / 2f);
 				}
 			
-				if (SYSTEM::VDIST(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(*pvParam1, *uParam2, xOffset, 0f, 0f), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)) > SYSTEM::VDIST(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(*pvParam1, *uParam2, -xOffset, 0f, 0f), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)))
+				if (BUILTIN::VDIST(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(*pvParam1, *uParam2, xOffset, 0f, 0f), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)) > BUILTIN::VDIST(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(*pvParam1, *uParam2, -xOffset, 0f, 0f), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)))
 					xOffset = -xOffset;
 			
 				*pvParam1 = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(*pvParam1, *uParam2, xOffset, 0f, 0f) };

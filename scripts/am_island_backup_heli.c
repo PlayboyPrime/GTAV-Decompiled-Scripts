@@ -949,7 +949,7 @@ void func_37(Vector3 vParam0, var uParam1, var uParam2, float fParam3, Hash hPar
 
 	if (func_38(PLAYER::PLAYER_ID(), vParam0, hParam4) > -1)
 	{
-		if (Global_2635516.f_3231[1 /*6*/].f_5 == veParam5 && Global_2635516.f_3231[1 /*6*/].f_4 == hParam4 && SYSTEM::VDIST(Global_2635516.f_3231[1 /*6*/], vParam0) < 0.5f)
+		if (Global_2635516.f_3231[1 /*6*/].f_5 == veParam5 && Global_2635516.f_3231[1 /*6*/].f_4 == hParam4 && BUILTIN::VDIST(Global_2635516.f_3231[1 /*6*/], vParam0) < 0.5f)
 			return;
 	
 		for (i = 0; i < 2; i = i + 1)
@@ -986,7 +986,7 @@ int func_38(Player plParam0, var uParam1, var uParam2, var uParam3, Hash hParam4
 				if (MISC::ABSF(Global_2648914.f_461[player /*11*/][i /*5*/].f_2 - vector.f_2) < 2f)
 					vector.f_2 = Global_2648914.f_461[player /*11*/][i /*5*/].f_2;
 			
-				if (SYSTEM::VDIST(Global_2648914.f_461[player /*11*/][i /*5*/], vector) < 0.5f)
+				if (BUILTIN::VDIST(Global_2648914.f_461[player /*11*/][i /*5*/], vector) < 0.5f)
 					return i;
 			}
 		}
@@ -1014,7 +1014,7 @@ BOOL func_40() // Position - 0xFD9 (4057)
 		{
 			if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 			{
-				x = { func_60(_GET_PLAYER_COORDS(PLAYER::PLAYER_ID()), 0f, -200f * SYSTEM::SIN(SYSTEM::TO_FLOAT(iLocal_78.f_1.f_13) * 30f), 200f * SYSTEM::COS(SYSTEM::TO_FLOAT(iLocal_78.f_1.f_13) * 30f), 0f) };
+				x = { func_60(_GET_PLAYER_COORDS(PLAYER::PLAYER_ID()), 0f, -200f * BUILTIN::SIN(BUILTIN::TO_FLOAT(iLocal_78.f_1.f_13) * 30f), 200f * BUILTIN::COS(BUILTIN::TO_FLOAT(iLocal_78.f_1.f_13) * 30f), 0f) };
 				x.f_2 = PATHFIND::GET_APPROX_HEIGHT_FOR_POINT(x, x.f_1);
 				x.f_2 = x.f_2 + 30f;
 			
@@ -1389,8 +1389,8 @@ Vector3 func_60(var uParam0, var uParam1, var uParam2, float fParam3, float fPar
 	var unk3;
 
 	value = fParam3;
-	num2 = SYSTEM::COS(value);
-	num3 = SYSTEM::SIN(value);
+	num2 = BUILTIN::COS(value);
+	num3 = BUILTIN::SIN(value);
 	num = (fParam4 * num2) + (fParam4.f_1 * num3);
 	num.f_1 = (fParam4.f_1 * num2) - (fParam4 * num3);
 	unk3 = { uParam0 + num };
@@ -1697,7 +1697,7 @@ void func_70() // Position - 0x1B6B (7019)
 								
 									if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 										if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
-											TASK::TASK_HELI_MISSION(pilot, heli, 0, PLAYER::PLAYER_PED_ID(), 0f, 0f, 0f, iLocal_73, 20f, 40f, -1f, SYSTEM::CEIL(uLocal_70[0]), 10, -1082130432, 0);
+											TASK::TASK_HELI_MISSION(pilot, heli, 0, PLAYER::PLAYER_PED_ID(), 0f, 0f, 0f, iLocal_73, 20f, 40f, -1f, BUILTIN::CEIL(uLocal_70[0]), 10, -1082130432, 0);
 								}
 							}
 						}
@@ -1937,7 +1937,7 @@ void func_74() // Position - 0x2089 (8329)
 
 	if (func_55(player2, player) || func_75(player2, player, -2, 0))
 	{
-		TASK::TASK_HELI_MISSION(pilot, aircraft, 0, playerPed, 0f, 0f, 0f, iLocal_73, 20f, 40f, -1f, SYSTEM::CEIL(uLocal_70[0]), 10, -1082130432, 0);
+		TASK::TASK_HELI_MISSION(pilot, aircraft, 0, playerPed, 0f, 0f, 0f, iLocal_73, 20f, 40f, -1f, BUILTIN::CEIL(uLocal_70[0]), 10, -1082130432, 0);
 		plLocal_76 = player;
 	}
 
@@ -2202,7 +2202,7 @@ BOOL func_97() // Position - 0x25B1 (9649)
 
 void func_98() // Position - 0x25C0 (9664)
 {
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	return;
 }
 
@@ -2253,7 +2253,7 @@ BOOL _NETWORK_WAIT_FOR_HOST_BROADCAST_DATA() // Position - 0x2632 (9778)
 		if (num >= 3600)
 			return false;
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return false;
@@ -2302,7 +2302,7 @@ int func_101(int iParam0, int iParam1, BOOL bParam2) // Position - 0x268B (9867)
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

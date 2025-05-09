@@ -225,7 +225,7 @@ void main() // Position - 0x0 (0)
 			
 				while (!HUD::HAS_ADDITIONAL_TEXT_LOADED(0))
 				{
-					SYSTEM::WAIT(0);
+					BUILTIN::WAIT(0);
 				}
 			
 				if (!AUDIO::IS_AUDIO_SCENE_ACTIVE("END_CREDITS_SCENE"))
@@ -430,19 +430,19 @@ void main() // Position - 0x0 (0)
 				PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_SELECT_CHARACTER_MICHAEL, true);
 				PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_SELECT_CHARACTER_MULTIPLAYER, true);
 			
-				if ((SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER()) - SYSTEM::TO_FLOAT(iLocal_125)) / 60000f > 39f && iLocal_126 == 0)
+				if ((BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER()) - BUILTIN::TO_FLOAT(iLocal_125)) / 60000f > 39f && iLocal_126 == 0)
 					iLocal_126 = 1;
 			
 				if (MISC::HAVE_CREDITS_REACHED_END())
 				{
 					if (bLocal_124 == false)
 					{
-						SYSTEM::SETTIMERA(0);
+						BUILTIN::SETTIMERA(0);
 						bLocal_124 = true;
 					}
 				}
 			
-				if (SYSTEM::TIMERA() > 40000 && bLocal_124 || func_1())
+				if (BUILTIN::TIMERA() > 40000 && bLocal_124 || func_1())
 				{
 					AUDIO::START_AUDIO_SCENE("CAR_MOD_RADIO_MUTE_SCENE");
 					MISC::SET_CREDITS_FADE_OUT_WITH_SCREEN(true);
@@ -450,13 +450,13 @@ void main() // Position - 0x0 (0)
 					if (!CAM::IS_SCREEN_FADED_OUT())
 						CAM::DO_SCREEN_FADE_OUT(5000);
 				
-					SYSTEM::SETTIMERB(0);
+					BUILTIN::SETTIMERB(0);
 				
-					while (SYSTEM::TIMERB() < 5000)
+					while (BUILTIN::TIMERB() < 5000)
 					{
 						HUD::HIDE_HUD_AND_RADAR_THIS_FRAME();
 						func_36();
-						SYSTEM::WAIT(0);
+						BUILTIN::WAIT(0);
 					}
 				
 					MISC::SET_WEATHER_TYPE_NOW("EXTRASUNNY");
@@ -472,7 +472,7 @@ void main() // Position - 0x0 (0)
 				break;
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -513,13 +513,13 @@ BOOL func_3() // Position - 0x5F4 (1524)
 				CAM::SHAKE_CAM(caLocal_28, "HAND_SHAKE", 0.1f);
 				MISC::SET_WEATHER_TYPE_NOW("EXTRASUNNY");
 				CLOCK::SET_CLOCK_TIME(19, 20, 0);
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
 	
 		case 1:
-			if (SYSTEM::TIMERB() > 10000)
+			if (BUILTIN::TIMERB() > 10000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -527,7 +527,7 @@ BOOL func_3() // Position - 0x5F4 (1524)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 95000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 95000 + iLocal_30)
 			{
 				func_35();
 				return true;
@@ -567,13 +567,13 @@ BOOL func_5() // Position - 0x75F (1887)
 				CAM::SHAKE_CAM(caLocal_28, "HAND_SHAKE", 0.1f);
 				MISC::SET_WEATHER_TYPE_NOW("CLOUDS");
 				CLOCK::SET_CLOCK_TIME(16, 20, 0);
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
 	
 		case 1:
-			if (SYSTEM::TIMERB() > 15000)
+			if (BUILTIN::TIMERB() > 15000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -581,7 +581,7 @@ BOOL func_5() // Position - 0x75F (1887)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 95000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 95000 + iLocal_30)
 			{
 				func_35();
 				return true;
@@ -610,13 +610,13 @@ BOOL func_6() // Position - 0x95C (2396)
 				CAM::SHAKE_CAM(caLocal_28, "HAND_SHAKE", 0.06f);
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				CLOCK::SET_CLOCK_TIME(21, 0, 0);
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
 	
 		case 1:
-			if (SYSTEM::TIMERB() > 11000)
+			if (BUILTIN::TIMERB() > 11000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -624,7 +624,7 @@ BOOL func_6() // Position - 0x95C (2396)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 50000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 50000 + iLocal_30)
 			{
 				func_35();
 				return true;
@@ -658,13 +658,13 @@ BOOL func_7() // Position - 0xAAE (2734)
 				CAM::SHAKE_CAM(caLocal_28, "HAND_SHAKE", 0.06f);
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				CLOCK::SET_CLOCK_TIME(19, 0, 0);
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
 	
 		case 1:
-			if (SYSTEM::TIMERB() > 11000)
+			if (BUILTIN::TIMERB() > 11000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -672,7 +672,7 @@ BOOL func_7() // Position - 0xAAE (2734)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 70000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 70000 + iLocal_30)
 			{
 				func_35();
 				return true;
@@ -702,13 +702,13 @@ BOOL func_8() // Position - 0xD37 (3383)
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				CLOCK::SET_CLOCK_TIME(0, 0, 0);
 				MISC::SET_WEATHER_TYPE_NOW("FOGGY");
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
 	
 		case 1:
-			if (SYSTEM::TIMERB() > 10000)
+			if (BUILTIN::TIMERB() > 10000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -716,7 +716,7 @@ BOOL func_8() // Position - 0xD37 (3383)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 80000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 80000 + iLocal_30)
 			{
 				func_35();
 				return true;
@@ -746,13 +746,13 @@ BOOL func_9() // Position - 0xEE1 (3809)
 				CAM::SHAKE_CAM(caLocal_28, "HAND_SHAKE", 0.2f);
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				CLOCK::SET_CLOCK_TIME(22, 0, 0);
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
 	
 		case 1:
-			if (SYSTEM::TIMERB() > 12000)
+			if (BUILTIN::TIMERB() > 12000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -760,7 +760,7 @@ BOOL func_9() // Position - 0xEE1 (3809)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 54000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 54000 + iLocal_30)
 			{
 				func_35();
 				return true;
@@ -791,13 +791,13 @@ BOOL func_10() // Position - 0x109A (4250)
 				CAM::SHAKE_CAM(caLocal_28, "HAND_SHAKE", 0.2f);
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				CLOCK::SET_CLOCK_TIME(19, 0, 0);
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
 	
 		case 1:
-			if (SYSTEM::TIMERB() > 12000)
+			if (BUILTIN::TIMERB() > 12000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -805,7 +805,7 @@ BOOL func_10() // Position - 0x109A (4250)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 83000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 83000 + iLocal_30)
 			{
 				func_35();
 				return true;
@@ -832,13 +832,13 @@ BOOL func_11() // Position - 0x126E (4718)
 				CAM::SET_CAM_ACTIVE(caLocal_28, true);
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				CLOCK::SET_CLOCK_TIME(19, 0, 0);
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
 	
 		case 1:
-			if (SYSTEM::TIMERB() > 6500)
+			if (BUILTIN::TIMERB() > 6500)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -846,7 +846,7 @@ BOOL func_11() // Position - 0x126E (4718)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 40000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 40000 + iLocal_30)
 			{
 				func_35();
 				return true;
@@ -881,7 +881,7 @@ BOOL func_12() // Position - 0x13B7 (5047)
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				CAM::SHAKE_CAM(caLocal_28, "HAND_SHAKE", 0.1f);
 				MISC::SET_WEATHER_TYPE_NOW("EXTRASUNNY");
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
@@ -889,7 +889,7 @@ BOOL func_12() // Position - 0x13B7 (5047)
 		case 1:
 			CLOCK::SET_CLOCK_TIME(18, 30, 0);
 		
-			if (SYSTEM::TIMERB() > 10000)
+			if (BUILTIN::TIMERB() > 10000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -897,7 +897,7 @@ BOOL func_12() // Position - 0x13B7 (5047)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 130000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 130000 + iLocal_30)
 			{
 				func_35();
 				return true;
@@ -924,13 +924,13 @@ BOOL func_13() // Position - 0x165F (5727)
 				CAM::SET_CAM_ACTIVE(caLocal_28, true);
 				CAM::SHAKE_CAM(caLocal_28, "HAND_SHAKE", 0.05f);
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
 	
 		case 1:
-			if (SYSTEM::TIMERB() > 5000)
+			if (BUILTIN::TIMERB() > 5000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -938,7 +938,7 @@ BOOL func_13() // Position - 0x165F (5727)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 40000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 40000 + iLocal_30)
 			{
 				func_35();
 				return true;
@@ -983,13 +983,13 @@ BOOL func_14() // Position - 0x17A2 (6050)
 				MISC::SET_WEATHER_TYPE_NOW("EXTRASUNNY");
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				CLOCK::SET_CLOCK_TIME(8, 0, 0);
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
 	
 		case 1:
-			if (SYSTEM::TIMERB() > 15000)
+			if (BUILTIN::TIMERB() > 15000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -997,7 +997,7 @@ BOOL func_14() // Position - 0x17A2 (6050)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 115000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 115000 + iLocal_30)
 			{
 				PED::REMOVE_SCENARIO_BLOCKING_AREA(iLocal_118, false);
 				func_35();
@@ -1031,7 +1031,7 @@ BOOL func_15() // Position - 0x1B43 (6979)
 				CAM::SET_CAM_ACTIVE(caLocal_28, true);
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				CLOCK::SET_CLOCK_TIME(19, 20, 0);
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				MISC::SET_TIME_SCALE(1f);
 				iLocal_29 = iLocal_29 + 1;
 			}
@@ -1040,7 +1040,7 @@ BOOL func_15() // Position - 0x1B43 (6979)
 		case 1:
 			CLOCK::SET_CLOCK_TIME(19, 20, 0);
 		
-			if (SYSTEM::TIMERB() > 13000)
+			if (BUILTIN::TIMERB() > 13000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -1048,7 +1048,7 @@ BOOL func_15() // Position - 0x1B43 (6979)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 120000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 120000 + iLocal_30)
 			{
 				func_35();
 				return true;
@@ -1078,14 +1078,14 @@ BOOL func_16() // Position - 0x1DAF (7599)
 				CAM::SET_CAM_ACTIVE(caLocal_28, true);
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				CLOCK::SET_CLOCK_TIME(8, 0, 0);
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				MISC::SET_TIME_SCALE(1f);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
 	
 		case 1:
-			if (SYSTEM::TIMERB() > 10000)
+			if (BUILTIN::TIMERB() > 10000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -1093,7 +1093,7 @@ BOOL func_16() // Position - 0x1DAF (7599)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 75000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 75000 + iLocal_30)
 			{
 				func_35();
 				return true;
@@ -1152,7 +1152,7 @@ BOOL func_17() // Position - 0x1F66 (8038)
 				MISC::SET_WEATHER_TYPE_NOW("SNOWLIGHT");
 				CAM::SET_CAM_ACTIVE(caLocal_28, true);
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
@@ -1160,7 +1160,7 @@ BOOL func_17() // Position - 0x1F66 (8038)
 		case 2:
 			CLOCK::PAUSE_CLOCK(true);
 		
-			if (SYSTEM::TIMERB() > 10000)
+			if (BUILTIN::TIMERB() > 10000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -1170,7 +1170,7 @@ BOOL func_17() // Position - 0x1F66 (8038)
 		case 3:
 			CLOCK::PAUSE_CLOCK(true);
 		
-			if (SYSTEM::TIMERB() > 76000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 76000 + iLocal_30)
 			{
 				PATHFIND::SET_ROADS_IN_ANGLED_AREA(5526.24f, -5137.23f, 61.789253f, 3679.3267f, -4973.8794f, 125.08284f, 192f, false, true, true);
 				PATHFIND::SET_ROADS_IN_ANGLED_AREA(3691.2114f, -4941.24f, 94.59368f, 3511.1155f, -4869.1914f, 126.76211f, 16f, false, true, true);
@@ -1205,13 +1205,13 @@ BOOL func_18() // Position - 0x22CE (8910)
 				CAM::SHAKE_CAM(caLocal_28, "HAND_SHAKE", 0.06f);
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				CLOCK::SET_CLOCK_TIME(20, 0, 0);
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
 	
 		case 1:
-			if (SYSTEM::TIMERB() > 11000)
+			if (BUILTIN::TIMERB() > 11000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -1219,7 +1219,7 @@ BOOL func_18() // Position - 0x22CE (8910)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 70000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 70000 + iLocal_30)
 			{
 				func_35();
 				return true;
@@ -1250,13 +1250,13 @@ BOOL func_19() // Position - 0x248E (9358)
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				CLOCK::SET_CLOCK_TIME(0, 0, 0);
 				MISC::SET_WEATHER_TYPE_NOW("EXTRASUNNY");
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
 	
 		case 1:
-			if (SYSTEM::TIMERB() > 12000)
+			if (BUILTIN::TIMERB() > 12000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -1264,7 +1264,7 @@ BOOL func_19() // Position - 0x248E (9358)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 69000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 69000 + iLocal_30)
 			{
 				func_35();
 				return true;
@@ -1296,7 +1296,7 @@ BOOL func_20() // Position - 0x264D (9805)
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				CAM::SHAKE_CAM(caLocal_28, "HAND_SHAKE", 0.1f);
 				MISC::SET_WEATHER_TYPE_NOW("EXTRASUNNY");
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
@@ -1304,7 +1304,7 @@ BOOL func_20() // Position - 0x264D (9805)
 		case 1:
 			CLOCK::SET_CLOCK_TIME(7, 0, 0);
 		
-			if (SYSTEM::TIMERB() > 12000)
+			if (BUILTIN::TIMERB() > 12000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -1312,7 +1312,7 @@ BOOL func_20() // Position - 0x264D (9805)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 70000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 70000 + iLocal_30)
 			{
 				func_35();
 				return true;
@@ -1344,7 +1344,7 @@ BOOL func_21() // Position - 0x2827 (10279)
 				CAM::SHAKE_CAM(caLocal_28, "HAND_SHAKE", 0.1f);
 				CLOCK::SET_CLOCK_TIME(22, 0, 0);
 				MISC::SET_WEATHER_TYPE_NOW("EXTRASUNNY");
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
@@ -1352,7 +1352,7 @@ BOOL func_21() // Position - 0x2827 (10279)
 		case 1:
 			CLOCK::SET_CLOCK_TIME(22, 0, 0);
 		
-			if (SYSTEM::TIMERB() > 10000)
+			if (BUILTIN::TIMERB() > 10000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -1362,7 +1362,7 @@ BOOL func_21() // Position - 0x2827 (10279)
 		case 2:
 			CLOCK::SET_CLOCK_TIME(22, 0, 0);
 		
-			if (SYSTEM::TIMERB() > 105000)
+			if (BUILTIN::TIMERB() > 105000)
 			{
 				func_35();
 				return true;
@@ -1394,13 +1394,13 @@ BOOL func_22() // Position - 0x2A0D (10765)
 				CAM::ADD_CAM_SPLINE_NODE_USING_CAMERA(caLocal_28, CAM::CREATE_CAM_WITH_PARAMS("DEFAULT_SCRIPTED_CAMERA", 3068.9507f, -152.1308f, 1.0045f, 6.0711f, 0f, 26.0366f, 45f, true, 2), 18000 + (iLocal_30 / 9), 3);
 				CAM::SET_CAM_ACTIVE(caLocal_28, true);
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
 	
 		case 1:
-			if (SYSTEM::TIMERB() > 10000)
+			if (BUILTIN::TIMERB() > 10000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -1408,7 +1408,7 @@ BOOL func_22() // Position - 0x2A0D (10765)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 116000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 116000 + iLocal_30)
 			{
 				func_35();
 				return true;
@@ -1435,13 +1435,13 @@ BOOL func_23() // Position - 0x2C95 (11413)
 				CAM::ADD_CAM_SPLINE_NODE_USING_CAMERA(caLocal_28, CAM::CREATE_CAM_WITH_PARAMS("DEFAULT_SCRIPTED_CAMERA", -1631.4205f, -2973f, 15.6656f, -0.3979f, -0.057f, -120.6251f, 45f, true, 2), 20000 + (iLocal_30 / 4), 3);
 				CAM::SET_CAM_ACTIVE(caLocal_28, true);
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
 	
 		case 1:
-			if (SYSTEM::TIMERB() > 10000)
+			if (BUILTIN::TIMERB() > 10000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -1449,7 +1449,7 @@ BOOL func_23() // Position - 0x2C95 (11413)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 50000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 50000 + iLocal_30)
 			{
 				func_35();
 				return true;
@@ -1478,13 +1478,13 @@ BOOL func_24() // Position - 0x2E11 (11793)
 				CAM::SHAKE_CAM(caLocal_28, "HAND_SHAKE", 0.05f);
 				CLOCK::SET_CLOCK_TIME(19, 10, 0);
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
 	
 		case 1:
-			if (SYSTEM::TIMERB() > 10000)
+			if (BUILTIN::TIMERB() > 10000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -1492,7 +1492,7 @@ BOOL func_24() // Position - 0x2E11 (11793)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 60000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 60000 + iLocal_30)
 			{
 				func_35();
 				return true;
@@ -1522,13 +1522,13 @@ BOOL func_25() // Position - 0x2FA3 (12195)
 				CAM::SHAKE_CAM(caLocal_28, "HAND_SHAKE", 0.05f);
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				CLOCK::SET_CLOCK_TIME(20, 0, 0);
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
 	
 		case 1:
-			if (SYSTEM::TIMERB() > 12000)
+			if (BUILTIN::TIMERB() > 12000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -1536,7 +1536,7 @@ BOOL func_25() // Position - 0x2FA3 (12195)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 50000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 50000 + iLocal_30)
 			{
 				func_35();
 				return true;
@@ -1566,13 +1566,13 @@ BOOL func_26() // Position - 0x3109 (12553)
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				MISC::SET_WEATHER_TYPE_NOW("EXTRASUNNY");
 				CLOCK::SET_CLOCK_TIME(0, 0, 0);
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
 	
 		case 1:
-			if (SYSTEM::TIMERB() > 10000)
+			if (BUILTIN::TIMERB() > 10000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -1580,7 +1580,7 @@ BOOL func_26() // Position - 0x3109 (12553)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 70000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 70000 + iLocal_30)
 			{
 				func_35();
 				return true;
@@ -1609,13 +1609,13 @@ BOOL func_27() // Position - 0x32BA (12986)
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				MISC::SET_WEATHER_TYPE_NOW("CLEAR");
 				CLOCK::SET_CLOCK_TIME(19, 0, 0);
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
 	
 		case 1:
-			if (SYSTEM::TIMERB() > 12000)
+			if (BUILTIN::TIMERB() > 12000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -1623,7 +1623,7 @@ BOOL func_27() // Position - 0x32BA (12986)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 48000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 48000 + iLocal_30)
 			{
 				func_35();
 				return true;
@@ -1653,13 +1653,13 @@ BOOL func_28() // Position - 0x340D (13325)
 				CLOCK::SET_CLOCK_TIME(20, 0, 0);
 				MISC::SET_WEATHER_TYPE_NOW("CLEAR");
 				iLocal_119 = PATHFIND::ADD_NAVMESH_BLOCKING_OBJECT(1132.8705f, -564.3635f, 55.8749f, 4f, 4f, 4f, 0f, false, 7);
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
 	
 		case 1:
-			if (SYSTEM::TIMERB() > 10000)
+			if (BUILTIN::TIMERB() > 10000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -1667,7 +1667,7 @@ BOOL func_28() // Position - 0x340D (13325)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 70000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 70000 + iLocal_30)
 			{
 				PATHFIND::REMOVE_NAVMESH_BLOCKING_OBJECT(iLocal_119);
 				func_35();
@@ -1698,13 +1698,13 @@ BOOL func_29() // Position - 0x35B9 (13753)
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				CLOCK::SET_CLOCK_TIME(8, 0, 0);
 				MISC::SET_WEATHER_TYPE_NOW("EXTRASUNNY");
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
 	
 		case 1:
-			if (SYSTEM::TIMERB() > 10000)
+			if (BUILTIN::TIMERB() > 10000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -1712,7 +1712,7 @@ BOOL func_29() // Position - 0x35B9 (13753)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 65000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 65000 + iLocal_30)
 			{
 				func_35();
 				return true;
@@ -1741,13 +1741,13 @@ BOOL func_30() // Position - 0x376B (14187)
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				CLOCK::SET_CLOCK_TIME(7, 0, 0);
 				MISC::SET_WEATHER_TYPE_NOW("CLOUDS");
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
 	
 		case 1:
-			if (SYSTEM::TIMERB() > 12000)
+			if (BUILTIN::TIMERB() > 12000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -1755,7 +1755,7 @@ BOOL func_30() // Position - 0x376B (14187)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 60000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 60000 + iLocal_30)
 			{
 				func_35();
 				return true;
@@ -1785,13 +1785,13 @@ BOOL func_31() // Position - 0x38F5 (14581)
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				CLOCK::SET_CLOCK_TIME(17, 0, 0);
 				MISC::SET_WEATHER_TYPE_NOW("CLEAR");
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
 	
 		case 1:
-			if (SYSTEM::TIMERB() > 13000)
+			if (BUILTIN::TIMERB() > 13000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -1799,7 +1799,7 @@ BOOL func_31() // Position - 0x38F5 (14581)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 65000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 65000 + iLocal_30)
 			{
 				func_35();
 				return true;
@@ -1830,13 +1830,13 @@ BOOL func_32() // Position - 0x3ABB (15035)
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				CLOCK::SET_CLOCK_TIME(17, 0, 0);
 				MISC::SET_WEATHER_TYPE_NOW("CLEAR");
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
 	
 		case 1:
-			if (SYSTEM::TIMERB() > 13000)
+			if (BUILTIN::TIMERB() > 13000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -1844,7 +1844,7 @@ BOOL func_32() // Position - 0x3ABB (15035)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 90000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 90000 + iLocal_30)
 			{
 				func_35();
 				return true;
@@ -1874,13 +1874,13 @@ BOOL func_33() // Position - 0x3CBC (15548)
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				CLOCK::SET_CLOCK_TIME(7, 0, 0);
 				MISC::SET_WEATHER_TYPE_NOW("EXTRASUNNY");
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
 	
 		case 1:
-			if (SYSTEM::TIMERB() > 10000)
+			if (BUILTIN::TIMERB() > 10000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -1888,7 +1888,7 @@ BOOL func_33() // Position - 0x3CBC (15548)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 75000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 75000 + iLocal_30)
 			{
 				func_35();
 				return true;
@@ -1917,13 +1917,13 @@ BOOL func_34() // Position - 0x3E6D (15981)
 				CAM::SHAKE_CAM(caLocal_28, "HAND_SHAKE", 0.05f);
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 				CLOCK::SET_CLOCK_TIME(0, 0, 0);
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_29 = iLocal_29 + 1;
 			}
 			break;
 	
 		case 1:
-			if (SYSTEM::TIMERB() > 10000)
+			if (BUILTIN::TIMERB() > 10000)
 			{
 				func_4();
 				iLocal_29 = iLocal_29 + 1;
@@ -1931,7 +1931,7 @@ BOOL func_34() // Position - 0x3E6D (15981)
 			break;
 	
 		case 2:
-			if (SYSTEM::TIMERB() > 35000 + iLocal_30)
+			if (BUILTIN::TIMERB() > 35000 + iLocal_30)
 			{
 				func_35();
 				return true;
@@ -1994,7 +1994,7 @@ void func_38() // Position - 0x4030 (16432)
 	PATHFIND::SET_ROADS_IN_ANGLED_AREA(3510.0044f, -4865.81f, 94.69557f, 3204.4243f, -4833.817f, 126.815216f, 16f, false, true, true);
 	PATHFIND::SET_ROADS_IN_ANGLED_AREA(3186.5337f, -4832.798f, 109.81483f, 3202.1873f, -4833.993f, 114.814995f, 16f, false, true, true);
 	CAM::RENDER_SCRIPT_CAMS(false, false, 3000, true, false, 0);
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 	{
@@ -2015,7 +2015,7 @@ void func_38() // Position - 0x4030 (16432)
 
 	while (MISC::GET_GAME_TIMER() < num && !STREAMING::IS_NEW_LOAD_SCENE_LOADED())
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (STREAMING::IS_NEW_LOAD_SCENE_ACTIVE())

@@ -190,17 +190,17 @@ void main() // Position - 0x0 (0)
 		
 			while (!SCRIPT::HAS_SCRIPT_WITH_NAME_HASH_LOADED(-847690929))
 			{
-				SYSTEM::WAIT(0);
+				BUILTIN::WAIT(0);
 			}
 		
-			SYSTEM::START_NEW_SCRIPT_WITH_NAME_HASH_AND_ARGS(-847690929, &uScriptParam_0, 23, DEFAULT);
+			BUILTIN::START_NEW_SCRIPT_WITH_NAME_HASH_AND_ARGS(-847690929, &uScriptParam_0, 23, DEFAULT);
 		}
 	
 		SCRIPT::TERMINATE_THIS_THREAD();
 	}
 
 	func_69();
-	SYSTEM::WAIT(3000);
+	BUILTIN::WAIT(3000);
 
 	if (!ENTITY::DOES_ENTITY_EXIST(num[0]))
 		num[0] = OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(-1643.5242f, -1124.6805f, 17.4326f, 0.3f, joaat("prop_roller_car_01"), true, false, true);
@@ -256,7 +256,7 @@ void main() // Position - 0x0 (0)
 		if (func_1(&uLocal_97, &sLocal_55, false, false, true, FRIEND))
 			func_77();
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -518,7 +518,7 @@ BOOL func_1(var uParam0, var uParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4, 
 					PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_VEH_ROOF, true);
 					PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_VEH_EXIT, true);
 					PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_ENTER, true);
-					SYSTEM::WAIT(0);
+					BUILTIN::WAIT(0);
 				}
 			
 				if (bParam3)
@@ -544,11 +544,11 @@ BOOL func_1(var uParam0, var uParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4, 
 							PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_VEH_EXIT, true);
 							PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_ENTER, true);
 							func_8();
-							SYSTEM::WAIT(0);
+							BUILTIN::WAIT(0);
 						}
 					}
 				
-					SYSTEM::START_NEW_SCRIPT(uParam0->[uParam1->f_12 /*24*/].f_5, essParam5);
+					BUILTIN::START_NEW_SCRIPT(uParam0->[uParam1->f_12 /*24*/].f_5, essParam5);
 					SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED(uParam0->[uParam1->f_12 /*24*/].f_5);
 					return true;
 				}
@@ -737,7 +737,7 @@ BOOL func_9(var uParam0) // Position - 0xCA2 (3234)
 
 	entityRotation = { ENTITY::GET_ENTITY_FORWARD_VECTOR(ped) };
 
-	if (func_10(uParam0->f_12, entityRotation) > SYSTEM::COS(uParam0->f_15))
+	if (func_10(uParam0->f_12, entityRotation) > BUILTIN::COS(uParam0->f_15))
 		return 1;
 
 	return 0;
@@ -859,7 +859,7 @@ Vector3 func_19(float fParam0, var uParam1, var uParam2) // Position - 0xF90 (39
 	float num;
 	float num2;
 
-	num = SYSTEM::VMAG(fParam0);
+	num = BUILTIN::VMAG(fParam0);
 
 	if (num != 0f)
 	{
@@ -878,7 +878,7 @@ Vector3 func_19(float fParam0, var uParam1, var uParam2) // Position - 0xF90 (39
 
 BOOL func_20(Ped pedParam0, Vector3 vParam1, var uParam2, var uParam3, float fParam4, BOOL bParam5) // Position - 0xFCF (4047)
 {
-	return SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(pedParam0, bParam5), vParam1) <= fParam4 * fParam4;
+	return BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(pedParam0, bParam5), vParam1) <= fParam4 * fParam4;
 }
 
 int func_21(var uParam0, const char* sParam1) // Position - 0xFED (4077)
@@ -1300,19 +1300,19 @@ void func_52(var uParam0, var uParam1, var uParam2, var uParam3, int iParam4, in
 	float num3;
 	float value;
 
-	num = 360f / SYSTEM::TO_FLOAT(iParam8);
+	num = 360f / BUILTIN::TO_FLOAT(iParam8);
 	num2 = { uParam0 };
 	num3 = { uParam0 };
 	value = 0f;
 	num2 = { uParam0 };
-	num2 = num2 + (SYSTEM::SIN(value - num) * uParam3);
-	num2.f_1 = num2.f_1 + (SYSTEM::COS(value - num) * uParam3);
+	num2 = num2 + (BUILTIN::SIN(value - num) * uParam3);
+	num2.f_1 = num2.f_1 + (BUILTIN::COS(value - num) * uParam3);
 
 	for (i = 0; i <= iParam8; i = i + 1)
 	{
 		num3 = { uParam0 };
-		num3 = num3 + (SYSTEM::SIN(value) * uParam3);
-		num3.f_1 = num3.f_1 + (SYSTEM::COS(value) * uParam3);
+		num3 = num3 + (BUILTIN::SIN(value) * uParam3);
+		num3.f_1 = num3.f_1 + (BUILTIN::COS(value) * uParam3);
 		GRAPHICS::DRAW_DEBUG_LINE(num2, num3, iParam4, iParam5, iParam6, iParam7);
 		num2 = { num3 };
 		value = value + num;

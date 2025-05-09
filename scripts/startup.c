@@ -128,7 +128,7 @@ void main() // Position - 0x0 (0)
 			break;
 	}
 
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	Global_79541 = 1;
 	Global_3 = flag;
 	CAM::SET_GAMEPLAY_CAM_RELATIVE_HEADING(0f);
@@ -146,7 +146,7 @@ void main() // Position - 0x0 (0)
 				!IS_BIT_SET(Global_4546881, 0);
 				!IS_BIT_SET(Global_4546881, 1);
 				!IS_BIT_SET(Global_4546881, 2);
-				SYSTEM::WAIT(0);
+				BUILTIN::WAIT(0);
 			}
 		
 			MISC::START_SAVE_DATA(&Global_114135, 1, true);
@@ -1572,11 +1572,11 @@ void func_32(Hash hParam0, eStackSize essParam1) // Position - 0x30E5 (12517)
 
 	while (!SCRIPT::HAS_SCRIPT_WITH_NAME_HASH_LOADED(hParam0))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 		SCRIPT::REQUEST_SCRIPT_WITH_NAME_HASH(hParam0);
 	}
 
-	SYSTEM::START_NEW_SCRIPT_WITH_NAME_HASH(hParam0, essParam1);
+	BUILTIN::START_NEW_SCRIPT_WITH_NAME_HASH(hParam0, essParam1);
 	return;
 }
 
@@ -3901,8 +3901,8 @@ Vector3 func_39(float fParam0, var uParam1, var uParam2, float fParam3) // Posit
 	float num2;
 	float num3;
 
-	num2 = SYSTEM::SIN(fParam3);
-	num3 = SYSTEM::COS(fParam3);
+	num2 = BUILTIN::SIN(fParam3);
+	num3 = BUILTIN::COS(fParam3);
 	num = (fParam0 * num3) - (fParam0.f_1 * num2);
 	num.f_1 = (fParam0 * num2) + (fParam0.f_1 * num3);
 	num.f_2 = fParam0.f_2;
@@ -13155,7 +13155,7 @@ void func_77() // Position - 0x22F6C (143212)
 			
 				if (SCRIPT::HAS_SCRIPT_WITH_NAME_HASH_LOADED(scriptHash) && func_79(i, address))
 				{
-					SYSTEM::START_NEW_SCRIPT_WITH_NAME_HASH(scriptHash, DEFAULT);
+					BUILTIN::START_NEW_SCRIPT_WITH_NAME_HASH(scriptHash, DEFAULT);
 					SCRIPT::SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(scriptHash);
 					MISC::SET_BIT(&address, i);
 				
@@ -13172,7 +13172,7 @@ void func_77() // Position - 0x22F6C (143212)
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -13260,7 +13260,7 @@ Hash func_80(int iParam0) // Position - 0x23051 (143441)
 
 BOOL func_81() // Position - 0x23117 (143639)
 {
-	if (LOADINGSCREEN::LOBBY_AUTO_MULTIPLAYER_FREEMODE() || LOADINGSCREEN::LOBBY_AUTO_MULTIPLAYER_MENU() || NETWORK::GET_IS_LAUNCH_FROM_LIVE_AREA() || NETWORK::GET_IS_LIVE_AREA_LAUNCH_WITH_CONTENT())
+	if (LOBBY::LOBBY_AUTO_MULTIPLAYER_FREEMODE() || LOBBY::LOBBY_AUTO_MULTIPLAYER_MENU() || NETWORK::GET_IS_LAUNCH_FROM_LIVE_AREA() || NETWORK::GET_IS_LIVE_AREA_LAUNCH_WITH_CONTENT())
 		return 1;
 
 	return 0;

@@ -651,7 +651,7 @@ BOOL func_42() // Position - 0x93C (2364)
 
 void func_43() // Position - 0x94B (2379)
 {
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	return;
 }
 

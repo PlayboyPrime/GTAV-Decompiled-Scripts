@@ -379,7 +379,7 @@ void main() // Position - 0x0 (0)
 		case 3:
 			while (true)
 			{
-				SYSTEM::WAIT(0);
+				BUILTIN::WAIT(0);
 			
 				if (HUD::IS_FRONTEND_READY_FOR_CONTROL())
 				{
@@ -1121,7 +1121,7 @@ BOOL func_32(float fParam0) // Position - 0xE04 (3588)
 {
 	int num;
 
-	num = SYSTEM::FLOOR(fParam0);
+	num = BUILTIN::FLOOR(fParam0);
 
 	if (fParam0 - (float)num > 0f)
 		return false;
@@ -3600,7 +3600,7 @@ Vector3 func_117(Player plParam0) // Position - 0x38CE (14542)
 	else if (HUD::DOES_BLIP_EXIST(Global_2647037.f_33[plParam0]) && !(plParam0 == Global_2672939))
 		vector = { func_190(Global_2647037.f_33[plParam0]) };
 
-	if (SYSTEM::VMAG(vector) > 0f)
+	if (BUILTIN::VMAG(vector) > 0f)
 		return vector;
 
 	return func_118(plParam0);
@@ -3618,12 +3618,12 @@ Vector3 func_118(Player plParam0) // Position - 0x3942 (14658)
 		{
 			vector = { func_188(plParam0) };
 		
-			if (SYSTEM::VMAG(vector) > 0f)
+			if (BUILTIN::VMAG(vector) > 0f)
 				return vector;
 		}
 	
 		if (Global_2657991[plParam0 /*467*/].f_75.f_11)
-			if (SYSTEM::VMAG(Global_2657991[plParam0 /*467*/].f_75.f_12) > 0f)
+			if (BUILTIN::VMAG(Global_2657991[plParam0 /*467*/].f_75.f_12) > 0f)
 				return Global_2657991[plParam0 /*467*/].f_75.f_12;
 	}
 
@@ -3631,7 +3631,7 @@ Vector3 func_118(Player plParam0) // Position - 0x3942 (14658)
 	{
 		vector = { func_186(func_187(Global_1845221[PLAYER::PLAYER_ID() /*889*/].f_268.f_36)) };
 	
-		if (SYSTEM::VMAG(vector) > 0f)
+		if (BUILTIN::VMAG(vector) > 0f)
 			return vector;
 	}
 	else
@@ -3642,7 +3642,7 @@ Vector3 func_118(Player plParam0) // Position - 0x3942 (14658)
 		{
 			vector = { func_186(func_187(num)) };
 		
-			if (SYSTEM::VMAG(vector) > 0f)
+			if (BUILTIN::VMAG(vector) > 0f)
 				return vector;
 		}
 	}
@@ -3651,7 +3651,7 @@ Vector3 func_118(Player plParam0) // Position - 0x3942 (14658)
 	{
 		vector = { func_122(plParam0) };
 	
-		if (SYSTEM::VMAG(vector) > 0f)
+		if (BUILTIN::VMAG(vector) > 0f)
 			return vector;
 	}
 
@@ -3663,7 +3663,7 @@ Vector3 func_118(Player plParam0) // Position - 0x3942 (14658)
 		{
 			vector = { Global_1943917.f_754[num2 /*3*/] };
 		
-			if (SYSTEM::VMAG(vector) > 0f)
+			if (BUILTIN::VMAG(vector) > 0f)
 				return vector;
 		}
 	}
@@ -3674,12 +3674,12 @@ Vector3 func_118(Player plParam0) // Position - 0x3942 (14658)
 		{
 			vector = { func_188(plParam0) };
 		
-			if (SYSTEM::VMAG(vector) > 0f)
+			if (BUILTIN::VMAG(vector) > 0f)
 				return vector;
 		}
 	
 		if (Global_2657991[plParam0 /*467*/].f_75.f_11)
-			if (SYSTEM::VMAG(Global_2657991[plParam0 /*467*/].f_75.f_12) > 0f)
+			if (BUILTIN::VMAG(Global_2657991[plParam0 /*467*/].f_75.f_12) > 0f)
 				return Global_2657991[plParam0 /*467*/].f_75.f_12;
 	}
 

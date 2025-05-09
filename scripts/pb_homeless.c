@@ -115,7 +115,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		if (BRAIN::IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE())
 		{
@@ -157,11 +157,11 @@ void main() // Position - 0x0 (0)
 
 void func_1() // Position - 0x119 (281)
 {
-	if (SYSTEM::TIMERB() > 10000)
+	if (BUILTIN::TIMERB() > 10000)
 	{
 		if (ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), fLocal_45, 10f, 10f, 10f, false, true, 0) && !PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 		{
-			SYSTEM::SETTIMERB(0);
+			BUILTIN::SETTIMERB(0);
 		
 			if (!ENTITY::IS_ENTITY_DEAD(pedLocal_52, false))
 			{
@@ -396,7 +396,7 @@ void func_7() // Position - 0x6C5 (1733)
 	
 		while (!STREAMING::HAS_MODEL_LOADED(joaat("A_M_O_Tramp_01")) || !STREAMING::HAS_MODEL_LOADED(joaat("G_M_Y_StrPunk_01")) || !STREAMING::HAS_ANIM_DICT_LOADED("amb@drug_dealer"))
 		{
-			SYSTEM::WAIT(0);
+			BUILTIN::WAIT(0);
 		}
 	
 		PED::ADD_RELATIONSHIP_GROUP("homeless", &hLocal_51);

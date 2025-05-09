@@ -60,7 +60,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			SCRIPT::TERMINATE_THIS_THREAD();
@@ -91,7 +91,7 @@ void func_1() // Position - 0xB1 (177)
 		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedLocal_31, false) };
 		x = { func_20(iLocal_27) };
 	
-		if (SYSTEM::VDIST2(x, entityCoords) < (float)func_19(iLocal_27))
+		if (BUILTIN::VDIST2(x, entityCoords) < (float)func_19(iLocal_27))
 		{
 			flag = false;
 			i = 0;
@@ -730,7 +730,7 @@ void func_22() // Position - 0xCF2 (3314)
 		{
 			entityCoords = { ENTITY::GET_ENTITY_COORDS(pedLocal_31, false) };
 		
-			if (SYSTEM::VDIST2(func_20(iLocal_26), entityCoords) < SYSTEM::VDIST2(func_20(iLocal_27), entityCoords))
+			if (BUILTIN::VDIST2(func_20(iLocal_26), entityCoords) < BUILTIN::VDIST2(func_20(iLocal_27), entityCoords))
 				iLocal_27 = iLocal_26;
 		}
 	}

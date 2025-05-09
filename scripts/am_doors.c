@@ -723,7 +723,7 @@ void func_9() // Position - 0x5A4 (1444)
 	Vector3 vector;
 
 	vector = { _GET_PLAYER_COORDS(PLAYER::PLAYER_ID()) };
-	num = SYSTEM::VDIST(vector, uLocal_149[iLocal_203 /*17*/].f_3);
+	num = BUILTIN::VDIST(vector, uLocal_149[iLocal_203 /*17*/].f_3);
 
 	if (IS_BIT_SET(Global_2749845, iLocal_203) || IS_BIT_SET(Global_2749845.f_1, iLocal_203) || IS_BIT_SET(Global_2749845.f_2, iLocal_203))
 	{
@@ -831,7 +831,7 @@ void func_14() // Position - 0x7FD (2045)
 			{
 				if (uLocal_368[i] != 1f)
 				{
-					uLocal_368[i] = uLocal_368[i] + (doorHash.f_12 * SYSTEM::TIMESTEP());
+					uLocal_368[i] = uLocal_368[i] + (doorHash.f_12 * BUILTIN::TIMESTEP());
 				
 					if (uLocal_368[i] > 1f)
 						uLocal_368[i] = 1f;
@@ -843,7 +843,7 @@ void func_14() // Position - 0x7FD (2045)
 			}
 			else if (uLocal_368[i] != 0f)
 			{
-				uLocal_368[i] = uLocal_368[i] - (doorHash.f_12 * SYSTEM::TIMESTEP());
+				uLocal_368[i] = uLocal_368[i] - (doorHash.f_12 * BUILTIN::TIMESTEP());
 			
 				if (uLocal_368[i] < 0f)
 					uLocal_368[i] = 0f;
@@ -4060,7 +4060,7 @@ void func_36(int iParam0) // Position - 0x58FF (22783)
 
 void func_37() // Position - 0x5911 (22801)
 {
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	return;
 }
 
@@ -4145,7 +4145,7 @@ BOOL _NETWORK_WAIT_FOR_HOST_BROADCAST_DATA() // Position - 0x5A6B (23147)
 		if (num >= 3600)
 			return false;
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return false;
@@ -4207,7 +4207,7 @@ int func_44(int iParam0, int iParam1, BOOL bParam2) // Position - 0x5AEA (23274)
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

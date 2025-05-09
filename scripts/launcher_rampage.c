@@ -468,7 +468,7 @@ void func_1(Any* panParam0, Vector3 vParam1, var uParam2, var uParam3) // Positi
 			bLocal_290 = false;
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -484,7 +484,7 @@ BOOL func_3(Any* panParam0) // Position - 0x2CD (717)
 {
 	while (!Global_113222[*panParam0 /*10*/])
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return true;
@@ -502,7 +502,7 @@ void func_4(int iParam0, BOOL bParam1) // Position - 0x2EB (747)
 			{
 				while (!CAM::IS_SCREEN_FADED_OUT())
 				{
-					SYSTEM::WAIT(0);
+					BUILTIN::WAIT(0);
 				}
 			}
 		}
@@ -529,7 +529,7 @@ BOOL func_5(Any* panParam0) // Position - 0x31D (797)
 				return false;
 			}
 		
-			SYSTEM::WAIT(0);
+			BUILTIN::WAIT(0);
 		}
 	}
 
@@ -567,7 +567,7 @@ void func_6(int iParam0, const char* sParam1) // Position - 0x3E0 (992)
 		while (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("mission_stat_watcher")) > 0)
 		{
 			func_22();
-			SYSTEM::WAIT(0);
+			BUILTIN::WAIT(0);
 		}
 	}
 
@@ -578,10 +578,10 @@ void func_6(int iParam0, const char* sParam1) // Position - 0x3E0 (992)
 	
 		while (!SCRIPT::HAS_SCRIPT_LOADED("mission_stat_watcher"))
 		{
-			SYSTEM::WAIT(0);
+			BUILTIN::WAIT(0);
 		}
 	
-		SYSTEM::START_NEW_SCRIPT("mission_stat_watcher", SPECIAL_ABILITY);
+		BUILTIN::START_NEW_SCRIPT("mission_stat_watcher", SPECIAL_ABILITY);
 		SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("mission_stat_watcher");
 	}
 
@@ -2939,13 +2939,13 @@ void func_64(Ped pedParam0, var uParam1) // Position - 0x43BB (17339)
 			uParam1->f_221[i /*5*/].f_1 = 0;
 		}
 	
-		numDlcWeaponsSp = FILES::GET_NUM_DLC_WEAPONS_SP();
+		numDlcWeaponsSp = EXTRAMETADATA::GET_NUM_DLC_WEAPONS_SP();
 	
 		for (l = 0; l < numDlcWeaponsSp; l = l + 1)
 		{
-			if (FILES::GET_DLC_WEAPON_DATA_SP(l, &outData) && !func_66(outData.f_1) && num < 51)
+			if (EXTRAMETADATA::GET_DLC_WEAPON_DATA_SP(l, &outData) && !func_66(outData.f_1) && num < 51)
 			{
-				if (!FILES::IS_CONTENT_ITEM_LOCKED(outData))
+				if (!EXTRAMETADATA::IS_CONTENT_ITEM_LOCKED(outData))
 				{
 					pedWeapontypeInSlot = outData.f_1;
 					pedWeapontypeInSlot.f_1 = 0;
@@ -2967,9 +2967,9 @@ void func_64(Ped pedParam0, var uParam1) // Position - 0x43BB (17339)
 					uParam1->f_221[num /*5*/].f_1 = pedWeapontypeInSlot.f_1;
 					offset = 0;
 				
-					for (j = 0; j < FILES::GET_NUM_DLC_WEAPON_COMPONENTS_SP(l); j = j + 1)
+					for (j = 0; j < EXTRAMETADATA::GET_NUM_DLC_WEAPON_COMPONENTS_SP(l); j = j + 1)
 					{
-						if (FILES::GET_DLC_WEAPON_COMPONENT_DATA_SP(l, j, &ComponentDataPtr))
+						if (EXTRAMETADATA::GET_DLC_WEAPON_COMPONENT_DATA_SP(l, j, &ComponentDataPtr))
 						{
 							if (!func_65(ComponentDataPtr.f_3))
 							{
@@ -4025,9 +4025,9 @@ Hash func_67(Hash hParam0, int iParam1) // Position - 0x48DC (18652)
 			
 				if (dlcWeaponIndex != -1)
 				{
-					for (i = 0; i < FILES::GET_NUM_DLC_WEAPON_COMPONENTS(dlcWeaponIndex); i = i + 1)
+					for (i = 0; i < EXTRAMETADATA::GET_NUM_DLC_WEAPON_COMPONENTS(dlcWeaponIndex); i = i + 1)
 					{
-						if (FILES::GET_DLC_WEAPON_COMPONENT_DATA(dlcWeaponIndex, i, &ComponentDataPtr))
+						if (EXTRAMETADATA::GET_DLC_WEAPON_COMPONENT_DATA(dlcWeaponIndex, i, &ComponentDataPtr))
 						{
 							if (!func_65(ComponentDataPtr.f_3))
 							{
@@ -4051,11 +4051,11 @@ int func_68(Hash hParam0, Any* panParam1) // Position - 0x565D (22109)
 	int i;
 	int numDlcWeapons;
 
-	numDlcWeapons = FILES::GET_NUM_DLC_WEAPONS();
+	numDlcWeapons = EXTRAMETADATA::GET_NUM_DLC_WEAPONS();
 
 	for (i = 0; i < numDlcWeapons; i = i + 1)
 	{
-		if (FILES::GET_DLC_WEAPON_DATA(i, panParam1))
+		if (EXTRAMETADATA::GET_DLC_WEAPON_DATA(i, panParam1))
 			if (panParam1->f_1 == hParam0)
 				return i;
 	}
@@ -4253,17 +4253,17 @@ void func_71(var uParam0, int iParam1) // Position - 0x5948 (22856)
 	if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		uParam0->f_4 = PLAYER::GET_PLAYER_WANTED_LEVEL(PLAYER::PLAYER_ID());
 
-	if (SYSTEM::VDIST(*uParam0, 320.9934f, 265.2515f, 82.1221f) < 10f)
+	if (BUILTIN::VDIST(*uParam0, 320.9934f, 265.2515f, 82.1221f) < 10f)
 	{
 		*uParam0 = { 301.2162f, 202.1357f, 103.3797f };
 		uParam0->f_3 = 156.5144f;
 	}
-	else if (SYSTEM::VDIST(*uParam0, 377.153f, -717.567f, 10.0536f) < 10f)
+	else if (BUILTIN::VDIST(*uParam0, 377.153f, -717.567f, 10.0536f) < 10f)
 	{
 		*uParam0 = { 394.2567f, -713.5439f, 28.2853f };
 		uParam0->f_3 = 276.6273f;
 	}
-	else if (SYSTEM::VDIST(*uParam0, -1425.5645f, -244.3f, 15.8053f) < 10f)
+	else if (BUILTIN::VDIST(*uParam0, -1425.5645f, -244.3f, 15.8053f) < 10f)
 	{
 		*uParam0 = { -1423.4724f, -214.2539f, 45.5004f };
 		uParam0->f_3 = 353.8757f;
@@ -4303,17 +4303,17 @@ void func_71(var uParam0, int iParam1) // Position - 0x5948 (22856)
 		*uParam0 = { -601.59f, 2099.1973f, 128.8928f };
 		uParam0->f_3 = 204.7498f;
 	}
-	else if (SYSTEM::VDIST(*uParam0, -1007.39264f, -477.95844f, 52.5357f) < 8f)
+	else if (BUILTIN::VDIST(*uParam0, -1007.39264f, -477.95844f, 52.5357f) < 8f)
 	{
 		*uParam0 = { -1018.3756f, -483.9436f, 36.0964f };
 		uParam0->f_3 = 114.7664f;
 	}
-	else if (SYSTEM::VDIST(*uParam0, 480.6662f, -1317.8085f, 28.20303f) < 15f)
+	else if (BUILTIN::VDIST(*uParam0, 480.6662f, -1317.8085f, 28.20303f) < 15f)
 	{
 		*uParam0 = { 497.7238f, -1310.9323f, 28.2372f };
 		uParam0->f_3 = 289.3663f;
 	}
-	else if (SYSTEM::VDIST(*uParam0, 2329.5266f, 2571.3113f, 45.6779f) < 5f)
+	else if (BUILTIN::VDIST(*uParam0, 2329.5266f, 2571.3113f, 45.6779f) < 5f)
 	{
 		*uParam0 = { 2316.9304f, 2594.1528f, 45.7199f };
 		uParam0->f_3 = 348.1325f;
@@ -5399,8 +5399,8 @@ Vector3 func_92(float fParam0, var uParam1, var uParam2, float fParam3) // Posit
 	float num2;
 	float num3;
 
-	num2 = SYSTEM::SIN(fParam3);
-	num3 = SYSTEM::COS(fParam3);
+	num2 = BUILTIN::SIN(fParam3);
+	num3 = BUILTIN::COS(fParam3);
 	num = (fParam0 * num3) - (fParam0.f_1 * num2);
 	num.f_1 = (fParam0 * num2) + (fParam0.f_1 * num3);
 	num.f_2 = fParam0.f_2;
@@ -6195,12 +6195,12 @@ void func_106(var uParam0, int iParam1) // Position - 0x8C4C (35916)
 
 	if (iParam1 < 2011)
 	{
-		*uParam0 = *uParam0 || SYSTEM::SHIFT_LEFT(2011 - iParam1, 26);
+		*uParam0 = *uParam0 || BUILTIN::SHIFT_LEFT(2011 - iParam1, 26);
 		*uParam0 = *uParam0 | -2147483648;
 	}
 	else
 	{
-		*uParam0 = *uParam0 || SYSTEM::SHIFT_LEFT(iParam1 - 2011, 26);
+		*uParam0 = *uParam0 || BUILTIN::SHIFT_LEFT(iParam1 - 2011, 26);
 		*uParam0 = *uParam0 - *uParam0 & -2147483648;
 	}
 
@@ -6229,7 +6229,7 @@ void func_108(var uParam0, int iParam1) // Position - 0x8D05 (36101)
 		return;
 
 	*uParam0 = *uParam0 - *uParam0 & 496;
-	*uParam0 = *uParam0 || SYSTEM::SHIFT_LEFT(iParam1, 4);
+	*uParam0 = *uParam0 || BUILTIN::SHIFT_LEFT(iParam1, 4);
 	return;
 }
 
@@ -6270,7 +6270,7 @@ int func_109(int iParam0, int iParam1) // Position - 0x8D56 (36182)
 
 int func_110(int iParam0) // Position - 0x8DF8 (36344)
 {
-	return (SYSTEM::SHIFT_RIGHT(iParam0, 26) & 31 * IS_BIT_SET(iParam0, 31) ? -1 : 1) + 2011;
+	return (BUILTIN::SHIFT_RIGHT(iParam0, 26) & 31 * IS_BIT_SET(iParam0, 31) ? -1 : 1) + 2011;
 }
 
 var func_111(BOOL bParam0, var uParam1, var uParam2) // Position - 0x8E1A (36378)
@@ -6292,7 +6292,7 @@ void func_113(var uParam0, int iParam1) // Position - 0x8E3E (36414)
 		return;
 
 	*uParam0 = *uParam0 - *uParam0 & 15872;
-	*uParam0 = *uParam0 || SYSTEM::SHIFT_LEFT(iParam1, 9);
+	*uParam0 = *uParam0 || BUILTIN::SHIFT_LEFT(iParam1, 9);
 	return;
 }
 
@@ -6302,7 +6302,7 @@ void func_114(var uParam0, int iParam1) // Position - 0x8E78 (36472)
 		return;
 
 	*uParam0 = *uParam0 - *uParam0 & 1032192;
-	*uParam0 = *uParam0 || SYSTEM::SHIFT_LEFT(iParam1, 14);
+	*uParam0 = *uParam0 || BUILTIN::SHIFT_LEFT(iParam1, 14);
 	return;
 }
 
@@ -6312,7 +6312,7 @@ void func_115(var uParam0, int iParam1) // Position - 0x8EB3 (36531)
 		return;
 
 	*uParam0 = *uParam0 - *uParam0 & 66060288;
-	*uParam0 = *uParam0 || SYSTEM::SHIFT_LEFT(iParam1, 20);
+	*uParam0 = *uParam0 || BUILTIN::SHIFT_LEFT(iParam1, 20);
 	return;
 }
 
@@ -7135,13 +7135,13 @@ BOOL func_124(Any* panParam0) // Position - 0xAA2B (43563)
 				while (!PED::IS_PED_ON_FOOT(PLAYER::PLAYER_PED_ID()))
 				{
 					func_202();
-					SYSTEM::WAIT(0);
+					BUILTIN::WAIT(0);
 				}
 			}
 		}
 	
 		func_125(*panParam0);
-		threadId = SYSTEM::START_NEW_SCRIPT_WITH_ARGS(&(panParam0->f_1), panParam0, 61, 63500);
+		threadId = BUILTIN::START_NEW_SCRIPT_WITH_ARGS(&(panParam0->f_1), panParam0, 61, 63500);
 		SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED(&(panParam0->f_1));
 	
 		if (CUTSCENE::HAS_CUTSCENE_LOADED())
@@ -7722,7 +7722,7 @@ BOOL func_155(const char* sParam0) // Position - 0xB441 (46145)
 		while (!SCRIPT::HAS_SCRIPT_LOADED(sParam0))
 		{
 			SCRIPT::REQUEST_SCRIPT(sParam0);
-			SYSTEM::WAIT(0);
+			BUILTIN::WAIT(0);
 		}
 	
 		return true;
@@ -8059,7 +8059,7 @@ void func_164(Any* panParam0) // Position - 0xBB2C (47916)
 					
 						while (!STREAMING::HAS_ANIM_DICT_LOADED("rcmcollect_paperleadinout@"))
 						{
-							SYSTEM::WAIT(0);
+							BUILTIN::WAIT(0);
 						}
 					
 						TASK::OPEN_SEQUENCE_TASK(&taskSequenceId);
@@ -8076,7 +8076,7 @@ void func_164(Any* panParam0) // Position - 0xBB2C (47916)
 					
 						while (!STREAMING::HAS_ANIM_DICT_LOADED("rcmabigail"))
 						{
-							SYSTEM::WAIT(0);
+							BUILTIN::WAIT(0);
 						}
 					
 						TASK::OPEN_SEQUENCE_TASK(&taskSequenceId);
@@ -8092,7 +8092,7 @@ void func_164(Any* panParam0) // Position - 0xBB2C (47916)
 					
 						while (!STREAMING::HAS_ANIM_DICT_LOADED("rcmminute1"))
 						{
-							SYSTEM::WAIT(0);
+							BUILTIN::WAIT(0);
 						}
 					
 						TASK::OPEN_SEQUENCE_TASK(&taskSequenceId);
@@ -8113,7 +8113,7 @@ void func_164(Any* panParam0) // Position - 0xBB2C (47916)
 					
 						while (!STREAMING::HAS_ANIM_DICT_LOADED("special_ped@hao@base"))
 						{
-							SYSTEM::WAIT(0);
+							BUILTIN::WAIT(0);
 						}
 					
 						TASK::OPEN_SEQUENCE_TASK(&taskSequenceId);
@@ -8654,7 +8654,7 @@ BOOL func_178(Vehicle veParam0, Ped pedParam1, int iParam2, int iParam3) // Posi
 
 	num = func_179(entityForwardVector, unk);
 
-	if (num <= SYSTEM::COS(iParam2 / 2f))
+	if (num <= BUILTIN::COS(iParam2 / 2f))
 		return false;
 
 	return true;
@@ -8670,7 +8670,7 @@ Vector3 func_180(float fParam0, var uParam1, var uParam2) // Position - 0xC820 (
 	float num;
 	float num2;
 
-	num = SYSTEM::VMAG(fParam0);
+	num = BUILTIN::VMAG(fParam0);
 
 	if (num != 0f)
 	{
@@ -8853,7 +8853,7 @@ BOOL func_187(Vehicle veParam0, var uParam1, var uParam2, var uParam3, float fPa
 
 	num = func_179(entityForwardVector, unk);
 
-	if (num <= SYSTEM::COS(fParam4 / 2f))
+	if (num <= BUILTIN::COS(fParam4 / 2f))
 		return false;
 
 	return true;
@@ -8890,7 +8890,7 @@ void func_190(Vehicle veParam0) // Position - 0xCC9D (52381)
 	
 		while (!STREAMING::HAS_ANIM_DICT_LOADED("rcmextreme3"))
 		{
-			SYSTEM::WAIT(0);
+			BUILTIN::WAIT(0);
 		}
 	
 		TASK::OPEN_SEQUENCE_TASK(&taskSequenceId);
@@ -9957,7 +9957,7 @@ void func_240(Any* panParam0, Vector3 vParam1, var uParam2, var uParam3) // Posi
 	{
 		while (true)
 		{
-			SYSTEM::WAIT(0);
+			BUILTIN::WAIT(0);
 		
 			if (func_356(*panParam0))
 				func_362(panParam0, true);
@@ -9969,7 +9969,7 @@ void func_240(Any* panParam0, Vector3 vParam1, var uParam2, var uParam3) // Posi
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		if (*panParam0 == 52 || *panParam0 == 53)
 		{
@@ -10675,7 +10675,7 @@ BOOL func_257(Any* panParam0) // Position - 0xED7A (60794)
 
 	if (iLocal_112 < 0)
 	{
-		if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(panParam0->f_28[1], true)) < 25f)
+		if (BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(panParam0->f_28[1], true)) < 25f)
 			return true;
 	
 		switch (*panParam0)
@@ -11697,12 +11697,12 @@ void func_287(Any* panParam0) // Position - 0x108D9 (67801)
 
 	while (!STREAMING::HAS_MODEL_LOADED(model) || !STREAMING::HAS_MODEL_LOADED(model2) || !STREAMING::HAS_ANIM_DICT_LOADED(animDict))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	while (!func_341(&panParam0->f_28[0], model, -1299.4f, 2506.24f, 21.07f, -122.79f, false))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	func_340(&panParam0->f_28[0]);
@@ -11732,7 +11732,7 @@ void func_287(Any* panParam0) // Position - 0x108D9 (67801)
 
 	while (!func_341(&panParam0->f_28[1], model, -1299.49f, 2505.53f, 21.05f, -101.94f, false))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	func_340(&panParam0->f_28[1]);
@@ -11762,7 +11762,7 @@ void func_287(Any* panParam0) // Position - 0x108D9 (67801)
 
 	while (!func_339(&panParam0->f_35[0], model2, -1298.1597f, 2504.1533f, 21.062f, 165.48f))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(panParam0->f_35[0], 1084227584);
@@ -11832,7 +11832,7 @@ BOOL func_288(Object* pobParam0, Hash hParam1, float fParam2, float fParam3, flo
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(weapontypeModel);
@@ -15444,9 +15444,9 @@ BOOL func_290(var uParam0, Hash hParam1, int iParam2, BOOL bParam3) // Position 
 		
 			if (dlcWeaponIndex != -1)
 			{
-				for (i = 0; i < FILES::GET_NUM_DLC_WEAPON_COMPONENTS(dlcWeaponIndex); i = i + 1)
+				for (i = 0; i < EXTRAMETADATA::GET_NUM_DLC_WEAPON_COMPONENTS(dlcWeaponIndex); i = i + 1)
 				{
-					if (FILES::GET_DLC_WEAPON_COMPONENT_DATA(dlcWeaponIndex, i, &ComponentDataPtr))
+					if (EXTRAMETADATA::GET_DLC_WEAPON_COMPONENT_DATA(dlcWeaponIndex, i, &ComponentDataPtr))
 					{
 						if (!func_65(ComponentDataPtr.f_3))
 						{
@@ -16233,9 +16233,9 @@ int func_291(Hash hParam0, int iParam1) // Position - 0x1678C (92044)
 			
 				if (dlcWeaponIndex != -1)
 				{
-					for (i = 0; i < FILES::GET_NUM_DLC_WEAPON_COMPONENTS(dlcWeaponIndex); i = i + 1)
+					for (i = 0; i < EXTRAMETADATA::GET_NUM_DLC_WEAPON_COMPONENTS(dlcWeaponIndex); i = i + 1)
 					{
-						if (FILES::GET_DLC_WEAPON_COMPONENT_DATA(dlcWeaponIndex, i, &ComponentDataPtr))
+						if (EXTRAMETADATA::GET_DLC_WEAPON_COMPONENT_DATA(dlcWeaponIndex, i, &ComponentDataPtr))
 						{
 							if (!func_65(ComponentDataPtr.f_3))
 							{
@@ -16277,22 +16277,22 @@ int func_291(Hash hParam0, int iParam1) // Position - 0x1678C (92044)
 				
 					case joaat("COMPONENT_PISTOL_CLIP_02"):
 						price = 9175;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_2812);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_2812);
 						break;
 				
 					case joaat("COMPONENT_AT_PI_FLSH"):
 						price = 1675;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4030);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4030);
 						break;
 				
 					case joaat("COMPONENT_AT_PI_SUPP_02"):
 						price = 12050;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4031);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4031);
 						break;
 				
 					case joaat("COMPONENT_PISTOL_VARMOD_LUXE"):
 						price = Global_262145.f_11067;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4092);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4092);
 						break;
 				
 					case joaat("COMPONENT_GUNRUN_MK2_UPGRADE"):
@@ -16310,22 +16310,22 @@ int func_291(Hash hParam0, int iParam1) // Position - 0x1678C (92044)
 				
 					case joaat("COMPONENT_COMBATPISTOL_CLIP_02"):
 						price = Global_262145.f_20814;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_2813);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_2813);
 						break;
 				
 					case joaat("COMPONENT_AT_PI_FLSH"):
 						price = 1825;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4032);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4032);
 						break;
 				
 					case joaat("COMPONENT_AT_PI_SUPP"):
 						price = Global_262145.f_20815;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4033);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4033);
 						break;
 				
 					case joaat("COMPONENT_COMBATPISTOL_VARMOD_LOWRIDER"):
 						price = Global_262145.f_12415;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4089);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4089);
 						break;
 				
 					case joaat("COMPONENT_COMBATPISTOL_VARMOD_XMAS23"):
@@ -16343,22 +16343,22 @@ int func_291(Hash hParam0, int iParam1) // Position - 0x1678C (92044)
 				
 					case joaat("COMPONENT_APPISTOL_CLIP_02"):
 						price = 9400;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_2815);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_2815);
 						break;
 				
 					case joaat("COMPONENT_AT_PI_FLSH"):
 						price = 1975;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4034);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4034);
 						break;
 				
 					case joaat("COMPONENT_AT_PI_SUPP"):
 						price = 12200;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4035);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4035);
 						break;
 				
 					case joaat("COMPONENT_APPISTOL_VARMOD_LUXE"):
 						price = Global_262145.f_11066;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4085);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4085);
 						break;
 				
 					case joaat("COMPONENT_APPISTOL_VARMOD_SECURITY"):
@@ -16376,27 +16376,27 @@ int func_291(Hash hParam0, int iParam1) // Position - 0x1678C (92044)
 				
 					case joaat("COMPONENT_MICROSMG_CLIP_02"):
 						price = 9325;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_2816);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_2816);
 						break;
 				
 					case joaat("COMPONENT_AT_PI_FLSH"):
 						price = 1900;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4038);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4038);
 						break;
 				
 					case joaat("COMPONENT_AT_SCOPE_MACRO"):
 						price = 10800;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4040);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4040);
 						break;
 				
 					case joaat("COMPONENT_AT_AR_SUPP_02"):
 						price = 12150;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4039);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4039);
 						break;
 				
 					case joaat("COMPONENT_MICROSMG_VARMOD_LUXE"):
 						price = Global_262145.f_11070;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4091);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4091);
 						break;
 				
 					case joaat("COMPONENT_MICROSMG_VARMOD_SECURITY"):
@@ -16422,7 +16422,7 @@ int func_291(Hash hParam0, int iParam1) // Position - 0x1678C (92044)
 				
 					case joaat("COMPONENT_SMG_CLIP_02"):
 						price = 9475;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_2817);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_2817);
 						break;
 				
 					case joaat("COMPONENT_SMG_CLIP_03"):
@@ -16431,22 +16431,22 @@ int func_291(Hash hParam0, int iParam1) // Position - 0x1678C (92044)
 				
 					case joaat("COMPONENT_AT_AR_FLSH"):
 						price = 2050;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4041);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4041);
 						break;
 				
 					case joaat("COMPONENT_AT_SCOPE_MACRO_02"):
 						price = 10825;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4043);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4043);
 						break;
 				
 					case joaat("COMPONENT_AT_PI_SUPP"):
 						price = 12250;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4042);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4042);
 						break;
 				
 					case joaat("COMPONENT_SMG_VARMOD_LUXE"):
 						price = Global_262145.f_11069;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4096);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4096);
 						break;
 				
 					case joaat("COMPONENT_GUNRUN_MK2_UPGRADE"):
@@ -16464,7 +16464,7 @@ int func_291(Hash hParam0, int iParam1) // Position - 0x1678C (92044)
 				
 					case joaat("COMPONENT_ASSAULTRIFLE_CLIP_02"):
 						price = 9550;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_2819);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_2819);
 						break;
 				
 					case joaat("COMPONENT_ASSAULTRIFLE_CLIP_03"):
@@ -16473,27 +16473,27 @@ int func_291(Hash hParam0, int iParam1) // Position - 0x1678C (92044)
 				
 					case joaat("COMPONENT_AT_AR_AFGRIP"):
 						price = 4200;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4051);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4051);
 						break;
 				
 					case joaat("COMPONENT_AT_AR_FLSH"):
 						price = 2125;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4048);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4048);
 						break;
 				
 					case joaat("COMPONENT_AT_SCOPE_MACRO"):
 						price = 10850;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4050);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4050);
 						break;
 				
 					case joaat("COMPONENT_AT_AR_SUPP_02"):
 						price = 12300;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4049);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4049);
 						break;
 				
 					case joaat("COMPONENT_ASSAULTRIFLE_VARMOD_LUXE"):
 						price = Global_262145.f_11063;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4086);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4086);
 						break;
 				
 					case joaat("COMPONENT_GUNRUN_MK2_UPGRADE"):
@@ -16511,7 +16511,7 @@ int func_291(Hash hParam0, int iParam1) // Position - 0x1678C (92044)
 				
 					case joaat("COMPONENT_CARBINERIFLE_CLIP_02"):
 						price = 9775;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_2820);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_2820);
 						break;
 				
 					case joaat("COMPONENT_CARBINERIFLE_CLIP_03"):
@@ -16520,27 +16520,27 @@ int func_291(Hash hParam0, int iParam1) // Position - 0x1678C (92044)
 				
 					case joaat("COMPONENT_AT_AR_AFGRIP"):
 						price = 4350;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4055);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4055);
 						break;
 				
 					case joaat("COMPONENT_AT_AR_FLSH"):
 						price = 2350;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4052);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4052);
 						break;
 				
 					case joaat("COMPONENT_AT_SCOPE_MEDIUM"):
 						price = 10900;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4054);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4054);
 						break;
 				
 					case joaat("COMPONENT_AT_AR_SUPP"):
 						price = 12450;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4053);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4053);
 						break;
 				
 					case joaat("COMPONENT_CARBINERIFLE_VARMOD_LUXE"):
 						price = Global_262145.f_11065;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4087);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4087);
 						break;
 				
 					case joaat("COMPONENT_GUNRUN_MK2_UPGRADE"):
@@ -16562,27 +16562,27 @@ int func_291(Hash hParam0, int iParam1) // Position - 0x1678C (92044)
 				
 					case joaat("COMPONENT_ADVANCEDRIFLE_CLIP_02"):
 						price = 9925;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_2821);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_2821);
 						break;
 				
 					case joaat("COMPONENT_AT_AR_FLSH"):
 						price = 2425;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4056);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4056);
 						break;
 				
 					case joaat("COMPONENT_AT_SCOPE_SMALL"):
 						price = 10950;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4058);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4058);
 						break;
 				
 					case joaat("COMPONENT_AT_AR_SUPP"):
 						price = 12500;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4057);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4057);
 						break;
 				
 					case joaat("COMPONENT_ADVANCEDRIFLE_VARMOD_LUXE"):
 						price = Global_262145.f_11064;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4084);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4084);
 						break;
 				}
 				break;
@@ -16596,17 +16596,17 @@ int func_291(Hash hParam0, int iParam1) // Position - 0x1678C (92044)
 				
 					case joaat("COMPONENT_MG_CLIP_02"):
 						price = 9850;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_2822);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_2822);
 						break;
 				
 					case joaat("COMPONENT_AT_SCOPE_SMALL_02"):
 						price = 10925;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4059);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4059);
 						break;
 				
 					case joaat("COMPONENT_MG_VARMOD_LOWRIDER"):
 						price = Global_262145.f_12416;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4090);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4090);
 						break;
 				}
 				break;
@@ -16620,22 +16620,22 @@ int func_291(Hash hParam0, int iParam1) // Position - 0x1678C (92044)
 				
 					case joaat("COMPONENT_COMBATMG_CLIP_02"):
 						price = 10000;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_2823);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_2823);
 						break;
 				
 					case joaat("COMPONENT_AT_AR_AFGRIP"):
 						price = 4425;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4074);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4074);
 						break;
 				
 					case joaat("COMPONENT_AT_SCOPE_MEDIUM"):
 						price = 10975;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4075);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4075);
 						break;
 				
 					case joaat("COMPONENT_COMBATMG_VARMOD_LOWRIDER"):
 						price = Global_262145.f_12417;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4088);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4088);
 						break;
 				
 					case joaat("COMPONENT_GUNRUN_MK2_UPGRADE"):
@@ -16649,17 +16649,17 @@ int func_291(Hash hParam0, int iParam1) // Position - 0x1678C (92044)
 				{
 					case joaat("COMPONENT_AT_AR_FLSH"):
 						price = 1750;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4060);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4060);
 						break;
 				
 					case joaat("COMPONENT_AT_SR_SUPP"):
 						price = 12350;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4061);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4061);
 						break;
 				
 					case joaat("COMPONENT_PUMPSHOTGUN_VARMOD_LOWRIDER"):
 						price = Global_262145.f_12412;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4094);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4094);
 						break;
 				
 					case joaat("COMPONENT_GUNRUN_MK2_UPGRADE"):
@@ -16685,22 +16685,22 @@ int func_291(Hash hParam0, int iParam1) // Position - 0x1678C (92044)
 				
 					case joaat("COMPONENT_ASSAULTSHOTGUN_CLIP_02"):
 						price = 9625;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_2824);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_2824);
 						break;
 				
 					case joaat("COMPONENT_AT_AR_AFGRIP"):
 						price = 4275;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4064);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4064);
 						break;
 				
 					case joaat("COMPONENT_AT_AR_FLSH"):
 						price = 2200;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4065);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4065);
 						break;
 				
 					case joaat("COMPONENT_AT_AR_SUPP"):
 						price = 12350;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4066);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4066);
 						break;
 				}
 				break;
@@ -16714,22 +16714,22 @@ int func_291(Hash hParam0, int iParam1) // Position - 0x1678C (92044)
 				
 					case joaat("COMPONENT_AT_SCOPE_LARGE"):
 						price = 12400;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4067);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4067);
 						break;
 				
 					case joaat("COMPONENT_AT_SCOPE_MAX"):
 						price = 12500;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4068);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4068);
 						break;
 				
 					case joaat("COMPONENT_AT_AR_SUPP_02"):
 						price = 12050;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4069);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4069);
 						break;
 				
 					case joaat("COMPONENT_SNIPERRIFLE_VARMOD_LUXE"):
 						price = Global_262145.f_11072;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4097);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4097);
 						break;
 				}
 				break;
@@ -16743,12 +16743,12 @@ int func_291(Hash hParam0, int iParam1) // Position - 0x1678C (92044)
 				
 					case joaat("COMPONENT_AT_SCOPE_LARGE"):
 						price = 99;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4070);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4070);
 						break;
 				
 					case joaat("COMPONENT_AT_SCOPE_MAX"):
 						price = 12500;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4071);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4071);
 						break;
 				
 					case joaat("COMPONENT_GUNRUN_MK2_UPGRADE"):
@@ -16766,17 +16766,17 @@ int func_291(Hash hParam0, int iParam1) // Position - 0x1678C (92044)
 				{
 					case joaat("COMPONENT_AT_AR_AFGRIP"):
 						price = 4500;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4076);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4076);
 						break;
 				
 					case joaat("COMPONENT_AT_AR_FLSH"):
 						price = 2500;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4072);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4072);
 						break;
 				
 					case joaat("COMPONENT_AT_SCOPE_SMALL"):
 						price = 11000;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4073);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4073);
 						break;
 				}
 				break;
@@ -16799,27 +16799,27 @@ int func_291(Hash hParam0, int iParam1) // Position - 0x1678C (92044)
 				
 					case joaat("COMPONENT_ASSAULTSMG_CLIP_02"):
 						price = 9700;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_2818);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_2818);
 						break;
 				
 					case joaat("COMPONENT_AT_AR_FLSH"):
 						price = 2275;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4044);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4044);
 						break;
 				
 					case joaat("COMPONENT_AT_SCOPE_MACRO"):
 						price = 10875;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4047);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4047);
 						break;
 				
 					case joaat("COMPONENT_AT_AR_SUPP_02"):
 						price = 12400;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4045);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4045);
 						break;
 				
 					case joaat("COMPONENT_ASSAULTSMG_VARMOD_LOWRIDER"):
 						price = Global_262145.f_12413;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4046);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4046);
 						break;
 				}
 				break;
@@ -17049,17 +17049,17 @@ int func_291(Hash hParam0, int iParam1) // Position - 0x1678C (92044)
 				{
 					case joaat("COMPONENT_AT_AR_AFGRIP"):
 						price = 4100;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_15085);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_15085);
 						break;
 				
 					case joaat("COMPONENT_AT_AR_FLSH"):
 						price = 2300;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4062);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4062);
 						break;
 				
 					case joaat("COMPONENT_AT_AR_SUPP_02"):
 						price = 12450;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4063);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4063);
 						break;
 				}
 			
@@ -17076,22 +17076,22 @@ int func_291(Hash hParam0, int iParam1) // Position - 0x1678C (92044)
 				
 					case joaat("COMPONENT_PISTOL50_CLIP_02"):
 						price = 9500;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_2814);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_2814);
 						break;
 				
 					case joaat("COMPONENT_AT_PI_FLSH"):
 						price = 2000;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4036);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4036);
 						break;
 				
 					case joaat("COMPONENT_AT_AR_SUPP_02"):
 						price = 12250;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4037);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4037);
 						break;
 				
 					case joaat("COMPONENT_PISTOL50_VARMOD_LUXE"):
 						price = Global_262145.f_11068;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4093);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4093);
 						break;
 				}
 			
@@ -17104,7 +17104,7 @@ int func_291(Hash hParam0, int iParam1) // Position - 0x1678C (92044)
 				{
 					case joaat("COMPONENT_SAWNOFFSHOTGUN_VARMOD_LUXE"):
 						price = Global_262145.f_11071;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4095);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4095);
 						break;
 				}
 				break;
@@ -17114,47 +17114,47 @@ int func_291(Hash hParam0, int iParam1) // Position - 0x1678C (92044)
 				{
 					case joaat("COMPONENT_KNUCKLE_VARMOD_PIMP"):
 						price = Global_262145.f_11392;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4098);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4098);
 						break;
 				
 					case joaat("COMPONENT_KNUCKLE_VARMOD_BALLAS"):
 						price = Global_262145.f_11393;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4099);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4099);
 						break;
 				
 					case joaat("COMPONENT_KNUCKLE_VARMOD_DOLLAR"):
 						price = Global_262145.f_11394;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4100);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4100);
 						break;
 				
 					case joaat("COMPONENT_KNUCKLE_VARMOD_DIAMOND"):
 						price = Global_262145.f_11395;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4101);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4101);
 						break;
 				
 					case joaat("COMPONENT_KNUCKLE_VARMOD_HATE"):
 						price = Global_262145.f_11396;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4102);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4102);
 						break;
 				
 					case joaat("COMPONENT_KNUCKLE_VARMOD_LOVE"):
 						price = Global_262145.f_11397;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4103);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4103);
 						break;
 				
 					case joaat("COMPONENT_KNUCKLE_VARMOD_PLAYER"):
 						price = Global_262145.f_11398;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4104);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4104);
 						break;
 				
 					case joaat("COMPONENT_KNUCKLE_VARMOD_KING"):
 						price = Global_262145.f_11399;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4105);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4105);
 						break;
 				
 					case joaat("COMPONENT_KNUCKLE_VARMOD_VAGOS"):
 						price = Global_262145.f_11400;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4106);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4106);
 						break;
 				}
 				break;
@@ -17168,7 +17168,7 @@ int func_291(Hash hParam0, int iParam1) // Position - 0x1678C (92044)
 				
 					case joaat("COMPONENT_MACHINEPISTOL_CLIP_02"):
 						price = Global_262145.f_11416;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4107);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4107);
 						break;
 				
 					case joaat("COMPONENT_MACHINEPISTOL_CLIP_03"):
@@ -17177,7 +17177,7 @@ int func_291(Hash hParam0, int iParam1) // Position - 0x1678C (92044)
 				
 					case joaat("COMPONENT_AT_PI_SUPP"):
 						price = Global_262145.f_11417;
-						price = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(price) * Global_262145.f_4108);
+						price = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(price) * Global_262145.f_4108);
 						break;
 				}
 				break;
@@ -19012,9 +19012,9 @@ int func_291(Hash hParam0, int iParam1) // Position - 0x1678C (92044)
 			
 				if (dlcWeaponIndex2 != -1)
 				{
-					for (j = 0; j < FILES::GET_NUM_DLC_WEAPON_COMPONENTS(dlcWeaponIndex2); j = j + 1)
+					for (j = 0; j < EXTRAMETADATA::GET_NUM_DLC_WEAPON_COMPONENTS(dlcWeaponIndex2); j = j + 1)
 					{
-						if (FILES::GET_DLC_WEAPON_COMPONENT_DATA(dlcWeaponIndex2, j, &ComponentDataPtr2))
+						if (EXTRAMETADATA::GET_DLC_WEAPON_COMPONENT_DATA(dlcWeaponIndex2, j, &ComponentDataPtr2))
 						{
 							if (!func_65(ComponentDataPtr2.f_3))
 							{
@@ -19066,12 +19066,12 @@ float func_292(Hash hParam0, var uParam1, float fParam2) // Position - 0x1A397 (
 	{
 		num2 = num2 + func_296();
 		num = 1f - num2;
-		*uParam1 = SYSTEM::ROUND(SYSTEM::TO_FLOAT(*uParam1) * num);
+		*uParam1 = BUILTIN::ROUND(BUILTIN::TO_FLOAT(*uParam1) * num);
 		return num;
 	}
 
 	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
-		*uParam1 = SYSTEM::ROUND(SYSTEM::TO_FLOAT(*uParam1) * fParam2);
+		*uParam1 = BUILTIN::ROUND(BUILTIN::TO_FLOAT(*uParam1) * fParam2);
 
 	if (!Global_79539)
 	{
@@ -19095,7 +19095,7 @@ float func_292(Hash hParam0, var uParam1, float fParam2) // Position - 0x1A397 (
 	}
 
 	num = 1f - num2;
-	*uParam1 = SYSTEM::ROUND(SYSTEM::TO_FLOAT(*uParam1) * num);
+	*uParam1 = BUILTIN::ROUND(BUILTIN::TO_FLOAT(*uParam1) * num);
 	return num;
 }
 
@@ -20627,9 +20627,9 @@ char* func_306(int iParam0, Hash hParam1) // Position - 0x1B5D3 (112083)
 			
 				if (dlcWeaponIndex != -1)
 				{
-					for (i = 0; i < FILES::GET_NUM_DLC_WEAPON_COMPONENTS(dlcWeaponIndex); i = i + 1)
+					for (i = 0; i < EXTRAMETADATA::GET_NUM_DLC_WEAPON_COMPONENTS(dlcWeaponIndex); i = i + 1)
 					{
-						if (FILES::GET_DLC_WEAPON_COMPONENT_DATA(dlcWeaponIndex, i, &ComponentDataPtr))
+						if (EXTRAMETADATA::GET_DLC_WEAPON_COMPONENT_DATA(dlcWeaponIndex, i, &ComponentDataPtr))
 							if (ComponentDataPtr.f_3 == iParam0)
 								return func_307(&(ComponentDataPtr.f_6));
 					}
@@ -23623,12 +23623,12 @@ void func_344(Any* panParam0) // Position - 0x1F580 (128384)
 
 	while (!STREAMING::HAS_MODEL_LOADED(model) || !STREAMING::HAS_ANIM_DICT_LOADED(animDict))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	while (!func_341(&panParam0->f_28[0], model, -161.37f, -1669.63f, 33.1f, func_337(1.03f), true))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	func_340(&panParam0->f_28[0]);
@@ -23650,7 +23650,7 @@ void func_344(Any* panParam0) // Position - 0x1F580 (128384)
 
 	while (!func_341(&panParam0->f_28[1], model, -161.93f, -1670.39f, 33.14f, func_337(0.2f), true))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	func_340(&panParam0->f_28[1]);
@@ -23689,12 +23689,12 @@ void func_345(Any* panParam0) // Position - 0x1F857 (129111)
 
 	while (!STREAMING::HAS_MODEL_LOADED(model) || !WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("WEAPON_MICROSMG")) || !STREAMING::HAS_ANIM_DICT_LOADED(animDict))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	while (!func_341(&panParam0->f_28[0], model, 464.6125f, -1848.7673f, 27.816f, 177.39f, true))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	func_340(&panParam0->f_28[0]);
@@ -23715,7 +23715,7 @@ void func_345(Any* panParam0) // Position - 0x1F857 (129111)
 
 	while (!func_341(&panParam0->f_28[1], model, 465.782f, -1849.073f, 27.817f, 129.92f, true))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	func_340(&panParam0->f_28[1]);
@@ -23785,7 +23785,7 @@ void func_348(Any* panParam0) // Position - 0x1FBAA (129962)
 
 	while (!STREAMING::HAS_MODEL_LOADED(model) || !STREAMING::HAS_MODEL_LOADED(model2) || !STREAMING::HAS_MODEL_LOADED(model3) || !STREAMING::HAS_ANIM_DICT_LOADED(animDict) || !func_351(&uLocal_111))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	MISC::CLEAR_AREA_OF_OBJECTS(1180.0205f, -401.7374f, 66.8767f, 0.75f, 0);
@@ -23805,7 +23805,7 @@ void func_348(Any* panParam0) // Position - 0x1FBAA (129962)
 
 	while (!func_341(&panParam0->f_28[0], model, 1181.5474f, -400.0954f, 67.5757f, -124.292786f, false))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	func_340(&panParam0->f_28[0]);
@@ -23927,12 +23927,12 @@ void func_355(Any* panParam0) // Position - 0x1FF72 (130930)
 
 	while (!STREAMING::HAS_MODEL_LOADED(model) || !STREAMING::HAS_MODEL_LOADED(model2) || !STREAMING::HAS_MODEL_LOADED(model3) || !STREAMING::HAS_ANIM_DICT_LOADED(animDict) || !WEAPON::HAS_WEAPON_ASSET_LOADED(joaat("WEAPON_ASSAULTRIFLE")))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	while (!func_341(&panParam0->f_28[0], model, 907.998f, 3643.8264f, 32.292427f, -173.04526f, false))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (_DOES_ENTITY_EXIST_AND_IS_ALIVE(panParam0->f_28[0]))
@@ -23961,7 +23961,7 @@ void func_355(Any* panParam0) // Position - 0x1FF72 (130930)
 
 	while (!func_341(&panParam0->f_28[1], model, 909.3126f, 3643.5066f, 32.2952f, 153.0127f, false))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (_DOES_ENTITY_EXIST_AND_IS_ALIVE(panParam0->f_28[1]))

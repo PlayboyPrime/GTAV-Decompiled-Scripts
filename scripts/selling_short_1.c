@@ -6261,7 +6261,7 @@ void main() // Position - 0x0 (0)
 			func_1(0.1f, 0.1f, "NUMBER" /*~1~*/, 171, 0);
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -6559,7 +6559,7 @@ void func_19(BOOL bParam0) // Position - 0x571 (1393)
 
 	while (!STREAMING::IS_NEW_LOAD_SCENE_LOADED())
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	STREAMING::NEW_LOAD_SCENE_STOP();
@@ -6570,7 +6570,7 @@ void func_19(BOOL bParam0) // Position - 0x571 (1393)
 	
 		while (!STREAMING::IS_IPL_ACTIVE("LInvader"))
 		{
-			SYSTEM::WAIT(0);
+			BUILTIN::WAIT(0);
 		}
 	}
 
@@ -6641,15 +6641,15 @@ void func_19(BOOL bParam0) // Position - 0x571 (1393)
 
 	while (ENTITY::IS_ENTITY_WAITING_FOR_WORLD_COLLISION(PLAYER::PLAYER_PED_ID()))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	while (!CUTSCENE::HAS_CUTSCENE_LOADED())
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
-	SYSTEM::WAIT(2000);
+	BUILTIN::WAIT(2000);
 	iLocal_6207 = 0;
 	iLocal_19 = 12;
 	iLocal_19.f_1 = 0;
@@ -7115,7 +7115,7 @@ int func_30(char* sParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 
 	while (!HUD::HAS_ADDITIONAL_TEXT_LOADED(iParam1))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		if (MISC::GET_GAME_TIMER() > num && !HUD::HAS_ADDITIONAL_TEXT_LOADED(iParam1))
 			return 0;
@@ -7141,7 +7141,7 @@ int func_31(char* sParam0, var uParam1, int iParam2) // Position - 0x2555 (9557)
 
 	while (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*uParam1))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		if (MISC::GET_GAME_TIMER() > num && !GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*uParam1))
 			return 0;
@@ -7165,7 +7165,7 @@ int func_32(char* sParam0, int iParam1) // Position - 0x25BD (9661)
 
 	while (!STREAMING::HAS_ANIM_DICT_LOADED(sParam0))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		if (MISC::GET_GAME_TIMER() > num && !STREAMING::HAS_ANIM_DICT_LOADED(sParam0))
 			return 0;

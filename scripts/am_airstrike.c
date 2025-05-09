@@ -1481,7 +1481,7 @@ void func_45() // Position - 0x1818 (6168)
 		else
 			fLocal_64 = fLocal_64 - 3.75f;
 	
-		num = SYSTEM::FLOOR(fLocal_64);
+		num = BUILTIN::FLOOR(fLocal_64);
 	
 		if (fLocal_64 <= 200f)
 			num2 = 6;
@@ -1677,7 +1677,7 @@ void func_53() // Position - 0x1CB7 (7351)
 							func_96();
 							TASK::CLEAR_PED_TASKS(NETWORK::NET_TO_PED(iLocal_240.f_2.f_3));
 							TASK::TASK_PERFORM_SEQUENCE(NETWORK::NET_TO_PED(iLocal_240.f_2.f_3), iLocal_47);
-							VEHICLE::SET_TASK_VEHICLE_GOTO_PLANE_MIN_HEIGHT_ABOVE_TERRAIN(NETWORK::NET_TO_VEH(iLocal_240.f_2), SYSTEM::ROUND(50f));
+							VEHICLE::SET_TASK_VEHICLE_GOTO_PLANE_MIN_HEIGHT_ABOVE_TERRAIN(NETWORK::NET_TO_VEH(iLocal_240.f_2), BUILTIN::ROUND(50f));
 							bLocal_53 = true;
 						}
 					}
@@ -1735,7 +1735,7 @@ void func_54() // Position - 0x1E4C (7756)
 				}
 				else
 				{
-					HUD::SET_BLIP_ROTATION(blLocal_45, SYSTEM::CEIL(ENTITY::GET_ENTITY_HEADING(vehicle)));
+					HUD::SET_BLIP_ROTATION(blLocal_45, BUILTIN::CEIL(ENTITY::GET_ENTITY_HEADING(vehicle)));
 				}
 			
 				if (!bLocal_51)
@@ -1981,7 +1981,7 @@ int func_65() // Position - 0x23C4 (9156)
 				PED::SET_PED_KEEP_TASK(NETWORK::NET_TO_PED(iLocal_240.f_2.f_3), true);
 				func_66();
 				TASK::TASK_PERFORM_SEQUENCE(NETWORK::NET_TO_PED(iLocal_240.f_2.f_3), iLocal_46);
-				VEHICLE::SET_TASK_VEHICLE_GOTO_PLANE_MIN_HEIGHT_ABOVE_TERRAIN(NETWORK::NET_TO_VEH(iLocal_240.f_2), SYSTEM::ROUND(50f));
+				VEHICLE::SET_TASK_VEHICLE_GOTO_PLANE_MIN_HEIGHT_ABOVE_TERRAIN(NETWORK::NET_TO_VEH(iLocal_240.f_2), BUILTIN::ROUND(50f));
 			}
 		}
 	}
@@ -2000,8 +2000,8 @@ void func_66() // Position - 0x24A9 (9385)
 		if (func_42(iLocal_240.f_2))
 		{
 			TASK::OPEN_SEQUENCE_TASK(&iLocal_46);
-			TASK::TASK_PLANE_MISSION(0, NETWORK::NET_TO_VEH(iLocal_240.f_2), 0, 0, uLocal_58 + { 50f + 5f, 0f, 0f }, 4, 60f, 15f, -1f, SYSTEM::CEIL(50f + 5f), 20, true);
-			TASK::TASK_PLANE_MISSION(0, NETWORK::NET_TO_VEH(iLocal_240.f_2), 0, 0, iLocal_240.f_2.f_14, 4, 60f, 25f, -1f, SYSTEM::CEIL(50f + 5f), 20, true);
+			TASK::TASK_PLANE_MISSION(0, NETWORK::NET_TO_VEH(iLocal_240.f_2), 0, 0, uLocal_58 + { 50f + 5f, 0f, 0f }, 4, 60f, 15f, -1f, BUILTIN::CEIL(50f + 5f), 20, true);
+			TASK::TASK_PLANE_MISSION(0, NETWORK::NET_TO_VEH(iLocal_240.f_2), 0, 0, iLocal_240.f_2.f_14, 4, 60f, 25f, -1f, BUILTIN::CEIL(50f + 5f), 20, true);
 			TASK::CLOSE_SEQUENCE_TASK(iLocal_46);
 			bLocal_48 = true;
 		}
@@ -2143,7 +2143,7 @@ void func_70(Vector3 vParam0, var uParam1, var uParam2, float fParam3, Hash hPar
 
 	if (func_71(PLAYER::PLAYER_ID(), vParam0, hParam4) > -1)
 	{
-		if (Global_2635516.f_3231[1 /*6*/].f_5 == veParam5 && Global_2635516.f_3231[1 /*6*/].f_4 == hParam4 && SYSTEM::VDIST(Global_2635516.f_3231[1 /*6*/], vParam0) < 0.5f)
+		if (Global_2635516.f_3231[1 /*6*/].f_5 == veParam5 && Global_2635516.f_3231[1 /*6*/].f_4 == hParam4 && BUILTIN::VDIST(Global_2635516.f_3231[1 /*6*/], vParam0) < 0.5f)
 			return;
 	
 		for (i = 0; i < 2; i = i + 1)
@@ -2180,7 +2180,7 @@ int func_71(Player plParam0, var uParam1, var uParam2, var uParam3, Hash hParam4
 				if (MISC::ABSF(Global_2648914.f_461[player /*11*/][i /*5*/].f_2 - vector.f_2) < 2f)
 					vector.f_2 = Global_2648914.f_461[player /*11*/][i /*5*/].f_2;
 			
-				if (SYSTEM::VDIST(Global_2648914.f_461[player /*11*/][i /*5*/], vector) < 0.5f)
+				if (BUILTIN::VDIST(Global_2648914.f_461[player /*11*/][i /*5*/], vector) < 0.5f)
 					return i;
 			}
 		}
@@ -2534,7 +2534,7 @@ Vector3 func_92(Vector3 vParam0, var uParam1, var uParam2, float fParam3) // Pos
 	if (fParam3 == 0f)
 		return 0f, 0f, 0f;
 
-	num = SYSTEM::VMAG(vParam0);
+	num = BUILTIN::VMAG(vParam0);
 
 	if (num != 0f)
 		return vParam0 * { fParam3 / num, fParam3 / num, fParam3 / num };
@@ -2583,8 +2583,8 @@ void func_96() // Position - 0x3167 (12647)
 		if (func_42(iLocal_240.f_2))
 		{
 			TASK::OPEN_SEQUENCE_TASK(&iLocal_47);
-			TASK::TASK_PLANE_MISSION(0, NETWORK::NET_TO_VEH(iLocal_240.f_2), 0, 0, uLocal_298[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/].f_2 + { 50f + 5f, 0f, 0f }, 4, 60f, 15f, -1f, SYSTEM::CEIL(50f + 5f), 20, true);
-			TASK::TASK_PLANE_MISSION(0, NETWORK::NET_TO_VEH(iLocal_240.f_2), 0, 0, iLocal_240.f_2.f_14, 4, 60f, 25f, -1f, SYSTEM::CEIL(50f + 5f), 20, true);
+			TASK::TASK_PLANE_MISSION(0, NETWORK::NET_TO_VEH(iLocal_240.f_2), 0, 0, uLocal_298[NETWORK::PARTICIPANT_ID_TO_INT() /*5*/].f_2 + { 50f + 5f, 0f, 0f }, 4, 60f, 15f, -1f, BUILTIN::CEIL(50f + 5f), 20, true);
+			TASK::TASK_PLANE_MISSION(0, NETWORK::NET_TO_VEH(iLocal_240.f_2), 0, 0, iLocal_240.f_2.f_14, 4, 60f, 25f, -1f, BUILTIN::CEIL(50f + 5f), 20, true);
 			TASK::CLOSE_SEQUENCE_TASK(iLocal_47);
 			bLocal_49 = true;
 		}
@@ -2826,7 +2826,7 @@ BOOL func_117() // Position - 0x35DA (13786)
 
 void func_118() // Position - 0x35E9 (13801)
 {
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	return;
 }
 
@@ -2984,7 +2984,7 @@ BOOL _NETWORK_WAIT_FOR_HOST_BROADCAST_DATA() // Position - 0x38C8 (14536)
 		if (num >= 3600)
 			return false;
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return false;
@@ -3033,7 +3033,7 @@ int func_123(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3921 (14625
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

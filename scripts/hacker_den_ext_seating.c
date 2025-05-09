@@ -316,7 +316,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		if (func_76())
 			func_90();
@@ -801,7 +801,7 @@ void func_15(var uParam0) // Position - 0xA5C (2652)
 
 	if (!CAM::DOES_CAM_EXIST(uParam0->f_16))
 	{
-		uParam0->f_28 = uParam0->f_28 + 0f + (0.33f * SYSTEM::TIMESTEP());
+		uParam0->f_28 = uParam0->f_28 + 0f + (0.33f * BUILTIN::TIMESTEP());
 		heading = func_16(uParam0->f_26, uParam0->f_20.f_2 - ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()), uParam0->f_28);
 		CAM::SET_GAMEPLAY_CAM_RELATIVE_HEADING(heading);
 		angle = func_16(uParam0->f_27, 0f, uParam0->f_28);
@@ -818,7 +818,7 @@ float func_16(float fParam0, float fParam1, float fParam2) // Position - 0xB27 (
 {
 	float num;
 
-	num = (1f - SYSTEM::COS(func_17(fParam2 * 3.1415927f))) * 0.5f;
+	num = (1f - BUILTIN::COS(func_17(fParam2 * 3.1415927f))) * 0.5f;
 	return (fParam0 * (1f - num)) + (fParam1 * num);
 }
 
@@ -849,7 +849,7 @@ void func_19(var uParam0) // Position - 0xB8F (2959)
 	if (uParam0->f_13 == 6)
 	{
 		vector = { PAD::GET_CONTROL_NORMAL(PLAYER_CONTROL, INPUT_SCRIPT_LEFT_AXIS_X), PAD::GET_CONTROL_NORMAL(PLAYER_CONTROL, INPUT_SCRIPT_LEFT_AXIS_Y), 0f };
-		num = SYSTEM::VMAG(vector);
+		num = BUILTIN::VMAG(vector);
 	
 		if (uParam0->f_13 == 6 && !ENTITY::HAS_ANIM_EVENT_FIRED(PLAYER::PLAYER_PED_ID(), MISC::GET_HASH_KEY("BLOCK_INTERRUPT")) && !func_28(&(uParam0->f_7), 12))
 			if (num >= 0.35f && !Global_2711010 && !Global_2711015)
@@ -1129,19 +1129,19 @@ void func_31(var uParam0) // Position - 0x125D (4701)
 
 	unk = { 0f, 0f, uParam0->f_20.f_2 };
 	unk4 = { uParam0->f_17 + (func_32(unk) * { 10f, 10f, 10f }) };
-	num = SYSTEM::ROUND(PAD::GET_CONTROL_NORMAL(FRONTEND_CONTROL, INPUT_SCRIPT_RIGHT_AXIS_X) * 128f);
+	num = BUILTIN::ROUND(PAD::GET_CONTROL_NORMAL(FRONTEND_CONTROL, INPUT_SCRIPT_RIGHT_AXIS_X) * 128f);
 
 	if (num == 0)
 		if (MISC::ABSF(uParam0->f_24) > 0.5f)
-			num = -SYSTEM::ROUND(uParam0->f_24 / 5f);
+			num = -BUILTIN::ROUND(uParam0->f_24 / 5f);
 		else
 			return;
 
 	if (uParam0->f_24 < 80f || num < 0 && uParam0->f_24 > -80f || num > 0)
-		uParam0->f_24 = uParam0->f_24 + ((float)num / 128f) + (0.33f * SYSTEM::TIMESTEP());
+		uParam0->f_24 = uParam0->f_24 + ((float)num / 128f) + (0.33f * BUILTIN::TIMESTEP());
 
 	value = (90f + unk.f_2) - uParam0->f_24;
-	vector = { unk4 - { 0f, SYSTEM::SIN(value) * 10f, SYSTEM::COS(value) * 10f } };
+	vector = { unk4 - { 0f, BUILTIN::SIN(value) * 10f, BUILTIN::COS(value) * 10f } };
 	CAM::SET_CAM_COORD(uParam0->f_16, vector);
 	num2 = { vector - unk4 };
 	CAM::SET_CAM_ROT(uParam0->f_16, uParam0->f_20, uParam0->f_20.f_1, MISC::ATAN2(num2.f_1, num2) + 90f, 2);
@@ -1150,7 +1150,7 @@ void func_31(var uParam0) // Position - 0x125D (4701)
 
 Vector3 func_32(float fParam0, var uParam1, var uParam2) // Position - 0x13A7 (5031)
 {
-	return -SYSTEM::SIN(fParam0.f_2) * SYSTEM::COS(fParam0), SYSTEM::COS(fParam0.f_2) * SYSTEM::COS(fParam0), SYSTEM::SIN(fParam0);
+	return -BUILTIN::SIN(fParam0.f_2) * BUILTIN::COS(fParam0), BUILTIN::COS(fParam0.f_2) * BUILTIN::COS(fParam0), BUILTIN::SIN(fParam0);
 }
 
 void func_33() // Position - 0x13D4 (5076)
@@ -2812,8 +2812,8 @@ Vector3 func_113(float fParam0, var uParam1, var uParam2, float fParam3) // Posi
 	float num2;
 	float num3;
 
-	num2 = SYSTEM::SIN(fParam3);
-	num3 = SYSTEM::COS(fParam3);
+	num2 = BUILTIN::SIN(fParam3);
+	num3 = BUILTIN::COS(fParam3);
 	num = (fParam0 * num3) - (fParam0.f_1 * num2);
 	num.f_1 = (fParam0 * num2) + (fParam0.f_1 * num3);
 	num.f_2 = fParam0.f_2;
@@ -2947,7 +2947,7 @@ int func_119(int iParam0, int iParam1, BOOL bParam2) // Position - 0x31E4 (12772
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

@@ -230,7 +230,7 @@ void main() // Position - 0x0 (0)
 		case 3:
 			while (iLocal_163 == 0)
 			{
-				SYSTEM::WAIT(0);
+				BUILTIN::WAIT(0);
 				func_77();
 			
 				if (func_75(202))
@@ -277,7 +277,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -2184,8 +2184,8 @@ int func_63(int iParam0, int iParam1) // Position - 0x2D3F (11583)
 			value = num;
 		}
 	
-		value3 = ((SYSTEM::TO_FLOAT(value) - SYSTEM::TO_FLOAT(value2)) / 2f) + SYSTEM::TO_FLOAT(value2);
-		num = SYSTEM::ROUND(value3);
+		value3 = ((BUILTIN::TO_FLOAT(value) - BUILTIN::TO_FLOAT(value2)) / 2f) + BUILTIN::TO_FLOAT(value2);
+		num = BUILTIN::ROUND(value3);
 	}
 
 	return 8000;

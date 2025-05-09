@@ -4753,7 +4753,7 @@ int func_122(int iParam0, Hash hParam1) // Position - 0x491E (18718)
 {
 	int tattooShopDlcItemIndex;
 
-	tattooShopDlcItemIndex = FILES::GET_TATTOO_SHOP_DLC_ITEM_INDEX(hParam1, -1, iParam0);
+	tattooShopDlcItemIndex = EXTRAMETADATA::GET_TATTOO_SHOP_DLC_ITEM_INDEX(hParam1, -1, iParam0);
 
 	if (tattooShopDlcItemIndex != -1)
 		return 129 + tattooShopDlcItemIndex;
@@ -4990,8 +4990,8 @@ float func_132(float fParam0, float fParam1, int iParam2) // Position - 0x4D6F (
 	float num;
 	float num2;
 
-	num = SYSTEM::TO_FLOAT(SYSTEM::FLOOR(fParam0 * (float)iParam2 - 1));
-	num2 = SYSTEM::TO_FLOAT(SYSTEM::FLOOR(fParam1 * (float)iParam2 - 1));
+	num = BUILTIN::TO_FLOAT(BUILTIN::FLOOR(fParam0 * (float)iParam2 - 1));
+	num2 = BUILTIN::TO_FLOAT(BUILTIN::FLOOR(fParam1 * (float)iParam2 - 1));
 	return (num * (float)iParam2) + num2;
 }
 
@@ -5094,13 +5094,13 @@ void func_134(var uParam0, int iParam1) // Position - 0x505C (20572)
 {
 	float value;
 
-	value = SYSTEM::TO_FLOAT(uParam0->[iParam1 /*80*/].f_1);
-	value = value - (300f * SYSTEM::TIMESTEP());
+	value = BUILTIN::TO_FLOAT(uParam0->[iParam1 /*80*/].f_1);
+	value = value - (300f * BUILTIN::TIMESTEP());
 
 	if (value < 0f)
 		value = 0f;
 
-	uParam0->[iParam1 /*80*/].f_1 = SYSTEM::FLOOR(value);
+	uParam0->[iParam1 /*80*/].f_1 = BUILTIN::FLOOR(value);
 	return;
 }
 
@@ -5382,7 +5382,7 @@ BOOL func_139(float fParam0, float fParam1, float fParam2, float fParam3, float 
 
 void func_140(float fParam0, var uParam1, var uParam2, int iParam3) // Position - 0x57A8 (22440)
 {
-	*uParam1 = SYSTEM::TO_FLOAT(SYSTEM::FLOOR(fParam0 / (float)iParam3));
+	*uParam1 = BUILTIN::TO_FLOAT(BUILTIN::FLOOR(fParam0 / (float)iParam3));
 	*uParam2 = fParam0 % (float)iParam3;
 	*uParam1 = *uParam1 / (float)iParam3 - 1;
 	*uParam2 = *uParam2 / (float)iParam3 - 1;
@@ -5484,19 +5484,19 @@ void func_142(var uParam0, var uParam1, int iParam2) // Position - 0x5BA0 (23456
 	switch (uParam1->[iParam2 /*80*/].f_2)
 	{
 		case 0:
-			uParam1->[iParam2 /*80*/].f_16 = uParam1->[iParam2 /*80*/].f_16 - (num2 * SYSTEM::TIMESTEP());
+			uParam1->[iParam2 /*80*/].f_16 = uParam1->[iParam2 /*80*/].f_16 - (num2 * BUILTIN::TIMESTEP());
 			break;
 	
 		case 1:
-			uParam1->[iParam2 /*80*/].f_16 = uParam1->[iParam2 /*80*/].f_16 + (num2 * SYSTEM::TIMESTEP());
+			uParam1->[iParam2 /*80*/].f_16 = uParam1->[iParam2 /*80*/].f_16 + (num2 * BUILTIN::TIMESTEP());
 			break;
 	
 		case 2:
-			uParam1->[iParam2 /*80*/].f_15 = uParam1->[iParam2 /*80*/].f_15 - (num * SYSTEM::TIMESTEP());
+			uParam1->[iParam2 /*80*/].f_15 = uParam1->[iParam2 /*80*/].f_15 - (num * BUILTIN::TIMESTEP());
 			break;
 	
 		case 3:
-			uParam1->[iParam2 /*80*/].f_15 = uParam1->[iParam2 /*80*/].f_15 + (num * SYSTEM::TIMESTEP());
+			uParam1->[iParam2 /*80*/].f_15 = uParam1->[iParam2 /*80*/].f_15 + (num * BUILTIN::TIMESTEP());
 			break;
 	}
 
@@ -7045,7 +7045,7 @@ float func_187() // Position - 0x7CE5 (31973)
 	x = 0;
 	y = 0;
 	GRAPHICS::GET_ACTUAL_SCREEN_RESOLUTION(&x, &y);
-	num = SYSTEM::TO_FLOAT(x) / SYSTEM::TO_FLOAT(y);
+	num = BUILTIN::TO_FLOAT(x) / BUILTIN::TO_FLOAT(y);
 
 	if (MISC::IS_PC_VERSION())
 		if (num >= 4f)
@@ -7713,7 +7713,7 @@ BOOL func_218() // Position - 0x892E (35118)
 
 void func_219() // Position - 0x893D (35133)
 {
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	return;
 }
 
@@ -7776,7 +7776,7 @@ BOOL _NETWORK_WAIT_FOR_HOST_BROADCAST_DATA() // Position - 0x89DB (35291)
 		if (num >= 3600)
 			return false;
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return false;
@@ -7837,7 +7837,7 @@ BOOL func_224(int iParam0, int iParam1, BOOL bParam2) // Position - 0x8A58 (3541
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

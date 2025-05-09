@@ -1035,7 +1035,7 @@ void func_35(Vector3 vParam0, var uParam1, var uParam2, float fParam3, Hash hPar
 
 	if (func_36(PLAYER::PLAYER_ID(), vParam0, hParam4) > -1)
 	{
-		if (Global_2635516.f_3231[1 /*6*/].f_5 == veParam5 && Global_2635516.f_3231[1 /*6*/].f_4 == hParam4 && SYSTEM::VDIST(Global_2635516.f_3231[1 /*6*/], vParam0) < 0.5f)
+		if (Global_2635516.f_3231[1 /*6*/].f_5 == veParam5 && Global_2635516.f_3231[1 /*6*/].f_4 == hParam4 && BUILTIN::VDIST(Global_2635516.f_3231[1 /*6*/], vParam0) < 0.5f)
 			return;
 	
 		for (i = 0; i < 2; i = i + 1)
@@ -1072,7 +1072,7 @@ int func_36(Player plParam0, var uParam1, var uParam2, var uParam3, Hash hParam4
 				if (MISC::ABSF(Global_2648914.f_461[player /*11*/][i /*5*/].f_2 - vector.f_2) < 2f)
 					vector.f_2 = Global_2648914.f_461[player /*11*/][i /*5*/].f_2;
 			
-				if (SYSTEM::VDIST(Global_2648914.f_461[player /*11*/][i /*5*/], vector) < 0.5f)
+				if (BUILTIN::VDIST(Global_2648914.f_461[player /*11*/][i /*5*/], vector) < 0.5f)
 					return i;
 			}
 		}
@@ -1100,7 +1100,7 @@ BOOL func_38() // Position - 0x1021 (4129)
 		{
 			if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 			{
-				x = { func_58(_GET_PLAYER_COORDS(PLAYER::PLAYER_ID()), 0f, -200f * SYSTEM::SIN(SYSTEM::TO_FLOAT(iLocal_228.f_1.f_15) * 30f), 200f * SYSTEM::COS(SYSTEM::TO_FLOAT(iLocal_228.f_1.f_15) * 30f), 0f) };
+				x = { func_58(_GET_PLAYER_COORDS(PLAYER::PLAYER_ID()), 0f, -200f * BUILTIN::SIN(BUILTIN::TO_FLOAT(iLocal_228.f_1.f_15) * 30f), 200f * BUILTIN::COS(BUILTIN::TO_FLOAT(iLocal_228.f_1.f_15) * 30f), 0f) };
 				x.f_2 = PATHFIND::GET_APPROX_HEIGHT_FOR_POINT(x, x.f_1);
 				x.f_2 = x.f_2 + 30f;
 			
@@ -1475,8 +1475,8 @@ Vector3 func_58(var uParam0, var uParam1, var uParam2, float fParam3, float fPar
 	var unk3;
 
 	value = fParam3;
-	num2 = SYSTEM::COS(value);
-	num3 = SYSTEM::SIN(value);
+	num2 = BUILTIN::COS(value);
+	num3 = BUILTIN::SIN(value);
 	num = (fParam4 * num2) + (fParam4.f_1 * num3);
 	num.f_1 = (fParam4.f_1 * num2) - (fParam4 * num3);
 	unk3 = { uParam0 + num };
@@ -1569,14 +1569,14 @@ void func_63() // Position - 0x18A2 (6306)
 								
 									if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 										if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
-											TASK::TASK_HELI_MISSION(pilot, heli, 0, PLAYER::PLAYER_PED_ID(), 0f, 0f, 0f, 23, 20f, 40f, -1f, SYSTEM::CEIL(uLocal_59[0]), 10, -1082130432, 0);
+											TASK::TASK_HELI_MISSION(pilot, heli, 0, PLAYER::PLAYER_PED_ID(), 0f, 0f, 0f, 23, 20f, 40f, -1f, BUILTIN::CEIL(uLocal_59[0]), 10, -1082130432, 0);
 								}
 							}
 						}
 					
 						if (!bLocal_48)
 						{
-							if (SYSTEM::VDIST(_GET_PLAYER_COORDS(PLAYER::PLAYER_ID()), ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_VEH(iLocal_228.f_1), true)) <= 50f)
+							if (BUILTIN::VDIST(_GET_PLAYER_COORDS(PLAYER::PLAYER_ID()), ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_VEH(iLocal_228.f_1), true)) <= 50f)
 							{
 								_CONVERSATION_ADD_LINE(&uLocal_63, "CT_AUD", "MPCT_HBarr", 12, 0, 0, 0);
 								bLocal_48 = true;
@@ -1690,7 +1690,7 @@ void func_63() // Position - 0x18A2 (6306)
 				
 					if (!bLocal_49)
 					{
-						if (SYSTEM::VDIST(_GET_PLAYER_COORDS(PLAYER::PLAYER_ID()), ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_VEH(iLocal_228.f_1), true)) <= 50f)
+						if (BUILTIN::VDIST(_GET_PLAYER_COORDS(PLAYER::PLAYER_ID()), ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_VEH(iLocal_228.f_1), true)) <= 50f)
 						{
 							_CONVERSATION_ADD_LINE(&uLocal_63, "CT_AUD", "MPCT_HBleav", 12, 0, 0, 0);
 							bLocal_49 = true;
@@ -2742,7 +2742,7 @@ BOOL func_110() // Position - 0x2DCE (11726)
 
 void func_111() // Position - 0x2DDD (11741)
 {
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	return;
 }
 
@@ -2897,7 +2897,7 @@ BOOL _NETWORK_WAIT_FOR_HOST_BROADCAST_DATA() // Position - 0x309B (12443)
 		if (num >= 3600)
 			return false;
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return false;
@@ -2946,7 +2946,7 @@ int func_116(int iParam0, int iParam1, BOOL bParam2) // Position - 0x30F4 (12532
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

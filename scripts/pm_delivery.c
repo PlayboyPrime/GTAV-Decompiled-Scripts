@@ -216,7 +216,7 @@ void main() // Position - 0x0 (0)
 				break;
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -1850,7 +1850,7 @@ BOOL func_45(Blip* pblParam0, var uParam1, var uParam2, var uParam3, var uParam4
 	
 		if (VEHICLE::IS_VEHICLE_DRIVEABLE(pblParam0->f_21, false))
 		{
-			if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(pblParam0->f_21, true)) < 400f)
+			if (BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(pblParam0->f_21, true)) < 400f)
 			{
 				if (!PED::IS_PED_SITTING_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID()))
 				{
@@ -4000,25 +4000,25 @@ void func_108() // Position - 0x5187 (20871)
 	{
 		uLocal_65 = { -2169.8284f, 4277.365f, 47.9568f };
 		distanceBetweenCoords = MISC::GET_DISTANCE_BETWEEN_COORDS(uLocal_62, uLocal_65, true);
-		iLocal_81 = SYSTEM::ROUND(((distanceBetweenCoords / 16.5f) + 40f) / 2f);
+		iLocal_81 = BUILTIN::ROUND(((distanceBetweenCoords / 16.5f) + 40f) / 2f);
 	}
 	else if (func_112() == 13)
 	{
 		uLocal_65 = { -323.356f, 6264.4307f, 30.4463f };
 		distanceBetweenCoords = MISC::GET_DISTANCE_BETWEEN_COORDS(uLocal_62, uLocal_65, true);
-		iLocal_81 = SYSTEM::ROUND(((distanceBetweenCoords / 16.5f) + 40f) / 2f);
+		iLocal_81 = BUILTIN::ROUND(((distanceBetweenCoords / 16.5f) + 40f) / 2f);
 	}
 	else if (func_112() == 12)
 	{
 		uLocal_65 = { 198.5282f, 342.2399f, 104.9566f };
 		distanceBetweenCoords = MISC::GET_DISTANCE_BETWEEN_COORDS(uLocal_62, uLocal_65, true);
-		iLocal_81 = SYSTEM::ROUND(((distanceBetweenCoords / 16.5f) + 15f) / 2f);
+		iLocal_81 = BUILTIN::ROUND(((distanceBetweenCoords / 16.5f) + 15f) / 2f);
 	}
 	else if (func_112() == 11)
 	{
 		uLocal_65 = { -560.0195f, 301.1481f, 82.1436f };
 		distanceBetweenCoords = MISC::GET_DISTANCE_BETWEEN_COORDS(uLocal_62, uLocal_65, true);
-		iLocal_81 = SYSTEM::ROUND(((distanceBetweenCoords / 16.5f) + 15f) / 2f);
+		iLocal_81 = BUILTIN::ROUND(((distanceBetweenCoords / 16.5f) + 15f) / 2f);
 	}
 
 	iLocal_79 = 0;
@@ -4802,13 +4802,13 @@ BOOL func_125(Hash hParam0, BOOL bParam1, int iParam2) // Position - 0x64D0 (258
 	}
 	else
 	{
-		for (i = 0; i < FILES::GET_NUM_DLC_VEHICLES(); i = i + 1)
+		for (i = 0; i < EXTRAMETADATA::GET_NUM_DLC_VEHICLES(); i = i + 1)
 		{
-			if (FILES::GET_DLC_VEHICLE_DATA(i, &outData))
+			if (EXTRAMETADATA::GET_DLC_VEHICLE_DATA(i, &outData))
 			{
 				if (hParam0 == outData.f_1)
 				{
-					if (FILES::IS_CONTENT_ITEM_LOCKED(outData))
+					if (EXTRAMETADATA::IS_CONTENT_ITEM_LOCKED(outData))
 						return false;
 				
 					break;

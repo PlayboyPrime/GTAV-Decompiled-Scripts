@@ -440,7 +440,7 @@ void main() // Position - 0x0 (0)
 				func_82(6);
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -2883,7 +2883,7 @@ void func_70() // Position - 0x331F (13087)
 
 	while (MISC::GET_MISSION_FLAG() || _GET_CURRENT_PLAYER_CHARACTER() != CHAR_MICHAEL)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	func_71();

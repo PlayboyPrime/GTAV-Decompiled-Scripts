@@ -162,7 +162,7 @@ void main() // Position - 0x0 (0)
 
 	while (CAM::IS_SCREEN_FADED_OUT())
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (!STREAMING::IS_IPL_ACTIVE("ufo"))
@@ -291,7 +291,7 @@ void main() // Position - 0x0 (0)
 				break;
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -433,7 +433,7 @@ Vector3 func_9(float fParam0, var uParam1, var uParam2) // Position - 0x593 (142
 	float num;
 	float num2;
 
-	num = SYSTEM::VMAG(fParam0);
+	num = BUILTIN::VMAG(fParam0);
 
 	if (num != 0f)
 	{
@@ -452,7 +452,7 @@ Vector3 func_9(float fParam0, var uParam1, var uParam2) // Position - 0x593 (142
 
 BOOL func_10(Ped pedParam0, Vector3 vParam1, var uParam2, var uParam3, float fParam4, BOOL bParam5) // Position - 0x5D2 (1490)
 {
-	return SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(pedParam0, bParam5), vParam1) <= fParam4 * fParam4;
+	return BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(pedParam0, bParam5), vParam1) <= fParam4 * fParam4;
 }
 
 BOOL func_11(Ped pedParam0) // Position - 0x5F0 (1520)

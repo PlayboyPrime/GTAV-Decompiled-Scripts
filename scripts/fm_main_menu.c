@@ -333,7 +333,7 @@ void main() // Position - 0x0 (0)
 		if (func_17())
 			func_20();
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		switch (iLocal_261)
 		{
@@ -449,7 +449,7 @@ BOOL func_2(int* piParam0) // Position - 0x325 (805)
 		{
 			if (!func_3())
 			{
-				SYSTEM::START_NEW_SCRIPT("FM_Race_Creator", 63500);
+				BUILTIN::START_NEW_SCRIPT("FM_Race_Creator", 63500);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("FM_Race_Creator");
 				MISC::SET_BIT(piParam0, 2);
 			}
@@ -490,7 +490,7 @@ BOOL func_5(int* piParam0) // Position - 0x43D (1085)
 		{
 			if (!func_3())
 			{
-				SYSTEM::START_NEW_SCRIPT("FM_Deathmatch_Creator", 63500);
+				BUILTIN::START_NEW_SCRIPT("FM_Deathmatch_Creator", 63500);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("FM_Deathmatch_Creator");
 				MISC::SET_BIT(piParam0, 2);
 			}
@@ -515,7 +515,7 @@ BOOL func_6(int* piParam0) // Position - 0x4A0 (1184)
 		{
 			if (!func_3())
 			{
-				SYSTEM::START_NEW_SCRIPT("FM_Capture_Creator", 63500);
+				BUILTIN::START_NEW_SCRIPT("FM_Capture_Creator", 63500);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("FM_Capture_Creator");
 				MISC::SET_BIT(piParam0, 2);
 			}
@@ -540,7 +540,7 @@ BOOL func_7(int* piParam0) // Position - 0x503 (1283)
 		{
 			if (!func_3())
 			{
-				SYSTEM::START_NEW_SCRIPT("FM_Mission_Creator", 63500);
+				BUILTIN::START_NEW_SCRIPT("FM_Mission_Creator", 63500);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("FM_Mission_Creator");
 				MISC::SET_BIT(piParam0, 2);
 			}
@@ -565,7 +565,7 @@ BOOL func_8(int* piParam0) // Position - 0x566 (1382)
 		{
 			if (!func_3())
 			{
-				SYSTEM::START_NEW_SCRIPT("Freemode_Creator", 63500);
+				BUILTIN::START_NEW_SCRIPT("Freemode_Creator", 63500);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("Freemode_Creator");
 				MISC::SET_BIT(piParam0, 2);
 			}
@@ -590,7 +590,7 @@ BOOL func_9(int* piParam0) // Position - 0x5C9 (1481)
 		{
 			if (!func_3())
 			{
-				SYSTEM::START_NEW_SCRIPT("Basic_Creator", 63500);
+				BUILTIN::START_NEW_SCRIPT("Basic_Creator", 63500);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("Basic_Creator");
 				MISC::SET_BIT(piParam0, 2);
 			}
@@ -615,7 +615,7 @@ BOOL func_10(int* piParam0) // Position - 0x62C (1580)
 		{
 			if (!func_3())
 			{
-				SYSTEM::START_NEW_SCRIPT("FM_Survival_Creator", 63500);
+				BUILTIN::START_NEW_SCRIPT("FM_Survival_Creator", 63500);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("FM_Survival_Creator");
 				MISC::SET_BIT(piParam0, 2);
 			}
@@ -645,7 +645,7 @@ BOOL func_12(int* piParam0) // Position - 0x69D (1693)
 		{
 			if (!func_3())
 			{
-				SYSTEM::START_NEW_SCRIPT("FM_LTS_Creator", 63500);
+				BUILTIN::START_NEW_SCRIPT("FM_LTS_Creator", 63500);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("FM_LTS_Creator");
 				MISC::SET_BIT(piParam0, 2);
 			}

@@ -439,7 +439,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS() || func_78() == 5 && !_SHOULD_NETWORK_SCRIPT_TERMINATE())
 		{
@@ -2123,7 +2123,7 @@ int func_79(int iParam0, int iParam1, BOOL bParam2) // Position - 0x2027 (8231)
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

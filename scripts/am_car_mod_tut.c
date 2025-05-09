@@ -2445,8 +2445,8 @@ int func_70(int iParam0, int iParam1) // Position - 0x240F (9231)
 			value = num;
 		}
 	
-		value3 = ((SYSTEM::TO_FLOAT(value) - SYSTEM::TO_FLOAT(value2)) / 2f) + SYSTEM::TO_FLOAT(value2);
-		num = SYSTEM::ROUND(value3);
+		value3 = ((BUILTIN::TO_FLOAT(value) - BUILTIN::TO_FLOAT(value2)) / 2f) + BUILTIN::TO_FLOAT(value2);
+		num = BUILTIN::ROUND(value3);
 	}
 
 	return 8000;
@@ -4008,7 +4008,7 @@ int func_113(Vehicle veParam0, BOOL bParam1) // Position - 0x3F1A (16154)
 	else
 		num4 = 75;
 
-	vehicleDirtLevel = SYSTEM::TO_FLOAT(ENTITY::GET_ENTITY_HEALTH(veParam0)) / 1000f;
+	vehicleDirtLevel = BUILTIN::TO_FLOAT(ENTITY::GET_ENTITY_HEALTH(veParam0)) / 1000f;
 
 	if (vehicleDirtLevel > 0.99f)
 		num6 = 0;
@@ -4093,9 +4093,9 @@ int func_113(Vehicle veParam0, BOOL bParam1) // Position - 0x3F1A (16154)
 
 	if (func_115(ENTITY::GET_ENTITY_MODEL(veParam0), 0))
 	{
-		value = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(value) * Global_262145.f_12010);
+		value = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(value) * Global_262145.f_12010);
 	
-		if (value > SYSTEM::FLOOR(4f * Global_262145.f_12010))
+		if (value > BUILTIN::FLOOR(4f * Global_262145.f_12010))
 		{
 			num2 = Global_262145.f_12008;
 			value = value + num2;
@@ -4106,9 +4106,9 @@ int func_113(Vehicle veParam0, BOOL bParam1) // Position - 0x3F1A (16154)
 	}
 	else if (func_114(veParam0))
 	{
-		value = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(value) * Global_262145.f_12013);
+		value = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(value) * Global_262145.f_12013);
 	
-		if (value > SYSTEM::FLOOR(4f * Global_262145.f_12013))
+		if (value > BUILTIN::FLOOR(4f * Global_262145.f_12013))
 		{
 			num2 = Global_262145.f_12011;
 			value = value + num2;
@@ -5233,8 +5233,8 @@ Vector3 func_144(float fParam0, var uParam1, var uParam2, float fParam3) // Posi
 	float num2;
 	float num3;
 
-	num2 = SYSTEM::SIN(fParam3);
-	num3 = SYSTEM::COS(fParam3);
+	num2 = BUILTIN::SIN(fParam3);
+	num3 = BUILTIN::COS(fParam3);
 	num = (fParam0 * num3) - (fParam0.f_1 * num2);
 	num.f_1 = (fParam0 * num2) + (fParam0.f_1 * num3);
 	num.f_2 = fParam0.f_2;
@@ -7706,7 +7706,7 @@ BOOL func_232() // Position - 0x95F2 (38386)
 
 void func_233() // Position - 0x9601 (38401)
 {
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	return;
 }
 
@@ -7803,7 +7803,7 @@ BOOL _NETWORK_WAIT_FOR_HOST_BROADCAST_DATA() // Position - 0x971F (38687)
 		if (num >= 3600)
 			return false;
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return false;
@@ -7852,7 +7852,7 @@ int func_238(int iParam0, int iParam1, BOOL bParam2) // Position - 0x9778 (38776
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

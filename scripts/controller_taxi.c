@@ -718,7 +718,7 @@ void main() // Position - 0x0 (0)
 						if (func_34("TC_HOWTOSTART" /*~s~While driving a taxi, become available for jobs by pressing ~INPUT_VEH_HORN~*/))
 							func_30("TC_HOWTOSTART" /*~s~While driving a taxi, become available for jobs by pressing ~INPUT_VEH_HORN~*/, 1);
 					
-						iLocal_96 = SYSTEM::START_NEW_SCRIPT(&uLocal_97, 63500);
+						iLocal_96 = BUILTIN::START_NEW_SCRIPT(&uLocal_97, 63500);
 						SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED(&uLocal_97);
 					
 						if (!func_84(Global_114135.f_19101, 4))
@@ -817,7 +817,7 @@ void main() // Position - 0x0 (0)
 				break;
 		}
 	
-		SYSTEM::WAIT(ms);
+		BUILTIN::WAIT(ms);
 	}
 
 	return;
@@ -1140,8 +1140,8 @@ void func_14() // Position - 0xCA7 (3239)
 	STATS::STAT_SET_INT(joaat("PERCENT_AMBIENT_MISSIONS"), Global_113879, true);
 	STATS::STAT_SET_INT(joaat("PERCENT_ODDJOBS"), Global_113880, true);
 
-	if (value > 0f && SYSTEM::FLOOR(value) < SYSTEM::FLOOR(Global_114135.f_10198.f_3853))
-		func_16(13, SYSTEM::FLOOR(Global_114135.f_10198.f_3853));
+	if (value > 0f && BUILTIN::FLOOR(value) < BUILTIN::FLOOR(Global_114135.f_10198.f_3853))
+		func_16(13, BUILTIN::FLOOR(Global_114135.f_10198.f_3853));
 
 	if (!DATAFILE::DATAFILE_IS_SAVE_PENDING())
 	{
@@ -2288,7 +2288,7 @@ float func_62(BOOL bParam0) // Position - 0x2625 (9765)
 
 	if (bParam0)
 	{
-		num = SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER());
+		num = BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER());
 		num2 = num / 1000f;
 		return num2;
 	}
@@ -2296,12 +2296,12 @@ float func_62(BOOL bParam0) // Position - 0x2625 (9765)
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		networkTime = NETWORK::GET_NETWORK_TIME();
-		num3 = SYSTEM::TO_FLOAT(networkTime);
+		num3 = BUILTIN::TO_FLOAT(networkTime);
 		num4 = num3 / 1000f;
 		return num4;
 	}
 
-	return SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
+	return BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
 }
 
 BOOL func_63(int* piParam0) // Position - 0x267D (9853)
@@ -2413,7 +2413,7 @@ int func_70() // Position - 0x28DD (10461)
 	else
 	{
 		vehiclePedIsIn = PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false);
-		num = SYSTEM::ROUND(VEHICLE::GET_VEHICLE_ENGINE_HEALTH(vehiclePedIsIn));
+		num = BUILTIN::ROUND(VEHICLE::GET_VEHICLE_ENGINE_HEALTH(vehiclePedIsIn));
 		entityHealth = ENTITY::GET_ENTITY_HEALTH(vehiclePedIsIn);
 	
 		if (num < 100 || entityHealth < 100)

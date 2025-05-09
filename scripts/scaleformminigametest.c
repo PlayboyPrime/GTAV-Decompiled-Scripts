@@ -81,7 +81,7 @@ void main() // Position - 0x0 (0)
 
 	while (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(iLocal_16))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	while (true)
@@ -107,7 +107,7 @@ void main() // Position - 0x0 (0)
 		iLocal_19 = 1;
 		GRAPHICS::DRAW_SCALEFORM_MOVIE(iLocal_16, 0.5f, 0.5f, 1f, 1f, 255, 255, 255, 0, 0);
 		func_1(iLocal_16);
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -120,10 +120,10 @@ void func_1(int iParam0) // Position - 0x13F (319)
 		if (PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_LEFT) || PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_RIGHT))
 		{
 			Global_21045 = 1;
-			SYSTEM::SETTIMERA(0);
+			BUILTIN::SETTIMERA(0);
 		}
 	}
-	else if (SYSTEM::TIMERA() > 50)
+	else if (BUILTIN::TIMERA() > 50)
 	{
 		Global_21045 = 0;
 	}

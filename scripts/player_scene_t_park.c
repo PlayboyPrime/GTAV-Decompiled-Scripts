@@ -262,14 +262,14 @@ void main() // Position - 0x0 (0)
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 		func_66();
 
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	func_54();
 	func_53();
 	func_49();
 
 	while (iLocal_70 && func_39(5, 0))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		switch (iLocal_68)
 		{
@@ -573,7 +573,7 @@ int func_3(Object* pobParam0, int iParam1) // Position - 0x3E7 (999)
 				if (Global_21066.f_1 != 1)
 					func_7(true);
 			
-				SYSTEM::WAIT(0);
+				BUILTIN::WAIT(0);
 			}
 		
 			HUD::HIDE_HUD_AND_RADAR_THIS_FRAME();
@@ -653,7 +653,7 @@ int func_3(Object* pobParam0, int iParam1) // Position - 0x3E7 (999)
 				if (Global_21066.f_1 != 1)
 					func_7(true);
 			
-				SYSTEM::WAIT(0);
+				BUILTIN::WAIT(0);
 			}
 		
 			HUD::HIDE_HUD_AND_RADAR_THIS_FRAME();
@@ -703,7 +703,7 @@ int func_3(Object* pobParam0, int iParam1) // Position - 0x3E7 (999)
 				if (Global_21066.f_1 != 1)
 					func_7(true);
 			
-				SYSTEM::WAIT(0);
+				BUILTIN::WAIT(0);
 			}
 		
 			model2 = 0;
@@ -745,7 +745,7 @@ int func_3(Object* pobParam0, int iParam1) // Position - 0x3E7 (999)
 				if (Global_21066.f_1 != 1)
 					func_7(true);
 			
-				SYSTEM::WAIT(0);
+				BUILTIN::WAIT(0);
 			}
 		
 			HUD::HIDE_HUD_AND_RADAR_THIS_FRAME();
@@ -2321,7 +2321,7 @@ float func_30() // Position - 0x2B38 (11064)
 		}
 		else
 		{
-			num = SYSTEM::TO_FLOAT(value) / SYSTEM::TO_FLOAT(10);
+			num = BUILTIN::TO_FLOAT(value) / BUILTIN::TO_FLOAT(10);
 		
 			if (num > 1f)
 				num = 1f;
@@ -2333,7 +2333,7 @@ float func_30() // Position - 0x2B38 (11064)
 	}
 	else
 	{
-		num = SYSTEM::TO_FLOAT(value2) / SYSTEM::TO_FLOAT(5);
+		num = BUILTIN::TO_FLOAT(value2) / BUILTIN::TO_FLOAT(5);
 	
 		if (num > 1f)
 			num = 1f;
@@ -2555,7 +2555,7 @@ int func_39(int iParam0, Entity eParam1) // Position - 0x2EEC (12012)
 		if (ENTITY::DOES_ENTITY_EXIST(eParam1))
 		{
 			entityCoords = { ENTITY::GET_ENTITY_COORDS(eParam1, false) };
-			num = SYSTEM::VDIST(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), entityCoords);
+			num = BUILTIN::VDIST(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), entityCoords);
 		
 			if (num > 250f)
 				if (!ENTITY::IS_ENTITY_DEAD(eParam1, false))
@@ -2783,7 +2783,7 @@ void func_53() // Position - 0x3224 (12836)
 		if (!flag)
 			num = num + 1;
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -4892,7 +4892,7 @@ BOOL func_59(var uParam0) // Position - 0x6CC2 (27842)
 		if (IS_BIT_SET(Global_114135.f_7233.f_11[i], 0))
 		{
 			vector = { Global_96866[i /*9*/].f_3 };
-			num3 = SYSTEM::VDIST(entityCoords, vector);
+			num3 = BUILTIN::VDIST(entityCoords, vector);
 		
 			if (num3 > 150f)
 			{

@@ -4,7 +4,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 		func_1();
 	}
 
@@ -37,7 +37,7 @@ void func_1() // Position - 0x1C (28)
 				{
 					if (!IS_BIT_SET(Global_112784[i /*28*/].f_27, 0))
 					{
-						Global_112784[i /*28*/].f_21 = Global_112784[i /*28*/].f_21 + SYSTEM::ROUND(MISC::GET_FRAME_TIME() * 1000f);
+						Global_112784[i /*28*/].f_21 = Global_112784[i /*28*/].f_21 + BUILTIN::ROUND(MISC::GET_FRAME_TIME() * 1000f);
 					
 						if (HUD::IS_FLOATING_HELP_TEXT_ON_SCREEN(hudIndex))
 							MISC::SET_BIT(&(Global_112784[i /*28*/].f_27), 0);

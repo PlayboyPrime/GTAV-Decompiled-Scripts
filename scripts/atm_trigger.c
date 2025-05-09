@@ -743,14 +743,14 @@ void main() // Position - 0x0 (0)
 	if (MISC::GET_GROUND_Z_FOR_3D_COORD(uLocal_539, &groundZ, false, false))
 		uLocal_539.f_2 = groundZ + 1f;
 
-	SYSTEM::SETTIMERA(0);
+	BUILTIN::SETTIMERA(0);
 	AUDIO::HINT_SCRIPT_AUDIO_BANK("ATM", false, -1);
 
 	while (flag)
 	{
-		iLocal_624 = iLocal_624 + SYSTEM::ROUND(0f + (1000f * SYSTEM::TIMESTEP()));
+		iLocal_624 = iLocal_624 + BUILTIN::ROUND(0f + (1000f * BUILTIN::TIMESTEP()));
 		flag2 = false;
-		SYSTEM::SETTIMERA(0);
+		BUILTIN::SETTIMERA(0);
 	
 		if (ENTITY::DOES_ENTITY_EXIST(obScriptParam_0) && ENTITY::IS_ENTITY_AN_OBJECT(obScriptParam_0))
 		{
@@ -846,10 +846,10 @@ void main() // Position - 0x0 (0)
 						
 							while (!AUDIO::REQUEST_SCRIPT_AUDIO_BANK("ATM", false, -1) && !func_63(obScriptParam_0, true))
 							{
-								SYSTEM::WAIT(0);
+								BUILTIN::WAIT(0);
 							}
 						
-							SYSTEM::WAIT(100);
+							BUILTIN::WAIT(100);
 							TEXT_LABEL_ASSIGN_STRING(&animDict, "", 64);
 						
 							if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
@@ -863,8 +863,8 @@ void main() // Position - 0x0 (0)
 								}
 							}
 						
-							SYSTEM::WAIT(100);
-							SYSTEM::WAIT(100);
+							BUILTIN::WAIT(100);
+							BUILTIN::WAIT(100);
 						
 							if (!PED::IS_PED_DEAD_OR_DYING(PLAYER::PLAYER_PED_ID(), true))
 							{
@@ -943,14 +943,14 @@ void main() // Position - 0x0 (0)
 								
 									while (num2 < 1000 && !func_63(obScriptParam_0, true))
 									{
-										num2 = num2 + SYSTEM::ROUND(0f + (1000f * SYSTEM::TIMESTEP()));
+										num2 = num2 + BUILTIN::ROUND(0f + (1000f * BUILTIN::TIMESTEP()));
 										PAD::DISABLE_CONTROL_ACTION(FRONTEND_CONTROL, INPUT_FRONTEND_PAUSE_ALTERNATE, true);
 										PAD::DISABLE_CONTROL_ACTION(FRONTEND_CONTROL, INPUT_FRONTEND_CANCEL, true);
 										PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_ATTACK, true);
 										PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_ATTACK, true);
 										PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_MELEE_ATTACK_LIGHT, true);
 										PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_MELEE_ATTACK_HEAVY, true);
-										SYSTEM::WAIT(0);
+										BUILTIN::WAIT(0);
 									}
 								
 									if (Global_79539)
@@ -966,7 +966,7 @@ void main() // Position - 0x0 (0)
 					else
 					{
 						func_4(&iLocal_625);
-						SYSTEM::WAIT(250);
+						BUILTIN::WAIT(250);
 					}
 				}
 				else
@@ -994,7 +994,7 @@ void main() // Position - 0x0 (0)
 			if (iLocal_625 != -1)
 				func_4(&iLocal_625);
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (bLocal_546)
@@ -1129,14 +1129,14 @@ void func_6(int iParam0, var uParam1, Object obParam2, BOOL bParam3) // Position
 
 	while (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(iLocal_626) && !func_63(obParam2, true))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 		func_55();
 		func_54(obParam2);
 	}
 
 	while (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(iLocal_627) && !func_63(obParam2, true))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 		func_55();
 		func_54(obParam2);
 	}
@@ -1145,7 +1145,7 @@ void func_6(int iParam0, var uParam1, Object obParam2, BOOL bParam3) // Position
 
 	while (MISC::GET_GAME_TIMER() - gameTimer < iParam0)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 		func_55();
 		func_54(obParam2);
 	
@@ -1162,7 +1162,7 @@ void func_6(int iParam0, var uParam1, Object obParam2, BOOL bParam3) // Position
 
 	while (flag3)
 	{
-		iLocal_623 = iLocal_623 + SYSTEM::ROUND(0f + (1000f * SYSTEM::TIMESTEP()));
+		iLocal_623 = iLocal_623 + BUILTIN::ROUND(0f + (1000f * BUILTIN::TIMESTEP()));
 		func_39();
 	
 		if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL))
@@ -1423,7 +1423,7 @@ void func_8(int iParam0) // Position - 0xD39 (3385)
 	{
 		PAD::ENABLE_CONTROL_ACTION(FRONTEND_CONTROL, INPUT_CURSOR_SCROLL_UP, true);
 		PAD::ENABLE_CONTROL_ACTION(FRONTEND_CONTROL, INPUT_CURSOR_SCROLL_DOWN, true);
-		num = 1f + (Global_76777 * SYSTEM::TIMESTEP());
+		num = 1f + (Global_76777 * BUILTIN::TIMESTEP());
 	
 		if (PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_CURSOR_SCROLL_DOWN) || PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_DOWN))
 			value2 = -200;
@@ -1434,7 +1434,7 @@ void func_8(int iParam0) // Position - 0xD39 (3385)
 		GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_ANALOG_STICK_INPUT");
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(0f);
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(0f);
-		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(SYSTEM::TO_FLOAT(value2) * num);
+		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(BUILTIN::TO_FLOAT(value2) * num);
 		GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 	}
 	else
@@ -1450,14 +1450,14 @@ void func_8(int iParam0) // Position - 0xD39 (3385)
 		if (value2 < 10 && value2 > -10)
 			value2 = 0;
 	
-		num = 1f + (Global_76777 * SYSTEM::TIMESTEP());
+		num = 1f + (Global_76777 * BUILTIN::TIMESTEP());
 	
 		if (!(iLocal_634 == value) || !(iLocal_635 == value2))
 		{
 			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_ANALOG_STICK_INPUT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(0f);
-			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(-SYSTEM::TO_FLOAT(value) * num);
-			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(-SYSTEM::TO_FLOAT(value2) * num);
+			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(-BUILTIN::TO_FLOAT(value) * num);
+			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(-BUILTIN::TO_FLOAT(value2) * num);
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 			iLocal_634 = value;
 			iLocal_635 = value2;
@@ -2799,7 +2799,7 @@ void func_31(int iParam0) // Position - 0x25F4 (9716)
 	GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_DATA_SLOT");
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(3);
-	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(SYSTEM::TO_FLOAT(Global_61482[num]));
+	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(BUILTIN::TO_FLOAT(Global_61482[num]));
 	func_30("W_BA_BAL" /*Balance*/);
 	GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 	value = 4;
@@ -3338,7 +3338,7 @@ void func_39() // Position - 0x3198 (12696)
 	func_49();
 	func_43(0);
 	func_40(true);
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	return;
 }
 
@@ -4722,7 +4722,7 @@ BOOL _NETWORK_WAIT_FOR_HOST_BROADCAST_DATA() // Position - 0x4DAA (19882)
 		if (num >= 3600)
 			return false;
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return false;
@@ -4771,7 +4771,7 @@ int func_107(int iParam0, int iParam1, BOOL bParam2) // Position - 0x4E03 (19971
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

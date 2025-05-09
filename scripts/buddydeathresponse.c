@@ -49,7 +49,7 @@ void func_1() // Position - 0x4F (79)
 
 	while (!func_9(&pedLocal_18))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (!PED::IS_PED_INJURED(pedLocal_18))
@@ -79,7 +79,7 @@ void func_1() // Position - 0x4F (79)
 
 	while (!CAM::IS_SCREEN_FADED_OUT())
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (ENTITY::DOES_ENTITY_EXIST(pedLocal_18))
@@ -103,7 +103,7 @@ void func_2(Ped pedParam0) // Position - 0x13C (316)
 
 	while (MISC::GET_GAME_TIMER() < num && !CAM::IS_SCREEN_FADED_OUT())
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (!PED::IS_PED_INJURED(pedParam0))

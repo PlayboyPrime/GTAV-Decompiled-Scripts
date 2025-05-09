@@ -2532,7 +2532,7 @@ void main() // Position - 0x0 (0)
 			}
 			else
 			{
-				SYSTEM::WAIT(0);
+				BUILTIN::WAIT(0);
 			}
 		}
 	}
@@ -2580,7 +2580,7 @@ void func_1() // Position - 0xE4 (228)
 	{
 		if (AUDIO::IS_STREAM_PLAYING())
 		{
-			num2 = SYSTEM::TO_FLOAT(iLocal_38.f_1) / 5f;
+			num2 = BUILTIN::TO_FLOAT(iLocal_38.f_1) / 5f;
 			AUDIO::SET_VARIABLE_ON_STREAM("Crowd_Size", num2);
 			iLocal_37 = iLocal_37 + 1;
 		}
@@ -2603,7 +2603,7 @@ int func_2() // Position - 0x16F (367)
 	{
 		if (uLocal_41[i /*49*/].f_48 <= iLocal_38.f_1)
 		{
-			num2 = SYSTEM::VDIST(uLocal_41[i /*49*/].f_40, 945f, 15f, 117f);
+			num2 = BUILTIN::VDIST(uLocal_41[i /*49*/].f_40, 945f, 15f, 117f);
 		
 			if (num2 < num)
 			{
@@ -3802,7 +3802,7 @@ BOOL func_36() // Position - 0x1567 (5479)
 
 void func_37() // Position - 0x1576 (5494)
 {
-	SYSTEM::WAIT(0);
+	BUILTIN::WAIT(0);
 	return;
 }
 
@@ -7127,7 +7127,7 @@ void func_46() // Position - 0x8474 (33908)
 {
 	while (!NETWORK::NETWORK_TRY_TO_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, false, Global_1579750))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	Global_1579750 = Global_1579750 + 1;
@@ -7179,7 +7179,7 @@ int func_47(int iParam0, int iParam1, BOOL bParam2) // Position - 0x84AD (33965)
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

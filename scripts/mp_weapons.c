@@ -187,7 +187,7 @@ void main() // Position - 0x0 (0)
 	{
 		while (true)
 		{
-			SYSTEM::WAIT(0);
+			BUILTIN::WAIT(0);
 		}
 	}
 
@@ -216,7 +216,7 @@ void main() // Position - 0x0 (0)
 		case 3:
 			while (num == 0)
 			{
-				SYSTEM::WAIT(0);
+				BUILTIN::WAIT(0);
 			
 				if (num3 == 1)
 				{
@@ -324,7 +324,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -2172,11 +2172,11 @@ int func_26(Hash hParam0, Any* panParam1) // Position - 0x2698 (9880)
 	int i;
 	int numDlcWeapons;
 
-	numDlcWeapons = FILES::GET_NUM_DLC_WEAPONS();
+	numDlcWeapons = EXTRAMETADATA::GET_NUM_DLC_WEAPONS();
 
 	for (i = 0; i < numDlcWeapons; i = i + 1)
 	{
-		if (FILES::GET_DLC_WEAPON_DATA(i, panParam1))
+		if (EXTRAMETADATA::GET_DLC_WEAPON_DATA(i, panParam1))
 			if (panParam1->f_1 == hParam0)
 				return i;
 	}
@@ -7042,9 +7042,9 @@ char* func_58(Hash hParam0, Hash hParam1) // Position - 0x70A0 (28832)
 			
 				if (dlcWeaponIndex != -1)
 				{
-					for (i = 0; i < FILES::GET_NUM_DLC_WEAPON_COMPONENTS(dlcWeaponIndex); i = i + 1)
+					for (i = 0; i < EXTRAMETADATA::GET_NUM_DLC_WEAPON_COMPONENTS(dlcWeaponIndex); i = i + 1)
 					{
-						if (FILES::GET_DLC_WEAPON_COMPONENT_DATA(dlcWeaponIndex, i, &ComponentDataPtr))
+						if (EXTRAMETADATA::GET_DLC_WEAPON_COMPONENT_DATA(dlcWeaponIndex, i, &ComponentDataPtr))
 							if (ComponentDataPtr.f_3 == hParam0)
 								return func_25(&(ComponentDataPtr.f_6));
 					}
@@ -8194,9 +8194,9 @@ char* func_82(Hash hParam0, Hash hParam1) // Position - 0x8882 (34946)
 			
 				if (dlcWeaponIndex != -1)
 				{
-					for (i = 0; i < FILES::GET_NUM_DLC_WEAPON_COMPONENTS(dlcWeaponIndex); i = i + 1)
+					for (i = 0; i < EXTRAMETADATA::GET_NUM_DLC_WEAPON_COMPONENTS(dlcWeaponIndex); i = i + 1)
 					{
-						if (FILES::GET_DLC_WEAPON_COMPONENT_DATA(dlcWeaponIndex, i, &ComponentDataPtr))
+						if (EXTRAMETADATA::GET_DLC_WEAPON_COMPONENT_DATA(dlcWeaponIndex, i, &ComponentDataPtr))
 							if (ComponentDataPtr.f_3 == hParam0)
 								return func_25(&(ComponentDataPtr.f_14));
 					}
@@ -9137,9 +9137,9 @@ Hash func_86(Hash hParam0, int iParam1) // Position - 0x919E (37278)
 			
 				if (dlcWeaponIndex != -1)
 				{
-					for (i = 0; i < FILES::GET_NUM_DLC_WEAPON_COMPONENTS(dlcWeaponIndex); i = i + 1)
+					for (i = 0; i < EXTRAMETADATA::GET_NUM_DLC_WEAPON_COMPONENTS(dlcWeaponIndex); i = i + 1)
 					{
-						if (FILES::GET_DLC_WEAPON_COMPONENT_DATA(dlcWeaponIndex, i, &ComponentDataPtr))
+						if (EXTRAMETADATA::GET_DLC_WEAPON_COMPONENT_DATA(dlcWeaponIndex, i, &ComponentDataPtr))
 						{
 							if (!func_87(ComponentDataPtr.f_3))
 							{
@@ -10631,297 +10631,297 @@ float func_134(int iParam0, int iParam1) // Position - 0xC2C8 (49864)
 	{
 		case joaat("WEAPON_PISTOL"):
 		case joaat("WEAPON_PISTOL_MK2"):
-			return SYSTEM::TO_FLOAT(func_32(251, iParam1)) / SYSTEM::TO_FLOAT(func_32(252, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(251, iParam1)) / BUILTIN::TO_FLOAT(func_32(252, iParam1));
 	
 		case joaat("WEAPON_COMBATPISTOL"):
-			return SYSTEM::TO_FLOAT(func_32(261, iParam1)) / SYSTEM::TO_FLOAT(func_32(262, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(261, iParam1)) / BUILTIN::TO_FLOAT(func_32(262, iParam1));
 	
 		case joaat("WEAPON_APPISTOL"):
-			return SYSTEM::TO_FLOAT(func_32(281, iParam1)) / SYSTEM::TO_FLOAT(func_32(282, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(281, iParam1)) / BUILTIN::TO_FLOAT(func_32(282, iParam1));
 	
 		case joaat("WEAPON_MICROSMG"):
-			return SYSTEM::TO_FLOAT(func_32(291, iParam1)) / SYSTEM::TO_FLOAT(func_32(292, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(291, iParam1)) / BUILTIN::TO_FLOAT(func_32(292, iParam1));
 	
 		case joaat("WEAPON_SMG"):
 		case joaat("WEAPON_SMG_MK2"):
-			return SYSTEM::TO_FLOAT(func_32(301, iParam1)) / SYSTEM::TO_FLOAT(func_32(302, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(301, iParam1)) / BUILTIN::TO_FLOAT(func_32(302, iParam1));
 	
 		case joaat("WEAPON_ASSAULTRIFLE"):
 		case joaat("WEAPON_ASSAULTRIFLE_MK2"):
-			return SYSTEM::TO_FLOAT(func_32(321, iParam1)) / SYSTEM::TO_FLOAT(func_32(322, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(321, iParam1)) / BUILTIN::TO_FLOAT(func_32(322, iParam1));
 	
 		case joaat("WEAPON_CARBINERIFLE"):
 		case joaat("WEAPON_CARBINERIFLE_MK2"):
-			return SYSTEM::TO_FLOAT(func_32(330, iParam1)) / SYSTEM::TO_FLOAT(func_32(331, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(330, iParam1)) / BUILTIN::TO_FLOAT(func_32(331, iParam1));
 	
 		case joaat("WEAPON_ADVANCEDRIFLE"):
-			return SYSTEM::TO_FLOAT(func_32(339, iParam1)) / SYSTEM::TO_FLOAT(func_32(340, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(339, iParam1)) / BUILTIN::TO_FLOAT(func_32(340, iParam1));
 	
 		case joaat("WEAPON_MG"):
-			return SYSTEM::TO_FLOAT(func_32(348, iParam1)) / SYSTEM::TO_FLOAT(func_32(349, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(348, iParam1)) / BUILTIN::TO_FLOAT(func_32(349, iParam1));
 	
 		case joaat("WEAPON_COMBATMG"):
 		case joaat("WEAPON_COMBATMG_MK2"):
-			return SYSTEM::TO_FLOAT(func_32(357, iParam1)) / SYSTEM::TO_FLOAT(func_32(358, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(357, iParam1)) / BUILTIN::TO_FLOAT(func_32(358, iParam1));
 	
 		case joaat("WEAPON_PUMPSHOTGUN"):
-			return SYSTEM::TO_FLOAT(func_32(375, iParam1)) / SYSTEM::TO_FLOAT(func_32(376, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(375, iParam1)) / BUILTIN::TO_FLOAT(func_32(376, iParam1));
 	
 		case joaat("WEAPON_SAWNOFFSHOTGUN"):
-			return SYSTEM::TO_FLOAT(func_32(384, iParam1)) / SYSTEM::TO_FLOAT(func_32(385, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(384, iParam1)) / BUILTIN::TO_FLOAT(func_32(385, iParam1));
 	
 		case joaat("WEAPON_ASSAULTSHOTGUN"):
-			return SYSTEM::TO_FLOAT(func_32(403, iParam1)) / SYSTEM::TO_FLOAT(func_32(404, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(403, iParam1)) / BUILTIN::TO_FLOAT(func_32(404, iParam1));
 	
 		case joaat("WEAPON_SNIPERRIFLE"):
 		case joaat("WEAPON_HEAVYSNIPER_MK2"):
-			return SYSTEM::TO_FLOAT(func_32(422, iParam1)) / SYSTEM::TO_FLOAT(func_32(423, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(422, iParam1)) / BUILTIN::TO_FLOAT(func_32(423, iParam1));
 	
 		case joaat("WEAPON_HEAVYSNIPER"):
-			return SYSTEM::TO_FLOAT(func_32(431, iParam1)) / SYSTEM::TO_FLOAT(func_32(432, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(431, iParam1)) / BUILTIN::TO_FLOAT(func_32(432, iParam1));
 	
 		case joaat("WEAPON_GRENADELAUNCHER"):
-			return SYSTEM::TO_FLOAT(func_32(442, iParam1)) / SYSTEM::TO_FLOAT(func_32(443, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(442, iParam1)) / BUILTIN::TO_FLOAT(func_32(443, iParam1));
 	
 		case joaat("WEAPON_RPG"):
-			return SYSTEM::TO_FLOAT(func_32(449, iParam1)) / SYSTEM::TO_FLOAT(func_32(450, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(449, iParam1)) / BUILTIN::TO_FLOAT(func_32(450, iParam1));
 	
 		case joaat("WEAPON_MINIGUN"):
-			return SYSTEM::TO_FLOAT(func_32(456, iParam1)) / SYSTEM::TO_FLOAT(func_32(457, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(456, iParam1)) / BUILTIN::TO_FLOAT(func_32(457, iParam1));
 	
 		case joaat("WEAPON_GRENADE"):
-			return SYSTEM::TO_FLOAT(func_32(465, iParam1)) / SYSTEM::TO_FLOAT(func_32(466, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(465, iParam1)) / BUILTIN::TO_FLOAT(func_32(466, iParam1));
 	
 		case joaat("WEAPON_SMOKEGRENADE"):
-			return SYSTEM::TO_FLOAT(func_32(473, iParam1)) / SYSTEM::TO_FLOAT(func_32(474, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(473, iParam1)) / BUILTIN::TO_FLOAT(func_32(474, iParam1));
 	
 		case joaat("WEAPON_STICKYBOMB"):
-			return SYSTEM::TO_FLOAT(func_32(482, iParam1)) / SYSTEM::TO_FLOAT(func_32(483, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(482, iParam1)) / BUILTIN::TO_FLOAT(func_32(483, iParam1));
 	
 		case joaat("WEAPON_MOLOTOV"):
-			return SYSTEM::TO_FLOAT(func_32(490, iParam1)) / SYSTEM::TO_FLOAT(func_32(491, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(490, iParam1)) / BUILTIN::TO_FLOAT(func_32(491, iParam1));
 	
 		case joaat("WEAPON_STUNGUN"):
-			return SYSTEM::TO_FLOAT(func_32(412, iParam1)) / SYSTEM::TO_FLOAT(func_32(413, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(412, iParam1)) / BUILTIN::TO_FLOAT(func_32(413, iParam1));
 	
 		case joaat("WEAPON_KNIFE"):
-			return SYSTEM::TO_FLOAT(func_32(194, iParam1)) / SYSTEM::TO_FLOAT(func_32(196, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(194, iParam1)) / BUILTIN::TO_FLOAT(func_32(196, iParam1));
 	
 		case joaat("WEAPON_NIGHTSTICK"):
-			return SYSTEM::TO_FLOAT(func_32(202, iParam1)) / SYSTEM::TO_FLOAT(func_32(204, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(202, iParam1)) / BUILTIN::TO_FLOAT(func_32(204, iParam1));
 	
 		case joaat("WEAPON_HAMMER"):
-			return SYSTEM::TO_FLOAT(func_32(230, iParam1)) / SYSTEM::TO_FLOAT(func_32(232, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(230, iParam1)) / BUILTIN::TO_FLOAT(func_32(232, iParam1));
 	
 		case joaat("WEAPON_BAT"):
-			return SYSTEM::TO_FLOAT(func_32(237, iParam1)) / SYSTEM::TO_FLOAT(func_32(239, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(237, iParam1)) / BUILTIN::TO_FLOAT(func_32(239, iParam1));
 	
 		case joaat("WEAPON_CROWBAR"):
-			return SYSTEM::TO_FLOAT(func_32(209, iParam1)) / SYSTEM::TO_FLOAT(func_32(211, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(209, iParam1)) / BUILTIN::TO_FLOAT(func_32(211, iParam1));
 	
 		case joaat("WEAPON_GOLFCLUB"):
-			return SYSTEM::TO_FLOAT(func_32(244, iParam1)) / SYSTEM::TO_FLOAT(func_32(246, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(244, iParam1)) / BUILTIN::TO_FLOAT(func_32(246, iParam1));
 	
 		case joaat("WEAPON_PISTOL50"):
-			return SYSTEM::TO_FLOAT(func_32(271, iParam1)) / SYSTEM::TO_FLOAT(func_32(272, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(271, iParam1)) / BUILTIN::TO_FLOAT(func_32(272, iParam1));
 	
 		case joaat("WEAPON_ASSAULTSMG"):
-			return SYSTEM::TO_FLOAT(func_32(311, iParam1)) / SYSTEM::TO_FLOAT(func_32(312, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(311, iParam1)) / BUILTIN::TO_FLOAT(func_32(312, iParam1));
 	
 		case joaat("WEAPON_BULLPUPSHOTGUN"):
-			return SYSTEM::TO_FLOAT(func_32(394, iParam1)) / SYSTEM::TO_FLOAT(func_32(395, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(394, iParam1)) / BUILTIN::TO_FLOAT(func_32(395, iParam1));
 	
 		case joaat("WEAPON_ASSAULTMG"):
-			return SYSTEM::TO_FLOAT(func_32(366, iParam1)) / SYSTEM::TO_FLOAT(func_32(367, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(366, iParam1)) / BUILTIN::TO_FLOAT(func_32(367, iParam1));
 	
 		case joaat("WEAPON_ASSAULTSNIPER"):
-			return SYSTEM::TO_FLOAT(func_32(321, iParam1)) / SYSTEM::TO_FLOAT(func_32(322, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(321, iParam1)) / BUILTIN::TO_FLOAT(func_32(322, iParam1));
 	
 		case joaat("WEAPON_HEAVYRIFLE"):
-			return SYSTEM::TO_FLOAT(func_32(431, iParam1)) / SYSTEM::TO_FLOAT(func_32(432, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(431, iParam1)) / BUILTIN::TO_FLOAT(func_32(432, iParam1));
 	
 		case joaat("WEAPON_PROGRAMMABLEAR"):
-			return SYSTEM::TO_FLOAT(func_32(321, iParam1)) / SYSTEM::TO_FLOAT(func_32(322, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(321, iParam1)) / BUILTIN::TO_FLOAT(func_32(322, iParam1));
 	
 		case joaat("WEAPON_BOTTLE"):
-			return SYSTEM::TO_FLOAT(func_32(1731, iParam1)) / SYSTEM::TO_FLOAT(func_32(1732, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(1731, iParam1)) / BUILTIN::TO_FLOAT(func_32(1732, iParam1));
 	
 		case joaat("WEAPON_SNSPISTOL"):
-			return SYSTEM::TO_FLOAT(func_32(1741, iParam1)) / SYSTEM::TO_FLOAT(func_32(1742, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(1741, iParam1)) / BUILTIN::TO_FLOAT(func_32(1742, iParam1));
 	
 		case joaat("WEAPON_SPECIALCARBINE"):
-			return SYSTEM::TO_FLOAT(func_32(13045, iParam1)) / SYSTEM::TO_FLOAT(func_32(13046, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13045, iParam1)) / BUILTIN::TO_FLOAT(func_32(13046, iParam1));
 	
 		case joaat("WEAPON_BULLPUPRIFLE"):
-			return SYSTEM::TO_FLOAT(func_32(13055, iParam1)) / SYSTEM::TO_FLOAT(func_32(13056, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13055, iParam1)) / BUILTIN::TO_FLOAT(func_32(13056, iParam1));
 	
 		case joaat("WEAPON_HEAVYPISTOL"):
-			return SYSTEM::TO_FLOAT(func_32(13035, iParam1)) / SYSTEM::TO_FLOAT(func_32(13036, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13035, iParam1)) / BUILTIN::TO_FLOAT(func_32(13036, iParam1));
 	
 		case joaat("WEAPON_DAGGER"):
-			return SYSTEM::TO_FLOAT(func_32(13322, iParam1)) / SYSTEM::TO_FLOAT(func_32(13323, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13322, iParam1)) / BUILTIN::TO_FLOAT(func_32(13323, iParam1));
 	
 		case joaat("WEAPON_VINTAGEPISTOL"):
-			return SYSTEM::TO_FLOAT(func_32(13332, iParam1)) / SYSTEM::TO_FLOAT(func_32(13333, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13332, iParam1)) / BUILTIN::TO_FLOAT(func_32(13333, iParam1));
 	
 		case joaat("WEAPON_GUSENBERG"):
-			return SYSTEM::TO_FLOAT(func_32(13065, iParam1)) / SYSTEM::TO_FLOAT(func_32(13066, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13065, iParam1)) / BUILTIN::TO_FLOAT(func_32(13066, iParam1));
 	
 		case joaat("WEAPON_MUSKET"):
-			return SYSTEM::TO_FLOAT(func_32(13352, iParam1)) / SYSTEM::TO_FLOAT(func_32(13353, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13352, iParam1)) / BUILTIN::TO_FLOAT(func_32(13353, iParam1));
 	
 		case joaat("WEAPON_FIREWORK"):
-			return SYSTEM::TO_FLOAT(func_32(13342, iParam1)) / SYSTEM::TO_FLOAT(func_32(13343, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13342, iParam1)) / BUILTIN::TO_FLOAT(func_32(13343, iParam1));
 	
 		case joaat("WEAPON_HEAVYSHOTGUN"):
-			return SYSTEM::TO_FLOAT(func_32(13430, iParam1)) / SYSTEM::TO_FLOAT(func_32(13431, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13430, iParam1)) / BUILTIN::TO_FLOAT(func_32(13431, iParam1));
 	
 		case joaat("WEAPON_MARKSMANRIFLE"):
-			return SYSTEM::TO_FLOAT(func_32(13440, iParam1)) / SYSTEM::TO_FLOAT(func_32(13441, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13440, iParam1)) / BUILTIN::TO_FLOAT(func_32(13441, iParam1));
 	
 		case joaat("WEAPON_HOMINGLAUNCHER"):
-			return SYSTEM::TO_FLOAT(func_32(13466, iParam1)) / SYSTEM::TO_FLOAT(func_32(13467, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13466, iParam1)) / BUILTIN::TO_FLOAT(func_32(13467, iParam1));
 	
 		case joaat("WEAPON_PROXMINE"):
-			return SYSTEM::TO_FLOAT(func_32(13458, iParam1)) / SYSTEM::TO_FLOAT(func_32(13459, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13458, iParam1)) / BUILTIN::TO_FLOAT(func_32(13459, iParam1));
 	
 		case joaat("WEAPON_COMBATPDW"):
-			return SYSTEM::TO_FLOAT(func_32(13474, iParam1)) / SYSTEM::TO_FLOAT(func_32(13475, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13474, iParam1)) / BUILTIN::TO_FLOAT(func_32(13475, iParam1));
 	
 		case joaat("WEAPON_MARKSMANPISTOL"):
-			return SYSTEM::TO_FLOAT(func_32(13491, iParam1)) / SYSTEM::TO_FLOAT(func_32(13492, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13491, iParam1)) / BUILTIN::TO_FLOAT(func_32(13492, iParam1));
 	
 		case joaat("WEAPON_KNUCKLE"):
-			return SYSTEM::TO_FLOAT(func_32(13484, iParam1)) / SYSTEM::TO_FLOAT(func_32(13485, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13484, iParam1)) / BUILTIN::TO_FLOAT(func_32(13485, iParam1));
 	
 		case joaat("WEAPON_MACHETE"):
-			return SYSTEM::TO_FLOAT(func_32(13501, iParam1)) / SYSTEM::TO_FLOAT(func_32(13502, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13501, iParam1)) / BUILTIN::TO_FLOAT(func_32(13502, iParam1));
 	
 		case joaat("WEAPON_MACHINEPISTOL"):
-			return SYSTEM::TO_FLOAT(func_32(13509, iParam1)) / SYSTEM::TO_FLOAT(func_32(13510, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13509, iParam1)) / BUILTIN::TO_FLOAT(func_32(13510, iParam1));
 	
 		case joaat("WEAPON_FLASHLIGHT"):
-			return SYSTEM::TO_FLOAT(func_32(13547, iParam1)) / SYSTEM::TO_FLOAT(func_32(13548, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13547, iParam1)) / BUILTIN::TO_FLOAT(func_32(13548, iParam1));
 	
 		case joaat("WEAPON_SWITCHBLADE"):
-			return SYSTEM::TO_FLOAT(func_32(13575, iParam1)) / SYSTEM::TO_FLOAT(func_32(13576, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13575, iParam1)) / BUILTIN::TO_FLOAT(func_32(13576, iParam1));
 	
 		case joaat("WEAPON_REVOLVER"):
-			return SYSTEM::TO_FLOAT(func_32(13565, iParam1)) / SYSTEM::TO_FLOAT(func_32(13566, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13565, iParam1)) / BUILTIN::TO_FLOAT(func_32(13566, iParam1));
 	
 		case joaat("WEAPON_DBSHOTGUN"):
-			return SYSTEM::TO_FLOAT(func_32(13537, iParam1)) / SYSTEM::TO_FLOAT(func_32(13538, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13537, iParam1)) / BUILTIN::TO_FLOAT(func_32(13538, iParam1));
 	
 		case joaat("WEAPON_COMPACTRIFLE"):
-			return SYSTEM::TO_FLOAT(func_32(13527, iParam1)) / SYSTEM::TO_FLOAT(func_32(13528, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13527, iParam1)) / BUILTIN::TO_FLOAT(func_32(13528, iParam1));
 	
 		case joaat("WEAPON_HATCHET"):
-			return SYSTEM::TO_FLOAT(func_32(13450, iParam1)) / SYSTEM::TO_FLOAT(func_32(13451, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13450, iParam1)) / BUILTIN::TO_FLOAT(func_32(13451, iParam1));
 	
 		case joaat("WEAPON_AUTOSHOTGUN"):
-			return SYSTEM::TO_FLOAT(func_32(13616, iParam1)) / SYSTEM::TO_FLOAT(func_32(13617, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13616, iParam1)) / BUILTIN::TO_FLOAT(func_32(13617, iParam1));
 	
 		case joaat("WEAPON_BATTLEAXE"):
-			return SYSTEM::TO_FLOAT(func_32(13626, iParam1)) / SYSTEM::TO_FLOAT(func_32(13627, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13626, iParam1)) / BUILTIN::TO_FLOAT(func_32(13627, iParam1));
 	
 		case joaat("WEAPON_COMPACTLAUNCHER"):
-			return SYSTEM::TO_FLOAT(func_32(13632, iParam1)) / SYSTEM::TO_FLOAT(func_32(13633, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13632, iParam1)) / BUILTIN::TO_FLOAT(func_32(13633, iParam1));
 	
 		case joaat("WEAPON_MINISMG"):
-			return SYSTEM::TO_FLOAT(func_32(13642, iParam1)) / SYSTEM::TO_FLOAT(func_32(13643, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13642, iParam1)) / BUILTIN::TO_FLOAT(func_32(13643, iParam1));
 	
 		case joaat("WEAPON_PIPEBOMB"):
-			return SYSTEM::TO_FLOAT(func_32(13652, iParam1)) / SYSTEM::TO_FLOAT(func_32(13653, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13652, iParam1)) / BUILTIN::TO_FLOAT(func_32(13653, iParam1));
 	
 		case joaat("WEAPON_POOLCUE"):
-			return SYSTEM::TO_FLOAT(func_32(13660, iParam1)) / SYSTEM::TO_FLOAT(func_32(13661, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(13660, iParam1)) / BUILTIN::TO_FLOAT(func_32(13661, iParam1));
 	
 		case joaat("WEAPON_WRENCH"):
-			return SYSTEM::TO_FLOAT(func_32(223, iParam1)) / SYSTEM::TO_FLOAT(func_32(225, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(223, iParam1)) / BUILTIN::TO_FLOAT(func_32(225, iParam1));
 	
 		case joaat("WEAPON_BULLPUPRIFLE_MK2"):
-			return SYSTEM::TO_FLOAT(func_32(14124, iParam1)) / SYSTEM::TO_FLOAT(func_32(14125, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(14124, iParam1)) / BUILTIN::TO_FLOAT(func_32(14125, iParam1));
 	
 		case joaat("WEAPON_MARKSMANRIFLE_MK2"):
-			return SYSTEM::TO_FLOAT(func_32(14144, iParam1)) / SYSTEM::TO_FLOAT(func_32(14145, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(14144, iParam1)) / BUILTIN::TO_FLOAT(func_32(14145, iParam1));
 	
 		case joaat("WEAPON_PUMPSHOTGUN_MK2"):
-			return SYSTEM::TO_FLOAT(func_32(14134, iParam1)) / SYSTEM::TO_FLOAT(func_32(14135, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(14134, iParam1)) / BUILTIN::TO_FLOAT(func_32(14135, iParam1));
 	
 		case joaat("WEAPON_REVOLVER_MK2"):
-			return SYSTEM::TO_FLOAT(func_32(14154, iParam1)) / SYSTEM::TO_FLOAT(func_32(14155, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(14154, iParam1)) / BUILTIN::TO_FLOAT(func_32(14155, iParam1));
 	
 		case joaat("WEAPON_SNSPISTOL_MK2"):
-			return SYSTEM::TO_FLOAT(func_32(14174, iParam1)) / SYSTEM::TO_FLOAT(func_32(14175, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(14174, iParam1)) / BUILTIN::TO_FLOAT(func_32(14175, iParam1));
 	
 		case joaat("WEAPON_SPECIALCARBINE_MK2"):
-			return SYSTEM::TO_FLOAT(func_32(14184, iParam1)) / SYSTEM::TO_FLOAT(func_32(14185, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(14184, iParam1)) / BUILTIN::TO_FLOAT(func_32(14185, iParam1));
 	
 		case joaat("WEAPON_DOUBLEACTION"):
-			return SYSTEM::TO_FLOAT(func_32(14164, iParam1)) / SYSTEM::TO_FLOAT(func_32(14165, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(14164, iParam1)) / BUILTIN::TO_FLOAT(func_32(14165, iParam1));
 	
 		case joaat("WEAPON_STONE_HATCHET"):
-			return SYSTEM::TO_FLOAT(func_32(14387, iParam1)) / SYSTEM::TO_FLOAT(func_32(14388, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(14387, iParam1)) / BUILTIN::TO_FLOAT(func_32(14388, iParam1));
 	
 		case joaat("WEAPON_RAYPISTOL"):
-			return SYSTEM::TO_FLOAT(func_32(14544, iParam1)) / SYSTEM::TO_FLOAT(func_32(14545, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(14544, iParam1)) / BUILTIN::TO_FLOAT(func_32(14545, iParam1));
 	
 		case joaat("WEAPON_RAYCARBINE"):
-			return SYSTEM::TO_FLOAT(func_32(14554, iParam1)) / SYSTEM::TO_FLOAT(func_32(14555, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(14554, iParam1)) / BUILTIN::TO_FLOAT(func_32(14555, iParam1));
 	
 		case joaat("WEAPON_RAYMINIGUN"):
-			return SYSTEM::TO_FLOAT(func_32(14564, iParam1)) / SYSTEM::TO_FLOAT(func_32(14565, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(14564, iParam1)) / BUILTIN::TO_FLOAT(func_32(14565, iParam1));
 	
 		case joaat("WEAPON_NAVYREVOLVER"):
-			return SYSTEM::TO_FLOAT(func_32(14995, iParam1)) / SYSTEM::TO_FLOAT(func_32(14996, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(14995, iParam1)) / BUILTIN::TO_FLOAT(func_32(14996, iParam1));
 	
 		case joaat("WEAPON_CERAMICPISTOL"):
-			return SYSTEM::TO_FLOAT(func_32(14985, iParam1)) / SYSTEM::TO_FLOAT(func_32(14986, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(14985, iParam1)) / BUILTIN::TO_FLOAT(func_32(14986, iParam1));
 	
 		case joaat("WEAPON_MILITARYRIFLE"):
-			return SYSTEM::TO_FLOAT(func_32(15155, iParam1)) / SYSTEM::TO_FLOAT(func_32(15156, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(15155, iParam1)) / BUILTIN::TO_FLOAT(func_32(15156, iParam1));
 	
 		case joaat("WEAPON_COMBATSHOTGUN"):
-			return SYSTEM::TO_FLOAT(func_32(15135, iParam1)) / SYSTEM::TO_FLOAT(func_32(15136, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(15135, iParam1)) / BUILTIN::TO_FLOAT(func_32(15136, iParam1));
 	
 		case joaat("WEAPON_GADGETPISTOL"):
-			return SYSTEM::TO_FLOAT(func_32(15145, iParam1)) / SYSTEM::TO_FLOAT(func_32(15146, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(15145, iParam1)) / BUILTIN::TO_FLOAT(func_32(15146, iParam1));
 	
 		case joaat("WEAPON_EMPLAUNCHER"):
-			return SYSTEM::TO_FLOAT(func_32(15186, iParam1)) / SYSTEM::TO_FLOAT(func_32(15187, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(15186, iParam1)) / BUILTIN::TO_FLOAT(func_32(15187, iParam1));
 	
 		case joaat("WEAPON_STUNGUN_MP"):
-			return SYSTEM::TO_FLOAT(func_32(15208, iParam1)) / SYSTEM::TO_FLOAT(func_32(15209, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(15208, iParam1)) / BUILTIN::TO_FLOAT(func_32(15209, iParam1));
 	
 		case joaat("WEAPON_PRECISIONRIFLE"):
-			return SYSTEM::TO_FLOAT(func_32(15286, iParam1)) / SYSTEM::TO_FLOAT(func_32(15287, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(15286, iParam1)) / BUILTIN::TO_FLOAT(func_32(15287, iParam1));
 	
 		case joaat("WEAPON_TACTICALRIFLE"):
-			return SYSTEM::TO_FLOAT(func_32(15276, iParam1)) / SYSTEM::TO_FLOAT(func_32(15277, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(15276, iParam1)) / BUILTIN::TO_FLOAT(func_32(15277, iParam1));
 	
 		case 465894841:
-			return SYSTEM::TO_FLOAT(func_32(15296, iParam1)) / SYSTEM::TO_FLOAT(func_32(15297, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(15296, iParam1)) / BUILTIN::TO_FLOAT(func_32(15297, iParam1));
 	
 		case 1703483498:
-			return SYSTEM::TO_FLOAT(func_32(15306, iParam1)) / SYSTEM::TO_FLOAT(func_32(15307, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(15306, iParam1)) / BUILTIN::TO_FLOAT(func_32(15307, iParam1));
 	
 		case -22923932:
-			return SYSTEM::TO_FLOAT(func_32(15316, iParam1)) / SYSTEM::TO_FLOAT(func_32(15317, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(15316, iParam1)) / BUILTIN::TO_FLOAT(func_32(15317, iParam1));
 	
 		case 350597077:
-			return SYSTEM::TO_FLOAT(func_32(15380, iParam1)) / SYSTEM::TO_FLOAT(func_32(15381, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(15380, iParam1)) / BUILTIN::TO_FLOAT(func_32(15381, iParam1));
 	
 		case joaat("WEAPON_BATTLERIFLE"):
-			return SYSTEM::TO_FLOAT(func_32(15390, iParam1)) / SYSTEM::TO_FLOAT(func_32(15391, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(15390, iParam1)) / BUILTIN::TO_FLOAT(func_32(15391, iParam1));
 	
 		case 62870901:
-			return SYSTEM::TO_FLOAT(func_32(15400, iParam1)) / SYSTEM::TO_FLOAT(func_32(15401, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(15400, iParam1)) / BUILTIN::TO_FLOAT(func_32(15401, iParam1));
 	
 		case -624951259:
-			return SYSTEM::TO_FLOAT(func_32(15420, iParam1)) / SYSTEM::TO_FLOAT(func_32(15421, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(15420, iParam1)) / BUILTIN::TO_FLOAT(func_32(15421, iParam1));
 	
 		case -1916886713:
-			return SYSTEM::TO_FLOAT(func_32(15458, iParam1)) / SYSTEM::TO_FLOAT(func_32(15459, iParam1));
+			return BUILTIN::TO_FLOAT(func_32(15458, iParam1)) / BUILTIN::TO_FLOAT(func_32(15459, iParam1));
 	
 		default:
 		
@@ -12186,8 +12186,8 @@ float func_138(int iParam0) // Position - 0xE426 (58406)
 	}
 	else
 	{
-		num3 = SYSTEM::TO_FLOAT(func_32(num, -1));
-		num4 = SYSTEM::TO_FLOAT(func_32(num2, -1));
+		num3 = BUILTIN::TO_FLOAT(func_32(num, -1));
+		num4 = BUILTIN::TO_FLOAT(func_32(num2, -1));
 	
 		if (num3 > 0f)
 		{
@@ -12197,8 +12197,8 @@ float func_138(int iParam0) // Position - 0xE426 (58406)
 				value = 1f;
 		
 			value = value * 100f;
-			value2 = SYSTEM::ROUND(value);
-			value = SYSTEM::TO_FLOAT(value2);
+			value2 = BUILTIN::ROUND(value);
+			value = BUILTIN::TO_FLOAT(value2);
 			return value;
 		}
 	}

@@ -67,7 +67,7 @@ void main() // Position - 0x0 (0)
 		HUD::SET_TEXT_SCALE(0.4f, 0.45f);
 		HUD::SET_TEXT_WRAP(0f, 1f);
 		func_1(0.05f, 0.7f, "PLCHLD_PASS", 0);
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -91,7 +91,7 @@ void func_3() // Position - 0xFC (252)
 	int num;
 
 	if (SCRIPT::HAS_SCRIPT_LOADED("buddyDeathResponse"))
-		SYSTEM::START_NEW_SCRIPT("buddyDeathResponse", DEFAULT);
+		BUILTIN::START_NEW_SCRIPT("buddyDeathResponse", DEFAULT);
 
 	if (Global_114135.f_9089 || func_19(false))
 	{

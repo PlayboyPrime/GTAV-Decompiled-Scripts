@@ -48,7 +48,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(250);
+		BUILTIN::WAIT(250);
 	
 		switch (iLocal_25)
 		{
@@ -128,7 +128,7 @@ void main() // Position - 0x0 (0)
 				break;
 		}
 	
-		SYSTEM::WAIT(250);
+		BUILTIN::WAIT(250);
 	
 		switch (iLocal_26)
 		{

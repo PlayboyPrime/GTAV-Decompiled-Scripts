@@ -175,7 +175,7 @@ void main() // Position - 0x0 (0)
 		else
 			func_91();
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -980,7 +980,7 @@ Vector3 func_31(float fParam0, var uParam1, var uParam2) // Position - 0x1418 (5
 	float num;
 	float num2;
 
-	num = SYSTEM::VMAG(fParam0);
+	num = BUILTIN::VMAG(fParam0);
 
 	if (num != 0f)
 	{
@@ -1108,7 +1108,7 @@ void func_35() // Position - 0x14E9 (5353)
 			
 				while (!STREAMING::IS_NEW_LOAD_SCENE_LOADED() || !INTERIOR::IS_INTERIOR_READY(inLocal_69) && iLocal_84 > MISC::GET_GAME_TIMER())
 				{
-					SYSTEM::WAIT(0);
+					BUILTIN::WAIT(0);
 				}
 			
 				STREAMING::NEW_LOAD_SCENE_STOP();
@@ -1171,7 +1171,7 @@ void func_36(Vector3 vParam0, var uParam1, var uParam2, float fParam3, int iPara
 			if (bParam6)
 				func_61();
 		
-			SYSTEM::WAIT(0);
+			BUILTIN::WAIT(0);
 		}
 	
 		if (MISC::GET_GAME_TIMER() < num)
@@ -3726,7 +3726,7 @@ BOOL func_73() // Position - 0x5889 (22665)
 
 BOOL func_74() // Position - 0x58A9 (22697)
 {
-	return SYSTEM::VDIST2(func_76(iLocal_83), uLocal_80) < func_75(iLocal_83);
+	return BUILTIN::VDIST2(func_76(iLocal_83), uLocal_80) < func_75(iLocal_83);
 }
 
 float func_75(int iParam0) // Position - 0x58C6 (22726)
@@ -3828,7 +3828,7 @@ BOOL func_79(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x5ABD (23
 
 BOOL func_80() // Position - 0x5AD1 (23249)
 {
-	return SYSTEM::VDIST2(func_82(iLocal_83), uLocal_80) < func_81(iLocal_83);
+	return BUILTIN::VDIST2(func_82(iLocal_83), uLocal_80) < func_81(iLocal_83);
 }
 
 float func_81(int iParam0) // Position - 0x5AEE (23278)
@@ -3977,7 +3977,7 @@ void func_86(char* sParam0) // Position - 0x5E6E (24174)
 
 	while (!STREAMING::HAS_ANIM_DICT_LOADED(sParam0))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -3989,7 +3989,7 @@ void func_87(Hash hParam0) // Position - 0x5E8E (24206)
 
 	while (!STREAMING::HAS_MODEL_LOADED(hParam0))
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -4012,7 +4012,7 @@ void func_88(var uParam0, Vector3 vParam1, var uParam2, var uParam3, float fPara
 
 BOOL func_89(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uParam4, var uParam5, int iParam6) // Position - 0x5ED4 (24276)
 {
-	return SYSTEM::VDIST(vParam0, vParam3) <= iParam6;
+	return BUILTIN::VDIST(vParam0, vParam3) <= iParam6;
 }
 
 BOOL _IS_EXCLUSIVE_CONTENT_UNLOCKED() // Position - 0x5EEB (24299)

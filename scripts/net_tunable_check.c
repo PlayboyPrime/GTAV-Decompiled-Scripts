@@ -49,7 +49,7 @@ void main() // Position - 0x0 (0)
 		if (func_1(&uLocal_19, &Global_298557))
 			func_6();
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -9814,7 +9814,7 @@ void func_2(int iParam0, var uParam1) // Position - 0x1CD (461)
 	
 		case 1073:
 			*uParam1 = 2f;
-			uParam1->f_1 = SYSTEM::TO_FLOAT(32);
+			uParam1->f_1 = BUILTIN::TO_FLOAT(32);
 			uParam1->f_2 = 2;
 			uParam1->f_3 = func_3();
 			uParam1->f_5 = joaat("MAX_NG_TRANSITION_SESSION_SIZE");

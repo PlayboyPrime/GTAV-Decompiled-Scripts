@@ -3753,7 +3753,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		if (_SHOULD_NETWORK_SCRIPT_TERMINATE())
 			func_441();
@@ -9103,7 +9103,7 @@ void func_87() // Position - 0x984E (38990)
 				vector = { PAD::GET_CONTROL_NORMAL(FRONTEND_CONTROL, INPUT_SCRIPT_LEFT_AXIS_X), PAD::GET_CONTROL_NORMAL(FRONTEND_CONTROL, INPUT_SCRIPT_LEFT_AXIS_Y), 0f };
 				iLocal_2051.f_258 = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(iLocal_2051.f_255);
 			
-				if (iLocal_2051.f_258 != -1 && PED::GET_SYNCHRONIZED_SCENE_PHASE(iLocal_2051.f_258) >= 0.99f || ENTITY::HAS_ANIM_EVENT_FIRED(PLAYER::PLAYER_PED_ID(), joaat("blend_out")) || SYSTEM::VMAG(vector) >= 0.24f && ENTITY::HAS_ANIM_EVENT_FIRED(PLAYER::PLAYER_PED_ID(), joaat("break_out")))
+				if (iLocal_2051.f_258 != -1 && PED::GET_SYNCHRONIZED_SCENE_PHASE(iLocal_2051.f_258) >= 0.99f || ENTITY::HAS_ANIM_EVENT_FIRED(PLAYER::PLAYER_PED_ID(), joaat("blend_out")) || BUILTIN::VMAG(vector) >= 0.24f && ENTITY::HAS_ANIM_EVENT_FIRED(PLAYER::PLAYER_PED_ID(), joaat("break_out")))
 				{
 					TASK::CLEAR_PED_TASKS(PLAYER::PLAYER_PED_ID());
 					_SET_PLAYER_CONTROL_EX(PLAYER::PLAYER_ID(), true, 0, false);
@@ -10555,9 +10555,9 @@ void func_91() // Position - 0xA9D7 (43479)
 						{
 							if (!iLocal_2051.f_232)
 							{
-								iLocal_3664.f_3 = iLocal_3664.f_3 + SYSTEM::FLOOR((float)uLocal_1794[PLAYER::PLAYER_ID() /*8*/].f_1 * 2.5f);
-								iLocal_3638.f_6 = iLocal_3638.f_6 + SYSTEM::FLOOR((float)uLocal_1794[PLAYER::PLAYER_ID() /*8*/].f_1 * 2.5f);
-								iLocal_3638.f_14 = iLocal_3638.f_14 + SYSTEM::FLOOR((float)uLocal_1794[PLAYER::PLAYER_ID() /*8*/].f_1 * 2.5f);
+								iLocal_3664.f_3 = iLocal_3664.f_3 + BUILTIN::FLOOR((float)uLocal_1794[PLAYER::PLAYER_ID() /*8*/].f_1 * 2.5f);
+								iLocal_3638.f_6 = iLocal_3638.f_6 + BUILTIN::FLOOR((float)uLocal_1794[PLAYER::PLAYER_ID() /*8*/].f_1 * 2.5f);
+								iLocal_3638.f_14 = iLocal_3638.f_14 + BUILTIN::FLOOR((float)uLocal_1794[PLAYER::PLAYER_ID() /*8*/].f_1 * 2.5f);
 								iLocal_3638.f_15 = 1;
 								iLocal_3664.f_13 = iLocal_3664.f_13 + 1;
 								iLocal_3638.f_4 = -67503841;
@@ -10691,9 +10691,9 @@ void func_91() // Position - 0xA9D7 (43479)
 							{
 								if (!iLocal_2051.f_233)
 								{
-									iLocal_3664.f_3 = iLocal_3664.f_3 + SYSTEM::FLOOR((float)uLocal_1794[PLAYER::PLAYER_ID() /*8*/].f_2 * 2.5f);
-									iLocal_3638.f_6 = iLocal_3638.f_6 + SYSTEM::FLOOR((float)uLocal_1794[PLAYER::PLAYER_ID() /*8*/].f_2 * 2.5f);
-									iLocal_3638.f_14 = iLocal_3638.f_14 + SYSTEM::FLOOR((float)uLocal_1794[PLAYER::PLAYER_ID() /*8*/].f_2 * 2.5f);
+									iLocal_3664.f_3 = iLocal_3664.f_3 + BUILTIN::FLOOR((float)uLocal_1794[PLAYER::PLAYER_ID() /*8*/].f_2 * 2.5f);
+									iLocal_3638.f_6 = iLocal_3638.f_6 + BUILTIN::FLOOR((float)uLocal_1794[PLAYER::PLAYER_ID() /*8*/].f_2 * 2.5f);
+									iLocal_3638.f_14 = iLocal_3638.f_14 + BUILTIN::FLOOR((float)uLocal_1794[PLAYER::PLAYER_ID() /*8*/].f_2 * 2.5f);
 									iLocal_3638.f_15 = 1;
 									iLocal_3664.f_13 = iLocal_3664.f_13 + 1;
 								
@@ -14665,22 +14665,22 @@ float func_212(float fParam0, int iParam1) // Position - 0x13D72 (81266)
 	{
 		case 1:
 		case 6:
-			fParam0 = SYSTEM::POW(fParam0, 2f);
+			fParam0 = BUILTIN::POW(fParam0, 2f);
 			break;
 	
 		case 2:
 		case 7:
-			fParam0 = 1f - SYSTEM::POW(1f - fParam0, 2f);
+			fParam0 = 1f - BUILTIN::POW(1f - fParam0, 2f);
 			break;
 	
 		case 3:
 		case 8:
-			fParam0 = (-SYSTEM::COS(func_213(3.1415927f * fParam0)) / 2f) + 0.5f;
+			fParam0 = (-BUILTIN::COS(func_213(3.1415927f * fParam0)) / 2f) + 0.5f;
 			break;
 	
 		case 4:
 		case 9:
-			fParam0 = SYSTEM::POW(fParam0, 2f) * (3f - (2f * fParam0));
+			fParam0 = BUILTIN::POW(fParam0, 2f) * (3f - (2f * fParam0));
 			break;
 	}
 
@@ -15374,7 +15374,7 @@ void func_248(int iParam0, int iParam1) // Position - 0x14B7A (84858)
 	if ((value % 32) + 12 > 32)
 		num = 2;
 
-	num2 = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(value) / 32f);
+	num2 = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(value) / 32f);
 
 	if (num2 < 0)
 		return;
@@ -15415,8 +15415,8 @@ void func_249(var uParam0, int iParam1, int iParam2, int iParam3) // Position - 
 
 	num = (iParam1 + 1) * iParam2;
 	value = num - iParam2;
-	num2 = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(value) / 32f);
-	num3 = SYSTEM::CEIL(SYSTEM::TO_FLOAT(((value % 32) + iParam2) - 32) / 32f) + 1;
+	num2 = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(value) / 32f);
+	num3 = BUILTIN::CEIL(BUILTIN::TO_FLOAT(((value % 32) + iParam2) - 32) / 32f) + 1;
 
 	if ((num2 - 1) + num3 >= *uParam0)
 		return;
@@ -15465,8 +15465,8 @@ int func_250(var uParam0, int iParam1, int iParam2) // Position - 0x14D2D (85293
 
 	num = (iParam1 + 1) * iParam2;
 	value = num - iParam2;
-	num2 = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(value) / 32f);
-	num3 = SYSTEM::CEIL(SYSTEM::TO_FLOAT(((value % 32) + iParam2) - 32) / 32f) + 1;
+	num2 = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(value) / 32f);
+	num3 = BUILTIN::CEIL(BUILTIN::TO_FLOAT(((value % 32) + iParam2) - 32) / 32f) + 1;
 
 	if ((num2 - 1) + num3 >= *uParam0)
 		return 0;
@@ -16817,7 +16817,7 @@ void func_257(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 													num39 = 0.02f;
 													HUD::SET_TEXT_SCALE(0f, 0.35f * 0.7f);
 													HUD::SET_TEXT_COLOUR(255, 255, 255, 150);
-													GRAPHICS::DRAW_RECT(num24 - (num39 * 0.6f), y + (num37 * 0.75f), 0.0175f, 0.035f, SYSTEM::FLOOR(value), SYSTEM::FLOOR(value), SYSTEM::FLOOR(value), SYSTEM::FLOOR(value2), false);
+													GRAPHICS::DRAW_RECT(num24 - (num39 * 0.6f), y + (num37 * 0.75f), 0.0175f, 0.035f, BUILTIN::FLOOR(value), BUILTIN::FLOOR(value), BUILTIN::FLOOR(value), BUILTIN::FLOOR(value2), false);
 													HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT(&text);
 													HUD::ADD_TEXT_COMPONENT_INTEGER(Global_23970.f_6341 + num22);
 													HUD::END_TEXT_COMMAND_DISPLAY_TEXT(num24 - num39, y + num38, 0);
@@ -17438,7 +17438,7 @@ void func_270(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, int iParam
 	{
 		if (bParam0)
 		{
-			HUD::SET_TEXT_COLOUR(0, 0, 0, SYSTEM::FLOOR(255f * 0.8f));
+			HUD::SET_TEXT_COLOUR(0, 0, 0, BUILTIN::FLOOR(255f * 0.8f));
 		}
 		else
 		{
@@ -18456,7 +18456,7 @@ void func_288(int iParam0, BOOL bParam1) // Position - 0x19913 (104723)
 {
 	int num;
 
-	num = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(iParam0) / 32f);
+	num = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(iParam0) / 32f);
 
 	if (bParam1)
 		MISC::SET_BIT(&Global_23970.f_6618[num], iParam0 - (num * 32));
@@ -18479,27 +18479,27 @@ void func_289(BOOL bParam0, int* piParam1, int* piParam2, var uParam3) // Positi
 	}
 
 	GRAPHICS::GET_ACTUAL_SCREEN_RESOLUTION(piParam1, piParam2);
-	num = SYSTEM::TO_FLOAT(*piParam1);
-	value = SYSTEM::TO_FLOAT(*piParam2);
+	num = BUILTIN::TO_FLOAT(*piParam1);
+	value = BUILTIN::TO_FLOAT(*piParam2);
 	aspectRatio = GRAPHICS::GET_ASPECT_RATIO(false);
 
 	if (func_290(*piParam1, *piParam2))
 	{
 		*uParam3 = 1f;
-		*piParam1 = SYSTEM::ROUND(value * aspectRatio);
-		*piParam2 = SYSTEM::ROUND(value);
+		*piParam1 = BUILTIN::ROUND(value * aspectRatio);
+		*piParam2 = BUILTIN::ROUND(value);
 		return;
 	}
 
 	*uParam3 = num / value / aspectRatio;
-	*piParam1 = SYSTEM::ROUND(num / *uParam3);
-	*piParam2 = SYSTEM::ROUND(value / *uParam3);
+	*piParam1 = BUILTIN::ROUND(num / *uParam3);
+	*piParam2 = BUILTIN::ROUND(value / *uParam3);
 	return;
 }
 
 BOOL func_290(int iParam0, int iParam1) // Position - 0x199E7 (104935)
 {
-	return SYSTEM::TO_FLOAT(iParam0) / SYSTEM::TO_FLOAT(iParam1) > 3.5f;
+	return BUILTIN::TO_FLOAT(iParam0) / BUILTIN::TO_FLOAT(iParam1) > 3.5f;
 }
 
 BOOL func_291(int iParam0, BOOL bParam1, BOOL bParam2, var uParam3, var uParam4, BOOL bParam5) // Position - 0x19A02 (104962)
@@ -20032,7 +20032,7 @@ Vector3 func_365(float fParam0, var uParam1, var uParam2) // Position - 0x1B80F 
 	float num;
 	float num2;
 
-	num = SYSTEM::VMAG(fParam0);
+	num = BUILTIN::VMAG(fParam0);
 
 	if (num != 0f)
 	{
@@ -20134,7 +20134,7 @@ Vector3 func_366(int iParam0) // Position - 0x1B84E (112718)
 
 BOOL func_367(Ped pedParam0, Vector3 vParam1, var uParam2, var uParam3, float fParam4, BOOL bParam5) // Position - 0x1BA54 (113236)
 {
-	return SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(pedParam0, bParam5), vParam1) <= fParam4 * fParam4;
+	return BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(pedParam0, bParam5), vParam1) <= fParam4 * fParam4;
 }
 
 Vector3 func_368(int iParam0) // Position - 0x1BA72 (113266)
@@ -20709,7 +20709,7 @@ void func_393() // Position - 0x1C458 (115800)
 					
 						if (ENTITY::DOES_ENTITY_EXIST(iLocal_2051.f_648[num]))
 							if (ENTITY::GET_ENTITY_ALPHA(iLocal_2051.f_648[num]) > 0)
-								ENTITY::SET_ENTITY_ALPHA(iLocal_2051.f_648[num], SYSTEM::FLOOR(func_209(SYSTEM::TO_FLOAT(ENTITY::GET_ENTITY_ALPHA(iLocal_2051.f_648[num])), 0f, 0.1f, 0)), true);
+								ENTITY::SET_ENTITY_ALPHA(iLocal_2051.f_648[num], BUILTIN::FLOOR(func_209(BUILTIN::TO_FLOAT(ENTITY::GET_ENTITY_ALPHA(iLocal_2051.f_648[num])), 0f, 0.1f, 0)), true);
 							else
 								OBJECT::DELETE_OBJECT(&iLocal_2051.f_648[num]);
 					
@@ -20723,7 +20723,7 @@ void func_393() // Position - 0x1C458 (115800)
 					
 						if (ENTITY::DOES_ENTITY_EXIST(iLocal_2051.f_648[num]))
 							if (ENTITY::GET_ENTITY_ALPHA(iLocal_2051.f_648[num]) > 0)
-								ENTITY::SET_ENTITY_ALPHA(iLocal_2051.f_648[num], SYSTEM::FLOOR(func_209(SYSTEM::TO_FLOAT(ENTITY::GET_ENTITY_ALPHA(iLocal_2051.f_648[num])), 0f, 0.1f, 0)), true);
+								ENTITY::SET_ENTITY_ALPHA(iLocal_2051.f_648[num], BUILTIN::FLOOR(func_209(BUILTIN::TO_FLOAT(ENTITY::GET_ENTITY_ALPHA(iLocal_2051.f_648[num])), 0f, 0.1f, 0)), true);
 							else
 								OBJECT::DELETE_OBJECT(&iLocal_2051.f_648[num]);
 					
@@ -20738,7 +20738,7 @@ void func_393() // Position - 0x1C458 (115800)
 					{
 						if (ENTITY::DOES_ENTITY_EXIST(iLocal_2051.f_538[func_403(j, l, k)]))
 							if (ENTITY::GET_ENTITY_ALPHA(iLocal_2051.f_538[func_403(j, l, k)]) > 0)
-								ENTITY::SET_ENTITY_ALPHA(iLocal_2051.f_538[func_403(j, l, k)], SYSTEM::FLOOR(func_209(SYSTEM::TO_FLOAT(ENTITY::GET_ENTITY_ALPHA(iLocal_2051.f_538[func_403(j, l, k)])), 0f, 0.1f, 0)), true);
+								ENTITY::SET_ENTITY_ALPHA(iLocal_2051.f_538[func_403(j, l, k)], BUILTIN::FLOOR(func_209(BUILTIN::TO_FLOAT(ENTITY::GET_ENTITY_ALPHA(iLocal_2051.f_538[func_403(j, l, k)])), 0f, 0.1f, 0)), true);
 							else
 								OBJECT::DELETE_OBJECT(&iLocal_2051.f_538[func_403(j, l, k)]);
 					}
@@ -21001,13 +21001,13 @@ void func_393() // Position - 0x1C458 (115800)
 					{
 						if (ENTITY::DOES_ENTITY_EXIST(iLocal_2051.f_538[func_403(j, l, 0)]))
 							if (ENTITY::GET_ENTITY_ALPHA(iLocal_2051.f_538[func_403(j, l, 0)]) > 0)
-								ENTITY::SET_ENTITY_ALPHA(iLocal_2051.f_538[func_403(j, l, 0)], SYSTEM::FLOOR(func_209(SYSTEM::TO_FLOAT(ENTITY::GET_ENTITY_ALPHA(iLocal_2051.f_538[func_403(j, l, 0)])), 0f, 0.1f, 0)), true);
+								ENTITY::SET_ENTITY_ALPHA(iLocal_2051.f_538[func_403(j, l, 0)], BUILTIN::FLOOR(func_209(BUILTIN::TO_FLOAT(ENTITY::GET_ENTITY_ALPHA(iLocal_2051.f_538[func_403(j, l, 0)])), 0f, 0.1f, 0)), true);
 							else
 								OBJECT::DELETE_OBJECT(&iLocal_2051.f_538[func_403(j, l, 0)]);
 					
 						if (ENTITY::DOES_ENTITY_EXIST(iLocal_2051.f_538[func_403(j, l, 1)]))
 							if (ENTITY::GET_ENTITY_ALPHA(iLocal_2051.f_538[func_403(j, l, 1)]) > 0)
-								ENTITY::SET_ENTITY_ALPHA(iLocal_2051.f_538[func_403(j, l, 1)], SYSTEM::FLOOR(func_209(SYSTEM::TO_FLOAT(ENTITY::GET_ENTITY_ALPHA(iLocal_2051.f_538[func_403(j, l, 1)])), 0f, 0.1f, 0)), true);
+								ENTITY::SET_ENTITY_ALPHA(iLocal_2051.f_538[func_403(j, l, 1)], BUILTIN::FLOOR(func_209(BUILTIN::TO_FLOAT(ENTITY::GET_ENTITY_ALPHA(iLocal_2051.f_538[func_403(j, l, 1)])), 0f, 0.1f, 0)), true);
 							else
 								OBJECT::DELETE_OBJECT(&iLocal_2051.f_538[func_403(j, l, 1)]);
 					}
@@ -21215,13 +21215,13 @@ void func_393() // Position - 0x1C458 (115800)
 					{
 						if (ENTITY::DOES_ENTITY_EXIST(iLocal_2051.f_538[func_403(j, l, 2)]))
 							if (ENTITY::GET_ENTITY_ALPHA(iLocal_2051.f_538[func_403(j, l, 2)]) > 0)
-								ENTITY::SET_ENTITY_ALPHA(iLocal_2051.f_538[func_403(j, l, 2)], SYSTEM::FLOOR(func_209(SYSTEM::TO_FLOAT(ENTITY::GET_ENTITY_ALPHA(iLocal_2051.f_538[func_403(j, l, 2)])), 0f, 0.1f, 0)), true);
+								ENTITY::SET_ENTITY_ALPHA(iLocal_2051.f_538[func_403(j, l, 2)], BUILTIN::FLOOR(func_209(BUILTIN::TO_FLOAT(ENTITY::GET_ENTITY_ALPHA(iLocal_2051.f_538[func_403(j, l, 2)])), 0f, 0.1f, 0)), true);
 							else
 								OBJECT::DELETE_OBJECT(&iLocal_2051.f_538[func_403(j, l, 2)]);
 					
 						if (ENTITY::DOES_ENTITY_EXIST(iLocal_2051.f_538[func_403(j, l, 3)]))
 							if (ENTITY::GET_ENTITY_ALPHA(iLocal_2051.f_538[func_403(j, l, 3)]) > 0)
-								ENTITY::SET_ENTITY_ALPHA(iLocal_2051.f_538[func_403(j, l, 3)], SYSTEM::FLOOR(func_209(SYSTEM::TO_FLOAT(ENTITY::GET_ENTITY_ALPHA(iLocal_2051.f_538[func_403(j, l, 3)])), 0f, 0.1f, 0)), true);
+								ENTITY::SET_ENTITY_ALPHA(iLocal_2051.f_538[func_403(j, l, 3)], BUILTIN::FLOOR(func_209(BUILTIN::TO_FLOAT(ENTITY::GET_ENTITY_ALPHA(iLocal_2051.f_538[func_403(j, l, 3)])), 0f, 0.1f, 0)), true);
 							else
 								OBJECT::DELETE_OBJECT(&iLocal_2051.f_538[func_403(j, l, 3)]);
 					}
@@ -23678,7 +23678,7 @@ int func_403(int iParam0, int iParam1, int iParam2) // Position - 0x20C85 (13427
 
 BOOL func_404(int iParam0) // Position - 0x20C9B (134299)
 {
-	switch (SYSTEM::FLOOR((float)iParam0 / 32f))
+	switch (BUILTIN::FLOOR((float)iParam0 / 32f))
 	{
 		case 0:
 			return IS_BIT_SET(iLocal_2051.f_530, iParam0 % 32);
@@ -23710,7 +23710,7 @@ BOOL func_404(int iParam0) // Position - 0x20C9B (134299)
 
 void func_405(int iParam0) // Position - 0x20D49 (134473)
 {
-	switch (SYSTEM::FLOOR((float)iParam0 / 32f))
+	switch (BUILTIN::FLOOR((float)iParam0 / 32f))
 	{
 		case 0:
 			MISC::CLEAR_BIT(&(iLocal_2051.f_530), iParam0 % 32);
@@ -23746,7 +23746,7 @@ void func_405(int iParam0) // Position - 0x20D49 (134473)
 
 void func_406(int iParam0) // Position - 0x20E0B (134667)
 {
-	switch (SYSTEM::FLOOR((float)iParam0 / 32f))
+	switch (BUILTIN::FLOOR((float)iParam0 / 32f))
 	{
 		case 0:
 			MISC::SET_BIT(&(iLocal_2051.f_530), iParam0 % 32);
@@ -25019,7 +25019,7 @@ void func_453() // Position - 0x22643 (140867)
 		if (_SHOULD_NETWORK_SCRIPT_TERMINATE())
 			func_441();
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	instanceId = -1;
@@ -25108,7 +25108,7 @@ BOOL _NETWORK_WAIT_FOR_HOST_BROADCAST_DATA() // Position - 0x227F6 (141302)
 		if (num >= 3600)
 			return false;
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return false;
@@ -25157,7 +25157,7 @@ int func_455(int iParam0, int iParam1, BOOL bParam2) // Position - 0x2284F (1413
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (iParam1 > -1)

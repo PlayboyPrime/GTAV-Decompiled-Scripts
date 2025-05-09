@@ -212,7 +212,7 @@ void main() // Position - 0x0 (0)
 
 	while (!Global_39520)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	if (!func_90(iLocal_92, 8))
@@ -254,13 +254,13 @@ void main() // Position - 0x0 (0)
 		if (ENTITY::DOES_ENTITY_EXIST(pedLocal_83) && !ENTITY::IS_ENTITY_DEAD(pedLocal_83, false))
 		{
 			uLocal_85 = { ENTITY::GET_ENTITY_COORDS(pedLocal_83, true) };
-			fLocal_91 = SYSTEM::VDIST2(uLocal_85, uScriptParam_0.f_1[0 /*3*/]);
+			fLocal_91 = BUILTIN::VDIST2(uLocal_85, uScriptParam_0.f_1[0 /*3*/]);
 			fLocal_91 = fLocal_91;
 			uLocal_109 = { uLocal_85 };
 			uLocal_112 = { uScriptParam_0.f_1[0 /*3*/] };
 			uLocal_109.f_2 = 0f;
 			uLocal_112.f_2 = 0f;
-			fLocal_108 = SYSTEM::VDIST2(uLocal_109, uLocal_112);
+			fLocal_108 = BUILTIN::VDIST2(uLocal_109, uLocal_112);
 		
 			switch (iLocal_93)
 			{
@@ -603,7 +603,7 @@ void main() // Position - 0x0 (0)
 								func_26(PLAYER::PLAYER_PED_ID());
 						
 							PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), true, SPC_REMOVE_FIRES | 16 | 32);
-							iLocal_50 = SYSTEM::START_NEW_SCRIPT(&uLocal_67, essLocal_95);
+							iLocal_50 = BUILTIN::START_NEW_SCRIPT(&uLocal_67, essLocal_95);
 							SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED(&uLocal_67);
 							uLocal_51 = { uLocal_67 };
 							TEXT_LABEL_ASSIGN_STRING(&uLocal_67, "", 64);
@@ -647,7 +647,7 @@ void main() // Position - 0x0 (0)
 				
 					if (!SCRIPT::IS_THREAD_ACTIVE(iLocal_50))
 					{
-						STATS::PLAYSTATS_ODDJOB_DONE(SYSTEM::ROUND(func_11(&uLocal_105) * 1000f), iLocal_97, false);
+						STATS::PLAYSTATS_ODDJOB_DONE(BUILTIN::ROUND(func_11(&uLocal_105) * 1000f), iLocal_97, false);
 						func_10(&uLocal_105);
 						func_94(&iLocal_92, 256);
 						func_7();
@@ -799,7 +799,7 @@ void main() // Position - 0x0 (0)
 			}
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	}
 
 	return;
@@ -915,7 +915,7 @@ float func_12(BOOL bParam0) // Position - 0xD62 (3426)
 
 	if (bParam0)
 	{
-		num = SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER());
+		num = BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER());
 		num2 = num / 1000f;
 		return num2;
 	}
@@ -923,12 +923,12 @@ float func_12(BOOL bParam0) // Position - 0xD62 (3426)
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		networkTime = NETWORK::GET_NETWORK_TIME();
-		num3 = SYSTEM::TO_FLOAT(networkTime);
+		num3 = BUILTIN::TO_FLOAT(networkTime);
 		num4 = num3 / 1000f;
 		return num4;
 	}
 
-	return SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
+	return BUILTIN::TO_FLOAT(MISC::GET_GAME_TIMER()) / 1000f;
 }
 
 BOOL func_13(int* piParam0) // Position - 0xDBA (3514)
@@ -2276,7 +2276,7 @@ void func_91() // Position - 0x2982 (10626)
 	}
 
 	iLocal_103 = 68;
-	fLocal_100 = SYSTEM::TO_FLOAT(func_92(iLocal_103)) + 5f;
+	fLocal_100 = BUILTIN::TO_FLOAT(func_92(iLocal_103)) + 5f;
 	essLocal_95 = 63500;
 	return;
 }

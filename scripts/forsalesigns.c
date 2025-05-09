@@ -410,7 +410,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		if (func_55(105) == 1)
 			func_57();
@@ -645,12 +645,12 @@ void func_9() // Position - 0x443 (1091)
 				HUD::ADD_TEXT_COMPONENT_INTEGER(func_5(2));
 				GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 				GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-				SYSTEM::SETTIMERB(0);
+				BUILTIN::SETTIMERB(0);
 				iLocal_38 = iLocal_38 + 1;
 				break;
 		
 			case 2:
-				if (SYSTEM::TIMERB() > 7000)
+				if (BUILTIN::TIMERB() > 7000)
 				{
 					GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iLocal_39, "SHARD_ANIM_OUT");
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
@@ -666,7 +666,7 @@ void func_9() // Position - 0x443 (1091)
 				break;
 		
 			case 3:
-				if (SYSTEM::TIMERB() > 7500)
+				if (BUILTIN::TIMERB() > 7500)
 					iLocal_38 = iLocal_38 + 1;
 				else if (!func_10())
 					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(iLocal_39))
@@ -708,7 +708,7 @@ void func_11(var uParam0, Hash hParam1, BOOL bParam2, float fParam3) // Position
 			while (!STREAMING::HAS_MODEL_LOADED(hParam1))
 			{
 				STREAMING::REQUEST_MODEL(hParam1);
-				SYSTEM::WAIT(0);
+				BUILTIN::WAIT(0);
 			}
 		
 			if (bParam2)
@@ -736,10 +736,10 @@ void func_12(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x642 (160
 	
 		while (!INTERIOR::IS_INTERIOR_READY(interiorAtCoords))
 		{
-			SYSTEM::WAIT(0);
+			BUILTIN::WAIT(0);
 		}
 	
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 		INTERIOR::UNPIN_INTERIOR(interiorAtCoords);
 	}
 
@@ -748,7 +748,7 @@ void func_12(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x642 (160
 
 BOOL func_13(Ped pedParam0, Vector3 vParam1, var uParam2, var uParam3, float fParam4, BOOL bParam5) // Position - 0x680 (1664)
 {
-	return SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(pedParam0, bParam5), vParam1) <= fParam4 * fParam4;
+	return BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(pedParam0, bParam5), vParam1) <= fParam4 * fParam4;
 }
 
 void func_14(Object* pobParam0, var uParam1) // Position - 0x69E (1694)
@@ -2038,8 +2038,8 @@ void func_66() // Position - 0x1CEA (7402)
 	STATS::STAT_SET_INT(joaat("PERCENT_AMBIENT_MISSIONS"), Global_113879, true);
 	STATS::STAT_SET_INT(joaat("PERCENT_ODDJOBS"), Global_113880, true);
 
-	if (value > 0f && SYSTEM::FLOOR(value) < SYSTEM::FLOOR(Global_114135.f_10198.f_3853))
-		func_68(13, SYSTEM::FLOOR(Global_114135.f_10198.f_3853));
+	if (value > 0f && BUILTIN::FLOOR(value) < BUILTIN::FLOOR(Global_114135.f_10198.f_3853))
+		func_68(13, BUILTIN::FLOOR(Global_114135.f_10198.f_3853));
 
 	if (!DATAFILE::DATAFILE_IS_SAVE_PENDING())
 	{

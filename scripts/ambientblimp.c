@@ -68,7 +68,7 @@ void main() // Position - 0x0 (0)
 				break;
 		}
 	
-		SYSTEM::WAIT(1000);
+		BUILTIN::WAIT(1000);
 	}
 
 	return;

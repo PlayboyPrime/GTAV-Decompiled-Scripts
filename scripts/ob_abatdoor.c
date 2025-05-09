@@ -31,7 +31,7 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		SYSTEM::WAIT(0);
+		BUILTIN::WAIT(0);
 	
 		if (ENTITY::DOES_ENTITY_EXIST(obScriptParam_0))
 		{
@@ -130,7 +130,7 @@ Vector3 func_1(float fParam0, var uParam1, var uParam2) // Position - 0x1C6 (454
 	float num;
 	float num2;
 
-	num = SYSTEM::VMAG(fParam0);
+	num = BUILTIN::VMAG(fParam0);
 
 	if (num != 0f)
 	{
