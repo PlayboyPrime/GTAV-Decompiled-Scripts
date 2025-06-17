@@ -158,9 +158,9 @@ int func_3(int iParam0) // Position - 0x1B8 (440)
 		offset = iParam0 - 32;
 	}
 
-	if (IS_BIT_SET(Global_114162.f_9089.f_99.f_219[num], offset))
+	if (IS_BIT_SET(Global_114370.f_9089.f_99.f_219[num], offset))
 	{
-		MISC::CLEAR_BIT(&Global_114162.f_9089.f_99.f_219[num], offset);
+		MISC::CLEAR_BIT(&Global_114370.f_9089.f_99.f_219[num], offset);
 		return 1;
 	}
 
@@ -183,10 +183,10 @@ int func_4(int iParam0) // Position - 0x20F (527)
 		offset = iParam0 - 32;
 	}
 
-	if (IS_BIT_SET(Global_114162.f_9089.f_99.f_219[num], offset))
+	if (IS_BIT_SET(Global_114370.f_9089.f_99.f_219[num], offset))
 		return 0;
 
-	MISC::SET_BIT(&Global_114162.f_9089.f_99.f_219[num], offset);
+	MISC::SET_BIT(&Global_114370.f_9089.f_99.f_219[num], offset);
 	return 1;
 }
 

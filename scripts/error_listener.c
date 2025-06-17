@@ -159,15 +159,15 @@ BOOL func_4(eEventType eetParam0) // Position - 0x14F (335)
 
 BOOL _IS_FMMC_ACTIVE() // Position - 0x17D (381)
 {
-	return Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_193 != 0;
+	return Global_1845274[PLAYER::PLAYER_ID() /*877*/].f_185 != 0;
 }
 
 int func_6(var uParam0) // Position - 0x194 (404)
 {
-	if (Global_33384.f_61 < 20)
+	if (Global_33577.f_61 < 20)
 	{
-		Global_33384[Global_33384.f_61 /*3*/] = { *uParam0 };
-		Global_33384.f_61 = Global_33384.f_61 + 1;
+		Global_33577[Global_33577.f_61 /*3*/] = { *uParam0 };
+		Global_33577.f_61 = Global_33577.f_61 + 1;
 		return 1;
 	}
 
@@ -179,9 +179,9 @@ BOOL func_7(var uParam0, var uParam1) // Position - 0x1C7 (455)
 	*uParam1 = 0;
 	*uParam1 = 0;
 
-	while (*uParam1 < Global_33384.f_61)
+	while (*uParam1 < Global_33577.f_61)
 	{
-		if (Global_33384[*uParam1 /*3*/] == *uParam0 && Global_33384[*uParam1 /*3*/].f_2 == uParam0->f_2)
+		if (Global_33577[*uParam1 /*3*/] == *uParam0 && Global_33577[*uParam1 /*3*/].f_2 == uParam0->f_2)
 			return true;
 	
 		*uParam1 = *uParam1 + 1;

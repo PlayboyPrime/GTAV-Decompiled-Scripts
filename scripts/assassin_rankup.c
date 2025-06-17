@@ -78,7 +78,7 @@ void main() // Position - 0x0 (0)
 	{
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
-			Global_114162.f_19967 = Global_114162.f_19967 + 1;
+			Global_114370.f_19967 = Global_114370.f_19967 + 1;
 			func_1();
 			SCRIPT::TERMINATE_THIS_THREAD();
 		}
@@ -91,7 +91,7 @@ void main() // Position - 0x0 (0)
 
 void func_1() // Position - 0xAD (173)
 {
-	func_2(&(Global_114162.f_19967.f_1), 2048);
+	func_2(&(Global_114370.f_19967.f_1), 2048);
 	return;
 }
 

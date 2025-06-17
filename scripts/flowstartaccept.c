@@ -95,8 +95,8 @@ void main() // Position - 0x0 (0)
 		func_1();
 	}
 
-	Global_79835.f_1 = 0;
-	MISC::SET_BIT(&(Global_114162.f_10020.f_25), 0);
+	Global_80039.f_1 = 0;
+	MISC::SET_BIT(&(Global_114370.f_10020.f_25), 0);
 	func_6();
 	return;
 }
@@ -106,13 +106,13 @@ int func_1() // Position - 0x17D (381)
 	if (func_2(false))
 		return 0;
 
-	if (Global_101752.f_8)
-		if (Global_101752.f_10 > 0)
+	if (Global_101956.f_8)
+		if (Global_101956.f_10 > 0)
 			return 0;
-	else if (Global_101752.f_10 > 1)
+	else if (Global_101956.f_10 > 1)
 		return 0;
 
-	Global_101752.f_10 = Global_101752.f_10 + 1;
+	Global_101956.f_10 = Global_101956.f_10 + 1;
 	return 1;
 }
 
@@ -121,13 +121,13 @@ BOOL func_2(BOOL bParam0) // Position - 0x1C8 (456)
 	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
-	return IS_BIT_SET(Global_79813, 0);
+	return IS_BIT_SET(Global_80017, 0);
 }
 
 void func_3(int iParam0, int iParam1) // Position - 0x1F0 (496)
 {
-	Global_101752.f_7 = iParam0;
-	Global_101752.f_8 = iParam1;
+	Global_101956.f_7 = iParam0;
+	Global_101956.f_8 = iParam1;
 	return;
 }
 

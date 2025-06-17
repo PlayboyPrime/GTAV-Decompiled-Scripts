@@ -117,10 +117,10 @@ void main() // Position - 0x0 (0)
 				
 					if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 					{
-						if (func_8(PLAYER::PLAYER_ID(), false) && func_4(PLAYER::PLAYER_ID()) == 5 && Global_1963524)
+						if (func_8(PLAYER::PLAYER_ID(), false) && func_4(PLAYER::PLAYER_ID()) == 5 && Global_1965616)
 						{
-							if (Global_1963525 == 0)
-								Global_1963525 = 1;
+							if (Global_1965617 == 0)
+								Global_1965617 = 1;
 						
 							iLocal_41 = 5;
 						}
@@ -150,10 +150,10 @@ void main() // Position - 0x0 (0)
 					}
 					else if (MISC::CREATE_INCIDENT(DT_FireDepartment, uLocal_43, 4, 3f, &iLocal_47, 0, 0))
 					{
-						if (Global_98185.f_358 == MISC::GET_HASH_KEY("AGENCY_PREP_1") || SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(MISC::GET_HASH_KEY("agency_prep1")) > 0 && func_3(false))
-							Global_98185.f_358 = MISC::GET_HASH_KEY("AHP1_TRUCKCALLED");
+						if (Global_98389.f_358 == MISC::GET_HASH_KEY("AGENCY_PREP_1") || SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(MISC::GET_HASH_KEY("agency_prep1")) > 0 && func_3(false))
+							Global_98389.f_358 = MISC::GET_HASH_KEY("AHP1_TRUCKCALLED");
 						else if (func_2(67) && !func_2(68))
-							Global_98115 = 1;
+							Global_98319 = 1;
 					
 						iLocal_46 = MISC::GET_GAME_TIMER();
 						iLocal_41 = 5;
@@ -188,7 +188,7 @@ BOOL func_2(int iParam0) // Position - 0x28C (652)
 	if (iParam0 == 94 || iParam0 == -1)
 		return false;
 
-	return Global_114162.f_9089.f_330[iParam0 /*6*/];
+	return Global_114370.f_9089.f_330[iParam0 /*6*/];
 }
 
 BOOL func_3(BOOL bParam0) // Position - 0x2B8 (696)
@@ -196,7 +196,7 @@ BOOL func_3(BOOL bParam0) // Position - 0x2B8 (696)
 	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
-	return IS_BIT_SET(Global_79813, 0);
+	return IS_BIT_SET(Global_80017, 0);
 }
 
 int func_4(Player plParam0) // Position - 0x2E0 (736)
@@ -210,7 +210,7 @@ int func_4(Player plParam0) // Position - 0x2E0 (736)
 int func_5(Player plParam0) // Position - 0x2FD (765)
 {
 	if (func_8(plParam0, false))
-		return Global_1887694[plParam0 /*611*/].f_10.f_182;
+		return Global_1888882[plParam0 /*611*/].f_10.f_182;
 
 	return -1;
 }
@@ -219,7 +219,7 @@ int func_6(Player plParam0) // Position - 0x320 (800)
 {
 	if (func_7(plParam0))
 		if (func_8(plParam0, false))
-			return Global_1887694[plParam0 /*611*/].f_10.f_33;
+			return Global_1888882[plParam0 /*611*/].f_10.f_33;
 
 	return -1;
 }
@@ -242,7 +242,7 @@ BOOL func_7(Player plParam0) // Position - 0x34C (844)
 BOOL func_8(Player plParam0, BOOL bParam1) // Position - 0x36E (878)
 {
 	if (func_7(plParam0))
-		if (Global_1887694[plParam0 /*611*/].f_10.f_33 != -1 || bParam1 && Global_1887694[plParam0 /*611*/].f_10.f_32 != -1)
+		if (Global_1888882[plParam0 /*611*/].f_10.f_33 != -1 || bParam1 && Global_1888882[plParam0 /*611*/].f_10.f_32 != -1)
 			return true;
 
 	return false;
@@ -450,34 +450,34 @@ void func_13(int iParam0) // Position - 0x77D (1917)
 	if (func_18())
 		return;
 
-	if (Global_21301)
+	if (Global_21461)
 		if (func_17())
 			func_15(true, true);
 		else
 			func_15(false, false);
 
-	if (Global_21083.f_1 == 10 || Global_21083.f_1 == 9)
-		MISC::SET_BIT(&Global_8920, 16);
+	if (Global_21239.f_1 == 10 || Global_21239.f_1 == 9)
+		MISC::SET_BIT(&Global_9076, 16);
 
 	if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
 		AUDIO::STOP_SCRIPTED_CONVERSATION(false);
 
-	Global_22442 = 5;
+	Global_22602 = 5;
 
 	if (iParam0 == 1)
-		MISC::SET_BIT(&Global_8919, 30);
+		MISC::SET_BIT(&Global_9075, 30);
 	else
-		MISC::CLEAR_BIT(&Global_8919, 30);
+		MISC::CLEAR_BIT(&Global_9075, 30);
 
 	if (!func_14())
-		Global_21083.f_1 = 3;
+		Global_21239.f_1 = 3;
 
 	return;
 }
 
 BOOL func_14() // Position - 0x807 (2055)
 {
-	if (Global_21083.f_1 == 1 || Global_21083.f_1 == 0)
+	if (Global_21239.f_1 == 1 || Global_21239.f_1 == 0)
 		return true;
 
 	return false;
@@ -489,24 +489,24 @@ void func_15(BOOL bParam0, BOOL bParam1) // Position - 0x82E (2094)
 	{
 		if (func_16(0))
 		{
-			Global_21301 = true;
+			Global_21461 = true;
 		
 			if (bParam1)
-				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_21020);
+				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_21176);
 		
-			Global_21011 = { Global_21029[Global_21028 /*3*/] };
-			MOBILE::SET_MOBILE_PHONE_POSITION(Global_21011);
+			Global_21167 = { Global_21185[Global_21184 /*3*/] };
+			MOBILE::SET_MOBILE_PHONE_POSITION(Global_21167);
 		}
 	}
-	else if (Global_21301 == true)
+	else if (Global_21461 == true)
 	{
-		Global_21301 = false;
-		Global_21011 = { Global_21036[Global_21028 /*3*/] };
+		Global_21461 = false;
+		Global_21167 = { Global_21192[Global_21184 /*3*/] };
 	
 		if (bParam1)
-			MOBILE::SET_MOBILE_PHONE_POSITION(Global_21020);
+			MOBILE::SET_MOBILE_PHONE_POSITION(Global_21176);
 		else
-			MOBILE::SET_MOBILE_PHONE_POSITION(Global_21011);
+			MOBILE::SET_MOBILE_PHONE_POSITION(Global_21167);
 	}
 
 	return;
@@ -515,8 +515,8 @@ void func_15(BOOL bParam0, BOOL bParam1) // Position - 0x82E (2094)
 BOOL func_16(int iParam0) // Position - 0x8A2 (2210)
 {
 	if (iParam0 == 1)
-		if (Global_21083.f_1 > 3)
-			if (IS_BIT_SET(Global_8919, 14))
+		if (Global_21239.f_1 > 3)
+			if (IS_BIT_SET(Global_9075, 14))
 				return true;
 			else
 				return false;
@@ -526,7 +526,7 @@ BOOL func_16(int iParam0) // Position - 0x8A2 (2210)
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("cellphone_flashhand")) > 0)
 		return true;
 
-	if (Global_21083.f_1 > 3)
+	if (Global_21239.f_1 > 3)
 		return true;
 
 	return false;
@@ -534,22 +534,22 @@ BOOL func_16(int iParam0) // Position - 0x8A2 (2210)
 
 BOOL func_17() // Position - 0x8F9 (2297)
 {
-	return IS_BIT_SET(Global_1958240, 5);
+	return IS_BIT_SET(Global_1960332, 5);
 }
 
 BOOL func_18() // Position - 0x907 (2311)
 {
-	return IS_BIT_SET(Global_1958240, 19);
+	return IS_BIT_SET(Global_1960332, 19);
 }
 
 int func_19() // Position - 0x916 (2326)
 {
-	return Global_23459;
+	return Global_23619;
 }
 
 BOOL func_20() // Position - 0x921 (2337)
 {
-	if (Global_22442 == 0)
+	if (Global_22602 == 0)
 		return true;
 
 	return false;

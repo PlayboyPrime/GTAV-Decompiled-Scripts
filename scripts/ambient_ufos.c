@@ -175,7 +175,7 @@ void main() // Position - 0x0 (0)
 	{
 		func_11(PLAYER::PLAYER_PED_ID());
 	
-		if (Global_33110 == 1)
+		if (Global_33303 == 1)
 			func_12();
 	
 		if (bLocal_84)

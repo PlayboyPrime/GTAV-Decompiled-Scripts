@@ -103,36 +103,36 @@
 	var uLocal_101 = 0;
 	var uLocal_102 = 0;
 	var uLocal_103 = 0;
-	var uLocal_104 = -1;
+	var uLocal_104 = 0;
 	var uLocal_105 = 0;
-	var uLocal_106 = 0;
+	var uLocal_106 = -1;
 	var uLocal_107 = 0;
 	var uLocal_108 = 0;
 	var uLocal_109 = 0;
 	var uLocal_110 = 0;
 	var uLocal_111 = 0;
 	var uLocal_112 = 0;
-	var uLocal_113 = -2;
-	var uLocal_114 = -2;
+	var uLocal_113 = 0;
+	var uLocal_114 = 0;
 	var uLocal_115 = -2;
-	var uLocal_116 = 5;
-	var uLocal_117 = 0;
-	var uLocal_118 = 0;
+	var uLocal_116 = -2;
+	var uLocal_117 = -2;
+	var uLocal_118 = 5;
 	var uLocal_119 = 0;
 	var uLocal_120 = 0;
 	var uLocal_121 = 0;
-	var uLocal_122 = 2;
+	var uLocal_122 = 0;
 	var uLocal_123 = 0;
-	var uLocal_124 = 0;
-	var uLocal_125 = 2;
+	var uLocal_124 = 2;
+	var uLocal_125 = 0;
 	var uLocal_126 = 0;
-	var uLocal_127 = 0;
-	float fLocal_128 = 0f;
-	float fLocal_129 = 0f;
+	var uLocal_127 = 2;
+	var uLocal_128 = 0;
+	var uLocal_129 = 0;
 	float fLocal_130 = 0f;
 	float fLocal_131 = 0f;
-	var uLocal_132 = 0;
-	var uLocal_133 = 0;
+	float fLocal_132 = 0f;
+	float fLocal_133 = 0f;
 	var uLocal_134 = 0;
 	var uLocal_135 = 0;
 	var uLocal_136 = 0;
@@ -144,11 +144,11 @@
 	var uLocal_142 = 0;
 	var uLocal_143 = 0;
 	var uLocal_144 = 0;
-	int iLocal_145 = 0;
+	var uLocal_145 = 0;
 	var uLocal_146 = 0;
-	float fLocal_147 = 0f;
+	int iLocal_147 = 0;
 	var uLocal_148 = 0;
-	var uLocal_149 = 0;
+	float fLocal_149 = 0f;
 	var uLocal_150 = 0;
 	var uLocal_151 = 0;
 	var uLocal_152 = 0;
@@ -162,7 +162,10 @@
 	var uLocal_160 = 0;
 	var uLocal_161 = 0;
 	var uLocal_162 = 0;
-	int iLocal_163 = 0;
+	var uLocal_163 = 0;
+	var uLocal_164 = 0;
+	int iLocal_165 = 0;
+	BOOL bLocal_166 = 0;
 	int iScriptParam_0 = 0;
 	var uScriptParam_1 = 0;
 	var uScriptParam_2 = 0;
@@ -199,15 +202,26 @@ void main() // Position - 0x0 (0)
 	iLocal_41 = 64;
 	fLocal_61 = (0.05f + 0.275f) - 0.01f;
 	fLocal_63 = 0f;
-	fLocal_128 = 3f;
-	fLocal_129 = 0f;
-	fLocal_130 = 2f;
-	fLocal_131 = 100f;
-	iLocal_145 = -1;
-	fLocal_147 = 0.5f;
+	fLocal_130 = 3f;
+	fLocal_131 = 0f;
+	fLocal_132 = 2f;
+	fLocal_133 = 100f;
+	iLocal_147 = -1;
+	fLocal_149 = 0.5f;
 	HUD::FORCE_SCRIPTED_GFX_WHEN_FRONTEND_ACTIVE(1);
 	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
 	flag = func_110();
+
+	if (flag)
+	{
+		func_108(true, 0, 3, "PM_SCR_CARBODY" /*Ever wondered how you're doing in life? Here you can see all the challenges you've completed in your GTA Online career, and all the possibilities still ahead of you.~n~~n~Discover new challenges, dive into more of the stuff you love, track your progress, and earn massive rewards across a huge range of updates.~n~~n~First time here? Some challenges factor in your progress so far, so may already be marked as complete. Other challenges may be familiar, but start with a clean slate, right now.*/, "PM_SCR_CARHEAD" /*Career Progress*/, 0, "", "", -1, 0, false);
+		bLocal_166 = true;
+	}
+	else if (!flag)
+	{
+		func_108(true, 0, 3, "PM_INF_QMF6" /*Currently unavailable.*/, "PM_SCR_CARHEAD" /*Career Progress*/, 0, "", "", -1, 0, false);
+		bLocal_166 = false;
+	}
 
 	switch (iScriptParam_0)
 	{
@@ -216,32 +230,38 @@ void main() // Position - 0x0 (0)
 			{
 				BUILTIN::WAIT(0);
 			
-				if (!Global_78331)
+				if (!Global_78536)
 					HUD::PAUSE_MENU_ACTIVATE_CONTEXT(-1868898341);
 			
 				flag = func_110();
 			
-				if (flag)
+				if (!bLocal_166 && flag)
+				{
 					func_108(true, 0, 3, "PM_SCR_CARBODY" /*Ever wondered how you're doing in life? Here you can see all the challenges you've completed in your GTA Online career, and all the possibilities still ahead of you.~n~~n~Discover new challenges, dive into more of the stuff you love, track your progress, and earn massive rewards across a huge range of updates.~n~~n~First time here? Some challenges factor in your progress so far, so may already be marked as complete. Other challenges may be familiar, but start with a clean slate, right now.*/, "PM_SCR_CARHEAD" /*Career Progress*/, 0, "", "", -1, 0, false);
-				else
+					bLocal_166 = true;
+				}
+				else if (bLocal_166 && !flag)
+				{
 					func_108(true, 0, 3, "PM_INF_QMF6" /*Currently unavailable.*/, "PM_SCR_CARHEAD" /*Career Progress*/, 0, "", "", -1, 0, false);
+					bLocal_166 = false;
+				}
 			
-				Global_78330 = 1;
+				Global_78535 = 1;
 			
 				if (!func_107())
 				{
-					if (iLocal_163 && func_8())
+					if (iLocal_165 && func_8())
 					{
 						HUD::RELEASE_CONTROL_OF_FRONTEND();
 						HUD::SET_FRONTEND_ACTIVE(false);
 					}
 				
-					if (PAD::IS_CONTROL_JUST_RELEASED(FRONTEND_CONTROL, INPUT_FRONTEND_ACCEPT) || Global_78329 || Global_78332)
+					if (PAD::IS_CONTROL_JUST_RELEASED(FRONTEND_CONTROL, INPUT_FRONTEND_ACCEPT) || Global_78534 || Global_78537)
 					{
 						if (flag)
 						{
-							Global_78328 = 1;
-							iLocal_163 = 1;
+							Global_78533 = 1;
+							iLocal_165 = 1;
 							func_7();
 							func_1(0);
 						}
@@ -250,7 +270,7 @@ void main() // Position - 0x0 (0)
 					if (PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_CANCEL) || PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_LEFT) || PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_RIGHT) || PAD::IS_CONTROL_JUST_RELEASED(FRONTEND_CONTROL, INPUT_FRONTEND_RB) || PAD::IS_CONTROL_JUST_RELEASED(FRONTEND_CONTROL, INPUT_FRONTEND_LB))
 					{
 						HUD::RELEASE_CONTROL_OF_FRONTEND();
-						Global_78326 = 0;
+						Global_78531 = 0;
 					}
 				}
 			}
@@ -270,82 +290,82 @@ void main() // Position - 0x0 (0)
 	HUD::PAUSE_MENU_DEACTIVATE_CONTEXT(joaat("HIDE_ACCEPTBUTTON"));
 	HUD::PAUSE_MENU_REDRAW_INSTRUCTIONAL_BUTTONS(0);
 	HUD::RELEASE_CONTROL_OF_FRONTEND();
-	Global_78330 = 0;
+	Global_78535 = 0;
 	return;
 }
 
-void func_1(int iParam0) // Position - 0x1F2 (498)
+void func_1(int iParam0) // Position - 0x24E (590)
 {
 	if (func_6())
 		return;
 
-	if (Global_21301)
+	if (Global_21461)
 		if (func_5())
 			func_3(true, true);
 		else
 			func_3(false, false);
 
-	if (Global_21083.f_1 == 10 || Global_21083.f_1 == 9)
-		MISC::SET_BIT(&Global_8920, 16);
+	if (Global_21239.f_1 == 10 || Global_21239.f_1 == 9)
+		MISC::SET_BIT(&Global_9076, 16);
 
 	if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
 		AUDIO::STOP_SCRIPTED_CONVERSATION(false);
 
-	Global_22442 = 5;
+	Global_22602 = 5;
 
 	if (iParam0 == 1)
-		MISC::SET_BIT(&Global_8919, 30);
+		MISC::SET_BIT(&Global_9075, 30);
 	else
-		MISC::CLEAR_BIT(&Global_8919, 30);
+		MISC::CLEAR_BIT(&Global_9075, 30);
 
 	if (!func_2())
-		Global_21083.f_1 = 3;
+		Global_21239.f_1 = 3;
 
 	return;
 }
 
-BOOL func_2() // Position - 0x27C (636)
+BOOL func_2() // Position - 0x2D8 (728)
 {
-	if (Global_21083.f_1 == 1 || Global_21083.f_1 == 0)
+	if (Global_21239.f_1 == 1 || Global_21239.f_1 == 0)
 		return true;
 
 	return false;
 }
 
-void func_3(BOOL bParam0, BOOL bParam1) // Position - 0x2A3 (675)
+void func_3(BOOL bParam0, BOOL bParam1) // Position - 0x2FF (767)
 {
 	if (bParam0)
 	{
 		if (func_4(0))
 		{
-			Global_21301 = true;
+			Global_21461 = true;
 		
 			if (bParam1)
-				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_21020);
+				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_21176);
 		
-			Global_21011 = { Global_21029[Global_21028 /*3*/] };
-			MOBILE::SET_MOBILE_PHONE_POSITION(Global_21011);
+			Global_21167 = { Global_21185[Global_21184 /*3*/] };
+			MOBILE::SET_MOBILE_PHONE_POSITION(Global_21167);
 		}
 	}
-	else if (Global_21301 == true)
+	else if (Global_21461 == true)
 	{
-		Global_21301 = false;
-		Global_21011 = { Global_21036[Global_21028 /*3*/] };
+		Global_21461 = false;
+		Global_21167 = { Global_21192[Global_21184 /*3*/] };
 	
 		if (bParam1)
-			MOBILE::SET_MOBILE_PHONE_POSITION(Global_21020);
+			MOBILE::SET_MOBILE_PHONE_POSITION(Global_21176);
 		else
-			MOBILE::SET_MOBILE_PHONE_POSITION(Global_21011);
+			MOBILE::SET_MOBILE_PHONE_POSITION(Global_21167);
 	}
 
 	return;
 }
 
-BOOL func_4(int iParam0) // Position - 0x317 (791)
+BOOL func_4(int iParam0) // Position - 0x373 (883)
 {
 	if (iParam0 == 1)
-		if (Global_21083.f_1 > 3)
-			if (IS_BIT_SET(Global_8919, 14))
+		if (Global_21239.f_1 > 3)
+			if (IS_BIT_SET(Global_9075, 14))
 				return true;
 			else
 				return false;
@@ -355,29 +375,29 @@ BOOL func_4(int iParam0) // Position - 0x317 (791)
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("cellphone_flashhand")) > 0)
 		return true;
 
-	if (Global_21083.f_1 > 3)
+	if (Global_21239.f_1 > 3)
 		return true;
 
 	return false;
 }
 
-BOOL func_5() // Position - 0x36E (878)
+BOOL func_5() // Position - 0x3CA (970)
 {
-	return IS_BIT_SET(Global_1958240, 5);
+	return IS_BIT_SET(Global_1960332, 5);
 }
 
-BOOL func_6() // Position - 0x37C (892)
+BOOL func_6() // Position - 0x3D8 (984)
 {
-	return IS_BIT_SET(Global_1958240, 19);
+	return IS_BIT_SET(Global_1960332, 19);
 }
 
-void func_7() // Position - 0x38B (907)
+void func_7() // Position - 0x3E7 (999)
 {
-	Global_76661 = 1;
+	Global_76858 = 1;
 	return;
 }
 
-int func_8() // Position - 0x398 (920)
+int func_8() // Position - 0x3F4 (1012)
 {
 	Hash hash;
 	int num;
@@ -385,44 +405,46 @@ int func_8() // Position - 0x398 (920)
 
 	hash = 0;
 
-	if (IS_BIT_SET(Global_1982268, 0))
+	if (IS_BIT_SET(Global_1985098, 0))
 		hash = -1627077503;
-	else if (IS_BIT_SET(Global_1982268, 1))
+	else if (IS_BIT_SET(Global_1985098, 1))
 		hash = joaat("youga4");
-	else if (IS_BIT_SET(Global_1982268, 2))
+	else if (IS_BIT_SET(Global_1985098, 2))
 		hash = joaat("turismo2");
-	else if (IS_BIT_SET(Global_1982268, 3))
+	else if (IS_BIT_SET(Global_1985098, 3))
 		hash = joaat("winky");
-	else if (IS_BIT_SET(Global_1982268, 4))
+	else if (IS_BIT_SET(Global_1985098, 4))
 		hash = joaat("furia");
-	else if (IS_BIT_SET(Global_1982268, 5))
+	else if (IS_BIT_SET(Global_1985098, 5))
 		hash = joaat("paragon");
-	else if (IS_BIT_SET(Global_1982268, 6))
+	else if (IS_BIT_SET(Global_1985098, 6))
 		hash = joaat("barrage");
-	else if (IS_BIT_SET(Global_1982268, 7))
+	else if (IS_BIT_SET(Global_1985098, 7))
 		hash = joaat("stafford");
-	else if (IS_BIT_SET(Global_1982268, 8))
+	else if (IS_BIT_SET(Global_1985098, 8))
 		hash = joaat("havok");
-	else if (IS_BIT_SET(Global_1982268, 9))
+	else if (IS_BIT_SET(Global_1985098, 9))
 		hash = joaat("dune3");
-	else if (IS_BIT_SET(Global_1982268, 10))
+	else if (IS_BIT_SET(Global_1985098, 10))
 		hash = joaat("nero2");
-	else if (IS_BIT_SET(Global_1982268, 11))
+	else if (IS_BIT_SET(Global_1985098, 11))
 		hash = joaat("daemon");
-	else if (IS_BIT_SET(Global_1982268, 12))
+	else if (IS_BIT_SET(Global_1985098, 12))
 		hash = joaat("windsor2");
-	else if (IS_BIT_SET(Global_1982268, 13))
+	else if (IS_BIT_SET(Global_1985098, 13))
 		hash = joaat("kuruma2");
-	else if (IS_BIT_SET(Global_1982268, 14))
+	else if (IS_BIT_SET(Global_1985098, 14))
 		hash = joaat("slamtruck");
-	else if (IS_BIT_SET(Global_1982268, 15))
+	else if (IS_BIT_SET(Global_1985098, 15))
 		hash = joaat("speedo5");
-	else if (IS_BIT_SET(Global_1982268, 16))
+	else if (IS_BIT_SET(Global_1985098, 16))
 		hash = joaat("buzzard");
-	else if (IS_BIT_SET(Global_1982268, 17))
+	else if (IS_BIT_SET(Global_1985098, 17))
 		hash = 1307736079;
-	else if (IS_BIT_SET(Global_1982268, 18))
+	else if (IS_BIT_SET(Global_1985098, 18))
 		hash = -973016778;
+	else if (IS_BIT_SET(Global_1985098, 19))
+		hash = joaat("pony2");
 
 	if (hash != 0 && func_106(hash, -1))
 	{
@@ -447,7 +469,7 @@ int func_8() // Position - 0x398 (920)
 }
 
 // Unhandled jump detected. Output should be considered invalid
-int func_9(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, BOOL bParam5, int iParam6, BOOL bParam7) // Position - 0x55D (1373)
+int func_9(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, BOOL bParam5, int iParam6, BOOL bParam7) // Position - 0x5CD (1485)
 {
 	int i;
 	int num;
@@ -494,13 +516,13 @@ int func_9(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, BO
 								return num6;
 					}
 				}
-				else if (Global_1586543[num6 /*143*/].f_66 == 0)
+				else if (Global_1586547[num6 /*143*/].f_66 == 0)
 				{
 					return num5;
 				}
 				else if (bParam1)
 				{
-					if (IS_BIT_SET(Global_1586543[num6 /*143*/].f_104, 0))
+					if (IS_BIT_SET(Global_1586547[num6 /*143*/].f_104, 0))
 						return num5;
 				}
 			}
@@ -568,11 +590,11 @@ int func_9(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, BO
 					if (num6 != -1)
 						return num6;
 					else
-						goto 0x501;
+						goto 0x4F6;
 				}
 			
 				if (func_38(i, iParam4) <= 131)
-					num3 = Global_1312333[func_38(i, iParam4) /*1951*/].f_33;
+					num3 = Global_1312335[func_38(i, iParam4) /*1951*/].f_33;
 				else
 					num3 = 0;
 			
@@ -628,11 +650,11 @@ int func_9(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, BO
 			
 				num = num + func_21(i, -1);
 			
-				if (func_38(i, iParam4) == 129 && iParam6 != -1)
-					num = func_21(i, -1) + (iParam6 * 10);
-			
-				if (func_38(i, iParam4) == 131 && iParam6 != -1)
-					num = func_21(i, -1) + (iParam6 * 20);
+				if (iParam6 != -1)
+					if (func_38(i, iParam4) == 129)
+						num = func_21(i, -1) + (iParam6 * 10);
+					else if (func_38(i, iParam4) == 131)
+						num = func_21(i, -1) + (iParam6 * 20);
 			
 				num6 = -1;
 				num5 = -1;
@@ -647,7 +669,7 @@ int func_9(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, BO
 	return -1;
 }
 
-int func_10(int iParam0, int iParam1, int iParam2, BOOL bParam3, Hash hParam4, int iParam5, int iParam6, BOOL bParam7) // Position - 0xA6B (2667)
+int func_10(int iParam0, int iParam1, int iParam2, BOOL bParam3, Hash hParam4, int iParam5, int iParam6, BOOL bParam7) // Position - 0xAD0 (2768)
 {
 	int i;
 	int num;
@@ -690,13 +712,13 @@ int func_10(int iParam0, int iParam1, int iParam2, BOOL bParam3, Hash hParam4, i
 										return num;
 							}
 						}
-						else if (Global_1586543[num /*143*/].f_66 == 0)
+						else if (Global_1586547[num /*143*/].f_66 == 0)
 						{
 							return num2;
 						}
 						else if (bParam3)
 						{
-							if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 0))
+							if (IS_BIT_SET(Global_1586547[num /*143*/].f_104, 0))
 								return num2;
 						}
 					}
@@ -725,7 +747,7 @@ int func_10(int iParam0, int iParam1, int iParam2, BOOL bParam3, Hash hParam4, i
 						if (bParam7)
 							if (func_64(func_67(4, num), iParam6) == 0)
 								return num2;
-						else if (Global_1586543[num /*143*/].f_66 == 0)
+						else if (Global_1586547[num /*143*/].f_66 == 0)
 							return num2;
 					else
 						return num2;
@@ -755,7 +777,7 @@ int func_10(int iParam0, int iParam1, int iParam2, BOOL bParam3, Hash hParam4, i
 								if (IS_BIT_SET(num3, 0))
 									return num2;
 							}
-							else if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 0))
+							else if (IS_BIT_SET(Global_1586547[num /*143*/].f_104, 0))
 							{
 								return num2;
 							}
@@ -789,7 +811,7 @@ int func_10(int iParam0, int iParam1, int iParam2, BOOL bParam3, Hash hParam4, i
 							if (IS_BIT_SET(num3, 1) && !IS_BIT_SET(num3, 2))
 								return num2;
 						}
-						else if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 1) && !IS_BIT_SET(Global_1586543[num /*143*/].f_104, 2))
+						else if (IS_BIT_SET(Global_1586547[num /*143*/].f_104, 1) && !IS_BIT_SET(Global_1586547[num /*143*/].f_104, 2))
 						{
 							return num2;
 						}
@@ -836,18 +858,18 @@ int func_10(int iParam0, int iParam1, int iParam2, BOOL bParam3, Hash hParam4, i
 									return num2;
 							}
 						}
-						else if (Global_1586543[num /*143*/].f_66 == 0)
+						else if (Global_1586547[num /*143*/].f_66 == 0)
 						{
 							return num2;
 						}
 						else if (bParam3)
 						{
-							if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 0))
+							if (IS_BIT_SET(Global_1586547[num /*143*/].f_104, 0))
 								return num2;
-							else if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 1))
+							else if (IS_BIT_SET(Global_1586547[num /*143*/].f_104, 1))
 								return num2;
 						}
-						else if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 1))
+						else if (IS_BIT_SET(Global_1586547[num /*143*/].f_104, 1))
 						{
 							return num2;
 						}
@@ -864,7 +886,7 @@ int func_10(int iParam0, int iParam1, int iParam2, BOOL bParam3, Hash hParam4, i
 	return -1;
 }
 
-BOOL func_11(int iParam0, int iParam1, int iParam2, int iParam3) // Position - 0xE9A (3738)
+BOOL func_11(int iParam0, int iParam1, int iParam2, int iParam3) // Position - 0xEFF (3839)
 {
 	int num;
 	int num2;
@@ -875,16 +897,16 @@ BOOL func_11(int iParam0, int iParam1, int iParam2, int iParam3) // Position - 0
 	{
 		if (iParam0 >= 0)
 		{
-			if (iParam0 - func_21(iParam2, -1) >= 0 && iParam0 - func_21(iParam2, -1) < Global_1312333[iParam1 /*1951*/].f_33 && iParam0 < 547)
+			if (iParam0 - func_21(iParam2, -1) >= 0 && iParam0 - func_21(iParam2, -1) < Global_1312335[iParam1 /*1951*/].f_33 && iParam0 < 547)
 				return true;
 		
-			if (Global_1312333[iParam1 /*1951*/].f_33 == 2 && iParam0 == 10 + func_21(iParam2, -1))
+			if (Global_1312335[iParam1 /*1951*/].f_33 == 2 && iParam0 == 10 + func_21(iParam2, -1))
 				return true;
 		
-			if (Global_1312333[iParam1 /*1951*/].f_33 == 6 && iParam0 >= 10 + func_21(iParam2, -1) && iParam0 <= 11 + func_21(iParam2, -1))
+			if (Global_1312335[iParam1 /*1951*/].f_33 == 6 && iParam0 >= 10 + func_21(iParam2, -1) && iParam0 <= 11 + func_21(iParam2, -1))
 				return true;
 		
-			if (Global_1312333[iParam1 /*1951*/].f_33 == 10)
+			if (Global_1312335[iParam1 /*1951*/].f_33 == 10)
 			{
 				if (func_19(iParam1, -1))
 				{
@@ -987,7 +1009,7 @@ BOOL func_11(int iParam0, int iParam1, int iParam2, int iParam3) // Position - 0
 	return false;
 }
 
-int func_12(int iParam0, int iParam1) // Position - 0x1356 (4950)
+int func_12(int iParam0, int iParam1) // Position - 0x13BB (5051)
 {
 	int num;
 
@@ -1092,7 +1114,7 @@ int func_12(int iParam0, int iParam1) // Position - 0x1356 (4950)
 	return func_13(iParam0, -1, true) * (iParam0 + 1);
 }
 
-int func_13(int iParam0, int iParam1, BOOL bParam2) // Position - 0x153B (5435)
+int func_13(int iParam0, int iParam1, BOOL bParam2) // Position - 0x15A0 (5536)
 {
 	if (iParam0 == -1)
 		if (iParam1 >= 1)
@@ -1133,17 +1155,17 @@ int func_13(int iParam0, int iParam1, BOOL bParam2) // Position - 0x153B (5435)
 			else if (iParam1 == 133)
 				return 10;
 			else if (iParam1 <= 131 && iParam1 > 0)
-				if (Global_1312333[iParam1 /*1951*/].f_33 == 2)
+				if (Global_1312335[iParam1 /*1951*/].f_33 == 2)
 					if (bParam2)
 						return 3;
 					else
 						return 2;
-				else if (Global_1312333[iParam1 /*1951*/].f_33 == 6)
+				else if (Global_1312335[iParam1 /*1951*/].f_33 == 6)
 					if (bParam2)
 						return 8;
 					else
 						return 6;
-				else if (Global_1312333[iParam1 /*1951*/].f_33 == 10)
+				else if (Global_1312335[iParam1 /*1951*/].f_33 == 10)
 					if (bParam2)
 						return 13;
 					else
@@ -1224,12 +1246,12 @@ int func_13(int iParam0, int iParam1, BOOL bParam2) // Position - 0x153B (5435)
 	return 0;
 }
 
-int func_14() // Position - 0x185B (6235)
+int func_14() // Position - 0x18C0 (6336)
 {
 	return 40;
 }
 
-BOOL func_15(int iParam0) // Position - 0x186A (6250)
+BOOL func_15(int iParam0) // Position - 0x18CF (6351)
 {
 	switch (iParam0)
 	{
@@ -1243,7 +1265,7 @@ BOOL func_15(int iParam0) // Position - 0x186A (6250)
 	return false;
 }
 
-int func_16(int iParam0) // Position - 0x1899 (6297)
+int func_16(int iParam0) // Position - 0x18FE (6398)
 {
 	switch (iParam0)
 	{
@@ -1266,7 +1288,7 @@ int func_16(int iParam0) // Position - 0x1899 (6297)
 	return -1;
 }
 
-int func_17(int iParam0) // Position - 0x18D6 (6358)
+int func_17(int iParam0) // Position - 0x193B (6459)
 {
 	iParam0 = iParam0 - 1000;
 
@@ -1276,7 +1298,7 @@ int func_17(int iParam0) // Position - 0x18D6 (6358)
 	return -1;
 }
 
-BOOL func_18(int iParam0) // Position - 0x18FC (6396)
+BOOL func_18(int iParam0) // Position - 0x1961 (6497)
 {
 	if (iParam0 >= 1000 && iParam0 < 1004)
 		return true;
@@ -1284,7 +1306,7 @@ BOOL func_18(int iParam0) // Position - 0x18FC (6396)
 	return false;
 }
 
-BOOL func_19(int iParam0, int iParam1) // Position - 0x191D (6429)
+BOOL func_19(int iParam0, int iParam1) // Position - 0x1982 (6530)
 {
 	if (iParam1 == -1)
 	{
@@ -1335,7 +1357,7 @@ BOOL func_19(int iParam0, int iParam1) // Position - 0x191D (6429)
 	return false;
 }
 
-BOOL func_20(int iParam0) // Position - 0x19FA (6650)
+BOOL func_20(int iParam0) // Position - 0x1A5F (6751)
 {
 	switch (iParam0)
 	{
@@ -1350,7 +1372,7 @@ BOOL func_20(int iParam0) // Position - 0x19FA (6650)
 	return true;
 }
 
-int func_21(int iParam0, int iParam1) // Position - 0x1A2F (6703)
+int func_21(int iParam0, int iParam1) // Position - 0x1A94 (6804)
 {
 	int num;
 
@@ -1455,7 +1477,7 @@ int func_21(int iParam0, int iParam1) // Position - 0x1A2F (6703)
 	return func_13(iParam0, -1, true) * iParam0;
 }
 
-int func_22(int iParam0) // Position - 0x1C11 (7185)
+int func_22(int iParam0) // Position - 0x1C76 (7286)
 {
 	switch (iParam0)
 	{
@@ -1478,7 +1500,7 @@ int func_22(int iParam0) // Position - 0x1C11 (7185)
 	return -1;
 }
 
-BOOL func_23(Hash hParam0) // Position - 0x1C4E (7246)
+BOOL func_23(Hash hParam0) // Position - 0x1CB3 (7347)
 {
 	if (hParam0 == joaat("bmx"))
 		return true;
@@ -1501,7 +1523,7 @@ BOOL func_23(Hash hParam0) // Position - 0x1C4E (7246)
 	return false;
 }
 
-BOOL func_24() // Position - 0x1CD7 (7383)
+BOOL func_24() // Position - 0x1D3C (7484)
 {
 	if (func_26(3))
 		if (func_26(7))
@@ -1515,43 +1537,43 @@ BOOL func_24() // Position - 0x1CD7 (7383)
 	return false;
 }
 
-BOOL func_25() // Position - 0x1D06 (7430)
+BOOL func_25() // Position - 0x1D6B (7531)
 {
-	if (!IS_BIT_SET(Global_1963593.f_3, 3) && !IS_BIT_SET(Global_1963593.f_3, 2) && MISC::GET_FRAME_COUNT() % Global_262145.f_31169 == 0)
-		MISC::SET_BIT(&(Global_1963593.f_3), 2);
+	if (!IS_BIT_SET(Global_1965685.f_3, 3) && !IS_BIT_SET(Global_1965685.f_3, 2) && MISC::GET_FRAME_COUNT() % Global_262145.f_31168 == 0)
+		MISC::SET_BIT(&(Global_1965685.f_3), 2);
 
-	if (!IS_BIT_SET(Global_1963593.f_3, 1) || IS_BIT_SET(Global_1963593.f_3, 2) && !NETWORK::IS_COMMERCE_STORE_OPEN() && !NETWORK::IS_COMMERCE_DATA_FETCH_IN_PROGRESS())
+	if (!IS_BIT_SET(Global_1965685.f_3, 1) || IS_BIT_SET(Global_1965685.f_3, 2) && !NETWORK::IS_COMMERCE_STORE_OPEN() && !NETWORK::IS_COMMERCE_DATA_FETCH_IN_PROGRESS())
 	{
-		if (NETWORK::NETWORK_HAS_SC_MEMBERSHIP_INFO())
+		if (unk_0x483F6369B8CEE24B())
 		{
-			NETWORK::NETWORK_GET_SC_MEMBERSHIP_INFO(&Global_1963593);
-			MISC::SET_BIT(&(Global_1963593.f_3), 1);
+			unk_0x9FA18B5CD8803086(&Global_1965685);
+			MISC::SET_BIT(&(Global_1965685.f_3), 1);
 		
-			if (IS_BIT_SET(Global_1963593.f_3, 2))
-				MISC::CLEAR_BIT(&(Global_1963593.f_3), 2);
+			if (IS_BIT_SET(Global_1965685.f_3, 2))
+				MISC::CLEAR_BIT(&(Global_1965685.f_3), 2);
 		}
 	}
 
-	if (Global_1963593)
-		if (!IS_BIT_SET(Global_2657994[PLAYER::PLAYER_ID() /*467*/].f_203, 31))
-			MISC::SET_BIT(&(Global_2657994[PLAYER::PLAYER_ID() /*467*/].f_203), 31);
-	else if (IS_BIT_SET(Global_2657994[PLAYER::PLAYER_ID() /*467*/].f_203, 31))
-		MISC::CLEAR_BIT(&(Global_2657994[PLAYER::PLAYER_ID() /*467*/].f_203), 31);
+	if (Global_1965685)
+		if (!IS_BIT_SET(Global_2658019[PLAYER::PLAYER_ID() /*467*/].f_203, 31))
+			MISC::SET_BIT(&(Global_2658019[PLAYER::PLAYER_ID() /*467*/].f_203), 31);
+	else if (IS_BIT_SET(Global_2658019[PLAYER::PLAYER_ID() /*467*/].f_203, 31))
+		MISC::CLEAR_BIT(&(Global_2658019[PLAYER::PLAYER_ID() /*467*/].f_203), 31);
 
-	return Global_1963593;
+	return Global_1965685;
 }
 
-BOOL func_26(int iParam0) // Position - 0x1DFF (7679)
+BOOL func_26(int iParam0) // Position - 0x1E64 (7780)
 {
-	return IS_BIT_SET(Global_1944106, iParam0);
+	return IS_BIT_SET(Global_1946107, iParam0);
 }
 
-BOOL func_27() // Position - 0x1E0E (7694)
+BOOL func_27() // Position - 0x1E73 (7795)
 {
 	return func_26(8);
 }
 
-int func_28(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, BOOL bParam5) // Position - 0x1E1C (7708)
+int func_28(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, BOOL bParam5) // Position - 0x1E81 (7809)
 {
 	int i;
 	int num;
@@ -1579,7 +1601,7 @@ int func_28(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, B
 	return -1;
 }
 
-int func_29(int iParam0, int iParam1, int iParam2) // Position - 0x1E88 (7816)
+int func_29(int iParam0, int iParam1, int iParam2) // Position - 0x1EED (7917)
 {
 	if (iParam1 == 12 || iParam2 == 116)
 	{
@@ -1602,7 +1624,7 @@ int func_29(int iParam0, int iParam1, int iParam2) // Position - 0x1E88 (7816)
 	return 0;
 }
 
-BOOL func_30(int iParam0, int iParam1, int iParam2, int iParam3, BOOL bParam4) // Position - 0x1ECB (7883)
+BOOL func_30(int iParam0, int iParam1, int iParam2, int iParam3, BOOL bParam4) // Position - 0x1F30 (7984)
 {
 	if (bParam4)
 	{
@@ -1617,7 +1639,7 @@ BOOL func_30(int iParam0, int iParam1, int iParam2, int iParam3, BOOL bParam4) /
 					if (iParam0 == 1)
 						return true;
 			
-				if (*Global_262145.f_36724)
+				if (*Global_262145.f_36723)
 					if (_STAT_GET_PACKED_BOOL(34162, -1) || func_25())
 						if (iParam0 == 2)
 							return true;
@@ -1638,7 +1660,7 @@ BOOL func_30(int iParam0, int iParam1, int iParam2, int iParam3, BOOL bParam4) /
 				if (iParam0 == 1)
 					return true;
 		
-			if (*Global_262145.f_36724)
+			if (*Global_262145.f_36723)
 				if (_STAT_GET_PACKED_BOOL(34162, -1) || func_25())
 					if (iParam0 == 2)
 						return true;
@@ -1650,7 +1672,7 @@ BOOL func_30(int iParam0, int iParam1, int iParam2, int iParam3, BOOL bParam4) /
 	return false;
 }
 
-BOOL _STAT_GET_PACKED_BOOL(int iParam0, int iParam1) // Position - 0x1FB9 (8121)
+BOOL _STAT_GET_PACKED_BOOL(int iParam0, int iParam1) // Position - 0x201E (8222)
 {
 	if (iParam1 == -1)
 		iParam1 = func_32();
@@ -1658,33 +1680,33 @@ BOOL _STAT_GET_PACKED_BOOL(int iParam0, int iParam1) // Position - 0x1FB9 (8121)
 	return STATS::GET_PACKED_STAT_BOOL_CODE(iParam0, iParam1);
 }
 
-int func_32() // Position - 0x1FD5 (8149)
+int func_32() // Position - 0x203A (8250)
 {
-	return Global_1574926;
+	return Global_1574927;
 }
 
-BOOL func_33(Player plParam0) // Position - 0x1FE1 (8161)
+BOOL func_33(Player plParam0) // Position - 0x2046 (8262)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
-		return Global_1845270[plParam0 /*892*/].f_268.f_543 != 0;
+		return Global_1845274[plParam0 /*877*/].f_260.f_541 != 0;
 
 	return false;
 }
 
-Player _INVALID_PLAYER_INDEX() // Position - 0x2007 (8199)
+Player _INVALID_PLAYER_INDEX() // Position - 0x206C (8300)
 {
 	return -1;
 }
 
-BOOL func_35(Player plParam0) // Position - 0x2010 (8208)
+BOOL func_35(Player plParam0) // Position - 0x2075 (8309)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
-		return Global_1845270[plParam0 /*892*/].f_268.f_299 != 0;
+		return Global_1845274[plParam0 /*877*/].f_260.f_298 != 0;
 
 	return false;
 }
 
-int func_36(int iParam0) // Position - 0x2036 (8246)
+int func_36(int iParam0) // Position - 0x209B (8347)
 {
 	if (iParam0 == 12)
 		return 3;
@@ -1692,7 +1714,7 @@ int func_36(int iParam0) // Position - 0x2036 (8246)
 	return -1;
 }
 
-BOOL func_37(int iParam0) // Position - 0x204A (8266)
+BOOL func_37(int iParam0) // Position - 0x20AF (8367)
 {
 	if (iParam0 == 116)
 		return true;
@@ -1700,7 +1722,7 @@ BOOL func_37(int iParam0) // Position - 0x204A (8266)
 	return false;
 }
 
-int func_38(int iParam0, int iParam1) // Position - 0x205E (8286)
+int func_38(int iParam0, int iParam1) // Position - 0x20C3 (8387)
 {
 	int num;
 	int num2;
@@ -1748,7 +1770,7 @@ int func_38(int iParam0, int iParam1) // Position - 0x205E (8286)
 	}
 	else if (iParam0 == 99)
 	{
-		return func_64(13558, num);
+		return func_64(13615, num);
 	}
 	else if (iParam0 >= 1)
 	{
@@ -1761,7 +1783,7 @@ int func_38(int iParam0, int iParam1) // Position - 0x205E (8286)
 	return 0;
 }
 
-int func_39(int iParam0, int iParam1) // Position - 0x2186 (8582)
+int func_39(int iParam0, int iParam1) // Position - 0x21EB (8683)
 {
 	switch (iParam0)
 	{
@@ -1868,20 +1890,20 @@ int func_39(int iParam0, int iParam1) // Position - 0x2186 (8582)
 	return 0;
 }
 
-BOOL func_40(Player plParam0) // Position - 0x23D6 (9174)
+BOOL func_40(Player plParam0) // Position - 0x243B (9275)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
-		return Global_1845270[plParam0 /*892*/].f_268.f_360 != 0;
+		return Global_1845274[plParam0 /*877*/].f_260.f_358 != 0;
 
 	return false;
 }
 
-BOOL func_41() // Position - 0x23FC (9212)
+BOOL func_41() // Position - 0x2461 (9313)
 {
 	return func_26(11);
 }
 
-BOOL func_42(int iParam0) // Position - 0x240A (9226)
+BOOL func_42(int iParam0) // Position - 0x246F (9327)
 {
 	switch (iParam0)
 	{
@@ -1903,7 +1925,7 @@ BOOL func_42(int iParam0) // Position - 0x240A (9226)
 	return false;
 }
 
-BOOL func_43(BOOL bParam0) // Position - 0x2458 (9304)
+BOOL func_43(BOOL bParam0) // Position - 0x24BD (9405)
 {
 	if (bParam0)
 		return IS_BIT_SET(func_64(9618, -1), 0);
@@ -1911,23 +1933,23 @@ BOOL func_43(BOOL bParam0) // Position - 0x2458 (9304)
 	return func_44(PLAYER::PLAYER_ID());
 }
 
-BOOL func_44(Player plParam0) // Position - 0x247A (9338)
+BOOL func_44(Player plParam0) // Position - 0x24DF (9439)
 {
 	if (plParam0 == PLAYER::PLAYER_ID())
 		return IS_BIT_SET(func_64(9618, -1), 0);
 
 	if (plParam0 != -1)
-		return IS_BIT_SET(Global_1977875[plParam0 /*128*/].f_1, 0);
+		return IS_BIT_SET(Global_1980192[plParam0 /*144*/].f_1, 0);
 
 	return false;
 }
 
-BOOL func_45() // Position - 0x24AE (9390)
+BOOL func_45() // Position - 0x2513 (9491)
 {
 	return func_48(false) && func_46(false);
 }
 
-BOOL func_46(BOOL bParam0) // Position - 0x24C5 (9413)
+BOOL func_46(BOOL bParam0) // Position - 0x252A (9514)
 {
 	if (bParam0)
 		return IS_BIT_SET(func_64(8726, -1), 4);
@@ -1935,42 +1957,42 @@ BOOL func_46(BOOL bParam0) // Position - 0x24C5 (9413)
 	return func_47(PLAYER::PLAYER_ID());
 }
 
-BOOL func_47(Player plParam0) // Position - 0x24E7 (9447)
+BOOL func_47(Player plParam0) // Position - 0x254C (9548)
 {
 	if (plParam0 == PLAYER::PLAYER_ID())
 		return IS_BIT_SET(func_64(8726, -1), 4);
 
 	if (plParam0 != -1)
-		return IS_BIT_SET(Global_1971261[plParam0 /*68*/].f_40, 4);
+		return IS_BIT_SET(Global_1973359[plParam0 /*68*/].f_40, 4);
 
 	return false;
 }
 
-BOOL func_48(BOOL bParam0) // Position - 0x251B (9499)
+BOOL func_48(BOOL bParam0) // Position - 0x2580 (9600)
 {
 	if (bParam0)
 		return _STAT_GET_PACKED_BOOL(27227, -1);
 
 	if (PLAYER::PLAYER_ID() != _INVALID_PLAYER_INDEX())
-		return IS_BIT_SET(Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_435.f_1, 2);
+		return IS_BIT_SET(Global_1845274[PLAYER::PLAYER_ID() /*877*/].f_260.f_433.f_1, 2);
 
 	return false;
 }
 
-BOOL func_49(int iParam0) // Position - 0x2557 (9559)
+BOOL func_49(int iParam0) // Position - 0x25BC (9660)
 {
 	return func_64(9517, iParam0) != 0;
 }
 
-BOOL func_50(int iParam0) // Position - 0x256A (9578)
+BOOL func_50(int iParam0) // Position - 0x25CF (9679)
 {
-	if (!Global_262145.f_23781)
+	if (!Global_262145.f_23780)
 		return false;
 
 	return func_64(7210, iParam0) != 0;
 }
 
-int func_51(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, int iParam4, BOOL bParam5) // Position - 0x258C (9612)
+int func_51(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, int iParam4, BOOL bParam5) // Position - 0x25F1 (9713)
 {
 	int num;
 	int num2;
@@ -2004,13 +2026,13 @@ int func_51(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, int iParam4, B
 									return num2;
 						}
 					}
-					else if (Global_1586543[num2 /*143*/].f_66 == 0)
+					else if (Global_1586547[num2 /*143*/].f_66 == 0)
 					{
 						return iParam0;
 					}
 					else if (bParam2)
 					{
-						if (IS_BIT_SET(Global_1586543[num2 /*143*/].f_104, 0))
+						if (IS_BIT_SET(Global_1586547[num2 /*143*/].f_104, 0))
 							return iParam0;
 					}
 				}
@@ -2035,7 +2057,7 @@ int func_51(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, int iParam4, B
 					if (bParam5)
 						if (func_64(func_67(4, num2), iParam4) == 0)
 							return iParam0;
-					else if (Global_1586543[num2 /*143*/].f_66 == 0)
+					else if (Global_1586547[num2 /*143*/].f_66 == 0)
 						return iParam0;
 				else
 					return iParam0;
@@ -2061,7 +2083,7 @@ int func_51(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, int iParam4, B
 							if (IS_BIT_SET(num, 0))
 								return iParam0;
 						}
-						else if (IS_BIT_SET(Global_1586543[num2 /*143*/].f_104, 0))
+						else if (IS_BIT_SET(Global_1586547[num2 /*143*/].f_104, 0))
 						{
 							return iParam0;
 						}
@@ -2091,7 +2113,7 @@ int func_51(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, int iParam4, B
 						if (IS_BIT_SET(num, 1) && !IS_BIT_SET(num, 2))
 							return iParam0;
 					}
-					else if (IS_BIT_SET(Global_1586543[num2 /*143*/].f_104, 1) && !IS_BIT_SET(Global_1586543[num2 /*143*/].f_104, 2))
+					else if (IS_BIT_SET(Global_1586547[num2 /*143*/].f_104, 1) && !IS_BIT_SET(Global_1586547[num2 /*143*/].f_104, 2))
 					{
 						return iParam0;
 					}
@@ -2134,18 +2156,18 @@ int func_51(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, int iParam4, B
 								return iParam0;
 						}
 					}
-					else if (Global_1586543[num2 /*143*/].f_66 == 0)
+					else if (Global_1586547[num2 /*143*/].f_66 == 0)
 					{
 						return iParam0;
 					}
 					else if (bParam2)
 					{
-						if (IS_BIT_SET(Global_1586543[num2 /*143*/].f_104, 0))
+						if (IS_BIT_SET(Global_1586547[num2 /*143*/].f_104, 0))
 							return iParam0;
-						else if (IS_BIT_SET(Global_1586543[num2 /*143*/].f_104, 1))
+						else if (IS_BIT_SET(Global_1586547[num2 /*143*/].f_104, 1))
 							return iParam0;
 					}
-					else if (IS_BIT_SET(Global_1586543[num2 /*143*/].f_104, 1))
+					else if (IS_BIT_SET(Global_1586547[num2 /*143*/].f_104, 1))
 					{
 						return iParam0;
 					}
@@ -2161,7 +2183,7 @@ int func_51(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, int iParam4, B
 	return -1;
 }
 
-BOOL func_52(Hash hParam0, int iParam1) // Position - 0x28BF (10431)
+BOOL func_52(Hash hParam0, int iParam1) // Position - 0x2924 (10532)
 {
 	if (!func_62(iParam1) && !func_77(hParam0))
 		if (func_76(hParam0, false))
@@ -2213,7 +2235,7 @@ BOOL func_52(Hash hParam0, int iParam1) // Position - 0x28BF (10431)
 	return true;
 }
 
-BOOL func_53(Hash hParam0) // Position - 0x2A76 (10870)
+BOOL func_53(Hash hParam0) // Position - 0x2ADB (10971)
 {
 	switch (hParam0)
 	{
@@ -2232,7 +2254,7 @@ BOOL func_53(Hash hParam0) // Position - 0x2A76 (10870)
 	return false;
 }
 
-BOOL func_54(int iParam0, BOOL bParam1) // Position - 0x2AC3 (10947)
+BOOL func_54(int iParam0, BOOL bParam1) // Position - 0x2B28 (11048)
 {
 	if (iParam0 >= func_21(18, -1) && iParam0 < func_12(20, -1))
 		return true;
@@ -2243,7 +2265,7 @@ BOOL func_54(int iParam0, BOOL bParam1) // Position - 0x2AC3 (10947)
 	return false;
 }
 
-BOOL func_55(int iParam0) // Position - 0x2AFA (11002)
+BOOL func_55(int iParam0) // Position - 0x2B5F (11103)
 {
 	if (iParam0 == 236 || iParam0 == 246 || iParam0 == 256)
 		return 1;
@@ -2251,7 +2273,7 @@ BOOL func_55(int iParam0) // Position - 0x2AFA (11002)
 	return 0;
 }
 
-BOOL func_56(Hash hParam0) // Position - 0x2B26 (11046)
+BOOL func_56(Hash hParam0) // Position - 0x2B8B (11147)
 {
 	switch (hParam0)
 	{
@@ -2323,7 +2345,7 @@ BOOL func_56(Hash hParam0) // Position - 0x2B26 (11046)
 	return false;
 }
 
-BOOL func_57(int iParam0) // Position - 0x2C9C (11420)
+BOOL func_57(int iParam0) // Position - 0x2D01 (11521)
 {
 	if (iParam0 >= func_21(12, -1) && iParam0 < func_12(12, -1))
 		return true;
@@ -2337,7 +2359,7 @@ BOOL func_57(int iParam0) // Position - 0x2C9C (11420)
 	return false;
 }
 
-int func_58(Hash hParam0) // Position - 0x2CF5 (11509)
+int func_58(Hash hParam0) // Position - 0x2D5A (11610)
 {
 	Hash hash;
 
@@ -2376,7 +2398,7 @@ int func_58(Hash hParam0) // Position - 0x2CF5 (11509)
 	return -1;
 }
 
-BOOL func_59(int iParam0) // Position - 0x2D7E (11646)
+BOOL func_59(int iParam0) // Position - 0x2DE3 (11747)
 {
 	if (iParam0 >= func_21(6, -1) && iParam0 < func_12(6, -1))
 		return true;
@@ -2384,7 +2406,7 @@ BOOL func_59(int iParam0) // Position - 0x2D7E (11646)
 	return false;
 }
 
-BOOL func_60(int iParam0) // Position - 0x2DA5 (11685)
+BOOL func_60(int iParam0) // Position - 0x2E0A (11786)
 {
 	switch (iParam0)
 	{
@@ -2424,7 +2446,7 @@ BOOL func_60(int iParam0) // Position - 0x2DA5 (11685)
 	return false;
 }
 
-BOOL func_61(int iParam0) // Position - 0x2E70 (11888)
+BOOL func_61(int iParam0) // Position - 0x2ED5 (11989)
 {
 	switch (iParam0)
 	{
@@ -2450,7 +2472,7 @@ BOOL func_61(int iParam0) // Position - 0x2E70 (11888)
 	return false;
 }
 
-BOOL func_62(int iParam0) // Position - 0x2EF5 (12021)
+BOOL func_62(int iParam0) // Position - 0x2F5A (12122)
 {
 	if (iParam0 >= func_21(11, -1) && iParam0 < func_12(11, -1))
 		return true;
@@ -2458,7 +2480,7 @@ BOOL func_62(int iParam0) // Position - 0x2EF5 (12021)
 	return false;
 }
 
-int _STAT_GET_PACKED_INT(int iParam0, int iParam1) // Position - 0x2F1E (12062)
+int _STAT_GET_PACKED_INT(int iParam0, int iParam1) // Position - 0x2F83 (12163)
 {
 	if (iParam1 == -1)
 		iParam1 = func_32();
@@ -2466,12 +2488,12 @@ int _STAT_GET_PACKED_INT(int iParam0, int iParam1) // Position - 0x2F1E (12062)
 	return STATS::GET_PACKED_STAT_INT_CODE(iParam0, iParam1);
 }
 
-int func_64(int iParam0, int iParam1) // Position - 0x2F3A (12090)
+int func_64(int iParam0, int iParam1) // Position - 0x2F9F (12191)
 {
 	Hash statHash;
 	int outValue;
 
-	if (iParam0 != 17239)
+	if (iParam0 != 17296)
 	{
 		statHash = func_65(iParam0, iParam1);
 	
@@ -2482,12 +2504,12 @@ int func_64(int iParam0, int iParam1) // Position - 0x2F3A (12090)
 	return 0;
 }
 
-Hash func_65(int iParam0, int iParam1) // Position - 0x2F69 (12137)
+Hash func_65(int iParam0, int iParam1) // Position - 0x2FCE (12238)
 {
 	return STATS::_GET_STAT_HASH_FOR_CHARACTER_STAT(0, iParam0, func_66(iParam1));
 }
 
-int func_66(int iParam0) // Position - 0x2F7E (12158)
+int func_66(int iParam0) // Position - 0x2FE3 (12259)
 {
 	int num;
 	int num2;
@@ -2500,20 +2522,20 @@ int func_66(int iParam0) // Position - 0x2F7E (12158)
 	
 		if (num2 > -1)
 		{
-			Global_2752158 = 0;
+			Global_2752424 = 0;
 			num = num2;
 		}
 		else
 		{
 			num = 0;
-			Global_2752158 = 1;
+			Global_2752424 = 1;
 		}
 	}
 
 	return num;
 }
 
-int func_67(int iParam0, int iParam1) // Position - 0x2FB2 (12210)
+int func_67(int iParam0, int iParam1) // Position - 0x3017 (12311)
 {
 	if (iParam1 >= 363)
 	{
@@ -10411,7 +10433,7 @@ int func_67(int iParam0, int iParam1) // Position - 0x2FB2 (12210)
 	return 1630;
 }
 
-int func_68(int iParam0, int iParam1) // Position - 0xA762 (42850)
+int func_68(int iParam0, int iParam1) // Position - 0xA7BB (42939)
 {
 	switch (iParam0)
 	{
@@ -10575,304 +10597,304 @@ int func_68(int iParam0, int iParam1) // Position - 0xA762 (42850)
 					return 11793;
 			
 				case 415:
-					return 15511;
+					return 15568;
 			
 				case 416:
-					return 15518;
+					return 15575;
 			
 				case 417:
-					return 15525;
+					return 15582;
 			
 				case 418:
-					return 15532;
+					return 15589;
 			
 				case 419:
-					return 15539;
+					return 15596;
 			
 				case 420:
-					return 15546;
+					return 15603;
 			
 				case 421:
-					return 15553;
+					return 15610;
 			
 				case 422:
-					return 15560;
+					return 15617;
 			
 				case 423:
-					return 15567;
+					return 15624;
 			
 				case 424:
-					return 15574;
+					return 15631;
 			
 				case 425:
-					return 15581;
+					return 15638;
 			
 				case 426:
-					return 15588;
+					return 15645;
 			
 				case 427:
-					return 15595;
+					return 15652;
 			
 				case 428:
-					return 15602;
+					return 15659;
 			
 				case 429:
-					return 15609;
+					return 15666;
 			
 				case 430:
-					return 15616;
+					return 15673;
 			
 				case 431:
-					return 15623;
+					return 15680;
 			
 				case 432:
-					return 15630;
+					return 15687;
 			
 				case 433:
-					return 15637;
+					return 15694;
 			
 				case 434:
-					return 15644;
+					return 15701;
 			
 				case 435:
-					return 15651;
+					return 15708;
 			
 				case 436:
-					return 15658;
+					return 15715;
 			
 				case 437:
-					return 15665;
+					return 15722;
 			
 				case 438:
-					return 15672;
+					return 15729;
 			
 				case 439:
-					return 15679;
+					return 15736;
 			
 				case 440:
-					return 15686;
+					return 15743;
 			
 				case 441:
-					return 15693;
+					return 15750;
 			
 				case 442:
-					return 15700;
+					return 15757;
 			
 				case 443:
-					return 15707;
+					return 15764;
 			
 				case 444:
-					return 15714;
+					return 15771;
 			
 				case 445:
-					return 15721;
+					return 15778;
 			
 				case 446:
-					return 15728;
+					return 15785;
 			
 				case 447:
-					return 15735;
+					return 15792;
 			
 				case 448:
-					return 15742;
+					return 15799;
 			
 				case 449:
-					return 15749;
+					return 15806;
 			
 				case 450:
-					return 15756;
+					return 15813;
 			
 				case 451:
-					return 15763;
+					return 15820;
 			
 				case 452:
-					return 15770;
+					return 15827;
 			
 				case 453:
-					return 15777;
+					return 15834;
 			
 				case 454:
-					return 15784;
+					return 15841;
 			
 				case 455:
-					return 15791;
+					return 15848;
 			
 				case 456:
-					return 15798;
+					return 15855;
 			
 				case 457:
-					return 15805;
+					return 15862;
 			
 				case 458:
-					return 15812;
+					return 15869;
 			
 				case 459:
-					return 15819;
+					return 15876;
 			
 				case 460:
-					return 15826;
+					return 15883;
 			
 				case 461:
-					return 15833;
+					return 15890;
 			
 				case 462:
-					return 15840;
+					return 15897;
 			
 				case 463:
-					return 15847;
+					return 15904;
 			
 				case 464:
-					return 15854;
+					return 15911;
 			
 				case 465:
-					return 15861;
+					return 15918;
 			
 				case 466:
-					return 15868;
+					return 15925;
 			
 				case 467:
-					return 15875;
+					return 15932;
 			
 				case 468:
-					return 15882;
+					return 15939;
 			
 				case 469:
-					return 15889;
+					return 15946;
 			
 				case 470:
-					return 15896;
+					return 15953;
 			
 				case 471:
-					return 15903;
+					return 15960;
 			
 				case 472:
-					return 15910;
+					return 15967;
 			
 				case 473:
-					return 15917;
+					return 15974;
 			
 				case 474:
-					return 15924;
+					return 15981;
 			
 				case 475:
-					return 15931;
+					return 15988;
 			
 				case 476:
-					return 15938;
+					return 15995;
 			
 				case 477:
-					return 15945;
+					return 16002;
 			
 				case 478:
-					return 15952;
+					return 16009;
 			
 				case 479:
-					return 15959;
+					return 16016;
 			
 				case 480:
-					return 15966;
+					return 16023;
 			
 				case 481:
-					return 15973;
+					return 16030;
 			
 				case 482:
-					return 15980;
+					return 16037;
 			
 				case 483:
-					return 15987;
+					return 16044;
 			
 				case 484:
-					return 15994;
+					return 16051;
 			
 				case 485:
-					return 16001;
+					return 16058;
 			
 				case 486:
-					return 16008;
+					return 16065;
 			
 				case 487:
-					return 16015;
+					return 16072;
 			
 				case 488:
-					return 16022;
+					return 16079;
 			
 				case 489:
-					return 16029;
+					return 16086;
 			
 				case 490:
-					return 16036;
+					return 16093;
 			
 				case 491:
-					return 16043;
+					return 16100;
 			
 				case 492:
-					return 16050;
+					return 16107;
 			
 				case 493:
-					return 16057;
+					return 16114;
 			
 				case 494:
-					return 16064;
+					return 16121;
 			
 				case 495:
-					return 16071;
+					return 16128;
 			
 				case 496:
-					return 16078;
+					return 16135;
 			
 				case 497:
-					return 16085;
+					return 16142;
 			
 				case 498:
-					return 16092;
+					return 16149;
 			
 				case 499:
-					return 16099;
+					return 16156;
 			
 				case 500:
-					return 16106;
+					return 16163;
 			
 				case 501:
-					return 16113;
+					return 16170;
 			
 				case 502:
-					return 16120;
+					return 16177;
 			
 				case 503:
-					return 16127;
+					return 16184;
 			
 				case 504:
-					return 16134;
+					return 16191;
 			
 				case 505:
-					return 16141;
+					return 16198;
 			
 				case 506:
-					return 16148;
+					return 16205;
 			
 				case 507:
-					return 16155;
+					return 16212;
 			
 				case 508:
-					return 16162;
+					return 16219;
 			
 				case 509:
-					return 16169;
+					return 16226;
 			
 				case 510:
-					return 16176;
+					return 16233;
 			
 				case 511:
-					return 16183;
+					return 16240;
 			
 				case 512:
-					return 16190;
+					return 16247;
 			
 				case 513:
-					return 16197;
+					return 16254;
 			
 				case 514:
-					return 16204;
+					return 16261;
 			
 				case 515:
 					return 12261;
@@ -11135,304 +11157,304 @@ int func_68(int iParam0, int iParam1) // Position - 0xA762 (42850)
 					return 11794;
 			
 				case 415:
-					return 15512;
+					return 15569;
 			
 				case 416:
-					return 15519;
+					return 15576;
 			
 				case 417:
-					return 15526;
+					return 15583;
 			
 				case 418:
-					return 15533;
+					return 15590;
 			
 				case 419:
-					return 15540;
+					return 15597;
 			
 				case 420:
-					return 15547;
+					return 15604;
 			
 				case 421:
-					return 15554;
+					return 15611;
 			
 				case 422:
-					return 15561;
+					return 15618;
 			
 				case 423:
-					return 15568;
+					return 15625;
 			
 				case 424:
-					return 15575;
+					return 15632;
 			
 				case 425:
-					return 15582;
+					return 15639;
 			
 				case 426:
-					return 15589;
+					return 15646;
 			
 				case 427:
-					return 15596;
+					return 15653;
 			
 				case 428:
-					return 15603;
+					return 15660;
 			
 				case 429:
-					return 15610;
+					return 15667;
 			
 				case 430:
-					return 15617;
+					return 15674;
 			
 				case 431:
-					return 15624;
+					return 15681;
 			
 				case 432:
-					return 15631;
+					return 15688;
 			
 				case 433:
-					return 15638;
+					return 15695;
 			
 				case 434:
-					return 15645;
+					return 15702;
 			
 				case 435:
-					return 15652;
+					return 15709;
 			
 				case 436:
-					return 15659;
+					return 15716;
 			
 				case 437:
-					return 15666;
+					return 15723;
 			
 				case 438:
-					return 15673;
+					return 15730;
 			
 				case 439:
-					return 15680;
+					return 15737;
 			
 				case 440:
-					return 15687;
+					return 15744;
 			
 				case 441:
-					return 15694;
+					return 15751;
 			
 				case 442:
-					return 15701;
+					return 15758;
 			
 				case 443:
-					return 15708;
+					return 15765;
 			
 				case 444:
-					return 15715;
+					return 15772;
 			
 				case 445:
-					return 15722;
+					return 15779;
 			
 				case 446:
-					return 15729;
+					return 15786;
 			
 				case 447:
-					return 15736;
+					return 15793;
 			
 				case 448:
-					return 15743;
+					return 15800;
 			
 				case 449:
-					return 15750;
+					return 15807;
 			
 				case 450:
-					return 15757;
+					return 15814;
 			
 				case 451:
-					return 15764;
+					return 15821;
 			
 				case 452:
-					return 15771;
+					return 15828;
 			
 				case 453:
-					return 15778;
+					return 15835;
 			
 				case 454:
-					return 15785;
+					return 15842;
 			
 				case 455:
-					return 15792;
+					return 15849;
 			
 				case 456:
-					return 15799;
+					return 15856;
 			
 				case 457:
-					return 15806;
+					return 15863;
 			
 				case 458:
-					return 15813;
+					return 15870;
 			
 				case 459:
-					return 15820;
+					return 15877;
 			
 				case 460:
-					return 15827;
+					return 15884;
 			
 				case 461:
-					return 15834;
+					return 15891;
 			
 				case 462:
-					return 15841;
+					return 15898;
 			
 				case 463:
-					return 15848;
+					return 15905;
 			
 				case 464:
-					return 15855;
+					return 15912;
 			
 				case 465:
-					return 15862;
+					return 15919;
 			
 				case 466:
-					return 15869;
+					return 15926;
 			
 				case 467:
-					return 15876;
+					return 15933;
 			
 				case 468:
-					return 15883;
+					return 15940;
 			
 				case 469:
-					return 15890;
+					return 15947;
 			
 				case 470:
-					return 15897;
+					return 15954;
 			
 				case 471:
-					return 15904;
+					return 15961;
 			
 				case 472:
-					return 15911;
+					return 15968;
 			
 				case 473:
-					return 15918;
+					return 15975;
 			
 				case 474:
-					return 15925;
+					return 15982;
 			
 				case 475:
-					return 15932;
+					return 15989;
 			
 				case 476:
-					return 15939;
+					return 15996;
 			
 				case 477:
-					return 15946;
+					return 16003;
 			
 				case 478:
-					return 15953;
+					return 16010;
 			
 				case 479:
-					return 15960;
+					return 16017;
 			
 				case 480:
-					return 15967;
+					return 16024;
 			
 				case 481:
-					return 15974;
+					return 16031;
 			
 				case 482:
-					return 15981;
+					return 16038;
 			
 				case 483:
-					return 15988;
+					return 16045;
 			
 				case 484:
-					return 15995;
+					return 16052;
 			
 				case 485:
-					return 16002;
+					return 16059;
 			
 				case 486:
-					return 16009;
+					return 16066;
 			
 				case 487:
-					return 16016;
+					return 16073;
 			
 				case 488:
-					return 16023;
+					return 16080;
 			
 				case 489:
-					return 16030;
+					return 16087;
 			
 				case 490:
-					return 16037;
+					return 16094;
 			
 				case 491:
-					return 16044;
+					return 16101;
 			
 				case 492:
-					return 16051;
+					return 16108;
 			
 				case 493:
-					return 16058;
+					return 16115;
 			
 				case 494:
-					return 16065;
+					return 16122;
 			
 				case 495:
-					return 16072;
+					return 16129;
 			
 				case 496:
-					return 16079;
+					return 16136;
 			
 				case 497:
-					return 16086;
+					return 16143;
 			
 				case 498:
-					return 16093;
+					return 16150;
 			
 				case 499:
-					return 16100;
+					return 16157;
 			
 				case 500:
-					return 16107;
+					return 16164;
 			
 				case 501:
-					return 16114;
+					return 16171;
 			
 				case 502:
-					return 16121;
+					return 16178;
 			
 				case 503:
-					return 16128;
+					return 16185;
 			
 				case 504:
-					return 16135;
+					return 16192;
 			
 				case 505:
-					return 16142;
+					return 16199;
 			
 				case 506:
-					return 16149;
+					return 16206;
 			
 				case 507:
-					return 16156;
+					return 16213;
 			
 				case 508:
-					return 16163;
+					return 16220;
 			
 				case 509:
-					return 16170;
+					return 16227;
 			
 				case 510:
-					return 16177;
+					return 16234;
 			
 				case 511:
-					return 16184;
+					return 16241;
 			
 				case 512:
-					return 16191;
+					return 16248;
 			
 				case 513:
-					return 16198;
+					return 16255;
 			
 				case 514:
-					return 16205;
+					return 16262;
 			
 				case 515:
 					return 12262;
@@ -11695,304 +11717,304 @@ int func_68(int iParam0, int iParam1) // Position - 0xA762 (42850)
 					return 11795;
 			
 				case 415:
-					return 15513;
+					return 15570;
 			
 				case 416:
-					return 15520;
+					return 15577;
 			
 				case 417:
-					return 15527;
+					return 15584;
 			
 				case 418:
-					return 15534;
+					return 15591;
 			
 				case 419:
-					return 15541;
+					return 15598;
 			
 				case 420:
-					return 15548;
+					return 15605;
 			
 				case 421:
-					return 15555;
+					return 15612;
 			
 				case 422:
-					return 15562;
+					return 15619;
 			
 				case 423:
-					return 15569;
+					return 15626;
 			
 				case 424:
-					return 15576;
+					return 15633;
 			
 				case 425:
-					return 15583;
+					return 15640;
 			
 				case 426:
-					return 15590;
+					return 15647;
 			
 				case 427:
-					return 15597;
+					return 15654;
 			
 				case 428:
-					return 15604;
+					return 15661;
 			
 				case 429:
-					return 15611;
+					return 15668;
 			
 				case 430:
-					return 15618;
+					return 15675;
 			
 				case 431:
-					return 15625;
+					return 15682;
 			
 				case 432:
-					return 15632;
+					return 15689;
 			
 				case 433:
-					return 15639;
+					return 15696;
 			
 				case 434:
-					return 15646;
+					return 15703;
 			
 				case 435:
-					return 15653;
+					return 15710;
 			
 				case 436:
-					return 15660;
+					return 15717;
 			
 				case 437:
-					return 15667;
+					return 15724;
 			
 				case 438:
-					return 15674;
+					return 15731;
 			
 				case 439:
-					return 15681;
+					return 15738;
 			
 				case 440:
-					return 15688;
+					return 15745;
 			
 				case 441:
-					return 15695;
+					return 15752;
 			
 				case 442:
-					return 15702;
+					return 15759;
 			
 				case 443:
-					return 15709;
+					return 15766;
 			
 				case 444:
-					return 15716;
+					return 15773;
 			
 				case 445:
-					return 15723;
+					return 15780;
 			
 				case 446:
-					return 15730;
+					return 15787;
 			
 				case 447:
-					return 15737;
+					return 15794;
 			
 				case 448:
-					return 15744;
+					return 15801;
 			
 				case 449:
-					return 15751;
+					return 15808;
 			
 				case 450:
-					return 15758;
+					return 15815;
 			
 				case 451:
-					return 15765;
+					return 15822;
 			
 				case 452:
-					return 15772;
+					return 15829;
 			
 				case 453:
-					return 15779;
+					return 15836;
 			
 				case 454:
-					return 15786;
+					return 15843;
 			
 				case 455:
-					return 15793;
+					return 15850;
 			
 				case 456:
-					return 15800;
+					return 15857;
 			
 				case 457:
-					return 15807;
+					return 15864;
 			
 				case 458:
-					return 15814;
+					return 15871;
 			
 				case 459:
-					return 15821;
+					return 15878;
 			
 				case 460:
-					return 15828;
+					return 15885;
 			
 				case 461:
-					return 15835;
+					return 15892;
 			
 				case 462:
-					return 15842;
+					return 15899;
 			
 				case 463:
-					return 15849;
+					return 15906;
 			
 				case 464:
-					return 15856;
+					return 15913;
 			
 				case 465:
-					return 15863;
+					return 15920;
 			
 				case 466:
-					return 15870;
+					return 15927;
 			
 				case 467:
-					return 15877;
+					return 15934;
 			
 				case 468:
-					return 15884;
+					return 15941;
 			
 				case 469:
-					return 15891;
+					return 15948;
 			
 				case 470:
-					return 15898;
+					return 15955;
 			
 				case 471:
-					return 15905;
+					return 15962;
 			
 				case 472:
-					return 15912;
+					return 15969;
 			
 				case 473:
-					return 15919;
+					return 15976;
 			
 				case 474:
-					return 15926;
+					return 15983;
 			
 				case 475:
-					return 15933;
+					return 15990;
 			
 				case 476:
-					return 15940;
+					return 15997;
 			
 				case 477:
-					return 15947;
+					return 16004;
 			
 				case 478:
-					return 15954;
+					return 16011;
 			
 				case 479:
-					return 15961;
+					return 16018;
 			
 				case 480:
-					return 15968;
+					return 16025;
 			
 				case 481:
-					return 15975;
+					return 16032;
 			
 				case 482:
-					return 15982;
+					return 16039;
 			
 				case 483:
-					return 15989;
+					return 16046;
 			
 				case 484:
-					return 15996;
+					return 16053;
 			
 				case 485:
-					return 16003;
+					return 16060;
 			
 				case 486:
-					return 16010;
+					return 16067;
 			
 				case 487:
-					return 16017;
+					return 16074;
 			
 				case 488:
-					return 16024;
+					return 16081;
 			
 				case 489:
-					return 16031;
+					return 16088;
 			
 				case 490:
-					return 16038;
+					return 16095;
 			
 				case 491:
-					return 16045;
+					return 16102;
 			
 				case 492:
-					return 16052;
+					return 16109;
 			
 				case 493:
-					return 16059;
+					return 16116;
 			
 				case 494:
-					return 16066;
+					return 16123;
 			
 				case 495:
-					return 16073;
+					return 16130;
 			
 				case 496:
-					return 16080;
+					return 16137;
 			
 				case 497:
-					return 16087;
+					return 16144;
 			
 				case 498:
-					return 16094;
+					return 16151;
 			
 				case 499:
-					return 16101;
+					return 16158;
 			
 				case 500:
-					return 16108;
+					return 16165;
 			
 				case 501:
-					return 16115;
+					return 16172;
 			
 				case 502:
-					return 16122;
+					return 16179;
 			
 				case 503:
-					return 16129;
+					return 16186;
 			
 				case 504:
-					return 16136;
+					return 16193;
 			
 				case 505:
-					return 16143;
+					return 16200;
 			
 				case 506:
-					return 16150;
+					return 16207;
 			
 				case 507:
-					return 16157;
+					return 16214;
 			
 				case 508:
-					return 16164;
+					return 16221;
 			
 				case 509:
-					return 16171;
+					return 16228;
 			
 				case 510:
-					return 16178;
+					return 16235;
 			
 				case 511:
-					return 16185;
+					return 16242;
 			
 				case 512:
-					return 16192;
+					return 16249;
 			
 				case 513:
-					return 16199;
+					return 16256;
 			
 				case 514:
-					return 16206;
+					return 16263;
 			
 				case 515:
 					return 12263;
@@ -12255,304 +12277,304 @@ int func_68(int iParam0, int iParam1) // Position - 0xA762 (42850)
 					return 11796;
 			
 				case 415:
-					return 15514;
+					return 15571;
 			
 				case 416:
-					return 15521;
+					return 15578;
 			
 				case 417:
-					return 15528;
+					return 15585;
 			
 				case 418:
-					return 15535;
+					return 15592;
 			
 				case 419:
-					return 15542;
+					return 15599;
 			
 				case 420:
-					return 15549;
+					return 15606;
 			
 				case 421:
-					return 15556;
+					return 15613;
 			
 				case 422:
-					return 15563;
+					return 15620;
 			
 				case 423:
-					return 15570;
+					return 15627;
 			
 				case 424:
-					return 15577;
+					return 15634;
 			
 				case 425:
-					return 15584;
+					return 15641;
 			
 				case 426:
-					return 15591;
+					return 15648;
 			
 				case 427:
-					return 15598;
+					return 15655;
 			
 				case 428:
-					return 15605;
+					return 15662;
 			
 				case 429:
-					return 15612;
+					return 15669;
 			
 				case 430:
-					return 15619;
+					return 15676;
 			
 				case 431:
-					return 15626;
+					return 15683;
 			
 				case 432:
-					return 15633;
+					return 15690;
 			
 				case 433:
-					return 15640;
+					return 15697;
 			
 				case 434:
-					return 15647;
+					return 15704;
 			
 				case 435:
-					return 15654;
+					return 15711;
 			
 				case 436:
-					return 15661;
+					return 15718;
 			
 				case 437:
-					return 15668;
+					return 15725;
 			
 				case 438:
-					return 15675;
+					return 15732;
 			
 				case 439:
-					return 15682;
+					return 15739;
 			
 				case 440:
-					return 15689;
+					return 15746;
 			
 				case 441:
-					return 15696;
+					return 15753;
 			
 				case 442:
-					return 15703;
+					return 15760;
 			
 				case 443:
-					return 15710;
+					return 15767;
 			
 				case 444:
-					return 15717;
+					return 15774;
 			
 				case 445:
-					return 15724;
+					return 15781;
 			
 				case 446:
-					return 15731;
+					return 15788;
 			
 				case 447:
-					return 15738;
+					return 15795;
 			
 				case 448:
-					return 15745;
+					return 15802;
 			
 				case 449:
-					return 15752;
+					return 15809;
 			
 				case 450:
-					return 15759;
+					return 15816;
 			
 				case 451:
-					return 15766;
+					return 15823;
 			
 				case 452:
-					return 15773;
+					return 15830;
 			
 				case 453:
-					return 15780;
+					return 15837;
 			
 				case 454:
-					return 15787;
+					return 15844;
 			
 				case 455:
-					return 15794;
+					return 15851;
 			
 				case 456:
-					return 15801;
+					return 15858;
 			
 				case 457:
-					return 15808;
+					return 15865;
 			
 				case 458:
-					return 15815;
+					return 15872;
 			
 				case 459:
-					return 15822;
+					return 15879;
 			
 				case 460:
-					return 15829;
+					return 15886;
 			
 				case 461:
-					return 15836;
+					return 15893;
 			
 				case 462:
-					return 15843;
+					return 15900;
 			
 				case 463:
-					return 15850;
+					return 15907;
 			
 				case 464:
-					return 15857;
+					return 15914;
 			
 				case 465:
-					return 15864;
+					return 15921;
 			
 				case 466:
-					return 15871;
+					return 15928;
 			
 				case 467:
-					return 15878;
+					return 15935;
 			
 				case 468:
-					return 15885;
+					return 15942;
 			
 				case 469:
-					return 15892;
+					return 15949;
 			
 				case 470:
-					return 15899;
+					return 15956;
 			
 				case 471:
-					return 15906;
+					return 15963;
 			
 				case 472:
-					return 15913;
+					return 15970;
 			
 				case 473:
-					return 15920;
+					return 15977;
 			
 				case 474:
-					return 15927;
+					return 15984;
 			
 				case 475:
-					return 15934;
+					return 15991;
 			
 				case 476:
-					return 15941;
+					return 15998;
 			
 				case 477:
-					return 15948;
+					return 16005;
 			
 				case 478:
-					return 15955;
+					return 16012;
 			
 				case 479:
-					return 15962;
+					return 16019;
 			
 				case 480:
-					return 15969;
+					return 16026;
 			
 				case 481:
-					return 15976;
+					return 16033;
 			
 				case 482:
-					return 15983;
+					return 16040;
 			
 				case 483:
-					return 15990;
+					return 16047;
 			
 				case 484:
-					return 15997;
+					return 16054;
 			
 				case 485:
-					return 16004;
+					return 16061;
 			
 				case 486:
-					return 16011;
+					return 16068;
 			
 				case 487:
-					return 16018;
+					return 16075;
 			
 				case 488:
-					return 16025;
+					return 16082;
 			
 				case 489:
-					return 16032;
+					return 16089;
 			
 				case 490:
-					return 16039;
+					return 16096;
 			
 				case 491:
-					return 16046;
+					return 16103;
 			
 				case 492:
-					return 16053;
+					return 16110;
 			
 				case 493:
-					return 16060;
+					return 16117;
 			
 				case 494:
-					return 16067;
+					return 16124;
 			
 				case 495:
-					return 16074;
+					return 16131;
 			
 				case 496:
-					return 16081;
+					return 16138;
 			
 				case 497:
-					return 16088;
+					return 16145;
 			
 				case 498:
-					return 16095;
+					return 16152;
 			
 				case 499:
-					return 16102;
+					return 16159;
 			
 				case 500:
-					return 16109;
+					return 16166;
 			
 				case 501:
-					return 16116;
+					return 16173;
 			
 				case 502:
-					return 16123;
+					return 16180;
 			
 				case 503:
-					return 16130;
+					return 16187;
 			
 				case 504:
-					return 16137;
+					return 16194;
 			
 				case 505:
-					return 16144;
+					return 16201;
 			
 				case 506:
-					return 16151;
+					return 16208;
 			
 				case 507:
-					return 16158;
+					return 16215;
 			
 				case 508:
-					return 16165;
+					return 16222;
 			
 				case 509:
-					return 16172;
+					return 16229;
 			
 				case 510:
-					return 16179;
+					return 16236;
 			
 				case 511:
-					return 16186;
+					return 16243;
 			
 				case 512:
-					return 16193;
+					return 16250;
 			
 				case 513:
-					return 16200;
+					return 16257;
 			
 				case 514:
-					return 16207;
+					return 16264;
 			
 				case 515:
 					return 12264;
@@ -12815,304 +12837,304 @@ int func_68(int iParam0, int iParam1) // Position - 0xA762 (42850)
 					return 11797;
 			
 				case 415:
-					return 15515;
+					return 15572;
 			
 				case 416:
-					return 15522;
+					return 15579;
 			
 				case 417:
-					return 15529;
+					return 15586;
 			
 				case 418:
-					return 15536;
+					return 15593;
 			
 				case 419:
-					return 15543;
+					return 15600;
 			
 				case 420:
-					return 15550;
+					return 15607;
 			
 				case 421:
-					return 15557;
+					return 15614;
 			
 				case 422:
-					return 15564;
+					return 15621;
 			
 				case 423:
-					return 15571;
+					return 15628;
 			
 				case 424:
-					return 15578;
+					return 15635;
 			
 				case 425:
-					return 15585;
+					return 15642;
 			
 				case 426:
-					return 15592;
+					return 15649;
 			
 				case 427:
-					return 15599;
+					return 15656;
 			
 				case 428:
-					return 15606;
+					return 15663;
 			
 				case 429:
-					return 15613;
+					return 15670;
 			
 				case 430:
-					return 15620;
+					return 15677;
 			
 				case 431:
-					return 15627;
+					return 15684;
 			
 				case 432:
-					return 15634;
+					return 15691;
 			
 				case 433:
-					return 15641;
+					return 15698;
 			
 				case 434:
-					return 15648;
+					return 15705;
 			
 				case 435:
-					return 15655;
+					return 15712;
 			
 				case 436:
-					return 15662;
+					return 15719;
 			
 				case 437:
-					return 15669;
+					return 15726;
 			
 				case 438:
-					return 15676;
+					return 15733;
 			
 				case 439:
-					return 15683;
+					return 15740;
 			
 				case 440:
-					return 15690;
+					return 15747;
 			
 				case 441:
-					return 15697;
+					return 15754;
 			
 				case 442:
-					return 15704;
+					return 15761;
 			
 				case 443:
-					return 15711;
+					return 15768;
 			
 				case 444:
-					return 15718;
+					return 15775;
 			
 				case 445:
-					return 15725;
+					return 15782;
 			
 				case 446:
-					return 15732;
+					return 15789;
 			
 				case 447:
-					return 15739;
+					return 15796;
 			
 				case 448:
-					return 15746;
+					return 15803;
 			
 				case 449:
-					return 15753;
+					return 15810;
 			
 				case 450:
-					return 15760;
+					return 15817;
 			
 				case 451:
-					return 15767;
+					return 15824;
 			
 				case 452:
-					return 15774;
+					return 15831;
 			
 				case 453:
-					return 15781;
+					return joaat("insult_micah_conv_part3_03");
 			
 				case 454:
-					return 15788;
+					return 15845;
 			
 				case 455:
-					return 15795;
+					return 15852;
 			
 				case 456:
-					return 15802;
+					return 15859;
 			
 				case 457:
-					return 15809;
+					return 15866;
 			
 				case 458:
-					return 15816;
+					return 15873;
 			
 				case 459:
-					return 15823;
+					return 15880;
 			
 				case 460:
-					return 15830;
+					return 15887;
 			
 				case 461:
-					return 15837;
+					return 15894;
 			
 				case 462:
-					return 15844;
+					return 15901;
 			
 				case 463:
-					return 15851;
+					return 15908;
 			
 				case 464:
-					return 15858;
+					return 15915;
 			
 				case 465:
-					return 15865;
+					return 15922;
 			
 				case 466:
-					return 15872;
+					return 15929;
 			
 				case 467:
-					return 15879;
+					return 15936;
 			
 				case 468:
-					return 15886;
+					return 15943;
 			
 				case 469:
-					return 15893;
+					return 15950;
 			
 				case 470:
-					return 15900;
+					return 15957;
 			
 				case 471:
-					return 15907;
+					return 15964;
 			
 				case 472:
-					return 15914;
+					return 15971;
 			
 				case 473:
-					return 15921;
+					return 15978;
 			
 				case 474:
-					return 15928;
+					return 15985;
 			
 				case 475:
-					return 15935;
+					return 15992;
 			
 				case 476:
-					return 15942;
+					return 15999;
 			
 				case 477:
-					return 15949;
+					return 16006;
 			
 				case 478:
-					return 15956;
+					return 16013;
 			
 				case 479:
-					return 15963;
+					return 16020;
 			
 				case 480:
-					return 15970;
+					return 16027;
 			
 				case 481:
-					return 15977;
+					return 16034;
 			
 				case 482:
-					return 15984;
+					return 16041;
 			
 				case 483:
-					return 15991;
+					return 16048;
 			
 				case 484:
-					return 15998;
+					return 16055;
 			
 				case 485:
-					return 16005;
+					return 16062;
 			
 				case 486:
-					return 16012;
+					return 16069;
 			
 				case 487:
-					return 16019;
+					return 16076;
 			
 				case 488:
-					return 16026;
+					return 16083;
 			
 				case 489:
-					return 16033;
+					return 16090;
 			
 				case 490:
-					return 16040;
+					return 16097;
 			
 				case 491:
-					return 16047;
+					return 16104;
 			
 				case 492:
-					return 16054;
+					return 16111;
 			
 				case 493:
-					return 16061;
+					return 16118;
 			
 				case 494:
-					return 16068;
+					return 16125;
 			
 				case 495:
-					return 16075;
+					return 16132;
 			
 				case 496:
-					return 16082;
+					return 16139;
 			
 				case 497:
-					return 16089;
+					return 16146;
 			
 				case 498:
-					return 16096;
+					return 16153;
 			
 				case 499:
-					return 16103;
+					return 16160;
 			
 				case 500:
-					return 16110;
+					return 16167;
 			
 				case 501:
-					return 16117;
+					return 16174;
 			
 				case 502:
-					return 16124;
+					return 16181;
 			
 				case 503:
-					return 16131;
+					return 16188;
 			
 				case 504:
-					return 16138;
+					return 16195;
 			
 				case 505:
-					return 16145;
+					return 16202;
 			
 				case 506:
-					return 16152;
+					return 16209;
 			
 				case 507:
-					return 16159;
+					return 16216;
 			
 				case 508:
-					return 16166;
+					return 16223;
 			
 				case 509:
-					return 16173;
+					return 16230;
 			
 				case 510:
-					return 16180;
+					return 16237;
 			
 				case 511:
-					return 16187;
+					return 16244;
 			
 				case 512:
-					return 16194;
+					return 16251;
 			
 				case 513:
-					return 16201;
+					return 16258;
 			
 				case 514:
-					return 16208;
+					return 16265;
 			
 				case 515:
 					return 12265;
@@ -13375,304 +13397,304 @@ int func_68(int iParam0, int iParam1) // Position - 0xA762 (42850)
 					return 11799;
 			
 				case 415:
-					return 15517;
+					return 15574;
 			
 				case 416:
-					return 15524;
+					return 15581;
 			
 				case 417:
-					return 15531;
+					return 15588;
 			
 				case 418:
-					return 15538;
+					return 15595;
 			
 				case 419:
-					return 15545;
+					return 15602;
 			
 				case 420:
-					return 15552;
+					return 15609;
 			
 				case 421:
-					return 15559;
+					return 15616;
 			
 				case 422:
-					return 15566;
+					return 15623;
 			
 				case 423:
-					return 15573;
+					return 15630;
 			
 				case 424:
-					return 15580;
+					return 15637;
 			
 				case 425:
-					return 15587;
+					return 15644;
 			
 				case 426:
-					return 15594;
+					return 15651;
 			
 				case 427:
-					return 15601;
+					return 15658;
 			
 				case 428:
-					return 15608;
+					return 15665;
 			
 				case 429:
-					return 15615;
+					return 15672;
 			
 				case 430:
-					return 15622;
+					return 15679;
 			
 				case 431:
-					return 15629;
+					return 15686;
 			
 				case 432:
-					return 15636;
+					return 15693;
 			
 				case 433:
-					return 15643;
+					return 15700;
 			
 				case 434:
-					return 15650;
+					return 15707;
 			
 				case 435:
-					return 15657;
+					return 15714;
 			
 				case 436:
-					return 15664;
+					return 15721;
 			
 				case 437:
-					return 15671;
+					return 15728;
 			
 				case 438:
-					return joaat("hobh_niteout_line04");
+					return 15735;
 			
 				case 439:
-					return 15685;
+					return 15742;
 			
 				case 440:
-					return 15692;
+					return 15749;
 			
 				case 441:
-					return 15699;
+					return 15756;
 			
 				case 442:
-					return 15706;
+					return 15763;
 			
 				case 443:
-					return 15713;
+					return 15770;
 			
 				case 444:
-					return 15720;
+					return 15777;
 			
 				case 445:
-					return 15727;
+					return 15784;
 			
 				case 446:
-					return 15734;
+					return 15791;
 			
 				case 447:
-					return 15741;
+					return 15798;
 			
 				case 448:
-					return 15748;
+					return 15805;
 			
 				case 449:
-					return 15755;
+					return 15812;
 			
 				case 450:
-					return 15762;
+					return 15819;
 			
 				case 451:
-					return 15769;
+					return 15826;
 			
 				case 452:
-					return 15776;
+					return 15833;
 			
 				case 453:
-					return 15783;
+					return 15840;
 			
 				case 454:
-					return 15790;
+					return 15847;
 			
 				case 455:
-					return 15797;
+					return 15854;
 			
 				case 456:
-					return 15804;
+					return 15861;
 			
 				case 457:
-					return 15811;
+					return 15868;
 			
 				case 458:
-					return 15818;
+					return 15875;
 			
 				case 459:
-					return 15825;
+					return 15882;
 			
 				case 460:
-					return 15832;
+					return 15889;
 			
 				case 461:
-					return 15839;
+					return 15896;
 			
 				case 462:
-					return 15846;
+					return 15903;
 			
 				case 463:
-					return 15853;
+					return 15910;
 			
 				case 464:
-					return 15860;
+					return 15917;
 			
 				case 465:
-					return 15867;
+					return 15924;
 			
 				case 466:
-					return 15874;
+					return 15931;
 			
 				case 467:
-					return 15881;
+					return 15938;
 			
 				case 468:
-					return 15888;
+					return 15945;
 			
 				case 469:
-					return 15895;
+					return 15952;
 			
 				case 470:
-					return 15902;
+					return 15959;
 			
 				case 471:
-					return 15909;
+					return 15966;
 			
 				case 472:
-					return 15916;
+					return 15973;
 			
 				case 473:
-					return 15923;
+					return 15980;
 			
 				case 474:
-					return 15930;
+					return 15987;
 			
 				case 475:
-					return 15937;
+					return 15994;
 			
 				case 476:
-					return 15944;
+					return 16001;
 			
 				case 477:
-					return 15951;
+					return 16008;
 			
 				case 478:
-					return 15958;
+					return 16015;
 			
 				case 479:
-					return 15965;
+					return 16022;
 			
 				case 480:
-					return 15972;
+					return 16029;
 			
 				case 481:
-					return 15979;
+					return 16036;
 			
 				case 482:
-					return 15986;
+					return 16043;
 			
 				case 483:
-					return 15993;
+					return 16050;
 			
 				case 484:
-					return 16000;
+					return 16057;
 			
 				case 485:
-					return 16007;
+					return 16064;
 			
 				case 486:
-					return 16014;
+					return 16071;
 			
 				case 487:
-					return 16021;
+					return 16078;
 			
 				case 488:
-					return 16028;
+					return 16085;
 			
 				case 489:
-					return 16035;
+					return 16092;
 			
 				case 490:
-					return 16042;
+					return 16099;
 			
 				case 491:
-					return 16049;
+					return 16106;
 			
 				case 492:
-					return 16056;
+					return 16113;
 			
 				case 493:
-					return 16063;
+					return 16120;
 			
 				case 494:
-					return 16070;
+					return 16127;
 			
 				case 495:
-					return 16077;
+					return 16134;
 			
 				case 496:
-					return 16084;
+					return 16141;
 			
 				case 497:
-					return 16091;
+					return 16148;
 			
 				case 498:
-					return 16098;
+					return 16155;
 			
 				case 499:
-					return 16105;
+					return 16162;
 			
 				case 500:
-					return 16112;
+					return 16169;
 			
 				case 501:
-					return 16119;
+					return 16176;
 			
 				case 502:
-					return 16126;
+					return 16183;
 			
 				case 503:
-					return 16133;
+					return 16190;
 			
 				case 504:
-					return 16140;
+					return 16197;
 			
 				case 505:
-					return 16147;
+					return 16204;
 			
 				case 506:
-					return 16154;
+					return 16211;
 			
 				case 507:
-					return 16161;
+					return 16218;
 			
 				case 508:
-					return 16168;
+					return 16225;
 			
 				case 509:
-					return 16175;
+					return 16232;
 			
 				case 510:
-					return 16182;
+					return 16239;
 			
 				case 511:
-					return 16189;
+					return 16246;
 			
 				case 512:
-					return 16196;
+					return 16253;
 			
 				case 513:
-					return 16203;
+					return 16260;
 			
 				case 514:
-					return 16210;
+					return 16267;
 			
 				case 515:
 					return 12267;
@@ -13935,304 +13957,304 @@ int func_68(int iParam0, int iParam1) // Position - 0xA762 (42850)
 					return 11798;
 			
 				case 415:
-					return 15516;
+					return 15573;
 			
 				case 416:
-					return 15523;
+					return 15580;
 			
 				case 417:
-					return 15530;
+					return 15587;
 			
 				case 418:
-					return 15537;
+					return 15594;
 			
 				case 419:
-					return 15544;
+					return 15601;
 			
 				case 420:
-					return 15551;
+					return 15608;
 			
 				case 421:
-					return 15558;
+					return 15615;
 			
 				case 422:
-					return 15565;
+					return 15622;
 			
 				case 423:
-					return 15572;
+					return 15629;
 			
 				case 424:
-					return 15579;
+					return 15636;
 			
 				case 425:
-					return 15586;
+					return 15643;
 			
 				case 426:
-					return 15593;
+					return 15650;
 			
 				case 427:
-					return 15600;
+					return 15657;
 			
 				case 428:
-					return 15607;
+					return 15664;
 			
 				case 429:
-					return 15614;
+					return 15671;
 			
 				case 430:
-					return 15621;
+					return joaat("hobh_niteout_line04");
 			
 				case 431:
-					return 15628;
+					return 15685;
 			
 				case 432:
-					return 15635;
+					return 15692;
 			
 				case 433:
-					return 15642;
+					return 15699;
 			
 				case 434:
-					return 15649;
+					return 15706;
 			
 				case 435:
-					return 15656;
+					return 15713;
 			
 				case 436:
-					return 15663;
+					return 15720;
 			
 				case 437:
-					return 15670;
+					return 15727;
 			
 				case 438:
-					return 15677;
+					return 15734;
 			
 				case 439:
-					return 15684;
+					return 15741;
 			
 				case 440:
-					return 15691;
+					return 15748;
 			
 				case 441:
-					return 15698;
+					return 15755;
 			
 				case 442:
-					return 15705;
+					return 15762;
 			
 				case 443:
-					return 15712;
+					return 15769;
 			
 				case 444:
-					return 15719;
+					return 15776;
 			
 				case 445:
-					return 15726;
+					return 15783;
 			
 				case 446:
-					return 15733;
+					return 15790;
 			
 				case 447:
-					return 15740;
+					return 15797;
 			
 				case 448:
-					return 15747;
+					return 15804;
 			
 				case 449:
-					return 15754;
+					return 15811;
 			
 				case 450:
-					return 15761;
+					return 15818;
 			
 				case 451:
-					return 15768;
+					return 15825;
 			
 				case 452:
-					return 15775;
+					return 15832;
 			
 				case 453:
-					return 15782;
+					return 15839;
 			
 				case 454:
-					return 15789;
+					return 15846;
 			
 				case 455:
-					return 15796;
+					return 15853;
 			
 				case 456:
-					return 15803;
+					return 15860;
 			
 				case 457:
-					return 15810;
+					return 15867;
 			
 				case 458:
-					return 15817;
+					return 15874;
 			
 				case 459:
-					return 15824;
+					return 15881;
 			
 				case 460:
-					return 15831;
+					return 15888;
 			
 				case 461:
-					return joaat("insult_micah_conv_part3_03");
+					return 15895;
 			
 				case 462:
-					return 15845;
+					return 15902;
 			
 				case 463:
-					return 15852;
+					return 15909;
 			
 				case 464:
-					return 15859;
+					return 15916;
 			
 				case 465:
-					return 15866;
+					return 15923;
 			
 				case 466:
-					return 15873;
+					return 15930;
 			
 				case 467:
-					return 15880;
+					return 15937;
 			
 				case 468:
-					return 15887;
+					return 15944;
 			
 				case 469:
-					return 15894;
+					return 15951;
 			
 				case 470:
-					return 15901;
+					return 15958;
 			
 				case 471:
-					return 15908;
+					return 15965;
 			
 				case 472:
-					return 15915;
+					return 15972;
 			
 				case 473:
-					return 15922;
+					return 15979;
 			
 				case 474:
-					return 15929;
+					return 15986;
 			
 				case 475:
-					return 15936;
+					return 15993;
 			
 				case 476:
-					return 15943;
+					return 16000;
 			
 				case 477:
-					return 15950;
+					return 16007;
 			
 				case 478:
-					return 15957;
+					return 16014;
 			
 				case 479:
-					return 15964;
+					return 16021;
 			
 				case 480:
-					return 15971;
+					return 16028;
 			
 				case 481:
-					return 15978;
+					return 16035;
 			
 				case 482:
-					return 15985;
+					return 16042;
 			
 				case 483:
-					return 15992;
+					return 16049;
 			
 				case 484:
-					return 15999;
+					return 16056;
 			
 				case 485:
-					return 16006;
+					return 16063;
 			
 				case 486:
-					return 16013;
+					return 16070;
 			
 				case 487:
-					return 16020;
+					return 16077;
 			
 				case 488:
-					return 16027;
+					return 16084;
 			
 				case 489:
-					return 16034;
+					return 16091;
 			
 				case 490:
-					return 16041;
+					return 16098;
 			
 				case 491:
-					return 16048;
+					return 16105;
 			
 				case 492:
-					return 16055;
+					return 16112;
 			
 				case 493:
-					return 16062;
+					return 16119;
 			
 				case 494:
-					return 16069;
+					return 16126;
 			
 				case 495:
-					return 16076;
+					return 16133;
 			
 				case 496:
-					return 16083;
+					return 16140;
 			
 				case 497:
-					return 16090;
+					return 16147;
 			
 				case 498:
-					return 16097;
+					return 16154;
 			
 				case 499:
-					return 16104;
+					return 16161;
 			
 				case 500:
-					return 16111;
+					return 16168;
 			
 				case 501:
-					return 16118;
+					return 16175;
 			
 				case 502:
-					return 16125;
+					return 16182;
 			
 				case 503:
-					return 16132;
+					return 16189;
 			
 				case 504:
-					return 16139;
+					return 16196;
 			
 				case 505:
-					return 16146;
+					return 16203;
 			
 				case 506:
-					return 16153;
+					return 16210;
 			
 				case 507:
-					return 16160;
+					return 16217;
 			
 				case 508:
-					return 16167;
+					return 16224;
 			
 				case 509:
-					return 16174;
+					return 16231;
 			
 				case 510:
-					return 16181;
+					return 16238;
 			
 				case 511:
-					return 16188;
+					return 16245;
 			
 				case 512:
-					return 16195;
+					return 16252;
 			
 				case 513:
-					return 16202;
+					return 16259;
 			
 				case 514:
-					return 16209;
+					return 16266;
 			
 				case 515:
 					return 12266;
@@ -14339,14 +14361,14 @@ int func_68(int iParam0, int iParam1) // Position - 0xA762 (42850)
 	return 1630;
 }
 
-void func_69(int iParam0, var uParam1, BOOL bParam2) // Position - 0xE446 (58438)
+void func_69(int iParam0, var uParam1, BOOL bParam2) // Position - 0xE49D (58525)
 {
 	if (Global_262145.f_10656)
 		*uParam1 = iParam0;
 
 	if (iParam0 >= 0)
 	{
-		*uParam1 = Global_1938530[iParam0] - 1;
+		*uParam1 = Global_1940530[iParam0] - 1;
 	
 		if (bParam2)
 			MISC::GET_FRAME_COUNT() % 5 == 0;
@@ -14359,13 +14381,13 @@ void func_69(int iParam0, var uParam1, BOOL bParam2) // Position - 0xE446 (58438
 	return;
 }
 
-void func_70(int iParam0, var uParam1, int iParam2) // Position - 0xE486 (58502)
+void func_70(int iParam0, var uParam1, int iParam2) // Position - 0xE4DD (58589)
 {
 	*uParam1 = func_71(iParam0, iParam2) - 1;
 	return;
 }
 
-int func_71(int iParam0, int iParam1) // Position - 0xE49B (58523)
+int func_71(int iParam0, int iParam1) // Position - 0xE4F2 (58610)
 {
 	int num;
 
@@ -14375,7 +14397,7 @@ int func_71(int iParam0, int iParam1) // Position - 0xE49B (58523)
 	return num;
 }
 
-int func_72(int iParam0) // Position - 0xE4D5 (58581)
+int func_72(int iParam0) // Position - 0xE52C (58668)
 {
 	if (iParam0 < 515)
 		return 50500 + iParam0;
@@ -14387,7 +14409,7 @@ int func_72(int iParam0) // Position - 0xE4D5 (58581)
 	return 50500 + iParam0;
 }
 
-int func_73(int iParam0) // Position - 0xE528 (58664)
+int func_73(int iParam0) // Position - 0xE57F (58751)
 {
 	if (iParam0 < 261)
 		return 24625 + iParam0;
@@ -14415,7 +14437,7 @@ int func_73(int iParam0) // Position - 0xE528 (58664)
 	return 24625 + iParam0;
 }
 
-int func_74(int iParam0) // Position - 0xE63D (58941)
+int func_74(int iParam0) // Position - 0xE694 (59028)
 {
 	if (iParam0 < 158)
 		if (iParam0 <= 38)
@@ -14465,7 +14487,7 @@ int func_74(int iParam0) // Position - 0xE63D (58941)
 	return 4036 + iParam0;
 }
 
-int func_75(Hash hParam0) // Position - 0xE828 (59432)
+int func_75(Hash hParam0) // Position - 0xE87F (59519)
 {
 	if (func_77(hParam0))
 	{
@@ -14524,7 +14546,7 @@ int func_75(Hash hParam0) // Position - 0xE828 (59432)
 	return -1;
 }
 
-BOOL func_76(Hash hParam0, BOOL bParam1) // Position - 0xE946 (59718)
+BOOL func_76(Hash hParam0, BOOL bParam1) // Position - 0xE99D (59805)
 {
 	if (func_77(hParam0))
 		return true;
@@ -14558,7 +14580,7 @@ BOOL func_76(Hash hParam0, BOOL bParam1) // Position - 0xE946 (59718)
 	return false;
 }
 
-BOOL func_77(Hash hParam0) // Position - 0xE9DD (59869)
+BOOL func_77(Hash hParam0) // Position - 0xEA34 (59956)
 {
 	switch (hParam0)
 	{
@@ -14576,7 +14598,7 @@ BOOL func_77(Hash hParam0) // Position - 0xE9DD (59869)
 	return false;
 }
 
-int func_78(int iParam0) // Position - 0xEA24 (59940)
+int func_78(int iParam0) // Position - 0xEA7B (60027)
 {
 	switch (iParam0)
 	{
@@ -14602,7 +14624,7 @@ int func_78(int iParam0) // Position - 0xEA24 (59940)
 	return -1;
 }
 
-BOOL func_79(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0xEA94 (60052)
+BOOL func_79(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0xEAEB (60139)
 {
 	if (bParam2)
 		return func_80(PLAYER::PLAYER_ID(), false);
@@ -14650,40 +14672,40 @@ BOOL func_79(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0xEA94 (6005
 	return false;
 }
 
-BOOL func_80(Player plParam0, BOOL bParam1) // Position - 0xEB6F (60271)
+BOOL func_80(Player plParam0, BOOL bParam1) // Position - 0xEBC6 (60358)
 {
-	if (Global_1845099 != _INVALID_PLAYER_INDEX())
+	if (Global_1845103 != _INVALID_PLAYER_INDEX())
 	{
-		if (!func_82(Global_1845099))
+		if (!func_82(Global_1845103))
 			return false;
 	
 		if (bParam1)
-			if (PLAYER::PLAYER_ID() != Global_1845099)
-				if (IS_BIT_SET(Global_2657994[Global_1845099 /*467*/].f_202, 24) || func_81(Global_1845099))
+			if (PLAYER::PLAYER_ID() != Global_1845103)
+				if (IS_BIT_SET(Global_2658019[Global_1845103 /*467*/].f_202, 24) || func_81(Global_1845103))
 					return true;
 	}
 
-	return IS_BIT_SET(Global_2657994[plParam0 /*467*/].f_202, 24);
+	return IS_BIT_SET(Global_2658019[plParam0 /*467*/].f_202, 24);
 }
 
-BOOL func_81(Player plParam0) // Position - 0xEBD5 (60373)
+BOOL func_81(Player plParam0) // Position - 0xEC2C (60460)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
-		return IS_BIT_SET(Global_2657994[plParam0 /*467*/].f_202, 9);
+		return IS_BIT_SET(Global_2658019[plParam0 /*467*/].f_202, 9);
 
 	return false;
 }
 
-BOOL func_82(Player plParam0) // Position - 0xEBF8 (60408)
+BOOL func_82(Player plParam0) // Position - 0xEC4F (60495)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
-		return IS_BIT_SET(Global_1845270[plParam0 /*892*/].f_268.f_393, 2);
+		return IS_BIT_SET(Global_1845274[plParam0 /*877*/].f_260.f_391, 2);
 
 	return false;
 }
 
 // Unhandled jump detected. Output should be considered invalid
-int func_83(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, BOOL bParam5, BOOL bParam6) // Position - 0xEC21 (60449)
+int func_83(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, BOOL bParam5, BOOL bParam6) // Position - 0xEC78 (60536)
 {
 	int i;
 	int num;
@@ -14723,7 +14745,7 @@ int func_83(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, B
 		if (func_42(i))
 		{
 		}
-		else if (!flag && func_38(i, iParam4) >= Global_1312333)
+		else if (!flag && func_38(i, iParam4) >= Global_1312335)
 		{
 			return -1;
 		}
@@ -14746,7 +14768,7 @@ int func_83(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, B
 				if (flag)
 					num3 = func_13(i, -1, true);
 				else if (func_38(i, iParam4) <= 131)
-					num3 = Global_1312333[func_38(i, iParam4) /*1951*/].f_33;
+					num3 = Global_1312335[func_38(i, iParam4) /*1951*/].f_33;
 			
 				if (func_23(hParam2))
 				{
@@ -14810,7 +14832,7 @@ int func_83(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, B
 	return -1;
 }
 
-BOOL func_84(Hash hParam0, int iParam1) // Position - 0xEEE4 (61156)
+BOOL func_84(Hash hParam0, int iParam1) // Position - 0xEF3B (61243)
 {
 	if (!func_77(hParam0))
 		if (func_76(hParam0, false))
@@ -14842,7 +14864,7 @@ BOOL func_84(Hash hParam0, int iParam1) // Position - 0xEEE4 (61156)
 	return true;
 }
 
-BOOL func_85(int iParam0) // Position - 0xEFEF (61423)
+BOOL func_85(int iParam0) // Position - 0xF046 (61510)
 {
 	switch (iParam0)
 	{
@@ -14882,7 +14904,7 @@ BOOL func_85(int iParam0) // Position - 0xEFEF (61423)
 	return false;
 }
 
-int func_86(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, int iParam5) // Position - 0xF0BA (61626)
+int func_86(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, int iParam5) // Position - 0xF111 (61713)
 {
 	int num;
 	int i;
@@ -14899,13 +14921,13 @@ int func_86(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, i
 				if (!func_84(hParam2, num))
 				{
 				}
-				else if (Global_1586543[num /*143*/].f_66 == 0)
+				else if (Global_1586547[num /*143*/].f_66 == 0)
 				{
 					return num;
 				}
 				else if (bParam1)
 				{
-					if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 0))
+					if (IS_BIT_SET(Global_1586547[num /*143*/].f_104, 0))
 						return num;
 				}
 			}
@@ -14919,7 +14941,7 @@ int func_86(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, i
 				if (!func_84(hParam2, num))
 				{
 				}
-				else if (Global_1586543[num /*143*/].f_66 == 0)
+				else if (Global_1586547[num /*143*/].f_66 == 0)
 				{
 					return num;
 				}
@@ -14934,7 +14956,7 @@ int func_86(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, i
 					if (!func_84(hParam2, num))
 					{
 					}
-					else if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 0))
+					else if (IS_BIT_SET(Global_1586547[num /*143*/].f_104, 0))
 					{
 						return num;
 					}
@@ -14948,11 +14970,11 @@ int func_86(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, i
 				if (!func_84(hParam2, num))
 				{
 				}
-				else if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 1) && !IS_BIT_SET(Global_1586543[num /*143*/].f_104, 2))
+				else if (IS_BIT_SET(Global_1586547[num /*143*/].f_104, 1) && !IS_BIT_SET(Global_1586547[num /*143*/].f_104, 2))
 				{
 					return num;
 				}
-				else if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 1))
+				else if (IS_BIT_SET(Global_1586547[num /*143*/].f_104, 1))
 				{
 				}
 			}
@@ -14966,18 +14988,18 @@ int func_86(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, i
 				if (!func_84(hParam2, num))
 				{
 				}
-				else if (Global_1586543[num /*143*/].f_66 == 0)
+				else if (Global_1586547[num /*143*/].f_66 == 0)
 				{
 					return num;
 				}
 				else if (bParam1)
 				{
-					if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 0))
+					if (IS_BIT_SET(Global_1586547[num /*143*/].f_104, 0))
 						return num;
-					else if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 1))
+					else if (IS_BIT_SET(Global_1586547[num /*143*/].f_104, 1))
 						return num;
 				}
-				else if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 1))
+				else if (IS_BIT_SET(Global_1586547[num /*143*/].f_104, 1))
 				{
 					return num;
 				}
@@ -14988,7 +15010,7 @@ int func_86(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, i
 	return -1;
 }
 
-int func_87(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4) // Position - 0xF2AE (62126)
+int func_87(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4) // Position - 0xF305 (62213)
 {
 	int i;
 	int num;
@@ -15016,7 +15038,7 @@ int func_87(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4) /
 	return -1;
 }
 
-int func_88(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, BOOL bParam4, int iParam5, BOOL bParam6) // Position - 0xF316 (62230)
+int func_88(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, BOOL bParam4, int iParam5, BOOL bParam6) // Position - 0xF36D (62317)
 {
 	int num;
 
@@ -15029,9 +15051,9 @@ int func_88(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, BOOL bParam4, 
 					return iParam0;
 				else
 					return iParam0;
-			else if (Global_1586543[iParam0 /*143*/].f_66 == joaat("hauler2") || Global_1586543[iParam0 /*143*/].f_66 == joaat("phantom3"))
+			else if (Global_1586547[iParam0 /*143*/].f_66 == joaat("hauler2") || Global_1586547[iParam0 /*143*/].f_66 == joaat("phantom3"))
 				return iParam0;
-			else if (Global_1586543[iParam0 /*143*/].f_66 == 0)
+			else if (Global_1586547[iParam0 /*143*/].f_66 == 0)
 				return iParam0;
 			else
 				return iParam0;
@@ -15114,13 +15136,13 @@ int func_88(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, BOOL bParam4, 
 				if (!func_84(hParam3, iParam0))
 				{
 				}
-				else if (Global_1586543[iParam0 /*143*/].f_66 == 0)
+				else if (Global_1586547[iParam0 /*143*/].f_66 == 0)
 				{
 					return iParam0;
 				}
 				else if (bParam2)
 				{
-					if (IS_BIT_SET(Global_1586543[iParam0 /*143*/].f_104, 0))
+					if (IS_BIT_SET(Global_1586547[iParam0 /*143*/].f_104, 0))
 						return iParam0;
 				}
 				break;
@@ -15129,7 +15151,7 @@ int func_88(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, BOOL bParam4, 
 				if (!func_84(hParam3, iParam0))
 				{
 				}
-				else if (Global_1586543[iParam0 /*143*/].f_66 == 0)
+				else if (Global_1586547[iParam0 /*143*/].f_66 == 0)
 				{
 					return iParam0;
 				}
@@ -15139,7 +15161,7 @@ int func_88(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, BOOL bParam4, 
 					if (!func_84(hParam3, iParam0))
 					{
 					}
-					else if (IS_BIT_SET(Global_1586543[iParam0 /*143*/].f_104, 0))
+					else if (IS_BIT_SET(Global_1586547[iParam0 /*143*/].f_104, 0))
 					{
 						return iParam0;
 					}
@@ -15148,11 +15170,11 @@ int func_88(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, BOOL bParam4, 
 				if (!func_84(hParam3, iParam0))
 				{
 				}
-				else if (IS_BIT_SET(Global_1586543[iParam0 /*143*/].f_104, 1) && !IS_BIT_SET(Global_1586543[iParam0 /*143*/].f_104, 2))
+				else if (IS_BIT_SET(Global_1586547[iParam0 /*143*/].f_104, 1) && !IS_BIT_SET(Global_1586547[iParam0 /*143*/].f_104, 2))
 				{
 					return iParam0;
 				}
-				else if (IS_BIT_SET(Global_1586543[iParam0 /*143*/].f_104, 1))
+				else if (IS_BIT_SET(Global_1586547[iParam0 /*143*/].f_104, 1))
 				{
 				}
 				break;
@@ -15161,18 +15183,18 @@ int func_88(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, BOOL bParam4, 
 				if (!func_84(hParam3, iParam0))
 				{
 				}
-				else if (Global_1586543[iParam0 /*143*/].f_66 == 0)
+				else if (Global_1586547[iParam0 /*143*/].f_66 == 0)
 				{
 					return iParam0;
 				}
 				else if (bParam2)
 				{
-					if (IS_BIT_SET(Global_1586543[iParam0 /*143*/].f_104, 0))
+					if (IS_BIT_SET(Global_1586547[iParam0 /*143*/].f_104, 0))
 						return iParam0;
-					else if (IS_BIT_SET(Global_1586543[iParam0 /*143*/].f_104, 1))
+					else if (IS_BIT_SET(Global_1586547[iParam0 /*143*/].f_104, 1))
 						return iParam0;
 				}
-				else if (IS_BIT_SET(Global_1586543[iParam0 /*143*/].f_104, 1))
+				else if (IS_BIT_SET(Global_1586547[iParam0 /*143*/].f_104, 1))
 				{
 					return iParam0;
 				}
@@ -15183,12 +15205,12 @@ int func_88(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, BOOL bParam4, 
 	return -1;
 }
 
-BOOL func_89() // Position - 0xF694 (63124)
+BOOL func_89() // Position - 0xF6EB (63211)
 {
 	return func_26(10);
 }
 
-BOOL _NETSHOPPING_SHOULD_USE_TRANSACTION_SYSTEM() // Position - 0xF6A2 (63138)
+BOOL _NETSHOPPING_SHOULD_USE_TRANSACTION_SYSTEM() // Position - 0xF6F9 (63225)
 {
 	if (MISC::IS_PC_VERSION())
 		return NETSHOPPING::NET_GAMESERVER_USE_SERVER_TRANSACTIONS();
@@ -15197,7 +15219,7 @@ BOOL _NETSHOPPING_SHOULD_USE_TRANSACTION_SYSTEM() // Position - 0xF6A2 (63138)
 }
 
 // Unhandled jump detected. Output should be considered invalid
-int func_91(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, BOOL bParam5) // Position - 0xF6B9 (63161)
+int func_91(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, BOOL bParam5) // Position - 0xF710 (63248)
 {
 	int i;
 	int num;
@@ -15243,7 +15265,7 @@ int func_91(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, B
 				if (flag)
 					num3 = func_13(i, -1, true);
 				else if (func_38(i, iParam4) <= 131)
-					num3 = Global_1312333[func_38(i, iParam4) /*1951*/].f_33;
+					num3 = Global_1312335[func_38(i, iParam4) /*1951*/].f_33;
 			
 				if (func_23(hParam2))
 				{
@@ -15303,7 +15325,7 @@ int func_91(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, B
 	return -1;
 }
 
-int func_92(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, int iParam5) // Position - 0xF8FF (63743)
+int func_92(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, int iParam5) // Position - 0xF956 (63830)
 {
 	int num;
 	int num2;
@@ -15408,7 +15430,7 @@ int func_92(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, i
 	return -1;
 }
 
-int func_93(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4) // Position - 0xFAD4 (64212)
+int func_93(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4) // Position - 0xFB2B (64299)
 {
 	int i;
 	int num;
@@ -15436,12 +15458,12 @@ int func_93(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4) /
 	return -1;
 }
 
-BOOL func_94() // Position - 0xFB3C (64316)
+BOOL func_94() // Position - 0xFB93 (64403)
 {
 	return func_26(9);
 }
 
-void func_95(Hash hParam0, var uParam1) // Position - 0xFB4A (64330)
+void func_95(Hash hParam0, var uParam1) // Position - 0xFBA1 (64417)
 {
 	*uParam1 = -1;
 
@@ -15595,42 +15617,42 @@ void func_95(Hash hParam0, var uParam1) // Position - 0xFB4A (64330)
 	return;
 }
 
-BOOL func_96() // Position - 0x1103E (69694)
+BOOL func_96() // Position - 0x11096 (69782)
 {
 	return func_97() != 0;
 }
 
-int func_97() // Position - 0x1104C (69708)
+int func_97() // Position - 0x110A4 (69796)
 {
-	return Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_360;
+	return Global_1845274[PLAYER::PLAYER_ID() /*877*/].f_260.f_358;
 }
 
-BOOL func_98() // Position - 0x11065 (69733)
+BOOL func_98() // Position - 0x110BD (69821)
 {
 	return func_99() != 0;
 }
 
-int func_99() // Position - 0x11073 (69747)
+int func_99() // Position - 0x110CB (69835)
 {
-	return Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_306;
+	return Global_1845274[PLAYER::PLAYER_ID() /*877*/].f_260.f_305;
 }
 
-BOOL func_100() // Position - 0x1108C (69772)
+BOOL func_100() // Position - 0x110E4 (69860)
 {
 	return func_101() != 0;
 }
 
-int func_101() // Position - 0x1109A (69786)
+int func_101() // Position - 0x110F2 (69874)
 {
-	return Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_299;
+	return Global_1845274[PLAYER::PLAYER_ID() /*877*/].f_260.f_298;
 }
 
-BOOL func_102() // Position - 0x110B3 (69811)
+BOOL func_102() // Position - 0x1110B (69899)
 {
 	return func_64(5396, -1) != 0;
 }
 
-BOOL func_103(Hash hParam0, int iParam1) // Position - 0x110C5 (69829)
+BOOL func_103(Hash hParam0, int iParam1) // Position - 0x1111D (69917)
 {
 	int num;
 
@@ -15725,12 +15747,12 @@ BOOL func_103(Hash hParam0, int iParam1) // Position - 0x110C5 (69829)
 	return true;
 }
 
-Hash func_104() // Position - 0x1142C (70700)
+Hash func_104() // Position - 0x11484 (70788)
 {
 	return joaat("terbyte");
 }
 
-Hash func_105(BOOL bParam0) // Position - 0x11439 (70713)
+Hash func_105(BOOL bParam0) // Position - 0x11491 (70801)
 {
 	if (bParam0)
 		return joaat("avenger3");
@@ -15738,7 +15760,7 @@ Hash func_105(BOOL bParam0) // Position - 0x11439 (70713)
 	return joaat("avenger");
 }
 
-BOOL func_106(Hash hParam0, int iParam1) // Position - 0x11453 (70739)
+BOOL func_106(Hash hParam0, int iParam1) // Position - 0x114AB (70827)
 {
 	if (func_38(0, iParam1) != 0 && func_103(hParam0, 0))
 		return true;
@@ -15789,15 +15811,15 @@ BOOL func_106(Hash hParam0, int iParam1) // Position - 0x11453 (70739)
 	return false;
 }
 
-BOOL func_107() // Position - 0x11739 (71481)
+BOOL func_107() // Position - 0x11791 (71569)
 {
-	if (Global_78326 || Global_78328)
+	if (Global_78531 || Global_78533)
 		return true;
 
 	return false;
 }
 
-void func_108(BOOL bParam0, int iParam1, int iParam2, char* sParam3, char* sParam4, int iParam5, char* sParam6, char* sParam7, int iParam8, int iParam9, BOOL bParam10) // Position - 0x11757 (71511)
+void func_108(BOOL bParam0, int iParam1, int iParam2, char* sParam3, char* sParam4, int iParam5, char* sParam6, char* sParam7, int iParam8, int iParam9, BOOL bParam10) // Position - 0x117AF (71599)
 {
 	if (GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("SHOW_WARNING_MESSAGE"))
 	{
@@ -15839,16 +15861,16 @@ void func_108(BOOL bParam0, int iParam1, int iParam2, char* sParam3, char* sPara
 	return;
 }
 
-void func_109(char* sParam0) // Position - 0x117DE (71646)
+void func_109(char* sParam0) // Position - 0x11836 (71734)
 {
 	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(sParam0);
 	GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 	return;
 }
 
-BOOL func_110() // Position - 0x117F0 (71664)
+BOOL func_110() // Position - 0x11848 (71752)
 {
-	if (*Global_262145.f_35150 || func_8())
+	if (*Global_262145.f_35149 || func_8())
 		return 0;
 
 	return 1;

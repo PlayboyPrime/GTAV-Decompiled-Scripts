@@ -43,10 +43,10 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		if (_SHOULD_NETWORK_SCRIPT_TERMINATE() || Global_1957246 == 1)
+		if (_SHOULD_NETWORK_SCRIPT_TERMINATE() || Global_1959338 == 1)
 			func_7();
 	
-		if (func_1(&uLocal_19, &Global_299155))
+		if (func_1(&uLocal_19, &Global_299622))
 			func_7();
 	
 		BUILTIN::WAIT(0);
@@ -21385,10 +21385,10 @@ void func_2(int iParam0, var uParam1) // Position - 0x1CD (461)
 
 int func_3() // Position - 0x1D086 (118918)
 {
-	if (Global_2692748)
+	if (Global_2692869)
 		return 32;
 
-	return 32 - Global_2692749;
+	return 32 - Global_2692870;
 }
 
 Hash func_4(int iParam0) // Position - 0x1D0A1 (118945)
@@ -21505,28 +21505,28 @@ Hash func_4(int iParam0) // Position - 0x1D0A1 (118945)
 
 BOOL func_5() // Position - 0x1D2CF (119503)
 {
-	if (!IS_BIT_SET(Global_1963593.f_3, 3) && !IS_BIT_SET(Global_1963593.f_3, 2) && MISC::GET_FRAME_COUNT() % Global_262145.f_31169 == 0)
-		MISC::SET_BIT(&(Global_1963593.f_3), 2);
+	if (!IS_BIT_SET(Global_1965685.f_3, 3) && !IS_BIT_SET(Global_1965685.f_3, 2) && MISC::GET_FRAME_COUNT() % Global_262145.f_31168 == 0)
+		MISC::SET_BIT(&(Global_1965685.f_3), 2);
 
-	if (!IS_BIT_SET(Global_1963593.f_3, 1) || IS_BIT_SET(Global_1963593.f_3, 2) && !NETWORK::IS_COMMERCE_STORE_OPEN() && !NETWORK::IS_COMMERCE_DATA_FETCH_IN_PROGRESS())
+	if (!IS_BIT_SET(Global_1965685.f_3, 1) || IS_BIT_SET(Global_1965685.f_3, 2) && !NETWORK::IS_COMMERCE_STORE_OPEN() && !NETWORK::IS_COMMERCE_DATA_FETCH_IN_PROGRESS())
 	{
-		if (NETWORK::NETWORK_HAS_SC_MEMBERSHIP_INFO())
+		if (unk_0x483F6369B8CEE24B())
 		{
-			NETWORK::NETWORK_GET_SC_MEMBERSHIP_INFO(&Global_1963593);
-			MISC::SET_BIT(&(Global_1963593.f_3), 1);
+			unk_0x9FA18B5CD8803086(&Global_1965685);
+			MISC::SET_BIT(&(Global_1965685.f_3), 1);
 		
-			if (IS_BIT_SET(Global_1963593.f_3, 2))
-				MISC::CLEAR_BIT(&(Global_1963593.f_3), 2);
+			if (IS_BIT_SET(Global_1965685.f_3, 2))
+				MISC::CLEAR_BIT(&(Global_1965685.f_3), 2);
 		}
 	}
 
-	if (Global_1963593)
-		if (!IS_BIT_SET(Global_2657994[PLAYER::PLAYER_ID() /*467*/].f_203, 31))
-			MISC::SET_BIT(&(Global_2657994[PLAYER::PLAYER_ID() /*467*/].f_203), 31);
-	else if (IS_BIT_SET(Global_2657994[PLAYER::PLAYER_ID() /*467*/].f_203, 31))
-		MISC::CLEAR_BIT(&(Global_2657994[PLAYER::PLAYER_ID() /*467*/].f_203), 31);
+	if (Global_1965685)
+		if (!IS_BIT_SET(Global_2658019[PLAYER::PLAYER_ID() /*467*/].f_203, 31))
+			MISC::SET_BIT(&(Global_2658019[PLAYER::PLAYER_ID() /*467*/].f_203), 31);
+	else if (IS_BIT_SET(Global_2658019[PLAYER::PLAYER_ID() /*467*/].f_203, 31))
+		MISC::CLEAR_BIT(&(Global_2658019[PLAYER::PLAYER_ID() /*467*/].f_203), 31);
 
-	return Global_1963593;
+	return Global_1965685;
 }
 
 void func_6() // Position - 0x1D3C8 (119752)
@@ -21546,14 +21546,14 @@ void func_7() // Position - 0x1D447 (119879)
 
 BOOL _SHOULD_NETWORK_SCRIPT_TERMINATE() // Position - 0x1D453 (119891)
 {
-	if (Global_1575058 == 0)
+	if (Global_1575060 == 0)
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			return true;
 
 	if (func_15())
 		return true;
 
-	if (Global_2699022)
+	if (Global_2699147)
 		return true;
 
 	if (func_14())
@@ -21592,7 +21592,7 @@ Hash _GET_CURRENT_SESSION_TYPE_SCRIPT_HASH() // Position - 0x1D4D7 (120023)
 
 Hash func_10() // Position - 0x1D50A (120074)
 {
-	switch (Global_2699130)
+	switch (Global_2699255)
 	{
 		case 0:
 			return joaat("freemode");
@@ -21606,12 +21606,12 @@ Hash func_10() // Position - 0x1D50A (120074)
 
 int func_11() // Position - 0x1D52E (120110)
 {
-	return Global_33105;
+	return Global_33298;
 }
 
 BOOL func_12() // Position - 0x1D539 (120121)
 {
-	return Global_2684721.f_700;
+	return Global_2684748.f_700;
 }
 
 BOOL _DOES_EVENT_OF_TYPE_EXIST(int iParam0) // Position - 0x1D548 (120136)
@@ -21624,11 +21624,11 @@ BOOL _DOES_EVENT_OF_TYPE_EXIST(int iParam0) // Position - 0x1D548 (120136)
 
 BOOL func_14() // Position - 0x1D55F (120159)
 {
-	return Global_2696433;
+	return Global_2696555;
 }
 
 BOOL func_15() // Position - 0x1D56B (120171)
 {
-	return Global_2684721.f_695;
+	return Global_2684748.f_695;
 }
 

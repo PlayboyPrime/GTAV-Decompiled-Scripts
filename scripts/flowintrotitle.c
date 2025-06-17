@@ -10,7 +10,7 @@ void main() // Position - 0x0 (0)
 		func_9();
 
 	STREAMING::SET_GAME_PAUSES_FOR_STREAMING(false);
-	MISC::CLEAR_BIT(&(Global_114162.f_10020.f_25), 1);
+	MISC::CLEAR_BIT(&(Global_114370.f_10020.f_25), 1);
 	func_6();
 	SCRIPT::SET_NO_LOADING_SCREEN(true);
 
@@ -38,7 +38,7 @@ void main() // Position - 0x0 (0)
 	{
 		func_6();
 	
-		if (!IS_BIT_SET(Global_114162.f_10020.f_25, 1))
+		if (!IS_BIT_SET(Global_114370.f_10020.f_25, 1))
 		{
 			GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(iLocal_0, 255, 255, 255, 255, 0);
 		
@@ -53,7 +53,7 @@ void main() // Position - 0x0 (0)
 			}
 			else if (MISC::GET_GAME_TIMER() > iLocal_1)
 			{
-				MISC::SET_BIT(&(Global_114162.f_10020.f_25), 1);
+				MISC::SET_BIT(&(Global_114370.f_10020.f_25), 1);
 				func_3(1, 1);
 				func_1();
 			}
@@ -71,13 +71,13 @@ int func_1() // Position - 0x123 (291)
 	if (func_2(false))
 		return 0;
 
-	if (Global_101752.f_8)
-		if (Global_101752.f_10 > 0)
+	if (Global_101956.f_8)
+		if (Global_101956.f_10 > 0)
 			return 0;
-	else if (Global_101752.f_10 > 1)
+	else if (Global_101956.f_10 > 1)
 		return 0;
 
-	Global_101752.f_10 = Global_101752.f_10 + 1;
+	Global_101956.f_10 = Global_101956.f_10 + 1;
 	return 1;
 }
 
@@ -86,13 +86,13 @@ BOOL func_2(BOOL bParam0) // Position - 0x16E (366)
 	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
-	return IS_BIT_SET(Global_79813, 0);
+	return IS_BIT_SET(Global_80017, 0);
 }
 
 void func_3(int iParam0, int iParam1) // Position - 0x196 (406)
 {
-	Global_101752.f_7 = iParam0;
-	Global_101752.f_8 = iParam1;
+	Global_101956.f_7 = iParam0;
+	Global_101956.f_8 = iParam1;
 	return;
 }
 
@@ -141,13 +141,13 @@ void func_7() // Position - 0x243 (579)
 
 void func_8() // Position - 0x253 (595)
 {
-	Global_23848.f_134 = 1;
+	Global_24009.f_134 = 1;
 	return;
 }
 
 void func_9() // Position - 0x261 (609)
 {
-	MISC::SET_BIT(&(Global_114162.f_10020.f_25), 1);
+	MISC::SET_BIT(&(Global_114370.f_10020.f_25), 1);
 
 	if (iLocal_0 != 0)
 		GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_0);

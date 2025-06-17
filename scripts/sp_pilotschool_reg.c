@@ -4,7 +4,7 @@ void main() // Position - 0x0 (0)
 	MISC::START_SAVE_DATA(&Global_3145728, 1, true);
 	func_1();
 	MISC::STOP_SAVE_DATA();
-	MISC::SET_BIT(&Global_4546881, 1);
+	MISC::SET_BIT(&Global_4547468, 1);
 	return;
 }
 

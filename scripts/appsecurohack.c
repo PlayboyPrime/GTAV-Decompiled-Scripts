@@ -46,9 +46,9 @@ void main() // Position - 0x0 (0)
 	{
 		BUILTIN::WAIT(0);
 	
-		if (Global_21083.f_1 != 9)
+		if (Global_21239.f_1 != 9)
 		{
-			switch (Global_21083.f_1)
+			switch (Global_21239.f_1)
 			{
 				case 7:
 					if (iLocal_18 == 1)
@@ -56,13 +56,13 @@ void main() // Position - 0x0 (0)
 					break;
 			
 				case 8:
-					if (func_5(FRONTEND_CONTROL, Global_21051, 0))
+					if (func_5(FRONTEND_CONTROL, Global_21207, 0))
 					{
 						func_4();
-						Global_21061 = 1;
+						Global_21217 = 1;
 					
-						if (Global_21083.f_1 > 3)
-							Global_21083.f_1 = 7;
+						if (Global_21239.f_1 > 3)
+							Global_21239.f_1 = 7;
 					}
 					break;
 			
@@ -75,7 +75,7 @@ void main() // Position - 0x0 (0)
 		}
 		else
 		{
-			Global_21085 = 6;
+			Global_21241 = 6;
 			func_2();
 		}
 	
@@ -88,9 +88,9 @@ void main() // Position - 0x0 (0)
 
 BOOL func_1() // Position - 0xC9 (201)
 {
-	if (Global_21083.f_1 == 1 || Global_21083.f_1 == 3 || Global_21083.f_1 == 0 || Global_21027 == 1)
+	if (Global_21239.f_1 == 1 || Global_21239.f_1 == 3 || Global_21239.f_1 == 0 || Global_21183 == 1)
 	{
-		Global_21070 = 1;
+		Global_21226 = 1;
 		return true;
 	}
 
@@ -105,9 +105,9 @@ void func_2() // Position - 0x10C (268)
 
 BOOL func_3() // Position - 0x118 (280)
 {
-	if (Global_9559 == 1 || Global_21083.f_1 < 7)
+	if (Global_9715 == 1 || Global_21239.f_1 < 7)
 	{
-		Global_21070 = 1;
+		Global_21226 = 1;
 		return true;
 	}
 
@@ -117,7 +117,7 @@ BOOL func_3() // Position - 0x118 (280)
 void func_4() // Position - 0x141 (321)
 {
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
-		AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Back", &Global_21072, true);
+		AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Back", &Global_21228, true);
 
 	return;
 }
@@ -148,20 +148,20 @@ void func_6() // Position - 0x1D3 (467)
 
 void func_7() // Position - 0x1E7 (487)
 {
-	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_21064, "SET_DATA_SLOT");
+	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_21220, "SET_DATA_SLOT");
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(27);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
-	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_4546311);
-	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_4546310);
+	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_4546898);
+	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_4546897);
 	func_9("");
-	func_9(&Global_4546312);
+	func_9(&Global_4546899);
 	GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_21064, "DISPLAY_VIEW");
+	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_21220, "DISPLAY_VIEW");
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(27);
 	GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 
-	if (!IS_BIT_SET(Global_4718592.f_21, 30))
-		func_8(Global_21064, "SET_SOFT_KEYS", 3f, 0f, 27f, -1f, -1f, 0, 0, 0, 0, 0);
+	if (!IS_BIT_SET(Global_4718592.f_22, 30))
+		func_8(Global_21220, "SET_SOFT_KEYS", 3f, 0f, 27f, -1f, -1f, 0, 0, 0, 0, 0);
 
 	return;
 }
@@ -212,7 +212,7 @@ void func_9(const char* sParam0) // Position - 0x315 (789)
 void func_10() // Position - 0x327 (807)
 {
 	func_7();
-	func_8(Global_21064, "SET_SOFT_KEYS", 2f, 0f, 27f, -1f, -1f, 0, 0, 0, 0, 0);
+	func_8(Global_21220, "SET_SOFT_KEYS", 2f, 0f, 27f, -1f, -1f, 0, 0, 0, 0, 0);
 	return;
 }
 

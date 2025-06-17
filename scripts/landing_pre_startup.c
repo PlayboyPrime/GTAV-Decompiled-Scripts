@@ -27,18 +27,18 @@ void main() // Position - 0x0 (0)
 	iLocal_11 = 12;
 	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
 
-	if (STREAMING::IS_GAME_INSTALLED())
+	if (unk_0x7F87B6CE3D8D9DD8())
 	{
 		SCRIPT::REQUEST_SCRIPT(func_4());
 		func_2(0);
 	}
 
-	while (LANDINGPAGE::IS_LANDING_PAGE_ACTIVE())
+	while (unk_0xB37FC2FB7418367C())
 	{
 		BUILTIN::WAIT(0);
 	}
 
-	while (!MISC::IS_SESSION_INITIALIZED())
+	while (!unk_0x0E50FCE4525E3D72())
 	{
 		BUILTIN::WAIT(0);
 	}
@@ -69,7 +69,7 @@ void func_2(int iParam0) // Position - 0xA2 (162)
 {
 	int i;
 
-	for (i = 0; i < 13; i = i + 1)
+	for (i = 0; i < 14; i = i + 1)
 	{
 		SCRIPT::REQUEST_SCRIPT_WITH_NAME_HASH(func_3(i));
 	}
@@ -123,9 +123,12 @@ Hash func_3(int iParam0) // Position - 0xE9 (233)
 			return joaat("globals_fmmcstruct2_registration");
 	
 		case 11:
-			return joaat("sp_dlc_registration");
+			return -1999920335;
 	
 		case 12:
+			return joaat("sp_dlc_registration");
+	
+		case 13:
 			return joaat("sp_pilotschool_reg");
 	
 		default:
@@ -135,13 +138,13 @@ Hash func_3(int iParam0) // Position - 0xE9 (233)
 	return -1;
 }
 
-char* func_4() // Position - 0x1AF (431)
+char* func_4() // Position - 0x1BD (445)
 {
 	char* str;
 
 	str = "startup";
 
-	if (!STREAMING::IS_GAME_INSTALLED())
+	if (!unk_0x7F87B6CE3D8D9DD8())
 		str = "startup_install";
 
 	return str;
