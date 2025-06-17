@@ -214,14 +214,14 @@ void func_6(var uParam0) // Position - 0x1DB (475)
 
 int _SHOULD_NETWORK_SCRIPT_TERMINATE() // Position - 0x214 (532)
 {
-	if (Global_1575056 == false)
+	if (Global_1575058 == false)
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			return 1;
 
 	if (func_14())
 		return 1;
 
-	if (Global_2699004)
+	if (Global_2699129)
 		return 1;
 
 	if (func_13())
@@ -260,7 +260,7 @@ Hash _GET_CURRENT_SESSION_TYPE_SCRIPT_HASH() // Position - 0x298 (664)
 
 Hash func_9() // Position - 0x2CB (715)
 {
-	switch (Global_2699111)
+	switch (Global_2699236)
 	{
 		case 0:
 			return joaat("freemode");
@@ -274,12 +274,12 @@ Hash func_9() // Position - 0x2CB (715)
 
 int func_10() // Position - 0x2EF (751)
 {
-	return Global_33087;
+	return Global_33281;
 }
 
 BOOL func_11() // Position - 0x2FA (762)
 {
-	return Global_2684718.f_700;
+	return Global_2684745.f_700;
 }
 
 BOOL _DOES_EVENT_OF_TYPE_EXIST(int iParam0) // Position - 0x309 (777)
@@ -292,12 +292,12 @@ BOOL _DOES_EVENT_OF_TYPE_EXIST(int iParam0) // Position - 0x309 (777)
 
 BOOL func_13() // Position - 0x320 (800)
 {
-	return Global_2696416;
+	return Global_2696538;
 }
 
 BOOL func_14() // Position - 0x32C (812)
 {
-	return Global_2684718.f_695;
+	return Global_2684745.f_695;
 }
 
 void func_15() // Position - 0x33B (827)
@@ -401,7 +401,7 @@ int func_18(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3E5 (997)
 	}
 
 	if (iParam1 > -1)
-		Global_1574667 = i;
+		Global_1574668 = i;
 
 	if (iParam0 == 0)
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
@@ -421,6 +421,6 @@ int func_18(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3E5 (997)
 BOOL func_19(BOOL bParam0) // Position - 0x4FB (1275)
 {
 	bParam0;
-	return Global_1575056;
+	return Global_1575058;
 }
 

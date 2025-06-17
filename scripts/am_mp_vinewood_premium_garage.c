@@ -134,11 +134,11 @@
 	var uLocal_132 = 0;
 	var uLocal_133 = 0;
 	var uLocal_134 = 0;
-	int iLocal_135 = 0;
+	var uLocal_135 = 0;
 	var uLocal_136 = 0;
-	float fLocal_137 = 0f;
+	int iLocal_137 = 0;
 	var uLocal_138 = 0;
-	var uLocal_139 = 0;
+	float fLocal_139 = 0f;
 	var uLocal_140 = 0;
 	var uLocal_141 = 0;
 	var uLocal_142 = 0;
@@ -170,16 +170,16 @@
 	var uLocal_168 = 0;
 	var uLocal_169 = 0;
 	var uLocal_170 = 0;
-	int iLocal_171 = 0;
-	int iLocal_172 = 0;
+	var uLocal_171 = 0;
+	var uLocal_172 = 0;
 	int iLocal_173 = 0;
-	var uLocal_174 = 0;
-	var uLocal_175 = 0;
-	int iLocal_176 = 0;
+	int iLocal_174 = 0;
+	int iLocal_175 = 0;
+	var uLocal_176 = 0;
 	var uLocal_177 = 0;
-	char* sLocal_178 = 0;
+	int iLocal_178 = 0;
 	var uLocal_179 = 0;
-	var uLocal_180 = 0;
+	char* sLocal_180 = 0;
 	var uLocal_181 = 0;
 	var uLocal_182 = 0;
 	var uLocal_183 = 0;
@@ -201,9 +201,9 @@
 	var uLocal_199 = 0;
 	var uLocal_200 = 0;
 	var uLocal_201 = 0;
-	var uLocal_202 = 17;
+	var uLocal_202 = 0;
 	var uLocal_203 = 0;
-	var uLocal_204 = 0;
+	var uLocal_204 = 17;
 	var uLocal_205 = 0;
 	var uLocal_206 = 0;
 	var uLocal_207 = 0;
@@ -219,9 +219,9 @@
 	var uLocal_217 = 0;
 	var uLocal_218 = 0;
 	var uLocal_219 = 0;
-	var uLocal_220 = 17;
+	var uLocal_220 = 0;
 	var uLocal_221 = 0;
-	var uLocal_222 = 0;
+	var uLocal_222 = 17;
 	var uLocal_223 = 0;
 	var uLocal_224 = 0;
 	var uLocal_225 = 0;
@@ -243,6 +243,8 @@
 	var uLocal_241 = 0;
 	var uLocal_242 = 0;
 	var uLocal_243 = 0;
+	var uLocal_244 = 0;
+	var uLocal_245 = 0;
 #endregion
 
 void main() // Position - 0x0 (0)
@@ -277,13 +279,13 @@ void main() // Position - 0x0 (0)
 	fLocal_92 = 0f;
 	fLocal_93 = 2f;
 	fLocal_94 = 100f;
-	iLocal_135 = -1;
-	fLocal_137 = 0.5f;
-	iLocal_171 = -1;
-	iLocal_172 = -1;
+	iLocal_137 = -1;
+	fLocal_139 = 0.5f;
 	iLocal_173 = -1;
-	iLocal_176 = 10;
-	sLocal_178 = "mp_bedmid";
+	iLocal_174 = -1;
+	iLocal_175 = -1;
+	iLocal_178 = 10;
+	sLocal_180 = "mp_bedmid";
 	return;
 }
 

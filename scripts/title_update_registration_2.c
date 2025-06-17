@@ -1,4 +1,4 @@
-// Program registers 141269 globals at index 17 starting from Global_4456448
+// Program registers 141856 globals at index 17 starting from Global_4456448
 void main() // Position - 0x0 (0)
 {
 	Global_4456520 = -1;
@@ -6,42 +6,42 @@ void main() // Position - 0x0 (0)
 	Global_4456522 = -1;
 	Global_4456523 = -1;
 	Global_4456524 = -1;
-	Global_4538070 = 1;
-	Global_4538072 = 1;
-	Global_4538073 = 1;
-	Global_4538081 = 1;
-	Global_4538088 = -1;
-	Global_4538107 = 1;
-	Global_4540101 = 16003972;
-	Global_4540919 = -1;
-	Global_4540920 = -1;
-	Global_4540921 = -99;
-	Global_4540922 = -1;
-	Global_4540923 = -1;
-	Global_4540924 = -99;
-	Global_4540925 = -1;
-	Global_4540926 = -1;
-	Global_4540927 = -99;
-	Global_4540928 = -1;
-	Global_4540929 = -1;
-	Global_4540930 = -99;
-	Global_4540955 = -99;
-	TEXT_LABEL_ASSIGN_STRING(&Global_4541275, "", 64);
-	TEXT_LABEL_ASSIGN_STRING(&Global_4541292, "", 64);
-	Global_4541308 = 1;
-	Global_4541819 = -1;
-	Global_4541820 = -1;
-	Global_4541821 = 1;
-	Global_4542048 = -1;
-	Global_4542148 = 1;
-	Global_4542149 = 1;
-	Global_4542453 = -1;
-	Global_4546299 = 1;
-	TEXT_LABEL_ASSIGN_STRING(&Global_4546312, "", 16);
-	Global_4546322 = 8f;
-	Global_4547018 = 12;
-	Global_4547019 = 12;
-	Global_4597714 = 100f;
+	Global_4538652 = 1;
+	Global_4538654 = 1;
+	Global_4538655 = 1;
+	Global_4538663 = 1;
+	Global_4538670 = -1;
+	Global_4538691 = 1;
+	Global_4540685 = 16003972;
+	Global_4541503 = -1;
+	Global_4541504 = -1;
+	Global_4541505 = -99;
+	Global_4541506 = -1;
+	Global_4541507 = -1;
+	Global_4541508 = -99;
+	Global_4541509 = -1;
+	Global_4541510 = -1;
+	Global_4541511 = -99;
+	Global_4541512 = -1;
+	Global_4541513 = -1;
+	Global_4541514 = -99;
+	Global_4541539 = -99;
+	TEXT_LABEL_ASSIGN_STRING(&Global_4541859, "", 64);
+	TEXT_LABEL_ASSIGN_STRING(&Global_4541876, "", 64);
+	Global_4541892 = 1;
+	Global_4542403 = -1;
+	Global_4542404 = -1;
+	Global_4542405 = 1;
+	Global_4542632 = -1;
+	Global_4542732 = 1;
+	Global_4542733 = 1;
+	Global_4543040 = -1;
+	Global_4546886 = 1;
+	TEXT_LABEL_ASSIGN_STRING(&Global_4546899, "", 16);
+	Global_4546909 = 8f;
+	Global_4547605 = 12;
+	Global_4547606 = 12;
+	Global_4598301 = 100f;
 	return;
 }
 

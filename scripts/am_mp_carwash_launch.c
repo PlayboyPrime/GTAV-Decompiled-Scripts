@@ -186,13 +186,13 @@ Vector3 func_1(int iParam0) // Position - 0x1FF (511)
 	int num;
 
 	num = iParam0;
-	return Global_33467[num /*23*/][0 /*3*/];
+	return Global_33661[num /*23*/][0 /*3*/];
 }
 
 BOOL func_2(Player plParam0) // Position - 0x217 (535)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
-		return IS_BIT_SET(Global_2657991[plParam0 /*467*/].f_324.f_5, 4);
+		return IS_BIT_SET(Global_2658016[plParam0 /*467*/].f_324.f_5, 4);
 
 	return false;
 }
@@ -205,7 +205,7 @@ Player _INVALID_PLAYER_INDEX() // Position - 0x23C (572)
 BOOL func_4(Player plParam0) // Position - 0x245 (581)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
-		return IS_BIT_SET(Global_1845221[plParam0 /*889*/].f_268.f_435.f_2, 16);
+		return IS_BIT_SET(Global_1845225[plParam0 /*874*/].f_260.f_433.f_2, 16);
 
 	return false;
 }
@@ -213,28 +213,28 @@ BOOL func_4(Player plParam0) // Position - 0x245 (581)
 BOOL func_5(Player plParam0) // Position - 0x26E (622)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
-		return IS_BIT_SET(Global_1845221[plParam0 /*889*/].f_268.f_372, 29);
+		return IS_BIT_SET(Global_1845225[plParam0 /*874*/].f_260.f_370, 29);
 
 	return false;
 }
 
 BOOL func_6() // Position - 0x295 (661)
 {
-	return IS_BIT_SET(Global_1845221[PLAYER::PLAYER_ID() /*889*/].f_36.f_18, 0);
+	return IS_BIT_SET(Global_1845225[PLAYER::PLAYER_ID() /*874*/].f_36.f_18, 0);
 }
 
 BOOL func_7(Player plParam0) // Position - 0x2AE (686)
 {
-	return IS_BIT_SET(Global_1845221[plParam0 /*889*/].f_140, 6);
+	return IS_BIT_SET(Global_1845225[plParam0 /*874*/].f_140, 6);
 }
 
 int func_8() // Position - 0x2C3 (707)
 {
 	int num;
 
-	num = Global_2672939;
+	num = Global_2672964;
 
-	if (IS_BIT_SET(Global_1882780[num /*149*/].f_17, 0) && Global_1882780[num /*149*/].f_27 == 2)
+	if (IS_BIT_SET(Global_1882304[num /*201*/].f_17, 0) && Global_1882304[num /*201*/].f_27 == 2)
 		return 1;
 
 	return 0;
@@ -248,7 +248,7 @@ int func_9(Player plParam0, BOOL bParam1, BOOL bParam2) // Position - 0x2F6 (758
 
 	!bParam2;
 
-	if (Global_1845221[plParam0 /*889*/] == -1)
+	if (Global_1845225[plParam0 /*874*/] == -1)
 		return 0;
 
 	return 1;
@@ -261,7 +261,7 @@ BOOL func_10(Player plParam0) // Position - 0x328 (808)
 
 BOOL func_11(Player plParam0) // Position - 0x336 (822)
 {
-	return IS_BIT_SET(Global_1845221[plParam0 /*889*/].f_11.f_1, 0);
+	return IS_BIT_SET(Global_1845225[plParam0 /*874*/].f_11.f_1, 0);
 }
 
 BOOL func_12(Ped pedParam0) // Position - 0x34D (845)

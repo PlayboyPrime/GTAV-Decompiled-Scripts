@@ -1,4 +1,4 @@
-// Program registers 9878 globals at index 4 starting from Global_1048576
+// Program registers 9879 globals at index 4 starting from Global_1048576
 void main() // Position - 0x0 (0)
 {
 	Global_1057440 = -1;
@@ -9,6 +9,7 @@ void main() // Position - 0x0 (0)
 	Global_1058426 = 1;
 	Global_1058427 = -1;
 	Global_1058428 = 1;
+	Global_1058429 = 1;
 	return;
 }
 

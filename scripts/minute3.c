@@ -829,7 +829,7 @@ void main() // Position - 0x0 (0)
 	{
 		if (func_665() == 0)
 		{
-			Global_79785 = 1;
+			Global_79990 = 1;
 			iLocal_92 = 0;
 		
 			while (!func_655(&uLocal_109))
@@ -838,7 +838,7 @@ void main() // Position - 0x0 (0)
 			}
 		
 			func_654(&uLocal_109, false, true);
-			Global_79785 = 0;
+			Global_79990 = 0;
 		}
 	}
 
@@ -998,38 +998,38 @@ BOOL _CONVERSATION_ADD_LINE(var uParam0, char* sParam1, char* sParam2, int iPara
 		if (iParam3 < 12)
 			iParam3 = 7;
 
-	Global_22432 = 0;
-	Global_22434 = 0;
-	Global_22439 = 0;
-	Global_23416 = 0;
-	Global_23418 = 0;
-	Global_23422 = 0;
+	Global_22592 = 0;
+	Global_22594 = 0;
+	Global_22599 = 0;
+	Global_23576 = 0;
+	Global_23578 = 0;
+	Global_23582 = 0;
 	Global_2883585 = 0;
 	return func_4(sParam2, iParam3, false);
 }
 
 BOOL func_4(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x75F (1887)
 {
-	Global_22426 = 0;
+	Global_22586 = 0;
 
-	if (Global_22425 == 0 || Global_22427 == 2)
+	if (Global_22585 == 0 || Global_22587 == 2)
 	{
-		if (Global_22425 != 0)
+		if (Global_22585 != 0)
 		{
-			if (iParam1 > Global_22427)
+			if (iParam1 > Global_22587)
 			{
-				if (Global_22432 == 0)
+				if (Global_22592 == 0)
 				{
 					AUDIO::STOP_SCRIPTED_CONVERSATION(false);
-					Global_21066.f_1 = 3;
-					Global_22425 = 0;
-					Global_22426 = 1;
-					Global_22478 = 0;
-					Global_22421 = 0;
-					Global_22422 = 0;
-					Global_22436 = 0;
-					Global_22435 = false;
-					Global_21065 = 0;
+					Global_21222.f_1 = 3;
+					Global_22585 = 0;
+					Global_22586 = 1;
+					Global_22638 = 0;
+					Global_22581 = 0;
+					Global_22582 = 0;
+					Global_22596 = 0;
+					Global_22595 = false;
+					Global_21221 = 0;
 				}
 				else
 				{
@@ -1049,35 +1049,35 @@ BOOL func_4(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x75F (1887)
 		if (func_23(8, -1))
 			return 0;
 	
-		Global_22501 = { Global_22495 };
+		Global_22661 = { Global_22655 };
 		func_22();
-		Global_21714 = { Global_21879 };
-		Global_22431 = Global_22432;
-		Global_22438 = Global_22439;
+		Global_21874 = { Global_22039 };
+		Global_22591 = Global_22592;
+		Global_22598 = Global_22599;
 		Global_2883586 = Global_2883585;
-		Global_22440 = { Global_22456 };
-		Global_22433 = Global_22434;
-		Global_23415 = Global_23416;
-		Global_23423 = { Global_23429 };
-		Global_23417 = Global_23418;
-		Global_23419 = Global_23420;
-		Global_23421 = Global_23422;
-		Global_22044.f_370 = Global_23414;
-		Global_22044.f_368 = Global_23412;
-		Global_22044.f_369 = Global_23413;
-		Global_22421 = Global_22422;
+		Global_22600 = { Global_22616 };
+		Global_22593 = Global_22594;
+		Global_23575 = Global_23576;
+		Global_23583 = { Global_23589 };
+		Global_23577 = Global_23578;
+		Global_23579 = Global_23580;
+		Global_23581 = Global_23582;
+		Global_22204.f_370 = Global_23574;
+		Global_22204.f_368 = Global_23572;
+		Global_22204.f_369 = Global_23573;
+		Global_22581 = Global_22582;
 	
-		if (Global_22431)
+		if (Global_22591)
 		{
-			MISC::CLEAR_BIT(&Global_8919, 20);
-			MISC::CLEAR_BIT(&Global_8920, 17);
-			MISC::CLEAR_BIT(&Global_8921, 0);
+			MISC::CLEAR_BIT(&Global_9075, 20);
+			MISC::CLEAR_BIT(&Global_9076, 17);
+			MISC::CLEAR_BIT(&Global_9077, 0);
 		
 			if (bParam2)
 			{
 				_UPDATE_CURRENT_PLAYER_CHARACTER();
 			
-				if (Global_9741[Global_21066 /*2811*/][0 /*281*/].f_259 == 2)
+				if (Global_9897[Global_21222 /*2811*/][0 /*281*/].f_259 == 2)
 				{
 					if (iParam1 == 13)
 					{
@@ -1088,11 +1088,11 @@ BOOL func_4(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x75F (1887)
 					}
 				}
 			
-				if (Global_21066.f_1 > 3)
+				if (Global_21222.f_1 > 3)
 					return 0;
 			}
 		
-			if (Global_21032 == 1)
+			if (Global_21188 == 1)
 				return 0;
 		
 			if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
@@ -1115,7 +1115,7 @@ BOOL func_4(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x75F (1887)
 				if (WEAPON::GET_IS_PED_GADGET_EQUIPPED(PLAYER::PLAYER_PED_ID(), joaat("GADGET_PARACHUTE")))
 					return 0;
 			
-				if (!Global_79539)
+				if (!Global_79744)
 				{
 					if (ENTITY::IS_ENTITY_IN_WATER(PLAYER::PLAYER_PED_ID()))
 						return 0;
@@ -1137,7 +1137,7 @@ BOOL func_4(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x75F (1887)
 			}
 			else
 			{
-				switch (Global_21066.f_1)
+				switch (Global_21222.f_1)
 				{
 					case 7:
 						return 0;
@@ -1155,26 +1155,26 @@ BOOL func_4(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x75F (1887)
 						break;
 				}
 			
-				if (IS_BIT_SET(Global_8919, 9))
+				if (IS_BIT_SET(Global_9075, 9))
 					return 0;
 			}
 		
 			func_11();
-			Global_22435 = bParam2;
+			Global_22595 = bParam2;
 		}
 	
-		Global_22427 = iParam1;
-		TEXT_LABEL_ASSIGN_STRING(&Global_22044, sParam0, 24);
-		Global_21291 = 0;
+		Global_22587 = iParam1;
+		TEXT_LABEL_ASSIGN_STRING(&Global_22204, sParam0, 24);
+		Global_21451 = 0;
 		func_10();
 		func_5();
 		return 1;
 	}
 
-	if (Global_22425 == 5)
+	if (Global_22585 == 5)
 		return 0;
 
-	if (iParam1 < Global_22427 || iParam1 == Global_22427)
+	if (iParam1 < Global_22587 || iParam1 == Global_22587)
 		return 0;
 
 	if (iParam1 == 2)
@@ -1193,11 +1193,11 @@ void func_5() // Position - 0xA2D (2605)
 	if (!func_6())
 		return;
 
-	if (Global_22431)
+	if (Global_22591)
 	{
-		TEXT_LABEL_COPY(&(Global_1972230.f_1), { Global_22044 }, 4);
-		Global_1972230 = Global_8234;
-		Global_1972230.f_6 = Global_22435;
+		TEXT_LABEL_COPY(&(Global_1974333.f_1), { Global_22204 }, 4);
+		Global_1974333 = Global_8390;
+		Global_1974333.f_6 = Global_22595;
 	}
 
 	return;
@@ -1205,10 +1205,10 @@ void func_5() // Position - 0xA2D (2605)
 
 BOOL func_6() // Position - 0xA64 (2660)
 {
-	if (!Global_262145.f_28397)
+	if (!Global_262145.f_28396)
 		return false;
 
-	if (!Global_79539)
+	if (!Global_79744)
 		return false;
 
 	if (PLAYER::PLAYER_ID() == _INVALID_PLAYER_INDEX())
@@ -1217,7 +1217,7 @@ BOOL func_6() // Position - 0xA64 (2660)
 	if (func_7(PLAYER::PLAYER_ID()))
 		return false;
 
-	if (IS_BIT_SET(Global_1887549[PLAYER::PLAYER_ID() /*611*/].f_1, 7))
+	if (IS_BIT_SET(Global_1888737[PLAYER::PLAYER_ID() /*611*/].f_1, 7))
 		return false;
 
 	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION())
@@ -1233,7 +1233,7 @@ BOOL func_7(Player plParam0) // Position - 0xAC7 (2759)
 
 BOOL func_8(Player plParam0, int iParam1) // Position - 0xAD7 (2775)
 {
-	return IS_BIT_SET(Global_1887549[plParam0 /*611*/].f_10.f_4, iParam1);
+	return IS_BIT_SET(Global_1888737[plParam0 /*611*/].f_10.f_4, iParam1);
 }
 
 Player _INVALID_PLAYER_INDEX() // Position - 0xAEF (2799)
@@ -1247,41 +1247,41 @@ void func_10() // Position - 0xAF8 (2808)
 
 	for (i = 0; i <= 69; i = i + 1)
 	{
-		TEXT_LABEL_ASSIGN_STRING(&Global_21293[i /*6*/], "", 24);
+		TEXT_LABEL_ASSIGN_STRING(&Global_21453[i /*6*/], "", 24);
 	}
 
 	AUDIO::STOP_SCRIPTED_CONVERSATION(false);
-	Global_22425 = 1;
+	Global_22585 = 1;
 	return;
 }
 
 void func_11() // Position - 0xB29 (2857)
 {
-	Global_22478 = Global_22477;
-	Global_22472 = Global_22473;
-	Global_22519 = { Global_22507 };
-	Global_22525 = { Global_22513 };
-	Global_22480 = Global_22479;
-	Global_22549 = { Global_22531 };
-	Global_22555 = { Global_22537 };
-	Global_22561 = { Global_22543 };
-	Global_22567 = { Global_22573 };
-	Global_8234 = Global_8235;
-	Global_8236 = Global_8237;
-	Global_22436 = Global_22437;
-	Global_22438 = Global_22439;
-	Global_22440 = { Global_22456 };
-	Global_22429 = Global_22430;
-	Global_23441 = 0;
-	Global_22474 = 0;
-	Global_22475 = 0;
-	MISC::CLEAR_BIT(&Global_8920, 16);
+	Global_22638 = Global_22637;
+	Global_22632 = Global_22633;
+	Global_22679 = { Global_22667 };
+	Global_22685 = { Global_22673 };
+	Global_22640 = Global_22639;
+	Global_22709 = { Global_22691 };
+	Global_22715 = { Global_22697 };
+	Global_22721 = { Global_22703 };
+	Global_22727 = { Global_22733 };
+	Global_8390 = Global_8391;
+	Global_8392 = Global_8393;
+	Global_22596 = Global_22597;
+	Global_22598 = Global_22599;
+	Global_22600 = { Global_22616 };
+	Global_22589 = Global_22590;
+	Global_23601 = 0;
+	Global_22634 = 0;
+	Global_22635 = 0;
+	MISC::CLEAR_BIT(&Global_9076, 16);
 	return;
 }
 
 BOOL func_12() // Position - 0xBBE (3006)
 {
-	if (Global_21066.f_1 == 1 || Global_21066.f_1 == 0)
+	if (Global_21222.f_1 == 1 || Global_21222.f_1 == 0)
 		return true;
 
 	return false;
@@ -1292,7 +1292,7 @@ BOOL func_13() // Position - 0xBE5 (3045)
 	int num;
 	int weaponHash;
 
-	if (Global_79539)
+	if (Global_79744)
 	{
 		num = 0;
 		WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &weaponHash, true);
@@ -1321,27 +1321,27 @@ void _UPDATE_CURRENT_PLAYER_CHARACTER() // Position - 0xC7E (3198)
 	if (func_21(14))
 	{
 		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
-			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_114135.f_28055[0 /*29*/])
-				Global_21066 = CHAR_MICHAEL;
-			else if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_114135.f_28055[1 /*29*/])
-				Global_21066 = CHAR_FRANKLIN;
-			else if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_114135.f_28055[2 /*29*/])
-				Global_21066 = CHAR_TREVOR;
+			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_114344.f_28055[0 /*29*/])
+				Global_21222 = CHAR_MICHAEL;
+			else if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_114344.f_28055[1 /*29*/])
+				Global_21222 = CHAR_FRANKLIN;
+			else if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_114344.f_28055[2 /*29*/])
+				Global_21222 = CHAR_TREVOR;
 			else
-				Global_21066 = CHAR_MICHAEL;
+				Global_21222 = CHAR_MICHAEL;
 	}
 	else
 	{
-		Global_21066 = _GET_CURRENT_PLAYER_CHARACTER();
+		Global_21222 = _GET_CURRENT_PLAYER_CHARACTER();
 	
-		if (Global_21066 == _CHAR_NULL)
-			Global_21066 = CHAR_MULTIPLAYER;
+		if (Global_21222 == _CHAR_NULL)
+			Global_21222 = CHAR_MULTIPLAYER;
 	
-		if (Global_79539)
-			Global_21066 = CHAR_MULTIPLAYER;
+		if (Global_79744)
+			Global_21222 = CHAR_MULTIPLAYER;
 	
-		if (Global_21066 > CHAR_MULTIPLAYER)
-			Global_21066 = CHAR_MULTIPLAYER;
+		if (Global_21222 > CHAR_MULTIPLAYER)
+			Global_21222 = CHAR_MULTIPLAYER;
 	}
 
 	return;
@@ -1350,7 +1350,7 @@ void _UPDATE_CURRENT_PLAYER_CHARACTER() // Position - 0xC7E (3198)
 eCharacter _GET_CURRENT_PLAYER_CHARACTER() // Position - 0xD20 (3360)
 {
 	func_16();
-	return Global_114135.f_2367.f_539.f_4321;
+	return Global_114344.f_2367.f_539.f_4321;
 }
 
 void func_16() // Position - 0xD39 (3385)
@@ -1359,30 +1359,30 @@ void func_16() // Position - 0xD39 (3385)
 
 	if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 	{
-		if (_GET_CHARACTER_MODEL(Global_114135.f_2367.f_539.f_4321) != ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()))
+		if (_GET_CHARACTER_MODEL(Global_114344.f_2367.f_539.f_4321) != ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()))
 		{
 			character = _GET_PLAYER_CHARACTER_FROM_PED(PLAYER::PLAYER_PED_ID());
 		
-			if (func_17(character) && !func_21(14) || Global_113083)
+			if (func_17(character) && !func_21(14) || Global_113292)
 			{
-				if (Global_114135.f_2367.f_539.f_4321 != character && func_17(Global_114135.f_2367.f_539.f_4321))
-					Global_114135.f_2367.f_539.f_4322 = Global_114135.f_2367.f_539.f_4321;
+				if (Global_114344.f_2367.f_539.f_4321 != character && func_17(Global_114344.f_2367.f_539.f_4321))
+					Global_114344.f_2367.f_539.f_4322 = Global_114344.f_2367.f_539.f_4321;
 			
-				Global_114135.f_2367.f_539.f_4323 = character;
-				Global_114135.f_2367.f_539.f_4321 = character;
+				Global_114344.f_2367.f_539.f_4323 = character;
+				Global_114344.f_2367.f_539.f_4321 = character;
 				return;
 			}
 		}
 		else
 		{
-			if (Global_114135.f_2367.f_539.f_4321 != _CHAR_NULL)
-				Global_114135.f_2367.f_539.f_4323 = Global_114135.f_2367.f_539.f_4321;
+			if (Global_114344.f_2367.f_539.f_4321 != _CHAR_NULL)
+				Global_114344.f_2367.f_539.f_4323 = Global_114344.f_2367.f_539.f_4321;
 		
 			return;
 		}
 	}
 
-	Global_114135.f_2367.f_539.f_4321 = 145;
+	Global_114344.f_2367.f_539.f_4321 = 145;
 	return;
 }
 
@@ -1422,12 +1422,12 @@ Hash _GET_CHARACTER_MODEL(eCharacter character) // Position - 0xE7F (3711)
 
 Hash func_20(eCharacter echParam0) // Position - 0xEA4 (3748)
 {
-	return Global_2201[echParam0 /*29*/];
+	return Global_2241[echParam0 /*29*/];
 }
 
 BOOL func_21(int iParam0) // Position - 0xEB3 (3763)
 {
-	return Global_44181 == iParam0;
+	return Global_44375 == iParam0;
 }
 
 void func_22() // Position - 0xEC1 (3777)
@@ -1436,14 +1436,14 @@ void func_22() // Position - 0xEC1 (3777)
 
 	for (i = 0; i <= 15; i = i + 1)
 	{
-		Global_21714[i /*10*/] = 0;
-		TEXT_LABEL_ASSIGN_STRING(&(Global_21714[i /*10*/].f_1), "", 24);
-		Global_21714[i /*10*/].f_7 = 0;
-		Global_21714[i /*10*/].f_8 = 0;
+		Global_21874[i /*10*/] = 0;
+		TEXT_LABEL_ASSIGN_STRING(&(Global_21874[i /*10*/].f_1), "", 24);
+		Global_21874[i /*10*/].f_7 = 0;
+		Global_21874[i /*10*/].f_8 = 0;
 	}
 
-	Global_21714.f_161 = -99;
-	Global_21714.f_162 = { 0f, 0f, 0f };
+	Global_21874.f_161 = -99;
+	Global_21874.f_162 = { 0f, 0f, 0f };
 	return;
 }
 
@@ -1453,30 +1453,30 @@ BOOL func_23(int iParam0, int iParam1) // Position - 0xF18 (3864)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673655.f_203[iParam1];
+				return Global_1673846.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673655.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673846.f_1048, iParam0);
 }
 
 void func_24() // Position - 0xF50 (3920)
 {
 	AUDIO::RESTART_SCRIPTED_CONVERSATION();
-	Global_23436 = 0;
+	Global_23596 = 0;
 
-	if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING() || Global_21066.f_1 == 9 || Global_21065 == 1)
+	if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING() || Global_21222.f_1 == 9 || Global_21221 == 1)
 	{
 		AUDIO::STOP_SCRIPTED_CONVERSATION(false);
-		Global_22425 = 6;
-		Global_21066.f_1 = 3;
+		Global_22585 = 6;
+		Global_21222.f_1 = 3;
 		return;
 	}
 
 	if (AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 	{
 		AUDIO::STOP_SCRIPTED_CONVERSATION(true);
-		Global_22425 = 6;
+		Global_22585 = 6;
 		return;
 	}
 
@@ -1485,31 +1485,31 @@ void func_24() // Position - 0xF50 (3920)
 
 void func_25(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0xFA7 (4007)
 {
-	Global_21879 = { *uParam0 };
-	Global_8235 = iParam1;
-	TEXT_LABEL_ASSIGN_STRING(&Global_22495, sParam2, 24);
-	Global_23414 = iParam5;
+	Global_22039 = { *uParam0 };
+	Global_8391 = iParam1;
+	TEXT_LABEL_ASSIGN_STRING(&Global_22655, sParam2, 24);
+	Global_23574 = iParam5;
 
 	if (iParam3 == 0)
 	{
-		Global_23412 = 1;
-		Global_23410 = 0;
+		Global_23572 = 1;
+		Global_23570 = 0;
 	}
 	else
 	{
-		Global_23412 = 0;
-		Global_23410 = 1;
+		Global_23572 = 0;
+		Global_23570 = 1;
 	}
 
 	if (iParam4 == 0)
 	{
-		Global_23413 = 1;
-		Global_23411 = 0;
+		Global_23573 = 1;
+		Global_23571 = 0;
 	}
 	else
 	{
-		Global_23413 = 0;
-		Global_23411 = 1;
+		Global_23573 = 0;
+		Global_23571 = 1;
 	}
 
 	return;
@@ -1527,7 +1527,7 @@ BOOL func_26(char* sParam0, int iParam1, const char* sParam2) // Position - 0xFF
 
 BOOL func_27() // Position - 0x101B (4123)
 {
-	if (Global_22425 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
+	if (Global_22585 != 0 || AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		return true;
 
 	return false;
@@ -1579,7 +1579,7 @@ void func_28(Ped pedParam0) // Position - 0x103D (4157)
 
 void func_29() // Position - 0x1155 (4437)
 {
-	Global_21291 = 0;
+	Global_21451 = 0;
 	func_30();
 	return;
 }
@@ -1587,12 +1587,12 @@ void func_29() // Position - 0x1155 (4437)
 void func_30() // Position - 0x1165 (4453)
 {
 	AUDIO::RESTART_SCRIPTED_CONVERSATION();
-	Global_23436 = 0;
+	Global_23596 = 0;
 
 	if (AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 	{
 		AUDIO::STOP_SCRIPTED_CONVERSATION(false);
-		Global_22425 = 6;
+		Global_22585 = 6;
 	}
 
 	return;
@@ -2008,7 +2008,7 @@ BOOL func_49() // Position - 0x188C (6284)
 	if (Global_4)
 		return true;
 
-	if (Global_101688 == 7 || Global_101688 == 8)
+	if (Global_101893 == 7 || Global_101893 == 8)
 		return true;
 
 	return false;
@@ -2027,8 +2027,8 @@ void func_51(char* sParam0) // Position - 0x18CD (6349)
 	{
 		if (HUD::GET_LENGTH_OF_LITERAL_STRING(sParam0) <= 16)
 		{
-			TEXT_LABEL_ASSIGN_STRING(&Global_79772, sParam0, 16);
-			TEXT_LABEL_ASSIGN_STRING(&Global_79776, "", 16);
+			TEXT_LABEL_ASSIGN_STRING(&Global_79977, sParam0, 16);
+			TEXT_LABEL_ASSIGN_STRING(&Global_79981, "", 16);
 		
 			if (RECORDING::IS_REPLAY_RECORDING())
 				RECORDING::STOP_REPLAY_RECORDING();
@@ -2091,24 +2091,24 @@ void func_54(int iParam0, BOOL bParam1) // Position - 0x19C7 (6599)
 	if (num == -1)
 		return;
 
-	if (!Global_113222[num /*10*/].f_4)
+	if (!Global_113431[num /*10*/].f_4)
 		return;
 
-	if (Global_113222[num /*10*/].f_5)
+	if (Global_113431[num /*10*/].f_5)
 		return;
 
-	if (Global_113222[num /*10*/].f_6)
+	if (Global_113431[num /*10*/].f_6)
 		return;
 
 	func_221(num, false);
-	MISC::SET_BIT(&Global_79788, 1);
+	MISC::SET_BIT(&Global_79993, 1);
 
-	if (Global_113222[num /*10*/].f_9 == -1)
+	if (Global_113431[num /*10*/].f_9 == -1)
 	{
 	}
 	else
 	{
-		func_220(&(Global_113222[num /*10*/].f_9));
+		func_220(&(Global_113431[num /*10*/].f_9));
 	}
 
 	if (bParam1)
@@ -2127,7 +2127,7 @@ void func_54(int iParam0, BOOL bParam1) // Position - 0x19C7 (6599)
 	func_201(&unk, func_202());
 	func_82();
 
-	if (IS_BIT_SET(Global_114135.f_10020.f_25, 3))
+	if (IS_BIT_SET(Global_114344.f_10020.f_25, 3))
 		func_81();
 
 	func_63();
@@ -2148,13 +2148,13 @@ int func_55() // Position - 0x1AFB (6907)
 	if (func_56(false))
 		return 0;
 
-	if (Global_101727.f_8)
-		if (Global_101727.f_10 > 0)
+	if (Global_101932.f_8)
+		if (Global_101932.f_10 > 0)
 			return 0;
-	else if (Global_101727.f_10 > 1)
+	else if (Global_101932.f_10 > 1)
 		return 0;
 
-	Global_101727.f_10 = Global_101727.f_10 + 1;
+	Global_101932.f_10 = Global_101932.f_10 + 1;
 	return 1;
 }
 
@@ -2163,7 +2163,7 @@ BOOL func_56(BOOL bParam0) // Position - 0x1B46 (6982)
 	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
-	return IS_BIT_SET(Global_79788, 0);
+	return IS_BIT_SET(Global_79993, 0);
 }
 
 void func_57(int iParam0, int iParam1, int iParam2) // Position - 0x1B6E (7022)
@@ -2182,16 +2182,16 @@ void func_57(int iParam0, int iParam1, int iParam2) // Position - 0x1B6E (7022)
 
 	flag = true;
 
-	if (Global_114135.f_10198[iParam0 /*12*/].f_5 == 1)
+	if (Global_114344.f_10198[iParam0 /*12*/].f_5 == 1)
 	{
-		if (Global_114135.f_10198[iParam0 /*12*/].f_6 == 11 || Global_114135.f_10198[iParam0 /*12*/].f_6 == 12)
+		if (Global_114344.f_10198[iParam0 /*12*/].f_6 == 11 || Global_114344.f_10198[iParam0 /*12*/].f_6 == 12)
 			flag = false;
 	}
 	else
 	{
-		Global_114135.f_10198[iParam0 /*12*/].f_5 = 1;
-		Global_114135.f_10198[iParam0 /*12*/].f_10 = iParam1;
-		Global_114135.f_10198[iParam0 /*12*/].f_11 = iParam2;
+		Global_114344.f_10198[iParam0 /*12*/].f_5 = 1;
+		Global_114344.f_10198[iParam0 /*12*/].f_10 = iParam1;
+		Global_114344.f_10198[iParam0 /*12*/].f_11 = iParam2;
 	
 		if (iParam0 == 287)
 			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("NUM_HIDDEN_PACKAGES_0"), 50, 0);
@@ -2223,13 +2223,13 @@ void func_58() // Position - 0x1C54 (7252)
 	int value2;
 
 	num = 0;
-	Global_113871 = 0;
-	Global_113872 = 0;
-	Global_113873 = 0;
-	Global_113874 = 0;
-	Global_113875 = 0;
-	Global_113876 = 0;
-	Global_113877 = 0;
+	Global_114080 = 0;
+	Global_114081 = 0;
+	Global_114082 = 0;
+	Global_114083 = 0;
+	Global_114084 = 0;
+	Global_114085 = 0;
+	Global_114086 = 0;
 	num2 = 0f;
 	num3 = 0f;
 	num4 = 0f;
@@ -2237,48 +2237,48 @@ void func_58() // Position - 0x1C54 (7252)
 	num6 = 0f;
 	num7 = 0f;
 	num8 = 0f;
-	value = Global_114135.f_10198.f_3853;
-	Global_114135.f_10198.f_3853 = 0f;
+	value = Global_114344.f_10198.f_3853;
+	Global_114344.f_10198.f_3853 = 0f;
 
 	while (num < 321)
 	{
-		if (Global_114135.f_10198[num /*12*/].f_5 == 1)
+		if (Global_114344.f_10198[num /*12*/].f_5 == 1)
 		{
-			switch (Global_114135.f_10198[num /*12*/].f_6)
+			switch (Global_114344.f_10198[num /*12*/].f_6)
 			{
 				case 1:
-					Global_113871 = Global_113871 + 1;
-					num2 = num2 + Global_114135.f_10198[num /*12*/].f_4;
+					Global_114080 = Global_114080 + 1;
+					num2 = num2 + Global_114344.f_10198[num /*12*/].f_4;
 					break;
 			
 				case 3:
-					Global_113872 = Global_113872 + 1;
-					num3 = num3 + Global_114135.f_10198[num /*12*/].f_4;
+					Global_114081 = Global_114081 + 1;
+					num3 = num3 + Global_114344.f_10198[num /*12*/].f_4;
 					break;
 			
 				case 5:
-					Global_113873 = Global_113873 + 1;
-					num4 = num4 + Global_114135.f_10198[num /*12*/].f_4;
+					Global_114082 = Global_114082 + 1;
+					num4 = num4 + Global_114344.f_10198[num /*12*/].f_4;
 					break;
 			
 				case 7:
-					Global_113874 = Global_113874 + 1;
-					num5 = num5 + Global_114135.f_10198[num /*12*/].f_4;
+					Global_114083 = Global_114083 + 1;
+					num5 = num5 + Global_114344.f_10198[num /*12*/].f_4;
 					break;
 			
 				case 9:
-					Global_113875 = Global_113875 + 1;
-					num6 = num6 + (Global_114135.f_10198[num /*12*/].f_4 * 4f);
+					Global_114084 = Global_114084 + 1;
+					num6 = num6 + (Global_114344.f_10198[num /*12*/].f_4 * 4f);
 					break;
 			
 				case 11:
-					Global_113876 = Global_113876 + 1;
-					num7 = num7 + Global_114135.f_10198[num /*12*/].f_4;
+					Global_114085 = Global_114085 + 1;
+					num7 = num7 + Global_114344.f_10198[num /*12*/].f_4;
 					break;
 			
 				case 13:
-					Global_113877 = Global_113877 + 1;
-					num8 = num8 + Global_114135.f_10198[num /*12*/].f_4;
+					Global_114086 = Global_114086 + 1;
+					num8 = num8 + Global_114344.f_10198[num /*12*/].f_4;
 					break;
 			
 				default:
@@ -2289,32 +2289,32 @@ void func_58() // Position - 0x1C54 (7252)
 		num = num + 1;
 	}
 
-	if (Global_113854 > 0)
-		if (Global_113871 == Global_113854)
+	if (Global_114063 > 0)
+		if (Global_114080 == Global_114063)
 			num2 = 55f;
 
-	if (Global_113855 > 0)
-		if (Global_113872 == Global_113855)
+	if (Global_114064 > 0)
+		if (Global_114081 == Global_114064)
 			num3 = 10f;
 
-	if (Global_113856 > 0)
-		if (Global_113873 == Global_113856)
+	if (Global_114065 > 0)
+		if (Global_114082 == Global_114065)
 			num4 = 0f;
 
-	if (Global_113857 > 0)
-		if (Global_113874 == Global_113857)
+	if (Global_114066 > 0)
+		if (Global_114083 == Global_114066)
 			num5 = 10f;
 
-	if (Global_113858 > 0)
+	if (Global_114067 > 0)
 	{
-		if (Global_113875 == Global_113858 || (Global_113858 * 10) / Global_113875 < 41 || Global_113875 > Global_113861 || Global_113875 == Global_113861)
+		if (Global_114084 == Global_114067 || (Global_114067 * 10) / Global_114084 < 41 || Global_114084 > Global_114070 || Global_114084 == Global_114070)
 		{
-			if (!IS_BIT_SET(Global_114135.f_10198.f_3856, 14))
+			if (!IS_BIT_SET(Global_114344.f_10198.f_3856, 14))
 			{
-				if (Global_113875 == Global_113858)
+				if (Global_114084 == Global_114067)
 				{
-					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("NUM_RNDEVENTS_COMPLETED"), Global_113858, 0);
-					MISC::SET_BIT(&(Global_114135.f_10198.f_3856), 14);
+					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("NUM_RNDEVENTS_COMPLETED"), Global_114067, 0);
+					MISC::SET_BIT(&(Global_114344.f_10198.f_3856), 14);
 				}
 			}
 		
@@ -2322,55 +2322,55 @@ void func_58() // Position - 0x1C54 (7252)
 		}
 	}
 
-	if (Global_113859 > 0)
-		if (Global_113876 == Global_113859)
+	if (Global_114068 > 0)
+		if (Global_114085 == Global_114068)
 			num7 = 15f;
 
-	if (Global_113860 > 0)
-		if (Global_113877 == Global_113860)
+	if (Global_114069 > 0)
+		if (Global_114086 == Global_114069)
 			num8 = 5f;
 
-	Global_114135.f_10198.f_3853 = num2 + num3 + num4 + num5 + num6 + num7 + num8;
+	Global_114344.f_10198.f_3853 = num2 + num3 + num4 + num5 + num6 + num7 + num8;
 
-	if (Global_113875 > Global_113861 || Global_113875 == Global_113861)
-		value2 = Global_113861;
+	if (Global_114084 > Global_114070 || Global_114084 == Global_114070)
+		value2 = Global_114070;
 	else
-		value2 = Global_113875;
+		value2 = Global_114084;
 
-	STATS::STAT_SET_INT(joaat("NUM_MISSIONS_COMPLETED"), Global_113871, true);
-	STATS::STAT_SET_INT(joaat("NUM_MISSIONS_AVAILABLE"), Global_113854, true);
-	STATS::STAT_SET_INT(joaat("NUM_MINIGAMES_COMPLETED"), Global_113872, true);
-	STATS::STAT_SET_INT(joaat("NUM_MINIGAMES_AVAILABLE"), Global_113855, true);
-	STATS::STAT_SET_INT(joaat("NUM_ODDJOBS_COMPLETED"), Global_113873, true);
-	STATS::STAT_SET_INT(joaat("NUM_ODDJOBS_AVAILABLE"), Global_113856, true);
-	STATS::STAT_SET_INT(joaat("NUM_RNDPEOPLE_COMPLETED"), Global_113874, true);
-	STATS::STAT_SET_INT(joaat("NUM_RNDPEOPLE_AVAILABLE"), Global_113857, true);
+	STATS::STAT_SET_INT(joaat("NUM_MISSIONS_COMPLETED"), Global_114080, true);
+	STATS::STAT_SET_INT(joaat("NUM_MISSIONS_AVAILABLE"), Global_114063, true);
+	STATS::STAT_SET_INT(joaat("NUM_MINIGAMES_COMPLETED"), Global_114081, true);
+	STATS::STAT_SET_INT(joaat("NUM_MINIGAMES_AVAILABLE"), Global_114064, true);
+	STATS::STAT_SET_INT(joaat("NUM_ODDJOBS_COMPLETED"), Global_114082, true);
+	STATS::STAT_SET_INT(joaat("NUM_ODDJOBS_AVAILABLE"), Global_114065, true);
+	STATS::STAT_SET_INT(joaat("NUM_RNDPEOPLE_COMPLETED"), Global_114083, true);
+	STATS::STAT_SET_INT(joaat("NUM_RNDPEOPLE_AVAILABLE"), Global_114066, true);
 	STATS::STAT_SET_INT(joaat("NUM_RNDEVENTS_COMPLETED"), value2, true);
-	STATS::STAT_SET_INT(joaat("NUM_RNDEVENTS_AVAILABLE"), Global_113861, true);
-	STATS::STAT_SET_INT(joaat("NUM_MISC_COMPLETED"), Global_113877 + Global_113876, true);
-	STATS::STAT_SET_INT(joaat("NUM_MISC_AVAILABLE"), Global_113860 + Global_113859, true);
-	Global_113878 = (Global_113871 * 100) / Global_113854;
-	Global_113880 = ((Global_113873 + Global_113872) * 100) / (Global_113856 + Global_113855);
-	Global_113879 = ((Global_113874 + value2) * 100) / (Global_113857 + Global_113861);
-	Global_113881 = ((Global_113876 + Global_113877) * 100) / (Global_113859 + Global_113860);
-	STATS::STAT_SET_FLOAT(joaat("TOTAL_PROGRESS_MADE"), Global_114135.f_10198.f_3853, true);
-	STATS::STAT_SET_INT(joaat("PERCENT_STORY_MISSIONS"), Global_113878, true);
-	STATS::STAT_SET_INT(joaat("PERCENT_AMBIENT_MISSIONS"), Global_113879, true);
-	STATS::STAT_SET_INT(joaat("PERCENT_ODDJOBS"), Global_113880, true);
+	STATS::STAT_SET_INT(joaat("NUM_RNDEVENTS_AVAILABLE"), Global_114070, true);
+	STATS::STAT_SET_INT(joaat("NUM_MISC_COMPLETED"), Global_114086 + Global_114085, true);
+	STATS::STAT_SET_INT(joaat("NUM_MISC_AVAILABLE"), Global_114069 + Global_114068, true);
+	Global_114087 = (Global_114080 * 100) / Global_114063;
+	Global_114089 = ((Global_114082 + Global_114081) * 100) / (Global_114065 + Global_114064);
+	Global_114088 = ((Global_114083 + value2) * 100) / (Global_114066 + Global_114070);
+	Global_114090 = ((Global_114085 + Global_114086) * 100) / (Global_114068 + Global_114069);
+	STATS::STAT_SET_FLOAT(joaat("TOTAL_PROGRESS_MADE"), Global_114344.f_10198.f_3853, true);
+	STATS::STAT_SET_INT(joaat("PERCENT_STORY_MISSIONS"), Global_114087, true);
+	STATS::STAT_SET_INT(joaat("PERCENT_AMBIENT_MISSIONS"), Global_114088, true);
+	STATS::STAT_SET_INT(joaat("PERCENT_ODDJOBS"), Global_114089, true);
 
-	if (value > 0f && BUILTIN::FLOOR(value) < BUILTIN::FLOOR(Global_114135.f_10198.f_3853))
-		func_60(13, BUILTIN::FLOOR(Global_114135.f_10198.f_3853));
+	if (value > 0f && BUILTIN::FLOOR(value) < BUILTIN::FLOOR(Global_114344.f_10198.f_3853))
+		func_60(13, BUILTIN::FLOOR(Global_114344.f_10198.f_3853));
 
 	if (!DATAFILE::DATAFILE_IS_SAVE_PENDING())
 	{
-		if (!Global_79539)
+		if (!Global_79744)
 		{
 			if (func_59() == 2 == false && !NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			{
 				if (NETWORK::NETWORK_IS_CLOUD_AVAILABLE())
-					Global_113869 = 0;
+					Global_114078 = 0;
 			
-				if (!Global_64308)
+				if (!Global_64506)
 					func_55();
 			}
 		}
@@ -2381,7 +2381,7 @@ void func_58() // Position - 0x1C54 (7252)
 
 int func_59() // Position - 0x2112 (8466)
 {
-	return Global_33087;
+	return Global_33281;
 }
 
 BOOL func_60(int iParam0, int iParam1) // Position - 0x211D (8477)
@@ -2416,7 +2416,7 @@ void _STAT_SET_PACKED_BOOL(int iParam0, BOOL bParam1, int iParam2) // Position -
 
 int func_62() // Position - 0x218C (8588)
 {
-	return Global_1574926;
+	return Global_1574927;
 }
 
 void func_63() // Position - 0x2198 (8600)
@@ -2427,10 +2427,10 @@ void func_63() // Position - 0x2198 (8600)
 	func_67();
 	func_66();
 	func_65();
-	Global_101725 = 0;
-	Global_95838 = -1;
-	MISC::CLEAR_BIT(&(Global_101688.f_20), 17);
-	Global_101723 = 0;
+	Global_101930 = 0;
+	Global_96043 = -1;
+	MISC::CLEAR_BIT(&(Global_101893.f_20), 17);
+	Global_101928 = 0;
 	MISC::PAUSE_DEATH_ARREST_RESTART(false);
 	MISC::IGNORE_NEXT_RESTART(false);
 	MISC::SET_FADE_IN_AFTER_DEATH_ARREST(true);
@@ -2443,25 +2443,25 @@ void func_63() // Position - 0x2198 (8600)
 void func_64(int iParam0) // Position - 0x21F1 (8689)
 {
 	if (iParam0 == 1)
-		MISC::SET_BIT(&(Global_101688.f_20), 13);
+		MISC::SET_BIT(&(Global_101893.f_20), 13);
 	else
-		MISC::CLEAR_BIT(&(Global_101688.f_20), 13);
+		MISC::CLEAR_BIT(&(Global_101893.f_20), 13);
 
 	return;
 }
 
 void func_65() // Position - 0x221A (8730)
 {
-	Global_79780 = { 0f, 0f, 0f };
-	Global_79783 = 0f;
-	Global_101688.f_21 = 145;
+	Global_79985 = { 0f, 0f, 0f };
+	Global_79988 = 0f;
+	Global_101893.f_21 = 145;
 	return;
 }
 
 void func_66() // Position - 0x2238 (8760)
 {
-	TEXT_LABEL_ASSIGN_STRING(&Global_79772, "", 16);
-	TEXT_LABEL_ASSIGN_STRING(&Global_79776, "", 16);
+	TEXT_LABEL_ASSIGN_STRING(&Global_79977, "", 16);
+	TEXT_LABEL_ASSIGN_STRING(&Global_79981, "", 16);
 	return;
 }
 
@@ -2471,7 +2471,7 @@ void func_67() // Position - 0x2252 (8786)
 
 	for (i = 0; i <= 6; i = i + 1)
 	{
-		Global_101688.f_22[i] = 0;
+		Global_101893.f_22[i] = 0;
 	}
 
 	return;
@@ -2479,39 +2479,39 @@ void func_67() // Position - 0x2252 (8786)
 
 void func_68() // Position - 0x2277 (8823)
 {
-	Global_101688 = 13;
-	Global_101688.f_1 = -1;
-	Global_101688.f_2 = 0;
-	Global_101688.f_30 = 0f;
-	MISC::CLEAR_BIT(&(Global_101688.f_20), 25);
-	Global_101722 = 0;
+	Global_101893 = 13;
+	Global_101893.f_1 = -1;
+	Global_101893.f_2 = 0;
+	Global_101893.f_30 = 0f;
+	MISC::CLEAR_BIT(&(Global_101893.f_20), 25);
+	Global_101927 = 0;
 	func_71(0);
 	func_70();
 	func_69();
-	Global_101688.f_18 = -1;
-	Global_101688.f_19 = -1;
+	Global_101893.f_18 = -1;
+	Global_101893.f_19 = -1;
 	return;
 }
 
 void func_69() // Position - 0x22C6 (8902)
 {
-	MISC::CLEAR_BIT(&(Global_101688.f_20), 22);
-	MISC::CLEAR_BIT(&(Global_101688.f_20), 8);
+	MISC::CLEAR_BIT(&(Global_101893.f_20), 22);
+	MISC::CLEAR_BIT(&(Global_101893.f_20), 8);
 	return;
 }
 
 void func_70() // Position - 0x22E6 (8934)
 {
-	if (Global_101688.f_16 != 0)
+	if (Global_101893.f_16 != 0)
 	{
-		GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&(Global_101688.f_16));
-		Global_101688.f_16 = 0;
+		GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&(Global_101893.f_16));
+		Global_101893.f_16 = 0;
 	}
 
-	if (Global_101688.f_17 != 0)
+	if (Global_101893.f_17 != 0)
 	{
-		GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&(Global_101688.f_17));
-		Global_101688.f_17 = 0;
+		GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&(Global_101893.f_17));
+		Global_101893.f_17 = 0;
 	}
 
 	return;
@@ -2520,16 +2520,16 @@ void func_70() // Position - 0x22E6 (8934)
 void func_71(int iParam0) // Position - 0x2324 (8996)
 {
 	if (iParam0 == 1)
-		Global_44730 = 1;
+		Global_44924 = 1;
 	else
-		Global_44730 = 0;
+		Global_44924 = 0;
 
 	return;
 }
 
 void func_72() // Position - 0x233D (9021)
 {
-	func_73(&Global_107680);
+	func_73(&Global_107887);
 	return;
 }
 
@@ -2798,24 +2798,24 @@ void func_79(var uParam0) // Position - 0x2AD5 (10965)
 
 void func_80() // Position - 0x2AE3 (10979)
 {
-	TEXT_LABEL_ASSIGN_STRING(&Global_104688, "", 32);
-	func_73(&Global_104696);
+	TEXT_LABEL_ASSIGN_STRING(&Global_104895, "", 32);
+	func_73(&Global_104903);
 	return;
 }
 
 void func_81() // Position - 0x2AFC (11004)
 {
-	if (Global_9741[0 /*2811*/][0 /*281*/].f_259 == 0)
-		Global_9741[0 /*2811*/][0 /*281*/].f_259 = 2;
+	if (Global_9897[0 /*2811*/][0 /*281*/].f_259 == 0)
+		Global_9897[0 /*2811*/][0 /*281*/].f_259 = 2;
 
-	if (Global_9741[1 /*2811*/][0 /*281*/].f_259 == 0)
-		Global_9741[1 /*2811*/][0 /*281*/].f_259 = 2;
+	if (Global_9897[1 /*2811*/][0 /*281*/].f_259 == 0)
+		Global_9897[1 /*2811*/][0 /*281*/].f_259 = 2;
 
-	if (Global_9741[2 /*2811*/][0 /*281*/].f_259 == 0)
-		Global_9741[2 /*2811*/][0 /*281*/].f_259 = 2;
+	if (Global_9897[2 /*2811*/][0 /*281*/].f_259 == 0)
+		Global_9897[2 /*2811*/][0 /*281*/].f_259 = 2;
 
-	MISC::SET_BIT(&Global_8919, 25);
-	MISC::SET_BIT(&Global_8920, 11);
+	MISC::SET_BIT(&Global_9075, 25);
+	MISC::SET_BIT(&Global_9076, 11);
 	return;
 }
 
@@ -2828,7 +2828,7 @@ void func_82() // Position - 0x2B79 (11129)
 
 	for (i = 0; i <= 8; i = i + 1)
 	{
-		ped = Global_99032[i];
+		ped = Global_99237[i];
 	
 		if (ENTITY::DOES_ENTITY_EXIST(ped) && !PED::IS_PED_INJURED(ped))
 		{
@@ -2855,8 +2855,8 @@ void func_82() // Position - 0x2B79 (11129)
 				if (func_200(ped, 14, num))
 					func_83(ped, 14, num);
 			
-				if (Global_114135.f_2367.f_539[character /*65*/].f_39[2] == num)
-					Global_114135.f_2367.f_539[character /*65*/].f_39[2] = -1;
+				if (Global_114344.f_2367.f_539[character /*65*/].f_39[2] == num)
+					Global_114344.f_2367.f_539[character /*65*/].f_39[2] = -1;
 			}
 		}
 	}
@@ -2879,9 +2879,9 @@ BOOL func_83(Ped pedParam0, int iParam1, int iParam2) // Position - 0x2C3A (1132
 		return false;
 
 	entityModel = ENTITY::GET_ENTITY_MODEL(pedParam0);
-	Global_79322[1 /*14*/] = { func_136(entityModel, iParam1, iParam2, -1) };
+	Global_79527[1 /*14*/] = { func_136(entityModel, iParam1, iParam2, -1) };
 
-	if (!IS_BIT_SET(Global_79322[1 /*14*/].f_6, 0))
+	if (!IS_BIT_SET(Global_79527[1 /*14*/].f_6, 0))
 		return false;
 
 	if (!func_200(pedParam0, iParam1, iParam2))
@@ -2911,15 +2911,15 @@ BOOL func_83(Ped pedParam0, int iParam1, int iParam2) // Position - 0x2C3A (1132
 	}
 	else if (iParam1 == 14)
 	{
-		PED::CLEAR_PED_PROP(pedParam0, Global_79322[1 /*14*/].f_12, 1);
+		PED::CLEAR_PED_PROP(pedParam0, Global_79527[1 /*14*/].f_12, 1);
 	}
 	else
 	{
 		unk28 = { func_132(entityModel, 0) };
-		Global_79322[1 /*14*/] = { func_136(entityModel, iParam1, unk28[iParam1], -1) };
+		Global_79527[1 /*14*/] = { func_136(entityModel, iParam1, unk28[iParam1], -1) };
 	
-		if (PED::GET_NUMBER_OF_PED_DRAWABLE_VARIATIONS(pedParam0, func_128(iParam1)) > 0 && PED::GET_NUMBER_OF_PED_TEXTURE_VARIATIONS(pedParam0, func_128(iParam1), Global_79322[1 /*14*/].f_3) > 0)
-			PED::SET_PED_COMPONENT_VARIATION(pedParam0, func_128(iParam1), Global_79322[1 /*14*/].f_3, Global_79322[1 /*14*/].f_4, 0);
+		if (PED::GET_NUMBER_OF_PED_DRAWABLE_VARIATIONS(pedParam0, func_128(iParam1)) > 0 && PED::GET_NUMBER_OF_PED_TEXTURE_VARIATIONS(pedParam0, func_128(iParam1), Global_79527[1 /*14*/].f_3) > 0)
+			PED::SET_PED_COMPONENT_VARIATION(pedParam0, func_128(iParam1), Global_79527[1 /*14*/].f_3, Global_79527[1 /*14*/].f_4, 0);
 	}
 
 	if (func_127(pedParam0, entityModel, &num, 0))
@@ -2940,13 +2940,13 @@ BOOL func_84(Ped pedParam0, Hash hParam1, var uParam2) // Position - 0x2DF7 (117
 	if (num >= 3 || num < 0)
 		return false;
 
-	if (Global_114135.f_2367.f_539[num /*65*/].f_63 != -99)
+	if (Global_114344.f_2367.f_539[num /*65*/].f_63 != -99)
 	{
-		if (!func_200(pedParam0, Global_114135.f_2367.f_539[num /*65*/].f_64, Global_114135.f_2367.f_539[num /*65*/].f_63))
+		if (!func_200(pedParam0, Global_114344.f_2367.f_539[num /*65*/].f_64, Global_114344.f_2367.f_539[num /*65*/].f_63))
 		{
-			*uParam2 = Global_114135.f_2367.f_539[num /*65*/].f_62;
-			Global_114135.f_2367.f_539[num /*65*/].f_63 = -99;
-			Global_114135.f_2367.f_539[num /*65*/].f_64 = 1;
+			*uParam2 = Global_114344.f_2367.f_539[num /*65*/].f_62;
+			Global_114344.f_2367.f_539[num /*65*/].f_63 = -99;
+			Global_114344.f_2367.f_539[num /*65*/].f_64 = 1;
 			return true;
 		}
 	}
@@ -2996,7 +2996,7 @@ int func_86(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 	if (PED::IS_PED_INJURED(pedParam0) || iParam2 == -99)
 		return 0;
 
-	Global_79320 = Global_79320 + 1;
+	Global_79525 = Global_79525 + 1;
 	num3 = -99;
 	num4 = -99;
 	num5 = -99;
@@ -3006,11 +3006,11 @@ int func_86(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 
 	if (iParam5 == 0)
 	{
-		Global_79322[1 /*14*/] = { func_136(entityModel, iParam1, iParam2, -1) };
+		Global_79527[1 /*14*/] = { func_136(entityModel, iParam1, iParam2, -1) };
 	
 		if (!func_126(iParam3))
 		{
-			Global_79320 = Global_79320 - 1;
+			Global_79525 = Global_79525 - 1;
 			return 0;
 		}
 	
@@ -3080,7 +3080,7 @@ int func_86(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 		unk = 15;
 	
 		if (iParam5 == 1)
-			unk = { Global_79365 };
+			unk = { Global_79570 };
 		else
 			unk = { func_132(entityModel, iParam2) };
 	
@@ -3088,26 +3088,26 @@ int func_86(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 		{
 			if (unk[i] != -99)
 			{
-				Global_79322[1 /*14*/] = { func_136(entityModel, i, unk[i], -1) };
+				Global_79527[1 /*14*/] = { func_136(entityModel, i, unk[i], -1) };
 			
-				if (IS_BIT_SET(Global_79322[1 /*14*/].f_6, 0))
+				if (IS_BIT_SET(Global_79527[1 /*14*/].f_6, 0))
 				{
 					if (i == 13)
 					{
 						unk18 = 9;
 					
 						if (iParam5 == 1)
-							unk18 = { Global_79382 };
+							unk18 = { Global_79587 };
 						else
 							unk18 = { func_129(entityModel, unk[i]) };
 					
 						for (j = 0; j <= 8; j = j + 1)
 						{
-							Global_79322[1 /*14*/] = { func_136(entityModel, 14, unk18[j], -1) };
-							func_102(pedParam0, Global_79322[1 /*14*/].f_12, Global_79322[1 /*14*/].f_3, Global_79322[1 /*14*/].f_4);
+							Global_79527[1 /*14*/] = { func_136(entityModel, 14, unk18[j], -1) };
+							func_102(pedParam0, Global_79527[1 /*14*/].f_12, Global_79527[1 /*14*/].f_3, Global_79527[1 /*14*/].f_4);
 							func_118(14);
 						
-							if (Global_79320 == 1)
+							if (Global_79525 == 1)
 							{
 								for (k = 0; k < 15; k = k + 1)
 								{
@@ -3125,13 +3125,13 @@ int func_86(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 							func_93(entityModel, 2, 20, &num2);
 					
 						if (iParam4 == -1)
-							PED::SET_PED_COMPONENT_VARIATION(pedParam0, func_128(i), Global_79322[1 /*14*/].f_3, Global_79322[1 /*14*/].f_4, PED::GET_PED_PALETTE_VARIATION(pedParam0, func_128(i)));
+							PED::SET_PED_COMPONENT_VARIATION(pedParam0, func_128(i), Global_79527[1 /*14*/].f_3, Global_79527[1 /*14*/].f_4, PED::GET_PED_PALETTE_VARIATION(pedParam0, func_128(i)));
 						else
-							PED::SET_PED_COMPONENT_VARIATION(pedParam0, func_128(i), Global_79322[1 /*14*/].f_3, Global_79322[1 /*14*/].f_4, iParam4);
+							PED::SET_PED_COMPONENT_VARIATION(pedParam0, func_128(i), Global_79527[1 /*14*/].f_3, Global_79527[1 /*14*/].f_4, iParam4);
 					
 						func_118(i);
 					
-						if (Global_79320 == 1)
+						if (Global_79525 == 1)
 						{
 							for (k = 0; k < 15; k = k + 1)
 							{
@@ -3146,9 +3146,9 @@ int func_86(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 			}
 			else if (i != 12 && i != 14)
 			{
-				Global_79322[1 /*14*/] = { func_136(entityModel, i, func_92(pedParam0, i, PV_COMP_INVALID), -1) };
+				Global_79527[1 /*14*/] = { func_136(entityModel, i, func_92(pedParam0, i, PV_COMP_INVALID), -1) };
 			
-				if (IS_BIT_SET(Global_79322[1 /*14*/].f_6, 3))
+				if (IS_BIT_SET(Global_79527[1 /*14*/].f_6, 3))
 				{
 					if (i == 2)
 					{
@@ -3204,11 +3204,11 @@ int func_86(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 	
 		for (j = 0; j <= 8; j = j + 1)
 		{
-			Global_79322[1 /*14*/] = { func_136(entityModel, 14, unk59[j], -1) };
-			func_102(pedParam0, Global_79322[1 /*14*/].f_12, Global_79322[1 /*14*/].f_3, Global_79322[1 /*14*/].f_4);
+			Global_79527[1 /*14*/] = { func_136(entityModel, 14, unk59[j], -1) };
+			func_102(pedParam0, Global_79527[1 /*14*/].f_12, Global_79527[1 /*14*/].f_3, Global_79527[1 /*14*/].f_4);
 			func_118(14);
 		
-			if (Global_79320 == 1)
+			if (Global_79525 == 1)
 			{
 				for (k = 0; k < 15; k = k + 1)
 				{
@@ -3222,10 +3222,10 @@ int func_86(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 	}
 	else if (iParam1 == 14)
 	{
-		func_102(pedParam0, Global_79322[1 /*14*/].f_12, Global_79322[1 /*14*/].f_3, Global_79322[1 /*14*/].f_4);
+		func_102(pedParam0, Global_79527[1 /*14*/].f_12, Global_79527[1 /*14*/].f_3, Global_79527[1 /*14*/].f_4);
 		func_118(iParam1);
 	
-		if (Global_79320 == 1)
+		if (Global_79525 == 1)
 		{
 			for (k = 0; k < 15; k = k + 1)
 			{
@@ -3239,11 +3239,11 @@ int func_86(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 	else
 	{
 		if (iParam4 == -1)
-			PED::SET_PED_COMPONENT_VARIATION(pedParam0, func_128(iParam1), Global_79322[1 /*14*/].f_3, Global_79322[1 /*14*/].f_4, PED::GET_PED_PALETTE_VARIATION(pedParam0, func_128(iParam1)));
+			PED::SET_PED_COMPONENT_VARIATION(pedParam0, func_128(iParam1), Global_79527[1 /*14*/].f_3, Global_79527[1 /*14*/].f_4, PED::GET_PED_PALETTE_VARIATION(pedParam0, func_128(iParam1)));
 		else
-			PED::SET_PED_COMPONENT_VARIATION(pedParam0, func_128(iParam1), Global_79322[1 /*14*/].f_3, Global_79322[1 /*14*/].f_4, iParam4);
+			PED::SET_PED_COMPONENT_VARIATION(pedParam0, func_128(iParam1), Global_79527[1 /*14*/].f_3, Global_79527[1 /*14*/].f_4, iParam4);
 	
-		if (Global_79320 == 1)
+		if (Global_79525 == 1)
 		{
 			for (k = 0; k < 15; k = k + 1)
 			{
@@ -3258,7 +3258,7 @@ int func_86(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 			func_87(entityModel, iParam1, iParam2);
 	}
 
-	if (Global_79320 == 1)
+	if (Global_79525 == 1)
 	{
 		if (func_127(pedParam0, entityModel, &num2, 0))
 			func_86(pedParam0, 2, num2, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
@@ -3267,7 +3267,7 @@ int func_86(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 			func_86(pedParam0, 1, num2, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 	}
 
-	Global_79320 = Global_79320 - 1;
+	Global_79525 = Global_79525 - 1;
 	return 1;
 }
 
@@ -3290,9 +3290,9 @@ void func_87(Hash hParam0, int iParam1, int iParam2) // Position - 0x36E4 (14052
 			num2 = func_85(hParam0);
 		
 			if (iParam1 == 3)
-				Global_114135.f_2367.f_539.f_196[num2] = iParam2;
+				Global_114344.f_2367.f_539.f_196[num2] = iParam2;
 			else if (iParam1 == 4)
-				Global_114135.f_2367.f_539.f_200[num2] = iParam2;
+				Global_114344.f_2367.f_539.f_200[num2] = iParam2;
 		}
 	}
 
@@ -3328,8 +3328,8 @@ BOOL func_88(Hash hParam0, int iParam1, int iParam2) // Position - 0x376E (14190
 
 BOOL func_89(Hash hParam0, int iParam1, int iParam2) // Position - 0x384C (14412)
 {
-	Global_79322[1 /*14*/] = { func_136(hParam0, iParam1, iParam2, -1) };
-	return IS_BIT_SET(Global_79322[1 /*14*/].f_6, 2);
+	Global_79527[1 /*14*/] = { func_136(hParam0, iParam1, iParam2, -1) };
+	return IS_BIT_SET(Global_79527[1 /*14*/].f_6, 2);
 }
 
 BOOL func_90(Hash hParam0, int iParam1, int iParam2, int iParam3, var uParam4, int iParam5) // Position - 0x3874 (14452)
@@ -3670,8 +3670,8 @@ int func_93(Hash hParam0, int iParam1, int iParam2, var uParam3) // Position - 0
 	if (*uParam3 != -99)
 	{
 		num = func_85(hParam0);
-		Global_114135.f_2367.f_539[num /*65*/].f_60 = iParam2;
-		Global_114135.f_2367.f_539[num /*65*/].f_61 = iParam1;
+		Global_114344.f_2367.f_539[num /*65*/].f_60 = iParam2;
+		Global_114344.f_2367.f_539[num /*65*/].f_61 = iParam1;
 		return 1;
 	}
 
@@ -4795,8 +4795,8 @@ int func_100(Hash hParam0, int iParam1, int iParam2, var uParam3) // Position - 
 	if (*uParam3 != -99)
 	{
 		num = func_85(hParam0);
-		Global_114135.f_2367.f_539[num /*65*/].f_63 = iParam2;
-		Global_114135.f_2367.f_539[num /*65*/].f_64 = iParam1;
+		Global_114344.f_2367.f_539[num /*65*/].f_63 = iParam2;
+		Global_114344.f_2367.f_539[num /*65*/].f_64 = iParam1;
 		return 1;
 	}
 
@@ -4984,8 +4984,8 @@ Hash func_104(Hash hParam0, int iParam1, int iParam2, int iParam3) // Position -
 		if (componentId2 < 0)
 			return -1;
 	
-		if (hParam0 == Global_79472.f_26[iParam2] && iParam1 == Global_79472[iParam2] && Global_79472.f_13[iParam2] != 0)
-			return Global_79472.f_13[iParam2];
+		if (hParam0 == Global_79677.f_26[iParam2] && iParam1 == Global_79677[iParam2] && Global_79677.f_13[iParam2] != 0)
+			return Global_79677.f_13[iParam2];
 	
 		num2 = EXTRAMETADATA::SETUP_SHOP_PED_APPAREL_QUERY_TU(iParam3, 10, -1, false, -1, func_128(iParam2));
 	
@@ -4993,9 +4993,9 @@ Hash func_104(Hash hParam0, int iParam1, int iParam2, int iParam3) // Position -
 			return -1;
 	
 		EXTRAMETADATA::GET_SHOP_PED_QUERY_COMPONENT(componentId2, &outComponent);
-		Global_79472.f_13[iParam2] = outComponent.f_1;
-		Global_79472[iParam2] = iParam1;
-		Global_79472.f_26[iParam2] = hParam0;
+		Global_79677.f_13[iParam2] = outComponent.f_1;
+		Global_79677[iParam2] = iParam1;
+		Global_79677.f_26[iParam2] = hParam0;
 		return outComponent.f_1;
 	}
 
@@ -5792,10 +5792,10 @@ int func_117(Ped pedParam0, int iParam1, int iParam2, int iParam3) // Position -
 
 void func_118(int iParam0) // Position - 0x701B (28699)
 {
-	if (IS_BIT_SET(Global_79322[1 /*14*/].f_6, 1) && !IS_BIT_SET(Global_79322[1 /*14*/].f_6, 6))
-		func_125(iParam0, Global_79322[1 /*14*/].f_5, Global_79322[1 /*14*/].f_2, 2, Global_79322[1 /*14*/].f_1, 1, 0);
+	if (IS_BIT_SET(Global_79527[1 /*14*/].f_6, 1) && !IS_BIT_SET(Global_79527[1 /*14*/].f_6, 6))
+		func_125(iParam0, Global_79527[1 /*14*/].f_5, Global_79527[1 /*14*/].f_2, 2, Global_79527[1 /*14*/].f_1, 1, 0);
 
-	if (IS_BIT_SET(Global_79322[1 /*14*/].f_6, 1) && IS_BIT_SET(Global_79322[1 /*14*/].f_6, 6))
+	if (IS_BIT_SET(Global_79527[1 /*14*/].f_6, 1) && IS_BIT_SET(Global_79527[1 /*14*/].f_6, 6))
 	{
 		if (iParam0 == 12)
 		{
@@ -5824,7 +5824,7 @@ void func_119(Hash hParam0, int iParam1, BOOL bParam2, BOOL bParam3, int iParam4
 	int num2;
 	int address;
 
-	num = Global_79319;
+	num = Global_79524;
 
 	if (iParam4 != -1)
 		num = iParam4;
@@ -5843,7 +5843,7 @@ void func_120(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 {
 	Hash statName;
 
-	if (iParam0 != 15468)
+	if (iParam0 != 15525)
 	{
 		statName = func_121(iParam0, iParam2);
 	
@@ -5872,13 +5872,13 @@ int func_122(int iParam0) // Position - 0x7152 (29010)
 	
 		if (num2 > -1)
 		{
-			Global_2751934 = 0;
+			Global_2752197 = 0;
 			num = num2;
 		}
 		else
 		{
 			num = 0;
-			Global_2751934 = 1;
+			Global_2752197 = 1;
 		}
 	}
 
@@ -5890,7 +5890,7 @@ int func_123(int iParam0, int iParam1) // Position - 0x7186 (29062)
 	Hash statHash;
 	int outValue;
 
-	if (iParam0 != 15468)
+	if (iParam0 != 15525)
 	{
 		statHash = func_121(iParam0, iParam1);
 	
@@ -5905,9 +5905,9 @@ BOOL func_124(Hash hParam0, int iParam1, var uParam2, var uParam3, BOOL bParam4,
 {
 	int fmMaleShopPedApparelItemIndex;
 
-	*uParam2 = 15468;
+	*uParam2 = 15525;
 
-	if (bParam4 && Global_4540904 || !bParam4 && bParam5)
+	if (bParam4 && Global_4541488 || !bParam4 && bParam5)
 	{
 		switch (iParam1)
 		{
@@ -6196,7 +6196,7 @@ BOOL func_124(Hash hParam0, int iParam1, var uParam2, var uParam3, BOOL bParam4,
 	fmMaleShopPedApparelItemIndex = -1;
 
 	if (bParam4)
-		if (Global_4540904)
+		if (Global_4541488)
 			fmMaleShopPedApparelItemIndex = PED::GET_FM_MALE_SHOP_PED_APPAREL_ITEM_INDEX(hParam0);
 		else
 			fmMaleShopPedApparelItemIndex = PED::GET_FM_FEMALE_SHOP_PED_APPAREL_ITEM_INDEX(hParam0);
@@ -7493,6 +7493,14 @@ BOOL func_124(Hash hParam0, int iParam1, var uParam2, var uParam3, BOOL bParam4,
 				case 314:
 					*uParam2 = 13020;
 					break;
+			
+				case 315:
+					*uParam2 = 13082;
+					break;
+			
+				case 316:
+					*uParam2 = 13083;
+					break;
 			}
 			break;
 	
@@ -8779,147 +8787,155 @@ BOOL func_124(Hash hParam0, int iParam1, var uParam2, var uParam3, BOOL bParam4,
 				case 314:
 					*uParam2 = 13024;
 					break;
+			
+				case 315:
+					*uParam2 = 13084;
+					break;
+			
+				case 316:
+					*uParam2 = 13085;
+					break;
 			}
 			break;
 	}
 
 	*uParam3 = fmMaleShopPedApparelItemIndex % 32;
-	return *uParam2 != 15468;
+	return *uParam2 != 15525;
 }
 
-BOOL func_125(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6) // Position - 0x9DD9 (40409)
+BOOL func_125(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6) // Position - 0x9E15 (40469)
 {
 	if (iParam0 == 0)
 	{
 		if (iParam5 == 1)
-			MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/][iParam3], iParam4);
+			MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/][iParam3], iParam4);
 	
 		if (iParam6 == 1)
-			MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/][iParam3], iParam4);
+			MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/][iParam3], iParam4);
 	
-		return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/][iParam3], iParam4);
+		return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/][iParam3], iParam4);
 	}
 	else if (iParam0 == 1)
 	{
 		if (iParam5 == 1)
-			MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_4[iParam3], iParam4);
+			MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_4[iParam3], iParam4);
 	
 		if (iParam6 == 1)
-			MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_4[iParam3], iParam4);
+			MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_4[iParam3], iParam4);
 	
-		return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_4[iParam3], iParam4);
+		return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_4[iParam3], iParam4);
 	}
 	else if (iParam0 == 2)
 	{
 		if (iParam5 == 1)
-			MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_8[iParam3], iParam4);
+			MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_8[iParam3], iParam4);
 	
 		if (iParam6 == 1)
-			MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_8[iParam3], iParam4);
+			MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_8[iParam3], iParam4);
 	
-		return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_8[iParam3], iParam4);
+		return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_8[iParam3], iParam4);
 	}
 	else if (iParam0 == 3)
 	{
 		if (iParam2 == 0)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_12[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_12[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_12[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_12[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_12[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_12[iParam3], iParam4);
 		}
 		else if (iParam2 == 1)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_16[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_16[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_16[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_16[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_16[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_16[iParam3], iParam4);
 		}
 		else if (iParam2 == 2)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_20[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_20[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_20[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_20[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_20[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_20[iParam3], iParam4);
 		}
 		else if (iParam2 == 3)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_24[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_24[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_24[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_24[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_24[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_24[iParam3], iParam4);
 		}
 		else if (iParam2 == 4)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_28[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_28[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_28[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_28[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_28[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_28[iParam3], iParam4);
 		}
 		else if (iParam2 == 5)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_32[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_32[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_32[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_32[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_32[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_32[iParam3], iParam4);
 		}
 		else if (iParam2 == 6)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_36[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_36[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_36[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_36[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_36[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_36[iParam3], iParam4);
 		}
 		else if (iParam2 == 7)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_40[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_40[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_40[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_40[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_40[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_40[iParam3], iParam4);
 		}
 		else if (iParam2 == 8)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_44[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_44[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_44[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_44[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_44[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_44[iParam3], iParam4);
 		}
 		else if (iParam2 == 9)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_48[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_48[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_48[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_48[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_48[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_48[iParam3], iParam4);
 		}
 	}
 	else if (iParam0 == 4)
@@ -8927,181 +8943,181 @@ BOOL func_125(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 		if (iParam2 == 0)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_52[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_52[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_52[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_52[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_52[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_52[iParam3], iParam4);
 		}
 		else if (iParam2 == 1)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_56[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_56[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_56[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_56[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_56[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_56[iParam3], iParam4);
 		}
 		else if (iParam2 == 2)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_60[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_60[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_60[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_60[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_60[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_60[iParam3], iParam4);
 		}
 		else if (iParam2 == 3)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_64[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_64[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_64[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_64[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_64[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_64[iParam3], iParam4);
 		}
 	}
 	else if (iParam0 == 5)
 	{
 		if (iParam5 == 1)
-			MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_68[iParam3], iParam4);
+			MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_68[iParam3], iParam4);
 	
 		if (iParam6 == 1)
-			MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_68[iParam3], iParam4);
+			MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_68[iParam3], iParam4);
 	
-		return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_68[iParam3], iParam4);
+		return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_68[iParam3], iParam4);
 	}
 	else if (iParam0 == 6)
 	{
 		if (iParam2 == 0)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_72[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_72[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_72[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_72[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_72[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_72[iParam3], iParam4);
 		}
 		else if (iParam2 == 1)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_76[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_76[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_76[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_76[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_76[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_76[iParam3], iParam4);
 		}
 		else if (iParam2 == 2)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_80[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_80[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_80[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_80[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_80[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_80[iParam3], iParam4);
 		}
 		else if (iParam2 == 3)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_84[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_84[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_84[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_84[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_84[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_84[iParam3], iParam4);
 		}
 		else if (iParam2 == 4)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_88[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_88[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_88[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_88[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_88[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_88[iParam3], iParam4);
 		}
 	}
 	else if (iParam0 == 7)
 	{
 		if (iParam5 == 1)
-			MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_92[iParam3], iParam4);
+			MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_92[iParam3], iParam4);
 	
 		if (iParam6 == 1)
-			MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_92[iParam3], iParam4);
+			MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_92[iParam3], iParam4);
 	
-		return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_92[iParam3], iParam4);
+		return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_92[iParam3], iParam4);
 	}
 	else if (iParam0 == 8)
 	{
 		if (iParam2 == 0)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_96[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_96[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_96[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_96[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_96[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_96[iParam3], iParam4);
 		}
 		else if (iParam2 == 1)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_100[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_100[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_100[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_100[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_100[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_100[iParam3], iParam4);
 		}
 		else if (iParam2 == 2)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_104[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_104[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_104[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_104[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_104[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_104[iParam3], iParam4);
 		}
 	}
 	else if (iParam0 == 9)
 	{
 		if (iParam5 == 1)
-			MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_108[iParam3], iParam4);
+			MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_108[iParam3], iParam4);
 	
 		if (iParam6 == 1)
-			MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_108[iParam3], iParam4);
+			MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_108[iParam3], iParam4);
 	
-		return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_108[iParam3], iParam4);
+		return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_108[iParam3], iParam4);
 	}
 	else if (iParam0 == 10)
 	{
 		if (iParam2 == 0)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_112[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_112[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_112[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_112[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_112[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_112[iParam3], iParam4);
 		}
 		else if (iParam2 == 1)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_116[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_116[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_116[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_116[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_116[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_116[iParam3], iParam4);
 		}
 	}
 	else if (iParam0 == 11)
@@ -9109,22 +9125,22 @@ BOOL func_125(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 		if (iParam2 == 0)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_120[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_120[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_120[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_120[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_120[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_120[iParam3], iParam4);
 		}
 		else if (iParam2 == 1)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_124[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_124[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_124[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_124[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_124[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_124[iParam3], iParam4);
 		}
 	}
 	else if (iParam0 == 12)
@@ -9132,119 +9148,119 @@ BOOL func_125(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 		if (iParam2 == 0)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_128[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_128[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_128[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_128[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_128[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_128[iParam3], iParam4);
 		}
 		else if (iParam2 == 1)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_132[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_132[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_132[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_132[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_132[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_132[iParam3], iParam4);
 		}
 	}
 	else if (iParam0 == 13)
 	{
 		if (iParam5 == 1)
-			MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_136[iParam3], iParam4);
+			MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_136[iParam3], iParam4);
 	
 		if (iParam6 == 1)
-			MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_136[iParam3], iParam4);
+			MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_136[iParam3], iParam4);
 	
-		return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_136[iParam3], iParam4);
+		return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_136[iParam3], iParam4);
 	}
 	else if (iParam0 == 14)
 	{
 		if (iParam2 == 0)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_140[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_140[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_140[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_140[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_140[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_140[iParam3], iParam4);
 		}
 		else if (iParam2 == 1)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_144[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_144[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_144[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_144[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_144[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_144[iParam3], iParam4);
 		}
 		else if (iParam2 == 2)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_148[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_148[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_148[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_148[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_148[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_148[iParam3], iParam4);
 		}
 		else if (iParam2 == 3)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_152[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_152[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_152[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_152[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_152[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_152[iParam3], iParam4);
 		}
 		else if (iParam2 == 4)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_156[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_156[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_156[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_156[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_156[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_156[iParam3], iParam4);
 		}
 		else if (iParam2 == 5)
 		{
 			if (iParam5 == 1)
-				MISC::SET_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_160[iParam3], iParam4);
+				MISC::SET_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_160[iParam3], iParam4);
 		
 			if (iParam6 == 1)
-				MISC::CLEAR_BIT(&Global_114135.f_2367[iParam1 /*164*/].f_160[iParam3], iParam4);
+				MISC::CLEAR_BIT(&Global_114344.f_2367[iParam1 /*164*/].f_160[iParam3], iParam4);
 		
-			return IS_BIT_SET(Global_114135.f_2367[iParam1 /*164*/].f_160[iParam3], iParam4);
+			return IS_BIT_SET(Global_114344.f_2367[iParam1 /*164*/].f_160[iParam3], iParam4);
 		}
 	}
 
 	return false;
 }
 
-BOOL func_126(int iParam0) // Position - 0xAC7C (44156)
+BOOL func_126(int iParam0) // Position - 0xACB8 (44216)
 {
-	if (!IS_BIT_SET(Global_79322[1 /*14*/].f_6, 0))
+	if (!IS_BIT_SET(Global_79527[1 /*14*/].f_6, 0))
 		return false;
 
 	if (iParam0 == 1)
 	{
-		if (!IS_BIT_SET(Global_79322[1 /*14*/].f_6, 1))
+		if (!IS_BIT_SET(Global_79527[1 /*14*/].f_6, 1))
 			return false;
 	
-		if (!IS_BIT_SET(Global_79322[1 /*14*/].f_6, 2))
+		if (!IS_BIT_SET(Global_79527[1 /*14*/].f_6, 2))
 			return false;
 	}
 
 	return true;
 }
 
-BOOL func_127(Ped pedParam0, Hash hParam1, var uParam2, int iParam3) // Position - 0xACC4 (44228)
+BOOL func_127(Ped pedParam0, Hash hParam1, var uParam2, int iParam3) // Position - 0xAD00 (44288)
 {
 	int num;
 
@@ -9253,13 +9269,13 @@ BOOL func_127(Ped pedParam0, Hash hParam1, var uParam2, int iParam3) // Position
 	if (num >= 3 || num < 0)
 		return false;
 
-	if (Global_114135.f_2367.f_539[num /*65*/].f_60 != -99)
+	if (Global_114344.f_2367.f_539[num /*65*/].f_60 != -99)
 	{
-		if (!func_200(pedParam0, Global_114135.f_2367.f_539[num /*65*/].f_61, Global_114135.f_2367.f_539[num /*65*/].f_60) || iParam3 == 1)
+		if (!func_200(pedParam0, Global_114344.f_2367.f_539[num /*65*/].f_61, Global_114344.f_2367.f_539[num /*65*/].f_60) || iParam3 == 1)
 		{
-			*uParam2 = Global_114135.f_2367.f_539[num /*65*/].f_59;
-			Global_114135.f_2367.f_539[num /*65*/].f_60 = -99;
-			Global_114135.f_2367.f_539[num /*65*/].f_61 = 2;
+			*uParam2 = Global_114344.f_2367.f_539[num /*65*/].f_59;
+			Global_114344.f_2367.f_539[num /*65*/].f_60 = -99;
+			Global_114344.f_2367.f_539[num /*65*/].f_61 = 2;
 			return true;
 		}
 	}
@@ -9267,7 +9283,7 @@ BOOL func_127(Ped pedParam0, Hash hParam1, var uParam2, int iParam3) // Position
 	return false;
 }
 
-ePedComponentType func_128(int iParam0) // Position - 0xAD6F (44399)
+ePedComponentType func_128(int iParam0) // Position - 0xADAB (44459)
 {
 	switch (iParam0)
 	{
@@ -9311,7 +9327,7 @@ ePedComponentType func_128(int iParam0) // Position - 0xAD6F (44399)
 	return 0;
 }
 
-struct<10> func_129(Hash hParam0, int iParam1) // Position - 0xAE1F (44575)
+struct<10> func_129(Hash hParam0, int iParam1) // Position - 0xAE5B (44635)
 {
 	int i;
 	var unk;
@@ -9702,7 +9718,7 @@ struct<10> func_129(Hash hParam0, int iParam1) // Position - 0xAE1F (44575)
 	return unk;
 }
 
-void func_130(var uParam0, Hash hParam1, int iParam2, int iParam3) // Position - 0xB74E (46926)
+void func_130(var uParam0, Hash hParam1, int iParam2, int iParam3) // Position - 0xB78A (46986)
 {
 	int num;
 	Hash itemHash;
@@ -9751,7 +9767,7 @@ void func_130(var uParam0, Hash hParam1, int iParam2, int iParam3) // Position -
 	return;
 }
 
-void func_131(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9) // Position - 0xB878 (47224)
+void func_131(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9) // Position - 0xB8B4 (47284)
 {
 	uParam0->[0] = iParam1;
 	uParam0->[1] = iParam2;
@@ -9765,7 +9781,7 @@ void func_131(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 	return;
 }
 
-struct<17> func_132(Hash hParam0, int iParam1) // Position - 0xB8C0 (47296)
+struct<17> func_132(Hash hParam0, int iParam1) // Position - 0xB8FC (47356)
 {
 	int i;
 	var unk;
@@ -9785,7 +9801,7 @@ struct<17> func_132(Hash hParam0, int iParam1) // Position - 0xB8C0 (47296)
 			switch (iParam1)
 			{
 				case 0:
-					if (Global_114135.f_9089.f_99.f_58[120])
+					if (Global_114344.f_9089.f_99.f_58[120])
 						func_135(&unk, -99, -99, 1, 1, 0, 0, 0, 0, 0, -99, 0, 0, 31);
 					else
 						func_135(&unk, -99, -99, 0, 0, 0, 0, 0, 0, 0, -99, 0, 0, 31);
@@ -9808,7 +9824,7 @@ struct<17> func_132(Hash hParam0, int iParam1) // Position - 0xB8C0 (47296)
 					break;
 			
 				case 5:
-					func_135(&unk, -99, -99, Global_114135.f_2367.f_539.f_196[0], Global_114135.f_2367.f_539.f_200[0], 6, 3, 0, 0, 0, -99, 0, 0, 3);
+					func_135(&unk, -99, -99, Global_114344.f_2367.f_539.f_196[0], Global_114344.f_2367.f_539.f_200[0], 6, 3, 0, 0, 0, -99, 0, 0, 3);
 					break;
 			
 				case 6:
@@ -10017,7 +10033,7 @@ struct<17> func_132(Hash hParam0, int iParam1) // Position - 0xB8C0 (47296)
 					break;
 			
 				case 2:
-					func_135(&unk, -99, -99, Global_114135.f_2367.f_539.f_196[1], Global_114135.f_2367.f_539.f_200[1], 17, 2, 26, 0, 0, -99, 0, 45, 31);
+					func_135(&unk, -99, -99, Global_114344.f_2367.f_539.f_196[1], Global_114344.f_2367.f_539.f_200[1], 17, 2, 26, 0, 0, -99, 0, 45, 31);
 					break;
 			
 				case 3:
@@ -10222,7 +10238,7 @@ struct<17> func_132(Hash hParam0, int iParam1) // Position - 0xB8C0 (47296)
 					break;
 			
 				case 4:
-					func_135(&unk, -99, -99, Global_114135.f_2367.f_539.f_196[2], Global_114135.f_2367.f_539.f_200[2], 8, 0, 0, 0, 0, -99, 0, 0, 31);
+					func_135(&unk, -99, -99, Global_114344.f_2367.f_539.f_196[2], Global_114344.f_2367.f_539.f_200[2], 8, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 5:
@@ -10641,7 +10657,7 @@ struct<17> func_132(Hash hParam0, int iParam1) // Position - 0xB8C0 (47296)
 	return unk;
 }
 
-void func_133(var uParam0, Hash hParam1, int iParam2, int iParam3) // Position - 0xD709 (55049)
+void func_133(var uParam0, Hash hParam1, int iParam2, int iParam3) // Position - 0xD745 (55109)
 {
 	int num;
 	Hash outfit;
@@ -10736,7 +10752,7 @@ void func_133(var uParam0, Hash hParam1, int iParam2, int iParam3) // Position -
 	return;
 }
 
-int func_134(int iParam0) // Position - 0xD8F3 (55539)
+int func_134(int iParam0) // Position - 0xD92F (55599)
 {
 	switch (iParam0)
 	{
@@ -10780,7 +10796,7 @@ int func_134(int iParam0) // Position - 0xD8F3 (55539)
 	return 0;
 }
 
-void func_135(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10, int iParam11, int iParam12, int iParam13) // Position - 0xD9A3 (55715)
+void func_135(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10, int iParam11, int iParam12, int iParam13) // Position - 0xD9DF (55775)
 {
 	uParam0->[0] = iParam1;
 	uParam0->[2] = iParam2;
@@ -10799,7 +10815,7 @@ void func_135(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 	return;
 }
 
-struct<14> func_136(Hash hParam0, int iParam1, int iParam2, int iParam3) // Position - 0xDA14 (55828)
+struct<14> func_136(Hash hParam0, int iParam1, int iParam2, int iParam3) // Position - 0xDA50 (55888)
 {
 	func_199();
 
@@ -10810,10 +10826,10 @@ struct<14> func_136(Hash hParam0, int iParam1, int iParam2, int iParam3) // Posi
 	else if (hParam0 == joaat("Player_Two"))
 		func_137(iParam1, iParam2);
 
-	return Global_79322[0 /*14*/];
+	return Global_79527[0 /*14*/];
 }
 
-void func_137(int iParam0, int iParam1) // Position - 0xDA66 (55910)
+void func_137(int iParam0, int iParam1) // Position - 0xDAA2 (55970)
 {
 	switch (iParam0)
 	{
@@ -10881,7 +10897,7 @@ void func_137(int iParam0, int iParam1) // Position - 0xDA66 (55910)
 	return;
 }
 
-void func_138(int iParam0) // Position - 0xDB56 (56150)
+void func_138(int iParam0) // Position - 0xDB92 (56210)
 {
 	BOOL flag;
 	int num;
@@ -10899,7 +10915,7 @@ void func_138(int iParam0) // Position - 0xDB56 (56150)
 	num4 = -1;
 	num5 = 2;
 	num6 = 14;
-	Global_79322[0 /*14*/].f_5 = 2;
+	Global_79527[0 /*14*/].f_5 = 2;
 
 	switch (iParam0)
 	{
@@ -12097,11 +12113,11 @@ void func_138(int iParam0) // Position - 0xDB56 (56150)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_139(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4, int iParam5, int iParam6, BOOL bParam7, int iParam8, int iParam9, BOOL bParam10) // Position - 0xED91 (60817)
+void func_139(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4, int iParam5, int iParam6, BOOL bParam7, int iParam8, int iParam9, BOOL bParam10) // Position - 0xEDCD (60877)
 {
 	int num;
 	int num2;
@@ -12203,19 +12219,19 @@ void func_139(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4,
 			if (func_21(14))
 				return;
 		
-			num = func_123(func_142(iParam1, iParam0->f_2), Global_79319);
+			num = func_123(func_142(iParam1, iParam0->f_2), Global_79524);
 		
 			if (IS_BIT_SET(num, iParam0->f_1))
 				MISC::SET_BIT(&(iParam0->f_6), 1);
 		
-			num = func_123(func_141(iParam1, iParam0->f_2), Global_79319);
+			num = func_123(func_141(iParam1, iParam0->f_2), Global_79524);
 		
 			if (IS_BIT_SET(num, iParam0->f_1))
 				MISC::SET_BIT(&(iParam0->f_6), 2);
 		
 			if (func_140(iParam1, iParam0->f_2, &num2))
 			{
-				num = func_123(num2, Global_79319);
+				num = func_123(num2, Global_79524);
 			
 				if (!IS_BIT_SET(num, iParam0->f_1))
 					MISC::SET_BIT(&(iParam0->f_6), 4);
@@ -12240,7 +12256,7 @@ void func_139(int iParam0, int iParam1, int iParam2, char* sParam3, int iParam4,
 	return;
 }
 
-BOOL func_140(int iParam0, int iParam1, var uParam2) // Position - 0xF132 (61746)
+BOOL func_140(int iParam0, int iParam1, var uParam2) // Position - 0xF16E (61806)
 {
 	*uParam2 = 979;
 
@@ -12525,7 +12541,7 @@ BOOL func_140(int iParam0, int iParam1, var uParam2) // Position - 0xF132 (61746
 	return *uParam2 != 979;
 }
 
-int func_141(int iParam0, int iParam1) // Position - 0xF537 (62775)
+int func_141(int iParam0, int iParam1) // Position - 0xF573 (62835)
 {
 	switch (iParam1)
 	{
@@ -12753,7 +12769,7 @@ int func_141(int iParam0, int iParam1) // Position - 0xF537 (62775)
 	return 936;
 }
 
-int func_142(int iParam0, int iParam1) // Position - 0xF932 (63794)
+int func_142(int iParam0, int iParam1) // Position - 0xF96E (63854)
 {
 	switch (iParam1)
 	{
@@ -12981,14 +12997,14 @@ int func_142(int iParam0, int iParam1) // Position - 0xF932 (63794)
 	return 884;
 }
 
-BOOL func_143(Hash hParam0, int iParam1, BOOL bParam2, BOOL bParam3, int iParam4) // Position - 0xFD2D (64813)
+BOOL func_143(Hash hParam0, int iParam1, BOOL bParam2, BOOL bParam3, int iParam4) // Position - 0xFD69 (64873)
 {
 	int num;
 	int num2;
 	int num3;
 	int num4;
 
-	num = Global_79319;
+	num = Global_79524;
 
 	if (iParam4 != -1)
 		num = iParam4;
@@ -13002,7 +13018,7 @@ BOOL func_143(Hash hParam0, int iParam1, BOOL bParam2, BOOL bParam3, int iParam4
 	return false;
 }
 
-int func_144(int iParam0) // Position - 0xFD6B (64875)
+int func_144(int iParam0) // Position - 0xFDA7 (64935)
 {
 	switch (iParam0)
 	{
@@ -13055,7 +13071,7 @@ int func_144(int iParam0) // Position - 0xFD6B (64875)
 	return 0;
 }
 
-void func_145(int iParam0, int iParam1, int iParam2, Hash hParam3) // Position - 0xFE3F (65087)
+void func_145(int iParam0, int iParam1, int iParam2, Hash hParam3) // Position - 0xFE7B (65147)
 {
 	int num;
 	int num2;
@@ -13076,7 +13092,7 @@ void func_145(int iParam0, int iParam1, int iParam2, Hash hParam3) // Position -
 	if (num < 0)
 		return;
 
-	num2 = Global_79322[0 /*14*/].f_5;
+	num2 = Global_79527[0 /*14*/].f_5;
 
 	if (iParam0 == 12)
 	{
@@ -13091,14 +13107,14 @@ void func_145(int iParam0, int iParam1, int iParam2, Hash hParam3) // Position -
 				EXTRAMETADATA::GET_SHOP_PED_QUERY_OUTFIT(outfitIndex, &outfit);
 				Global_2883588 = outfit.f_1;
 				Global_2883589 = outfit;
-				func_139(&Global_79322[0 /*14*/], iParam0, iParam1, &(outfit.f_7), 0, 0, outfit.f_2, false, -1, 2, true);
+				func_139(&Global_79527[0 /*14*/], iParam0, iParam1, &(outfit.f_7), 0, 0, outfit.f_2, false, -1, 2, true);
 				return;
 			}
 		}
 	}
 	else if (iParam0 == 13)
 	{
-		func_139(&Global_79322[0 /*14*/], iParam0, iParam1, "NO_LABEL", 0, 0, 0, true, -1, 2, true);
+		func_139(&Global_79527[0 /*14*/], iParam0, iParam1, "NO_LABEL", 0, 0, 0, true, -1, 2, true);
 	}
 	else if (iParam0 == 14)
 	{
@@ -13136,7 +13152,7 @@ void func_145(int iParam0, int iParam1, int iParam2, Hash hParam3) // Position -
 			
 				Global_2883588 = outProp.f_1;
 				Global_2883589 = outProp;
-				func_139(&Global_79322[0 /*14*/], iParam0, iParam1, &(outProp.f_9), outProp.f_3, outProp.f_4, outProp.f_5, EXTRAMETADATA::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(outProp.f_1, joaat("OUTFIT_ONLY"), 0), num4, 2, outProp.f_1 != 0);
+				func_139(&Global_79527[0 /*14*/], iParam0, iParam1, &(outProp.f_9), outProp.f_3, *outProp.f_4, outProp.f_5, EXTRAMETADATA::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(outProp.f_1, joaat("OUTFIT_ONLY"), 0), num4, 2, outProp.f_1 != 0);
 				return;
 			}
 		}
@@ -13145,12 +13161,12 @@ void func_145(int iParam0, int iParam1, int iParam2, Hash hParam3) // Position -
 	{
 		EXTRAMETADATA::INIT_SHOP_PED_COMPONENT(&outComponent);
 	
-		if (hParam3 != -1 && Global_79520)
+		if (hParam3 != -1 && Global_79725)
 		{
 			EXTRAMETADATA::GET_SHOP_PED_COMPONENT(hParam3, &outComponent);
 			Global_2883588 = outComponent.f_1;
 			Global_2883589 = outComponent;
-			func_139(&Global_79322[0 /*14*/], iParam0, iParam1, &(outComponent.f_9), outComponent.f_3, outComponent.f_4, outComponent.f_5, EXTRAMETADATA::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(outComponent.f_1, joaat("OUTFIT_ONLY"), 0), -1, 2, outComponent.f_1 != 0);
+			func_139(&Global_79527[0 /*14*/], iParam0, iParam1, &(outComponent.f_9), outComponent.f_3, outComponent.f_4, outComponent.f_5, EXTRAMETADATA::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(outComponent.f_1, joaat("OUTFIT_ONLY"), 0), -1, 2, outComponent.f_1 != 0);
 			return;
 		}
 	
@@ -13165,7 +13181,7 @@ void func_145(int iParam0, int iParam1, int iParam2, Hash hParam3) // Position -
 				EXTRAMETADATA::GET_SHOP_PED_QUERY_COMPONENT(componentId2, &outComponent);
 				Global_2883588 = outComponent.f_1;
 				Global_2883589 = outComponent;
-				func_139(&Global_79322[0 /*14*/], iParam0, iParam1, &(outComponent.f_9), outComponent.f_3, outComponent.f_4, outComponent.f_5, EXTRAMETADATA::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(outComponent.f_1, joaat("OUTFIT_ONLY"), 0), -1, 2, outComponent.f_1 != 0);
+				func_139(&Global_79527[0 /*14*/], iParam0, iParam1, &(outComponent.f_9), outComponent.f_3, outComponent.f_4, outComponent.f_5, EXTRAMETADATA::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(outComponent.f_1, joaat("OUTFIT_ONLY"), 0), -1, 2, outComponent.f_1 != 0);
 				return;
 			}
 		}
@@ -13174,7 +13190,7 @@ void func_145(int iParam0, int iParam1, int iParam2, Hash hParam3) // Position -
 	return;
 }
 
-void func_146(int iParam0) // Position - 0x100C6 (65734)
+void func_146(int iParam0) // Position - 0x10103 (65795)
 {
 	BOOL flag;
 	int num;
@@ -13192,7 +13208,7 @@ void func_146(int iParam0) // Position - 0x100C6 (65734)
 	num4 = -1;
 	num5 = 2;
 	num6 = 13;
-	Global_79322[0 /*14*/].f_5 = 2;
+	Global_79527[0 /*14*/].f_5 = 2;
 
 	switch (iParam0)
 	{
@@ -13267,11 +13283,11 @@ void func_146(int iParam0) // Position - 0x100C6 (65734)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_147(int iParam0) // Position - 0x10213 (66067)
+void func_147(int iParam0) // Position - 0x10250 (66128)
 {
 	BOOL flag;
 	int num;
@@ -13289,7 +13305,7 @@ void func_147(int iParam0) // Position - 0x10213 (66067)
 	num4 = -1;
 	num5 = 2;
 	num6 = 12;
-	Global_79322[0 /*14*/].f_5 = 2;
+	Global_79527[0 /*14*/].f_5 = 2;
 
 	switch (iParam0)
 	{
@@ -13608,11 +13624,11 @@ void func_147(int iParam0) // Position - 0x10213 (66067)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_148(int iParam0) // Position - 0x10720 (67360)
+void func_148(int iParam0) // Position - 0x1075D (67421)
 {
 	BOOL flag;
 	int num;
@@ -13630,7 +13646,7 @@ void func_148(int iParam0) // Position - 0x10720 (67360)
 	num4 = -1;
 	num5 = 2;
 	num6 = 11;
-	Global_79322[0 /*14*/].f_5 = 2;
+	Global_79527[0 /*14*/].f_5 = 2;
 
 	switch (iParam0)
 	{
@@ -13645,11 +13661,11 @@ void func_148(int iParam0) // Position - 0x10720 (67360)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_149(int iParam0) // Position - 0x10794 (67476)
+void func_149(int iParam0) // Position - 0x107D1 (67537)
 {
 	BOOL flag;
 	int num;
@@ -13667,7 +13683,7 @@ void func_149(int iParam0) // Position - 0x10794 (67476)
 	num4 = -1;
 	num5 = 2;
 	num6 = 7;
-	Global_79322[0 /*14*/].f_5 = 2;
+	Global_79527[0 /*14*/].f_5 = 2;
 
 	switch (iParam0)
 	{
@@ -13682,11 +13698,11 @@ void func_149(int iParam0) // Position - 0x10794 (67476)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_150(int iParam0) // Position - 0x10807 (67591)
+void func_150(int iParam0) // Position - 0x10844 (67652)
 {
 	BOOL flag;
 	int num;
@@ -13704,7 +13720,7 @@ void func_150(int iParam0) // Position - 0x10807 (67591)
 	num4 = -1;
 	num5 = 2;
 	num6 = 1;
-	Global_79322[0 /*14*/].f_5 = 2;
+	Global_79527[0 /*14*/].f_5 = 2;
 
 	switch (iParam0)
 	{
@@ -13749,11 +13765,11 @@ void func_150(int iParam0) // Position - 0x10807 (67591)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_151(int iParam0) // Position - 0x108EE (67822)
+void func_151(int iParam0) // Position - 0x1092B (67883)
 {
 	BOOL flag;
 	int num;
@@ -13771,7 +13787,7 @@ void func_151(int iParam0) // Position - 0x108EE (67822)
 	num4 = -1;
 	num5 = 2;
 	num6 = 10;
-	Global_79322[0 /*14*/].f_5 = 2;
+	Global_79527[0 /*14*/].f_5 = 2;
 
 	switch (iParam0)
 	{
@@ -13978,11 +13994,11 @@ void func_151(int iParam0) // Position - 0x108EE (67822)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_152(int iParam0) // Position - 0x10C30 (68656)
+void func_152(int iParam0) // Position - 0x10C6D (68717)
 {
 	BOOL flag;
 	int num;
@@ -14000,7 +14016,7 @@ void func_152(int iParam0) // Position - 0x10C30 (68656)
 	num4 = -1;
 	num5 = 2;
 	num6 = 9;
-	Global_79322[0 /*14*/].f_5 = 2;
+	Global_79527[0 /*14*/].f_5 = 2;
 
 	switch (iParam0)
 	{
@@ -14122,11 +14138,11 @@ void func_152(int iParam0) // Position - 0x10C30 (68656)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_153(int iParam0) // Position - 0x10E38 (69176)
+void func_153(int iParam0) // Position - 0x10E75 (69237)
 {
 	BOOL flag;
 	int num;
@@ -14144,7 +14160,7 @@ void func_153(int iParam0) // Position - 0x10E38 (69176)
 	num4 = -1;
 	num5 = 2;
 	num6 = 8;
-	Global_79322[0 /*14*/].f_5 = 2;
+	Global_79527[0 /*14*/].f_5 = 2;
 
 	switch (iParam0)
 	{
@@ -14275,11 +14291,11 @@ void func_153(int iParam0) // Position - 0x10E38 (69176)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_154(int iParam0) // Position - 0x11058 (69720)
+void func_154(int iParam0) // Position - 0x11095 (69781)
 {
 	BOOL flag;
 	int num;
@@ -14297,7 +14313,7 @@ void func_154(int iParam0) // Position - 0x11058 (69720)
 	num4 = -1;
 	num5 = 2;
 	num6 = 5;
-	Global_79322[0 /*14*/].f_5 = 2;
+	Global_79527[0 /*14*/].f_5 = 2;
 
 	switch (iParam0)
 	{
@@ -14354,11 +14370,11 @@ void func_154(int iParam0) // Position - 0x11058 (69720)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_155(int iParam0) // Position - 0x11161 (69985)
+void func_155(int iParam0) // Position - 0x1119E (70046)
 {
 	BOOL flag;
 	int num;
@@ -14376,7 +14392,7 @@ void func_155(int iParam0) // Position - 0x11161 (69985)
 	num4 = -1;
 	num5 = 2;
 	num6 = 6;
-	Global_79322[0 /*14*/].f_5 = 2;
+	Global_79527[0 /*14*/].f_5 = 2;
 
 	switch (iParam0)
 	{
@@ -14966,11 +14982,11 @@ void func_155(int iParam0) // Position - 0x11161 (69985)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_156(int iParam0) // Position - 0x11AF3 (72435)
+void func_156(int iParam0) // Position - 0x11B30 (72496)
 {
 	BOOL flag;
 	int num;
@@ -14988,7 +15004,7 @@ void func_156(int iParam0) // Position - 0x11AF3 (72435)
 	num4 = -1;
 	num5 = 2;
 	num6 = 4;
-	Global_79322[0 /*14*/].f_5 = 2;
+	Global_79527[0 /*14*/].f_5 = 2;
 
 	switch (iParam0)
 	{
@@ -15706,24 +15722,24 @@ void func_156(int iParam0) // Position - 0x11AF3 (72435)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_157(int iParam0) // Position - 0x1264B (75339)
+void func_157(int iParam0) // Position - 0x12688 (75400)
 {
 	if (iParam0 < 136)
 		func_159(iParam0);
 	else
 		func_158(iParam0);
 
-	if (Global_79322[0 /*14*/].f_2 == -1)
+	if (Global_79527[0 /*14*/].f_2 == -1)
 		func_145(3, iParam0, 242, -1);
 
 	return;
 }
 
-void func_158(int iParam0) // Position - 0x12680 (75392)
+void func_158(int iParam0) // Position - 0x126BD (75453)
 {
 	BOOL flag;
 	int num;
@@ -15741,7 +15757,7 @@ void func_158(int iParam0) // Position - 0x12680 (75392)
 	num4 = -1;
 	num5 = 2;
 	num6 = 3;
-	Global_79322[0 /*14*/].f_5 = 2;
+	Global_79527[0 /*14*/].f_5 = 2;
 
 	switch (iParam0)
 	{
@@ -16478,11 +16494,11 @@ void func_158(int iParam0) // Position - 0x12680 (75392)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_159(int iParam0) // Position - 0x13284 (78468)
+void func_159(int iParam0) // Position - 0x132C1 (78529)
 {
 	BOOL flag;
 	int num;
@@ -16500,7 +16516,7 @@ void func_159(int iParam0) // Position - 0x13284 (78468)
 	num4 = -1;
 	num5 = 2;
 	num6 = 3;
-	Global_79322[0 /*14*/].f_5 = 2;
+	Global_79527[0 /*14*/].f_5 = 2;
 
 	switch (iParam0)
 	{
@@ -17450,11 +17466,11 @@ void func_159(int iParam0) // Position - 0x13284 (78468)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_160(int iParam0) // Position - 0x14185 (82309)
+void func_160(int iParam0) // Position - 0x141C2 (82370)
 {
 	BOOL flag;
 	int num;
@@ -17472,7 +17488,7 @@ void func_160(int iParam0) // Position - 0x14185 (82309)
 	num4 = -1;
 	num5 = 2;
 	num6 = 2;
-	Global_79322[0 /*14*/].f_5 = 2;
+	Global_79527[0 /*14*/].f_5 = 2;
 
 	switch (iParam0)
 	{
@@ -17535,11 +17551,11 @@ void func_160(int iParam0) // Position - 0x14185 (82309)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_161(int iParam0) // Position - 0x142B2 (82610)
+void func_161(int iParam0) // Position - 0x142EF (82671)
 {
 	BOOL flag;
 	int num;
@@ -17557,7 +17573,7 @@ void func_161(int iParam0) // Position - 0x142B2 (82610)
 	num4 = -1;
 	num5 = 2;
 	num6 = 0;
-	Global_79322[0 /*14*/].f_5 = 2;
+	Global_79527[0 /*14*/].f_5 = 2;
 
 	switch (iParam0)
 	{
@@ -17608,11 +17624,11 @@ void func_161(int iParam0) // Position - 0x142B2 (82610)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_162(int iParam0, int iParam1) // Position - 0x143A9 (82857)
+void func_162(int iParam0, int iParam1) // Position - 0x143E6 (82918)
 {
 	switch (iParam0)
 	{
@@ -17680,7 +17696,7 @@ void func_162(int iParam0, int iParam1) // Position - 0x143A9 (82857)
 	return;
 }
 
-void func_163(int iParam0) // Position - 0x14499 (83097)
+void func_163(int iParam0) // Position - 0x144D6 (83158)
 {
 	BOOL flag;
 	int num;
@@ -17698,7 +17714,7 @@ void func_163(int iParam0) // Position - 0x14499 (83097)
 	num4 = -1;
 	num5 = 2;
 	num6 = 14;
-	Global_79322[0 /*14*/].f_5 = 1;
+	Global_79527[0 /*14*/].f_5 = 1;
 
 	switch (iParam0)
 	{
@@ -19062,11 +19078,11 @@ void func_163(int iParam0) // Position - 0x14499 (83097)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_164(int iParam0) // Position - 0x15966 (88422)
+void func_164(int iParam0) // Position - 0x159A3 (88483)
 {
 	BOOL flag;
 	int num;
@@ -19084,7 +19100,7 @@ void func_164(int iParam0) // Position - 0x15966 (88422)
 	num4 = -1;
 	num5 = 2;
 	num6 = 13;
-	Global_79322[0 /*14*/].f_5 = 1;
+	Global_79527[0 /*14*/].f_5 = 1;
 
 	switch (iParam0)
 	{
@@ -19157,11 +19173,11 @@ void func_164(int iParam0) // Position - 0x15966 (88422)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_165(int iParam0) // Position - 0x15AAD (88749)
+void func_165(int iParam0) // Position - 0x15AEA (88810)
 {
 	BOOL flag;
 	int num;
@@ -19179,7 +19195,7 @@ void func_165(int iParam0) // Position - 0x15AAD (88749)
 	num4 = -1;
 	num5 = 2;
 	num6 = 12;
-	Global_79322[0 /*14*/].f_5 = 1;
+	Global_79527[0 /*14*/].f_5 = 1;
 
 	switch (iParam0)
 	{
@@ -19494,11 +19510,11 @@ void func_165(int iParam0) // Position - 0x15AAD (88749)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_166(int iParam0) // Position - 0x15FB7 (90039)
+void func_166(int iParam0) // Position - 0x15FF4 (90100)
 {
 	BOOL flag;
 	int num;
@@ -19516,7 +19532,7 @@ void func_166(int iParam0) // Position - 0x15FB7 (90039)
 	num4 = -1;
 	num5 = 2;
 	num6 = 11;
-	Global_79322[0 /*14*/].f_5 = 1;
+	Global_79527[0 /*14*/].f_5 = 1;
 
 	switch (iParam0)
 	{
@@ -19918,11 +19934,11 @@ void func_166(int iParam0) // Position - 0x15FB7 (90039)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_167(int iParam0) // Position - 0x16620 (91680)
+void func_167(int iParam0) // Position - 0x1665D (91741)
 {
 	BOOL flag;
 	int num;
@@ -19940,7 +19956,7 @@ void func_167(int iParam0) // Position - 0x16620 (91680)
 	num4 = -1;
 	num5 = 2;
 	num6 = 7;
-	Global_79322[0 /*14*/].f_5 = 1;
+	Global_79527[0 /*14*/].f_5 = 1;
 
 	switch (iParam0)
 	{
@@ -19955,11 +19971,11 @@ void func_167(int iParam0) // Position - 0x16620 (91680)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_168(int iParam0) // Position - 0x16693 (91795)
+void func_168(int iParam0) // Position - 0x166D0 (91856)
 {
 	BOOL flag;
 	int num;
@@ -19977,7 +19993,7 @@ void func_168(int iParam0) // Position - 0x16693 (91795)
 	num4 = -1;
 	num5 = 2;
 	num6 = 1;
-	Global_79322[0 /*14*/].f_5 = 1;
+	Global_79527[0 /*14*/].f_5 = 1;
 
 	switch (iParam0)
 	{
@@ -20016,11 +20032,11 @@ void func_168(int iParam0) // Position - 0x16693 (91795)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_169(int iParam0) // Position - 0x16763 (92003)
+void func_169(int iParam0) // Position - 0x167A0 (92064)
 {
 	BOOL flag;
 	int num;
@@ -20038,7 +20054,7 @@ void func_169(int iParam0) // Position - 0x16763 (92003)
 	num4 = -1;
 	num5 = 2;
 	num6 = 10;
-	Global_79322[0 /*14*/].f_5 = 1;
+	Global_79527[0 /*14*/].f_5 = 1;
 
 	switch (iParam0)
 	{
@@ -20365,11 +20381,11 @@ void func_169(int iParam0) // Position - 0x16763 (92003)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_170(int iParam0) // Position - 0x16C5E (93278)
+void func_170(int iParam0) // Position - 0x16C9B (93339)
 {
 	BOOL flag;
 	int num;
@@ -20387,7 +20403,7 @@ void func_170(int iParam0) // Position - 0x16C5E (93278)
 	num4 = -1;
 	num5 = 2;
 	num6 = 9;
-	Global_79322[0 /*14*/].f_5 = 1;
+	Global_79527[0 /*14*/].f_5 = 1;
 
 	switch (iParam0)
 	{
@@ -20478,11 +20494,11 @@ void func_170(int iParam0) // Position - 0x16C5E (93278)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_171(int iParam0) // Position - 0x16DEF (93679)
+void func_171(int iParam0) // Position - 0x16E2C (93740)
 {
 	BOOL flag;
 	int num;
@@ -20500,7 +20516,7 @@ void func_171(int iParam0) // Position - 0x16DEF (93679)
 	num4 = -1;
 	num5 = 2;
 	num6 = 8;
-	Global_79322[0 /*14*/].f_5 = 1;
+	Global_79527[0 /*14*/].f_5 = 1;
 
 	switch (iParam0)
 	{
@@ -20994,11 +21010,11 @@ void func_171(int iParam0) // Position - 0x16DEF (93679)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_172(int iParam0) // Position - 0x175DE (95710)
+void func_172(int iParam0) // Position - 0x1761B (95771)
 {
 	BOOL flag;
 	int num;
@@ -21016,7 +21032,7 @@ void func_172(int iParam0) // Position - 0x175DE (95710)
 	num4 = -1;
 	num5 = 2;
 	num6 = 5;
-	Global_79322[0 /*14*/].f_5 = 1;
+	Global_79527[0 /*14*/].f_5 = 1;
 
 	switch (iParam0)
 	{
@@ -21073,11 +21089,11 @@ void func_172(int iParam0) // Position - 0x175DE (95710)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_173(int iParam0) // Position - 0x176E7 (95975)
+void func_173(int iParam0) // Position - 0x17724 (96036)
 {
 	BOOL flag;
 	int num;
@@ -21095,7 +21111,7 @@ void func_173(int iParam0) // Position - 0x176E7 (95975)
 	num4 = -1;
 	num5 = 2;
 	num6 = 6;
-	Global_79322[0 /*14*/].f_5 = 1;
+	Global_79527[0 /*14*/].f_5 = 1;
 
 	switch (iParam0)
 	{
@@ -22035,11 +22051,11 @@ void func_173(int iParam0) // Position - 0x176E7 (95975)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_174(int iParam0) // Position - 0x1860B (99851)
+void func_174(int iParam0) // Position - 0x18649 (99913)
 {
 	BOOL flag;
 	int num;
@@ -22057,7 +22073,7 @@ void func_174(int iParam0) // Position - 0x1860B (99851)
 	num4 = -1;
 	num5 = 2;
 	num6 = 4;
-	Global_79322[0 /*14*/].f_5 = 1;
+	Global_79527[0 /*14*/].f_5 = 1;
 
 	switch (iParam0)
 	{
@@ -22860,11 +22876,11 @@ void func_174(int iParam0) // Position - 0x1860B (99851)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_175(int iParam0) // Position - 0x192B8 (103096)
+void func_175(int iParam0) // Position - 0x192F6 (103158)
 {
 	if (iParam0 < 107)
 		func_178(iParam0);
@@ -22873,13 +22889,13 @@ void func_175(int iParam0) // Position - 0x192B8 (103096)
 	else
 		func_176(iParam0);
 
-	if (Global_79322[0 /*14*/].f_2 == -1)
+	if (Global_79527[0 /*14*/].f_2 == -1)
 		func_145(3, iParam0, 318, -1);
 
 	return;
 }
 
-void func_176(int iParam0) // Position - 0x192FE (103166)
+void func_176(int iParam0) // Position - 0x1933C (103228)
 {
 	BOOL flag;
 	int num;
@@ -22897,7 +22913,7 @@ void func_176(int iParam0) // Position - 0x192FE (103166)
 	num4 = -1;
 	num5 = 2;
 	num6 = 3;
-	Global_79322[0 /*14*/].f_5 = 1;
+	Global_79527[0 /*14*/].f_5 = 1;
 
 	switch (iParam0)
 	{
@@ -23557,11 +23573,11 @@ void func_176(int iParam0) // Position - 0x192FE (103166)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_177(int iParam0) // Position - 0x19DA2 (105890)
+void func_177(int iParam0) // Position - 0x19DE0 (105952)
 {
 	BOOL flag;
 	int num;
@@ -23579,7 +23595,7 @@ void func_177(int iParam0) // Position - 0x19DA2 (105890)
 	num4 = -1;
 	num5 = 2;
 	num6 = 3;
-	Global_79322[0 /*14*/].f_5 = 1;
+	Global_79527[0 /*14*/].f_5 = 1;
 
 	switch (iParam0)
 	{
@@ -24442,11 +24458,11 @@ void func_177(int iParam0) // Position - 0x19DA2 (105890)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_178(int iParam0) // Position - 0x1AB90 (109456)
+void func_178(int iParam0) // Position - 0x1ABCE (109518)
 {
 	BOOL flag;
 	int num;
@@ -24464,7 +24480,7 @@ void func_178(int iParam0) // Position - 0x1AB90 (109456)
 	num4 = -1;
 	num5 = 2;
 	num6 = 3;
-	Global_79322[0 /*14*/].f_5 = 1;
+	Global_79527[0 /*14*/].f_5 = 1;
 
 	switch (iParam0)
 	{
@@ -25253,11 +25269,11 @@ void func_178(int iParam0) // Position - 0x1AB90 (109456)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_179(int iParam0) // Position - 0x1B7CF (112591)
+void func_179(int iParam0) // Position - 0x1B80D (112653)
 {
 	BOOL flag;
 	int num;
@@ -25275,7 +25291,7 @@ void func_179(int iParam0) // Position - 0x1B7CF (112591)
 	num4 = -1;
 	num5 = 2;
 	num6 = 2;
-	Global_79322[0 /*14*/].f_5 = 1;
+	Global_79527[0 /*14*/].f_5 = 1;
 
 	switch (iParam0)
 	{
@@ -25426,11 +25442,11 @@ void func_179(int iParam0) // Position - 0x1B7CF (112591)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_180(int iParam0) // Position - 0x1BA47 (113223)
+void func_180(int iParam0) // Position - 0x1BA85 (113285)
 {
 	BOOL flag;
 	int num;
@@ -25448,7 +25464,7 @@ void func_180(int iParam0) // Position - 0x1BA47 (113223)
 	num4 = -1;
 	num5 = 2;
 	num6 = 0;
-	Global_79322[0 /*14*/].f_5 = 1;
+	Global_79527[0 /*14*/].f_5 = 1;
 
 	switch (iParam0)
 	{
@@ -25517,11 +25533,11 @@ void func_180(int iParam0) // Position - 0x1BA47 (113223)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_181(int iParam0, int iParam1) // Position - 0x1BB83 (113539)
+void func_181(int iParam0, int iParam1) // Position - 0x1BBC1 (113601)
 {
 	switch (iParam0)
 	{
@@ -25589,7 +25605,7 @@ void func_181(int iParam0, int iParam1) // Position - 0x1BB83 (113539)
 	return;
 }
 
-void func_182(int iParam0) // Position - 0x1BC73 (113779)
+void func_182(int iParam0) // Position - 0x1BCB1 (113841)
 {
 	BOOL flag;
 	int num;
@@ -25607,7 +25623,7 @@ void func_182(int iParam0) // Position - 0x1BC73 (113779)
 	num4 = -1;
 	num5 = 2;
 	num6 = 14;
-	Global_79322[0 /*14*/].f_5 = 0;
+	Global_79527[0 /*14*/].f_5 = 0;
 
 	switch (iParam0)
 	{
@@ -26486,11 +26502,11 @@ void func_182(int iParam0) // Position - 0x1BC73 (113779)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_183(int iParam0) // Position - 0x1C9D3 (117203)
+void func_183(int iParam0) // Position - 0x1CA10 (117264)
 {
 	BOOL flag;
 	int num;
@@ -26508,7 +26524,7 @@ void func_183(int iParam0) // Position - 0x1C9D3 (117203)
 	num4 = -1;
 	num5 = 2;
 	num6 = 13;
-	Global_79322[0 /*14*/].f_5 = 0;
+	Global_79527[0 /*14*/].f_5 = 0;
 
 	switch (iParam0)
 	{
@@ -26593,11 +26609,11 @@ void func_183(int iParam0) // Position - 0x1C9D3 (117203)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_184(int iParam0) // Position - 0x1CB42 (117570)
+void func_184(int iParam0) // Position - 0x1CB7F (117631)
 {
 	BOOL flag;
 	int num;
@@ -26615,7 +26631,7 @@ void func_184(int iParam0) // Position - 0x1CB42 (117570)
 	num4 = -1;
 	num5 = 2;
 	num6 = 12;
-	Global_79322[0 /*14*/].f_5 = 0;
+	Global_79527[0 /*14*/].f_5 = 0;
 
 	switch (iParam0)
 	{
@@ -26960,11 +26976,11 @@ void func_184(int iParam0) // Position - 0x1CB42 (117570)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_185(int iParam0) // Position - 0x1D0B3 (118963)
+void func_185(int iParam0) // Position - 0x1D0F0 (119024)
 {
 	BOOL flag;
 	int num;
@@ -26982,7 +26998,7 @@ void func_185(int iParam0) // Position - 0x1D0B3 (118963)
 	num4 = -1;
 	num5 = 2;
 	num6 = 11;
-	Global_79322[0 /*14*/].f_5 = 0;
+	Global_79527[0 /*14*/].f_5 = 0;
 
 	switch (iParam0)
 	{
@@ -27297,11 +27313,11 @@ void func_185(int iParam0) // Position - 0x1D0B3 (118963)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_186(int iParam0) // Position - 0x1D5DB (120283)
+void func_186(int iParam0) // Position - 0x1D618 (120344)
 {
 	BOOL flag;
 	int num;
@@ -27319,7 +27335,7 @@ void func_186(int iParam0) // Position - 0x1D5DB (120283)
 	num4 = -1;
 	num5 = 2;
 	num6 = 7;
-	Global_79322[0 /*14*/].f_5 = 0;
+	Global_79527[0 /*14*/].f_5 = 0;
 
 	switch (iParam0)
 	{
@@ -27334,11 +27350,11 @@ void func_186(int iParam0) // Position - 0x1D5DB (120283)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_187(int iParam0) // Position - 0x1D64E (120398)
+void func_187(int iParam0) // Position - 0x1D68B (120459)
 {
 	BOOL flag;
 	int num;
@@ -27356,7 +27372,7 @@ void func_187(int iParam0) // Position - 0x1D64E (120398)
 	num4 = -1;
 	num5 = 2;
 	num6 = 1;
-	Global_79322[0 /*14*/].f_5 = 0;
+	Global_79527[0 /*14*/].f_5 = 0;
 
 	switch (iParam0)
 	{
@@ -27395,11 +27411,11 @@ void func_187(int iParam0) // Position - 0x1D64E (120398)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_188(int iParam0) // Position - 0x1D71E (120606)
+void func_188(int iParam0) // Position - 0x1D75B (120667)
 {
 	BOOL flag;
 	int num;
@@ -27417,7 +27433,7 @@ void func_188(int iParam0) // Position - 0x1D71E (120606)
 	num4 = -1;
 	num5 = 2;
 	num6 = 10;
-	Global_79322[0 /*14*/].f_5 = 0;
+	Global_79527[0 /*14*/].f_5 = 0;
 
 	switch (iParam0)
 	{
@@ -27714,11 +27730,11 @@ void func_188(int iParam0) // Position - 0x1D71E (120606)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_189(int iParam0) // Position - 0x1DBCE (121806)
+void func_189(int iParam0) // Position - 0x1DC0B (121867)
 {
 	BOOL flag;
 	int num;
@@ -27736,7 +27752,7 @@ void func_189(int iParam0) // Position - 0x1DBCE (121806)
 	num4 = -1;
 	num5 = 2;
 	num6 = 9;
-	Global_79322[0 /*14*/].f_5 = 0;
+	Global_79527[0 /*14*/].f_5 = 0;
 
 	switch (iParam0)
 	{
@@ -27880,11 +27896,11 @@ void func_189(int iParam0) // Position - 0x1DBCE (121806)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_190(int iParam0) // Position - 0x1DE29 (122409)
+void func_190(int iParam0) // Position - 0x1DE66 (122470)
 {
 	BOOL flag;
 	int num;
@@ -27902,7 +27918,7 @@ void func_190(int iParam0) // Position - 0x1DE29 (122409)
 	num4 = -1;
 	num5 = 2;
 	num6 = 8;
-	Global_79322[0 /*14*/].f_5 = 0;
+	Global_79527[0 /*14*/].f_5 = 0;
 
 	switch (iParam0)
 	{
@@ -28076,11 +28092,11 @@ void func_190(int iParam0) // Position - 0x1DE29 (122409)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_191(int iParam0) // Position - 0x1E0E9 (123113)
+void func_191(int iParam0) // Position - 0x1E126 (123174)
 {
 	BOOL flag;
 	int num;
@@ -28098,7 +28114,7 @@ void func_191(int iParam0) // Position - 0x1E0E9 (123113)
 	num4 = -1;
 	num5 = 2;
 	num6 = 5;
-	Global_79322[0 /*14*/].f_5 = 0;
+	Global_79527[0 /*14*/].f_5 = 0;
 
 	switch (iParam0)
 	{
@@ -28204,11 +28220,11 @@ void func_191(int iParam0) // Position - 0x1E0E9 (123113)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_192(int iParam0) // Position - 0x1E2A4 (123556)
+void func_192(int iParam0) // Position - 0x1E2E1 (123617)
 {
 	BOOL flag;
 	int num;
@@ -28226,7 +28242,7 @@ void func_192(int iParam0) // Position - 0x1E2A4 (123556)
 	num4 = -1;
 	num5 = 2;
 	num6 = 6;
-	Global_79322[0 /*14*/].f_5 = 0;
+	Global_79527[0 /*14*/].f_5 = 0;
 
 	switch (iParam0)
 	{
@@ -28923,11 +28939,11 @@ void func_192(int iParam0) // Position - 0x1E2A4 (123556)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_193(int iParam0) // Position - 0x1EDEA (126442)
+void func_193(int iParam0) // Position - 0x1EE27 (126503)
 {
 	BOOL flag;
 	int num;
@@ -28945,7 +28961,7 @@ void func_193(int iParam0) // Position - 0x1EDEA (126442)
 	num4 = -1;
 	num5 = 2;
 	num6 = 4;
-	Global_79322[0 /*14*/].f_5 = 0;
+	Global_79527[0 /*14*/].f_5 = 0;
 
 	switch (iParam0)
 	{
@@ -29722,24 +29738,24 @@ void func_193(int iParam0) // Position - 0x1EDEA (126442)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_194(int iParam0) // Position - 0x1FA1C (129564)
+void func_194(int iParam0) // Position - 0x1FA59 (129625)
 {
 	if (iParam0 < 60)
 		func_196(iParam0);
 	else
 		func_195(iParam0);
 
-	if (Global_79322[0 /*14*/].f_2 == -1)
+	if (Global_79527[0 /*14*/].f_2 == -1)
 		func_145(3, iParam0, 181, -1);
 
 	return;
 }
 
-void func_195(int iParam0) // Position - 0x1FA51 (129617)
+void func_195(int iParam0) // Position - 0x1FA8E (129678)
 {
 	BOOL flag;
 	int num;
@@ -29757,7 +29773,7 @@ void func_195(int iParam0) // Position - 0x1FA51 (129617)
 	num4 = -1;
 	num5 = 2;
 	num6 = 3;
-	Global_79322[0 /*14*/].f_5 = 0;
+	Global_79527[0 /*14*/].f_5 = 0;
 
 	switch (iParam0)
 	{
@@ -30603,11 +30619,11 @@ void func_195(int iParam0) // Position - 0x1FA51 (129617)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_196(int iParam0) // Position - 0x207E7 (133095)
+void func_196(int iParam0) // Position - 0x20823 (133155)
 {
 	BOOL flag;
 	int num;
@@ -30625,7 +30641,7 @@ void func_196(int iParam0) // Position - 0x207E7 (133095)
 	num4 = -1;
 	num5 = 2;
 	num6 = 3;
-	Global_79322[0 /*14*/].f_5 = 0;
+	Global_79527[0 /*14*/].f_5 = 0;
 
 	switch (iParam0)
 	{
@@ -31037,11 +31053,11 @@ void func_196(int iParam0) // Position - 0x207E7 (133095)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_197(int iParam0) // Position - 0x20E69 (134761)
+void func_197(int iParam0) // Position - 0x20EA5 (134821)
 {
 	BOOL flag;
 	int num;
@@ -31059,7 +31075,7 @@ void func_197(int iParam0) // Position - 0x20E69 (134761)
 	num4 = -1;
 	num5 = 2;
 	num6 = 2;
-	Global_79322[0 /*14*/].f_5 = 0;
+	Global_79527[0 /*14*/].f_5 = 0;
 
 	switch (iParam0)
 	{
@@ -31104,11 +31120,11 @@ void func_197(int iParam0) // Position - 0x20E69 (134761)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_198(int iParam0) // Position - 0x20F4F (134991)
+void func_198(int iParam0) // Position - 0x20F8B (135051)
 {
 	BOOL flag;
 	int num;
@@ -31126,7 +31142,7 @@ void func_198(int iParam0) // Position - 0x20F4F (134991)
 	num4 = -1;
 	num5 = 2;
 	num6 = 0;
-	Global_79322[0 /*14*/].f_5 = 0;
+	Global_79527[0 /*14*/].f_5 = 0;
 
 	switch (iParam0)
 	{
@@ -31177,27 +31193,27 @@ void func_198(int iParam0) // Position - 0x20F4F (134991)
 			return;
 	}
 
-	func_139(&Global_79322[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_139(&Global_79527[0 /*14*/], num6, iParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_199() // Position - 0x21046 (135238)
+void func_199() // Position - 0x21082 (135298)
 {
-	Global_79322[0 /*14*/].f_1 = -1;
-	Global_79322[0 /*14*/].f_2 = -1;
-	Global_79322[0 /*14*/].f_5 = -1;
-	Global_79322[0 /*14*/].f_3 = -1;
-	Global_79322[0 /*14*/].f_4 = -1;
-	Global_79322[0 /*14*/].f_7 = 0;
-	Global_79322[0 /*14*/].f_6 = 0;
-	Global_79322[0 /*14*/].f_13 = -1;
-	Global_79322[0 /*14*/].f_12 = 0;
-	Global_79322[0 /*14*/] = 0;
-	TEXT_LABEL_ASSIGN_STRING(&(Global_79322[0 /*14*/].f_8), "NO_LABEL", 16);
+	Global_79527[0 /*14*/].f_1 = -1;
+	Global_79527[0 /*14*/].f_2 = -1;
+	Global_79527[0 /*14*/].f_5 = -1;
+	Global_79527[0 /*14*/].f_3 = -1;
+	Global_79527[0 /*14*/].f_4 = -1;
+	Global_79527[0 /*14*/].f_7 = 0;
+	Global_79527[0 /*14*/].f_6 = 0;
+	Global_79527[0 /*14*/].f_13 = -1;
+	Global_79527[0 /*14*/].f_12 = 0;
+	Global_79527[0 /*14*/] = 0;
+	TEXT_LABEL_ASSIGN_STRING(&(Global_79527[0 /*14*/].f_8), "NO_LABEL", 16);
 	return;
 }
 
-BOOL func_200(Ped pedParam0, int iParam1, int iParam2) // Position - 0x210BE (135358)
+BOOL func_200(Ped pedParam0, int iParam1, int iParam2) // Position - 0x210FA (135418)
 {
 	Hash entityModel;
 	int num;
@@ -31213,9 +31229,9 @@ BOOL func_200(Ped pedParam0, int iParam1, int iParam2) // Position - 0x210BE (13
 		return false;
 
 	entityModel = ENTITY::GET_ENTITY_MODEL(pedParam0);
-	Global_79322[1 /*14*/] = { func_136(entityModel, iParam1, iParam2, -1) };
+	Global_79527[1 /*14*/] = { func_136(entityModel, iParam1, iParam2, -1) };
 
-	if (!IS_BIT_SET(Global_79322[1 /*14*/].f_6, 0))
+	if (!IS_BIT_SET(Global_79527[1 /*14*/].f_6, 0))
 		return false;
 
 	if (iParam1 == 12)
@@ -31238,11 +31254,11 @@ BOOL func_200(Ped pedParam0, int iParam1, int iParam2) // Position - 0x210BE (13
 							{
 								for (k = 0; k <= 19; k = k + 1)
 								{
-									Global_79322[2 /*14*/] = { func_136(entityModel, 14, k, -1) };
+									Global_79527[2 /*14*/] = { func_136(entityModel, 14, k, -1) };
 								
-									if (Global_79322[2 /*14*/].f_12 == j)
+									if (Global_79527[2 /*14*/].f_12 == j)
 										if (func_200(pedParam0, 14, k))
-											if (!func_90(entityModel, iParam2, 14, k, &unk, &Global_79322[2 /*14*/]))
+											if (!func_90(entityModel, iParam2, 14, k, &unk, &Global_79527[2 /*14*/]))
 												return false;
 								}
 							}
@@ -31251,9 +31267,9 @@ BOOL func_200(Ped pedParam0, int iParam1, int iParam2) // Position - 0x210BE (13
 					else
 					{
 						num = func_116(pedParam0, i);
-						Global_79322[2 /*14*/] = { func_136(entityModel, i, num, -1) };
+						Global_79527[2 /*14*/] = { func_136(entityModel, i, num, -1) };
 					
-						if (!func_90(entityModel, iParam2, i, num, &unk, &Global_79322[2 /*14*/]))
+						if (!func_90(entityModel, iParam2, i, num, &unk, &Global_79527[2 /*14*/]))
 							return false;
 					}
 				}
@@ -31276,10 +31292,10 @@ BOOL func_200(Ped pedParam0, int iParam1, int iParam2) // Position - 0x210BE (13
 	}
 	else if (iParam1 == 14)
 	{
-		if (PED::GET_PED_PROP_INDEX(pedParam0, Global_79322[1 /*14*/].f_12, 1) == Global_79322[1 /*14*/].f_3 && PED::GET_PED_PROP_TEXTURE_INDEX(pedParam0, Global_79322[1 /*14*/].f_12) == Global_79322[1 /*14*/].f_4 || Global_79322[1 /*14*/].f_3 == -1)
+		if (PED::GET_PED_PROP_INDEX(pedParam0, Global_79527[1 /*14*/].f_12, 1) == Global_79527[1 /*14*/].f_3 && PED::GET_PED_PROP_TEXTURE_INDEX(pedParam0, Global_79527[1 /*14*/].f_12) == Global_79527[1 /*14*/].f_4 || Global_79527[1 /*14*/].f_3 == -1)
 			return true;
 	}
-	else if (Global_79322[1 /*14*/].f_3 == PED::GET_PED_DRAWABLE_VARIATION(pedParam0, func_128(iParam1)) && Global_79322[1 /*14*/].f_4 == PED::GET_PED_TEXTURE_VARIATION(pedParam0, func_128(iParam1)))
+	else if (Global_79527[1 /*14*/].f_3 == PED::GET_PED_DRAWABLE_VARIATION(pedParam0, func_128(iParam1)) && Global_79527[1 /*14*/].f_4 == PED::GET_PED_TEXTURE_VARIATION(pedParam0, func_128(iParam1)))
 	{
 		return true;
 	}
@@ -31287,7 +31303,7 @@ BOOL func_200(Ped pedParam0, int iParam1, int iParam2) // Position - 0x210BE (13
 	return false;
 }
 
-void func_201(const char* sParam0, int iParam1) // Position - 0x21317 (135959)
+void func_201(const char* sParam0, int iParam1) // Position - 0x21353 (136019)
 {
 	STATS::STAT_SET_GXT_LABEL(joaat("SP_LAST_MISSION_NAME"), sParam0, true);
 
@@ -31303,11 +31319,11 @@ void func_201(const char* sParam0, int iParam1) // Position - 0x21317 (135959)
 	return;
 }
 
-int func_202() // Position - 0x21368 (136040)
+int func_202() // Position - 0x213A4 (136100)
 {
 	func_16();
 
-	switch (Global_114135.f_2367.f_539.f_4321)
+	switch (Global_114344.f_2367.f_539.f_4321)
 	{
 		case CHAR_MICHAEL:
 			return 1;
@@ -31322,7 +31338,7 @@ int func_202() // Position - 0x21368 (136040)
 	return 0;
 }
 
-struct<2> func_203(int iParam0) // Position - 0x213AE (136110)
+struct<2> func_203(int iParam0) // Position - 0x213EA (136170)
 {
 	var unk;
 	var unk3;
@@ -31342,7 +31358,7 @@ struct<2> func_203(int iParam0) // Position - 0x213AE (136110)
 	return unk;
 }
 
-struct<2> func_204(int iParam0) // Position - 0x213E5 (136165)
+struct<2> func_204(int iParam0) // Position - 0x21421 (136225)
 {
 	var unk;
 
@@ -31609,34 +31625,34 @@ struct<2> func_204(int iParam0) // Position - 0x213E5 (136165)
 	return unk;
 }
 
-void func_205(int iParam0, int iParam1) // Position - 0x21831 (137265)
+void func_205(int iParam0, int iParam1) // Position - 0x2186D (137325)
 {
-	Global_79808 = iParam1;
+	Global_80013 = iParam1;
 
-	if (Global_64302)
+	if (Global_64500)
 		return;
 
-	if (Global_64329)
+	if (Global_64527)
 	{
-		Global_64329 = false;
+		Global_64527 = false;
 		return;
 	}
 
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("mission_stat_watcher")) > 0)
 	{
-		if (Global_64302)
+		if (Global_64500)
 		{
 		}
 	
-		Global_64328 = iParam0;
-		Global_64302 = true;
-		Global_64313 = 1;
+		Global_64526 = iParam0;
+		Global_64500 = true;
+		Global_64511 = 1;
 	}
 
 	return;
 }
 
-void func_206(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3) // Position - 0x2187B (137339)
+void func_206(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3) // Position - 0x218B7 (137399)
 {
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
@@ -31667,7 +31683,7 @@ void func_206(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3) // Position 
 	return;
 }
 
-void func_207(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x21918 (137496)
+void func_207(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x21954 (137556)
 {
 	var unk;
 	var unk33;
@@ -31676,27 +31692,27 @@ void func_207(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x21918 (13
 	{
 		func_209(iParam0, &unk);
 		TEXT_LABEL_COPY(&unk33, { func_204(iParam0) }, 4);
-		STATS::PLAYSTATS_MISSION_CHECKPOINT(&unk33, 0, Global_101725, 0);
-		func_208(&unk33, unk.f_3, Global_101725, bParam1, bParam2);
+		STATS::PLAYSTATS_MISSION_CHECKPOINT(&unk33, 0, Global_101930, 0);
+		func_208(&unk33, unk.f_3, Global_101930, bParam1, bParam2);
 	}
 
 	return;
 }
 
-void func_208(const char* sParam0, Any anParam1, int iParam2, BOOL bParam3, BOOL bParam4) // Position - 0x21957 (137559)
+void func_208(const char* sParam0, Any anParam1, int iParam2, BOOL bParam3, BOOL bParam4) // Position - 0x21993 (137619)
 {
-	if (MISC::IS_STRING_NULL_OR_EMPTY(&Global_98733))
+	if (MISC::IS_STRING_NULL_OR_EMPTY(&Global_98938))
 		return;
 
-	if (MISC::COMPARE_STRINGS(sParam0, &Global_98733, false, -1) != 0)
+	if (MISC::COMPARE_STRINGS(sParam0, &Global_98938, false, -1) != 0)
 		return;
 
-	STATS::PLAYSTATS_MISSION_OVER(sParam0, anParam1, iParam2, bParam3, bParam4, Global_95840);
-	TEXT_LABEL_ASSIGN_STRING(&Global_98733, "", 64);
+	STATS::PLAYSTATS_MISSION_OVER(sParam0, anParam1, iParam2, bParam3, bParam4, Global_96045);
+	TEXT_LABEL_ASSIGN_STRING(&Global_98938, "", 64);
 	return;
 }
 
-void func_209(int iParam0, var uParam1) // Position - 0x2199B (137627)
+void func_209(int iParam0, var uParam1) // Position - 0x219D7 (137687)
 {
 	switch (iParam0)
 	{
@@ -31959,7 +31975,7 @@ void func_209(int iParam0, var uParam1) // Position - 0x2199B (137627)
 	return;
 }
 
-void func_210(var uParam0, char* sParam1, var uParam2, var uParam3, int iParam4, int iParam5, int iParam6, float fParam7, float fParam8, float fParam9, int iParam10, char* sParam11, int iParam12, int iParam13, char* sParam14, int iParam15, int iParam16, int iParam17, int iParam18, int iParam19, int iParam20, int iParam21, int iParam22, int iParam23, int iParam24) // Position - 0x22B50 (142160)
+void func_210(var uParam0, char* sParam1, var uParam2, var uParam3, int iParam4, int iParam5, int iParam6, float fParam7, float fParam8, float fParam9, int iParam10, char* sParam11, int iParam12, int iParam13, char* sParam14, int iParam15, int iParam16, int iParam17, int iParam18, int iParam19, int iParam20, int iParam21, int iParam22, int iParam23, int iParam24) // Position - 0x22B8C (142220)
 {
 	uParam0->f_4 = iParam5;
 	*uParam0 = sParam1;
@@ -31985,7 +32001,7 @@ void func_210(var uParam0, char* sParam1, var uParam2, var uParam3, int iParam4,
 	return;
 }
 
-int func_211(int iParam0) // Position - 0x22BE1 (142305)
+int func_211(int iParam0) // Position - 0x22C1D (142365)
 {
 	switch (iParam0)
 	{
@@ -32185,18 +32201,18 @@ int func_211(int iParam0) // Position - 0x22BE1 (142305)
 	return 0;
 }
 
-void func_212(int iParam0) // Position - 0x22F27 (143143)
+void func_212(int iParam0) // Position - 0x22F63 (143203)
 {
-	Global_44732 = MISC::GET_GAME_TIMER() + iParam0;
+	Global_44926 = MISC::GET_GAME_TIMER() + iParam0;
 	return;
 }
 
-void func_213() // Position - 0x22F39 (143161)
+void func_213() // Position - 0x22F75 (143221)
 {
-	if (Global_98975)
+	if (Global_99180)
 	{
 		func_16();
-		GRAPHICS::SET_NEXT_PLAYER_TCMODIFIER(func_214(Global_114135.f_2367.f_539.f_4321));
+		GRAPHICS::SET_NEXT_PLAYER_TCMODIFIER(func_214(Global_114344.f_2367.f_539.f_4321));
 	}
 	else
 	{
@@ -32206,13 +32222,13 @@ void func_213() // Position - 0x22F39 (143161)
 	return;
 }
 
-char* func_214(eCharacter echParam0) // Position - 0x22F6B (143211)
+char* func_214(eCharacter echParam0) // Position - 0x22FA7 (143271)
 {
 	echParam0 = echParam0;
 	return "";
 }
 
-void func_215() // Position - 0x22F7A (143226)
+void func_215() // Position - 0x22FB6 (143286)
 {
 	var textLabel;
 
@@ -32229,61 +32245,61 @@ void func_215() // Position - 0x22F7A (143226)
 	return;
 }
 
-BOOL func_216() // Position - 0x22FC7 (143303)
+BOOL func_216() // Position - 0x23003 (143363)
 {
 	return MISC::IS_ORBIS_VERSION() || MISC::IS_PROSPERO_VERSION();
 }
 
-BOOL func_217() // Position - 0x22FDD (143325)
+BOOL func_217() // Position - 0x23019 (143385)
 {
 	return MISC::IS_DURANGO_VERSION() || MISC::IS_SCARLETT_VERSION();
 }
 
-void func_218(int iParam0, int iParam1) // Position - 0x22FF3 (143347)
+void func_218(int iParam0, int iParam1) // Position - 0x2302F (143407)
 {
-	Global_98970 = iParam0;
-	Global_98971 = iParam1;
+	Global_99175 = iParam0;
+	Global_99176 = iParam1;
 	return;
 }
 
-void func_219() // Position - 0x23007 (143367)
+void func_219() // Position - 0x23043 (143427)
 {
-	Global_79794 != 6;
+	Global_79999 != 6;
 
-	if (Global_79799)
+	if (Global_80004)
 	{
 		HUD::RESET_HUD_COMPONENT_VALUES(HUD_SUBTITLE_TEXT);
-		Global_79799 = false;
-		Global_23970.f_9116 = 0;
+		Global_80004 = false;
+		Global_24131.f_9148 = 0;
 	}
 
-	Global_79794 = 6;
-	Global_79796 = -1;
-	Global_79795 = -1;
+	Global_79999 = 6;
+	Global_80001 = -1;
+	Global_80000 = -1;
 	return;
 }
 
-void func_220(int iParam0) // Position - 0x2303F (143423)
+void func_220(int iParam0) // Position - 0x2307B (143483)
 {
 	if (*iParam0 == -1)
 		return;
 
-	if (!(*iParam0 == Global_44143))
+	if (!(*iParam0 == Global_44337))
 	{
 		*iParam0 = -1;
 		return;
 	}
 
 	*iParam0 = -1;
-	Global_44142 = 0;
-	Global_44144 = 0;
-	Global_44181 = 15;
-	Global_64305 = 0;
-	Global_64306 = 0;
+	Global_44336 = 0;
+	Global_44338 = 0;
+	Global_44375 = 15;
+	Global_64503 = 0;
+	Global_64504 = 0;
 	return;
 }
 
-void func_221(int iParam0, BOOL bParam1) // Position - 0x2307C (143484)
+void func_221(int iParam0, BOOL bParam1) // Position - 0x230B8 (143544)
 {
 	var unk;
 	int newsStory;
@@ -32309,7 +32325,7 @@ void func_221(int iParam0, BOOL bParam1) // Position - 0x2307C (143484)
 	if (unk.f_22 != 0)
 		func_248(unk.f_22, 0);
 
-	func_239(iParam0, Global_79810);
+	func_239(iParam0, Global_80015);
 
 	if (!bParam1)
 	{
@@ -32336,10 +32352,10 @@ void func_221(int iParam0, BOOL bParam1) // Position - 0x2307C (143484)
 				
 					if (unk33.f_5 == unk.f_5)
 					{
-						if (!IS_BIT_SET(Global_114135.f_18578[num /*6*/], 3))
+						if (!IS_BIT_SET(Global_114344.f_18578[num /*6*/], 3))
 							flag = false;
 					
-						if (!IS_BIT_SET(Global_114135.f_18578[num /*6*/], 0))
+						if (!IS_BIT_SET(Global_114344.f_18578[num /*6*/], 0))
 							func_226(num);
 					}
 				}
@@ -32365,10 +32381,10 @@ void func_221(int iParam0, BOOL bParam1) // Position - 0x2307C (143484)
 		}
 	}
 
-	if (!IS_BIT_SET(Global_114135.f_18578[iParam0 /*6*/], 3))
+	if (!IS_BIT_SET(Global_114344.f_18578[iParam0 /*6*/], 3))
 	{
-		MISC::SET_BIT(&Global_114135.f_18578[iParam0 /*6*/], 3);
-		Global_113222[iParam0 /*10*/].f_5 = 1;
+		MISC::SET_BIT(&Global_114344.f_18578[iParam0 /*6*/], 3);
+		Global_113431[iParam0 /*10*/].f_5 = 1;
 		func_223(iParam0);
 		num3 = func_222(iParam0);
 	
@@ -32379,7 +32395,7 @@ void func_221(int iParam0, BOOL bParam1) // Position - 0x2307C (143484)
 	return;
 }
 
-int func_222(int iParam0) // Position - 0x231F9 (143865)
+int func_222(int iParam0) // Position - 0x23235 (143925)
 {
 	switch (iParam0)
 	{
@@ -32576,20 +32592,20 @@ int func_222(int iParam0) // Position - 0x231F9 (143865)
 	return 322;
 }
 
-void func_223(int iParam0) // Position - 0x23580 (144768)
+void func_223(int iParam0) // Position - 0x235BC (144828)
 {
 	func_225(iParam0, true);
-	Global_114135.f_18578[iParam0 /*6*/].f_3 = func_224();
-	Global_114135.f_18578.f_380 = Global_114135.f_18578.f_380 + 1;
+	Global_114344.f_18578[iParam0 /*6*/].f_3 = func_224();
+	Global_114344.f_18578.f_380 = Global_114344.f_18578.f_380 + 1;
 	return;
 }
 
-int func_224() // Position - 0x235B6 (144822)
+int func_224() // Position - 0x235F2 (144882)
 {
-	return Global_114135.f_10020.f_21 + Global_114135.f_18578.f_380;
+	return Global_114344.f_10020.f_21 + Global_114344.f_18578.f_380;
 }
 
-void func_225(int iParam0, BOOL bParam1) // Position - 0x235D2 (144850)
+void func_225(int iParam0, BOOL bParam1) // Position - 0x2360E (144910)
 {
 	int num;
 	int num2;
@@ -32715,22 +32731,22 @@ void func_225(int iParam0, BOOL bParam1) // Position - 0x235D2 (144850)
 	}
 
 	if (num != 55)
-		Global_114135.f_20568.f_472 = num;
+		Global_114344.f_20568.f_472 = num;
 
 	return;
 }
 
-void func_226(int iParam0) // Position - 0x238F6 (145654)
+void func_226(int iParam0) // Position - 0x23932 (145714)
 {
 	if (iParam0 == 63 || iParam0 == -1)
 		return;
 
 	func_227(iParam0);
-	MISC::SET_BIT(&Global_114135.f_18578[iParam0 /*6*/], 0);
+	MISC::SET_BIT(&Global_114344.f_18578[iParam0 /*6*/], 0);
 	return;
 }
 
-void func_227(int iParam0) // Position - 0x23929 (145705)
+void func_227(int iParam0) // Position - 0x23965 (145765)
 {
 	switch (iParam0)
 	{
@@ -32749,7 +32765,7 @@ void func_227(int iParam0) // Position - 0x23929 (145705)
 	return;
 }
 
-void func_228(int iParam0, BOOL bParam1) // Position - 0x2395E (145758)
+void func_228(int iParam0, BOOL bParam1) // Position - 0x2399A (145818)
 {
 	if (iParam0 == -1)
 		return;
@@ -32763,7 +32779,7 @@ void func_228(int iParam0, BOOL bParam1) // Position - 0x2395E (145758)
 			func_229(iParam0, 3, false);
 			func_229(iParam0, 4, false);
 			func_229(iParam0, 0, true);
-			Global_78329[iParam0] = 1;
+			Global_78534[iParam0] = 1;
 		}
 	}
 	else
@@ -32774,38 +32790,38 @@ void func_228(int iParam0, BOOL bParam1) // Position - 0x2395E (145758)
 	return;
 }
 
-void func_229(int iParam0, int iParam1, BOOL bParam2) // Position - 0x239BB (145851)
+void func_229(int iParam0, int iParam1, BOOL bParam2) // Position - 0x239F7 (145911)
 {
 	if (iParam0 == -1)
 		return;
 
 	if (bParam2)
-		MISC::SET_BIT(&Global_114135.f_32754[iParam0], iParam1);
+		MISC::SET_BIT(&Global_114344.f_32754[iParam0], iParam1);
 	else
-		MISC::CLEAR_BIT(&Global_114135.f_32754[iParam0], iParam1);
+		MISC::CLEAR_BIT(&Global_114344.f_32754[iParam0], iParam1);
 
 	return;
 }
 
-BOOL func_230(int iParam0, int iParam1) // Position - 0x239F6 (145910)
+BOOL func_230(int iParam0, int iParam1) // Position - 0x23A32 (145970)
 {
 	if (iParam0 == -1)
 		return false;
 
-	return IS_BIT_SET(Global_114135.f_32754[iParam0], iParam1);
+	return IS_BIT_SET(Global_114344.f_32754[iParam0], iParam1);
 }
 
-void func_231(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, int iParam4) // Position - 0x23A16 (145942)
+void func_231(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, int iParam4) // Position - 0x23A52 (146002)
 {
 	if (iParam0 != 198)
 	{
-		if (Global_79539)
-			Global_43715.f_227[iParam0] = iParam1;
+		if (Global_79744)
+			Global_43909.f_227[iParam0] = iParam1;
 		else
-			Global_114135.f_7265.f_227[iParam0] = iParam1;
+			Global_114344.f_7265.f_227[iParam0] = iParam1;
 	
-		Global_40721[iParam0] = bParam2;
-		Global_40920[iParam0] = 1;
+		Global_40915[iParam0] = bParam2;
+		Global_41114[iParam0] = 1;
 		func_234(iParam0, bParam3, iParam4, false);
 		func_232(iParam0, iParam1);
 	}
@@ -32813,7 +32829,7 @@ void func_231(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, int iParam4)
 	return;
 }
 
-void func_232(int iParam0, int iParam1) // Position - 0x23A6E (146030)
+void func_232(int iParam0, int iParam1) // Position - 0x23AAA (146090)
 {
 	switch (iParam0)
 	{
@@ -32864,18 +32880,18 @@ void func_232(int iParam0, int iParam1) // Position - 0x23A6E (146030)
 	return;
 }
 
-void func_233(int iParam0, BOOL bParam1) // Position - 0x23B57 (146263)
+void func_233(int iParam0, BOOL bParam1) // Position - 0x23B93 (146323)
 {
 	if (bParam1)
-		MISC::SET_BIT(&Global_112770, iParam0);
+		MISC::SET_BIT(&Global_112979, iParam0);
 	else
-		MISC::CLEAR_BIT(&Global_112770, iParam0);
+		MISC::CLEAR_BIT(&Global_112979, iParam0);
 
-	Global_112769 = 1;
+	Global_112978 = 1;
 	return;
 }
 
-BOOL func_234(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position - 0x23B80 (146304)
+BOOL func_234(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position - 0x23BBC (146364)
 {
 	BOOL flag;
 	int num;
@@ -32885,7 +32901,7 @@ BOOL func_234(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 	BOOL flag2;
 	Interior interiorAtCoordsWithType;
 
-	Global_1919394 = 1;
+	Global_1921391 = 1;
 	flag = false;
 	vector.f_4 = 3;
 	vector.f_8 = 3;
@@ -32895,15 +32911,15 @@ BOOL func_234(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 	func_237(&vector, iParam0);
 
 	if (func_235())
-		num = Global_114135.f_7265.f_227[iParam0];
+		num = Global_114344.f_7265.f_227[iParam0];
 	else
-		num = Global_43715.f_227[iParam0];
+		num = Global_43909.f_227[iParam0];
 
-	num2 = Global_41119[iParam0];
+	num2 = Global_41313[iParam0];
 
 	if (PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !bParam3)
 	{
-		Global_1919394 = 1;
+		Global_1921391 = 1;
 	}
 	else
 	{
@@ -32913,10 +32929,10 @@ BOOL func_234(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 		{
 			if (iParam2 == 0)
 			{
-				if (Global_40721[iParam0] && MISC::GET_DISTANCE_BETWEEN_COORDS(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), vector, true) < 200f)
+				if (Global_40915[iParam0] && MISC::GET_DISTANCE_BETWEEN_COORDS(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), vector, true) < 200f)
 				{
 					flag2 = false;
-					Global_1919394 = 1;
+					Global_1921391 = 1;
 				}
 			
 				if (!PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()) || TASK::IS_PED_BEING_ARRESTED(PLAYER::PLAYER_PED_ID()))
@@ -32924,7 +32940,7 @@ BOOL func_234(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 					if (!CAM::IS_SCREEN_FADED_OUT())
 					{
 						flag2 = false;
-						Global_1919394 = 1;
+						Global_1921391 = 1;
 					}
 				}
 			}
@@ -32933,7 +32949,7 @@ BOOL func_234(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 		if (STREAMING::IS_NEW_LOAD_SCENE_ACTIVE() && !STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS() || STREAMING::GET_PLAYER_SWITCH_STATE() != 5)
 		{
 			flag2 = false;
-			Global_1919394 = 1;
+			Global_1921391 = 1;
 		}
 	
 		if (flag2)
@@ -32952,7 +32968,7 @@ BOOL func_234(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 						if (vector.f_4[num2] != 0)
 							ENTITY::CREATE_MODEL_HIDE(vector, 10f, vector.f_4[num2], true);
 					
-						Global_42315[iParam0] = 1;
+						Global_42509[iParam0] = 1;
 					}
 				
 					flag = true;
@@ -32966,7 +32982,7 @@ BOOL func_234(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 							if (STREAMING::IS_IPL_ACTIVE(&vector.f_8[1 /*8*/]))
 							{
 								STREAMING::REMOVE_IPL(&vector.f_8[1 /*8*/]);
-								Global_1919394 = 1;
+								Global_1921391 = 1;
 							}
 						}
 					
@@ -32975,7 +32991,7 @@ BOOL func_234(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 							if (STREAMING::IS_IPL_ACTIVE(&vector.f_8[2 /*8*/]))
 							{
 								STREAMING::REMOVE_IPL(&vector.f_8[2 /*8*/]);
-								Global_1919394 = 1;
+								Global_1921391 = 1;
 							}
 						}
 					
@@ -32984,7 +33000,7 @@ BOOL func_234(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 							if (!STREAMING::IS_IPL_ACTIVE(&vector.f_8[0 /*8*/]))
 							{
 								STREAMING::REQUEST_IPL(&vector.f_8[0 /*8*/]);
-								Global_1919394 = 1;
+								Global_1921391 = 1;
 							}
 						}
 					
@@ -32993,7 +33009,7 @@ BOOL func_234(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 							if (!STREAMING::IS_IPL_ACTIVE(&(vector.f_34)))
 							{
 								STREAMING::REQUEST_IPL(&(vector.f_34));
-								Global_1919394 = 1;
+								Global_1921391 = 1;
 							}
 						}
 					}
@@ -33034,8 +33050,8 @@ BOOL func_234(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 								STREAMING::REQUEST_IPL(&vector.f_8[2 /*8*/]);
 					}
 				
-					Global_42116[iParam0] = 1;
-					Global_42315[iParam0] = 1;
+					Global_42310[iParam0] = 1;
+					Global_42509[iParam0] = 1;
 					flag = true;
 					break;
 			
@@ -33095,8 +33111,8 @@ BOOL func_234(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 							INTERIOR::REFRESH_INTERIOR(interiorAtCoordsWithType);
 					}
 				
-					Global_42315[iParam0] = 1;
-					Global_42116[iParam0] = 1;
+					Global_42509[iParam0] = 1;
+					Global_42310[iParam0] = 1;
 					flag = true;
 					break;
 			
@@ -33110,7 +33126,7 @@ BOOL func_234(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 							if (num == 0)
 							{
 								OBJECT::SET_STATE_OF_RAYFIRE_MAP_OBJECT(rayfireMapObject, 3);
-								Global_42315[iParam0] = 1;
+								Global_42509[iParam0] = 1;
 								flag = true;
 							}
 							else if (num == 1)
@@ -33118,7 +33134,7 @@ BOOL func_234(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 								if (OBJECT::GET_STATE_OF_RAYFIRE_MAP_OBJECT(rayfireMapObject) != 6 && OBJECT::GET_STATE_OF_RAYFIRE_MAP_OBJECT(rayfireMapObject) != 7 && OBJECT::GET_STATE_OF_RAYFIRE_MAP_OBJECT(rayfireMapObject) != 8)
 								{
 									OBJECT::SET_STATE_OF_RAYFIRE_MAP_OBJECT(rayfireMapObject, 10);
-									Global_42315[iParam0] = 1;
+									Global_42509[iParam0] = 1;
 									flag = true;
 								}
 							}
@@ -33134,12 +33150,12 @@ BOOL func_234(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 					if (num == 0)
 					{
 						ENTITY::REMOVE_MODEL_SWAP(vector, 50f, vector.f_4[1], vector.f_4[0], false);
-						MISC::CLEAR_BIT(&Global_40467[iParam0 / 32], iParam0 % 32);
+						MISC::CLEAR_BIT(&Global_40661[iParam0 / 32], iParam0 % 32);
 					}
 					else if (num == 1)
 					{
 						ENTITY::CREATE_MODEL_SWAP(vector, 50f, vector.f_4[0], vector.f_4[1], true);
-						MISC::SET_BIT(&Global_40467[iParam0 / 32], iParam0 % 32);
+						MISC::SET_BIT(&Global_40661[iParam0 / 32], iParam0 % 32);
 					}
 				
 					flag = true;
@@ -33148,15 +33164,15 @@ BOOL func_234(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 		
 			if (flag)
 			{
-				Global_40920[iParam0] = 0;
-				Global_41119[iParam0] = num;
+				Global_41114[iParam0] = 0;
+				Global_41313[iParam0] = num;
 			
 				if (!func_235())
 				{
-					if (!Global_41716[iParam0])
+					if (!Global_41910[iParam0])
 					{
-						Global_41716[iParam0] = true;
-						Global_41915 = Global_41915 + 1;
+						Global_41910[iParam0] = true;
+						Global_42109 = Global_42109 + 1;
 					}
 				}
 			}
@@ -33166,7 +33182,7 @@ BOOL func_234(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 	return flag;
 }
 
-BOOL func_235() // Position - 0x244D1 (148689)
+BOOL func_235() // Position - 0x2450E (148750)
 {
 	if (func_59() == -1 || func_59() == 999 && !(func_236() == 0))
 		return true;
@@ -33174,12 +33190,12 @@ BOOL func_235() // Position - 0x244D1 (148689)
 	return false;
 }
 
-int func_236() // Position - 0x24501 (148737)
+int func_236() // Position - 0x2453E (148798)
 {
-	return Global_33088;
+	return Global_33282;
 }
 
-int func_237(var uParam0, int iParam1) // Position - 0x2450C (148748)
+int func_237(var uParam0, int iParam1) // Position - 0x24549 (148809)
 {
 	int i;
 
@@ -34812,7 +34828,7 @@ int func_237(var uParam0, int iParam1) // Position - 0x2450C (148748)
 	return 1;
 }
 
-int func_238(int iParam0) // Position - 0x27CA6 (162982)
+int func_238(int iParam0) // Position - 0x27CE3 (163043)
 {
 	switch (iParam0)
 	{
@@ -34829,7 +34845,7 @@ int func_238(int iParam0) // Position - 0x27CA6 (162982)
 			return 45;
 	
 		case 8:
-			if (IS_BIT_SET(Global_114135.f_18578.f_382, 0))
+			if (IS_BIT_SET(Global_114344.f_18578.f_382, 0))
 				return 46;
 			break;
 	
@@ -34852,7 +34868,7 @@ int func_238(int iParam0) // Position - 0x27CA6 (162982)
 			return 52;
 	
 		case 43:
-			if (Global_114135.f_9089.f_99.f_58[101])
+			if (Global_114344.f_9089.f_99.f_58[101])
 				return 53;
 			else
 				return 54;
@@ -34865,7 +34881,7 @@ int func_238(int iParam0) // Position - 0x27CA6 (162982)
 	return 0;
 }
 
-void func_239(int iParam0, BOOL bParam1) // Position - 0x27D95 (163221)
+void func_239(int iParam0, BOOL bParam1) // Position - 0x27DD2 (163282)
 {
 	switch (iParam0)
 	{
@@ -34889,7 +34905,7 @@ void func_239(int iParam0, BOOL bParam1) // Position - 0x27D95 (163221)
 	return;
 }
 
-void func_240(int iParam0, BOOL bParam1) // Position - 0x27DE6 (163302)
+void func_240(int iParam0, BOOL bParam1) // Position - 0x27E23 (163363)
 {
 	int offset;
 
@@ -34899,7 +34915,7 @@ void func_240(int iParam0, BOOL bParam1) // Position - 0x27DE6 (163302)
 	{
 		if (!func_247(iParam0))
 		{
-			MISC::SET_BIT(&(Global_114135.f_26438), offset);
+			MISC::SET_BIT(&(Global_114344.f_26438), offset);
 		
 			if (!bParam1)
 			{
@@ -34914,13 +34930,13 @@ void func_240(int iParam0, BOOL bParam1) // Position - 0x27DE6 (163302)
 	return;
 }
 
-void func_241(char* sParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8) // Position - 0x27E4C (163404)
+void func_241(char* sParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8) // Position - 0x27E89 (163465)
 {
 	func_242(sParam0, "", iParam1, iParam2, iParam3, iParam4, iParam5, iParam6, iParam7, iParam8);
 	return;
 }
 
-void func_242(char* sParam0, char* sParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9) // Position - 0x27E6D (163437)
+void func_242(char* sParam0, char* sParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9) // Position - 0x27EAA (163498)
 {
 	int i;
 
@@ -34945,64 +34961,64 @@ void func_242(char* sParam0, char* sParam1, int iParam2, int iParam3, int iParam
 	if (iParam8 == 235)
 		return;
 
-	for (i = 0; i < Global_114135.f_20414.f_145; i = i + 1)
+	for (i = 0; i < Global_114344.f_20414.f_145; i = i + 1)
 	{
-		if (MISC::ARE_STRINGS_EQUAL(&Global_114135.f_20414[i /*16*/], sParam0))
+		if (MISC::ARE_STRINGS_EQUAL(&Global_114344.f_20414[i /*16*/], sParam0))
 			return;
 	}
 
-	if (Global_114135.f_20414.f_145 < 9)
+	if (Global_114344.f_20414.f_145 < 9)
 	{
-		TEXT_LABEL_ASSIGN_STRING(&Global_114135.f_20414[Global_114135.f_20414.f_145 /*16*/], sParam0, 16);
-		TEXT_LABEL_ASSIGN_STRING(&(Global_114135.f_20414[Global_114135.f_20414.f_145 /*16*/].f_4), sParam1, 16);
-		Global_114135.f_20414[Global_114135.f_20414.f_145 /*16*/].f_8 = MISC::GET_GAME_TIMER() + iParam3;
-		Global_114135.f_20414[Global_114135.f_20414.f_145 /*16*/].f_9 = iParam5;
-		Global_114135.f_20414[Global_114135.f_20414.f_145 /*16*/].f_11 = iParam6;
-		Global_114135.f_20414[Global_114135.f_20414.f_145 /*16*/].f_12 = iParam2;
-		Global_114135.f_20414[Global_114135.f_20414.f_145 /*16*/].f_13 = iParam7;
-		Global_114135.f_20414[Global_114135.f_20414.f_145 /*16*/].f_14 = iParam8;
-		Global_114135.f_20414[Global_114135.f_20414.f_145 /*16*/].f_15 = iParam9;
+		TEXT_LABEL_ASSIGN_STRING(&Global_114344.f_20414[Global_114344.f_20414.f_145 /*16*/], sParam0, 16);
+		TEXT_LABEL_ASSIGN_STRING(&(Global_114344.f_20414[Global_114344.f_20414.f_145 /*16*/].f_4), sParam1, 16);
+		Global_114344.f_20414[Global_114344.f_20414.f_145 /*16*/].f_8 = MISC::GET_GAME_TIMER() + iParam3;
+		Global_114344.f_20414[Global_114344.f_20414.f_145 /*16*/].f_9 = iParam5;
+		Global_114344.f_20414[Global_114344.f_20414.f_145 /*16*/].f_11 = iParam6;
+		Global_114344.f_20414[Global_114344.f_20414.f_145 /*16*/].f_12 = iParam2;
+		Global_114344.f_20414[Global_114344.f_20414.f_145 /*16*/].f_13 = iParam7;
+		Global_114344.f_20414[Global_114344.f_20414.f_145 /*16*/].f_14 = iParam8;
+		Global_114344.f_20414[Global_114344.f_20414.f_145 /*16*/].f_15 = iParam9;
 	
 		if (iParam4 != -1)
-			Global_114135.f_20414[Global_114135.f_20414.f_145 /*16*/].f_10 = MISC::GET_GAME_TIMER() + iParam3 + iParam4;
+			Global_114344.f_20414[Global_114344.f_20414.f_145 /*16*/].f_10 = MISC::GET_GAME_TIMER() + iParam3 + iParam4;
 		else
-			Global_114135.f_20414[Global_114135.f_20414.f_145 /*16*/].f_10 = -1;
+			Global_114344.f_20414[Global_114344.f_20414.f_145 /*16*/].f_10 = -1;
 	
-		Global_114135.f_20414.f_145 = Global_114135.f_20414.f_145 + 1;
+		Global_114344.f_20414.f_145 = Global_114344.f_20414.f_145 + 1;
 		func_243();
 	}
 
 	return;
 }
 
-void func_243() // Position - 0x28041 (163905)
+void func_243() // Position - 0x28080 (163968)
 {
 	int i;
 
 	for (i = 0; i < 3; i = i + 1)
 	{
-		Global_114135.f_20414.f_146[i] = 0;
+		Global_114344.f_20414.f_146[i] = 0;
 	}
 
-	for (i = 0; i < Global_114135.f_20414.f_145; i = i + 1)
+	for (i = 0; i < Global_114344.f_20414.f_145; i = i + 1)
 	{
-		if (IS_BIT_SET(Global_114135.f_20414[i /*16*/].f_11, 0))
-			if (Global_114135.f_20414[i /*16*/].f_12 > Global_114135.f_20414.f_146[0])
-				Global_114135.f_20414.f_146[0] = Global_114135.f_20414[i /*16*/].f_12;
+		if (IS_BIT_SET(Global_114344.f_20414[i /*16*/].f_11, 0))
+			if (Global_114344.f_20414[i /*16*/].f_12 > Global_114344.f_20414.f_146[0])
+				Global_114344.f_20414.f_146[0] = Global_114344.f_20414[i /*16*/].f_12;
 	
-		if (IS_BIT_SET(Global_114135.f_20414[i /*16*/].f_11, 1))
-			if (Global_114135.f_20414[i /*16*/].f_12 > Global_114135.f_20414.f_146[1])
-				Global_114135.f_20414.f_146[1] = Global_114135.f_20414[i /*16*/].f_12;
+		if (IS_BIT_SET(Global_114344.f_20414[i /*16*/].f_11, 1))
+			if (Global_114344.f_20414[i /*16*/].f_12 > Global_114344.f_20414.f_146[1])
+				Global_114344.f_20414.f_146[1] = Global_114344.f_20414[i /*16*/].f_12;
 	
-		if (IS_BIT_SET(Global_114135.f_20414[i /*16*/].f_11, 2))
-			if (Global_114135.f_20414[i /*16*/].f_12 > Global_114135.f_20414.f_146[2])
-				Global_114135.f_20414.f_146[2] = Global_114135.f_20414[i /*16*/].f_12;
+		if (IS_BIT_SET(Global_114344.f_20414[i /*16*/].f_11, 2))
+			if (Global_114344.f_20414[i /*16*/].f_12 > Global_114344.f_20414.f_146[2])
+				Global_114344.f_20414.f_146[2] = Global_114344.f_20414[i /*16*/].f_12;
 	}
 
 	return;
 }
 
-BOOL func_244(int iParam0) // Position - 0x28158 (164184)
+BOOL func_244(int iParam0) // Position - 0x28197 (164247)
 {
 	int num;
 	int i;
@@ -35015,19 +35031,19 @@ BOOL func_244(int iParam0) // Position - 0x28158 (164184)
 	}
 
 	if (i < 3)
-		return IS_BIT_SET(Global_114135.f_20414.f_150[i], num);
+		return IS_BIT_SET(Global_114344.f_20414.f_150[i], num);
 
 	return false;
 }
 
-void func_245(char* sParam0) // Position - 0x28198 (164248)
+void func_245(char* sParam0) // Position - 0x281D7 (164311)
 {
 	HUD::BEGIN_TEXT_COMMAND_THEFEED_POST("");
 	HUD::END_TEXT_COMMAND_THEFEED_POST_MESSAGETEXT_SUBTITLE_LABEL("CHAR_ACTING_UP", "CHAR_ACTING_UP", false, 0, "DI_FEED_CHAR" /*Director Mode Actor Unlock*/, sParam0);
 	return;
 }
 
-char* func_246(int iParam0) // Position - 0x281BC (164284)
+char* func_246(int iParam0) // Position - 0x281FB (164347)
 {
 	switch (iParam0)
 	{
@@ -35119,25 +35135,25 @@ char* func_246(int iParam0) // Position - 0x281BC (164284)
 	return "ERROR!";
 }
 
-BOOL func_247(int iParam0) // Position - 0x2838F (164751)
+BOOL func_247(int iParam0) // Position - 0x283CE (164814)
 {
 	if (iParam0 != -1 && iParam0 != 28)
-		return IS_BIT_SET(Global_114135.f_26438, iParam0);
+		return IS_BIT_SET(Global_114344.f_26438, iParam0);
 
 	return false;
 }
 
-void func_248(int iParam0, int iParam1) // Position - 0x283B9 (164793)
+void func_248(int iParam0, int iParam1) // Position - 0x283F8 (164856)
 {
 	if (iParam0 == 235 || iParam0 == 0)
 		return;
 
-	Global_114135.f_8617[iParam0] = 1;
-	Global_114135.f_8617.f_236[iParam0] = MISC::GET_GAME_TIMER() + iParam1;
+	Global_114344.f_8617[iParam0] = 1;
+	Global_114344.f_8617.f_236[iParam0] = MISC::GET_GAME_TIMER() + iParam1;
 	return;
 }
 
-BOOL func_249(const char* sParam0) // Position - 0x283F6 (164854)
+BOOL func_249(const char* sParam0) // Position - 0x28435 (164917)
 {
 	eStackSize stackSize;
 
@@ -35166,12 +35182,12 @@ BOOL func_249(const char* sParam0) // Position - 0x283F6 (164854)
 	return false;
 }
 
-int func_250() // Position - 0x28456 (164950)
+int func_250() // Position - 0x28495 (165013)
 {
 	return func_251(SCRIPT::GET_THIS_SCRIPT_NAME(), 0);
 }
 
-int func_251(const char* sParam0, int iParam1) // Position - 0x28467 (164967)
+int func_251(const char* sParam0, int iParam1) // Position - 0x284A6 (165030)
 {
 	int num;
 	const char* str;
@@ -35194,27 +35210,27 @@ int func_251(const char* sParam0, int iParam1) // Position - 0x28467 (164967)
 	return -1;
 }
 
-void func_252(int iParam0) // Position - 0x284B0 (165040)
+void func_252(int iParam0) // Position - 0x284EF (165103)
 {
 	BOOL flag;
 	int i;
 
-	Global_64309 = 0;
+	Global_64507 = 0;
 
-	if (!(Global_64533[iParam0 /*13*/] == 3))
+	if (!(Global_64731[iParam0 /*13*/] == 3))
 		return;
 
 	flag = false;
 	i = 0;
 
-	for (i = 0; i < Global_76403; i = i + 1)
+	for (i = 0; i < Global_76601; i = i + 1)
 	{
-		if (Global_76404[i /*9*/] == iParam0)
+		if (Global_76602[i /*9*/] == iParam0)
 		{
 			flag = true;
-			Global_76404[i /*9*/].f_1 = 1;
-			Global_76404[i /*9*/].f_2 = 0f;
-			Global_76404[i /*9*/].f_3 == 2;
+			Global_76602[i /*9*/].f_1 = 1;
+			Global_76602[i /*9*/].f_2 = 0f;
+			Global_76602[i /*9*/].f_3 == 2;
 		}
 	}
 
@@ -35222,7 +35238,7 @@ void func_252(int iParam0) // Position - 0x284B0 (165040)
 	return;
 }
 
-BOOL func_253(var uParam0, char* sParam1, char* sParam2, char* sParam3, int iParam4, int iParam5, int iParam6) // Position - 0x28521 (165153)
+BOOL func_253(var uParam0, char* sParam1, char* sParam2, char* sParam3, int iParam4, int iParam5, int iParam6) // Position - 0x28560 (165216)
 {
 	func_25(uParam0, 145, sParam1, iParam5, iParam6, 0);
 
@@ -35230,18 +35246,18 @@ BOOL func_253(var uParam0, char* sParam1, char* sParam2, char* sParam3, int iPar
 		if (iParam4 < 12)
 			iParam4 = 7;
 
-	Global_22432 = false;
-	Global_22439 = 0;
-	Global_22434 = 0;
-	Global_23416 = 1;
-	Global_23418 = 0;
-	Global_23422 = 0;
-	TEXT_LABEL_ASSIGN_STRING(&Global_23429, sParam3, 24);
+	Global_22592 = false;
+	Global_22599 = 0;
+	Global_22594 = 0;
+	Global_23576 = 1;
+	Global_23578 = 0;
+	Global_23582 = 0;
+	TEXT_LABEL_ASSIGN_STRING(&Global_23589, sParam3, 24);
 	Global_2883585 = 0;
 	return func_4(sParam2, iParam4, false);
 }
 
-void func_254(var uParam0, int iParam1) // Position - 0x28575 (165237)
+void func_254(var uParam0, int iParam1) // Position - 0x285B4 (165300)
 {
 	if (uParam0->[iParam1 /*10*/].f_7 == 1)
 		uParam0->[iParam1 /*10*/].f_7 = 0;
@@ -35249,7 +35265,7 @@ void func_254(var uParam0, int iParam1) // Position - 0x28575 (165237)
 	return;
 }
 
-void func_255() // Position - 0x28592 (165266)
+void func_255() // Position - 0x285D1 (165329)
 {
 	BOOL flag;
 	BOOL flag2;
@@ -35322,7 +35338,7 @@ void func_255() // Position - 0x28592 (165266)
 	return;
 }
 
-BOOL func_256() // Position - 0x286C1 (165569)
+BOOL func_256() // Position - 0x28700 (165632)
 {
 	float num;
 
@@ -35349,26 +35365,26 @@ BOOL func_256() // Position - 0x286C1 (165569)
 	return 0;
 }
 
-void func_257() // Position - 0x28720 (165664)
+void func_257() // Position - 0x2875F (165727)
 {
-	Global_21291 = 0;
+	Global_21451 = 0;
 	func_24();
 	return;
 }
 
-void func_258(var uParam0, Ped pedParam1, int iParam2, int iParam3, BOOL bParam4, BOOL bParam5, BOOL bParam6) // Position - 0x28730 (165680)
+void func_258(var uParam0, Ped pedParam1, int iParam2, int iParam3, BOOL bParam4, BOOL bParam5, BOOL bParam6) // Position - 0x2876F (165743)
 {
 	func_259(uParam0, pedParam1, iParam2, iParam3, bParam4, bParam5, bParam6);
 	return;
 }
 
-void func_259(var uParam0, Ped pedParam1, int iParam2, int iParam3, BOOL bParam4, BOOL bParam5, BOOL bParam6) // Position - 0x2874A (165706)
+void func_259(var uParam0, Ped pedParam1, int iParam2, int iParam3, BOOL bParam4, BOOL bParam5, BOOL bParam6) // Position - 0x28789 (165769)
 {
 	func_260(uParam0, pedParam1, 0f, 0f, 0f, iParam2, iParam3, bParam4, bParam5, bParam6);
 	return;
 }
 
-void func_260(var uParam0, Ped pedParam1, float fParam2, float fParam3, float fParam4, int iParam5, int iParam6, BOOL bParam7, BOOL bParam8, BOOL bParam9) // Position - 0x28767 (165735)
+void func_260(var uParam0, Ped pedParam1, float fParam2, float fParam3, float fParam4, int iParam5, int iParam6, BOOL bParam7, BOOL bParam8, BOOL bParam9) // Position - 0x287A6 (165798)
 {
 	if (!PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), true))
 		func_289(uParam0, 0, false);
@@ -35378,7 +35394,7 @@ void func_260(var uParam0, Ped pedParam1, float fParam2, float fParam3, float fP
 	return;
 }
 
-void func_261(var uParam0, Ped pedParam1, var uParam2, var uParam3, var uParam4, const char* sParam5, int iParam6, BOOL bParam7, BOOL bParam8, BOOL bParam9) // Position - 0x2879F (165791)
+void func_261(var uParam0, Ped pedParam1, var uParam2, var uParam3, var uParam4, const char* sParam5, int iParam6, BOOL bParam7, BOOL bParam8, BOOL bParam9) // Position - 0x287DE (165854)
 {
 	const char* string2;
 	BOOL flag;
@@ -35510,7 +35526,7 @@ void func_261(var uParam0, Ped pedParam1, var uParam2, var uParam3, var uParam4,
 	return;
 }
 
-void func_262(var uParam0) // Position - 0x28B0C (166668)
+void func_262(var uParam0) // Position - 0x28B4B (166731)
 {
 	if (func_286(PLAYER::PLAYER_PED_ID()))
 		TASK::TASK_CLEAR_LOOK_AT(PLAYER::PLAYER_PED_ID());
@@ -35535,7 +35551,7 @@ void func_262(var uParam0) // Position - 0x28B0C (166668)
 	return;
 }
 
-BOOL func_263(var uParam0) // Position - 0x28B75 (166773)
+BOOL func_263(var uParam0) // Position - 0x28BB4 (166836)
 {
 	int num;
 
@@ -35550,29 +35566,29 @@ BOOL func_263(var uParam0) // Position - 0x28B75 (166773)
 	return false;
 }
 
-int func_264(BOOL bParam0) // Position - 0x28BA0 (166816)
+int func_264(BOOL bParam0) // Position - 0x28BDF (166879)
 {
-	switch (Global_44181)
+	switch (Global_44375)
 	{
 		case 0:
 		case 3:
 			if (bParam0)
-				Global_114135.f_10053.f_100 = Global_114135.f_10053.f_100 + 1;
+				Global_114344.f_10053.f_100 = Global_114344.f_10053.f_100 + 1;
 		
-			return Global_114135.f_10053.f_100;
+			return Global_114344.f_10053.f_100;
 	
 		case 4:
 			if (bParam0)
-				Global_114135.f_10053.f_101 = Global_114135.f_10053.f_101 + 1;
+				Global_114344.f_10053.f_101 = Global_114344.f_10053.f_101 + 1;
 		
-			return Global_114135.f_10053.f_101;
+			return Global_114344.f_10053.f_101;
 	
 		case 5:
 		case 15:
 			if (bParam0)
-				Global_114135.f_10053.f_102 = Global_114135.f_10053.f_102 + 1;
+				Global_114344.f_10053.f_102 = Global_114344.f_10053.f_102 + 1;
 		
-			return Global_114135.f_10053.f_102;
+			return Global_114344.f_10053.f_102;
 	
 		default:
 			break;
@@ -35581,14 +35597,14 @@ int func_264(BOOL bParam0) // Position - 0x28BA0 (166816)
 	return 3;
 }
 
-void _DISPLAY_HELP_TEXT(const char* text, int iParam1) // Position - 0x28C4A (166986)
+void _DISPLAY_HELP_TEXT(const char* text, int iParam1) // Position - 0x28C89 (167049)
 {
 	HUD::BEGIN_TEXT_COMMAND_DISPLAY_HELP(text);
 	HUD::END_TEXT_COMMAND_DISPLAY_HELP(0, false, true, iParam1);
 	return;
 }
 
-BOOL func_266(const char* sParam0) // Position - 0x28C61 (167009)
+BOOL func_266(const char* sParam0) // Position - 0x28CA0 (167072)
 {
 	if (!func_267(true, true, false))
 	{
@@ -35598,7 +35614,7 @@ BOOL func_266(const char* sParam0) // Position - 0x28C61 (167009)
 		return false;
 	}
 
-	switch (Global_44181)
+	switch (Global_44375)
 	{
 		case 0:
 		case 3:
@@ -35624,7 +35640,7 @@ BOOL func_266(const char* sParam0) // Position - 0x28C61 (167009)
 	return false;
 }
 
-BOOL func_267(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x28CFA (167162)
+BOOL func_267(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x28D39 (167225)
 {
 	Vehicle vehiclePedIsIn;
 	int seatIndex;
@@ -35648,13 +35664,13 @@ BOOL func_267(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x28CFA (1
 	if (NETWORK::NETWORK_TEXT_CHAT_IS_TYPING())
 		return false;
 
-	if (Global_76640)
+	if (Global_76838)
 		return false;
 
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("appinternet")) > 0)
 		return false;
 
-	if (Global_61489)
+	if (Global_61687)
 		return false;
 
 	if (bParam1)
@@ -35684,7 +35700,7 @@ BOOL func_267(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x28CFA (1
 		}
 	}
 
-	if (func_274() || func_273(*Global_4718592.f_187633) || func_272())
+	if (func_274() || func_273(*Global_4718592.f_190775) || func_272())
 	{
 		if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 		{
@@ -35696,7 +35712,7 @@ BOOL func_267(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x28CFA (1
 		}
 	}
 
-	if (Global_1956704)
+	if (Global_1958801)
 		return false;
 
 	if (func_268(PLAYER::PLAYER_ID()))
@@ -35705,18 +35721,18 @@ BOOL func_267(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x28CFA (1
 	return true;
 }
 
-BOOL func_268(Player plParam0) // Position - 0x28F53 (167763)
+BOOL func_268(Player plParam0) // Position - 0x28F92 (167826)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
 		if (_NETWORK_IS_PLAYER_VALID(plParam0, true, true))
-			return Global_2657991[plParam0 /*467*/].f_324.f_8 != -1;
-		else if (Global_1575084 && plParam0 == PLAYER::PLAYER_ID() && _NETWORK_IS_PLAYER_VALID(plParam0, true, false))
-			return Global_2657991[plParam0 /*467*/].f_324.f_8 != -1;
+			return Global_2658016[plParam0 /*467*/].f_324.f_8 != -1;
+		else if (Global_1575086 && plParam0 == PLAYER::PLAYER_ID() && _NETWORK_IS_PLAYER_VALID(plParam0, true, false))
+			return Global_2658016[plParam0 /*467*/].f_324.f_8 != -1;
 
 	return false;
 }
 
-BOOL _NETWORK_IS_PLAYER_VALID(Player player, BOOL bIsPlaying, BOOL bUnk) // Position - 0x28FB9 (167865)
+BOOL _NETWORK_IS_PLAYER_VALID(Player player, BOOL bIsPlaying, BOOL bUnk) // Position - 0x28FF8 (167928)
 {
 	Player player;
 
@@ -35731,9 +35747,9 @@ BOOL _NETWORK_IS_PLAYER_VALID(Player player, BOOL bIsPlaying, BOOL bUnk) // Posi
 					return false;
 		
 			if (bUnk)
-				if (player == Global_2672939.f_3)
-					return Global_2672939.f_2;
-				else if (Global_2657991[player /*467*/] != 4)
+				if (player == Global_2672964.f_3)
+					return Global_2672964.f_2;
+				else if (Global_2658016[player /*467*/] != 4)
 					return false;
 		
 			return true;
@@ -35743,7 +35759,7 @@ BOOL _NETWORK_IS_PLAYER_VALID(Player player, BOOL bIsPlaying, BOOL bUnk) // Posi
 	return false;
 }
 
-BOOL func_270(Vehicle veParam0, int iParam1) // Position - 0x29019 (167961)
+BOOL func_270(Vehicle veParam0, int iParam1) // Position - 0x29058 (168024)
 {
 	if (VEHICLE::IS_VEHICLE_DRIVEABLE(veParam0, false))
 	{
@@ -35770,7 +35786,7 @@ BOOL func_270(Vehicle veParam0, int iParam1) // Position - 0x29019 (167961)
 	return false;
 }
 
-int _GET_VEHICLE_SEAT_PED_IS_IN(Ped ped, BOOL includeLastVehicle) // Position - 0x2907B (168059)
+int _GET_VEHICLE_SEAT_PED_IS_IN(Ped ped, BOOL includeLastVehicle) // Position - 0x290BA (168122)
 {
 	Vehicle vehiclePedIsIn;
 	int vehicleModelNumberOfSeats;
@@ -35808,31 +35824,31 @@ int _GET_VEHICLE_SEAT_PED_IS_IN(Ped ped, BOOL includeLastVehicle) // Position - 
 	return seatIndex;
 }
 
-BOOL func_272() // Position - 0x29100 (168192)
+BOOL func_272() // Position - 0x2913F (168255)
 {
-	return Global_2684718.f_19;
+	return Global_2684745.f_19;
 }
 
-BOOL func_273(int iParam0) // Position - 0x2910E (168206)
+BOOL func_273(int iParam0) // Position - 0x2914D (168269)
 {
 	return iParam0 == 51;
 }
 
-BOOL func_274() // Position - 0x2911B (168219)
+BOOL func_274() // Position - 0x2915A (168282)
 {
-	return Global_2684718.f_18;
+	return Global_2684745.f_18;
 }
 
-BOOL func_275() // Position - 0x29129 (168233)
+BOOL func_275() // Position - 0x29168 (168296)
 {
-	return MISC::GET_GAME_TIMER() <= Global_23970.f_6481 + 100;
+	return MISC::GET_GAME_TIMER() <= Global_24131.f_6481 + 100;
 }
 
-BOOL func_276(int iParam0) // Position - 0x2913E (168254)
+BOOL func_276(int iParam0) // Position - 0x2917D (168317)
 {
 	if (iParam0 == 1)
-		if (Global_21066.f_1 > 3)
-			if (IS_BIT_SET(Global_8919, 14))
+		if (Global_21222.f_1 > 3)
+			if (IS_BIT_SET(Global_9075, 14))
 				return true;
 			else
 				return false;
@@ -35842,13 +35858,13 @@ BOOL func_276(int iParam0) // Position - 0x2913E (168254)
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("cellphone_flashhand")) > 0)
 		return true;
 
-	if (Global_21066.f_1 > 3)
+	if (Global_21222.f_1 > 3)
 		return true;
 
 	return false;
 }
 
-void func_277(var uParam0, Ped pedParam1, Vector3 vParam2, var uParam3, var uParam4, int iParam5) // Position - 0x29195 (168341)
+void func_277(var uParam0, Ped pedParam1, Vector3 vParam2, var uParam3, var uParam4, int iParam5) // Position - 0x291D4 (168404)
 {
 	Ped pedIndexFromEntityIndex;
 	int easeInTime;
@@ -35856,7 +35872,7 @@ void func_277(var uParam0, Ped pedParam1, Vector3 vParam2, var uParam3, var uPar
 	eScriptLookAtFlags flags;
 	int num;
 
-	if (Global_1582036 == 1)
+	if (Global_1582040 == 1)
 		return;
 
 	if (ENTITY::IS_ENTITY_DEAD(pedParam1, false))
@@ -35904,12 +35920,12 @@ void func_277(var uParam0, Ped pedParam1, Vector3 vParam2, var uParam3, var uPar
 	return;
 }
 
-BOOL func_278() // Position - 0x292A5 (168613)
+BOOL func_278() // Position - 0x292E4 (168676)
 {
 	return func_279(PLAYER::PLAYER_ID());
 }
 
-BOOL func_279(Player plParam0) // Position - 0x292B5 (168629)
+BOOL func_279(Player plParam0) // Position - 0x292F4 (168692)
 {
 	if (ENTITY::GET_ENTITY_MODEL(PLAYER::GET_PLAYER_PED(plParam0)) == joaat("MP_F_Freemode_01"))
 		return 1;
@@ -35917,7 +35933,7 @@ BOOL func_279(Player plParam0) // Position - 0x292B5 (168629)
 	return 0;
 }
 
-BOOL func_280(float fParam0, var uParam1, var uParam2, float fParam3, float fParam4, float fParam5, BOOL bParam6) // Position - 0x292D4 (168660)
+BOOL func_280(float fParam0, var uParam1, var uParam2, float fParam3, float fParam4, float fParam5, BOOL bParam6) // Position - 0x29313 (168723)
 {
 	if (bParam6)
 		return fParam0 == fParam3 && fParam0.f_1 == fParam3.f_1;
@@ -35925,7 +35941,7 @@ BOOL func_280(float fParam0, var uParam1, var uParam2, float fParam3, float fPar
 	return fParam0 == fParam3 && fParam0.f_1 == fParam3.f_1 && fParam0.f_2 == fParam3.f_2;
 }
 
-BOOL func_281(var uParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Position - 0x2931B (168731)
+BOOL func_281(var uParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Position - 0x2935A (168794)
 {
 	if (uParam0->f_1)
 		if (MISC::GET_GAME_TIMER() >= uParam0->f_8 + uParam0->f_9)
@@ -36082,7 +36098,7 @@ BOOL func_281(var uParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Position
 	return false;
 }
 
-BOOL func_282(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x29687 (169607)
+BOOL func_282(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x296C6 (169670)
 {
 	if (!func_267(bParam0, bParam1, bParam2))
 		return false;
@@ -36102,7 +36118,7 @@ BOOL func_282(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x29687 (1
 	return false;
 }
 
-BOOL func_283(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x296D9 (169689)
+BOOL func_283(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x29718 (169752)
 {
 	if (!func_267(bParam0, bParam1, bParam2))
 		return false;
@@ -36124,7 +36140,7 @@ BOOL func_283(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x296D9 (1
 	return false;
 }
 
-BOOL func_284(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x29722 (169762)
+BOOL func_284(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x29761 (169825)
 {
 	if (!func_267(bParam0, bParam1, bParam2))
 		return false;
@@ -36144,7 +36160,7 @@ BOOL func_284(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x29722 (1
 	return false;
 }
 
-BOOL func_285(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x29781 (169857)
+BOOL func_285(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x297C0 (169920)
 {
 	if (!func_267(bParam0, bParam1, bParam2))
 		return false;
@@ -36166,7 +36182,7 @@ BOOL func_285(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x29781 (1
 	return false;
 }
 
-BOOL func_286(Ped pedParam0) // Position - 0x297D7 (169943)
+BOOL func_286(Ped pedParam0) // Position - 0x29816 (170006)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(pedParam0))
 		if (ENTITY::IS_ENTITY_A_VEHICLE(pedParam0))
@@ -36181,24 +36197,24 @@ BOOL func_286(Ped pedParam0) // Position - 0x297D7 (169943)
 	return false;
 }
 
-void func_287() // Position - 0x29832 (170034)
+void func_287() // Position - 0x29871 (170097)
 {
-	MISC::SET_BIT(&Global_8920, 4);
+	MISC::SET_BIT(&Global_9076, 4);
 	return;
 }
 
-BOOL _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(const char* message) // Position - 0x29842 (170050)
+BOOL _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(const char* message) // Position - 0x29881 (170113)
 {
 	HUD::BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(message);
 	return HUD::END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(0);
 }
 
-void func_289(var uParam0, const char* sParam1, BOOL bParam2) // Position - 0x29855 (170069)
+void func_289(var uParam0, const char* sParam1, BOOL bParam2) // Position - 0x29894 (170132)
 {
 	const char* str;
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
-		if (IS_BIT_SET(Global_2739811.f_4728, 26))
+		if (IS_BIT_SET(Global_2740054.f_4734, 26))
 			return;
 
 	if (CAM::IS_GAMEPLAY_HINT_ACTIVE())
@@ -36241,12 +36257,12 @@ void func_289(var uParam0, const char* sParam1, BOOL bParam2) // Position - 0x29
 	return;
 }
 
-float func_290(Ped pedParam0, Ped pedParam1) // Position - 0x2992F (170287)
+float func_290(Ped pedParam0, Ped pedParam1) // Position - 0x2996E (170350)
 {
 	return func_291(pedParam0, pedParam1, true);
 }
 
-float func_291(Ped pedParam0, Vehicle veParam1, BOOL bParam2) // Position - 0x29940 (170304)
+float func_291(Ped pedParam0, Vehicle veParam1, BOOL bParam2) // Position - 0x2997F (170367)
 {
 	Vector3 entityCoords;
 	Vector3 entityCoords2;
@@ -36264,7 +36280,7 @@ float func_291(Ped pedParam0, Vehicle veParam1, BOOL bParam2) // Position - 0x29
 	return MISC::GET_DISTANCE_BETWEEN_COORDS(entityCoords, entityCoords2, bParam2);
 }
 
-void func_292() // Position - 0x2999E (170398)
+void func_292() // Position - 0x299DD (170461)
 {
 	if (func_628(pedLocal_201))
 		if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(pedLocal_201, uLocal_337, uLocal_340, fLocal_343, false, true, 0) && !PED::IS_PED_IN_ANY_VEHICLE(pedLocal_201, false))
@@ -36273,7 +36289,7 @@ void func_292() // Position - 0x2999E (170398)
 	return;
 }
 
-void func_293(Blip blParam0, Ped pedParam1, float fParam2, int iParam3, BOOL bParam4) // Position - 0x299E0 (170464)
+void func_293(Blip blParam0, Ped pedParam1, float fParam2, int iParam3, BOOL bParam4) // Position - 0x29A1F (170527)
 {
 	int num;
 	float distanceBetweenCoords;
@@ -36343,7 +36359,7 @@ void func_293(Blip blParam0, Ped pedParam1, float fParam2, int iParam3, BOOL bPa
 	return;
 }
 
-void func_294() // Position - 0x29B39 (170809)
+void func_294() // Position - 0x29B78 (170872)
 {
 	int taskSequenceId;
 
@@ -36421,7 +36437,7 @@ void func_294() // Position - 0x29B39 (170809)
 	return;
 }
 
-BOOL func_295(Ped pedParam0, eScriptTaskHash esthParam1) // Position - 0x29D25 (171301)
+BOOL func_295(Ped pedParam0, eScriptTaskHash esthParam1) // Position - 0x29D64 (171364)
 {
 	if (func_628(pedParam0))
 		if (TASK::GET_SCRIPT_TASK_STATUS(pedParam0, esthParam1) == 1 || TASK::GET_SCRIPT_TASK_STATUS(pedParam0, esthParam1) == 0)
@@ -36430,7 +36446,7 @@ BOOL func_295(Ped pedParam0, eScriptTaskHash esthParam1) // Position - 0x29D25 (
 	return false;
 }
 
-void func_296() // Position - 0x29D58 (171352)
+void func_296() // Position - 0x29D97 (171415)
 {
 	func_297(hLocal_557);
 	func_297(hLocal_562);
@@ -36441,7 +36457,7 @@ void func_296() // Position - 0x29D58 (171352)
 	return;
 }
 
-BOOL func_297(Hash hParam0) // Position - 0x29D8E (171406)
+BOOL func_297(Hash hParam0) // Position - 0x29DCD (171469)
 {
 	if (hParam0 == 0)
 		return true;
@@ -36450,7 +36466,7 @@ BOOL func_297(Hash hParam0) // Position - 0x29D8E (171406)
 	return STREAMING::HAS_MODEL_LOADED(hParam0);
 }
 
-void func_298() // Position - 0x29DAC (171436)
+void func_298() // Position - 0x29DEB (171499)
 {
 	int i;
 	int num;
@@ -36479,7 +36495,7 @@ void func_298() // Position - 0x29DAC (171436)
 	return;
 }
 
-BOOL func_299() // Position - 0x29E4D (171597)
+BOOL func_299() // Position - 0x29E8C (171660)
 {
 	Vehicle playersLastVehicle;
 
@@ -36492,7 +36508,7 @@ BOOL func_299() // Position - 0x29E4D (171597)
 	return false;
 }
 
-BOOL func_300(Vehicle veParam0, float fParam1, float fParam2, float fParam3, float fParam4) // Position - 0x29E82 (171650)
+BOOL func_300(Vehicle veParam0, float fParam1, float fParam2, float fParam3, float fParam4) // Position - 0x29EC1 (171713)
 {
 	var entityCoords;
 	float num;
@@ -36502,7 +36518,7 @@ BOOL func_300(Vehicle veParam0, float fParam1, float fParam2, float fParam3, flo
 	return (num * num) + (num.f_1 * num.f_1) <= fParam4 * fParam4;
 }
 
-void func_301() // Position - 0x29EB7 (171703)
+void func_301() // Position - 0x29EF6 (171766)
 {
 	int i;
 	int num;
@@ -36542,7 +36558,7 @@ void func_301() // Position - 0x29EB7 (171703)
 	return;
 }
 
-void func_302(Ped pedParam0, BOOL bParam1) // Position - 0x29FBC (171964)
+void func_302(Ped pedParam0, BOOL bParam1) // Position - 0x29FFB (172027)
 {
 	char* str;
 	int endRange;
@@ -36573,13 +36589,13 @@ void func_302(Ped pedParam0, BOOL bParam1) // Position - 0x29FBC (171964)
 	return;
 }
 
-void func_303(Ped pedParam0, char* sParam1, char* sParam2, int iParam3, BOOL bParam4) // Position - 0x2A02F (172079)
+void func_303(Ped pedParam0, char* sParam1, char* sParam2, int iParam3, BOOL bParam4) // Position - 0x2A06E (172142)
 {
 	AUDIO::PLAY_PED_AMBIENT_SPEECH_WITH_VOICE_NATIVE(pedParam0, sParam1, sParam2, func_304(iParam3), bParam4);
 	return;
 }
 
-char* func_304(int iParam0) // Position - 0x2A049 (172105)
+char* func_304(int iParam0) // Position - 0x2A088 (172168)
 {
 	char* str;
 
@@ -36704,7 +36720,7 @@ char* func_304(int iParam0) // Position - 0x2A049 (172105)
 	return str;
 }
 
-void func_305() // Position - 0x2A23E (172606)
+void func_305() // Position - 0x2A27D (172669)
 {
 	int point;
 
@@ -36730,7 +36746,7 @@ void func_305() // Position - 0x2A23E (172606)
 	return;
 }
 
-void func_306() // Position - 0x2A315 (172821)
+void func_306() // Position - 0x2A354 (172884)
 {
 	int num;
 
@@ -36770,7 +36786,7 @@ void func_306() // Position - 0x2A315 (172821)
 	return;
 }
 
-int func_307() // Position - 0x2A3E8 (173032)
+int func_307() // Position - 0x2A427 (173095)
 {
 	float num;
 	float num2;
@@ -36802,7 +36818,7 @@ int func_307() // Position - 0x2A3E8 (173032)
 	return num3;
 }
 
-BOOL func_308() // Position - 0x2A457 (173143)
+BOOL func_308() // Position - 0x2A496 (173206)
 {
 	float num;
 	float num2;
@@ -36825,7 +36841,7 @@ BOOL func_308() // Position - 0x2A457 (173143)
 	return false;
 }
 
-BOOL func_309() // Position - 0x2A4B2 (173234)
+BOOL func_309() // Position - 0x2A4F1 (173297)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(pedLocal_201))
 	{
@@ -36844,7 +36860,7 @@ BOOL func_309() // Position - 0x2A4B2 (173234)
 	return false;
 }
 
-BOOL func_310(var uParam0, float fParam1, var uParam2, var uParam3) // Position - 0x2A4ED (173293)
+BOOL func_310(var uParam0, float fParam1, var uParam2, var uParam3) // Position - 0x2A52C (173356)
 {
 	BOOL flag;
 	int num;
@@ -36868,7 +36884,7 @@ BOOL func_310(var uParam0, float fParam1, var uParam2, var uParam3) // Position 
 	return flag;
 }
 
-void func_311() // Position - 0x2A5A9 (173481)
+void func_311() // Position - 0x2A5E8 (173544)
 {
 	Vehicle playersLastVehicle;
 
@@ -36893,7 +36909,7 @@ void func_311() // Position - 0x2A5A9 (173481)
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_344, 4, pedLocal_201, "JOE", 1, 1);
 				
 					if (ENTITY::IS_ENTITY_ON_SCREEN(pedLocal_201) && func_402(PLAYER::PLAYER_PED_ID(), 420.73285f, 6463.8604f, 27.90358f, 5f, true) || func_402(PLAYER::PLAYER_PED_ID(), 434.05658f, 6476.1997f, 27.833858f, 10f, true))
-						TASK::TASK_ENTER_VEHICLE(pedLocal_201, veLocal_298, 20000, -1, 1073741824, 1, 0, 0);
+						TASK::TASK_ENTER_VEHICLE(pedLocal_201, veLocal_298, 20000, -1, 1073741824, 1, 0);
 					else
 						TASK::TASK_WARP_PED_INTO_VEHICLE(pedLocal_201, veLocal_298, -1);
 				
@@ -36992,7 +37008,7 @@ void func_311() // Position - 0x2A5A9 (173481)
 	return;
 }
 
-void func_312() // Position - 0x2A8BD (174269)
+void func_312() // Position - 0x2A8FB (174331)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(veLocal_298))
 	{
@@ -37038,7 +37054,7 @@ void func_312() // Position - 0x2A8BD (174269)
 	return;
 }
 
-BOOL func_313(Vehicle veParam0, var uParam1, var uParam2, var uParam3, var uParam4, int iParam5, float fParam6) // Position - 0x2AA3C (174652)
+BOOL func_313(Vehicle veParam0, var uParam1, var uParam2, var uParam3, var uParam4, int iParam5, float fParam6) // Position - 0x2AA7A (174714)
 {
 	Vehicle vehiclePedIsIn;
 	var unk;
@@ -37073,7 +37089,7 @@ BOOL func_313(Vehicle veParam0, var uParam1, var uParam2, var uParam3, var uPara
 	return false;
 }
 
-BOOL func_314() // Position - 0x2AAED (174829)
+BOOL func_314() // Position - 0x2AB2B (174891)
 {
 	if (func_41(veLocal_280))
 		if (VEHICLE::IS_VEHICLE_STUCK_TIMER_UP(veLocal_280, 2, 1000) || VEHICLE::IS_VEHICLE_STUCK_TIMER_UP(veLocal_280, 3, 1000) || VEHICLE::IS_VEHICLE_STUCK_TIMER_UP(veLocal_280, 0, 1000) || VEHICLE::IS_VEHICLE_STUCK_TIMER_UP(veLocal_280, 1, 1000))
@@ -37082,7 +37098,7 @@ BOOL func_314() // Position - 0x2AAED (174829)
 	return false;
 }
 
-BOOL func_315() // Position - 0x2AB45 (174917)
+BOOL func_315() // Position - 0x2AB83 (174979)
 {
 	int num;
 
@@ -37117,7 +37133,7 @@ BOOL func_315() // Position - 0x2AB45 (174917)
 	return false;
 }
 
-Blip func_316(Ped pedParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position - 0x2ABDB (175067)
+Blip func_316(Ped pedParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position - 0x2AC19 (175129)
 {
 	Blip blip;
 	BOOL flag;
@@ -37142,7 +37158,7 @@ Blip func_316(Ped pedParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Positio
 	return blip;
 }
 
-void func_317(int iParam0, char* sParam1, int iParam2, int iParam3, Ped pedParam4, int iParam5) // Position - 0x2AC2D (175149)
+void func_317(int iParam0, char* sParam1, int iParam2, int iParam3, Ped pedParam4, int iParam5) // Position - 0x2AC6B (175211)
 {
 	int num;
 	int num2;
@@ -37158,26 +37174,26 @@ void func_317(int iParam0, char* sParam1, int iParam2, int iParam3, Ped pedParam
 	num = 0;
 
 	if (iParam3 == 1)
-		if (iParam0 != Global_101725)
+		if (iParam0 != Global_101930)
 			num = 1;
-	else if (iParam0 > Global_101725)
+	else if (iParam0 > Global_101930)
 		num = 1;
 
 	if (num == 1)
 	{
 		func_398(true);
-		iParam0 <= Global_101725;
+		iParam0 <= Global_101930;
 		num2 = func_396(SCRIPT::GET_THIS_SCRIPT_NAME(), true);
 	
 		if (num2 != -1 && num2 != 94)
 		{
-			Global_114135.f_9089.f_330[num2 /*6*/].f_1 = 0;
+			Global_114344.f_9089.f_330[num2 /*6*/].f_1 = 0;
 			num3 = func_394(num2);
-			unk = { Global_92451[num2 /*34*/].f_8 };
+			unk = { Global_92656[num2 /*34*/].f_8 };
 		
 			if (num2 == 90)
 			{
-				switch (Global_114135.f_9089.f_99.f_205[7])
+				switch (Global_114344.f_9089.f_99.f_205[7])
 				{
 					case 1:
 						TEXT_LABEL_APPEND_STRING(&unk, "A", 8);
@@ -37189,7 +37205,7 @@ void func_317(int iParam0, char* sParam1, int iParam2, int iParam3, Ped pedParam
 				}
 			}
 		
-			STATS::PLAYSTATS_MISSION_CHECKPOINT(&unk, num3, Global_101725, iParam0);
+			STATS::PLAYSTATS_MISSION_CHECKPOINT(&unk, num3, Global_101930, iParam0);
 		}
 		else
 		{
@@ -37197,38 +37213,38 @@ void func_317(int iParam0, char* sParam1, int iParam2, int iParam3, Ped pedParam
 		
 			if (num4 != -1)
 			{
-				Global_114135.f_18578[num4 /*6*/].f_4 = 0;
+				Global_114344.f_18578[num4 /*6*/].f_4 = 0;
 				TEXT_LABEL_COPY(&unk3, { func_204(num4) }, 4);
-				STATS::PLAYSTATS_MISSION_CHECKPOINT(&unk3, 0, Global_101725, iParam0);
+				STATS::PLAYSTATS_MISSION_CHECKPOINT(&unk3, 0, Global_101930, iParam0);
 			}
 			else
 			{
-				num5 = func_393(&(Global_101688.f_3));
+				num5 = func_393(&(Global_101893.f_3));
 			
 				if (num5 > -1)
-					Global_114135.f_24990.f_4[num5] = 0;
+					Global_114344.f_24990.f_4[num5] = 0;
 			}
 		}
 	
-		Global_95841 = iParam2;
-		Global_101725 = iParam0;
+		Global_96046 = iParam2;
+		Global_101930 = iParam0;
 		func_318(iParam0, sParam1, pedParam4, iParam5);
 		MISC::ARE_STRINGS_EQUAL(sParam1, "");
 	}
-	else if (iParam0 < Global_101725)
+	else if (iParam0 < Global_101930)
 	{
 	}
 
 	return;
 }
 
-void func_318(int iParam0, char* sParam1, Ped pedParam2, int iParam3) // Position - 0x2ADA2 (175522)
+void func_318(int iParam0, char* sParam1, Ped pedParam2, int iParam3) // Position - 0x2ADE0 (175584)
 {
-	func_319(&Global_107680, SCRIPT::GET_THIS_SCRIPT_NAME(), iParam0, sParam1, iParam3, pedParam2);
+	func_319(&Global_107887, SCRIPT::GET_THIS_SCRIPT_NAME(), iParam0, sParam1, iParam3, pedParam2);
 	return;
 }
 
-void func_319(var uParam0, const char* sParam1, int iParam2, char* sParam3, int iParam4, Ped pedParam5) // Position - 0x2ADBE (175550)
+void func_319(var uParam0, const char* sParam1, int iParam2, char* sParam3, int iParam4, Ped pedParam5) // Position - 0x2ADFC (175612)
 {
 	int i;
 	eCharacter j;
@@ -37250,7 +37266,7 @@ void func_319(var uParam0, const char* sParam1, int iParam2, char* sParam3, int 
 
 	for (j = CHAR_MICHAEL; j < CHAR_MULTIPLAYER; j = j + 1)
 	{
-		uParam0->f_17[j] = Global_114135.f_2367.f_539.f_294[j];
+		uParam0->f_17[j] = Global_114344.f_2367.f_539.f_294[j];
 	
 		if (j == _GET_CURRENT_PLAYER_CHARACTER_0())
 		{
@@ -37260,32 +37276,32 @@ void func_319(var uParam0, const char* sParam1, int iParam2, char* sParam3, int 
 		{
 			for (i = 0; i < 12; i = i + 1)
 			{
-				uParam0->f_616[j /*65*/][i] = Global_101413[j /*65*/][i];
-				uParam0->f_616[j /*65*/].f_13[i] = Global_101413[j /*65*/].f_13[i];
+				uParam0->f_616[j /*65*/][i] = Global_101618[j /*65*/][i];
+				uParam0->f_616[j /*65*/].f_13[i] = Global_101618[j /*65*/].f_13[i];
 			}
 		
-			uParam0->f_616[j /*65*/].f_59 = Global_101413[j /*65*/].f_59;
-			uParam0->f_616[j /*65*/].f_60 = Global_101413[j /*65*/].f_60;
-			uParam0->f_616[j /*65*/].f_61 = Global_101413[j /*65*/].f_61;
-			uParam0->f_616[j /*65*/].f_62 = Global_101413[j /*65*/].f_62;
-			uParam0->f_616[j /*65*/].f_63 = Global_101413[j /*65*/].f_63;
-			uParam0->f_616[j /*65*/].f_64 = Global_101413[j /*65*/].f_64;
+			uParam0->f_616[j /*65*/].f_59 = Global_101618[j /*65*/].f_59;
+			uParam0->f_616[j /*65*/].f_60 = Global_101618[j /*65*/].f_60;
+			uParam0->f_616[j /*65*/].f_61 = Global_101618[j /*65*/].f_61;
+			uParam0->f_616[j /*65*/].f_62 = Global_101618[j /*65*/].f_62;
+			uParam0->f_616[j /*65*/].f_63 = Global_101618[j /*65*/].f_63;
+			uParam0->f_616[j /*65*/].f_64 = Global_101618[j /*65*/].f_64;
 		
 			for (i = 0; i < 9; i = i + 1)
 			{
-				uParam0->f_616[j /*65*/].f_39[i] = Global_101413[j /*65*/].f_39[i];
-				uParam0->f_616[j /*65*/].f_49[i] = Global_101413[j /*65*/].f_49[i];
+				uParam0->f_616[j /*65*/].f_39[i] = Global_101618[j /*65*/].f_39[i];
+				uParam0->f_616[j /*65*/].f_49[i] = Global_101618[j /*65*/].f_49[i];
 			}
 		}
 	
 		for (i = 0; i < 44; i = i + 1)
 		{
-			uParam0->f_812[j /*477*/][i /*5*/] = { Global_114135.f_2367.f_539.f_298[j /*477*/][i /*5*/] };
+			uParam0->f_812[j /*477*/][i /*5*/] = { Global_114344.f_2367.f_539.f_298[j /*477*/][i /*5*/] };
 		}
 	
 		for (i = 0; i < 51; i = i + 1)
 		{
-			uParam0->f_812[j /*477*/].f_221[i /*5*/] = { Global_114135.f_2367.f_539.f_298[j /*477*/].f_221[i /*5*/] };
+			uParam0->f_812[j /*477*/].f_221[i /*5*/] = { Global_114344.f_2367.f_539.f_298[j /*477*/].f_221[i /*5*/] };
 		}
 	
 		switch (j)
@@ -37357,61 +37373,61 @@ void func_319(var uParam0, const char* sParam1, int iParam2, char* sParam3, int 
 				break;
 		}
 	
-		uParam0->f_9[j] = Global_114135.f_20568.f_233[j /*69*/].f_1;
-		uParam0->f_13[j] = Global_61482[j];
-		uParam0->f_25[0 /*295*/][j /*98*/] = { Global_114135.f_2367.f_539.f_2407[0 /*295*/][j /*98*/] };
-		uParam0->f_25[1 /*295*/][j /*98*/] = { Global_114135.f_2367.f_539.f_2407[1 /*295*/][j /*98*/] };
+		uParam0->f_9[j] = Global_114344.f_20568.f_233[j /*69*/].f_1;
+		uParam0->f_13[j] = Global_61680[j];
+		uParam0->f_25[0 /*295*/][j /*98*/] = { Global_114344.f_2367.f_539.f_2407[0 /*295*/][j /*98*/] };
+		uParam0->f_25[1 /*295*/][j /*98*/] = { Global_114344.f_2367.f_539.f_2407[1 /*295*/][j /*98*/] };
 	
 		for (i = 0; i <= 3; i = i + 1)
 		{
-			uParam0->f_2838[j /*15*/][i] = Global_114135.f_2367.f_493[j /*15*/][i];
-			uParam0->f_2838[j /*15*/].f_5[i] = Global_114135.f_2367.f_493[j /*15*/].f_5[i];
-			uParam0->f_2838[j /*15*/].f_10[i] = Global_114135.f_2367.f_493[j /*15*/].f_10[i];
+			uParam0->f_2838[j /*15*/][i] = Global_114344.f_2367.f_493[j /*15*/][i];
+			uParam0->f_2838[j /*15*/].f_5[i] = Global_114344.f_2367.f_493[j /*15*/].f_5[i];
+			uParam0->f_2838[j /*15*/].f_10[i] = Global_114344.f_2367.f_493[j /*15*/].f_10[i];
 		}
 	
 		for (i = 0; i <= 2; i = i + 1)
 		{
-			uParam0->f_2345[j /*164*/][i] = Global_114135.f_2367[j /*164*/][i];
-			uParam0->f_2345[j /*164*/].f_4[i] = Global_114135.f_2367[j /*164*/].f_4[i];
-			uParam0->f_2345[j /*164*/].f_8[i] = Global_114135.f_2367[j /*164*/].f_8[i];
-			uParam0->f_2345[j /*164*/].f_12[i] = Global_114135.f_2367[j /*164*/].f_12[i];
-			uParam0->f_2345[j /*164*/].f_16[i] = Global_114135.f_2367[j /*164*/].f_16[i];
-			uParam0->f_2345[j /*164*/].f_20[i] = Global_114135.f_2367[j /*164*/].f_20[i];
-			uParam0->f_2345[j /*164*/].f_24[i] = Global_114135.f_2367[j /*164*/].f_24[i];
-			uParam0->f_2345[j /*164*/].f_28[i] = Global_114135.f_2367[j /*164*/].f_28[i];
-			uParam0->f_2345[j /*164*/].f_32[i] = Global_114135.f_2367[j /*164*/].f_32[i];
-			uParam0->f_2345[j /*164*/].f_36[i] = Global_114135.f_2367[j /*164*/].f_36[i];
-			uParam0->f_2345[j /*164*/].f_40[i] = Global_114135.f_2367[j /*164*/].f_40[i];
-			uParam0->f_2345[j /*164*/].f_44[i] = Global_114135.f_2367[j /*164*/].f_44[i];
-			uParam0->f_2345[j /*164*/].f_48[i] = Global_114135.f_2367[j /*164*/].f_48[i];
-			uParam0->f_2345[j /*164*/].f_52[i] = Global_114135.f_2367[j /*164*/].f_52[i];
-			uParam0->f_2345[j /*164*/].f_56[i] = Global_114135.f_2367[j /*164*/].f_56[i];
-			uParam0->f_2345[j /*164*/].f_60[i] = Global_114135.f_2367[j /*164*/].f_60[i];
-			uParam0->f_2345[j /*164*/].f_64[i] = Global_114135.f_2367[j /*164*/].f_64[i];
-			uParam0->f_2345[j /*164*/].f_68[i] = Global_114135.f_2367[j /*164*/].f_68[i];
-			uParam0->f_2345[j /*164*/].f_72[i] = Global_114135.f_2367[j /*164*/].f_72[i];
-			uParam0->f_2345[j /*164*/].f_76[i] = Global_114135.f_2367[j /*164*/].f_76[i];
-			uParam0->f_2345[j /*164*/].f_80[i] = Global_114135.f_2367[j /*164*/].f_80[i];
-			uParam0->f_2345[j /*164*/].f_84[i] = Global_114135.f_2367[j /*164*/].f_84[i];
-			uParam0->f_2345[j /*164*/].f_88[i] = Global_114135.f_2367[j /*164*/].f_88[i];
-			uParam0->f_2345[j /*164*/].f_92[i] = Global_114135.f_2367[j /*164*/].f_92[i];
-			uParam0->f_2345[j /*164*/].f_96[i] = Global_114135.f_2367[j /*164*/].f_96[i];
-			uParam0->f_2345[j /*164*/].f_100[i] = Global_114135.f_2367[j /*164*/].f_100[i];
-			uParam0->f_2345[j /*164*/].f_104[i] = Global_114135.f_2367[j /*164*/].f_104[i];
-			uParam0->f_2345[j /*164*/].f_108[i] = Global_114135.f_2367[j /*164*/].f_108[i];
-			uParam0->f_2345[j /*164*/].f_112[i] = Global_114135.f_2367[j /*164*/].f_112[i];
-			uParam0->f_2345[j /*164*/].f_116[i] = Global_114135.f_2367[j /*164*/].f_116[i];
-			uParam0->f_2345[j /*164*/].f_120[i] = Global_114135.f_2367[j /*164*/].f_120[i];
-			uParam0->f_2345[j /*164*/].f_124[i] = Global_114135.f_2367[j /*164*/].f_124[i];
-			uParam0->f_2345[j /*164*/].f_128[i] = Global_114135.f_2367[j /*164*/].f_128[i];
-			uParam0->f_2345[j /*164*/].f_132[i] = Global_114135.f_2367[j /*164*/].f_132[i];
-			uParam0->f_2345[j /*164*/].f_136[i] = Global_114135.f_2367[j /*164*/].f_136[i];
-			uParam0->f_2345[j /*164*/].f_140[i] = Global_114135.f_2367[j /*164*/].f_140[i];
-			uParam0->f_2345[j /*164*/].f_144[i] = Global_114135.f_2367[j /*164*/].f_144[i];
-			uParam0->f_2345[j /*164*/].f_148[i] = Global_114135.f_2367[j /*164*/].f_148[i];
-			uParam0->f_2345[j /*164*/].f_152[i] = Global_114135.f_2367[j /*164*/].f_152[i];
-			uParam0->f_2345[j /*164*/].f_156[i] = Global_114135.f_2367[j /*164*/].f_156[i];
-			uParam0->f_2345[j /*164*/].f_160[i] = Global_114135.f_2367[j /*164*/].f_160[i];
+			uParam0->f_2345[j /*164*/][i] = Global_114344.f_2367[j /*164*/][i];
+			uParam0->f_2345[j /*164*/].f_4[i] = Global_114344.f_2367[j /*164*/].f_4[i];
+			uParam0->f_2345[j /*164*/].f_8[i] = Global_114344.f_2367[j /*164*/].f_8[i];
+			uParam0->f_2345[j /*164*/].f_12[i] = Global_114344.f_2367[j /*164*/].f_12[i];
+			uParam0->f_2345[j /*164*/].f_16[i] = Global_114344.f_2367[j /*164*/].f_16[i];
+			uParam0->f_2345[j /*164*/].f_20[i] = Global_114344.f_2367[j /*164*/].f_20[i];
+			uParam0->f_2345[j /*164*/].f_24[i] = Global_114344.f_2367[j /*164*/].f_24[i];
+			uParam0->f_2345[j /*164*/].f_28[i] = Global_114344.f_2367[j /*164*/].f_28[i];
+			uParam0->f_2345[j /*164*/].f_32[i] = Global_114344.f_2367[j /*164*/].f_32[i];
+			uParam0->f_2345[j /*164*/].f_36[i] = Global_114344.f_2367[j /*164*/].f_36[i];
+			uParam0->f_2345[j /*164*/].f_40[i] = Global_114344.f_2367[j /*164*/].f_40[i];
+			uParam0->f_2345[j /*164*/].f_44[i] = Global_114344.f_2367[j /*164*/].f_44[i];
+			uParam0->f_2345[j /*164*/].f_48[i] = Global_114344.f_2367[j /*164*/].f_48[i];
+			uParam0->f_2345[j /*164*/].f_52[i] = Global_114344.f_2367[j /*164*/].f_52[i];
+			uParam0->f_2345[j /*164*/].f_56[i] = Global_114344.f_2367[j /*164*/].f_56[i];
+			uParam0->f_2345[j /*164*/].f_60[i] = Global_114344.f_2367[j /*164*/].f_60[i];
+			uParam0->f_2345[j /*164*/].f_64[i] = Global_114344.f_2367[j /*164*/].f_64[i];
+			uParam0->f_2345[j /*164*/].f_68[i] = Global_114344.f_2367[j /*164*/].f_68[i];
+			uParam0->f_2345[j /*164*/].f_72[i] = Global_114344.f_2367[j /*164*/].f_72[i];
+			uParam0->f_2345[j /*164*/].f_76[i] = Global_114344.f_2367[j /*164*/].f_76[i];
+			uParam0->f_2345[j /*164*/].f_80[i] = Global_114344.f_2367[j /*164*/].f_80[i];
+			uParam0->f_2345[j /*164*/].f_84[i] = Global_114344.f_2367[j /*164*/].f_84[i];
+			uParam0->f_2345[j /*164*/].f_88[i] = Global_114344.f_2367[j /*164*/].f_88[i];
+			uParam0->f_2345[j /*164*/].f_92[i] = Global_114344.f_2367[j /*164*/].f_92[i];
+			uParam0->f_2345[j /*164*/].f_96[i] = Global_114344.f_2367[j /*164*/].f_96[i];
+			uParam0->f_2345[j /*164*/].f_100[i] = Global_114344.f_2367[j /*164*/].f_100[i];
+			uParam0->f_2345[j /*164*/].f_104[i] = Global_114344.f_2367[j /*164*/].f_104[i];
+			uParam0->f_2345[j /*164*/].f_108[i] = Global_114344.f_2367[j /*164*/].f_108[i];
+			uParam0->f_2345[j /*164*/].f_112[i] = Global_114344.f_2367[j /*164*/].f_112[i];
+			uParam0->f_2345[j /*164*/].f_116[i] = Global_114344.f_2367[j /*164*/].f_116[i];
+			uParam0->f_2345[j /*164*/].f_120[i] = Global_114344.f_2367[j /*164*/].f_120[i];
+			uParam0->f_2345[j /*164*/].f_124[i] = Global_114344.f_2367[j /*164*/].f_124[i];
+			uParam0->f_2345[j /*164*/].f_128[i] = Global_114344.f_2367[j /*164*/].f_128[i];
+			uParam0->f_2345[j /*164*/].f_132[i] = Global_114344.f_2367[j /*164*/].f_132[i];
+			uParam0->f_2345[j /*164*/].f_136[i] = Global_114344.f_2367[j /*164*/].f_136[i];
+			uParam0->f_2345[j /*164*/].f_140[i] = Global_114344.f_2367[j /*164*/].f_140[i];
+			uParam0->f_2345[j /*164*/].f_144[i] = Global_114344.f_2367[j /*164*/].f_144[i];
+			uParam0->f_2345[j /*164*/].f_148[i] = Global_114344.f_2367[j /*164*/].f_148[i];
+			uParam0->f_2345[j /*164*/].f_152[i] = Global_114344.f_2367[j /*164*/].f_152[i];
+			uParam0->f_2345[j /*164*/].f_156[i] = Global_114344.f_2367[j /*164*/].f_156[i];
+			uParam0->f_2345[j /*164*/].f_160[i] = Global_114344.f_2367[j /*164*/].f_160[i];
 		}
 	}
 
@@ -37429,16 +37445,16 @@ void func_319(var uParam0, const char* sParam1, int iParam2, char* sParam3, int 
 	return;
 }
 
-int func_320(var uParam0) // Position - 0x2BC47 (179271)
+int func_320(var uParam0) // Position - 0x2BC85 (179333)
 {
-	*uParam0 = Global_97512;
-	uParam0->f_1 = Global_97513;
+	*uParam0 = Global_97717;
+	uParam0->f_1 = Global_97718;
 	uParam0->f_2 = 0;
 	uParam0->f_3 = 0;
 	return 1;
 }
 
-void func_321(var uParam0, var uParam1, Ped pedParam2, int iParam3, int iParam4, int iParam5) // Position - 0x2BC69 (179305)
+void func_321(var uParam0, var uParam1, Ped pedParam2, int iParam3, int iParam4, int iParam5) // Position - 0x2BCA7 (179367)
 {
 	Vehicle vehicle;
 
@@ -37458,7 +37474,7 @@ void func_321(var uParam0, var uParam1, Ped pedParam2, int iParam3, int iParam4,
 	return;
 }
 
-int func_322(var uParam0, var uParam1, Vehicle veParam2, int iParam3) // Position - 0x2BCF1 (179441)
+int func_322(var uParam0, var uParam1, Vehicle veParam2, int iParam3) // Position - 0x2BD2F (179503)
 {
 	if (VEHICLE::IS_VEHICLE_DRIVEABLE(veParam2, false))
 	{
@@ -37476,20 +37492,20 @@ int func_322(var uParam0, var uParam1, Vehicle veParam2, int iParam3) // Positio
 	return 0;
 }
 
-BOOL func_323(Vehicle veParam0) // Position - 0x2BD31 (179505)
+BOOL func_323(Vehicle veParam0) // Position - 0x2BD6F (179567)
 {
 	int i;
 
 	for (i = 0; i <= 6; i = i + 1)
 	{
-		if (Global_101688.f_22[i] == veParam0)
+		if (Global_101893.f_22[i] == veParam0)
 			return true;
 	}
 
 	return false;
 }
 
-void func_324(var uParam0, Vehicle veParam1, int iParam2) // Position - 0x2BD5F (179551)
+void func_324(var uParam0, Vehicle veParam1, int iParam2) // Position - 0x2BD9D (179613)
 {
 	func_330(veParam1, &(uParam0->f_12));
 	uParam0->f_7 = func_327(veParam1, _CHAR_NULL, 0);
@@ -37511,7 +37527,7 @@ void func_324(var uParam0, Vehicle veParam1, int iParam2) // Position - 0x2BD5F 
 			uParam0->f_6 = 305.6424f;
 		}
 	
-		if (Global_79234 == veParam1)
+		if (Global_79439 == veParam1)
 			uParam0->f_9 = 1;
 	}
 
@@ -37523,21 +37539,21 @@ void func_324(var uParam0, Vehicle veParam1, int iParam2) // Position - 0x2BD5F 
 	return;
 }
 
-int func_325(Vehicle veParam0) // Position - 0x2BE3B (179771)
+int func_325(Vehicle veParam0) // Position - 0x2BE79 (179833)
 {
 	int i;
 
 	for (i = 0; i < 68; i = i + 1)
 	{
-		if (ENTITY::DOES_ENTITY_EXIST(Global_78329.f_484[i]))
-			if (veParam0 == Global_78329.f_484[i])
+		if (ENTITY::DOES_ENTITY_EXIST(Global_78534.f_484[i]))
+			if (veParam0 == Global_78534.f_484[i])
 				return 1;
 	}
 
 	return 0;
 }
 
-eCharacter func_326(Vehicle veParam0) // Position - 0x2BE7D (179837)
+eCharacter func_326(Vehicle veParam0) // Position - 0x2BEBB (179899)
 {
 	int i;
 
@@ -37549,15 +37565,15 @@ eCharacter func_326(Vehicle veParam0) // Position - 0x2BE7D (179837)
 
 	for (i = 0; i < 9; i = i + 1)
 	{
-		if (ENTITY::DOES_ENTITY_EXIST(Global_98994[i]))
-			if (Global_98994[i] == veParam0)
-				return Global_99004[i];
+		if (ENTITY::DOES_ENTITY_EXIST(Global_99199[i]))
+			if (Global_99199[i] == veParam0)
+				return Global_99209[i];
 	}
 
 	return _CHAR_NULL;
 }
 
-int func_327(Vehicle veParam0, eCharacter echParam1, int iParam2) // Position - 0x2BEE0 (179936)
+int func_327(Vehicle veParam0, eCharacter echParam1, int iParam2) // Position - 0x2BF1E (179998)
 {
 	int i;
 
@@ -37569,9 +37585,9 @@ int func_327(Vehicle veParam0, eCharacter echParam1, int iParam2) // Position - 
 
 	for (i = 0; i < 9; i = i + 1)
 	{
-		if (ENTITY::DOES_ENTITY_EXIST(Global_98994[i]))
-			if (Global_98994[i] == veParam0)
-				if (echParam1 == _CHAR_NULL || echParam1 == Global_99004[i])
+		if (ENTITY::DOES_ENTITY_EXIST(Global_99199[i]))
+			if (Global_99199[i] == veParam0)
+				if (echParam1 == _CHAR_NULL || echParam1 == Global_99209[i])
 					if (iParam2 == 0 || ENTITY::GET_ENTITY_MODEL(veParam0) == func_328(echParam1, iParam2))
 						return 1;
 	}
@@ -37579,7 +37595,7 @@ int func_327(Vehicle veParam0, eCharacter echParam1, int iParam2) // Position - 
 	return 0;
 }
 
-Hash func_328(eCharacter echParam0, int iParam1) // Position - 0x2BF6E (180078)
+Hash func_328(eCharacter echParam0, int iParam1) // Position - 0x2BFAC (180140)
 {
 	int num;
 
@@ -37599,7 +37615,7 @@ Hash func_328(eCharacter echParam0, int iParam1) // Position - 0x2BF6E (180078)
 	return 0;
 }
 
-void func_329(eCharacter echParam0, var uParam1, int iParam2) // Position - 0x2BFB0 (180144)
+void func_329(eCharacter echParam0, var uParam1, int iParam2) // Position - 0x2BFEE (180206)
 {
 	int num;
 
@@ -37616,7 +37632,7 @@ void func_329(eCharacter echParam0, var uParam1, int iParam2) // Position - 0x2B
 		case CHAR_MICHAEL:
 			num = joaat("tailgater");
 		
-			if (Global_114135.f_9089.f_99.f_58[128] && !Global_114135.f_9089.f_99.f_58[131])
+			if (Global_114344.f_9089.f_99.f_58[128] && !Global_114344.f_9089.f_99.f_58[131])
 				num = joaat("premier");
 		
 			switch (num)
@@ -37657,7 +37673,7 @@ void func_329(eCharacter echParam0, var uParam1, int iParam2) // Position - 0x2B
 					uParam1->f_8 = 156;
 					TEXT_LABEL_ASSIGN_STRING(&(uParam1->f_27), "BETTY 32", 16);
 				
-					if (Global_114135.f_9089.f_99.f_58[119])
+					if (Global_114344.f_9089.f_99.f_58[119])
 						uParam1->f_11[1] = 1;
 					break;
 			}
@@ -37668,7 +37684,7 @@ void func_329(eCharacter echParam0, var uParam1, int iParam2) // Position - 0x2B
 				num = joaat("buffalo2");
 			else if (iParam2 == 2)
 				num = joaat("bagger");
-			else if (Global_114135.f_9089.f_99.f_58[118])
+			else if (Global_114344.f_9089.f_99.f_58[118])
 				num = joaat("bagger");
 			else
 				num = joaat("buffalo2");
@@ -37714,7 +37730,7 @@ void func_329(eCharacter echParam0, var uParam1, int iParam2) // Position - 0x2B
 	return;
 }
 
-void func_330(Vehicle veParam0, var uParam1) // Position - 0x2C20D (180749)
+void func_330(Vehicle veParam0, var uParam1) // Position - 0x2C24C (180812)
 {
 	int i;
 
@@ -37818,7 +37834,7 @@ void func_330(Vehicle veParam0, var uParam1) // Position - 0x2C20D (180749)
 	return;
 }
 
-int func_331(int iParam0) // Position - 0x2C4B8 (181432)
+int func_331(int iParam0) // Position - 0x2C4F7 (181495)
 {
 	switch (iParam0)
 	{
@@ -37862,7 +37878,7 @@ int func_331(int iParam0) // Position - 0x2C4B8 (181432)
 	return 0;
 }
 
-int func_332(var uParam0, var uParam1, var uParam2) // Position - 0x2C568 (181608)
+int func_332(var uParam0, var uParam1, var uParam2) // Position - 0x2C5A7 (181671)
 {
 	int i;
 	int modType;
@@ -37970,7 +37986,7 @@ int func_332(var uParam0, var uParam1, var uParam2) // Position - 0x2C568 (18160
 	return 1;
 }
 
-BOOL func_333(int iParam0) // Position - 0x2C75B (182107)
+BOOL func_333(int iParam0) // Position - 0x2C79A (182170)
 {
 	switch (iParam0)
 	{
@@ -37985,7 +38001,7 @@ BOOL func_333(int iParam0) // Position - 0x2C75B (182107)
 	return false;
 }
 
-BOOL func_334(Ped pedParam0, var uParam1, int iParam2, int iParam3) // Position - 0x2C77B (182139)
+BOOL func_334(Ped pedParam0, var uParam1, int iParam2, int iParam3) // Position - 0x2C7BA (182202)
 {
 	const char* thisScriptName;
 
@@ -38035,7 +38051,7 @@ BOOL func_334(Ped pedParam0, var uParam1, int iParam2, int iParam3) // Position 
 	return false;
 }
 
-BOOL func_335(Vehicle veParam0, eCharacter echParam1, BOOL bParam2) // Position - 0x2C8AA (182442)
+BOOL func_335(Vehicle veParam0, eCharacter echParam1, BOOL bParam2) // Position - 0x2C8E9 (182505)
 {
 	int i;
 	var garageName;
@@ -38046,7 +38062,7 @@ BOOL func_335(Vehicle veParam0, eCharacter echParam1, BOOL bParam2) // Position 
 
 	for (i = 0; func_336(echParam1, i, &garageName, &num); i = i + 1)
 	{
-		if (!bParam2 || IS_BIT_SET(Global_114135.f_7233[num], 0))
+		if (!bParam2 || IS_BIT_SET(Global_114344.f_7233[num], 0))
 			if (VEHICLE::IS_VEHICLE_IN_GARAGE_AREA(&garageName, veParam0))
 				return true;
 	}
@@ -38054,7 +38070,7 @@ BOOL func_335(Vehicle veParam0, eCharacter echParam1, BOOL bParam2) // Position 
 	return false;
 }
 
-BOOL func_336(int iParam0, int iParam1, char* sParam2, var uParam3) // Position - 0x2C918 (182552)
+BOOL func_336(int iParam0, int iParam1, char* sParam2, var uParam3) // Position - 0x2C957 (182615)
 {
 	TEXT_LABEL_ASSIGN_STRING(sParam2, "", 32);
 
@@ -38115,7 +38131,7 @@ BOOL func_336(int iParam0, int iParam1, char* sParam2, var uParam3) // Position 
 	return false;
 }
 
-void func_337(Ped pedParam0, var uParam1, int iParam2, int iParam3) // Position - 0x2C9F0 (182768)
+void func_337(Ped pedParam0, var uParam1, int iParam2, int iParam3) // Position - 0x2CA2F (182831)
 {
 	eCharacter character;
 	ePedComponentType i;
@@ -38136,12 +38152,12 @@ void func_337(Ped pedParam0, var uParam1, int iParam2, int iParam3) // Position 
 	
 		if (func_17(character))
 		{
-			uParam1->f_59 = Global_114135.f_2367.f_539[character /*65*/].f_59;
-			uParam1->f_60 = Global_114135.f_2367.f_539[character /*65*/].f_60;
-			uParam1->f_61 = Global_114135.f_2367.f_539[character /*65*/].f_61;
-			uParam1->f_62 = Global_114135.f_2367.f_539[character /*65*/].f_62;
-			uParam1->f_63 = Global_114135.f_2367.f_539[character /*65*/].f_63;
-			uParam1->f_64 = Global_114135.f_2367.f_539[character /*65*/].f_64;
+			uParam1->f_59 = Global_114344.f_2367.f_539[character /*65*/].f_59;
+			uParam1->f_60 = Global_114344.f_2367.f_539[character /*65*/].f_60;
+			uParam1->f_61 = Global_114344.f_2367.f_539[character /*65*/].f_61;
+			uParam1->f_62 = Global_114344.f_2367.f_539[character /*65*/].f_62;
+			uParam1->f_63 = Global_114344.f_2367.f_539[character /*65*/].f_63;
+			uParam1->f_64 = Global_114344.f_2367.f_539[character /*65*/].f_64;
 		}
 		else if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && ENTITY::GET_ENTITY_MODEL(pedParam0) == ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()))
 		{
@@ -38164,7 +38180,7 @@ void func_337(Ped pedParam0, var uParam1, int iParam2, int iParam3) // Position 
 	return;
 }
 
-BOOL func_338(int iParam0, int iParam1) // Position - 0x2CB8A (183178)
+BOOL func_338(int iParam0, int iParam1) // Position - 0x2CBC9 (183241)
 {
 	Hash statHash;
 	BOOL outValue;
@@ -38177,12 +38193,12 @@ BOOL func_338(int iParam0, int iParam1) // Position - 0x2CB8A (183178)
 	return false;
 }
 
-Hash func_339(int iParam0, int iParam1) // Position - 0x2CBAE (183214)
+Hash func_339(int iParam0, int iParam1) // Position - 0x2CBED (183277)
 {
 	return STATS::_GET_STAT_HASH_FOR_CHARACTER_STAT(2, iParam0, func_122(iParam1));
 }
 
-void func_340(Ped pedParam0, ePedComponentType epctParam1, var uParam2, var uParam3, int iParam4, eCharacter echParam5) // Position - 0x2CBC3 (183235)
+void func_340(Ped pedParam0, ePedComponentType epctParam1, var uParam2, var uParam3, int iParam4, eCharacter echParam5) // Position - 0x2CC02 (183298)
 {
 	eCharacter character;
 
@@ -38419,7 +38435,7 @@ void func_340(Ped pedParam0, ePedComponentType epctParam1, var uParam2, var uPar
 	return;
 }
 
-void func_341(Ped pedParam0, ePedComponentType epctParam1, var uParam2, var uParam3, var uParam4, int iParam5, eCharacter echParam6) // Position - 0x2D10C (184588)
+void func_341(Ped pedParam0, ePedComponentType epctParam1, var uParam2, var uParam3, var uParam4, int iParam5, eCharacter echParam6) // Position - 0x2D14B (184651)
 {
 	eCharacter character;
 
@@ -38547,13 +38563,13 @@ void func_341(Ped pedParam0, ePedComponentType epctParam1, var uParam2, var uPar
 	return;
 }
 
-eCharacter _GET_CURRENT_PLAYER_CHARACTER_0() // Position - 0x2D34D (185165)
+eCharacter _GET_CURRENT_PLAYER_CHARACTER_0() // Position - 0x2D38C (185228)
 {
 	func_16();
-	return Global_114135.f_2367.f_539.f_4321;
+	return Global_114344.f_2367.f_539.f_4321;
 }
 
-void func_343(Ped pedParam0, BOOL bParam1) // Position - 0x2D366 (185190)
+void func_343(Ped pedParam0, BOOL bParam1) // Position - 0x2D3A5 (185253)
 {
 	eCharacter character;
 	Hash weaponWheelCurrentlyHighlighted;
@@ -38566,18 +38582,18 @@ void func_343(Ped pedParam0, BOOL bParam1) // Position - 0x2D366 (185190)
 	{
 		if (pedParam0 == PLAYER::PLAYER_PED_ID())
 		{
-			func_344(pedParam0, &Global_114135.f_2367.f_539.f_298[character /*477*/]);
+			func_344(pedParam0, &Global_114344.f_2367.f_539.f_298[character /*477*/]);
 		
 			for (i = 0; i <= 8 - 1; i = i + 1)
 			{
-				Global_114135.f_2367.f_539.f_1730[i /*4*/][character] = HUD::HUD_GET_WEAPON_WHEEL_TOP_SLOT(i);
+				Global_114344.f_2367.f_539.f_1730[i /*4*/][character] = HUD::HUD_GET_WEAPON_WHEEL_TOP_SLOT(i);
 			
 				if (bParam1)
 				{
 					weaponWheelCurrentlyHighlighted = HUD::HUD_GET_WEAPON_WHEEL_CURRENTLY_HIGHLIGHTED();
 				
-					if (Global_114135.f_2367.f_539.f_1730[i /*4*/][character] == weaponWheelCurrentlyHighlighted)
-						Global_114135.f_2367.f_539.f_1763 = i;
+					if (Global_114344.f_2367.f_539.f_1730[i /*4*/][character] == weaponWheelCurrentlyHighlighted)
+						Global_114344.f_2367.f_539.f_1763 = i;
 				}
 			}
 		
@@ -38595,7 +38611,7 @@ void func_343(Ped pedParam0, BOOL bParam1) // Position - 0x2D366 (185190)
 	return;
 }
 
-void func_344(Ped pedParam0, var uParam1) // Position - 0x2D459 (185433)
+void func_344(Ped pedParam0, var uParam1) // Position - 0x2D498 (185496)
 {
 	int i;
 	int j;
@@ -38724,7 +38740,7 @@ void func_344(Ped pedParam0, var uParam1) // Position - 0x2D459 (185433)
 	return;
 }
 
-BOOL func_345(int iParam0) // Position - 0x2D6E1 (186081)
+BOOL func_345(int iParam0) // Position - 0x2D720 (186144)
 {
 	switch (iParam0)
 	{
@@ -38757,7 +38773,7 @@ BOOL func_345(int iParam0) // Position - 0x2D6E1 (186081)
 	return false;
 }
 
-BOOL func_346(int iParam0) // Position - 0x2D782 (186242)
+BOOL func_346(int iParam0) // Position - 0x2D7C1 (186305)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
@@ -38859,7 +38875,7 @@ BOOL func_346(int iParam0) // Position - 0x2D782 (186242)
 	return false;
 }
 
-Hash func_347(Hash hParam0, int iParam1) // Position - 0x2D97A (186746)
+Hash func_347(Hash hParam0, int iParam1) // Position - 0x2D9B9 (186809)
 {
 	int num;
 	int dlcWeaponIndex;
@@ -39770,7 +39786,7 @@ Hash func_347(Hash hParam0, int iParam1) // Position - 0x2D97A (186746)
 	return num;
 }
 
-int func_348(Hash hParam0, Any* panParam1) // Position - 0x2E6FB (190203)
+int func_348(Hash hParam0, Any* panParam1) // Position - 0x2E73A (190266)
 {
 	int i;
 	int numDlcWeapons;
@@ -39787,7 +39803,7 @@ int func_348(Hash hParam0, Any* panParam1) // Position - 0x2E6FB (190203)
 	return -1;
 }
 
-Hash func_349(int iParam0) // Position - 0x2E736 (190262)
+Hash func_349(int iParam0) // Position - 0x2E775 (190325)
 {
 	int num;
 
@@ -39951,19 +39967,19 @@ Hash func_349(int iParam0) // Position - 0x2E736 (190262)
 	return num;
 }
 
-void func_350(Ped pedParam0) // Position - 0x2E9AA (190890)
+void func_350(Ped pedParam0) // Position - 0x2E9E9 (190953)
 {
 	eCharacter character;
 
 	character = _GET_PLAYER_CHARACTER_FROM_PED(pedParam0);
 
 	if (func_17(character) && !PED::IS_PED_INJURED(pedParam0))
-		Global_114135.f_2367.f_539.f_294[character] = PED::GET_PED_ARMOUR(pedParam0);
+		Global_114344.f_2367.f_539.f_294[character] = PED::GET_PED_ARMOUR(pedParam0);
 
 	return;
 }
 
-void func_351(var uParam0, int iParam1) // Position - 0x2E9E6 (190950)
+void func_351(var uParam0, int iParam1) // Position - 0x2EA25 (191013)
 {
 	var unk;
 	var unk2;
@@ -39997,22 +40013,22 @@ void func_351(var uParam0, int iParam1) // Position - 0x2E9E6 (190950)
 		*uParam0 = { 4.2587f, 525.0214f, 173.6281f };
 		uParam0->f_3 = 203.6746f;
 	}
-	else if (IS_BIT_SET(Global_79788, 4))
+	else if (IS_BIT_SET(Global_79993, 4))
 	{
 		*uParam0 = { 452.0255f, 5571.85f, 780.1859f };
 		uParam0->f_3 = 78.9858f;
 	}
-	else if (IS_BIT_SET(Global_79788, 5))
+	else if (IS_BIT_SET(Global_79993, 5))
 	{
 		*uParam0 = { -745.4462f, 5595.1465f, 40.6594f };
 		uParam0->f_3 = 261.747f;
 	}
-	else if (IS_BIT_SET(Global_79788, 6))
+	else if (IS_BIT_SET(Global_79993, 6))
 	{
 		*uParam0 = { -1675.5215f, -1125.5901f, 12.091f };
 		uParam0->f_3 = 271.8208f;
 	}
-	else if (IS_BIT_SET(Global_79788, 7))
+	else if (IS_BIT_SET(Global_79993, 7))
 	{
 		*uParam0 = { -1631.2192f, -1112.8052f, 12.0212f };
 		uParam0->f_3 = 316.8879f;
@@ -40099,7 +40115,7 @@ void func_351(var uParam0, int iParam1) // Position - 0x2E9E6 (190950)
 	return;
 }
 
-BOOL func_352(Vector3 vParam0, var uParam1, var uParam2, char* sParam3, float fParam4, float fParam5, float fParam6) // Position - 0x2EF35 (192309)
+BOOL func_352(Vector3 vParam0, var uParam1, var uParam2, char* sParam3, float fParam4, float fParam5, float fParam6) // Position - 0x2EF74 (192372)
 {
 	Interior interiorAtCoordsWithType;
 	Interior interiorFromCollision;
@@ -40120,7 +40136,7 @@ BOOL func_352(Vector3 vParam0, var uParam1, var uParam2, char* sParam3, float fP
 	return false;
 }
 
-BOOL func_353(int iParam0, var uParam1, var uParam2) // Position - 0x2EF79 (192377)
+BOOL func_353(int iParam0, var uParam1, var uParam2) // Position - 0x2EFB8 (192440)
 {
 	*uParam1 = { 0f, 0f, 0f };
 	*uParam2 = 0f;
@@ -40421,7 +40437,7 @@ BOOL func_353(int iParam0, var uParam1, var uParam2) // Position - 0x2EF79 (1923
 	return !func_280(*uParam1, 0f, 0f, 0f, false);
 }
 
-BOOL func_354(var uParam0) // Position - 0x2F6F8 (194296)
+BOOL func_354(var uParam0) // Position - 0x2F737 (194359)
 {
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false) && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
@@ -40437,28 +40453,28 @@ BOOL func_354(var uParam0) // Position - 0x2F6F8 (194296)
 	return false;
 }
 
-BOOL func_355(int iParam0) // Position - 0x2F753 (194387)
+BOOL func_355(int iParam0) // Position - 0x2F792 (194450)
 {
 	return func_356(iParam0, 0, true);
 }
 
-BOOL func_356(int iParam0, int iParam1, BOOL bParam2) // Position - 0x2F763 (194403)
+BOOL func_356(int iParam0, int iParam1, BOOL bParam2) // Position - 0x2F7A2 (194466)
 {
 	if (iParam0 == -1)
 		return false;
 
 	if (bParam2)
-		return IS_BIT_SET(Global_101740.f_1421[iParam0], iParam1);
+		return IS_BIT_SET(Global_101945.f_1421[iParam0], iParam1);
 	else if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 		if (func_59() == 0)
 			return IS_BIT_SET(func_123(func_357(iParam0), -1), iParam1);
 	else
-		return IS_BIT_SET(Global_114135.f_668[iParam0], iParam1);
+		return IS_BIT_SET(Global_114344.f_668[iParam0], iParam1);
 
 	return false;
 }
 
-int func_357(int iParam0) // Position - 0x2F7C3 (194499)
+int func_357(int iParam0) // Position - 0x2F802 (194562)
 {
 	switch (iParam0)
 	{
@@ -40595,7 +40611,7 @@ int func_357(int iParam0) // Position - 0x2F7C3 (194499)
 			return 875;
 	
 		case 44:
-			return 13519;
+			return 13576;
 	
 		case 45:
 			return 3811;
@@ -40652,15 +40668,15 @@ int func_357(int iParam0) // Position - 0x2F7C3 (194499)
 			break;
 	}
 
-	return 15468;
+	return 15525;
 }
 
-BOOL func_358(int iParam0) // Position - 0x2FB7A (195450)
+BOOL func_358(int iParam0) // Position - 0x2FBB9 (195513)
 {
 	return func_356(iParam0, 5, true);
 }
 
-int func_359(Vector3 vParam0, var uParam1, var uParam2, int iParam3, int iParam4, BOOL bParam5, BOOL bParam6, int iParam7) // Position - 0x2FB8A (195466)
+int func_359(Vector3 vParam0, var uParam1, var uParam2, int iParam3, int iParam4, BOOL bParam5, BOOL bParam6, int iParam7) // Position - 0x2FBC9 (195529)
 {
 	int i;
 	float distanceBetweenCoords;
@@ -40690,7 +40706,7 @@ int func_359(Vector3 vParam0, var uParam1, var uParam2, int iParam3, int iParam4
 	return num2;
 }
 
-Vector3 func_360(int iParam0, BOOL bParam1) // Position - 0x2FC2C (195628)
+Vector3 func_360(int iParam0, BOOL bParam1) // Position - 0x2FC6B (195691)
 {
 	switch (iParam0)
 	{
@@ -40837,13 +40853,13 @@ Vector3 func_360(int iParam0, BOOL bParam1) // Position - 0x2FC2C (195628)
 			break;
 	
 		case 45:
-			return func_376(Global_103852);
+			return func_376(Global_104057);
 	
 		case 46:
-			if (Global_1845051 != _INVALID_PLAYER_INDEX())
-				if (func_375(Global_1845051))
+			if (Global_1845055 != _INVALID_PLAYER_INDEX())
+				if (func_375(Global_1845055))
 					return func_368(2, 2);
-				else if (func_367(Global_1845051))
+				else if (func_367(Global_1845055))
 					return func_368(45, 3);
 				else
 					return 1000000f, 1000000f, 1000000f;
@@ -40864,7 +40880,7 @@ Vector3 func_360(int iParam0, BOOL bParam1) // Position - 0x2FC2C (195628)
 			return 2714.5466f, -354.2701f, -55.1867f;
 	
 		case 50:
-			return Global_1965191;
+			return Global_1967294;
 	
 		case 51:
 			return 1100f, 220f, -50f;
@@ -40915,10 +40931,10 @@ Vector3 func_360(int iParam0, BOOL bParam1) // Position - 0x2FC2C (195628)
 	return 1000000f, 1000000f, 1000000f;
 }
 
-Vector3 func_361() // Position - 0x303AA (197546)
+Vector3 func_361() // Position - 0x303E9 (197609)
 {
-	if (!func_363(Global_1950373))
-		return Global_1950373;
+	if (!func_363(Global_1952452))
+		return Global_1952452;
 
 	switch (func_362())
 	{
@@ -41019,12 +41035,12 @@ Vector3 func_361() // Position - 0x303AA (197546)
 	return 0f, 0f, 0f;
 }
 
-int func_362() // Position - 0x306A5 (198309)
+int func_362() // Position - 0x306E4 (198372)
 {
-	return Global_2652568.f_2706;
+	return Global_2652584.f_2706;
 }
 
-BOOL func_363(float fParam0, var uParam1, var uParam2) // Position - 0x306B4 (198324)
+BOOL func_363(float fParam0, var uParam1, var uParam2) // Position - 0x306F3 (198387)
 {
 	if (fParam0 == 0f && fParam0.f_1 == 0f && fParam0.f_2 == 0f)
 		return true;
@@ -41032,53 +41048,53 @@ BOOL func_363(float fParam0, var uParam1, var uParam2) // Position - 0x306B4 (19
 	return false;
 }
 
-int func_364() // Position - 0x306DE (198366)
+int func_364() // Position - 0x3071D (198429)
 {
-	return Global_2657991[PLAYER::PLAYER_ID() /*467*/].f_324.f_8;
+	return Global_2658016[PLAYER::PLAYER_ID() /*467*/].f_324.f_8;
 }
 
-Vector3 func_365(float fParam0, float fParam1, float fParam2) // Position - 0x306F6 (198390)
+Vector3 func_365(float fParam0, float fParam1, float fParam2) // Position - 0x30735 (198453)
 {
 	return OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_366(), 0f, fParam0);
 }
 
-Vector3 func_366() // Position - 0x3070B (198411)
+Vector3 func_366() // Position - 0x3074A (198474)
 {
 	return -880f, -2770f, -50f;
 }
 
-BOOL func_367(Player plParam0) // Position - 0x30722 (198434)
+BOOL func_367(Player plParam0) // Position - 0x30761 (198497)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
-		if (IS_BIT_SET(Global_1845221[plParam0 /*889*/].f_268.f_294, 0) || IS_BIT_SET(Global_1845221[plParam0 /*889*/].f_268.f_294, 1) || IS_BIT_SET(Global_1845221[plParam0 /*889*/].f_268.f_294, 2))
+		if (IS_BIT_SET(Global_1845225[plParam0 /*874*/].f_260.f_293, 0) || IS_BIT_SET(Global_1845225[plParam0 /*874*/].f_260.f_293, 1) || IS_BIT_SET(Global_1845225[plParam0 /*874*/].f_260.f_293, 2))
 			return true;
 
 	return false;
 }
 
-Vector3 func_368(int iParam0, int iParam1) // Position - 0x3077A (198522)
+Vector3 func_368(int iParam0, int iParam1) // Position - 0x307B9 (198585)
 {
 	var unk;
 	var unk7;
 
 	unk7 = { 1000000f, 1000000f, 1000000f };
 
-	if (Global_1845051 != _INVALID_PLAYER_INDEX())
+	if (Global_1845055 != _INVALID_PLAYER_INDEX())
 		if (iParam1 == 3)
 			if (func_369(iParam0, 1, &unk, 0, false))
 				unk7 = { unk };
 		else if (iParam1 == 2)
-			if (IS_BIT_SET(Global_1845221[Global_1845051 /*889*/].f_268.f_294, 4))
+			if (IS_BIT_SET(Global_1845225[Global_1845055 /*874*/].f_260.f_293, 4))
 				if (func_369(iParam0, 1, &unk, 0, false))
 					unk7 = { unk };
-			else if (IS_BIT_SET(Global_1845221[Global_1845051 /*889*/].f_268.f_294, 5))
+			else if (IS_BIT_SET(Global_1845225[Global_1845055 /*874*/].f_260.f_293, 5))
 				if (func_369(iParam0, 2, &unk, 0, false))
 					unk7 = { unk };
 
 	return unk7;
 }
 
-BOOL func_369(int iParam0, int iParam1, var uParam2, int iParam3, BOOL bParam4) // Position - 0x30824 (198692)
+BOOL func_369(int iParam0, int iParam1, var uParam2, int iParam3, BOOL bParam4) // Position - 0x30863 (198755)
 {
 	var unk;
 	Vector3 vector;
@@ -41104,7 +41120,7 @@ BOOL func_369(int iParam0, int iParam1, var uParam2, int iParam3, BOOL bParam4) 
 	return true;
 }
 
-Vector3 func_370(float fParam0, var uParam1, var uParam2, float fParam3) // Position - 0x308B9 (198841)
+Vector3 func_370(float fParam0, var uParam1, var uParam2, float fParam3) // Position - 0x308F8 (198904)
 {
 	float num;
 	float num2;
@@ -41118,7 +41134,7 @@ Vector3 func_370(float fParam0, var uParam1, var uParam2, float fParam3) // Posi
 	return num;
 }
 
-struct<6> func_371(int iParam0) // Position - 0x308FD (198909)
+struct<6> func_371(int iParam0) // Position - 0x3093C (198972)
 {
 	var unk;
 
@@ -41173,12 +41189,12 @@ struct<6> func_371(int iParam0) // Position - 0x308FD (198909)
 	return unk;
 }
 
-struct<6> func_372(int iParam0) // Position - 0x30A81 (199297)
+struct<6> func_372(int iParam0) // Position - 0x30AC0 (199360)
 {
 	return func_373(iParam0);
 }
 
-struct<6> func_373(int iParam0) // Position - 0x30A8F (199311)
+struct<6> func_373(int iParam0) // Position - 0x30ACE (199374)
 {
 	var unk;
 
@@ -41543,7 +41559,7 @@ struct<6> func_373(int iParam0) // Position - 0x30A8F (199311)
 	return unk;
 }
 
-BOOL func_374(int iParam0, var uParam1) // Position - 0x31556 (202070)
+BOOL func_374(int iParam0, var uParam1) // Position - 0x31595 (202133)
 {
 	switch (iParam0)
 	{
@@ -41569,16 +41585,16 @@ BOOL func_374(int iParam0, var uParam1) // Position - 0x31556 (202070)
 	return false;
 }
 
-BOOL func_375(Player plParam0) // Position - 0x315D8 (202200)
+BOOL func_375(Player plParam0) // Position - 0x31617 (202263)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
-		if (IS_BIT_SET(Global_1845221[plParam0 /*889*/].f_268.f_294, 3) || IS_BIT_SET(Global_1845221[plParam0 /*889*/].f_268.f_294, 4) || IS_BIT_SET(Global_1845221[plParam0 /*889*/].f_268.f_294, 5))
+		if (IS_BIT_SET(Global_1845225[plParam0 /*874*/].f_260.f_293, 3) || IS_BIT_SET(Global_1845225[plParam0 /*874*/].f_260.f_293, 4) || IS_BIT_SET(Global_1845225[plParam0 /*874*/].f_260.f_293, 5))
 			return true;
 
 	return false;
 }
 
-Vector3 func_376(int iParam0) // Position - 0x31630 (202288)
+Vector3 func_376(int iParam0) // Position - 0x3166F (202351)
 {
 	switch (iParam0)
 	{
@@ -41659,22 +41675,22 @@ Vector3 func_376(int iParam0) // Position - 0x31630 (202288)
 	return 0f, 0f, -200f;
 }
 
-int func_377() // Position - 0x318B7 (202935)
+int func_377() // Position - 0x318F6 (202998)
 {
 	return func_378(PLAYER::PLAYER_ID());
 }
 
-int func_378(Player plParam0) // Position - 0x318C7 (202951)
+int func_378(Player plParam0) // Position - 0x31906 (203014)
 {
-	return MISC::GET_BITS_IN_RANGE(Global_2657991[plParam0 /*467*/].f_324.f_3, 28, 31);
+	return MISC::GET_BITS_IN_RANGE(Global_2658016[plParam0 /*467*/].f_324.f_3, 28, 31);
 }
 
-BOOL func_379(int iParam0) // Position - 0x318E4 (202980)
+BOOL func_379(int iParam0) // Position - 0x31923 (203043)
 {
 	return func_356(iParam0, 0, false);
 }
 
-int func_380(int iParam0) // Position - 0x318F4 (202996)
+int func_380(int iParam0) // Position - 0x31933 (203059)
 {
 	switch (iParam0)
 	{
@@ -41871,12 +41887,12 @@ int func_380(int iParam0) // Position - 0x318F4 (202996)
 	return 6;
 }
 
-BOOL func_381() // Position - 0x31C37 (203831)
+BOOL func_381() // Position - 0x31C76 (203894)
 {
-	return Global_101740.f_399 > 0;
+	return Global_101945.f_399 > 0;
 }
 
-var func_382() // Position - 0x31C48 (203848)
+var func_382() // Position - 0x31C87 (203911)
 {
 	var unk;
 
@@ -41889,7 +41905,7 @@ var func_382() // Position - 0x31C48 (203848)
 	return unk;
 }
 
-void func_383(var uParam0, int iParam1) // Position - 0x31C8E (203918)
+void func_383(var uParam0, int iParam1) // Position - 0x31CCD (203981)
 {
 	if (iParam1 <= 0)
 		return;
@@ -41913,7 +41929,7 @@ void func_383(var uParam0, int iParam1) // Position - 0x31C8E (203918)
 	return;
 }
 
-void func_384(var uParam0, int iParam1) // Position - 0x31D14 (204052)
+void func_384(var uParam0, int iParam1) // Position - 0x31D53 (204115)
 {
 	if (iParam1 < 0 || iParam1 > 11)
 		return;
@@ -41923,7 +41939,7 @@ void func_384(var uParam0, int iParam1) // Position - 0x31D14 (204052)
 	return;
 }
 
-void func_385(var uParam0, int iParam1) // Position - 0x31D47 (204103)
+void func_385(var uParam0, int iParam1) // Position - 0x31D86 (204166)
 {
 	int num;
 	int num2;
@@ -41939,7 +41955,7 @@ void func_385(var uParam0, int iParam1) // Position - 0x31D47 (204103)
 	return;
 }
 
-int func_386(int iParam0, int iParam1) // Position - 0x31D98 (204184)
+int func_386(int iParam0, int iParam1) // Position - 0x31DD7 (204247)
 {
 	if (iParam1 < 0)
 		iParam1 = 0;
@@ -41974,12 +41990,12 @@ int func_386(int iParam0, int iParam1) // Position - 0x31D98 (204184)
 	return 30;
 }
 
-int func_387(int iParam0) // Position - 0x31E3A (204346)
+int func_387(int iParam0) // Position - 0x31E79 (204409)
 {
 	return (BUILTIN::SHIFT_RIGHT(iParam0, 26) & 31 * IS_BIT_SET(iParam0, 31) ? -1 : 1) + 2011;
 }
 
-var func_388(BOOL bParam0, var uParam1, var uParam2) // Position - 0x31E5C (204380)
+var func_388(BOOL bParam0, var uParam1, var uParam2) // Position - 0x31E9B (204443)
 {
 	if (bParam0)
 		return uParam1;
@@ -41987,12 +42003,12 @@ var func_388(BOOL bParam0, var uParam1, var uParam2) // Position - 0x31E5C (2043
 	return uParam2;
 }
 
-int func_389(int iParam0) // Position - 0x31E73 (204403)
+int func_389(int iParam0) // Position - 0x31EB2 (204466)
 {
 	return iParam0 & 15;
 }
 
-void func_390(var uParam0, int iParam1) // Position - 0x31E80 (204416)
+void func_390(var uParam0, int iParam1) // Position - 0x31EBF (204479)
 {
 	if (iParam1 < 0 || iParam1 > 24)
 		return;
@@ -42002,7 +42018,7 @@ void func_390(var uParam0, int iParam1) // Position - 0x31E80 (204416)
 	return;
 }
 
-void func_391(var uParam0, int iParam1) // Position - 0x31EBA (204474)
+void func_391(var uParam0, int iParam1) // Position - 0x31EF9 (204537)
 {
 	if (iParam1 < 0 || iParam1 >= 60)
 		return;
@@ -42012,7 +42028,7 @@ void func_391(var uParam0, int iParam1) // Position - 0x31EBA (204474)
 	return;
 }
 
-void func_392(var uParam0, int iParam1) // Position - 0x31EF5 (204533)
+void func_392(var uParam0, int iParam1) // Position - 0x31F34 (204596)
 {
 	if (iParam1 < 0 || iParam1 >= 60)
 		return;
@@ -42022,7 +42038,7 @@ void func_392(var uParam0, int iParam1) // Position - 0x31EF5 (204533)
 	return;
 }
 
-int func_393(char* sParam0) // Position - 0x31F31 (204593)
+int func_393(char* sParam0) // Position - 0x31F70 (204656)
 {
 	if (MISC::ARE_STRINGS_EQUAL("BailBond1", sParam0))
 		return 0;
@@ -42036,33 +42052,33 @@ int func_393(char* sParam0) // Position - 0x31F31 (204593)
 	return -1;
 }
 
-int func_394(int iParam0) // Position - 0x31F87 (204679)
+int func_394(int iParam0) // Position - 0x31FC6 (204742)
 {
 	switch (iParam0)
 	{
 		case 69:
 		case 70:
-			return func_395(Global_114135.f_9089.f_99.f_205[10]);
+			return func_395(Global_114344.f_9089.f_99.f_205[10]);
 	
 		case 74:
 		case 75:
-			return func_395(Global_114135.f_9089.f_99.f_205[8]);
+			return func_395(Global_114344.f_9089.f_99.f_205[8]);
 	
 		case 84:
 		case 85:
-			return func_395(Global_114135.f_9089.f_99.f_205[11]);
+			return func_395(Global_114344.f_9089.f_99.f_205[11]);
 	
 		case 90:
-			return func_395(Global_114135.f_9089.f_99.f_205[7]);
+			return func_395(Global_114344.f_9089.f_99.f_205[7]);
 	
 		case 93:
-			return func_395(Global_114135.f_9089.f_99.f_205[9]);
+			return func_395(Global_114344.f_9089.f_99.f_205[9]);
 	}
 
 	return 0;
 }
 
-int func_395(int iParam0) // Position - 0x32043 (204867)
+int func_395(int iParam0) // Position - 0x32082 (204930)
 {
 	switch (iParam0)
 	{
@@ -42083,7 +42099,7 @@ int func_395(int iParam0) // Position - 0x32043 (204867)
 	return -1;
 }
 
-int func_396(char* sParam0, BOOL bParam1) // Position - 0x32097 (204951)
+int func_396(char* sParam0, BOOL bParam1) // Position - 0x320D6 (205014)
 {
 	Hash hashKey;
 	int num;
@@ -42094,13 +42110,13 @@ int func_396(char* sParam0, BOOL bParam1) // Position - 0x32097 (204951)
 	return num;
 }
 
-int func_397(Hash hParam0, BOOL bParam1) // Position - 0x320C1 (204993)
+int func_397(Hash hParam0, BOOL bParam1) // Position - 0x32100 (205056)
 {
 	int i;
 
 	for (i = 0; i < 94; i = i + 1)
 	{
-		if (Global_92451[i /*34*/].f_6 == hParam0)
+		if (Global_92656[i /*34*/].f_6 == hParam0)
 			return i;
 	}
 
@@ -42108,7 +42124,7 @@ int func_397(Hash hParam0, BOOL bParam1) // Position - 0x320C1 (204993)
 	return -1;
 }
 
-void func_398(BOOL bParam0) // Position - 0x320F7 (205047)
+void func_398(BOOL bParam0) // Position - 0x32136 (205110)
 {
 	int i;
 	int j;
@@ -42120,42 +42136,42 @@ void func_398(BOOL bParam0) // Position - 0x320F7 (205047)
 	{
 		for (j = 0; j < 11; j = j + 1)
 		{
-			Global_114135.f_20568.f_233[i /*69*/].f_2[j /*6*/].f_3 = Global_114135.f_20568.f_233[i /*69*/].f_2[j /*6*/];
-			Global_114135.f_20568.f_233[i /*69*/].f_2[j /*6*/].f_4 = Global_114135.f_20568.f_233[i /*69*/].f_2[j /*6*/].f_1;
-			Global_114135.f_20568.f_233[i /*69*/].f_2[j /*6*/].f_5 = Global_114135.f_20568.f_233[i /*69*/].f_2[j /*6*/].f_2;
+			Global_114344.f_20568.f_233[i /*69*/].f_2[j /*6*/].f_3 = Global_114344.f_20568.f_233[i /*69*/].f_2[j /*6*/];
+			Global_114344.f_20568.f_233[i /*69*/].f_2[j /*6*/].f_4 = Global_114344.f_20568.f_233[i /*69*/].f_2[j /*6*/].f_1;
+			Global_114344.f_20568.f_233[i /*69*/].f_2[j /*6*/].f_5 = Global_114344.f_20568.f_233[i /*69*/].f_2[j /*6*/].f_2;
 		}
 	}
 
 	for (i = 0; i < 10; i = i + 1)
 	{
-		Global_61490[i /*3*/][0] = Global_114135.f_20568[i];
-		Global_61490.f_31[i /*3*/][0] = Global_114135.f_20568.f_11[i];
-		Global_61490.f_62[i /*3*/][0] = Global_114135.f_20568.f_22[i];
-		Global_61490.f_93[i /*3*/][0] = Global_114135.f_20568.f_33[i];
-		Global_61490.f_124[i /*3*/][0] = Global_114135.f_20568.f_44[i];
-		Global_61490.f_155[i /*3*/][0] = Global_114135.f_20568.f_55[i];
-		Global_61490.f_186[i /*3*/][0] = Global_114135.f_20568.f_66[i];
-		Global_61490.f_217[i /*3*/][0] = Global_114135.f_20568.f_77[i];
-		Global_61490.f_248[i /*3*/][0] = Global_114135.f_20568.f_88[i];
+		Global_61688[i /*3*/][0] = Global_114344.f_20568[i];
+		Global_61688.f_31[i /*3*/][0] = Global_114344.f_20568.f_11[i];
+		Global_61688.f_62[i /*3*/][0] = Global_114344.f_20568.f_22[i];
+		Global_61688.f_93[i /*3*/][0] = Global_114344.f_20568.f_33[i];
+		Global_61688.f_124[i /*3*/][0] = Global_114344.f_20568.f_44[i];
+		Global_61688.f_155[i /*3*/][0] = Global_114344.f_20568.f_55[i];
+		Global_61688.f_186[i /*3*/][0] = Global_114344.f_20568.f_66[i];
+		Global_61688.f_217[i /*3*/][0] = Global_114344.f_20568.f_77[i];
+		Global_61688.f_248[i /*3*/][0] = Global_114344.f_20568.f_88[i];
 	
 		if (!bParam0)
 		{
-			Global_61490[i /*3*/][1] = Global_114135.f_20568[i];
-			Global_61490.f_31[i /*3*/][1] = Global_114135.f_20568.f_11[i];
-			Global_61490.f_62[i /*3*/][1] = Global_114135.f_20568.f_22[i];
-			Global_61490.f_93[i /*3*/][1] = Global_114135.f_20568.f_33[i];
-			Global_61490.f_124[i /*3*/][1] = Global_114135.f_20568.f_44[i];
-			Global_61490.f_155[i /*3*/][1] = Global_114135.f_20568.f_55[i];
-			Global_61490.f_186[i /*3*/][1] = Global_114135.f_20568.f_66[i];
-			Global_61490.f_217[i /*3*/][1] = Global_114135.f_20568.f_77[i];
-			Global_61490.f_248[i /*3*/][1] = Global_114135.f_20568.f_88[i];
+			Global_61688[i /*3*/][1] = Global_114344.f_20568[i];
+			Global_61688.f_31[i /*3*/][1] = Global_114344.f_20568.f_11[i];
+			Global_61688.f_62[i /*3*/][1] = Global_114344.f_20568.f_22[i];
+			Global_61688.f_93[i /*3*/][1] = Global_114344.f_20568.f_33[i];
+			Global_61688.f_124[i /*3*/][1] = Global_114344.f_20568.f_44[i];
+			Global_61688.f_155[i /*3*/][1] = Global_114344.f_20568.f_55[i];
+			Global_61688.f_186[i /*3*/][1] = Global_114344.f_20568.f_66[i];
+			Global_61688.f_217[i /*3*/][1] = Global_114344.f_20568.f_77[i];
+			Global_61688.f_248[i /*3*/][1] = Global_114344.f_20568.f_88[i];
 		}
 	}
 
 	return;
 }
 
-void func_399() // Position - 0x32379 (205689)
+void func_399() // Position - 0x323B8 (205752)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(obLocal_184))
 	{
@@ -42174,7 +42190,7 @@ void func_399() // Position - 0x32379 (205689)
 	return;
 }
 
-void func_400(Object* pobParam0, BOOL bParam1) // Position - 0x323DF (205791)
+void func_400(Object* pobParam0, BOOL bParam1) // Position - 0x3241E (205854)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(*pobParam0))
 	{
@@ -42190,7 +42206,7 @@ void func_400(Object* pobParam0, BOOL bParam1) // Position - 0x323DF (205791)
 	return;
 }
 
-void func_401(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 0x3241A (205850)
+void func_401(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 0x32459 (205913)
 {
 	*uParam0 = 0;
 	*uParam1 = 0;
@@ -42199,12 +42215,12 @@ void func_401(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 
 	return;
 }
 
-BOOL func_402(Ped pedParam0, float fParam1, float fParam2, float fParam3, float fParam4, BOOL bParam5) // Position - 0x32432 (205874)
+BOOL func_402(Ped pedParam0, float fParam1, float fParam2, float fParam3, float fParam4, BOOL bParam5) // Position - 0x32471 (205937)
 {
 	return BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(pedParam0, bParam5), fParam1) <= fParam4 * fParam4;
 }
 
-void _CONVERSATION_INITIALIZE_ACTOR(var uParam0, int iParam1, Ped pedParam2, char* sParam3, int iParam4, int iParam5) // Position - 0x32450 (205904)
+void _CONVERSATION_INITIALIZE_ACTOR(var uParam0, int iParam1, Ped pedParam2, char* sParam3, int iParam4, int iParam5) // Position - 0x3248F (205967)
 {
 	uParam0->[iParam1 /*10*/].f_7 == 1;
 	uParam0->[iParam1 /*10*/] = pedParam2;
@@ -42213,7 +42229,7 @@ void _CONVERSATION_INITIALIZE_ACTOR(var uParam0, int iParam1, Ped pedParam2, cha
 	uParam0->[iParam1 /*10*/].f_8 = iParam4;
 	uParam0->[iParam1 /*10*/].f_9 = iParam5;
 
-	if (!Global_79539)
+	if (!Global_79744)
 	{
 		if (!PED::IS_PED_INJURED(pedParam2))
 			if (uParam0->[iParam1 /*10*/].f_8 == 0)
@@ -42231,7 +42247,7 @@ void _CONVERSATION_INITIALIZE_ACTOR(var uParam0, int iParam1, Ped pedParam2, cha
 	return;
 }
 
-BOOL func_404() // Position - 0x324EB (206059)
+BOOL func_404() // Position - 0x3252A (206122)
 {
 	Vector3 offsetFromEntityInWorldCoords;
 
@@ -42246,7 +42262,7 @@ BOOL func_404() // Position - 0x324EB (206059)
 	return false;
 }
 
-void func_405() // Position - 0x32538 (206136)
+void func_405() // Position - 0x32577 (206199)
 {
 	if (func_309())
 		return;
@@ -42290,7 +42306,7 @@ void func_405() // Position - 0x32538 (206136)
 	return;
 }
 
-BOOL func_406(BOOL bParam0) // Position - 0x325CF (206287)
+BOOL func_406(BOOL bParam0) // Position - 0x3260E (206350)
 {
 	if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 		return func_407(fLocal_183, bParam0);
@@ -42298,7 +42314,7 @@ BOOL func_406(BOOL bParam0) // Position - 0x325CF (206287)
 	return func_407(fLocal_182, bParam0);
 }
 
-BOOL func_407(float fParam0, BOOL bParam1) // Position - 0x325F9 (206329)
+BOOL func_407(float fParam0, BOOL bParam1) // Position - 0x32638 (206392)
 {
 	if (func_402(PLAYER::PLAYER_PED_ID(), uLocal_203, fParam0, true) || bParam1 && MISC::GET_GAME_TIMER() > iLocal_564)
 	{
@@ -42310,7 +42326,7 @@ BOOL func_407(float fParam0, BOOL bParam1) // Position - 0x325F9 (206329)
 	return 0;
 }
 
-void func_408() // Position - 0x32633 (206387)
+void func_408() // Position - 0x32672 (206450)
 {
 	if (iLocal_518 < 6)
 	{
@@ -42328,7 +42344,7 @@ void func_408() // Position - 0x32633 (206387)
 	return;
 }
 
-void func_409() // Position - 0x326B0 (206512)
+void func_409() // Position - 0x326EF (206575)
 {
 	func_412();
 	func_408();
@@ -42399,7 +42415,7 @@ void func_409() // Position - 0x326B0 (206512)
 	return;
 }
 
-void func_410() // Position - 0x327D5 (206805)
+void func_410() // Position - 0x32814 (206868)
 {
 	if (func_628(pedLocal_201))
 	{
@@ -42418,19 +42434,19 @@ void func_410() // Position - 0x327D5 (206805)
 	return;
 }
 
-void func_411(var uParam0, float fParam1, float fParam2, float fParam3, float fParam4) // Position - 0x32851 (206929)
+void func_411(var uParam0, float fParam1, float fParam2, float fParam3, float fParam4) // Position - 0x32890 (206992)
 {
 	if (HUD::DOES_BLIP_EXIST(*uParam0))
 	{
-		Global_113171 = *uParam0;
-		Global_113176 = { fParam1 };
-		Global_113180 = fParam4;
+		Global_113380 = *uParam0;
+		Global_113385 = { fParam1 };
+		Global_113389 = fParam4;
 	}
 
 	return;
 }
 
-void func_412() // Position - 0x3287A (206970)
+void func_412() // Position - 0x328B9 (207033)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(pedLocal_201))
 	{
@@ -42446,7 +42462,7 @@ void func_412() // Position - 0x3287A (206970)
 	return;
 }
 
-void func_413() // Position - 0x328B1 (207025)
+void func_413() // Position - 0x328F0 (207088)
 {
 	int num;
 	int num2;
@@ -42665,7 +42681,7 @@ void func_413() // Position - 0x328B1 (207025)
 	return;
 }
 
-void func_414(Ped* ppedParam0, BOOL bParam1, int iParam2, int iParam3) // Position - 0x32E5D (208477)
+void func_414(Ped* ppedParam0, BOOL bParam1, int iParam2, int iParam3) // Position - 0x32E9C (208540)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(*ppedParam0))
 	{
@@ -42688,12 +42704,12 @@ void func_414(Ped* ppedParam0, BOOL bParam1, int iParam2, int iParam3) // Positi
 	return;
 }
 
-BOOL func_415(Ped pedParam0, Entity eParam1, float fParam2, BOOL bParam3) // Position - 0x32EAD (208557)
+BOOL func_415(Ped pedParam0, Entity eParam1, float fParam2, BOOL bParam3) // Position - 0x32EEC (208620)
 {
 	return BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(pedParam0, bParam3), ENTITY::GET_ENTITY_COORDS(eParam1, bParam3)) <= fParam2 * fParam2;
 }
 
-int func_416(Ped pedParam0, int iParam1) // Position - 0x32ECF (208591)
+int func_416(Ped pedParam0, int iParam1) // Position - 0x32F0E (208654)
 {
 	float xSize;
 
@@ -42715,7 +42731,7 @@ int func_416(Ped pedParam0, int iParam1) // Position - 0x32ECF (208591)
 	return 0;
 }
 
-BOOL func_417(Ped pedParam0) // Position - 0x32F45 (208709)
+BOOL func_417(Ped pedParam0) // Position - 0x32F84 (208772)
 {
 	if (PLAYER::IS_PLAYER_FREE_AIMING_AT_ENTITY(PLAYER::PLAYER_ID(), pedParam0) && WEAPON::IS_PED_ARMED(PLAYER::PLAYER_PED_ID(), 6))
 		return true;
@@ -42723,7 +42739,7 @@ BOOL func_417(Ped pedParam0) // Position - 0x32F45 (208709)
 	return false;
 }
 
-void func_418(int iParam0) // Position - 0x32F6D (208749)
+void func_418(int iParam0) // Position - 0x32FAC (208812)
 {
 	iLocal_565 = MISC::GET_GAME_TIMER() + iParam0;
 	AUDIO::TRIGGER_MUSIC_EVENT("MM3_START_FORA");
@@ -42734,12 +42750,12 @@ void func_418(int iParam0) // Position - 0x32F6D (208749)
 	return;
 }
 
-BOOL func_419(Ped pedParam0, int iParam1) // Position - 0x32F9C (208796)
+BOOL func_419(Ped pedParam0, int iParam1) // Position - 0x32FDB (208859)
 {
 	return func_420(pedParam0, PLAYER::PLAYER_PED_ID(), iParam1, 1, 250, 7);
 }
 
-BOOL func_420(Ped pedParam0, Ped pedParam1, float fParam2, int iParam3, int iParam4, int iParam5) // Position - 0x32FB4 (208820)
+BOOL func_420(Ped pedParam0, Ped pedParam1, float fParam2, int iParam3, int iParam4, int iParam5) // Position - 0x32FF3 (208883)
 {
 	BOOL flag;
 	var pedBoneCoords;
@@ -42774,7 +42790,7 @@ BOOL func_420(Ped pedParam0, Ped pedParam1, float fParam2, int iParam3, int iPar
 	return flag || MISC::GET_GAME_TIMER() - iLocal_50[num /*4*/].f_3 < iParam4;
 }
 
-BOOL func_421(var uParam0, Vector3 vParam1, var uParam2, var uParam3, Ped pedParam4, var uParam5, Ped pedParam6, int iParam7) // Position - 0x33075 (209013)
+BOOL func_421(var uParam0, Vector3 vParam1, var uParam2, var uParam3, Ped pedParam4, var uParam5, Ped pedParam6, int iParam7) // Position - 0x330B4 (209076)
 {
 	var hit;
 	var endCoords;
@@ -42849,7 +42865,7 @@ BOOL func_421(var uParam0, Vector3 vParam1, var uParam2, var uParam3, Ped pedPar
 	return 0;
 }
 
-Vector3 func_422(Ped pedParam0, int iParam1) // Position - 0x331A1 (209313)
+Vector3 func_422(Ped pedParam0, int iParam1) // Position - 0x331E0 (209376)
 {
 	int randomIntInRange;
 
@@ -42877,7 +42893,7 @@ Vector3 func_422(Ped pedParam0, int iParam1) // Position - 0x331A1 (209313)
 	return ENTITY::GET_ENTITY_COORDS(pedParam0, true);
 }
 
-int func_423() // Position - 0x33266 (209510)
+int func_423() // Position - 0x332A5 (209573)
 {
 	int i;
 
@@ -42890,7 +42906,7 @@ int func_423() // Position - 0x33266 (209510)
 	return -1;
 }
 
-BOOL func_424(Ped pedParam0, Ped pedParam1, float fParam2, int iParam3) // Position - 0x332B0 (209584)
+BOOL func_424(Ped pedParam0, Ped pedParam1, float fParam2, int iParam3) // Position - 0x332EF (209647)
 {
 	var unk;
 	var entityForwardVector;
@@ -42914,7 +42930,7 @@ BOOL func_424(Ped pedParam0, Ped pedParam1, float fParam2, int iParam3) // Posit
 	return true;
 }
 
-void func_425(var uParam0) // Position - 0x33341 (209729)
+void func_425(var uParam0) // Position - 0x33380 (209792)
 {
 	*uParam0 = 0;
 	uParam0->f_1 = 0;
@@ -42923,7 +42939,7 @@ void func_425(var uParam0) // Position - 0x33341 (209729)
 	return;
 }
 
-int func_426(Ped pedParam0, Ped pedParam1) // Position - 0x3335C (209756)
+int func_426(Ped pedParam0, Ped pedParam1) // Position - 0x3339B (209819)
 {
 	int i;
 
@@ -42936,7 +42952,7 @@ int func_426(Ped pedParam0, Ped pedParam1) // Position - 0x3335C (209756)
 	return -1;
 }
 
-void func_427() // Position - 0x3339B (209819)
+void func_427() // Position - 0x333DA (209882)
 {
 	int i;
 	int num;
@@ -43073,7 +43089,7 @@ void func_427() // Position - 0x3339B (209819)
 	return;
 }
 
-void func_428() // Position - 0x3376C (210796)
+void func_428() // Position - 0x337AB (210859)
 {
 	int i;
 	int taskSequenceId;
@@ -43208,7 +43224,7 @@ void func_428() // Position - 0x3376C (210796)
 	return;
 }
 
-void func_429() // Position - 0x33BFB (211963)
+void func_429() // Position - 0x33C3A (212026)
 {
 	PED::SET_PED_NON_CREATION_AREA(uLocal_324, uLocal_327);
 	iLocal_644 = PED::ADD_SCENARIO_BLOCKING_AREA(uLocal_324, uLocal_327, false, true, true, true, 1);
@@ -43219,7 +43235,7 @@ void func_429() // Position - 0x33BFB (211963)
 	return;
 }
 
-void func_430() // Position - 0x33C69 (212073)
+void func_430() // Position - 0x33CA8 (212136)
 {
 	func_297(hLocal_277);
 	func_297(hLocal_276);
@@ -43235,7 +43251,7 @@ void func_430() // Position - 0x33C69 (212073)
 	return;
 }
 
-void func_431() // Position - 0x33CD2 (212178)
+void func_431() // Position - 0x33D11 (212241)
 {
 	if (iLocal_512 < 4 && INTERIOR::GET_INTERIOR_FROM_ENTITY(PLAYER::PLAYER_PED_ID()) == 0)
 	{
@@ -43255,7 +43271,7 @@ void func_431() // Position - 0x33CD2 (212178)
 	return;
 }
 
-float func_432(Ped pedParam0, Vector3 vParam1, var uParam2, var uParam3, BOOL bParam4) // Position - 0x33D32 (212274)
+float func_432(Ped pedParam0, Vector3 vParam1, var uParam2, var uParam3, BOOL bParam4) // Position - 0x33D71 (212337)
 {
 	Vector3 entityCoords;
 
@@ -43267,7 +43283,7 @@ float func_432(Ped pedParam0, Vector3 vParam1, var uParam2, var uParam3, BOOL bP
 	return MISC::GET_DISTANCE_BETWEEN_COORDS(entityCoords, vParam1, bParam4);
 }
 
-void func_433() // Position - 0x33D6C (212332)
+void func_433() // Position - 0x33DAB (212395)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(veLocal_542))
 	{
@@ -43303,7 +43319,7 @@ void func_433() // Position - 0x33D6C (212332)
 	return;
 }
 
-BOOL func_434(var uParam0, int iParam1) // Position - 0x33E5A (212570)
+BOOL func_434(var uParam0, int iParam1) // Position - 0x33E99 (212633)
 {
 	if (*uParam0 < 0)
 		*uParam0 = MISC::GET_GAME_TIMER() + iParam1;
@@ -43313,14 +43329,14 @@ BOOL func_434(var uParam0, int iParam1) // Position - 0x33E5A (212570)
 	return 0;
 }
 
-void func_435() // Position - 0x33E85 (212613)
+void func_435() // Position - 0x33EC4 (212676)
 {
 	func_297(hLocal_543);
 	func_297(hLocal_549);
 	return;
 }
 
-void func_436() // Position - 0x33E9D (212637)
+void func_436() // Position - 0x33EDC (212700)
 {
 	int taskSequenceId;
 
@@ -43349,7 +43365,7 @@ void func_436() // Position - 0x33E9D (212637)
 		
 			if (func_41(uLocal_109.f_35[1]) && VEHICLE::IS_VEHICLE_SEAT_FREE(uLocal_109.f_35[1], -1, false) && func_415(uLocal_109.f_35[1], uLocal_109.f_28[0], 25f, true))
 			{
-				TASK::TASK_ENTER_VEHICLE(0, uLocal_109.f_35[1], 20000, -1, 1f, 1, 0, 0);
+				TASK::TASK_ENTER_VEHICLE(0, uLocal_109.f_35[1], 20000, -1, 1f, 1, 0);
 				TASK::TASK_VEHICLE_DRIVE_WANDER(0, uLocal_109.f_35[1], 20f, 786469);
 			}
 			else
@@ -43406,7 +43422,7 @@ void func_436() // Position - 0x33E9D (212637)
 	return;
 }
 
-void func_437() // Position - 0x340F9 (213241)
+void func_437() // Position - 0x34138 (213304)
 {
 	func_32(&(pedLocal_201.f_1));
 	pedLocal_201.f_1 = func_438(uLocal_203, 5, false);
@@ -43424,7 +43440,7 @@ void func_437() // Position - 0x340F9 (213241)
 	return;
 }
 
-Blip func_438(Vector3 vParam0, var uParam1, var uParam2, int iParam3, BOOL bParam4) // Position - 0x341B2 (213426)
+Blip func_438(Vector3 vParam0, var uParam1, var uParam2, int iParam3, BOOL bParam4) // Position - 0x341F1 (213489)
 {
 	Blip blip;
 
@@ -43436,7 +43452,7 @@ Blip func_438(Vector3 vParam0, var uParam1, var uParam2, int iParam3, BOOL bPara
 	return blip;
 }
 
-void _SHOW_SUBTITLE_CLEAR_EXISTING(char* sParam0, int iParam1, int iParam2) // Position - 0x341E0 (213472)
+void _SHOW_SUBTITLE_CLEAR_EXISTING(char* sParam0, int iParam1, int iParam2) // Position - 0x3421F (213535)
 {
 	iParam2 = iParam2;
 	HUD::BEGIN_TEXT_COMMAND_PRINT(sParam0);
@@ -43444,7 +43460,7 @@ void _SHOW_SUBTITLE_CLEAR_EXISTING(char* sParam0, int iParam1, int iParam2) // P
 	return;
 }
 
-void func_440(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position - 0x341F9 (213497)
+void func_440(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position - 0x34238 (213560)
 {
 	Player playerIndex;
 
@@ -43476,7 +43492,7 @@ void func_440(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 	return;
 }
 
-void func_441(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4, BOOL bParam5, BOOL bParam6) // Position - 0x342A3 (213667)
+void func_441(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4, BOOL bParam5, BOOL bParam6) // Position - 0x342E2 (213730)
 {
 	if (bParam0)
 	{
@@ -43487,27 +43503,27 @@ void func_441(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPara
 		HUD::THEFEED_FLUSH_QUEUE();
 		HUD::THEFEED_PAUSE();
 	
-		if (Global_21066.f_1 > 3 && !bParam6)
+		if (Global_21222.f_1 > 3 && !bParam6)
 		{
 			if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
 				AUDIO::STOP_SCRIPTED_CONVERSATION(false);
 		
 			if (!func_12())
-				Global_21066.f_1 = 3;
+				Global_21222.f_1 = 3;
 		
-			Global_22425 = 5;
+			Global_22585 = 5;
 		}
 	
 		func_448(true, bParam3, bParam2, false);
-		Global_64314 = 1;
-		Global_76643 = 1;
-		Global_79537 = 1;
+		Global_64512 = 1;
+		Global_76841 = 1;
+		Global_79742 = 1;
 	}
 	else
 	{
 		func_449(0);
 		HUD::THEFEED_RESUME();
-		Global_64314 = 0;
+		Global_64512 = 0;
 	
 		if (bParam1)
 			GRAPHICS::CASCADE_SHADOWS_INIT_SESSION();
@@ -43522,18 +43538,18 @@ void func_441(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPara
 		else if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !func_446(PLAYER::PLAYER_ID()) && !bParam4 && !bParam5)
 			ENTITY::SET_ENTITY_INVINCIBLE(PLAYER::PLAYER_PED_ID(), false, false);
 	
-		Global_79537 = 0;
+		Global_79742 = 0;
 	}
 
 	return;
 }
 
-BOOL func_442() // Position - 0x343F2 (214002)
+BOOL func_442() // Position - 0x34431 (214065)
 {
-	return IS_BIT_SET(Global_1845221[PLAYER::PLAYER_ID() /*889*/].f_36.f_18, 14);
+	return IS_BIT_SET(Global_1845225[PLAYER::PLAYER_ID() /*874*/].f_36.f_18, 14);
 }
 
-BOOL func_443(Player plParam0, int iParam1) // Position - 0x3440C (214028)
+BOOL func_443(Player plParam0, int iParam1) // Position - 0x3444B (214091)
 {
 	BOOL flag;
 
@@ -43543,7 +43559,7 @@ BOOL func_443(Player plParam0, int iParam1) // Position - 0x3440C (214028)
 	if (plParam0 == PLAYER::PLAYER_ID())
 		flag = func_444(-1, false) == 8;
 	else
-		flag = Global_1845221[plParam0 /*889*/].f_206 == 8;
+		flag = Global_1845225[plParam0 /*874*/].f_198 == 8;
 
 	if (iParam1 == 1)
 		if (NETWORK::NETWORK_IS_PLAYER_ACTIVE(plParam0))
@@ -43552,7 +43568,7 @@ BOOL func_443(Player plParam0, int iParam1) // Position - 0x3440C (214028)
 	return flag;
 }
 
-int func_444(int iParam0, BOOL bParam1) // Position - 0x34465 (214117)
+int func_444(int iParam0, BOOL bParam1) // Position - 0x344A4 (214180)
 {
 	int num;
 	int num2;
@@ -43562,21 +43578,21 @@ int func_444(int iParam0, BOOL bParam1) // Position - 0x34465 (214117)
 	if (num2 == -1)
 		num2 = func_62();
 
-	if (Global_1575064[num2] == 1)
+	if (Global_1575066[num2] == 1)
 	{
 		bParam1;
 		num = 8;
 	}
 	else
 	{
-		num = Global_1574920[num2];
+		num = Global_1574921[num2];
 		bParam1;
 	}
 
 	return num;
 }
 
-BOOL func_445(Player plParam0) // Position - 0x344A6 (214182)
+BOOL func_445(Player plParam0) // Position - 0x344E5 (214245)
 {
 	Player player;
 
@@ -43591,7 +43607,7 @@ BOOL func_445(Player plParam0) // Position - 0x344A6 (214182)
 	return true;
 }
 
-BOOL func_446(Player plParam0) // Position - 0x344C8 (214216)
+BOOL func_446(Player plParam0) // Position - 0x34507 (214279)
 {
 	if (func_443(plParam0, 0))
 		return true;
@@ -43600,18 +43616,18 @@ BOOL func_446(Player plParam0) // Position - 0x344C8 (214216)
 		if (plParam0 == PLAYER::PLAYER_ID())
 			return true;
 
-	if (IS_BIT_SET(Global_2657991[plParam0 /*467*/].f_202, 2))
+	if (IS_BIT_SET(Global_2658016[plParam0 /*467*/].f_202, 2))
 		return true;
 
 	return false;
 }
 
-BOOL func_447() // Position - 0x34507 (214279)
+BOOL func_447() // Position - 0x34546 (214342)
 {
 	return IS_BIT_SET(Global_2621446, 3);
 }
 
-int func_448(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Position - 0x34515 (214293)
+int func_448(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Position - 0x34554 (214356)
 {
 	int num;
 
@@ -43629,17 +43645,17 @@ int func_448(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Position
 	return num;
 }
 
-void func_449(int iParam0) // Position - 0x34548 (214344)
+void func_449(int iParam0) // Position - 0x34587 (214407)
 {
 	if (iParam0 == 1)
-		MISC::SET_BIT(&Global_8919, 13);
+		MISC::SET_BIT(&Global_9075, 13);
 	else
-		MISC::CLEAR_BIT(&Global_8919, 13);
+		MISC::CLEAR_BIT(&Global_9075, 13);
 
 	return;
 }
 
-Vector3 func_450(Ped pedParam0, float fParam1, float fParam2, float fParam3) // Position - 0x3456B (214379)
+Vector3 func_450(Ped pedParam0, float fParam1, float fParam2, float fParam3) // Position - 0x345AA (214442)
 {
 	var groundZ;
 
@@ -43654,7 +43670,7 @@ Vector3 func_450(Ped pedParam0, float fParam1, float fParam2, float fParam3) // 
 	return fParam1;
 }
 
-BOOL func_451(Ped pedParam0) // Position - 0x345B1 (214449)
+BOOL func_451(Ped pedParam0) // Position - 0x345F0 (214512)
 {
 	if (!ENTITY::DOES_ENTITY_EXIST(pedParam0))
 		return false;
@@ -43662,7 +43678,7 @@ BOOL func_451(Ped pedParam0) // Position - 0x345B1 (214449)
 	return !ENTITY::IS_ENTITY_DEAD(pedParam0, false);
 }
 
-void func_452() // Position - 0x345CF (214479)
+void func_452() // Position - 0x3460E (214542)
 {
 	func_481();
 
@@ -43723,7 +43739,7 @@ void func_452() // Position - 0x345CF (214479)
 	return;
 }
 
-void func_453() // Position - 0x34708 (214792)
+void func_453() // Position - 0x34747 (214855)
 {
 	func_475("mmb_3_rcm", false);
 
@@ -43782,7 +43798,7 @@ void func_453() // Position - 0x34708 (214792)
 	return;
 }
 
-void func_454(float fParam0, float fParam1, float fParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, BOOL bParam8, BOOL bParam9, BOOL bParam10, int iParam11, BOOL bParam12) // Position - 0x348DA (215258)
+void func_454(float fParam0, float fParam1, float fParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, BOOL bParam8, BOOL bParam9, BOOL bParam10, int iParam11, BOOL bParam12) // Position - 0x34919 (215321)
 {
 	Player playerIndex;
 
@@ -43865,12 +43881,12 @@ void func_454(float fParam0, float fParam1, float fParam2, int iParam3, int iPar
 	return;
 }
 
-Vector3 _GET_PLAYER_COORDS(Player plParam0) // Position - 0x34A98 (215704)
+Vector3 _GET_PLAYER_COORDS(Player plParam0) // Position - 0x34AD7 (215767)
 {
 	return ENTITY::GET_ENTITY_COORDS(PLAYER::GET_PLAYER_PED(plParam0), false);
 }
 
-void func_456(BOOL bParam0) // Position - 0x34AAB (215723)
+void func_456(BOOL bParam0) // Position - 0x34AEA (215786)
 {
 	Player playerIndex;
 
@@ -43890,13 +43906,13 @@ void func_456(BOOL bParam0) // Position - 0x34AAB (215723)
 	return;
 }
 
-void func_457(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, float fParam6, var uParam7, var uParam8, var uParam9, float fParam10, var uParam11, var uParam12, var uParam13, BOOL bParam14, BOOL bParam15, BOOL bParam16, BOOL bParam17, BOOL bParam18) // Position - 0x34AEA (215786)
+void func_457(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, float fParam6, var uParam7, var uParam8, var uParam9, float fParam10, var uParam11, var uParam12, var uParam13, BOOL bParam14, BOOL bParam15, BOOL bParam16, BOOL bParam17, BOOL bParam18) // Position - 0x34B29 (215849)
 {
 	func_458(uParam0, uParam3, fParam6, uParam7, fParam10, uParam11, bParam14, bParam15, bParam16, bParam17, bParam18);
 	return;
 }
 
-void func_458(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uParam4, var uParam5, float fParam6, Vector3 vParam7, var uParam8, var uParam9, float fParam10, float fParam11, var uParam12, var uParam13, BOOL bParam14, BOOL bParam15, BOOL bParam16, BOOL bParam17, BOOL bParam18) // Position - 0x34B14 (215828)
+void func_458(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uParam4, var uParam5, float fParam6, Vector3 vParam7, var uParam8, var uParam9, float fParam10, float fParam11, var uParam12, var uParam13, BOOL bParam14, BOOL bParam15, BOOL bParam16, BOOL bParam17, BOOL bParam18) // Position - 0x34B53 (215891)
 {
 	Vehicle playersLastVehicle;
 	BOOL flag;
@@ -44066,7 +44082,7 @@ void func_458(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uP
 	return;
 }
 
-BOOL func_459(Vehicle veParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, float fParam7) // Position - 0x34F0A (216842)
+BOOL func_459(Vehicle veParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, float fParam7) // Position - 0x34F49 (216905)
 {
 	float num;
 	var unk3;
@@ -44104,7 +44120,7 @@ BOOL func_459(Vehicle veParam0, var uParam1, var uParam2, var uParam3, var uPara
 	return false;
 }
 
-BOOL func_460(float fParam0, var uParam1, var uParam2, float fParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, float fParam9, var uParam10, var uParam11) // Position - 0x35200 (217600)
+BOOL func_460(float fParam0, var uParam1, var uParam2, float fParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, float fParam9, var uParam10, var uParam11) // Position - 0x3523F (217663)
 {
 	float num;
 	float num2;
@@ -44142,7 +44158,7 @@ BOOL func_460(float fParam0, var uParam1, var uParam2, float fParam3, var uParam
 	return false;
 }
 
-void func_461(Vehicle veParam0) // Position - 0x352B4 (217780)
+void func_461(Vehicle veParam0) // Position - 0x352F3 (217843)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(veParam0))
 	{
@@ -44162,12 +44178,12 @@ void func_461(Vehicle veParam0) // Position - 0x352B4 (217780)
 	return;
 }
 
-Vector3 func_462() // Position - 0x35319 (217881)
+Vector3 func_462() // Position - 0x35358 (217944)
 {
 	return 2.55f, 5.665f, 2.55f;
 }
 
-void func_463() // Position - 0x35330 (217904)
+void func_463() // Position - 0x3536F (217967)
 {
 	int num;
 
@@ -44176,11 +44192,11 @@ void func_463() // Position - 0x35330 (217904)
 	if (num == -1)
 		return;
 
-	Global_113222[num /*10*/] = 1;
+	Global_113431[num /*10*/] = 1;
 	return;
 }
 
-void func_464(int iParam0, BOOL bParam1) // Position - 0x35350 (217936)
+void func_464(int iParam0, BOOL bParam1) // Position - 0x3538F (217999)
 {
 	if (CAM::IS_SCREEN_FADED_OUT() || CAM::IS_SCREEN_FADING_OUT())
 		if (!CAM::IS_SCREEN_FADING_IN())
@@ -44197,7 +44213,7 @@ void func_464(int iParam0, BOOL bParam1) // Position - 0x35350 (217936)
 	return;
 }
 
-Object func_465(Ped pedParam0, Hash hParam1, int iParam2, BOOL bParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8) // Position - 0x3538C (217996)
+Object func_465(Ped pedParam0, Hash hParam1, int iParam2, BOOL bParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8) // Position - 0x353CB (218059)
 {
 	BOOL showWorldModel;
 	Object weaponObject;
@@ -44274,7 +44290,7 @@ Object func_465(Ped pedParam0, Hash hParam1, int iParam2, BOOL bParam3, int iPar
 	return weaponObject;
 }
 
-void func_466(Object obParam0, Hash hParam1) // Position - 0x35500 (218368)
+void func_466(Object obParam0, Hash hParam1) // Position - 0x3553F (218431)
 {
 	Hash componentHash;
 
@@ -44286,7 +44302,7 @@ void func_466(Object obParam0, Hash hParam1) // Position - 0x35500 (218368)
 	return;
 }
 
-Hash func_467(Hash hParam0) // Position - 0x3551E (218398)
+Hash func_467(Hash hParam0) // Position - 0x3555D (218461)
 {
 	switch (hParam0)
 	{
@@ -44363,7 +44379,7 @@ Hash func_467(Hash hParam0) // Position - 0x3551E (218398)
 	return 0;
 }
 
-BOOL func_468(Hash hParam0) // Position - 0x356B5 (218805)
+BOOL func_468(Hash hParam0) // Position - 0x356F4 (218868)
 {
 	if (hParam0 == joaat("COMPONENT_PISTOL_VARMOD_LUXE") || hParam0 == joaat("COMPONENT_COMBATPISTOL_VARMOD_LOWRIDER") || hParam0 == joaat("COMPONENT_APPISTOL_VARMOD_LUXE") || hParam0 == joaat("COMPONENT_MICROSMG_VARMOD_LUXE") || hParam0 == joaat("COMPONENT_SMG_VARMOD_LUXE") || hParam0 == joaat("COMPONENT_ASSAULTRIFLE_VARMOD_LUXE") || hParam0 == joaat("COMPONENT_CARBINERIFLE_VARMOD_LUXE") || hParam0 == joaat("COMPONENT_ADVANCEDRIFLE_VARMOD_LUXE") || hParam0 == joaat("COMPONENT_MG_VARMOD_LOWRIDER") || hParam0 == joaat("COMPONENT_COMBATMG_VARMOD_LOWRIDER") || hParam0 == joaat("COMPONENT_PUMPSHOTGUN_VARMOD_LOWRIDER") || hParam0 == joaat("COMPONENT_SNIPERRIFLE_VARMOD_LUXE") || hParam0 == joaat("COMPONENT_ASSAULTSMG_VARMOD_LOWRIDER") || hParam0 == joaat("COMPONENT_PISTOL50_VARMOD_LUXE") || hParam0 == joaat("COMPONENT_SAWNOFFSHOTGUN_VARMOD_LUXE") || hParam0 == joaat("COMPONENT_BULLPUPRIFLE_VARMOD_LOW") || hParam0 == joaat("COMPONENT_SNSPISTOL_VARMOD_LOWRIDER") || hParam0 == joaat("COMPONENT_SPECIALCARBINE_VARMOD_LOWRIDER") || hParam0 == joaat("COMPONENT_SAWNOFFSHOTGUN_VARMOD_LUXE") || hParam0 == joaat("COMPONENT_KNUCKLE_VARMOD_PIMP") || hParam0 == joaat("COMPONENT_KNUCKLE_VARMOD_BALLAS") || hParam0 == joaat("COMPONENT_KNUCKLE_VARMOD_DOLLAR") || hParam0 == joaat("COMPONENT_KNUCKLE_VARMOD_DIAMOND") || hParam0 == joaat("COMPONENT_KNUCKLE_VARMOD_HATE") || hParam0 == joaat("COMPONENT_KNUCKLE_VARMOD_LOVE") || hParam0 == joaat("COMPONENT_KNUCKLE_VARMOD_PLAYER") || hParam0 == joaat("COMPONENT_KNUCKLE_VARMOD_KING") || hParam0 == joaat("COMPONENT_KNUCKLE_VARMOD_VAGOS") || hParam0 == joaat("COMPONENT_SWITCHBLADE_VARMOD_VAR1") || hParam0 == joaat("COMPONENT_SWITCHBLADE_VARMOD_VAR2") || hParam0 == joaat("COMPONENT_REVOLVER_VARMOD_BOSS") || hParam0 == joaat("COMPONENT_REVOLVER_VARMOD_GOON") || hParam0 == joaat("COMPONENT_GUNRUN_MK2_UPGRADE") || hParam0 == joaat("COMPONENT_APPISTOL_VARMOD_SECURITY") || hParam0 == joaat("COMPONENT_PUMPSHOTGUN_VARMOD_SECURITY") || hParam0 == joaat("COMPONENT_MICROSMG_VARMOD_SECURITY") || hParam0 == joaat("COMPONENT_PUMPSHOTGUN_VARMOD_XM3"))
 		return true;
@@ -44371,7 +44387,7 @@ BOOL func_468(Hash hParam0) // Position - 0x356B5 (218805)
 	return false;
 }
 
-void func_469() // Position - 0x358C5 (219333)
+void func_469() // Position - 0x35904 (219396)
 {
 	uLocal_214[0 /*3*/] = { 433.29074f, 6508.464f, 28.314806f };
 	uLocal_230[0] = 81.59f;
@@ -44397,7 +44413,7 @@ void func_469() // Position - 0x358C5 (219333)
 	return;
 }
 
-BOOL func_470(int iParam0, int iParam1, int iParam2) // Position - 0x35A41 (219713)
+BOOL func_470(int iParam0, int iParam1, int iParam2) // Position - 0x35A80 (219776)
 {
 	int num;
 
@@ -44445,7 +44461,7 @@ BOOL func_470(int iParam0, int iParam1, int iParam2) // Position - 0x35A41 (2197
 	return true;
 }
 
-void func_471() // Position - 0x35B15 (219925)
+void func_471() // Position - 0x35B54 (219988)
 {
 	PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_SPRINT, true);
 	PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_SELECT_WEAPON, true);
@@ -44459,7 +44475,7 @@ void func_471() // Position - 0x35B15 (219925)
 	return;
 }
 
-BOOL func_472(Vehicle veParam0, int iParam1, int iParam2, int iParam3, BOOL bParam4, BOOL bParam5, BOOL bParam6) // Position - 0x35B66 (220006)
+BOOL func_472(Vehicle veParam0, int iParam1, int iParam2, int iParam3, BOOL bParam4, BOOL bParam5, BOOL bParam6) // Position - 0x35BA5 (220069)
 {
 	func_474(bParam5, bParam6);
 	func_473(veParam0);
@@ -44476,7 +44492,7 @@ BOOL func_472(Vehicle veParam0, int iParam1, int iParam2, int iParam3, BOOL bPar
 	return false;
 }
 
-void func_473(Vehicle veParam0) // Position - 0x35BBD (220093)
+void func_473(Vehicle veParam0) // Position - 0x35BFC (220156)
 {
 	if (!ENTITY::IS_ENTITY_DEAD(veParam0, false))
 		if (VEHICLE::GET_HAS_ROCKET_BOOST(veParam0))
@@ -44486,7 +44502,7 @@ void func_473(Vehicle veParam0) // Position - 0x35BBD (220093)
 	return;
 }
 
-void func_474(BOOL bParam0, BOOL bParam1) // Position - 0x35BE9 (220137)
+void func_474(BOOL bParam0, BOOL bParam1) // Position - 0x35C28 (220200)
 {
 	PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_VEH_ACCELERATE, true);
 	PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_VEH_BRAKE, true);
@@ -44539,27 +44555,27 @@ void func_474(BOOL bParam0, BOOL bParam1) // Position - 0x35BE9 (220137)
 	return;
 }
 
-void func_475(char* sParam0, BOOL bParam1) // Position - 0x35D3A (220474)
+void func_475(char* sParam0, BOOL bParam1) // Position - 0x35D79 (220537)
 {
 	func_456(bParam1);
 	CUTSCENE::REQUEST_CUTSCENE(sParam0, 8);
 	return;
 }
 
-BOOL func_476() // Position - 0x35D50 (220496)
+BOOL func_476() // Position - 0x35D8F (220559)
 {
 	BOOL hasCutsceneLoaded;
 
 	hasCutsceneLoaded = CUTSCENE::HAS_CUTSCENE_LOADED();
 
-	if (!Global_79538)
+	if (!Global_79743)
 		if (!hasCutsceneLoaded)
-			Global_79538 = true;
+			Global_79743 = true;
 
 	return hasCutsceneLoaded;
 }
 
-void func_477(int iParam0, BOOL bParam1) // Position - 0x35D73 (220531)
+void func_477(int iParam0, BOOL bParam1) // Position - 0x35DB2 (220594)
 {
 	if (bParam1)
 		if (!func_356(iParam0, 2, true))
@@ -44570,7 +44586,7 @@ void func_477(int iParam0, BOOL bParam1) // Position - 0x35D73 (220531)
 	return;
 }
 
-void func_478(int iParam0, int iParam1, BOOL bParam2) // Position - 0x35DAA (220586)
+void func_478(int iParam0, int iParam1, BOOL bParam2) // Position - 0x35DE9 (220649)
 {
 	int address;
 
@@ -44579,7 +44595,7 @@ void func_478(int iParam0, int iParam1, BOOL bParam2) // Position - 0x35DAA (220
 
 	if (bParam2)
 	{
-		MISC::CLEAR_BIT(&Global_101740.f_1421[iParam0], iParam1);
+		MISC::CLEAR_BIT(&Global_101945.f_1421[iParam0], iParam1);
 	}
 	else if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
@@ -44592,13 +44608,13 @@ void func_478(int iParam0, int iParam1, BOOL bParam2) // Position - 0x35DAA (220
 	}
 	else
 	{
-		MISC::CLEAR_BIT(&Global_114135.f_668[iParam0], iParam1);
+		MISC::CLEAR_BIT(&Global_114344.f_668[iParam0], iParam1);
 	}
 
 	return;
 }
 
-void func_479(int iParam0, int iParam1, BOOL bParam2) // Position - 0x35E1A (220698)
+void func_479(int iParam0, int iParam1, BOOL bParam2) // Position - 0x35E59 (220761)
 {
 	int address;
 
@@ -44607,7 +44623,7 @@ void func_479(int iParam0, int iParam1, BOOL bParam2) // Position - 0x35E1A (220
 
 	if (bParam2)
 	{
-		MISC::SET_BIT(&Global_101740.f_1421[iParam0], iParam1);
+		MISC::SET_BIT(&Global_101945.f_1421[iParam0], iParam1);
 	}
 	else if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
@@ -44620,13 +44636,13 @@ void func_479(int iParam0, int iParam1, BOOL bParam2) // Position - 0x35E1A (220
 	}
 	else
 	{
-		MISC::SET_BIT(&Global_114135.f_668[iParam0], iParam1);
+		MISC::SET_BIT(&Global_114344.f_668[iParam0], iParam1);
 	}
 
 	return;
 }
 
-void func_480() // Position - 0x35E8A (220810)
+void func_480() // Position - 0x35EC9 (220873)
 {
 	if (func_402(PLAYER::PLAYER_PED_ID(), -303.6752f, 6212.527f, 30.455961f, 2f, true))
 	{
@@ -44641,7 +44657,7 @@ void func_480() // Position - 0x35E8A (220810)
 	return;
 }
 
-void func_481() // Position - 0x35EF8 (220920)
+void func_481() // Position - 0x35F37 (220983)
 {
 	func_483(0);
 	func_471();
@@ -44649,7 +44665,7 @@ void func_481() // Position - 0x35EF8 (220920)
 	return;
 }
 
-void func_482() // Position - 0x35F0D (220941)
+void func_482() // Position - 0x35F4C (221004)
 {
 	if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
@@ -44660,92 +44676,92 @@ void func_482() // Position - 0x35F0D (220941)
 	return;
 }
 
-void func_483(int iParam0) // Position - 0x35F65 (221029)
+void func_483(int iParam0) // Position - 0x35FA4 (221092)
 {
 	if (func_487())
 		return;
 
-	if (!(Global_21066.f_1 == 1))
+	if (!(Global_21222.f_1 == 1))
 	{
 		if (func_276(0))
 			func_484(iParam0);
 	
-		MISC::SET_BIT(&Global_8920, 2);
+		MISC::SET_BIT(&Global_9076, 2);
 	}
 
 	return;
 }
 
-void func_484(int iParam0) // Position - 0x35F98 (221080)
+void func_484(int iParam0) // Position - 0x35FD7 (221143)
 {
 	if (func_487())
 		return;
 
-	if (Global_21284)
+	if (Global_21444)
 		if (func_486())
 			func_485(true, true);
 		else
 			func_485(false, false);
 
-	if (Global_21066.f_1 == 10 || Global_21066.f_1 == 9)
-		MISC::SET_BIT(&Global_8920, 16);
+	if (Global_21222.f_1 == 10 || Global_21222.f_1 == 9)
+		MISC::SET_BIT(&Global_9076, 16);
 
 	if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
 		AUDIO::STOP_SCRIPTED_CONVERSATION(false);
 
-	Global_22425 = 5;
+	Global_22585 = 5;
 
 	if (iParam0 == 1)
-		MISC::SET_BIT(&Global_8919, 30);
+		MISC::SET_BIT(&Global_9075, 30);
 	else
-		MISC::CLEAR_BIT(&Global_8919, 30);
+		MISC::CLEAR_BIT(&Global_9075, 30);
 
 	if (!func_12())
-		Global_21066.f_1 = 3;
+		Global_21222.f_1 = 3;
 
 	return;
 }
 
-void func_485(BOOL bParam0, BOOL bParam1) // Position - 0x36022 (221218)
+void func_485(BOOL bParam0, BOOL bParam1) // Position - 0x36061 (221281)
 {
 	if (bParam0)
 	{
 		if (func_276(0))
 		{
-			Global_21284 = true;
+			Global_21444 = true;
 		
 			if (bParam1)
-				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_21003);
+				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_21159);
 		
-			Global_20994 = { Global_21012[Global_21011 /*3*/] };
-			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20994);
+			Global_21150 = { Global_21168[Global_21167 /*3*/] };
+			MOBILE::SET_MOBILE_PHONE_POSITION(Global_21150);
 		}
 	}
-	else if (Global_21284 == true)
+	else if (Global_21444 == true)
 	{
-		Global_21284 = false;
-		Global_20994 = { Global_21019[Global_21011 /*3*/] };
+		Global_21444 = false;
+		Global_21150 = { Global_21175[Global_21167 /*3*/] };
 	
 		if (bParam1)
-			MOBILE::SET_MOBILE_PHONE_POSITION(Global_21003);
+			MOBILE::SET_MOBILE_PHONE_POSITION(Global_21159);
 		else
-			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20994);
+			MOBILE::SET_MOBILE_PHONE_POSITION(Global_21150);
 	}
 
 	return;
 }
 
-BOOL func_486() // Position - 0x36096 (221334)
+BOOL func_486() // Position - 0x360D5 (221397)
 {
-	return IS_BIT_SET(Global_1957675, 5);
+	return IS_BIT_SET(Global_1959772, 5);
 }
 
-BOOL func_487() // Position - 0x360A4 (221348)
+BOOL func_487() // Position - 0x360E3 (221411)
 {
-	return IS_BIT_SET(Global_1957675, 19);
+	return IS_BIT_SET(Global_1959772, 19);
 }
 
-void func_488() // Position - 0x360B3 (221363)
+void func_488() // Position - 0x360F2 (221426)
 {
 	int num;
 	var unk;
@@ -44801,7 +44817,7 @@ void func_488() // Position - 0x360B3 (221363)
 		
 			num = func_665();
 		
-			if (Global_95840 == true)
+			if (Global_96045 == true)
 				num = num + 1;
 		
 			func_46(&uLocal_109.f_41[1]);
@@ -44848,7 +44864,7 @@ void func_488() // Position - 0x360B3 (221363)
 	return;
 }
 
-void func_489(int iParam0, int iParam1, int iParam2) // Position - 0x363B2 (222130)
+void func_489(int iParam0, int iParam1, int iParam2) // Position - 0x363F1 (222193)
 {
 	func_440(0, 0, iParam2, true);
 
@@ -44864,11 +44880,11 @@ void func_489(int iParam0, int iParam1, int iParam2) // Position - 0x363B2 (2221
 	return;
 }
 
-void func_490(Vehicle veParam0, int iParam1, int iParam2) // Position - 0x363E6 (222182)
+void func_490(Vehicle veParam0, int iParam1, int iParam2) // Position - 0x36425 (222245)
 {
 	if (func_666() && func_491())
 	{
-		while (Global_101683 != 6)
+		while (Global_101888 != 6)
 		{
 			BUILTIN::WAIT(0);
 		}
@@ -44910,12 +44926,12 @@ void func_490(Vehicle veParam0, int iParam1, int iParam2) // Position - 0x363E6 
 	return;
 }
 
-BOOL func_491() // Position - 0x364AA (222378)
+BOOL func_491() // Position - 0x364E9 (222441)
 {
-	return IS_BIT_SET(Global_101688.f_20, 13);
+	return IS_BIT_SET(Global_101893.f_20, 13);
 }
 
-void func_492(var uParam0, float fParam1, float fParam2, float fParam3, float fParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9, Hash hParam10, int iParam11, eCharacter echParam12, int iParam13) // Position - 0x364BB (222395)
+void func_492(var uParam0, float fParam1, float fParam2, float fParam3, float fParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9, Hash hParam10, int iParam11, eCharacter echParam12, int iParam13) // Position - 0x364FA (222458)
 {
 	int num;
 
@@ -44943,8 +44959,8 @@ void func_492(var uParam0, float fParam1, float fParam2, float fParam3, float fP
 	{
 		if (func_280(fParam1, 0f, 0f, 0f, false))
 		{
-			fParam1 = { Global_107680.f_2890 };
-			fParam4 = Global_107680.f_2890.f_6;
+			fParam1 = { Global_107887.f_2890 };
+			fParam4 = Global_107887.f_2890.f_6;
 		}
 	
 		MISC::CLEAR_AREA(fParam1, 5f, true, false, false, false);
@@ -44992,7 +45008,7 @@ void func_492(var uParam0, float fParam1, float fParam2, float fParam3, float fP
 	return;
 }
 
-BOOL func_493(var uParam0, eCharacter echParam1, Vector3 vParam2, var uParam3, var uParam4, float fParam5, BOOL bParam6, int iParam7) // Position - 0x3664F (222799)
+BOOL func_493(var uParam0, eCharacter echParam1, Vector3 vParam2, var uParam3, var uParam4, float fParam5, BOOL bParam6, int iParam7) // Position - 0x3668E (222862)
 {
 	int plateIndex;
 	var plateText;
@@ -45019,16 +45035,16 @@ BOOL func_493(var uParam0, eCharacter echParam1, Vector3 vParam2, var uParam3, v
 			return true;
 		}
 	
-		if (echParam1 == CHAR_MICHAEL && !Global_114135.f_2367.f_539.f_4316 && Global_114135.f_9089.f_99.f_58[131])
-			Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/] = 0;
+		if (echParam1 == CHAR_MICHAEL && !Global_114344.f_2367.f_539.f_4316 && Global_114344.f_9089.f_99.f_58[131])
+			Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/] = 0;
 	
-		if (Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/] == model)
+		if (Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/] == model)
 		{
-			STREAMING::REQUEST_MODEL(Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/]);
+			STREAMING::REQUEST_MODEL(Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/]);
 		
-			if (STREAMING::HAS_MODEL_LOADED(Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/]))
+			if (STREAMING::HAS_MODEL_LOADED(Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/]))
 			{
-				*uParam0 = VEHICLE::CREATE_VEHICLE(Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/], vParam2, fParam5, false, false, false);
+				*uParam0 = VEHICLE::CREATE_VEHICLE(Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/], vParam2, fParam5, false, false, false);
 				VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(*uParam0, 1084227584);
 				VEHICLE::SET_VEHICLE_NOT_STEALABLE_AMBIENTLY(*uParam0, false);
 				VEHICLE::SET_VEHICLE_CAN_SAVE_IN_GARAGE(*uParam0, false);
@@ -45037,17 +45053,17 @@ BOOL func_493(var uParam0, eCharacter echParam1, Vector3 vParam2, var uParam3, v
 				VEHICLE::SET_VEHICLE_ENGINE_HEALTH(*uParam0, 1250f);
 				VEHICLE::SET_VEHICLE_PETROL_TANK_HEALTH(*uParam0, 1250f);
 				model.f_3 = 1250;
-				VEHICLE::SET_VEHICLE_COLOURS(*uParam0, Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_5, Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_6);
-				VEHICLE::SET_VEHICLE_EXTRA_COLOURS(*uParam0, Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_7, Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_8);
+				VEHICLE::SET_VEHICLE_COLOURS(*uParam0, Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_5, Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_6);
+				VEHICLE::SET_VEHICLE_EXTRA_COLOURS(*uParam0, Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_7, Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_8);
 				VEHICLE::SET_VEHICLE_DIRT_LEVEL(*uParam0, model.f_2);
 			
 				for (i = 0; i < 12; i = i + 1)
 				{
-					VEHICLE::SET_VEHICLE_EXTRA(*uParam0, i + 1, !Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_11[i]);
+					VEHICLE::SET_VEHICLE_EXTRA(*uParam0, i + 1, !Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_11[i]);
 				}
 			
-				if (Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_24)
-					VEHICLE::SET_CONVERTIBLE_ROOF(*uParam0, Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_24);
+				if (Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_24)
+					VEHICLE::SET_CONVERTIBLE_ROOF(*uParam0, Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_24);
 			
 				if (func_567(&plateText, &plateIndex))
 				{
@@ -45056,33 +45072,33 @@ BOOL func_493(var uParam0, eCharacter echParam1, Vector3 vParam2, var uParam3, v
 				}
 				else
 				{
-					VEHICLE::SET_VEHICLE_NUMBER_PLATE_TEXT(*uParam0, &(Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_27));
+					VEHICLE::SET_VEHICLE_NUMBER_PLATE_TEXT(*uParam0, &(Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_27));
 				
-					if (Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_26 >= 0 && Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_26 < VEHICLE::GET_NUMBER_OF_VEHICLE_NUMBER_PLATES())
-						VEHICLE::SET_VEHICLE_NUMBER_PLATE_TEXT_INDEX(*uParam0, Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_26);
+					if (Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_26 >= 0 && Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_26 < VEHICLE::GET_NUMBER_OF_VEHICLE_NUMBER_PLATES())
+						VEHICLE::SET_VEHICLE_NUMBER_PLATE_TEXT_INDEX(*uParam0, Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_26);
 				}
 			
-				VEHICLE::SET_VEHICLE_TYRE_SMOKE_COLOR(*uParam0, Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_84, Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_85, Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_86);
-				VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(*uParam0, Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_88);
-				VEHICLE::SET_VEHICLE_WINDOW_TINT(*uParam0, Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_87);
-				VEHICLE::SET_VEHICLE_NEON_COLOUR(*uParam0, Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_93, Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_94, Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_95);
-				VEHICLE::SET_VEHICLE_NEON_ENABLED(*uParam0, 2, IS_BIT_SET(Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_92, 28));
-				VEHICLE::SET_VEHICLE_NEON_ENABLED(*uParam0, 3, IS_BIT_SET(Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_92, 29));
-				VEHICLE::SET_VEHICLE_NEON_ENABLED(*uParam0, 0, IS_BIT_SET(Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_92, 30));
-				VEHICLE::SET_VEHICLE_NEON_ENABLED(*uParam0, 1, IS_BIT_SET(Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_92, 31));
+				VEHICLE::SET_VEHICLE_TYRE_SMOKE_COLOR(*uParam0, Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_84, Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_85, Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_86);
+				VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(*uParam0, Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_88);
+				VEHICLE::SET_VEHICLE_WINDOW_TINT(*uParam0, Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_87);
+				VEHICLE::SET_VEHICLE_NEON_COLOUR(*uParam0, Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_93, Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_94, Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_95);
+				VEHICLE::SET_VEHICLE_NEON_ENABLED(*uParam0, 2, IS_BIT_SET(Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_92, 28));
+				VEHICLE::SET_VEHICLE_NEON_ENABLED(*uParam0, 3, IS_BIT_SET(Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_92, 29));
+				VEHICLE::SET_VEHICLE_NEON_ENABLED(*uParam0, 0, IS_BIT_SET(Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_92, 30));
+				VEHICLE::SET_VEHICLE_NEON_ENABLED(*uParam0, 1, IS_BIT_SET(Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_92, 31));
 			
-				if (VEHICLE::GET_VEHICLE_LIVERY_COUNT(*uParam0) > 1 && Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_89 >= 0)
-					VEHICLE::SET_VEHICLE_LIVERY(*uParam0, Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_89);
+				if (VEHICLE::GET_VEHICLE_LIVERY_COUNT(*uParam0) > 1 && Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_89 >= 0)
+					VEHICLE::SET_VEHICLE_LIVERY(*uParam0, Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_89);
 			
-				if (Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_90 > -1)
+				if (Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_90 > -1)
 					if (!VEHICLE::IS_THIS_MODEL_A_BICYCLE(ENTITY::GET_ENTITY_MODEL(*uParam0)))
 						if (VEHICLE::IS_THIS_MODEL_A_BIKE(ENTITY::GET_ENTITY_MODEL(*uParam0)))
-							if (Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_90 == 6)
-								VEHICLE::SET_VEHICLE_WHEEL_TYPE(*uParam0, Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_90);
+							if (Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_90 == 6)
+								VEHICLE::SET_VEHICLE_WHEEL_TYPE(*uParam0, Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_90);
 						else
-							VEHICLE::SET_VEHICLE_WHEEL_TYPE(*uParam0, Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_90);
+							VEHICLE::SET_VEHICLE_WHEEL_TYPE(*uParam0, Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_90);
 			
-				func_559(uParam0, &(Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_31), &(Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_81));
+				func_559(uParam0, &(Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_31), &(Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/].f_81));
 				VEHICLE::SET_VEHICLE_ENVEFF_SCALE(*uParam0, model.f_96);
 			
 				if (echParam1 == CHAR_TREVOR)
@@ -45090,19 +45106,19 @@ BOOL func_493(var uParam0, eCharacter echParam1, Vector3 vParam2, var uParam3, v
 						func_557(uParam0);
 			
 				if (bParam6)
-					STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Global_114135.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/]);
+					STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Global_114344.f_2367.f_539.f_2407[0 /*295*/][echParam1 /*98*/]);
 			
 				func_556(*uParam0, echParam1);
 				return true;
 			}
 		}
-		else if (Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/] == model)
+		else if (Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/] == model)
 		{
-			STREAMING::REQUEST_MODEL(Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/]);
+			STREAMING::REQUEST_MODEL(Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/]);
 		
-			if (STREAMING::HAS_MODEL_LOADED(Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/]))
+			if (STREAMING::HAS_MODEL_LOADED(Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/]))
 			{
-				*uParam0 = VEHICLE::CREATE_VEHICLE(Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/], vParam2, fParam5, false, false, false);
+				*uParam0 = VEHICLE::CREATE_VEHICLE(Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/], vParam2, fParam5, false, false, false);
 				VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(*uParam0, 1084227584);
 				VEHICLE::SET_VEHICLE_NOT_STEALABLE_AMBIENTLY(*uParam0, false);
 				VEHICLE::SET_VEHICLE_CAN_SAVE_IN_GARAGE(*uParam0, false);
@@ -45111,17 +45127,17 @@ BOOL func_493(var uParam0, eCharacter echParam1, Vector3 vParam2, var uParam3, v
 				VEHICLE::SET_VEHICLE_ENGINE_HEALTH(*uParam0, 1250f);
 				VEHICLE::SET_VEHICLE_PETROL_TANK_HEALTH(*uParam0, 1250f);
 				model.f_3 = 1250;
-				VEHICLE::SET_VEHICLE_COLOURS(*uParam0, Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_5, Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_6);
-				VEHICLE::SET_VEHICLE_EXTRA_COLOURS(*uParam0, Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_7, Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_8);
+				VEHICLE::SET_VEHICLE_COLOURS(*uParam0, Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_5, Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_6);
+				VEHICLE::SET_VEHICLE_EXTRA_COLOURS(*uParam0, Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_7, Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_8);
 				VEHICLE::SET_VEHICLE_DIRT_LEVEL(*uParam0, model.f_2);
 			
 				for (j = 0; j < 12; j = j + 1)
 				{
-					VEHICLE::SET_VEHICLE_EXTRA(*uParam0, j + 1, !Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_11[j]);
+					VEHICLE::SET_VEHICLE_EXTRA(*uParam0, j + 1, !Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_11[j]);
 				}
 			
-				if (Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_24)
-					VEHICLE::SET_CONVERTIBLE_ROOF(*uParam0, Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_24);
+				if (Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_24)
+					VEHICLE::SET_CONVERTIBLE_ROOF(*uParam0, Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_24);
 			
 				if (func_567(&plateText, &plateIndex))
 				{
@@ -45130,33 +45146,33 @@ BOOL func_493(var uParam0, eCharacter echParam1, Vector3 vParam2, var uParam3, v
 				}
 				else
 				{
-					VEHICLE::SET_VEHICLE_NUMBER_PLATE_TEXT(*uParam0, &(Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_27));
+					VEHICLE::SET_VEHICLE_NUMBER_PLATE_TEXT(*uParam0, &(Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_27));
 				
-					if (Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_26 >= 0 && Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_26 < VEHICLE::GET_NUMBER_OF_VEHICLE_NUMBER_PLATES())
-						VEHICLE::SET_VEHICLE_NUMBER_PLATE_TEXT_INDEX(*uParam0, Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_26);
+					if (Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_26 >= 0 && Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_26 < VEHICLE::GET_NUMBER_OF_VEHICLE_NUMBER_PLATES())
+						VEHICLE::SET_VEHICLE_NUMBER_PLATE_TEXT_INDEX(*uParam0, Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_26);
 				}
 			
-				VEHICLE::SET_VEHICLE_TYRE_SMOKE_COLOR(*uParam0, Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_84, Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_85, Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_86);
-				VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(*uParam0, Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_88);
-				VEHICLE::SET_VEHICLE_WINDOW_TINT(*uParam0, Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_87);
-				VEHICLE::SET_VEHICLE_NEON_COLOUR(*uParam0, Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_93, Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_94, Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_95);
-				VEHICLE::SET_VEHICLE_NEON_ENABLED(*uParam0, 2, IS_BIT_SET(Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_92, 28));
-				VEHICLE::SET_VEHICLE_NEON_ENABLED(*uParam0, 3, IS_BIT_SET(Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_92, 29));
-				VEHICLE::SET_VEHICLE_NEON_ENABLED(*uParam0, 0, IS_BIT_SET(Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_92, 30));
-				VEHICLE::SET_VEHICLE_NEON_ENABLED(*uParam0, 1, IS_BIT_SET(Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_92, 31));
+				VEHICLE::SET_VEHICLE_TYRE_SMOKE_COLOR(*uParam0, Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_84, Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_85, Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_86);
+				VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(*uParam0, Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_88);
+				VEHICLE::SET_VEHICLE_WINDOW_TINT(*uParam0, Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_87);
+				VEHICLE::SET_VEHICLE_NEON_COLOUR(*uParam0, Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_93, Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_94, Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_95);
+				VEHICLE::SET_VEHICLE_NEON_ENABLED(*uParam0, 2, IS_BIT_SET(Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_92, 28));
+				VEHICLE::SET_VEHICLE_NEON_ENABLED(*uParam0, 3, IS_BIT_SET(Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_92, 29));
+				VEHICLE::SET_VEHICLE_NEON_ENABLED(*uParam0, 0, IS_BIT_SET(Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_92, 30));
+				VEHICLE::SET_VEHICLE_NEON_ENABLED(*uParam0, 1, IS_BIT_SET(Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_92, 31));
 			
-				if (VEHICLE::GET_VEHICLE_LIVERY_COUNT(*uParam0) > 1 && Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_89 >= 0)
-					VEHICLE::SET_VEHICLE_LIVERY(*uParam0, Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_89);
+				if (VEHICLE::GET_VEHICLE_LIVERY_COUNT(*uParam0) > 1 && Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_89 >= 0)
+					VEHICLE::SET_VEHICLE_LIVERY(*uParam0, Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_89);
 			
-				if (Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_90 > -1)
+				if (Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_90 > -1)
 					if (!VEHICLE::IS_THIS_MODEL_A_BICYCLE(ENTITY::GET_ENTITY_MODEL(*uParam0)))
 						if (VEHICLE::IS_THIS_MODEL_A_BIKE(ENTITY::GET_ENTITY_MODEL(*uParam0)))
-							if (Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_90 == 6)
-								VEHICLE::SET_VEHICLE_WHEEL_TYPE(*uParam0, Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_90);
+							if (Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_90 == 6)
+								VEHICLE::SET_VEHICLE_WHEEL_TYPE(*uParam0, Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_90);
 						else
-							VEHICLE::SET_VEHICLE_WHEEL_TYPE(*uParam0, Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_90);
+							VEHICLE::SET_VEHICLE_WHEEL_TYPE(*uParam0, Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_90);
 			
-				func_559(uParam0, &(Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_31), &(Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_81));
+				func_559(uParam0, &(Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_31), &(Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/].f_81));
 				VEHICLE::SET_VEHICLE_ENVEFF_SCALE(*uParam0, model.f_96);
 			
 				if (echParam1 == CHAR_TREVOR)
@@ -45164,7 +45180,7 @@ BOOL func_493(var uParam0, eCharacter echParam1, Vector3 vParam2, var uParam3, v
 						func_557(uParam0);
 			
 				if (bParam6)
-					STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Global_114135.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/]);
+					STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(Global_114344.f_2367.f_539.f_2407[1 /*295*/][echParam1 /*98*/]);
 			
 				func_556(*uParam0, echParam1);
 				return true;
@@ -45237,7 +45253,7 @@ BOOL func_493(var uParam0, eCharacter echParam1, Vector3 vParam2, var uParam3, v
 			
 				if (echParam1 == CHAR_FRANKLIN)
 				{
-					if (ENTITY::GET_ENTITY_MODEL(*uParam0) == joaat("bagger") && !Global_114135.f_9089.f_99.f_58[118])
+					if (ENTITY::GET_ENTITY_MODEL(*uParam0) == joaat("bagger") && !Global_114344.f_9089.f_99.f_58[118])
 					{
 						VEHICLE::SET_VEHICLE_NUMBER_PLATE_TEXT(*uParam0, &plateText2);
 						flag = false;
@@ -45248,7 +45264,7 @@ BOOL func_493(var uParam0, eCharacter echParam1, Vector3 vParam2, var uParam3, v
 					if (ENTITY::GET_ENTITY_MODEL(*uParam0) == joaat("bodhi2"))
 						func_557(uParam0);
 				}
-				else if (echParam1 == CHAR_MICHAEL && !Global_114135.f_2367.f_539.f_4316 && Global_114135.f_9089.f_99.f_58[131] && ENTITY::GET_ENTITY_MODEL(*uParam0) == joaat("tailgater"))
+				else if (echParam1 == CHAR_MICHAEL && !Global_114344.f_2367.f_539.f_4316 && Global_114344.f_9089.f_99.f_58[131] && ENTITY::GET_ENTITY_MODEL(*uParam0) == joaat("tailgater"))
 				{
 					VEHICLE::SET_VEHICLE_MOD(*uParam0, 6, 1, false);
 					VEHICLE::SET_VEHICLE_MOD(*uParam0, 14, 7, false);
@@ -45264,7 +45280,7 @@ BOOL func_493(var uParam0, eCharacter echParam1, Vector3 vParam2, var uParam3, v
 					VEHICLE::SET_VEHICLE_WHEEL_TYPE(*uParam0, 2);
 					VEHICLE::SET_VEHICLE_MOD(*uParam0, 23, 11, false);
 					VEHICLE::SET_VEHICLE_WINDOW_TINT(*uParam0, 2);
-					Global_114135.f_2367.f_539.f_4316 = 1;
+					Global_114344.f_2367.f_539.f_4316 = 1;
 					func_494(echParam1, uParam0, 0, true);
 				}
 			
@@ -45282,7 +45298,7 @@ BOOL func_493(var uParam0, eCharacter echParam1, Vector3 vParam2, var uParam3, v
 	return false;
 }
 
-void func_494(eCharacter echParam0, var uParam1, int iParam2, BOOL bParam3) // Position - 0x37472 (226418)
+void func_494(eCharacter echParam0, var uParam1, int iParam2, BOOL bParam3) // Position - 0x374B1 (226481)
 {
 	var unk;
 	Entity trailer;
@@ -45294,7 +45310,7 @@ void func_494(eCharacter echParam0, var uParam1, int iParam2, BOOL bParam3) // P
 
 	if (func_17(echParam0) && ENTITY::DOES_ENTITY_EXIST(*uParam1) && VEHICLE::IS_VEHICLE_DRIVEABLE(*uParam1, false))
 	{
-		if (iParam2 > Global_114135.f_2367.f_539.f_2407)
+		if (iParam2 > Global_114344.f_2367.f_539.f_2407)
 			return;
 	
 		if (iParam2 == 0)
@@ -45314,116 +45330,116 @@ void func_494(eCharacter echParam0, var uParam1, int iParam2, BOOL bParam3) // P
 		if (VEHICLE::GET_NUM_MOD_KITS(*uParam1) != 0)
 			VEHICLE::SET_VEHICLE_MOD_KIT(*uParam1, 0);
 	
-		Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/] = ENTITY::GET_ENTITY_MODEL(*uParam1);
+		Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/] = ENTITY::GET_ENTITY_MODEL(*uParam1);
 	
 		if (VEHICLE::GET_VEHICLE_TRAILER_VEHICLE(*uParam1, &trailer))
-			Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_1 = ENTITY::GET_ENTITY_MODEL(trailer);
+			Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_1 = ENTITY::GET_ENTITY_MODEL(trailer);
 	
-		Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_2 = VEHICLE::GET_VEHICLE_DIRT_LEVEL(*uParam1);
-		Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_3 = ENTITY::GET_ENTITY_HEALTH(*uParam1);
-		Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_11[0] = VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(*uParam1, 1);
-		Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_11[1] = VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(*uParam1, 2);
-		Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_11[2] = VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(*uParam1, 3);
-		Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_11[3] = VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(*uParam1, 4);
-		Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_11[4] = VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(*uParam1, 5);
-		Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_11[5] = VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(*uParam1, 6);
-		Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_11[6] = VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(*uParam1, 7);
-		Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_11[7] = VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(*uParam1, 8);
-		Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_11[8] = VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(*uParam1, 9);
-		Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_11[9] = VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(*uParam1, 10);
-		Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_11[10] = VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(*uParam1, 11);
-		Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_11[11] = VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(*uParam1, 12);
+		Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_2 = VEHICLE::GET_VEHICLE_DIRT_LEVEL(*uParam1);
+		Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_3 = ENTITY::GET_ENTITY_HEALTH(*uParam1);
+		Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_11[0] = VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(*uParam1, 1);
+		Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_11[1] = VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(*uParam1, 2);
+		Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_11[2] = VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(*uParam1, 3);
+		Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_11[3] = VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(*uParam1, 4);
+		Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_11[4] = VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(*uParam1, 5);
+		Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_11[5] = VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(*uParam1, 6);
+		Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_11[6] = VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(*uParam1, 7);
+		Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_11[7] = VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(*uParam1, 8);
+		Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_11[8] = VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(*uParam1, 9);
+		Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_11[9] = VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(*uParam1, 10);
+		Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_11[10] = VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(*uParam1, 11);
+		Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_11[11] = VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(*uParam1, 12);
 	
 		if (VEHICLE::IS_VEHICLE_A_CONVERTIBLE(*uParam1, false))
 		{
 			convertibleRoofState = VEHICLE::GET_CONVERTIBLE_ROOF_STATE(*uParam1);
 		
 			if (convertibleRoofState == 0 || convertibleRoofState == 5)
-				Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_24 = 1;
+				Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_24 = 1;
 			else
-				Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_24 = 0;
+				Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_24 = 0;
 		}
 		else
 		{
-			Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_24 = 0;
+			Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_24 = 0;
 		}
 	
-		Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_25 = AUDIO::GET_PLAYER_RADIO_STATION_INDEX();
-		TEXT_LABEL_ASSIGN_STRING(&(Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_27), VEHICLE::GET_VEHICLE_NUMBER_PLATE_TEXT(*uParam1), 16);
-		Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_26 = VEHICLE::GET_VEHICLE_NUMBER_PLATE_TEXT_INDEX(*uParam1);
-		VEHICLE::GET_VEHICLE_COLOURS(*uParam1, &(Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_5), &(Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_6));
-		VEHICLE::GET_VEHICLE_EXTRA_COLOURS(*uParam1, &(Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_7), &(Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_8));
-		VEHICLE::GET_VEHICLE_TYRE_SMOKE_COLOR(*uParam1, &(Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_84), &(Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_85), &(Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_86));
-		Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_88 = VEHICLE::GET_VEHICLE_TYRES_CAN_BURST(*uParam1);
-		Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_87 = VEHICLE::GET_VEHICLE_WINDOW_TINT(*uParam1);
-		Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_89 = VEHICLE::GET_VEHICLE_LIVERY(*uParam1);
-		Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_90 = VEHICLE::GET_VEHICLE_WHEEL_TYPE(*uParam1);
-		VEHICLE::GET_VEHICLE_NEON_COLOUR(*uParam1, &(Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_93), &(Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_94), &(Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_95));
+		Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_25 = AUDIO::GET_PLAYER_RADIO_STATION_INDEX();
+		TEXT_LABEL_ASSIGN_STRING(&(Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_27), VEHICLE::GET_VEHICLE_NUMBER_PLATE_TEXT(*uParam1), 16);
+		Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_26 = VEHICLE::GET_VEHICLE_NUMBER_PLATE_TEXT_INDEX(*uParam1);
+		VEHICLE::GET_VEHICLE_COLOURS(*uParam1, &(Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_5), &(Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_6));
+		VEHICLE::GET_VEHICLE_EXTRA_COLOURS(*uParam1, &(Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_7), &(Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_8));
+		VEHICLE::GET_VEHICLE_TYRE_SMOKE_COLOR(*uParam1, &(Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_84), &(Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_85), &(Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_86));
+		Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_88 = VEHICLE::GET_VEHICLE_TYRES_CAN_BURST(*uParam1);
+		Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_87 = VEHICLE::GET_VEHICLE_WINDOW_TINT(*uParam1);
+		Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_89 = VEHICLE::GET_VEHICLE_LIVERY(*uParam1);
+		Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_90 = VEHICLE::GET_VEHICLE_WHEEL_TYPE(*uParam1);
+		VEHICLE::GET_VEHICLE_NEON_COLOUR(*uParam1, &(Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_93), &(Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_94), &(Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_95));
 	
 		if (VEHICLE::GET_VEHICLE_NEON_ENABLED(*uParam1, 2))
-			MISC::SET_BIT(&(Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_92), 28);
+			MISC::SET_BIT(&(Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_92), 28);
 		else
-			MISC::CLEAR_BIT(&(Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_92), 28);
+			MISC::CLEAR_BIT(&(Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_92), 28);
 	
 		if (VEHICLE::GET_VEHICLE_NEON_ENABLED(*uParam1, 3))
-			MISC::SET_BIT(&(Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_92), 29);
+			MISC::SET_BIT(&(Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_92), 29);
 		else
-			MISC::CLEAR_BIT(&(Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_92), 29);
+			MISC::CLEAR_BIT(&(Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_92), 29);
 	
 		if (VEHICLE::GET_VEHICLE_NEON_ENABLED(*uParam1, 0))
-			MISC::SET_BIT(&(Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_92), 30);
+			MISC::SET_BIT(&(Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_92), 30);
 		else
-			MISC::CLEAR_BIT(&(Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_92), 30);
+			MISC::CLEAR_BIT(&(Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_92), 30);
 	
 		if (VEHICLE::GET_VEHICLE_NEON_ENABLED(*uParam1, 1))
-			MISC::SET_BIT(&(Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_92), 31);
+			MISC::SET_BIT(&(Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_92), 31);
 		else
-			MISC::CLEAR_BIT(&(Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_92), 31);
+			MISC::CLEAR_BIT(&(Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_92), 31);
 	
-		Global_114135.f_2367.f_539.f_4317[echParam0] = 10;
+		Global_114344.f_2367.f_539.f_4317[echParam0] = 10;
 	
 		if (VEHICLE::GET_VEHICLE_MOD_KIT(*uParam1) >= 0 && func_498(*uParam1, false, &unk))
 		{
-			func_332(uParam1, &(Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_31), &(Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_81));
+			func_332(uParam1, &(Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_31), &(Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_81));
 		
 			if (bParam3)
 			{
-				Global_114135.f_20122[echParam0 /*43*/].f_40 = 1;
-				Global_114135.f_20122[echParam0 /*43*/] = Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/];
-				Global_114135.f_20122[echParam0 /*43*/].f_3 = Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_87;
-				Global_114135.f_20122[echParam0 /*43*/].f_4 = Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_84;
-				Global_114135.f_20122[echParam0 /*43*/].f_5 = Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_85;
-				Global_114135.f_20122[echParam0 /*43*/].f_6 = Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_86;
-				Global_114135.f_20122[echParam0 /*43*/].f_10 = Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_90;
-				Global_114135.f_20122[echParam0 /*43*/].f_16 = !Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_88;
-				Global_114135.f_20122[echParam0 /*43*/].f_19 = { Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_27 };
-				Global_114135.f_20122[echParam0 /*43*/].f_23 = Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_26;
-				Global_114135.f_20122[echParam0 /*43*/].f_7 = Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_31[11];
-				Global_114135.f_20122[echParam0 /*43*/].f_8 = Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_31[12];
-				Global_114135.f_20122[echParam0 /*43*/].f_9 = Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_31[23];
-				Global_114135.f_20122[echParam0 /*43*/].f_11 = Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_31[4];
-				Global_114135.f_20122[echParam0 /*43*/].f_12 = Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_31[15];
-				Global_114135.f_20122[echParam0 /*43*/].f_13 = Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_31[16];
-				Global_114135.f_20122[echParam0 /*43*/].f_14 = Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_31[14];
-				Global_114135.f_20122[echParam0 /*43*/].f_15 = Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_31[22];
-				Global_114135.f_20122[echParam0 /*43*/].f_18 = Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_31[20];
-				Global_114135.f_20122[echParam0 /*43*/].f_17 = Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_31[18];
-				Global_114135.f_20122[echParam0 /*43*/].f_24 = VEHICLE::GET_NUM_VEHICLE_MODS(*uParam1, 11) + 1;
-				Global_114135.f_20122[echParam0 /*43*/].f_25 = VEHICLE::GET_NUM_VEHICLE_MODS(*uParam1, 12) + 1;
-				Global_114135.f_20122[echParam0 /*43*/].f_26 = VEHICLE::GET_NUM_VEHICLE_MODS(*uParam1, 4) + 1;
-				Global_114135.f_20122[echParam0 /*43*/].f_27 = VEHICLE::GET_NUM_VEHICLE_MODS(*uParam1, 23) + 1;
-				Global_114135.f_20122[echParam0 /*43*/].f_28 = VEHICLE::GET_NUM_VEHICLE_MODS(*uParam1, 14) + 1;
-				Global_114135.f_20122[echParam0 /*43*/].f_29 = VEHICLE::GET_NUM_VEHICLE_MODS(*uParam1, 16) + 1;
-				Global_114135.f_20122[echParam0 /*43*/].f_30 = VEHICLE::GET_NUM_VEHICLE_MODS(*uParam1, 15) + 1;
-				Global_114135.f_20122[echParam0 /*43*/].f_32 = VEHICLE::GET_VEHICLE_COLOURS_WHICH_CAN_BE_SET(*uParam1);
-				Global_114135.f_20122[echParam0 /*43*/].f_33[0] = AUDIO::GET_VEHICLE_DEFAULT_HORN(*uParam1);
-				Global_114135.f_20122[echParam0 /*43*/].f_33[1] = VEHICLE::GET_VEHICLE_MOD_MODIFIER_VALUE(*uParam1, 14, 0);
-				Global_114135.f_20122[echParam0 /*43*/].f_33[2] = VEHICLE::GET_VEHICLE_MOD_MODIFIER_VALUE(*uParam1, 14, 1);
-				Global_114135.f_20122[echParam0 /*43*/].f_33[3] = VEHICLE::GET_VEHICLE_MOD_MODIFIER_VALUE(*uParam1, 14, 2);
-				Global_114135.f_20122[echParam0 /*43*/].f_33[4] = VEHICLE::GET_VEHICLE_MOD_MODIFIER_VALUE(*uParam1, 14, 3);
-				Global_114135.f_20122[echParam0 /*43*/].f_39 = VEHICLE::GET_VEHICLE_MOD_KIT_TYPE(*uParam1);
-				Global_114135.f_20122[echParam0 /*43*/].f_31 = func_497(*uParam1);
-				Global_114135.f_20122[echParam0 /*43*/].f_33[0] = AUDIO::GET_VEHICLE_DEFAULT_HORN_IGNORE_MODS(*uParam1);
+				Global_114344.f_20122[echParam0 /*43*/].f_40 = 1;
+				Global_114344.f_20122[echParam0 /*43*/] = Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/];
+				Global_114344.f_20122[echParam0 /*43*/].f_3 = Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_87;
+				Global_114344.f_20122[echParam0 /*43*/].f_4 = Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_84;
+				Global_114344.f_20122[echParam0 /*43*/].f_5 = Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_85;
+				Global_114344.f_20122[echParam0 /*43*/].f_6 = Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_86;
+				Global_114344.f_20122[echParam0 /*43*/].f_10 = Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_90;
+				Global_114344.f_20122[echParam0 /*43*/].f_16 = !Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_88;
+				Global_114344.f_20122[echParam0 /*43*/].f_19 = { Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_27 };
+				Global_114344.f_20122[echParam0 /*43*/].f_23 = Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_26;
+				Global_114344.f_20122[echParam0 /*43*/].f_7 = Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_31[11];
+				Global_114344.f_20122[echParam0 /*43*/].f_8 = Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_31[12];
+				Global_114344.f_20122[echParam0 /*43*/].f_9 = Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_31[23];
+				Global_114344.f_20122[echParam0 /*43*/].f_11 = Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_31[4];
+				Global_114344.f_20122[echParam0 /*43*/].f_12 = Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_31[15];
+				Global_114344.f_20122[echParam0 /*43*/].f_13 = Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_31[16];
+				Global_114344.f_20122[echParam0 /*43*/].f_14 = Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_31[14];
+				Global_114344.f_20122[echParam0 /*43*/].f_15 = Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_31[22];
+				Global_114344.f_20122[echParam0 /*43*/].f_18 = Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_31[20];
+				Global_114344.f_20122[echParam0 /*43*/].f_17 = Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_31[18];
+				Global_114344.f_20122[echParam0 /*43*/].f_24 = VEHICLE::GET_NUM_VEHICLE_MODS(*uParam1, 11) + 1;
+				Global_114344.f_20122[echParam0 /*43*/].f_25 = VEHICLE::GET_NUM_VEHICLE_MODS(*uParam1, 12) + 1;
+				Global_114344.f_20122[echParam0 /*43*/].f_26 = VEHICLE::GET_NUM_VEHICLE_MODS(*uParam1, 4) + 1;
+				Global_114344.f_20122[echParam0 /*43*/].f_27 = VEHICLE::GET_NUM_VEHICLE_MODS(*uParam1, 23) + 1;
+				Global_114344.f_20122[echParam0 /*43*/].f_28 = VEHICLE::GET_NUM_VEHICLE_MODS(*uParam1, 14) + 1;
+				Global_114344.f_20122[echParam0 /*43*/].f_29 = VEHICLE::GET_NUM_VEHICLE_MODS(*uParam1, 16) + 1;
+				Global_114344.f_20122[echParam0 /*43*/].f_30 = VEHICLE::GET_NUM_VEHICLE_MODS(*uParam1, 15) + 1;
+				Global_114344.f_20122[echParam0 /*43*/].f_32 = VEHICLE::GET_VEHICLE_COLOURS_WHICH_CAN_BE_SET(*uParam1);
+				Global_114344.f_20122[echParam0 /*43*/].f_33[0] = AUDIO::GET_VEHICLE_DEFAULT_HORN(*uParam1);
+				Global_114344.f_20122[echParam0 /*43*/].f_33[1] = VEHICLE::GET_VEHICLE_MOD_MODIFIER_VALUE(*uParam1, 14, 0);
+				Global_114344.f_20122[echParam0 /*43*/].f_33[2] = VEHICLE::GET_VEHICLE_MOD_MODIFIER_VALUE(*uParam1, 14, 1);
+				Global_114344.f_20122[echParam0 /*43*/].f_33[3] = VEHICLE::GET_VEHICLE_MOD_MODIFIER_VALUE(*uParam1, 14, 2);
+				Global_114344.f_20122[echParam0 /*43*/].f_33[4] = VEHICLE::GET_VEHICLE_MOD_MODIFIER_VALUE(*uParam1, 14, 3);
+				Global_114344.f_20122[echParam0 /*43*/].f_39 = VEHICLE::GET_VEHICLE_MOD_KIT_TYPE(*uParam1);
+				Global_114344.f_20122[echParam0 /*43*/].f_31 = func_497(*uParam1);
+				Global_114344.f_20122[echParam0 /*43*/].f_33[0] = AUDIO::GET_VEHICLE_DEFAULT_HORN_IGNORE_MODS(*uParam1);
 				VEHICLE::GET_VEHICLE_MOD_COLOR_1(*uParam1, &paintType, &unk2, &pearlescentColor);
 			
 				if (paintType == 0)
@@ -45439,7 +45455,7 @@ void func_494(eCharacter echParam0, var uParam1, int iParam2, BOOL bParam3) // P
 				else
 					num = -1;
 			
-				func_495(Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_5, Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_7, num, true, &(Global_114135.f_20122[echParam0 /*43*/].f_1));
+				func_495(Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_5, Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_7, num, true, &(Global_114344.f_20122[echParam0 /*43*/].f_1));
 				VEHICLE::GET_VEHICLE_MOD_COLOR_2(*uParam1, &paintType, &unk2);
 			
 				if (paintType == 0)
@@ -45455,7 +45471,7 @@ void func_494(eCharacter echParam0, var uParam1, int iParam2, BOOL bParam3) // P
 				else
 					num = -1;
 			
-				func_495(Global_114135.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_6, -1, num, false, &(Global_114135.f_20122[echParam0 /*43*/].f_2));
+				func_495(Global_114344.f_2367.f_539.f_2407[iParam2 /*295*/][echParam0 /*98*/].f_6, -1, num, false, &(Global_114344.f_20122[echParam0 /*43*/].f_2));
 			}
 		}
 	}
@@ -45463,7 +45479,7 @@ void func_494(eCharacter echParam0, var uParam1, int iParam2, BOOL bParam3) // P
 	return;
 }
 
-int func_495(int iParam0, int iParam1, int iParam2, BOOL bParam3, var uParam4) // Position - 0x38087 (229511)
+int func_495(int iParam0, int iParam1, int iParam2, BOOL bParam3, var uParam4) // Position - 0x380C6 (229574)
 {
 	int i;
 	int num;
@@ -45486,7 +45502,7 @@ int func_495(int iParam0, int iParam1, int iParam2, BOOL bParam3, var uParam4) /
 	return 0;
 }
 
-BOOL func_496(int iParam0, char* sParam1, var uParam2, var uParam3, var uParam4) // Position - 0x380FA (229626)
+BOOL func_496(int iParam0, char* sParam1, var uParam2, var uParam3, var uParam4) // Position - 0x38139 (229689)
 {
 	*uParam2 = -1;
 	*uParam3 = -1;
@@ -46730,7 +46746,7 @@ BOOL func_496(int iParam0, char* sParam1, var uParam2, var uParam3, var uParam4)
 	return *uParam2 != -1;
 }
 
-float func_497(Vehicle veParam0) // Position - 0x3969C (235164)
+float func_497(Vehicle veParam0) // Position - 0x396DB (235227)
 {
 	int num;
 	int num2;
@@ -46764,7 +46780,7 @@ float func_497(Vehicle veParam0) // Position - 0x3969C (235164)
 	return num5;
 }
 
-BOOL func_498(Vehicle veParam0, BOOL bParam1, var uParam2) // Position - 0x3974C (235340)
+BOOL func_498(Vehicle veParam0, BOOL bParam1, var uParam2) // Position - 0x3978B (235403)
 {
 	Hash entityModel;
 	BOOL flag;
@@ -46829,31 +46845,31 @@ BOOL func_498(Vehicle veParam0, BOOL bParam1, var uParam2) // Position - 0x3974C
 	return true;
 }
 
-BOOL func_499(Vehicle veParam0) // Position - 0x398D7 (235735)
+BOOL func_499(Vehicle veParam0) // Position - 0x39916 (235798)
 {
 	int i;
 
 	for (i = 0; i < 3; i = i + 1)
 	{
-		if (ENTITY::DOES_ENTITY_EXIST(Global_99024[i]))
-			if (Global_99024[i] == veParam0)
+		if (ENTITY::DOES_ENTITY_EXIST(Global_99229[i]))
+			if (Global_99229[i] == veParam0)
 				return true;
 	}
 
 	return false;
 }
 
-BOOL func_500(Player plParam0) // Position - 0x39912 (235794)
+BOOL func_500(Player plParam0) // Position - 0x39951 (235857)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
 		if (_NETWORK_IS_PLAYER_VALID(plParam0, true, true))
-			if (Global_2657991[plParam0 /*467*/].f_324.f_8 != -1)
-				return func_501(Global_2657991[plParam0 /*467*/].f_324.f_8) == 30;
+			if (Global_2658016[plParam0 /*467*/].f_324.f_8 != -1)
+				return func_501(Global_2658016[plParam0 /*467*/].f_324.f_8) == 30;
 
 	return false;
 }
 
-int func_501(int iParam0) // Position - 0x39959 (235865)
+int func_501(int iParam0) // Position - 0x39998 (235928)
 {
 	switch (iParam0)
 	{
@@ -47094,12 +47110,17 @@ int func_501(int iParam0) // Position - 0x39959 (235865)
 	
 		case 173:
 			return 31;
+	
+		case 174:
+		case 175:
+		case 176:
+			return 32;
 	}
 
 	return -1;
 }
 
-BOOL func_502(Hash hParam0) // Position - 0x39E75 (237173)
+BOOL func_502(Hash hParam0) // Position - 0x39ECE (237262)
 {
 	if (hParam0 == joaat("terbyte"))
 		return true;
@@ -47107,17 +47128,17 @@ BOOL func_502(Hash hParam0) // Position - 0x39E75 (237173)
 	return false;
 }
 
-BOOL func_503(Player plParam0) // Position - 0x39E8C (237196)
+BOOL func_503(Player plParam0) // Position - 0x39EE5 (237285)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
 		if (_NETWORK_IS_PLAYER_VALID(plParam0, true, true))
-			if (Global_2657991[plParam0 /*467*/].f_324.f_8 != -1)
-				return func_501(Global_2657991[plParam0 /*467*/].f_324.f_8) == 11;
+			if (Global_2658016[plParam0 /*467*/].f_324.f_8 != -1)
+				return func_501(Global_2658016[plParam0 /*467*/].f_324.f_8) == 11;
 
 	return false;
 }
 
-BOOL func_504(Hash hParam0) // Position - 0x39ED3 (237267)
+BOOL func_504(Hash hParam0) // Position - 0x39F2C (237356)
 {
 	if (hParam0 == joaat("mule4") || hParam0 == joaat("pounder2") || hParam0 == joaat("speedo4") || hParam0 == joaat("terbyte"))
 		return true;
@@ -47125,7 +47146,7 @@ BOOL func_504(Hash hParam0) // Position - 0x39ED3 (237267)
 	return false;
 }
 
-BOOL func_505(Vehicle veParam0) // Position - 0x39F15 (237333)
+BOOL func_505(Vehicle veParam0) // Position - 0x39F6E (237422)
 {
 	switch (ENTITY::GET_ENTITY_MODEL(veParam0))
 	{
@@ -47168,37 +47189,37 @@ BOOL func_505(Vehicle veParam0) // Position - 0x39F15 (237333)
 	return false;
 }
 
-BOOL func_506(Player plParam0) // Position - 0x39FDD (237533)
+BOOL func_506(Player plParam0) // Position - 0x3A036 (237622)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
 		if (_NETWORK_IS_PLAYER_VALID(plParam0, true, true))
-			if (Global_2657991[plParam0 /*467*/].f_324.f_8 != -1)
-				return func_501(Global_2657991[plParam0 /*467*/].f_324.f_8) == 26;
+			if (Global_2658016[plParam0 /*467*/].f_324.f_8 != -1)
+				return func_501(Global_2658016[plParam0 /*467*/].f_324.f_8) == 26;
 
 	return false;
 }
 
-BOOL func_507(Player plParam0) // Position - 0x3A024 (237604)
+BOOL func_507(Player plParam0) // Position - 0x3A07D (237693)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
 		if (_NETWORK_IS_PLAYER_VALID(plParam0, true, true))
-			if (Global_2657991[plParam0 /*467*/].f_324.f_8 != -1)
-				return func_501(Global_2657991[plParam0 /*467*/].f_324.f_8) == 13;
+			if (Global_2658016[plParam0 /*467*/].f_324.f_8 != -1)
+				return func_501(Global_2658016[plParam0 /*467*/].f_324.f_8) == 13;
 
 	return false;
 }
 
-BOOL func_508(Player plParam0) // Position - 0x3A06B (237675)
+BOOL func_508(Player plParam0) // Position - 0x3A0C4 (237764)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
 		if (_NETWORK_IS_PLAYER_VALID(plParam0, true, true))
-			if (Global_2657991[plParam0 /*467*/].f_324.f_8 != -1)
-				return func_501(Global_2657991[plParam0 /*467*/].f_324.f_8) == 7;
+			if (Global_2658016[plParam0 /*467*/].f_324.f_8 != -1)
+				return func_501(Global_2658016[plParam0 /*467*/].f_324.f_8) == 7;
 
 	return false;
 }
 
-BOOL func_509(Hash hParam0) // Position - 0x3A0B1 (237745)
+BOOL func_509(Hash hParam0) // Position - 0x3A10A (237834)
 {
 	BOOL flag;
 
@@ -47208,7 +47229,7 @@ BOOL func_509(Hash hParam0) // Position - 0x3A0B1 (237745)
 	flag = false;
 
 	if (hParam0 == joaat("riot2") || hParam0 == joaat("chernobog") || hParam0 == joaat("khanjali"))
-		if (!*Global_262145.f_33331)
+		if (!*Global_262145.f_33330)
 			flag = true;
 
 	if (!func_511(PLAYER::PLAYER_ID()) && hParam0 != joaat("thruster") && hParam0 != joaat("avenger") && hParam0 != func_510(true) && !flag)
@@ -47217,7 +47238,7 @@ BOOL func_509(Hash hParam0) // Position - 0x3A0B1 (237745)
 	return true;
 }
 
-Hash func_510(BOOL bParam0) // Position - 0x3A142 (237890)
+Hash func_510(BOOL bParam0) // Position - 0x3A19B (237979)
 {
 	if (bParam0)
 		return joaat("avenger3");
@@ -47225,15 +47246,15 @@ Hash func_510(BOOL bParam0) // Position - 0x3A142 (237890)
 	return joaat("avenger");
 }
 
-BOOL func_511(Player plParam0) // Position - 0x3A15C (237916)
+BOOL func_511(Player plParam0) // Position - 0x3A1B5 (238005)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
-		return IS_BIT_SET(Global_1845221[plParam0 /*889*/].f_268.f_313, 2);
+		return IS_BIT_SET(Global_1845225[plParam0 /*874*/].f_260.f_312, 2);
 
 	return false;
 }
 
-BOOL func_512(Vehicle veParam0) // Position - 0x3A182 (237954)
+BOOL func_512(Vehicle veParam0) // Position - 0x3A1DB (238043)
 {
 	if (func_537(PLAYER::PLAYER_ID()) || func_536(PLAYER::PLAYER_ID()))
 		if (func_513(veParam0))
@@ -47242,7 +47263,7 @@ BOOL func_512(Vehicle veParam0) // Position - 0x3A182 (237954)
 	return false;
 }
 
-BOOL func_513(Vehicle veParam0) // Position - 0x3A1B1 (238001)
+BOOL func_513(Vehicle veParam0) // Position - 0x3A20A (238090)
 {
 	if (!ENTITY::DOES_ENTITY_EXIST(veParam0) || !VEHICLE::IS_VEHICLE_DRIVEABLE(veParam0, false) || ENTITY::IS_ENTITY_DEAD(veParam0, false))
 		return false;
@@ -47264,7 +47285,7 @@ BOOL func_513(Vehicle veParam0) // Position - 0x3A1B1 (238001)
 
 	if (VEHICLE::IS_VEHICLE_MODEL(veParam0, joaat("thruster")))
 		if (DECORATOR::DECOR_IS_REGISTERED_AS_TYPE("Player_Thruster", INT))
-			if (DECORATOR::DECOR_EXIST_ON(veParam0, "Player_Thruster") && !Global_2696933)
+			if (DECORATOR::DECOR_EXIST_ON(veParam0, "Player_Thruster") && !Global_2697056)
 				return false;
 
 	if (DECORATOR::DECOR_EXIST_ON(veParam0, "Player_Vehicle"))
@@ -47280,7 +47301,7 @@ BOOL func_513(Vehicle veParam0) // Position - 0x3A1B1 (238001)
 	return false;
 }
 
-BOOL func_514(Vehicle veParam0) // Position - 0x3A31F (238367)
+BOOL func_514(Vehicle veParam0) // Position - 0x3A378 (238456)
 {
 	Hash entityModel;
 
@@ -47306,7 +47327,7 @@ BOOL func_514(Vehicle veParam0) // Position - 0x3A31F (238367)
 	return false;
 }
 
-BOOL func_515(Hash hParam0) // Position - 0x3A39C (238492)
+BOOL func_515(Hash hParam0) // Position - 0x3A3F5 (238581)
 {
 	switch (hParam0)
 	{
@@ -47331,25 +47352,25 @@ BOOL func_515(Hash hParam0) // Position - 0x3A39C (238492)
 	return false;
 }
 
-BOOL func_516(Player plParam0) // Position - 0x3A3F8 (238584)
+BOOL func_516(Player plParam0) // Position - 0x3A451 (238673)
 {
 	if (plParam0 == _INVALID_PLAYER_INDEX())
 		return false;
 
-	if (func_538(plParam0) && Global_2657991[plParam0 /*467*/].f_324.f_11 == plParam0)
+	if (func_538(plParam0) && Global_2658016[plParam0 /*467*/].f_324.f_11 == plParam0)
 		return true;
 
 	return false;
 }
 
-BOOL func_517(Vehicle veParam0, BOOL bParam1) // Position - 0x3A431 (238641)
+BOOL func_517(Vehicle veParam0, BOOL bParam1) // Position - 0x3A48A (238730)
 {
 	switch (ENTITY::GET_ENTITY_MODEL(veParam0))
 	{
 		case joaat("technical"):
 		case joaat("insurgent"):
 			if (func_519(ENTITY::GET_ENTITY_MODEL(veParam0), 0))
-				if (Global_2739811.f_307 == veParam0)
+				if (Global_2740054.f_307 == veParam0)
 					return true;
 				else if (func_518(veParam0) != -1 && !bParam1)
 					return true;
@@ -47359,7 +47380,7 @@ BOOL func_517(Vehicle veParam0, BOOL bParam1) // Position - 0x3A431 (238641)
 	return false;
 }
 
-int func_518(Vehicle veParam0) // Position - 0x3A48C (238732)
+int func_518(Vehicle veParam0) // Position - 0x3A4E5 (238821)
 {
 	int i;
 
@@ -47367,7 +47388,7 @@ int func_518(Vehicle veParam0) // Position - 0x3A48C (238732)
 	{
 		for (i = 0; i < 32; i = i + 1)
 		{
-			if (Global_2672939.f_231[i] == veParam0)
+			if (Global_2672964.f_231[i] == veParam0)
 				return i;
 		}
 	}
@@ -47375,7 +47396,7 @@ int func_518(Vehicle veParam0) // Position - 0x3A48C (238732)
 	return -1;
 }
 
-BOOL func_519(Hash hParam0, int iParam1) // Position - 0x3A4C5 (238789)
+BOOL func_519(Hash hParam0, int iParam1) // Position - 0x3A51E (238878)
 {
 	if (iParam1 == 0)
 		if (func_528(hParam0, 0))
@@ -47542,27 +47563,27 @@ BOOL func_519(Hash hParam0, int iParam1) // Position - 0x3A4C5 (238789)
 			return func_522();
 	
 		case joaat("youga2"):
-			if (Global_262145.f_28833)
-				return func_521();
-			break;
-	
-		case joaat("gauntlet3"):
-			if (Global_262145.f_29162)
-				return func_521();
-			break;
-	
-		case joaat("manana"):
 			if (Global_262145.f_28832)
 				return func_521();
 			break;
 	
-		case joaat("peyote"):
+		case joaat("gauntlet3"):
 			if (Global_262145.f_29161)
 				return func_521();
 			break;
 	
-		case joaat("yosemite"):
+		case joaat("manana"):
+			if (Global_262145.f_28831)
+				return func_521();
+			break;
+	
+		case joaat("peyote"):
 			if (Global_262145.f_29160)
+				return func_521();
+			break;
+	
+		case joaat("yosemite"):
+			if (Global_262145.f_29159)
 				return func_521();
 			break;
 	}
@@ -47570,22 +47591,22 @@ BOOL func_519(Hash hParam0, int iParam1) // Position - 0x3A4C5 (238789)
 	switch (hParam0)
 	{
 		case joaat("tenf"):
-			if (Global_262145.f_32429)
-				return func_520();
-			break;
-	
-		case joaat("weevil"):
 			if (Global_262145.f_32428)
 				return func_520();
 			break;
 	
+		case joaat("weevil"):
+			if (Global_262145.f_32427)
+				return func_520();
+			break;
+	
 		case joaat("brioso2"):
-			if (Global_262145.f_32421)
+			if (Global_262145.f_32420)
 				return func_520();
 			break;
 	
 		case joaat("sentinel3"):
-			if (Global_262145.f_32430)
+			if (Global_262145.f_32429)
 				return func_520();
 			break;
 	}
@@ -47593,47 +47614,47 @@ BOOL func_519(Hash hParam0, int iParam1) // Position - 0x3A4C5 (238789)
 	return false;
 }
 
-BOOL func_520() // Position - 0x3A938 (239928)
+BOOL func_520() // Position - 0x3A991 (240017)
 {
 	return DLC::IS_DLC_PRESENT(joaat("mpsum2"));
 }
 
-BOOL func_521() // Position - 0x3A949 (239945)
+BOOL func_521() // Position - 0x3A9A2 (240034)
 {
 	return DLC::IS_DLC_PRESENT(joaat("mpsum"));
 }
 
-BOOL func_522() // Position - 0x3A95A (239962)
+BOOL func_522() // Position - 0x3A9B3 (240051)
 {
 	return DLC::IS_DLC_PRESENT(joaat("mpchristmas2018"));
 }
 
-BOOL func_523() // Position - 0x3A96B (239979)
+BOOL func_523() // Position - 0x3A9C4 (240068)
 {
 	return DLC::IS_DLC_PRESENT(joaat("mpgunrunning"));
 }
 
-BOOL func_524() // Position - 0x3A97C (239996)
+BOOL func_524() // Position - 0x3A9D5 (240085)
 {
 	return DLC::IS_DLC_PRESENT(joaat("mpimportexport"));
 }
 
-BOOL func_525() // Position - 0x3A98D (240013)
+BOOL func_525() // Position - 0x3A9E6 (240102)
 {
 	return DLC::IS_DLC_PRESENT(joaat("mpjanuary2016"));
 }
 
-BOOL func_526() // Position - 0x3A99E (240030)
+BOOL func_526() // Position - 0x3A9F7 (240119)
 {
 	return DLC::IS_DLC_PRESENT(joaat("mplowrider2"));
 }
 
-BOOL func_527() // Position - 0x3A9AF (240047)
+BOOL func_527() // Position - 0x3AA08 (240136)
 {
 	return DLC::IS_DLC_PRESENT(joaat("mplowrider"));
 }
 
-BOOL func_528(Hash hParam0, int iParam1) // Position - 0x3A9C0 (240064)
+BOOL func_528(Hash hParam0, int iParam1) // Position - 0x3AA19 (240153)
 {
 	switch (hParam0)
 	{
@@ -47875,21 +47896,23 @@ BOOL func_528(Hash hParam0, int iParam1) // Position - 0x3A9C0 (240064)
 	return false;
 }
 
-BOOL func_529(Vehicle veParam0) // Position - 0x3AD9F (241055)
+BOOL func_529(Vehicle veParam0) // Position - 0x3ADFF (241151)
 {
 	if (PLAYER::PLAYER_ID() != _INVALID_PLAYER_INDEX())
 	{
 		if (func_535() || func_534(PLAYER::PLAYER_ID()))
 			return false;
 	
-		if (func_533(PLAYER::PLAYER_ID(), true, false) && Global_1845221[PLAYER::PLAYER_ID() /*889*/].f_268.f_36 > 0 || IS_BIT_SET(Global_1845221[PLAYER::PLAYER_ID() /*889*/].f_268.f_34, 14) || IS_BIT_SET(Global_1845221[PLAYER::PLAYER_ID() /*889*/].f_268.f_34, 11))
+		if (func_533(PLAYER::PLAYER_ID(), true, false) && Global_1845225[PLAYER::PLAYER_ID() /*874*/].f_260.f_36 > 0 || IS_BIT_SET(Global_1845225[PLAYER::PLAYER_ID() /*874*/].f_260.f_34, 14) || IS_BIT_SET(Global_1845225[PLAYER::PLAYER_ID() /*874*/].f_260.f_34, 11))
 			return false;
 	
 		if (DECORATOR::DECOR_IS_REGISTERED_AS_TYPE("Player_Vehicle", INT))
 			if (DECORATOR::DECOR_EXIST_ON(veParam0, "Player_Vehicle"))
 				if (DECORATOR::DECOR_GET_INT(veParam0, "Player_Vehicle") == NETWORK::NETWORK_HASH_FROM_PLAYER_HANDLE(PLAYER::PLAYER_ID()))
 					if (func_531() != -1 && func_531() < 547)
-						if (!func_530(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1586536[func_531() /*143*/].f_66)
+						if (!func_530(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1586540[func_531() /*143*/].f_66)
+							return true;
+						else if (ENTITY::GET_ENTITY_MODEL(veParam0) == joaat("caddy3"))
 							return true;
 					else
 						return true;
@@ -47898,20 +47921,20 @@ BOOL func_529(Vehicle veParam0) // Position - 0x3AD9F (241055)
 	return false;
 }
 
-BOOL func_530(Vehicle veParam0) // Position - 0x3AE9B (241307)
+BOOL func_530(Vehicle veParam0) // Position - 0x3AF10 (241424)
 {
-	if (Global_2739811.f_301 == veParam0)
+	if (Global_2740054.f_301 == veParam0)
 		return true;
 
 	return false;
 }
 
-int func_531() // Position - 0x3AEB4 (241332)
+int func_531() // Position - 0x3AF29 (241449)
 {
 	return Global_2359296[func_532() /*5571*/].f_681.f_2;
 }
 
-int func_532() // Position - 0x3AECC (241356)
+int func_532() // Position - 0x3AF41 (241473)
 {
 	int num;
 
@@ -47919,69 +47942,69 @@ int func_532() // Position - 0x3AECC (241356)
 	return num;
 }
 
-BOOL func_533(Player plParam0, BOOL bParam1, BOOL bParam2) // Position - 0x3AED9 (241369)
+BOOL func_533(Player plParam0, BOOL bParam1, BOOL bParam2) // Position - 0x3AF4E (241486)
 {
 	if (plParam0 == _INVALID_PLAYER_INDEX())
 		return false;
 
-	if (IS_BIT_SET(Global_1845221[plParam0 /*889*/].f_268.f_34, 0))
+	if (IS_BIT_SET(Global_1845225[plParam0 /*874*/].f_260.f_34, 0))
 		return true;
 
 	if (bParam1)
-		if (IS_BIT_SET(Global_1845221[plParam0 /*889*/].f_268.f_34, 1))
+		if (IS_BIT_SET(Global_1845225[plParam0 /*874*/].f_260.f_34, 1))
 			return true;
 
 	if (bParam2)
-		if (Global_2657991[plParam0 /*467*/].f_324.f_8 != -1)
+		if (Global_2658016[plParam0 /*467*/].f_324.f_8 != -1)
 			return true;
 
 	return false;
 }
 
-BOOL func_534(Player plParam0) // Position - 0x3AF3D (241469)
+BOOL func_534(Player plParam0) // Position - 0x3AFB2 (241586)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX() && _NETWORK_IS_PLAYER_VALID(plParam0, true, true))
-		return IS_BIT_SET(Global_2657991[plParam0 /*467*/].f_324, 3);
+		return IS_BIT_SET(Global_2658016[plParam0 /*467*/].f_324, 3);
 
 	return false;
 }
 
-BOOL func_535() // Position - 0x3AF6E (241518)
+BOOL func_535() // Position - 0x3AFE3 (241635)
 {
 	return func_364() != -1;
 }
 
-BOOL func_536(Player plParam0) // Position - 0x3AF7C (241532)
+BOOL func_536(Player plParam0) // Position - 0x3AFF1 (241649)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
 		if (_NETWORK_IS_PLAYER_VALID(plParam0, true, true))
-			if (Global_2657991[plParam0 /*467*/].f_324.f_8 != -1 && Global_2657991[plParam0 /*467*/].f_324.f_11 != _INVALID_PLAYER_INDEX())
-				return func_501(Global_2657991[plParam0 /*467*/].f_324.f_8) == 5;
+			if (Global_2658016[plParam0 /*467*/].f_324.f_8 != -1 && Global_2658016[plParam0 /*467*/].f_324.f_11 != _INVALID_PLAYER_INDEX())
+				return func_501(Global_2658016[plParam0 /*467*/].f_324.f_8) == 5;
 
 	return false;
 }
 
-BOOL func_537(Player plParam0) // Position - 0x3AFDB (241627)
+BOOL func_537(Player plParam0) // Position - 0x3B050 (241744)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
 		if (_NETWORK_IS_PLAYER_VALID(plParam0, true, true))
-			if (Global_2657991[plParam0 /*467*/].f_324.f_8 != -1 && Global_2657991[plParam0 /*467*/].f_324.f_11 != _INVALID_PLAYER_INDEX())
-				return func_501(Global_2657991[plParam0 /*467*/].f_324.f_8) == 8;
+			if (Global_2658016[plParam0 /*467*/].f_324.f_8 != -1 && Global_2658016[plParam0 /*467*/].f_324.f_11 != _INVALID_PLAYER_INDEX())
+				return func_501(Global_2658016[plParam0 /*467*/].f_324.f_8) == 8;
 
 	return false;
 }
 
-BOOL func_538(Player plParam0) // Position - 0x3B03B (241723)
+BOOL func_538(Player plParam0) // Position - 0x3B0B0 (241840)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
 		if (_NETWORK_IS_PLAYER_VALID(plParam0, true, true))
-			if (Global_2657991[plParam0 /*467*/].f_324.f_8 != -1)
-				return func_501(Global_2657991[plParam0 /*467*/].f_324.f_8) == 9;
+			if (Global_2658016[plParam0 /*467*/].f_324.f_8 != -1)
+				return func_501(Global_2658016[plParam0 /*467*/].f_324.f_8) == 9;
 
 	return false;
 }
 
-BOOL func_539(Hash hParam0, BOOL bParam1, var uParam2) // Position - 0x3B082 (241794)
+BOOL func_539(Hash hParam0, BOOL bParam1, var uParam2) // Position - 0x3B0F7 (241911)
 {
 	BOOL flag;
 
@@ -48071,7 +48094,7 @@ BOOL func_539(Hash hParam0, BOOL bParam1, var uParam2) // Position - 0x3B082 (24
 	return true;
 }
 
-BOOL func_540(Hash hParam0) // Position - 0x3B479 (242809)
+BOOL func_540(Hash hParam0) // Position - 0x3B4EE (242926)
 {
 	switch (hParam0)
 	{
@@ -48086,7 +48109,7 @@ BOOL func_540(Hash hParam0) // Position - 0x3B479 (242809)
 	return false;
 }
 
-void func_541(Vehicle veParam0, eCharacter echParam1) // Position - 0x3B4AE (242862)
+void func_541(Vehicle veParam0, eCharacter echParam1) // Position - 0x3B523 (242979)
 {
 	Ped pedInVehicleSeat;
 	int i;
@@ -48111,21 +48134,21 @@ void func_541(Vehicle veParam0, eCharacter echParam1) // Position - 0x3B4AE (242
 				echParam1 = CHAR_TREVOR;
 	
 		if (echParam1 != CHAR_MICHAEL && echParam1 != CHAR_FRANKLIN && echParam1 != CHAR_TREVOR)
-			echParam1 = Global_114135.f_2367.f_539.f_4321;
+			echParam1 = Global_114344.f_2367.f_539.f_4321;
 	}
 
 	for (i = 0; i < 3; i = i + 1)
 	{
 		for (j = 0; j < 2; j = j + 1)
 		{
-			if (ENTITY::GET_ENTITY_MODEL(veParam0) == Global_114135.f_32754.f_5038[i /*157*/][j /*78*/].f_66)
+			if (ENTITY::GET_ENTITY_MODEL(veParam0) == Global_114344.f_32754.f_5038[i /*157*/][j /*78*/].f_66)
 			{
-				if (!MISC::IS_STRING_NULL_OR_EMPTY(&(Global_114135.f_32754.f_5038[i /*157*/][j /*78*/].f_1)))
+				if (!MISC::IS_STRING_NULL_OR_EMPTY(&(Global_114344.f_32754.f_5038[i /*157*/][j /*78*/].f_1)))
 				{
-					if (MISC::ARE_STRINGS_EQUAL(VEHICLE::GET_VEHICLE_NUMBER_PLATE_TEXT(veParam0), &(Global_114135.f_32754.f_5038[i /*157*/][j /*78*/].f_1)))
+					if (MISC::ARE_STRINGS_EQUAL(VEHICLE::GET_VEHICLE_NUMBER_PLATE_TEXT(veParam0), &(Global_114344.f_32754.f_5038[i /*157*/][j /*78*/].f_1)))
 					{
-						Global_114135.f_32754.f_5038[i /*157*/][j /*78*/].f_66 = 0;
-						Global_114135.f_32754.f_5592[i] = j;
+						Global_114344.f_32754.f_5038[i /*157*/][j /*78*/].f_66 = 0;
+						Global_114344.f_32754.f_5592[i] = j;
 					}
 				}
 			}
@@ -48134,20 +48157,20 @@ void func_541(Vehicle veParam0, eCharacter echParam1) // Position - 0x3B4AE (242
 
 	for (i = 0; i < 3; i = i + 1)
 	{
-		if (ENTITY::GET_ENTITY_MODEL(veParam0) == Global_114135.f_32754.f_5600[i /*78*/].f_66)
-			if (!MISC::IS_STRING_NULL_OR_EMPTY(&(Global_114135.f_32754.f_5600[i /*78*/].f_1)))
-				if (MISC::ARE_STRINGS_EQUAL(VEHICLE::GET_VEHICLE_NUMBER_PLATE_TEXT(veParam0), &(Global_114135.f_32754.f_5600[i /*78*/].f_1)))
-					Global_114135.f_32754.f_5600[i /*78*/].f_66 = 0;
+		if (ENTITY::GET_ENTITY_MODEL(veParam0) == Global_114344.f_32754.f_5600[i /*78*/].f_66)
+			if (!MISC::IS_STRING_NULL_OR_EMPTY(&(Global_114344.f_32754.f_5600[i /*78*/].f_1)))
+				if (MISC::ARE_STRINGS_EQUAL(VEHICLE::GET_VEHICLE_NUMBER_PLATE_TEXT(veParam0), &(Global_114344.f_32754.f_5600[i /*78*/].f_1)))
+					Global_114344.f_32754.f_5600[i /*78*/].f_66 = 0;
 	}
 
-	Global_114135.f_32754.f_5590 = echParam1;
-	Global_79234 = veParam0;
-	Global_114135.f_32754.f_5588 = 1;
-	func_330(veParam0, &(Global_114135.f_32754.f_5510));
+	Global_114344.f_32754.f_5590 = echParam1;
+	Global_79439 = veParam0;
+	Global_114344.f_32754.f_5588 = 1;
+	func_330(veParam0, &(Global_114344.f_32754.f_5510));
 	return;
 }
 
-BOOL func_542(Vehicle veParam0) // Position - 0x3B6B0 (243376)
+BOOL func_542(Vehicle veParam0) // Position - 0x3B725 (243493)
 {
 	if (!ENTITY::DOES_ENTITY_EXIST(veParam0) || !VEHICLE::IS_VEHICLE_DRIVEABLE(veParam0, false) || func_335(veParam0, 0, false) || func_335(veParam0, 1, false) || func_335(veParam0, 2, false) || func_326(veParam0) != _CHAR_NULL || func_555(veParam0) || func_554(veParam0) || func_499(veParam0) || func_553(veParam0) || !func_543(ENTITY::GET_ENTITY_MODEL(veParam0)))
 	{
@@ -48163,7 +48186,7 @@ BOOL func_542(Vehicle veParam0) // Position - 0x3B6B0 (243376)
 	return true;
 }
 
-BOOL func_543(Hash hParam0) // Position - 0x3B78D (243597)
+BOOL func_543(Hash hParam0) // Position - 0x3B802 (243714)
 {
 	if (hParam0 == 0)
 		return false;
@@ -48240,7 +48263,7 @@ BOOL func_543(Hash hParam0) // Position - 0x3B78D (243597)
 	return true;
 }
 
-BOOL func_544(Hash hParam0, BOOL bParam1, int iParam2) // Position - 0x3B94B (244043)
+BOOL func_544(Hash hParam0, BOOL bParam1, int iParam2) // Position - 0x3B9C0 (244160)
 {
 	int i;
 	Hash outData;
@@ -48298,7 +48321,7 @@ BOOL func_544(Hash hParam0, BOOL bParam1, int iParam2) // Position - 0x3B94B (24
 	return 1;
 }
 
-BOOL func_545(Hash hParam0) // Position - 0x3BAD0 (244432)
+BOOL func_545(Hash hParam0) // Position - 0x3BB45 (244549)
 {
 	int num;
 	var unk;
@@ -48356,7 +48379,7 @@ BOOL func_545(Hash hParam0) // Position - 0x3BAD0 (244432)
 	return true;
 }
 
-BOOL _NETSHOPPING_SHOULD_USE_TRANSACTION_SYSTEM() // Position - 0x3BBA4 (244644)
+BOOL _NETSHOPPING_SHOULD_USE_TRANSACTION_SYSTEM() // Position - 0x3BC19 (244761)
 {
 	if (MISC::IS_PC_VERSION())
 		return NETSHOPPING::NET_GAMESERVER_USE_SERVER_TRANSACTIONS();
@@ -48364,16 +48387,16 @@ BOOL _NETSHOPPING_SHOULD_USE_TRANSACTION_SYSTEM() // Position - 0x3BBA4 (244644)
 	return false;
 }
 
-BOOL func_547(Hash hParam0, int iParam1) // Position - 0x3BBBB (244667)
+BOOL func_547(Hash hParam0, int iParam1) // Position - 0x3BC30 (244784)
 {
 	int cloudTimeAsInt;
 	int num;
 
-	if (Global_2707691)
+	if (Global_2707912)
 		return true;
 
-	if (!Global_2707692 && iParam1 >= 0 && iParam1 <= 547)
-		if (IS_BIT_SET(Global_1586536[iParam1 /*143*/].f_104, 2))
+	if (!Global_2707913 && iParam1 >= 0 && iParam1 <= 547)
+		if (IS_BIT_SET(Global_1586540[iParam1 /*143*/].f_104, 2))
 			return true;
 
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();
@@ -48381,76 +48404,76 @@ BOOL func_547(Hash hParam0, int iParam1) // Position - 0x3BBBB (244667)
 
 	switch (hParam0)
 	{
-		case -1321131184:
-			num = Global_262145.f_35588[0];
+		case -939601823:
+			num = Global_262145.f_35587[0];
 			break;
 	
-		case -1289225626:
-			num = Global_262145.f_35588[1];
+		case 457814204:
+			num = Global_262145.f_35587[1];
 			break;
 	
-		case -362690998:
-			num = Global_262145.f_35588[2];
+		case 691148275:
+			num = Global_262145.f_35587[2];
 			break;
 	
-		case -1948949064:
-			num = Global_262145.f_35588[3];
+		case -361348193:
+			num = Global_262145.f_35587[3];
 			break;
 	
-		case -1466692365:
-			num = Global_262145.f_35588[4];
+		case -1982433631:
+			num = Global_262145.f_35587[4];
 			break;
 	
-		case joaat("cargobob5"):
-			num = Global_262145.f_35588[5];
+		case joaat("POLICEB2"):
+			num = Global_262145.f_35587[5];
 			break;
 	
-		case 2042703219:
-			num = Global_262145.f_35588[6];
+		case -1882910943:
+			num = Global_262145.f_35587[6];
 			break;
 	
-		case 1484920335:
-			num = Global_262145.f_35588[7];
+		case 471399650:
+			num = Global_262145.f_35587[7];
 			break;
 	
-		case 1891140410:
-			num = Global_262145.f_35588[8];
+		case -1585673997:
+			num = Global_262145.f_35587[8];
 			break;
 	
-		case 1992041063:
-			num = Global_262145.f_35588[9];
+		case 1089816240:
+			num = Global_262145.f_35587[9];
 			break;
 	
-		case 858355070:
-			num = Global_262145.f_35588[10];
+		case joaat("HARDY"):
+			num = Global_262145.f_35587[10];
 			break;
 	
-		case joaat("URANUS"):
-			num = Global_262145.f_35588[11];
+		case -401558446:
+			num = Global_262145.f_35587[11];
 			break;
 	
-		case 84351789:
-			num = Global_262145.f_35588[12];
+		case 554408685:
+			num = Global_262145.f_35587[12];
 			break;
 	
-		case -660007725:
-			num = Global_262145.f_35588[13];
+		case -1508420500:
+			num = Global_262145.f_35587[13];
 			break;
 	
-		case -973016778:
-			num = Global_262145.f_35588[14];
+		case 1761301369:
+			num = Global_262145.f_35587[14];
 			break;
 	
-		case 127317925:
-			num = Global_262145.f_35588[15];
+		case 687627128:
+			num = Global_262145.f_35587[15];
 			break;
 	
-		case joaat("taco"):
-			num = Global_262145.f_35588[16];
+		case joaat("Minimus"):
+			num = Global_262145.f_35587[16];
 			break;
 	
-		case joaat("predator"):
-			num = Global_262145.f_35588[17];
+		case 1966698497:
+			num = Global_262145.f_35587[17];
 			break;
 	}
 
@@ -48460,22 +48483,22 @@ BOOL func_547(Hash hParam0, int iParam1) // Position - 0x3BBBB (244667)
 	return false;
 }
 
-BOOL func_548() // Position - 0x3BDC4 (245188)
+BOOL func_548() // Position - 0x3BE39 (245305)
 {
 	return false;
 }
 
-BOOL func_549() // Position - 0x3BDCD (245197)
+BOOL func_549() // Position - 0x3BE42 (245314)
 {
 	return true;
 }
 
-BOOL func_550() // Position - 0x3BDD6 (245206)
+BOOL func_550() // Position - 0x3BE4B (245323)
 {
 	return true;
 }
 
-BOOL func_551() // Position - 0x3BDDF (245215)
+BOOL func_551() // Position - 0x3BE54 (245332)
 {
 	if (DLC::IS_DLC_PRESENT(-1226939934))
 		return true;
@@ -48483,13 +48506,13 @@ BOOL func_551() // Position - 0x3BDDF (245215)
 	return false;
 }
 
-BOOL _IS_EXCLUSIVE_CONTENT_UNLOCKED() // Position - 0x3BDF8 (245240)
+BOOL _IS_EXCLUSIVE_CONTENT_UNLOCKED() // Position - 0x3BE6D (245357)
 {
 	int profileSetting;
 
-	if (Global_153015 == 2)
+	if (Global_153224 == 2)
 		return true;
-	else if (Global_153015 == 3)
+	else if (Global_153224 == 3)
 		return false;
 
 	if (NETWORK::NETWORK_IS_SIGNED_IN())
@@ -48526,7 +48549,7 @@ BOOL _IS_EXCLUSIVE_CONTENT_UNLOCKED() // Position - 0x3BDF8 (245240)
 	return false;
 }
 
-BOOL func_553(Vehicle veParam0) // Position - 0x3BEB0 (245424)
+BOOL func_553(Vehicle veParam0) // Position - 0x3BF25 (245541)
 {
 	Hash entityModel;
 	const char* vehicleNumberPlateText;
@@ -48543,7 +48566,7 @@ BOOL func_553(Vehicle veParam0) // Position - 0x3BEB0 (245424)
 	return false;
 }
 
-BOOL func_554(Vehicle veParam0) // Position - 0x3BEF8 (245496)
+BOOL func_554(Vehicle veParam0) // Position - 0x3BF6D (245613)
 {
 	int i;
 
@@ -48551,8 +48574,8 @@ BOOL func_554(Vehicle veParam0) // Position - 0x3BEF8 (245496)
 	{
 		for (i = 0; i < 9; i = i + 1)
 		{
-			if (ENTITY::DOES_ENTITY_EXIST(Global_98994[i]) && VEHICLE::IS_VEHICLE_DRIVEABLE(Global_98994[i], false))
-				if (Global_98994[i] == veParam0 && ENTITY::GET_ENTITY_MODEL(Global_98994[i]) == ENTITY::GET_ENTITY_MODEL(veParam0))
+			if (ENTITY::DOES_ENTITY_EXIST(Global_99199[i]) && VEHICLE::IS_VEHICLE_DRIVEABLE(Global_99199[i], false))
+				if (Global_99199[i] == veParam0 && ENTITY::GET_ENTITY_MODEL(Global_99199[i]) == ENTITY::GET_ENTITY_MODEL(veParam0))
 					return true;
 		}
 	}
@@ -48560,41 +48583,41 @@ BOOL func_554(Vehicle veParam0) // Position - 0x3BEF8 (245496)
 	return false;
 }
 
-BOOL func_555(Vehicle veParam0) // Position - 0x3BF74 (245620)
+BOOL func_555(Vehicle veParam0) // Position - 0x3BFE9 (245737)
 {
 	int i;
 
-	if (ENTITY::DOES_ENTITY_EXIST(Global_78329.f_484[24]))
-		if (veParam0 == Global_78329.f_484[24])
+	if (ENTITY::DOES_ENTITY_EXIST(Global_78534.f_484[24]))
+		if (veParam0 == Global_78534.f_484[24])
 			return false;
 
 	for (i = 0; i < 68; i = i + 1)
 	{
-		if (ENTITY::DOES_ENTITY_EXIST(Global_78329.f_484[i]))
+		if (ENTITY::DOES_ENTITY_EXIST(Global_78534.f_484[i]))
 			if (i != 24 && i != 21 && i != 22 && i != 23 && i != 27 && i != 30 && i != 33 && i != 28 && i != 31 && i != 34 && i != 26 && i != 29 && i != 32)
-				if (veParam0 == Global_78329.f_484[i])
+				if (veParam0 == Global_78534.f_484[i])
 					return true;
 	}
 
 	return false;
 }
 
-void func_556(Vehicle veParam0, eCharacter echParam1) // Position - 0x3C05C (245852)
+void func_556(Vehicle veParam0, eCharacter echParam1) // Position - 0x3C0D1 (245969)
 {
 	int i;
 
 	for (i = 0; i < 9; i = i + 1)
 	{
-		if (!ENTITY::DOES_ENTITY_EXIST(Global_98994[i]))
+		if (!ENTITY::DOES_ENTITY_EXIST(Global_99199[i]))
 		{
-			Global_98994[i] = veParam0;
-			Global_99004[i] = echParam1;
-			Global_99014[i] = ENTITY::GET_ENTITY_MODEL(veParam0);
+			Global_99199[i] = veParam0;
+			Global_99209[i] = echParam1;
+			Global_99219[i] = ENTITY::GET_ENTITY_MODEL(veParam0);
 		
-			if (VEHICLE::IS_THIS_MODEL_A_CAR(Global_99014[i]))
-				Global_99042[echParam1 /*3*/][0] = -1;
+			if (VEHICLE::IS_THIS_MODEL_A_CAR(Global_99219[i]))
+				Global_99247[echParam1 /*3*/][0] = -1;
 			else
-				Global_99042[echParam1 /*3*/][1] = -1;
+				Global_99247[echParam1 /*3*/][1] = -1;
 		
 			i = 9;
 		}
@@ -48605,20 +48628,20 @@ void func_556(Vehicle veParam0, eCharacter echParam1) // Position - 0x3C05C (245
 	return;
 }
 
-void func_557(var uParam0) // Position - 0x3C0DE (245982)
+void func_557(var uParam0) // Position - 0x3C153 (246099)
 {
 	if (!func_558(*uParam0))
-		VEHICLE::SET_VEHICLE_EXTRA(*uParam0, 5, !Global_114135.f_9089.f_99.f_58[119]);
+		VEHICLE::SET_VEHICLE_EXTRA(*uParam0, 5, !Global_114344.f_9089.f_99.f_58[119]);
 
 	return;
 }
 
-BOOL func_558(Vehicle veParam0) // Position - 0x3C109 (246025)
+BOOL func_558(Vehicle veParam0) // Position - 0x3C17E (246142)
 {
 	return VEHICLE::IS_VEHICLE_EXTRA_TURNED_ON(veParam0, 5);
 }
 
-int func_559(var uParam0, var uParam1, var uParam2) // Position - 0x3C118 (246040)
+int func_559(var uParam0, var uParam1, var uParam2) // Position - 0x3C18D (246157)
 {
 	int i;
 	int modType;
@@ -48694,7 +48717,7 @@ int func_559(var uParam0, var uParam1, var uParam2) // Position - 0x3C118 (24604
 	return 1;
 }
 
-BOOL func_560(Vehicle veParam0) // Position - 0x3C2F1 (246513)
+BOOL func_560(Vehicle veParam0) // Position - 0x3C366 (246630)
 {
 	int i;
 	int modType;
@@ -48727,7 +48750,7 @@ BOOL func_560(Vehicle veParam0) // Position - 0x3C2F1 (246513)
 	return false;
 }
 
-void func_561(var uParam0) // Position - 0x3C3CF (246735)
+void func_561(var uParam0) // Position - 0x3C444 (246852)
 {
 	switch (ENTITY::GET_ENTITY_MODEL(*uParam0))
 	{
@@ -48749,7 +48772,7 @@ void func_561(var uParam0) // Position - 0x3C3CF (246735)
 	return;
 }
 
-int func_562(Vehicle veParam0, int iParam1) // Position - 0x3C426 (246822)
+int func_562(Vehicle veParam0, int iParam1) // Position - 0x3C49B (246939)
 {
 	int value;
 	int value2;
@@ -48804,12 +48827,12 @@ int func_562(Vehicle veParam0, int iParam1) // Position - 0x3C426 (246822)
 	return 0;
 }
 
-int func_563(Vehicle veParam0, int iParam1) // Position - 0x3C50F (247055)
+int func_563(Vehicle veParam0, int iParam1) // Position - 0x3C584 (247172)
 {
 	int i;
 
-	if (STREAMING::IS_MODEL_VALID(Global_153027) && VEHICLE::IS_VEHICLE_MODEL(veParam0, Global_153027) && Global_153028 == iParam1)
-		return Global_153029;
+	if (STREAMING::IS_MODEL_VALID(Global_153236) && VEHICLE::IS_VEHICLE_MODEL(veParam0, Global_153236) && Global_153237 == iParam1)
+		return Global_153238;
 
 	for (i = VEHICLE::GET_NUM_VEHICLE_MODS(veParam0, iParam1) - 1; i >= 0 && func_565(veParam0, iParam1, i); i = i - 1)
 	{
@@ -48818,7 +48841,7 @@ int func_563(Vehicle veParam0, int iParam1) // Position - 0x3C50F (247055)
 	return i;
 }
 
-BOOL func_564(Hash hParam0) // Position - 0x3C571 (247153)
+BOOL func_564(Hash hParam0) // Position - 0x3C5E6 (247270)
 {
 	if (func_528(hParam0, 1))
 		return true;
@@ -48832,7 +48855,7 @@ BOOL func_564(Hash hParam0) // Position - 0x3C571 (247153)
 	return false;
 }
 
-BOOL func_565(Vehicle veParam0, int iParam1, int iParam2) // Position - 0x3C59C (247196)
+BOOL func_565(Vehicle veParam0, int iParam1, int iParam2) // Position - 0x3C611 (247313)
 {
 	if (!func_566() && VEHICLE::IS_VEHICLE_MOD_GEN9_EXCLUSIVE(veParam0, iParam1, iParam2))
 		return true;
@@ -48840,43 +48863,43 @@ BOOL func_565(Vehicle veParam0, int iParam1, int iParam2) // Position - 0x3C59C 
 	return false;
 }
 
-BOOL func_566() // Position - 0x3C5C0 (247232)
+BOOL func_566() // Position - 0x3C635 (247349)
 {
 	return false;
 }
 
-BOOL func_567(var uParam0, var uParam1) // Position - 0x3C5C9 (247241)
+BOOL func_567(var uParam0, var uParam1) // Position - 0x3C63E (247358)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 	}
-	else if (Global_114135.f_20122.f_261)
+	else if (Global_114344.f_20122.f_261)
 	{
-		*uParam0 = { Global_114135.f_20122.f_267 };
-		*uParam1 = Global_114135.f_20122.f_271;
+		*uParam0 = { Global_114344.f_20122.f_267 };
+		*uParam1 = Global_114344.f_20122.f_271;
 		return true;
 	}
 
 	return false;
 }
 
-void func_568(eCharacter echParam0, int iParam1) // Position - 0x3C60A (247306)
+void func_568(eCharacter echParam0, int iParam1) // Position - 0x3C67F (247423)
 {
 	int i;
 
 	for (i = 0; i < 9; i = i + 1)
 	{
-		if (ENTITY::DOES_ENTITY_EXIST(Global_98994[i]))
+		if (ENTITY::DOES_ENTITY_EXIST(Global_99199[i]))
 		{
-			if (echParam0 == 145 || Global_99004[i] == echParam0)
+			if (echParam0 == 145 || Global_99209[i] == echParam0)
 			{
-				if (iParam1 == 0 || ENTITY::GET_ENTITY_MODEL(Global_98994[i]) == func_328(echParam0, iParam1))
+				if (iParam1 == 0 || ENTITY::GET_ENTITY_MODEL(Global_99199[i]) == func_328(echParam0, iParam1))
 				{
-					if (!PED::IS_PED_IN_VEHICLE(PLAYER::PLAYER_PED_ID(), Global_98994[i], false))
+					if (!PED::IS_PED_IN_VEHICLE(PLAYER::PLAYER_PED_ID(), Global_99199[i], false))
 					{
-						ENTITY::SET_ENTITY_AS_MISSION_ENTITY(Global_98994[i], false, true);
-						VEHICLE::DELETE_VEHICLE(&Global_98994[i]);
-						Global_99004[i] = _CHAR_NULL;
+						ENTITY::SET_ENTITY_AS_MISSION_ENTITY(Global_99199[i], false, true);
+						VEHICLE::DELETE_VEHICLE(&Global_99199[i]);
+						Global_99209[i] = _CHAR_NULL;
 					}
 				}
 			}
@@ -48886,53 +48909,53 @@ void func_568(eCharacter echParam0, int iParam1) // Position - 0x3C60A (247306)
 	return;
 }
 
-void func_569(Vector3 vParam0, var uParam1, var uParam2, float fParam3, BOOL bParam4) // Position - 0x3C6A8 (247464)
+void func_569(Vector3 vParam0, var uParam1, var uParam2, float fParam3, BOOL bParam4) // Position - 0x3C71D (247581)
 {
 	int i;
 
 	for (i = 0; i < 68; i = i + 1)
 	{
-		if (func_574(&Global_78329.f_555[0 /*21*/], i))
-			if (MISC::GET_DISTANCE_BETWEEN_COORDS(vParam0, Global_78329.f_555[0 /*21*/], bParam4) <= fParam3)
+		if (func_574(&Global_78534.f_555[0 /*21*/], i))
+			if (MISC::GET_DISTANCE_BETWEEN_COORDS(vParam0, Global_78534.f_555[0 /*21*/], bParam4) <= fParam3)
 				func_570(i);
 	}
 
 	return;
 }
 
-void func_570(int iParam0) // Position - 0x3C6F8 (247544)
+void func_570(int iParam0) // Position - 0x3C76D (247661)
 {
 	BOOL flag;
 
 	if (iParam0 == -1)
 		return;
 
-	if (func_574(&Global_78329.f_555[0 /*21*/], iParam0))
+	if (func_574(&Global_78534.f_555[0 /*21*/], iParam0))
 	{
-		if (ENTITY::DOES_ENTITY_EXIST(Global_78329.f_139[iParam0]))
+		if (ENTITY::DOES_ENTITY_EXIST(Global_78534.f_139[iParam0]))
 		{
 			flag = true;
 		
 			if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
-				if (VEHICLE::IS_VEHICLE_DRIVEABLE(Global_78329.f_139[iParam0], false))
-					if (PED::IS_PED_IN_VEHICLE(PLAYER::PLAYER_PED_ID(), Global_78329.f_139[iParam0], false))
+				if (VEHICLE::IS_VEHICLE_DRIVEABLE(Global_78534.f_139[iParam0], false))
+					if (PED::IS_PED_IN_VEHICLE(PLAYER::PLAYER_PED_ID(), Global_78534.f_139[iParam0], false))
 						flag = false;
 		
 			if (flag)
 			{
-				ENTITY::SET_ENTITY_AS_MISSION_ENTITY(Global_78329.f_139[iParam0], true, true);
-				VEHICLE::DELETE_VEHICLE(&Global_78329.f_139[iParam0]);
+				ENTITY::SET_ENTITY_AS_MISSION_ENTITY(Global_78534.f_139[iParam0], true, true);
+				VEHICLE::DELETE_VEHICLE(&Global_78534.f_139[iParam0]);
 			}
 		}
 	
-		Global_78329[iParam0] = 1;
+		Global_78534[iParam0] = 1;
 	
-		if (IS_BIT_SET(Global_78329.f_555[0 /*21*/].f_9, 13))
+		if (IS_BIT_SET(Global_78534.f_555[0 /*21*/].f_9, 13))
 		{
-			if (iParam0 == 24 && func_230(iParam0, 0) && Global_79238.f_66 == 0 && Global_114135.f_32754.f_1958[Global_78329.f_555[0 /*21*/].f_14] != 0 && Global_114135.f_32754.f_1958[Global_78329.f_555[0 /*21*/].f_14] > 3 && !func_572(0, Global_78329.f_555[0 /*21*/].f_12) || !func_572(1, Global_78329.f_555[0 /*21*/].f_12))
+			if (iParam0 == 24 && func_230(iParam0, 0) && Global_79443.f_66 == 0 && Global_114344.f_32754.f_1958[Global_78534.f_555[0 /*21*/].f_14] != 0 && Global_114344.f_32754.f_1958[Global_78534.f_555[0 /*21*/].f_14] > 3 && !func_572(0, Global_78534.f_555[0 /*21*/].f_12) || !func_572(1, Global_78534.f_555[0 /*21*/].f_12))
 			{
-				func_571(&Global_114135.f_32754.f_69[Global_78329.f_555[0 /*21*/].f_14 /*78*/], &Global_79238);
-				Global_79316 = Global_114135.f_32754.f_5591;
+				func_571(&Global_114344.f_32754.f_69[Global_78534.f_555[0 /*21*/].f_14 /*78*/], &Global_79443);
+				Global_79521 = Global_114344.f_32754.f_5591;
 			}
 		
 			func_228(iParam0, false);
@@ -48942,7 +48965,7 @@ void func_570(int iParam0) // Position - 0x3C6F8 (247544)
 	return;
 }
 
-void func_571(var uParam0, var uParam1) // Position - 0x3C867 (247911)
+void func_571(var uParam0, var uParam1) // Position - 0x3C8DC (248028)
 {
 	uParam1->f_66 = uParam0->f_66;
 	*uParam1 = *uParam0;
@@ -48970,7 +48993,7 @@ void func_571(var uParam0, var uParam1) // Position - 0x3C867 (247911)
 	return;
 }
 
-BOOL func_572(int iParam0, int iParam1) // Position - 0x3C933 (248115)
+BOOL func_572(int iParam0, int iParam1) // Position - 0x3C9A8 (248232)
 {
 	int num;
 
@@ -48989,18 +49012,18 @@ BOOL func_572(int iParam0, int iParam1) // Position - 0x3C933 (248115)
 			break;
 	}
 
-	if (iParam0 < 0 || iParam0 >= func_573(&Global_114135.f_32754.f_5038[num /*157*/]))
+	if (iParam0 < 0 || iParam0 >= func_573(&Global_114344.f_32754.f_5038[num /*157*/]))
 		return false;
 
-	return func_544(Global_114135.f_32754.f_5038[num /*157*/][iParam0 /*78*/].f_66, false, -1);
+	return func_544(Global_114344.f_32754.f_5038[num /*157*/][iParam0 /*78*/].f_66, false, -1);
 }
 
-int func_573(var uParam0) // Position - 0x3C9A6 (248230)
+int func_573(var uParam0) // Position - 0x3CA1B (248347)
 {
 	return *uParam0;
 }
 
-BOOL func_574(var uParam0, int iParam1) // Position - 0x3C9B1 (248241)
+BOOL func_574(var uParam0, int iParam1) // Position - 0x3CA26 (248358)
 {
 	BOOL num;
 	int num2;
@@ -49727,7 +49750,7 @@ BOOL func_574(var uParam0, int iParam1) // Position - 0x3C9B1 (248241)
 
 	if (IS_BIT_SET(uParam0->f_9, 10))
 	{
-		uParam0->f_4 = Global_114135.f_32754.f_69[uParam0->f_14 /*78*/].f_66;
+		uParam0->f_4 = Global_114344.f_32754.f_69[uParam0->f_14 /*78*/].f_66;
 	
 		if (iParam1 == 14)
 		{
@@ -49738,39 +49761,39 @@ BOOL func_574(var uParam0, int iParam1) // Position - 0x3C9B1 (248241)
 			}
 		}
 	
-		if (!func_280(Global_114135.f_32754.f_1864[uParam0->f_14 /*3*/], 0f, 0f, 0f, false))
-			*uParam0 = { Global_114135.f_32754.f_1864[uParam0->f_14 /*3*/] };
+		if (!func_280(Global_114344.f_32754.f_1864[uParam0->f_14 /*3*/], 0f, 0f, 0f, false))
+			*uParam0 = { Global_114344.f_32754.f_1864[uParam0->f_14 /*3*/] };
 	
-		if (Global_114135.f_32754.f_1934[uParam0->f_14] != -1f)
-			uParam0->f_3 = Global_114135.f_32754.f_1934[uParam0->f_14];
+		if (Global_114344.f_32754.f_1934[uParam0->f_14] != -1f)
+			uParam0->f_3 = Global_114344.f_32754.f_1934[uParam0->f_14];
 	}
 
 	if (IS_BIT_SET(uParam0->f_9, 19))
 	{
-		if (!func_280(Global_114135.f_2367.f_539.f_3588[1 /*10*/][uParam0->f_12 /*3*/], 0f, 0f, 0f, false))
+		if (!func_280(Global_114344.f_2367.f_539.f_3588[1 /*10*/][uParam0->f_12 /*3*/], 0f, 0f, 0f, false))
 		{
-			*uParam0 = { Global_114135.f_2367.f_539.f_3588[1 /*10*/][uParam0->f_12 /*3*/] };
-			uParam0->f_3 = Global_114135.f_2367.f_539.f_3609[1 /*4*/][uParam0->f_12];
+			*uParam0 = { Global_114344.f_2367.f_539.f_3588[1 /*10*/][uParam0->f_12 /*3*/] };
+			uParam0->f_3 = Global_114344.f_2367.f_539.f_3609[1 /*4*/][uParam0->f_12];
 		}
 	}
 	else if (IS_BIT_SET(uParam0->f_9, 20))
 	{
-		if (!func_280(Global_114135.f_2367.f_539.f_3588[0 /*10*/][uParam0->f_12 /*3*/], 0f, 0f, 0f, false))
+		if (!func_280(Global_114344.f_2367.f_539.f_3588[0 /*10*/][uParam0->f_12 /*3*/], 0f, 0f, 0f, false))
 		{
-			*uParam0 = { Global_114135.f_2367.f_539.f_3588[0 /*10*/][uParam0->f_12 /*3*/] };
-			uParam0->f_3 = Global_114135.f_2367.f_539.f_3609[0 /*4*/][uParam0->f_12];
+			*uParam0 = { Global_114344.f_2367.f_539.f_3588[0 /*10*/][uParam0->f_12 /*3*/] };
+			uParam0->f_3 = Global_114344.f_2367.f_539.f_3609[0 /*4*/][uParam0->f_12];
 		}
 	}
 
 	return num;
 }
 
-Vehicle func_575(var uParam0, var uParam1, var uParam2, float fParam3) // Position - 0x3E09F (254111)
+Vehicle func_575(var uParam0, var uParam1, var uParam2, float fParam3) // Position - 0x3E114 (254228)
 {
-	return func_576(&(Global_107680.f_2890), uParam0, fParam3, false);
+	return func_576(&(Global_107887.f_2890), uParam0, fParam3, false);
 }
 
-Vehicle func_576(var uParam0, float fParam1, var uParam2, var uParam3, float fParam4, BOOL bParam5) // Position - 0x3E0B9 (254137)
+Vehicle func_576(var uParam0, float fParam1, var uParam2, var uParam3, float fParam4, BOOL bParam5) // Position - 0x3E12E (254254)
 {
 	Vehicle vehicle;
 	Vector3 entityCoords;
@@ -49841,11 +49864,11 @@ Vehicle func_576(var uParam0, float fParam1, var uParam2, var uParam3, float fPa
 						func_570(num);
 				}
 			
-				if (Global_101688 != 13 && Global_101688 != 10 && Global_101688 != 11 && Global_101688 != 12)
+				if (Global_101893 != 13 && Global_101893 != 10 && Global_101893 != 11 && Global_101893 != 12)
 				{
-					if (MISC::GET_HASH_KEY(&(Global_101688.f_3)) == Global_79317)
+					if (MISC::GET_HASH_KEY(&(Global_101893.f_3)) == Global_79522)
 					{
-						if (uParam0->f_12.f_66 == Global_114135.f_32754.f_69[21 /*78*/].f_66)
+						if (uParam0->f_12.f_66 == Global_114344.f_32754.f_69[21 /*78*/].f_66)
 						{
 							func_228(24, false);
 							func_570(24);
@@ -49867,7 +49890,7 @@ Vehicle func_576(var uParam0, float fParam1, var uParam2, var uParam3, float fPa
 	return vehicle;
 }
 
-int func_577(Vehicle veParam0) // Position - 0x3E36C (254828)
+int func_577(Vehicle veParam0) // Position - 0x3E3E1 (254945)
 {
 	int i;
 	var colorPrimary;
@@ -49877,12 +49900,12 @@ int func_577(Vehicle veParam0) // Position - 0x3E36C (254828)
 
 	for (i = 0; i < 68; i = i + 1)
 	{
-		if (ENTITY::DOES_ENTITY_EXIST(Global_78329.f_484[i]) && !ENTITY::IS_ENTITY_DEAD(Global_78329.f_484[i], false) && VEHICLE::IS_VEHICLE_DRIVEABLE(Global_78329.f_484[i], false))
+		if (ENTITY::DOES_ENTITY_EXIST(Global_78534.f_484[i]) && !ENTITY::IS_ENTITY_DEAD(Global_78534.f_484[i], false) && VEHICLE::IS_VEHICLE_DRIVEABLE(Global_78534.f_484[i], false))
 		{
 			VEHICLE::GET_VEHICLE_COLOURS(veParam0, &colorPrimary, &colorSecondary);
-			VEHICLE::GET_VEHICLE_COLOURS(Global_78329.f_484[i], &colorPrimary2, &colorSecondary2);
+			VEHICLE::GET_VEHICLE_COLOURS(Global_78534.f_484[i], &colorPrimary2, &colorSecondary2);
 		
-			if (ENTITY::GET_ENTITY_MODEL(veParam0) == ENTITY::GET_ENTITY_MODEL(Global_78329.f_484[i]) && VEHICLE::GET_VEHICLE_LIVERY(veParam0) == VEHICLE::GET_VEHICLE_LIVERY(Global_78329.f_484[i]) && colorPrimary == colorSecondary && colorPrimary2 == colorSecondary2)
+			if (ENTITY::GET_ENTITY_MODEL(veParam0) == ENTITY::GET_ENTITY_MODEL(Global_78534.f_484[i]) && VEHICLE::GET_VEHICLE_LIVERY(veParam0) == VEHICLE::GET_VEHICLE_LIVERY(Global_78534.f_484[i]) && colorPrimary == colorSecondary && colorPrimary2 == colorSecondary2)
 				return i;
 		}
 	}
@@ -49890,7 +49913,7 @@ int func_577(Vehicle veParam0) // Position - 0x3E36C (254828)
 	return -1;
 }
 
-BOOL func_578(Vehicle veParam0, var uParam1, var uParam2, var uParam3, BOOL bParam4) // Position - 0x3E42F (255023)
+BOOL func_578(Vehicle veParam0, var uParam1, var uParam2, var uParam3, BOOL bParam4) // Position - 0x3E4A4 (255140)
 {
 	Hash entityModel;
 	var sizeAndVehs;
@@ -49903,7 +49926,7 @@ BOOL func_578(Vehicle veParam0, var uParam1, var uParam2, var uParam3, BOOL bPar
 	switch (entityModel)
 	{
 		case joaat("cargobob"):
-			if (func_580(veParam0, Global_78329.f_139[38], false))
+			if (func_580(veParam0, Global_78534.f_139[38], false))
 			{
 				func_570(38);
 				return true;
@@ -49911,7 +49934,7 @@ BOOL func_578(Vehicle veParam0, var uParam1, var uParam2, var uParam3, BOOL bPar
 			break;
 	
 		case joaat("firetruk"):
-			if (func_580(veParam0, Global_78329.f_139[43], true))
+			if (func_580(veParam0, Global_78534.f_139[43], true))
 			{
 				func_570(43);
 				return true;
@@ -49939,9 +49962,9 @@ BOOL func_578(Vehicle veParam0, var uParam1, var uParam2, var uParam3, BOOL bPar
 			break;
 	
 		case joaat("luxor2"):
-			if (ENTITY::DOES_ENTITY_EXIST(Global_78329.f_484[14]) && VEHICLE::IS_VEHICLE_DRIVEABLE(veParam0, false) && VEHICLE::IS_VEHICLE_DRIVEABLE(Global_78329.f_484[14], false))
+			if (ENTITY::DOES_ENTITY_EXIST(Global_78534.f_484[14]) && VEHICLE::IS_VEHICLE_DRIVEABLE(veParam0, false) && VEHICLE::IS_VEHICLE_DRIVEABLE(Global_78534.f_484[14], false))
 			{
-				if (ENTITY::GET_ENTITY_MODEL(Global_78329.f_484[14]) == joaat("luxor2") && VEHICLE::GET_VEHICLE_LIVERY(veParam0) == VEHICLE::GET_VEHICLE_LIVERY(Global_78329.f_484[14]))
+				if (ENTITY::GET_ENTITY_MODEL(Global_78534.f_484[14]) == joaat("luxor2") && VEHICLE::GET_VEHICLE_LIVERY(veParam0) == VEHICLE::GET_VEHICLE_LIVERY(Global_78534.f_484[14]))
 				{
 					func_570(14);
 					return true;
@@ -49950,9 +49973,9 @@ BOOL func_578(Vehicle veParam0, var uParam1, var uParam2, var uParam3, BOOL bPar
 			break;
 	
 		case joaat("swift2"):
-			if (ENTITY::DOES_ENTITY_EXIST(Global_78329.f_484[20]) && VEHICLE::IS_VEHICLE_DRIVEABLE(veParam0, false) && VEHICLE::IS_VEHICLE_DRIVEABLE(Global_78329.f_484[20], false))
+			if (ENTITY::DOES_ENTITY_EXIST(Global_78534.f_484[20]) && VEHICLE::IS_VEHICLE_DRIVEABLE(veParam0, false) && VEHICLE::IS_VEHICLE_DRIVEABLE(Global_78534.f_484[20], false))
 			{
-				if (ENTITY::GET_ENTITY_MODEL(Global_78329.f_484[20]) == joaat("swift2") && VEHICLE::GET_VEHICLE_LIVERY(veParam0) == VEHICLE::GET_VEHICLE_LIVERY(Global_78329.f_484[20]))
+				if (ENTITY::GET_ENTITY_MODEL(Global_78534.f_484[20]) == joaat("swift2") && VEHICLE::GET_VEHICLE_LIVERY(veParam0) == VEHICLE::GET_VEHICLE_LIVERY(Global_78534.f_484[20]))
 				{
 					func_570(20);
 					return true;
@@ -49964,7 +49987,7 @@ BOOL func_578(Vehicle veParam0, var uParam1, var uParam2, var uParam3, BOOL bPar
 	return false;
 }
 
-BOOL func_579(float fParam0, var uParam1, var uParam2, float fParam3, float fParam4, float fParam5, int iParam6, BOOL bParam7) // Position - 0x3E637 (255543)
+BOOL func_579(float fParam0, var uParam1, var uParam2, float fParam3, float fParam4, float fParam5, int iParam6, BOOL bParam7) // Position - 0x3E6AC (255660)
 {
 	if (iParam6 < 0f)
 		iParam6 = 0f;
@@ -49981,7 +50004,7 @@ BOOL func_579(float fParam0, var uParam1, var uParam2, float fParam3, float fPar
 	return false;
 }
 
-BOOL func_580(Vehicle veParam0, Vehicle veParam1, BOOL bParam2) // Position - 0x3E6B2 (255666)
+BOOL func_580(Vehicle veParam0, Vehicle veParam1, BOOL bParam2) // Position - 0x3E727 (255783)
 {
 	var colorPrimary;
 	var colorSecondary;
@@ -50007,7 +50030,7 @@ BOOL func_580(Vehicle veParam0, Vehicle veParam1, BOOL bParam2) // Position - 0x
 	return false;
 }
 
-void func_581(Vehicle veParam0, var uParam1, BOOL bParam2, BOOL bParam3) // Position - 0x3E713 (255763)
+void func_581(Vehicle veParam0, var uParam1, BOOL bParam2, BOOL bParam3) // Position - 0x3E788 (255880)
 {
 	int num;
 	int num2;
@@ -50132,6 +50155,10 @@ void func_581(Vehicle veParam0, var uParam1, BOOL bParam2, BOOL bParam3) // Posi
 				MISC::SET_BIT(&(uParam1->f_77), 0);
 		}
 		else if (uParam1->f_66 == joaat("yosemite2"))
+		{
+			MISC::SET_BIT(&(uParam1->f_77), func_331(1));
+		}
+		else if (uParam1->f_66 == -1681653521)
 		{
 			MISC::SET_BIT(&(uParam1->f_77), func_331(1));
 		}
@@ -50281,7 +50308,7 @@ void func_581(Vehicle veParam0, var uParam1, BOOL bParam2, BOOL bParam3) // Posi
 	return;
 }
 
-BOOL func_582(Vehicle veParam0, float fParam1) // Position - 0x3EE18 (257560)
+BOOL func_582(Vehicle veParam0, float fParam1) // Position - 0x3EEA9 (257705)
 {
 	float entityCoords;
 	var groundZ;
@@ -50302,31 +50329,31 @@ BOOL func_582(Vehicle veParam0, float fParam1) // Position - 0x3EE18 (257560)
 	return false;
 }
 
-BOOL func_583() // Position - 0x3EE89 (257673)
+BOOL func_583() // Position - 0x3EF1A (257818)
 {
-	if (*Global_4718592.f_118493 == 6 || *Global_4718592.f_118493 == 7 || *Global_4718592.f_118493 == 18 || *Global_4718592.f_118493 == 19 && Global_4718592.f_2 == 20)
+	if (*Global_4718592.f_121552 == 6 || *Global_4718592.f_121552 == 7 || *Global_4718592.f_121552 == 18 || *Global_4718592.f_121552 == 19 && Global_4718592.f_2 == 20)
 		return false;
 
 	if (func_586(7))
-		if (func_585(Global_2672939.f_4.f_16) || func_584(Global_2672939.f_4.f_16))
+		if (func_585(Global_2672964.f_4.f_16) || func_584(Global_2672964.f_4.f_16))
 			return false;
 
 	return true;
 }
 
-BOOL func_584(int iParam0) // Position - 0x3EF18 (257816)
+BOOL func_584(int iParam0) // Position - 0x3EFA9 (257961)
 {
 	int num;
 
 	num = iParam0;
 
 	if (num != -1)
-		return Global_1882780[num /*149*/].f_82.f_66 != 0;
+		return Global_1882304[num /*201*/].f_82.f_66 != 0;
 
 	return false;
 }
 
-BOOL func_585(int iParam0) // Position - 0x3EF3C (257852)
+BOOL func_585(int iParam0) // Position - 0x3EFCD (257997)
 {
 	int num;
 
@@ -50338,12 +50365,12 @@ BOOL func_585(int iParam0) // Position - 0x3EF3C (257852)
 	return false;
 }
 
-BOOL func_586(int iParam0) // Position - 0x3EF5A (257882)
+BOOL func_586(int iParam0) // Position - 0x3EFEB (258027)
 {
-	return func_587(&(Global_2672939.f_194), iParam0);
+	return func_587(&(Global_2672964.f_194), iParam0);
 }
 
-BOOL func_587(var uParam0, int iParam1) // Position - 0x3EF6E (257902)
+BOOL func_587(var uParam0, int iParam1) // Position - 0x3EFFF (258047)
 {
 	int num;
 	int num2;
@@ -50355,7 +50382,7 @@ BOOL func_587(var uParam0, int iParam1) // Position - 0x3EF6E (257902)
 	return IS_BIT_SET(uParam0->[num2], num3);
 }
 
-void func_588(Vehicle veParam0, int iParam1) // Position - 0x3EF91 (257937)
+void func_588(Vehicle veParam0, int iParam1) // Position - 0x3F022 (258082)
 {
 	int vehicleMod;
 	int vehicleModVariation;
@@ -50379,12 +50406,12 @@ void func_588(Vehicle veParam0, int iParam1) // Position - 0x3EF91 (257937)
 	return;
 }
 
-BOOL func_589() // Position - 0x3F009 (258057)
+BOOL func_589() // Position - 0x3F09A (258202)
 {
 	return DLC::IS_DLC_PRESENT(joaat("mpindependence"));
 }
 
-BOOL func_590(Vehicle veParam0) // Position - 0x3F01A (258074)
+BOOL func_590(Vehicle veParam0) // Position - 0x3F0AB (258219)
 {
 	int _int;
 
@@ -50405,7 +50432,7 @@ BOOL func_590(Vehicle veParam0) // Position - 0x3F01A (258074)
 	return false;
 }
 
-int func_591(var uParam0) // Position - 0x3F065 (258149)
+int func_591(var uParam0) // Position - 0x3F0F6 (258294)
 {
 	if (!func_566() && func_592(uParam0))
 		return 1;
@@ -50413,7 +50440,7 @@ int func_591(var uParam0) // Position - 0x3F065 (258149)
 	return 0;
 }
 
-BOOL func_592(int iParam0) // Position - 0x3F085 (258181)
+BOOL func_592(int iParam0) // Position - 0x3F116 (258326)
 {
 	switch (iParam0)
 	{
@@ -50433,7 +50460,7 @@ BOOL func_592(int iParam0) // Position - 0x3F085 (258181)
 	return false;
 }
 
-BOOL func_593(Vehicle veParam0) // Position - 0x3F0D8 (258264)
+BOOL func_593(Vehicle veParam0) // Position - 0x3F169 (258409)
 {
 	if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 		if (!_IS_PLAYER_IN_VEHICLE_SEAT(PLAYER::PLAYER_ID(), -1))
@@ -50456,7 +50483,7 @@ BOOL func_593(Vehicle veParam0) // Position - 0x3F0D8 (258264)
 	return false;
 }
 
-int func_594(Vehicle veParam0) // Position - 0x3F15F (258399)
+int func_594(Vehicle veParam0) // Position - 0x3F1F0 (258544)
 {
 	if (DECORATOR::DECOR_IS_REGISTERED_AS_TYPE("FMDeliverableID", INT))
 		if (DECORATOR::DECOR_EXIST_ON(veParam0, "FMDeliverableID"))
@@ -50465,7 +50492,7 @@ int func_594(Vehicle veParam0) // Position - 0x3F15F (258399)
 	return -1;
 }
 
-int func_595(Player plParam0) // Position - 0x3F191 (258449)
+int func_595(Player plParam0) // Position - 0x3F222 (258594)
 {
 	if (func_598(plParam0) == 233)
 		return func_596(plParam0);
@@ -50473,33 +50500,33 @@ int func_595(Player plParam0) // Position - 0x3F191 (258449)
 	return -1;
 }
 
-int func_596(Player plParam0) // Position - 0x3F1AE (258478)
+int func_596(Player plParam0) // Position - 0x3F23F (258623)
 {
 	if (func_597(plParam0, false))
-		return Global_1887549[plParam0 /*611*/].f_10.f_182;
+		return Global_1888737[plParam0 /*611*/].f_10.f_182;
 
 	return -1;
 }
 
-BOOL func_597(Player plParam0, BOOL bParam1) // Position - 0x3F1D1 (258513)
+BOOL func_597(Player plParam0, BOOL bParam1) // Position - 0x3F262 (258658)
 {
 	if (func_445(plParam0))
-		if (Global_1887549[plParam0 /*611*/].f_10.f_33 != -1 || bParam1 && Global_1887549[plParam0 /*611*/].f_10.f_32 != -1)
+		if (Global_1888737[plParam0 /*611*/].f_10.f_33 != -1 || bParam1 && Global_1888737[plParam0 /*611*/].f_10.f_32 != -1)
 			return true;
 
 	return false;
 }
 
-int func_598(Player plParam0) // Position - 0x3F215 (258581)
+int func_598(Player plParam0) // Position - 0x3F2A6 (258726)
 {
 	if (func_445(plParam0))
 		if (func_597(plParam0, false))
-			return Global_1887549[plParam0 /*611*/].f_10.f_33;
+			return Global_1888737[plParam0 /*611*/].f_10.f_33;
 
 	return -1;
 }
 
-BOOL _IS_PLAYER_IN_VEHICLE_SEAT(Player plParam0, int iParam1) // Position - 0x3F241 (258625)
+BOOL _IS_PLAYER_IN_VEHICLE_SEAT(Player plParam0, int iParam1) // Position - 0x3F2D2 (258770)
 {
 	Vehicle vehiclePedIsIn;
 
@@ -50518,7 +50545,7 @@ BOOL _IS_PLAYER_IN_VEHICLE_SEAT(Player plParam0, int iParam1) // Position - 0x3F
 	return false;
 }
 
-BOOL func_600(var uParam0) // Position - 0x3F28E (258702)
+BOOL func_600(var uParam0) // Position - 0x3F31F (258847)
 {
 	if (func_601(uParam0))
 	{
@@ -50537,7 +50564,7 @@ BOOL func_600(var uParam0) // Position - 0x3F28E (258702)
 	return 1;
 }
 
-BOOL func_601(var uParam0) // Position - 0x3F2C3 (258755)
+BOOL func_601(var uParam0) // Position - 0x3F354 (258900)
 {
 	if (uParam0->f_12.f_66 == 0)
 		return 0;
@@ -50551,18 +50578,18 @@ BOOL func_601(var uParam0) // Position - 0x3F2C3 (258755)
 	return 1;
 }
 
-BOOL func_602() // Position - 0x3F323 (258851)
+BOOL func_602() // Position - 0x3F3B4 (258996)
 {
-	return func_600(&(Global_107680.f_2890));
+	return func_600(&(Global_107887.f_2890));
 }
 
-void func_603() // Position - 0x3F336 (258870)
+void func_603() // Position - 0x3F3C7 (259015)
 {
-	func_604(&(Global_107680.f_2890));
+	func_604(&(Global_107887.f_2890));
 	return;
 }
 
-void func_604(var uParam0) // Position - 0x3F349 (258889)
+void func_604(var uParam0) // Position - 0x3F3DA (259034)
 {
 	if (func_601(uParam0))
 		STREAMING::REQUEST_MODEL(uParam0->f_12.f_66);
@@ -50570,18 +50597,18 @@ void func_604(var uParam0) // Position - 0x3F349 (258889)
 	return;
 }
 
-BOOL func_605(int iParam0, int iParam1, int iParam2, int iParam3) // Position - 0x3F367 (258919)
+BOOL func_605(int iParam0, int iParam1, int iParam2, int iParam3) // Position - 0x3F3F8 (259064)
 {
-	if (VEHICLE::IS_THIS_MODEL_A_BOAT(Global_107680.f_2890.f_12.f_66))
+	if (VEHICLE::IS_THIS_MODEL_A_BOAT(Global_107887.f_2890.f_12.f_66))
 		return false;
 
-	if (iParam1 == 0 && VEHICLE::IS_THIS_MODEL_A_HELI(Global_107680.f_2890.f_12.f_66))
+	if (iParam1 == 0 && VEHICLE::IS_THIS_MODEL_A_HELI(Global_107887.f_2890.f_12.f_66))
 		return false;
 
-	if (iParam2 == 0 && func_607(Global_107680.f_2890.f_12.f_66))
+	if (iParam2 == 0 && func_607(Global_107887.f_2890.f_12.f_66))
 		return false;
 
-	if (iParam3 == 0 && VEHICLE::IS_THIS_MODEL_A_PLANE(Global_107680.f_2890.f_12.f_66))
+	if (iParam3 == 0 && VEHICLE::IS_THIS_MODEL_A_PLANE(Global_107887.f_2890.f_12.f_66))
 		return false;
 
 	if (iParam0 == 1)
@@ -50591,17 +50618,17 @@ BOOL func_605(int iParam0, int iParam1, int iParam2, int iParam3) // Position - 
 	return true;
 }
 
-BOOL func_606() // Position - 0x3F3F5 (259061)
+BOOL func_606() // Position - 0x3F486 (259206)
 {
 	float vehicleModelEstimatedMaxSpeed;
 
 	if (!func_608())
 		return false;
 
-	if (VEHICLE::IS_THIS_MODEL_A_BOAT(Global_107680.f_2890.f_12.f_66) || VEHICLE::IS_THIS_MODEL_A_PLANE(Global_107680.f_2890.f_12.f_66) || VEHICLE::IS_THIS_MODEL_A_TRAIN(Global_107680.f_2890.f_12.f_66))
+	if (VEHICLE::IS_THIS_MODEL_A_BOAT(Global_107887.f_2890.f_12.f_66) || VEHICLE::IS_THIS_MODEL_A_PLANE(Global_107887.f_2890.f_12.f_66) || VEHICLE::IS_THIS_MODEL_A_TRAIN(Global_107887.f_2890.f_12.f_66))
 		return false;
 
-	vehicleModelEstimatedMaxSpeed = VEHICLE::GET_VEHICLE_MODEL_ESTIMATED_MAX_SPEED(Global_107680.f_2890.f_12.f_66);
+	vehicleModelEstimatedMaxSpeed = VEHICLE::GET_VEHICLE_MODEL_ESTIMATED_MAX_SPEED(Global_107887.f_2890.f_12.f_66);
 
 	if (vehicleModelEstimatedMaxSpeed < 37f)
 		return false;
@@ -50609,7 +50636,7 @@ BOOL func_606() // Position - 0x3F3F5 (259061)
 	return true;
 }
 
-BOOL func_607(Hash hParam0) // Position - 0x3F46A (259178)
+BOOL func_607(Hash hParam0) // Position - 0x3F4FB (259323)
 {
 	switch (hParam0)
 	{
@@ -50638,18 +50665,19 @@ BOOL func_607(Hash hParam0) // Position - 0x3F46A (259178)
 		case -1948949064:
 		case 2042703219:
 		case 1891140410:
+		case joaat("POLICEB2"):
 			return true;
 	}
 
 	return false;
 }
 
-BOOL func_608() // Position - 0x3F512 (259346)
+BOOL func_608() // Position - 0x3F5A9 (259497)
 {
-	return func_601(&(Global_107680.f_2890));
+	return func_601(&(Global_107887.f_2890));
 }
 
-void func_609() // Position - 0x3F525 (259365)
+void func_609() // Position - 0x3F5BC (259516)
 {
 	Vehicle vehicle;
 
@@ -50701,7 +50729,7 @@ void func_609() // Position - 0x3F525 (259365)
 	return;
 }
 
-void func_610(Vector3 vParam0, var uParam1, var uParam2, int iParam3, int iParam4, int iParam5, BOOL bParam6, BOOL bParam7) // Position - 0x3F61A (259610)
+void func_610(Vector3 vParam0, var uParam1, var uParam2, int iParam3, int iParam4, int iParam5, BOOL bParam6, BOOL bParam7) // Position - 0x3F6B1 (259761)
 {
 	int unused;
 	int num;
@@ -50733,13 +50761,13 @@ void func_610(Vector3 vParam0, var uParam1, var uParam2, int iParam3, int iParam
 	return;
 }
 
-void func_611() // Position - 0x3F68A (259722)
+void func_611() // Position - 0x3F721 (259873)
 {
-	Global_23831.f_6 = 1;
+	Global_23992.f_6 = 1;
 	return;
 }
 
-void func_612() // Position - 0x3F698 (259736)
+void func_612() // Position - 0x3F72F (259887)
 {
 	Hash pedAmmoTypeFromWeapon;
 
@@ -50772,7 +50800,7 @@ void func_612() // Position - 0x3F698 (259736)
 	return;
 }
 
-BOOL func_613() // Position - 0x3F77A (259962)
+BOOL func_613() // Position - 0x3F811 (260113)
 {
 	if (func_628(pedLocal_201) && func_41(veLocal_298) && func_628(uLocal_258[0]) && func_628(uLocal_258[1]) && func_628(uLocal_258[2]))
 		return true;
@@ -50780,7 +50808,7 @@ BOOL func_613() // Position - 0x3F77A (259962)
 	return false;
 }
 
-BOOL func_614() // Position - 0x3F7C9 (260041)
+BOOL func_614() // Position - 0x3F860 (260192)
 {
 	if (STREAMING::HAS_MODEL_LOADED(hLocal_277) && STREAMING::HAS_MODEL_LOADED(hLocal_276) && STREAMING::HAS_MODEL_LOADED(func_697(echLocal_279)) && STREAMING::HAS_MODEL_LOADED(func_697(echLocal_278)) && STREAMING::HAS_MODEL_LOADED(hLocal_285) && STREAMING::HAS_MODEL_LOADED(hLocal_288) && STREAMING::HAS_MODEL_LOADED(hLocal_186) && STREAMING::HAS_MODEL_LOADED(hLocal_187) && STREAMING::HAS_MODEL_LOADED(hLocal_543) && STREAMING::HAS_MODEL_LOADED(hLocal_549))
 		return true;
@@ -50788,7 +50816,7 @@ BOOL func_614() // Position - 0x3F7C9 (260041)
 	return false;
 }
 
-void func_615() // Position - 0x3F852 (260178)
+void func_615() // Position - 0x3F8E9 (260329)
 {
 	iLocal_566 = MISC::GET_GAME_TIMER() + 20000;
 	iLocal_512 = 0;
@@ -50825,7 +50853,7 @@ void func_615() // Position - 0x3F852 (260178)
 	return;
 }
 
-void func_616(float fParam0, float fParam1, float fParam2, float fParam3) // Position - 0x3F8E4 (260324)
+void func_616(float fParam0, float fParam1, float fParam2, float fParam3) // Position - 0x3F97B (260475)
 {
 	Vehicle playersLastVehicle;
 	var unk;
@@ -50852,7 +50880,7 @@ void func_616(float fParam0, float fParam1, float fParam2, float fParam3) // Pos
 	return;
 }
 
-void func_617(Vehicle* pveParam0) // Position - 0x3F95D (260445)
+void func_617(Vehicle* pveParam0) // Position - 0x3F9F4 (260596)
 {
 	if (ENTITY::DOES_ENTITY_EXIST(*pveParam0))
 	{
@@ -50865,7 +50893,7 @@ void func_617(Vehicle* pveParam0) // Position - 0x3F95D (260445)
 	return;
 }
 
-void func_618() // Position - 0x3F995 (260501)
+void func_618() // Position - 0x3FA2C (260652)
 {
 	int i;
 
@@ -50920,7 +50948,7 @@ void func_618() // Position - 0x3F995 (260501)
 	return;
 }
 
-void func_619(BOOL bParam0, BOOL bParam1) // Position - 0x3FA94 (260756)
+void func_619(BOOL bParam0, BOOL bParam1) // Position - 0x3FB2B (260907)
 {
 	if (bParam0)
 		func_620(false, 1, 1);
@@ -50932,7 +50960,7 @@ void func_619(BOOL bParam0, BOOL bParam1) // Position - 0x3FA94 (260756)
 	return;
 }
 
-void func_620(BOOL bParam0, int iParam1, int iParam2) // Position - 0x3FAC7 (260807)
+void func_620(BOOL bParam0, int iParam1, int iParam2) // Position - 0x3FB5E (260958)
 {
 	BOOL isCutsceneActive;
 
@@ -50963,7 +50991,7 @@ void func_620(BOOL bParam0, int iParam1, int iParam2) // Position - 0x3FAC7 (260
 	return;
 }
 
-void func_621() // Position - 0x3FB26 (260902)
+void func_621() // Position - 0x3FBBD (261053)
 {
 	Vehicle vehicle;
 
@@ -51024,7 +51052,7 @@ void func_621() // Position - 0x3FB26 (260902)
 	return;
 }
 
-BOOL func_622() // Position - 0x3FC3D (261181)
+BOOL func_622() // Position - 0x3FCD4 (261332)
 {
 	if (func_628(pedLocal_195) && func_41(veLocal_280) && func_41(veLocal_287) && func_628(uLocal_208[0]) && func_628(uLocal_208[1]) && func_628(uLocal_208[2]) && func_628(uLocal_208[3]) && func_628(uLocal_208[4]) && ENTITY::DOES_ENTITY_EXIST(obLocal_184) && ENTITY::DOES_ENTITY_EXIST(obLocal_185))
 		return true;
@@ -51032,7 +51060,7 @@ BOOL func_622() // Position - 0x3FC3D (261181)
 	return false;
 }
 
-void func_623() // Position - 0x3FCC7 (261319)
+void func_623() // Position - 0x3FD5E (261470)
 {
 	int taskSequenceId;
 	var unk;
@@ -51071,7 +51099,7 @@ void func_623() // Position - 0x3FCC7 (261319)
 	
 		if (func_41(uLocal_109.f_35[1]) && VEHICLE::IS_VEHICLE_SEAT_FREE(uLocal_109.f_35[1], -1, false))
 		{
-			TASK::TASK_ENTER_VEHICLE(0, uLocal_109.f_35[1], 20000, -1, 1f, 1, 0, 0);
+			TASK::TASK_ENTER_VEHICLE(0, uLocal_109.f_35[1], 20000, -1, 1f, 1, 0);
 			TASK::TASK_VEHICLE_DRIVE_WANDER(0, uLocal_109.f_35[1], 20f, 786469);
 		}
 		else
@@ -51100,30 +51128,30 @@ void func_623() // Position - 0x3FCC7 (261319)
 	return;
 }
 
-void func_624(float fParam0, float fParam1, float fParam2, float fParam3, int iParam4, int iParam5) // Position - 0x3FEC2 (261826)
+void func_624(float fParam0, float fParam1, float fParam2, float fParam3, int iParam4, int iParam5) // Position - 0x3FF58 (261976)
 {
 	if (func_666())
 	{
 		MISC::SET_THIS_SCRIPT_CAN_BE_PAUSED(false);
-		MISC::CLEAR_BIT(&(Global_101688.f_20), 2);
+		MISC::CLEAR_BIT(&(Global_101893.f_20), 2);
 		MISC::SET_GAME_PAUSED(true);
 	
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 			PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), false, 0);
 	
-		Global_101684 = { fParam0 };
-		Global_101687 = fParam3;
-		Global_101683 = 1;
+		Global_101889 = { fParam0 };
+		Global_101892 = fParam3;
+		Global_101888 = 1;
 	
 		if (iParam4 == 1)
-			MISC::SET_BIT(&(Global_101688.f_20), 14);
+			MISC::SET_BIT(&(Global_101893.f_20), 14);
 		else
-			MISC::CLEAR_BIT(&(Global_101688.f_20), 14);
+			MISC::CLEAR_BIT(&(Global_101893.f_20), 14);
 	
 		if (iParam5 == 1)
-			MISC::SET_BIT(&(Global_101688.f_20), 24);
+			MISC::SET_BIT(&(Global_101893.f_20), 24);
 		else
-			MISC::CLEAR_BIT(&(Global_101688.f_20), 24);
+			MISC::CLEAR_BIT(&(Global_101893.f_20), 24);
 	
 		func_64(1);
 	}
@@ -51131,7 +51159,7 @@ void func_624(float fParam0, float fParam1, float fParam2, float fParam3, int iP
 	return;
 }
 
-void func_625(var uParam0) // Position - 0x3FF57 (261975)
+void func_625(var uParam0) // Position - 0x3FFED (262125)
 {
 	int i;
 	float num;
@@ -51159,7 +51187,7 @@ void func_625(var uParam0) // Position - 0x3FF57 (261975)
 	return;
 }
 
-void func_626(var uParam0, float fParam1, float fParam2, float fParam3) // Position - 0x3FFF7 (262135)
+void func_626(var uParam0, float fParam1, float fParam2, float fParam3) // Position - 0x4008E (262286)
 {
 	uParam0->f_51 == 0;
 	uParam0->f_46 >= 15;
@@ -51168,7 +51196,7 @@ void func_626(var uParam0, float fParam1, float fParam2, float fParam3) // Posit
 	return;
 }
 
-void func_627(var uParam0) // Position - 0x4002A (262186)
+void func_627(var uParam0) // Position - 0x400BF (262335)
 {
 	uParam0->f_51;
 	uParam0->f_46 = 0;
@@ -51178,7 +51206,7 @@ void func_627(var uParam0) // Position - 0x4002A (262186)
 	return;
 }
 
-BOOL func_628(Ped pedParam0) // Position - 0x40051 (262225)
+BOOL func_628(Ped pedParam0) // Position - 0x400E6 (262374)
 {
 	if (_DOES_ENTITY_EXIST_AND_IS_ALIVE(pedParam0))
 		if (!PED::IS_PED_INJURED(pedParam0))
@@ -51187,7 +51215,7 @@ BOOL func_628(Ped pedParam0) // Position - 0x40051 (262225)
 	return false;
 }
 
-void func_629() // Position - 0x40071 (262257)
+void func_629() // Position - 0x40106 (262406)
 {
 	if (AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 		if (INTERIOR::GET_INTERIOR_FROM_ENTITY(PLAYER::PLAYER_PED_ID()) != 0)
@@ -51196,7 +51224,7 @@ void func_629() // Position - 0x40071 (262257)
 	return;
 }
 
-void func_630() // Position - 0x40090 (262288)
+void func_630() // Position - 0x40125 (262437)
 {
 	if (!bLocal_570)
 		if (func_628(pedLocal_195))
@@ -51217,7 +51245,7 @@ void func_630() // Position - 0x40090 (262288)
 	return;
 }
 
-void func_631(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10) // Position - 0x400E4 (262372)
+void func_631(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10) // Position - 0x40179 (262521)
 {
 	float num;
 	int value;
@@ -51232,20 +51260,20 @@ void func_631(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 	var a;
 	eCharacter character;
 
-	if (Global_79794 != 6)
+	if (Global_79999 != 6)
 	{
-		if (Global_79796 == -1)
+		if (Global_80001 == -1)
 		{
 			if (func_642(1, uParam0))
 			{
-				if (Global_79797 == 3)
+				if (Global_80002 == 3)
 					num = 1.5f;
 				else
 					num = 2.5f;
 			
 				if (fLocal_19 > num)
 				{
-					Global_79796 = MISC::GET_GAME_TIMER();
+					Global_80001 = MISC::GET_GAME_TIMER();
 					fLocal_20 = { HUD::GET_HUD_COMPONENT_POSITION(HUD_SUBTITLE_TEXT) };
 					fLocal_19 = 0f;
 				}
@@ -51262,13 +51290,13 @@ void func_631(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 		else
 		{
 			if (!func_642(0, uParam0))
-				Global_79796 = MISC::GET_GAME_TIMER() - 9000;
+				Global_80001 = MISC::GET_GAME_TIMER() - 9000;
 		
 			HUD::HIDE_HUD_COMPONENT_THIS_FRAME(HUD_AREA_NAME);
 			HUD::HIDE_HUD_COMPONENT_THIS_FRAME(HUD_VEHICLE_NAME);
 			HUD::HIDE_HUD_COMPONENT_THIS_FRAME(HUD_VEHICLE_CLASS);
 			HUD::HIDE_HUD_COMPONENT_THIS_FRAME(HUD_STREET_NAME);
-			value = MISC::GET_GAME_TIMER() - Global_79796;
+			value = MISC::GET_GAME_TIMER() - Global_80001;
 		
 			if (value < 9000 && !CAM::IS_SCREEN_FADED_OUT())
 			{
@@ -51286,7 +51314,7 @@ void func_631(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 						alpha = BUILTIN::CEIL((BUILTIN::TO_FLOAT(value2) / 1000f) * 255f);
 				}
 			
-				switch (Global_79794)
+				switch (Global_79999)
 				{
 					case 3:
 					case 5:
@@ -51328,8 +51356,8 @@ void func_631(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 				HUD::SET_TEXT_JUSTIFICATION(2);
 				character = _GET_CURRENT_PLAYER_CHARACTER();
 			
-				if (Global_79797 == 1 && Global_79795 == 62)
-					character = Global_114135.f_2367.f_539.f_4322;
+				if (Global_80002 == 1 && Global_80000 == 62)
+					character = Global_114344.f_2367.f_539.f_4322;
 			
 				switch (character)
 				{
@@ -51353,7 +51381,7 @@ void func_631(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 			
 				HUD::SET_TEXT_COLOUR(r, g, b, alpha);
 				HUD::SET_TEXT_DROP_SHADOW();
-				text = { func_633(Global_79795, Global_79797, iParam10) };
+				text = { func_633(Global_80000, Global_80002, iParam10) };
 				y == -0.014f;
 				GRAPHICS::SET_SCRIPT_GFX_ALIGN_PARAMS(x, y, 0f, 0.01f);
 				HUD::SET_TEXT_SCALE(0.67f, 0.67f);
@@ -51370,7 +51398,7 @@ void func_631(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 						if (HUD::IS_HUD_COMPONENT_ACTIVE(HUD_SUBTITLE_TEXT))
 						{
 							HUD::SET_HUD_COMPONENT_POSITION(HUD_SUBTITLE_TEXT, fLocal_20, fLocal_20.f_1 + fLocal_23);
-							Global_79799 = true;
+							Global_80004 = true;
 						}
 					}
 				}
@@ -51379,7 +51407,7 @@ void func_631(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 				HUD::END_TEXT_COMMAND_DISPLAY_TEXT(x, y, 0);
 				GRAPHICS::RESET_SCRIPT_GFX_ALIGN();
 			
-				if (Global_79798 == 1)
+				if (Global_80003 == 1)
 				{
 					func_219();
 					fLocal_19 = 0f;
@@ -51396,13 +51424,13 @@ void func_631(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 	return;
 }
 
-float func_632(const char* sParam0) // Position - 0x403C9 (263113)
+float func_632(const char* sParam0) // Position - 0x4045E (263262)
 {
 	HUD::BEGIN_TEXT_COMMAND_GET_SCREEN_WIDTH_OF_DISPLAY_TEXT(sParam0);
 	return HUD::END_TEXT_COMMAND_GET_SCREEN_WIDTH_OF_DISPLAY_TEXT(true);
 }
 
-struct<2> func_633(int iParam0, int iParam1, int iParam2) // Position - 0x403DC (263132)
+struct<2> func_633(int iParam0, int iParam1, int iParam2) // Position - 0x40471 (263281)
 {
 	var unk;
 	int num;
@@ -51461,7 +51489,7 @@ struct<2> func_633(int iParam0, int iParam1, int iParam2) // Position - 0x403DC 
 	return unk;
 }
 
-char* func_634(int iParam0) // Position - 0x404B2 (263346)
+char* func_634(int iParam0) // Position - 0x40547 (263495)
 {
 	switch (iParam0)
 	{
@@ -51529,7 +51557,7 @@ char* func_634(int iParam0) // Position - 0x404B2 (263346)
 	return "INVALID!";
 }
 
-struct<2> func_635(int iParam0) // Position - 0x4061A (263706)
+struct<2> func_635(int iParam0) // Position - 0x406AF (263855)
 {
 	var unk;
 	var unk3;
@@ -51549,7 +51577,7 @@ struct<2> func_635(int iParam0) // Position - 0x4061A (263706)
 	return unk;
 }
 
-struct<2> func_636(int iParam0) // Position - 0x4064E (263758)
+struct<2> func_636(int iParam0) // Position - 0x406E3 (263907)
 {
 	var unk;
 	var unk3;
@@ -51569,7 +51597,7 @@ struct<2> func_636(int iParam0) // Position - 0x4064E (263758)
 	return unk;
 }
 
-struct<2> func_637(int iParam0) // Position - 0x40682 (263810)
+struct<2> func_637(int iParam0) // Position - 0x40717 (263959)
 {
 	var unk;
 	var unk3;
@@ -51589,7 +51617,7 @@ struct<2> func_637(int iParam0) // Position - 0x40682 (263810)
 	return unk;
 }
 
-struct<2> func_638(int iParam0) // Position - 0x406B6 (263862)
+struct<2> func_638(int iParam0) // Position - 0x4074B (264011)
 {
 	var unk;
 	var unk3;
@@ -51609,7 +51637,7 @@ struct<2> func_638(int iParam0) // Position - 0x406B6 (263862)
 	return unk;
 }
 
-struct<2> func_639(int iParam0) // Position - 0x406EA (263914)
+struct<2> func_639(int iParam0) // Position - 0x4077F (264063)
 {
 	var unk;
 	var unk3;
@@ -51629,7 +51657,7 @@ struct<2> func_639(int iParam0) // Position - 0x406EA (263914)
 	return unk;
 }
 
-struct<2> func_640(int iParam0) // Position - 0x40728 (263976)
+struct<2> func_640(int iParam0) // Position - 0x407BD (264125)
 {
 	var unk;
 	var unk3;
@@ -51649,16 +51677,16 @@ struct<2> func_640(int iParam0) // Position - 0x40728 (263976)
 	return unk;
 }
 
-struct<2> func_641(int iParam0) // Position - 0x4075C (264028)
+struct<2> func_641(int iParam0) // Position - 0x407F1 (264177)
 {
 	var unk;
 
 	TEXT_LABEL_ASSIGN_STRING(&unk, "M_", 8);
-	TEXT_LABEL_APPEND_STRING(&unk, &(Global_92451[iParam0 /*34*/].f_8), 8);
+	TEXT_LABEL_APPEND_STRING(&unk, &(Global_92656[iParam0 /*34*/].f_8), 8);
 
 	if (iParam0 == 90)
 	{
-		switch (Global_114135.f_9089.f_99.f_205[7])
+		switch (Global_114344.f_9089.f_99.f_205[7])
 		{
 			case 1:
 				TEXT_LABEL_APPEND_STRING(&unk, "A", 8);
@@ -51677,34 +51705,34 @@ struct<2> func_641(int iParam0) // Position - 0x4075C (264028)
 	return unk;
 }
 
-BOOL func_642(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6) // Position - 0x407C6 (264134)
+BOOL func_642(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6) // Position - 0x4085B (264283)
 {
-	if (!func_644(0) || Global_79810 || Global_79798 == 1 || !CAM::IS_SCREEN_FADED_IN())
+	if (!func_644(0) || Global_80015 || Global_80003 == 1 || !CAM::IS_SCREEN_FADED_IN())
 		return false;
 
-	switch (Global_79794)
+	switch (Global_79999)
 	{
 		case 0:
 			if (MISC::ARE_STRINGS_EQUAL(&uParam1, "NONE" /*None*/) || MISC::IS_STRING_NULL_OR_EMPTY(&uParam1))
-				Global_79794 = 3;
+				Global_79999 = 3;
 			else
-				Global_79794 = 1;
+				Global_79999 = 1;
 			break;
 	
 		case 1:
 			if (CUTSCENE::HAS_CUTSCENE_LOADED())
-				Global_79794 = 2;
+				Global_79999 = 2;
 			break;
 	
 		case 2:
 			if (CUTSCENE::IS_CUTSCENE_PLAYING())
 			{
-				Global_79794 = 4;
+				Global_79999 = 4;
 				return true;
 			}
 			else if (!CUTSCENE::IS_CUTSCENE_ACTIVE())
 			{
-				Global_79794 = 3;
+				Global_79999 = 3;
 			}
 			break;
 	
@@ -51714,7 +51742,7 @@ BOOL func_642(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 			}
 			else
 			{
-				Global_79794 = 5;
+				Global_79999 = 5;
 				return true;
 			}
 			break;
@@ -51723,7 +51751,7 @@ BOOL func_642(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 			if (CUTSCENE::IS_CUTSCENE_PLAYING())
 				return true;
 			else if (iParam0 == 1)
-				Global_79794 = 5;
+				Global_79999 = 5;
 			break;
 	
 		case 5:
@@ -51740,17 +51768,17 @@ BOOL func_642(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 	return false;
 }
 
-BOOL func_643(BOOL bParam0) // Position - 0x408DF (264415)
+BOOL func_643(BOOL bParam0) // Position - 0x40974 (264564)
 {
 	if (bParam0)
-		return Global_23831.f_4 && Global_23831.f_104 == 4;
+		return Global_23992.f_4 && Global_23992.f_104 == 4;
 
-	return Global_23831.f_4;
+	return Global_23992.f_4;
 }
 
-BOOL func_644(int iParam0) // Position - 0x40908 (264456)
+BOOL func_644(int iParam0) // Position - 0x4099D (264605)
 {
-	if (Global_44181 == 15)
+	if (Global_44375 == 15)
 		return false;
 
 	if (_CAN_ENTER_FREEROAM_STATE(iParam0))
@@ -51759,12 +51787,12 @@ BOOL func_644(int iParam0) // Position - 0x40908 (264456)
 	return true;
 }
 
-BOOL _CAN_ENTER_FREEROAM_STATE(int iParam0) // Position - 0x4092A (264490)
+BOOL _CAN_ENTER_FREEROAM_STATE(int iParam0) // Position - 0x409BF (264639)
 {
-	return func_646(iParam0, Global_44181);
+	return func_646(iParam0, Global_44375);
 }
 
-BOOL func_646(int iParam0, int iParam1) // Position - 0x4093B (264507)
+BOOL func_646(int iParam0, int iParam1) // Position - 0x409D0 (264656)
 {
 	if (iParam1 == 15)
 		return 1;
@@ -51888,13 +51916,13 @@ BOOL func_646(int iParam0, int iParam1) // Position - 0x4093B (264507)
 	return 0;
 }
 
-void func_647(eCharacter echParam0, eCharacter echParam1, BOOL bParam2) // Position - 0x40B1C (264988)
+void func_647(eCharacter echParam0, eCharacter echParam1, BOOL bParam2) // Position - 0x40BB1 (265137)
 {
 	int num;
 
-	Global_9622 = echParam0;
+	Global_9778 = echParam0;
 
-	if (Global_120[echParam0 /*10*/].f_8 != 184)
+	if (Global_120[echParam0 /*10*/].f_8 != 187)
 	{
 		_UPDATE_CURRENT_PLAYER_CHARACTER();
 	
@@ -51916,49 +51944,49 @@ void func_647(eCharacter echParam0, eCharacter echParam1, BOOL bParam2) // Posit
 			func_653(echParam0, num, 1);
 			func_652(echParam0, num, 1);
 		
-			if (echParam0 == CHAR_SESSANTA && !IS_BIT_SET(Global_2739811.f_7008, 4))
+			if (echParam0 == CHAR_SESSANTA && !IS_BIT_SET(Global_2740054.f_7024, 4))
 				bParam2 = false;
 		
-			if (echParam0 == CHAR_ISLDJ4 && !IS_BIT_SET(Global_2739811.f_7008, 3))
+			if (echParam0 == CHAR_ISLDJ4 && !IS_BIT_SET(Global_2740054.f_7024, 3))
 				bParam2 = false;
 		
-			if (echParam0 == CHAR_KDJ && !IS_BIT_SET(Global_2739811.f_7008, 3))
+			if (echParam0 == CHAR_KDJ && !IS_BIT_SET(Global_2740054.f_7024, 3))
 				bParam2 = false;
 		}
 	
 		if (bParam2)
 		{
-			if (!Global_79539)
+			if (!Global_79744)
 			{
 				if (echParam1 != 4)
 				{
-					if (Global_21066 != echParam1)
+					if (Global_21222 != echParam1)
 					{
-						Global_9595[echParam1 /*4*/] = { _GET_CHARACTER_NAME(echParam0) };
-						Global_9612[echParam1] = 1;
-						Global_9617[echParam1] = echParam0;
+						Global_9751[echParam1 /*4*/] = { _GET_CHARACTER_NAME(echParam0) };
+						Global_9768[echParam1] = 1;
+						Global_9773[echParam1] = echParam0;
 					}
-					else if (echParam0 == Global_21066)
+					else if (echParam0 == Global_21222)
 					{
 					}
 					else
 					{
-						Global_9546[1 /*6*/] = { _GET_CHARACTER_NAME(echParam0) };
-						Global_9546[1 /*6*/].f_5 = echParam1;
+						Global_9702[1 /*6*/] = { _GET_CHARACTER_NAME(echParam0) };
+						Global_9702[1 /*6*/].f_5 = echParam1;
 						func_648();
 					}
 				}
 				else
 				{
-					Global_9546[1 /*6*/] = { _GET_CHARACTER_NAME(echParam0) };
-					Global_9546[1 /*6*/].f_5 = echParam1;
+					Global_9702[1 /*6*/] = { _GET_CHARACTER_NAME(echParam0) };
+					Global_9702[1 /*6*/].f_5 = echParam1;
 					func_648();
 				}
 			}
 			else
 			{
-				Global_9546[1 /*6*/] = { _GET_CHARACTER_NAME(echParam0) };
-				Global_9546[1 /*6*/].f_5 = echParam1;
+				Global_9702[1 /*6*/] = { _GET_CHARACTER_NAME(echParam0) };
+				Global_9702[1 /*6*/].f_5 = echParam1;
 				func_648();
 			}
 		}
@@ -51967,80 +51995,80 @@ void func_647(eCharacter echParam0, eCharacter echParam1, BOOL bParam2) // Posit
 	return;
 }
 
-void func_648() // Position - 0x40C9A (265370)
+void func_648() // Position - 0x40D2F (265519)
 {
 	var txdName;
 	var subject;
 	const char* filenameForAudioConversation;
 
-	TEXT_LABEL_ASSIGN_STRING(&txdName, HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(&(Global_2201[Global_9622 /*29*/].f_7)), 64);
+	TEXT_LABEL_ASSIGN_STRING(&txdName, HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(&(Global_2241[Global_9778 /*29*/].f_7)), 64);
 
-	if (Global_9641 == 0)
+	if (Global_9797 == 0)
 	{
 		HUD::BEGIN_TEXT_COMMAND_THEFEED_POST("");
-		TEXT_LABEL_ASSIGN_STRING(&subject, HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(&Global_9546[1 /*6*/]), 64);
+		TEXT_LABEL_ASSIGN_STRING(&subject, HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(&Global_9702[1 /*6*/]), 64);
 		filenameForAudioConversation = HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION("CELL_253" /*New Contact*/);
 		HUD::END_TEXT_COMMAND_THEFEED_POST_MESSAGETEXT(&txdName, &txdName, false, 3, filenameForAudioConversation, &subject);
 	}
 	else
 	{
 		HUD::BEGIN_TEXT_COMMAND_THEFEED_POST("CELL_255" /*New Contact: ~n~~a~*/);
-		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_9546[1 /*6*/]);
+		HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_9702[1 /*6*/]);
 		HUD::END_TEXT_COMMAND_THEFEED_POST_MESSAGETEXT(&txdName, &txdName, false, 3, "", 0);
 	}
 
-	MISC::CLEAR_BIT(&Global_8919, 0);
+	MISC::CLEAR_BIT(&Global_9075, 0);
 	return;
 }
 
-struct<4> _GET_CHARACTER_NAME(eCharacter character) // Position - 0x40D17 (265495)
+struct<4> _GET_CHARACTER_NAME(eCharacter character) // Position - 0x40DAC (265644)
 {
-	return Global_2201[character /*29*/].f_3;
+	return Global_2241[character /*29*/].f_3;
 }
 
-int func_650(eCharacter echParam0, int iParam1) // Position - 0x40D2A (265514)
+int func_650(eCharacter echParam0, int iParam1) // Position - 0x40DBF (265663)
 {
 	if (iParam1 < 0 || iParam1 > 4)
 		return 0;
 
-	return Global_2201[echParam0 /*29*/].f_24[iParam1];
+	return Global_2241[echParam0 /*29*/].f_24[iParam1];
 }
 
-int func_651(eCharacter echParam0, int iParam1) // Position - 0x40D54 (265556)
+int func_651(eCharacter echParam0, int iParam1) // Position - 0x40DE9 (265705)
 {
 	if (iParam1 < 0 || iParam1 > 4)
 		return 0;
 
-	return Global_2201[echParam0 /*29*/].f_12[iParam1];
+	return Global_2241[echParam0 /*29*/].f_12[iParam1];
 }
 
-void func_652(eCharacter echParam0, int iParam1, int iParam2) // Position - 0x40D7E (265598)
+void func_652(eCharacter echParam0, int iParam1, int iParam2) // Position - 0x40E13 (265747)
 {
 	if (iParam1 < 0 || iParam1 > 4)
 		return;
 
-	Global_2201[echParam0 /*29*/].f_24[iParam1] = iParam2;
+	Global_2241[echParam0 /*29*/].f_24[iParam1] = iParam2;
 
 	if (echParam0 < _CHAR_UNUSED)
-		Global_114135.f_28055[echParam0 /*29*/].f_24[iParam1] = iParam2;
+		Global_114344.f_28055[echParam0 /*29*/].f_24[iParam1] = iParam2;
 
 	return;
 }
 
-void func_653(eCharacter echParam0, int iParam1, int iParam2) // Position - 0x40DC3 (265667)
+void func_653(eCharacter echParam0, int iParam1, int iParam2) // Position - 0x40E58 (265816)
 {
 	if (iParam1 < 0 || iParam1 > 4)
 		return;
 
-	Global_2201[echParam0 /*29*/].f_12[iParam1] = iParam2;
+	Global_2241[echParam0 /*29*/].f_12[iParam1] = iParam2;
 
 	if (echParam0 < _CHAR_UNUSED)
-		Global_114135.f_28055[echParam0 /*29*/].f_12[iParam1] = iParam2;
+		Global_114344.f_28055[echParam0 /*29*/].f_12[iParam1] = iParam2;
 
 	return;
 }
 
-void func_654(var uParam0, BOOL bParam1, BOOL bParam2) // Position - 0x40E08 (265736)
+void func_654(var uParam0, BOOL bParam1, BOOL bParam2) // Position - 0x40E9D (265885)
 {
 	int i;
 
@@ -52074,7 +52102,7 @@ void func_654(var uParam0, BOOL bParam1, BOOL bParam2) // Position - 0x40E08 (26
 	return;
 }
 
-BOOL func_655(var uParam0) // Position - 0x40EFE (265982)
+BOOL func_655(var uParam0) // Position - 0x40F93 (266131)
 {
 	int num;
 	int i;
@@ -52178,7 +52206,7 @@ BOOL func_655(var uParam0) // Position - 0x40EFE (265982)
 	return false;
 }
 
-void func_656(Vehicle* pveParam0, Hash hParam1, float fParam2, float fParam3, float fParam4, float fParam5) // Position - 0x41226 (266790)
+void func_656(Vehicle* pveParam0, Hash hParam1, float fParam2, float fParam3, float fParam4, float fParam5) // Position - 0x412BB (266939)
 {
 	func_47(pveParam0);
 	*pveParam0 = VEHICLE::CREATE_VEHICLE(hParam1, fParam2, fParam5, true, true, false);
@@ -52192,7 +52220,7 @@ void func_656(Vehicle* pveParam0, Hash hParam1, float fParam2, float fParam3, fl
 	return;
 }
 
-BOOL func_657(Ped* ppedParam0, eCharacter echParam1, var uParam2, var uParam3, var uParam4, float fParam5, char* sParam6, int iParam7) // Position - 0x41269 (266857)
+BOOL func_657(Ped* ppedParam0, eCharacter echParam1, var uParam2, var uParam3, var uParam4, float fParam5, char* sParam6, int iParam7) // Position - 0x412FE (267006)
 {
 	if (func_658(ppedParam0, echParam1, uParam2, fParam5, true))
 	{
@@ -52216,7 +52244,7 @@ BOOL func_657(Ped* ppedParam0, eCharacter echParam1, var uParam2, var uParam3, v
 	return false;
 }
 
-BOOL func_658(Ped* ppedParam0, eCharacter echParam1, Vector3 vParam2, var uParam3, var uParam4, float fParam5, BOOL bParam6) // Position - 0x412C5 (266949)
+BOOL func_658(Ped* ppedParam0, eCharacter echParam1, Vector3 vParam2, var uParam3, var uParam4, float fParam5, BOOL bParam6) // Position - 0x4135A (267098)
 {
 	Hash model;
 
@@ -52249,7 +52277,7 @@ BOOL func_658(Ped* ppedParam0, eCharacter echParam1, Vector3 vParam2, var uParam
 	return false;
 }
 
-int func_659(var uParam0, eCharacter echParam1) // Position - 0x41353 (267091)
+int func_659(var uParam0, eCharacter echParam1) // Position - 0x413E8 (267240)
 {
 	int num;
 
@@ -52273,11 +52301,11 @@ int func_659(var uParam0, eCharacter echParam1) // Position - 0x41353 (267091)
 		return 0;
 	}
 
-	Global_97497[num - 3] = uParam0;
+	Global_97702[num - 3] = uParam0;
 	return 1;
 }
 
-void func_660(Object* pobParam0, Hash hParam1, float fParam2, float fParam3, float fParam4, float fParam5) // Position - 0x41399 (267161)
+void func_660(Object* pobParam0, Hash hParam1, float fParam2, float fParam3, float fParam4, float fParam5) // Position - 0x4142E (267310)
 {
 	func_46(pobParam0);
 	*pobParam0 = OBJECT::CREATE_OBJECT(hParam1, fParam2, true, true, false);
@@ -52285,7 +52313,7 @@ void func_660(Object* pobParam0, Hash hParam1, float fParam2, float fParam3, flo
 	return;
 }
 
-BOOL func_661(var uParam0) // Position - 0x413C0 (267200)
+BOOL func_661(var uParam0) // Position - 0x41455 (267349)
 {
 	if (func_662(uParam0))
 	{
@@ -52298,7 +52326,7 @@ BOOL func_661(var uParam0) // Position - 0x413C0 (267200)
 	return false;
 }
 
-BOOL func_662(var uParam0) // Position - 0x413EA (267242)
+BOOL func_662(var uParam0) // Position - 0x4147F (267391)
 {
 	if (MISC::IS_STRING_NULL_OR_EMPTY(*uParam0) || MISC::IS_STRING_NULL_OR_EMPTY(uParam0->f_1))
 		return false;
@@ -52306,7 +52334,7 @@ BOOL func_662(var uParam0) // Position - 0x413EA (267242)
 	return true;
 }
 
-BOOL func_663(var uParam0) // Position - 0x4140F (267279)
+BOOL func_663(var uParam0) // Position - 0x414A4 (267428)
 {
 	int i;
 
@@ -52319,7 +52347,7 @@ BOOL func_663(var uParam0) // Position - 0x4140F (267279)
 	return true;
 }
 
-void func_664(var uParam0, char* sParam1, char* sParam2, char* sParam3) // Position - 0x41440 (267328)
+void func_664(var uParam0, char* sParam1, char* sParam2, char* sParam3) // Position - 0x414D5 (267477)
 {
 	*uParam0 = sParam1;
 	uParam0->f_1 = sParam2;
@@ -52332,23 +52360,23 @@ void func_664(var uParam0, char* sParam1, char* sParam2, char* sParam3) // Posit
 	return;
 }
 
-int func_665() // Position - 0x4147C (267388)
+int func_665() // Position - 0x41511 (267537)
 {
-	if (!(Global_101688 == 10) && !(Global_101688 == 9))
+	if (!(Global_101893 == 10) && !(Global_101893 == 9))
 		return 0;
 
-	return Global_101688.f_2;
+	return Global_101893.f_2;
 }
 
-BOOL func_666() // Position - 0x414A6 (267430)
+BOOL func_666() // Position - 0x4153B (267579)
 {
-	if (Global_101688 == 10 || Global_101688 == 9)
+	if (Global_101893 == 10 || Global_101893 == 9)
 		return true;
 
 	return false;
 }
 
-void func_667() // Position - 0x414CA (267466)
+void func_667() // Position - 0x4155F (267615)
 {
 	func_463();
 
@@ -52364,7 +52392,7 @@ void func_667() // Position - 0x414CA (267466)
 	return;
 }
 
-void func_668(var uParam0, int iParam1, BOOL bParam2, BOOL bParam3) // Position - 0x41502 (267522)
+void func_668(var uParam0, int iParam1, BOOL bParam2, BOOL bParam3) // Position - 0x41597 (267671)
 {
 	func_673(uParam0, iParam1);
 	func_671(uParam0, bParam2);
@@ -52372,13 +52400,13 @@ void func_668(var uParam0, int iParam1, BOOL bParam2, BOOL bParam3) // Position 
 	return;
 }
 
-void func_669(var uParam0, BOOL bParam1) // Position - 0x41522 (267554)
+void func_669(var uParam0, BOOL bParam1) // Position - 0x415B7 (267703)
 {
 	func_670(&(uParam0->f_41), bParam1);
 	return;
 }
 
-void func_670(var uParam0, BOOL bParam1) // Position - 0x41534 (267572)
+void func_670(var uParam0, BOOL bParam1) // Position - 0x415C9 (267721)
 {
 	int i;
 
@@ -52395,13 +52423,13 @@ void func_670(var uParam0, BOOL bParam1) // Position - 0x41534 (267572)
 	return;
 }
 
-void func_671(var uParam0, BOOL bParam1) // Position - 0x41572 (267634)
+void func_671(var uParam0, BOOL bParam1) // Position - 0x41607 (267783)
 {
 	func_672(&(uParam0->f_35), bParam1);
 	return;
 }
 
-void func_672(var uParam0, BOOL bParam1) // Position - 0x41584 (267652)
+void func_672(var uParam0, BOOL bParam1) // Position - 0x41619 (267801)
 {
 	int i;
 
@@ -52418,13 +52446,13 @@ void func_672(var uParam0, BOOL bParam1) // Position - 0x41584 (267652)
 	return;
 }
 
-void func_673(var uParam0, int iParam1) // Position - 0x415C1 (267713)
+void func_673(var uParam0, int iParam1) // Position - 0x41656 (267862)
 {
 	func_674(&(uParam0->f_28), iParam1);
 	return;
 }
 
-void func_674(var uParam0, int iParam1) // Position - 0x415D3 (267731)
+void func_674(var uParam0, int iParam1) // Position - 0x41668 (267880)
 {
 	int i;
 
@@ -52441,7 +52469,7 @@ void func_674(var uParam0, int iParam1) // Position - 0x415D3 (267731)
 	return;
 }
 
-void func_675() // Position - 0x41614 (267796)
+void func_675() // Position - 0x416A9 (267945)
 {
 	int i;
 
@@ -52522,7 +52550,7 @@ void func_675() // Position - 0x41614 (267796)
 	return;
 }
 
-BOOL func_676() // Position - 0x417F1 (268273)
+BOOL func_676() // Position - 0x41886 (268422)
 {
 	int num;
 
@@ -52531,27 +52559,27 @@ BOOL func_676() // Position - 0x417F1 (268273)
 	if (num == -1)
 		return false;
 
-	if (!Global_113222[num /*10*/].f_4)
+	if (!Global_113431[num /*10*/].f_4)
 		return false;
 
-	Global_113222[num /*10*/].f_4 = 0;
+	Global_113431[num /*10*/].f_4 = 0;
 	HUD::CLEAR_ADDITIONAL_TEXT(0, true);
 	HUD::CLEAR_ADDITIONAL_TEXT(3, true);
 	HUD::CLEAR_ADDITIONAL_TEXT(2, true);
 
 	if (!func_56(false))
 	{
-		if (Global_113222[num /*10*/].f_5 && Global_113222[num /*10*/].f_6)
-			Global_113222[num /*10*/].f_6 = 0;
+		if (Global_113431[num /*10*/].f_5 && Global_113431[num /*10*/].f_6)
+			Global_113431[num /*10*/].f_6 = 0;
 	
-		if (!Global_113222[num /*10*/].f_6 && !Global_113222[num /*10*/].f_5)
-			Global_113222[num /*10*/].f_6 = 1;
+		if (!Global_113431[num /*10*/].f_6 && !Global_113431[num /*10*/].f_5)
+			Global_113431[num /*10*/].f_6 = 1;
 	}
 
 	return true;
 }
 
-void func_677(BOOL bParam0) // Position - 0x41892 (268434)
+void func_677(BOOL bParam0) // Position - 0x41927 (268583)
 {
 	int num;
 
@@ -52564,19 +52592,19 @@ void func_677(BOOL bParam0) // Position - 0x41892 (268434)
 		if (num == -1)
 			return;
 	
-		if (!Global_113222[num /*10*/].f_4)
+		if (!Global_113431[num /*10*/].f_4)
 			return;
 	
-		if (Global_113222[num /*10*/].f_5)
+		if (Global_113431[num /*10*/].f_5)
 			return;
 	
-		if (Global_113222[num /*10*/].f_6)
+		if (Global_113431[num /*10*/].f_6)
 			return;
 	
-		if (Global_95838 == Global_101725)
-			Global_114135.f_18578[num /*6*/].f_4 = Global_114135.f_18578[num /*6*/].f_4 + 1;
+		if (Global_96043 == Global_101930)
+			Global_114344.f_18578[num /*6*/].f_4 = Global_114344.f_18578[num /*6*/].f_4 + 1;
 	
-		Global_95838 = Global_101725;
+		Global_96043 = Global_101930;
 	
 		if (bParam0)
 		{
@@ -52585,33 +52613,33 @@ void func_677(BOOL bParam0) // Position - 0x41892 (268434)
 		}
 		else
 		{
-			if (Global_113222[num /*10*/].f_9 == -1)
+			if (Global_113431[num /*10*/].f_9 == -1)
 			{
 			}
 			else
 			{
-				func_220(&(Global_113222[num /*10*/].f_9));
+				func_220(&(Global_113431[num /*10*/].f_9));
 			}
 		
 			func_206(num, 1, true, false);
 		}
 	
-		Global_113222[num /*10*/].f_6 = 1;
+		Global_113431[num /*10*/].f_6 = 1;
 	}
 
 	return;
 }
 
-void func_678(const char* sParam0, int iParam1) // Position - 0x41962 (268642)
+void func_678(const char* sParam0, int iParam1) // Position - 0x419F7 (268791)
 {
-	if (Global_101688 != 12)
+	if (Global_101893 != 12)
 		if (func_679(sParam0, 6, iParam1))
-			Global_101688.f_1 = iParam1;
+			Global_101893.f_1 = iParam1;
 
 	return;
 }
 
-BOOL func_679(const char* sParam0, int iParam1, int iParam2) // Position - 0x4198A (268682)
+BOOL func_679(const char* sParam0, int iParam1, int iParam2) // Position - 0x41A1F (268831)
 {
 	Vehicle vehiclePedIsIn;
 	var unk;
@@ -52619,9 +52647,9 @@ BOOL func_679(const char* sParam0, int iParam1, int iParam2) // Position - 0x419
 
 	func_68();
 	func_690();
-	Global_101688 = 0;
-	TEXT_LABEL_ASSIGN_STRING(&(Global_101688.f_3), sParam0, 32);
-	Global_101688.f_11 = iParam1;
+	Global_101893 = 0;
+	TEXT_LABEL_ASSIGN_STRING(&(Global_101893.f_3), sParam0, 32);
+	Global_101893.f_11 = iParam1;
 	MISC::PAUSE_DEATH_ARREST_RESTART(true);
 	MISC::SET_FADE_OUT_AFTER_ARREST(false);
 	MISC::SET_FADE_OUT_AFTER_DEATH(false);
@@ -52629,11 +52657,11 @@ BOOL func_679(const char* sParam0, int iParam1, int iParam2) // Position - 0x419
 	func_688(true);
 	func_685(0);
 	func_684(1);
-	MISC::CLEAR_BIT(&(Global_101688.f_20), 9);
-	MISC::CLEAR_BIT(&(Global_101688.f_20), 6);
-	MISC::CLEAR_BIT(&(Global_101688.f_20), 20);
-	MISC::CLEAR_BIT(&(Global_101688.f_20), 21);
-	MISC::CLEAR_BIT(&(Global_101688.f_20), 5);
+	MISC::CLEAR_BIT(&(Global_101893.f_20), 9);
+	MISC::CLEAR_BIT(&(Global_101893.f_20), 6);
+	MISC::CLEAR_BIT(&(Global_101893.f_20), 20);
+	MISC::CLEAR_BIT(&(Global_101893.f_20), 21);
+	MISC::CLEAR_BIT(&(Global_101893.f_20), 5);
 
 	if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 	{
@@ -52644,7 +52672,7 @@ BOOL func_679(const char* sParam0, int iParam1, int iParam2) // Position - 0x419
 				vehiclePedIsIn = PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false);
 			
 				if (ENTITY::IS_ENTITY_UPSIDEDOWN(vehiclePedIsIn))
-					MISC::SET_BIT(&(Global_101688.f_20), 5);
+					MISC::SET_BIT(&(Global_101893.f_20), 5);
 			}
 		}
 	}
@@ -52653,44 +52681,44 @@ BOOL func_679(const char* sParam0, int iParam1, int iParam2) // Position - 0x419
 	HUD::CLEAR_PRINTS();
 	func_683(false);
 	func_71(1);
-	Global_101688.f_2 = Global_101725;
+	Global_101893.f_2 = Global_101930;
 
 	if (func_682())
 	{
 		if (func_681())
 		{
-			if (Global_101725 >= func_680())
-				if (!IS_BIT_SET(Global_92451[iParam2 /*34*/].f_15, 16))
-					if (Global_114135.f_9089.f_330[iParam2 /*6*/].f_1 >= 2)
-						Global_95839 = 1;
+			if (Global_101930 >= func_680())
+				if (!IS_BIT_SET(Global_92656[iParam2 /*34*/].f_15, 16))
+					if (Global_114344.f_9089.f_330[iParam2 /*6*/].f_1 >= 2)
+						Global_96044 = 1;
 		}
-		else if (Global_101688.f_11 == 6)
+		else if (Global_101893.f_11 == 6)
 		{
 			func_209(iParam2, &unk);
 		
 			if (unk.f_31 == 1)
-				if (Global_114135.f_18578[iParam2 /*6*/].f_4 >= 2)
-					Global_95839 = 1;
+				if (Global_114344.f_18578[iParam2 /*6*/].f_4 >= 2)
+					Global_96044 = 1;
 		}
 		else
 		{
 			num = func_393(SCRIPT::GET_THIS_SCRIPT_NAME());
 		
 			if (num > -1)
-				if (Global_114135.f_24990.f_4[num] >= 2)
-					Global_95839 = 1;
+				if (Global_114344.f_24990.f_4[num] >= 2)
+					Global_96044 = 1;
 		}
 	}
 
 	return true;
 }
 
-int func_680() // Position - 0x41B19 (269081)
+int func_680() // Position - 0x41BAE (269230)
 {
 	int num;
 	int num2;
 
-	num = func_396(&(Global_101688.f_3), false);
+	num = func_396(&(Global_101893.f_3), false);
 	num2 = 0;
 
 	if (num == 53)
@@ -52699,198 +52727,198 @@ int func_680() // Position - 0x41B19 (269081)
 	return num2;
 }
 
-BOOL func_681() // Position - 0x41B3D (269117)
+BOOL func_681() // Position - 0x41BD2 (269266)
 {
-	if (Global_101688.f_11 == 0 || Global_101688.f_11 == 1 || Global_101688.f_11 == 2 || Global_101688.f_11 == 3 || Global_101688.f_11 == 4)
+	if (Global_101893.f_11 == 0 || Global_101893.f_11 == 1 || Global_101893.f_11 == 2 || Global_101893.f_11 == 3 || Global_101893.f_11 == 4)
 		return true;
 
 	return false;
 }
 
-BOOL func_682() // Position - 0x41B8D (269197)
+BOOL func_682() // Position - 0x41C22 (269346)
 {
-	if (Global_101688.f_11 == 0 || Global_101688.f_11 == 1 || Global_101688.f_11 == 2 || Global_101688.f_11 == 6 || Global_101688.f_11 == 3)
+	if (Global_101893.f_11 == 0 || Global_101893.f_11 == 1 || Global_101893.f_11 == 2 || Global_101893.f_11 == 6 || Global_101893.f_11 == 3)
 		return true;
 
-	if (Global_101688.f_11 == 5)
-		if (func_393(&(Global_101688.f_3)) > -1)
+	if (Global_101893.f_11 == 5)
+		if (func_393(&(Global_101893.f_3)) > -1)
 			return true;
 
 	return false;
 }
 
-void func_683(BOOL bParam0) // Position - 0x41BF9 (269305)
+void func_683(BOOL bParam0) // Position - 0x41C8E (269454)
 {
 	HUD::DISPLAY_HUD(bParam0);
 	HUD::DISPLAY_RADAR(bParam0);
 	return;
 }
 
-void func_684(int iParam0) // Position - 0x41C0D (269325)
+void func_684(int iParam0) // Position - 0x41CA2 (269474)
 {
 	if (iParam0 == 1)
 	{
 		HUD::THEFEED_PAUSE();
-		MISC::SET_BIT(&(Global_101688.f_20), 3);
+		MISC::SET_BIT(&(Global_101893.f_20), 3);
 	}
-	else if (IS_BIT_SET(Global_101688.f_20, 3))
+	else if (IS_BIT_SET(Global_101893.f_20, 3))
 	{
 		HUD::THEFEED_RESUME();
-		MISC::CLEAR_BIT(&(Global_101688.f_20), 3);
+		MISC::CLEAR_BIT(&(Global_101893.f_20), 3);
 	}
 
 	return;
 }
 
-void func_685(int iParam0) // Position - 0x41C47 (269383)
+void func_685(int iParam0) // Position - 0x41CDC (269532)
 {
 	if (iParam0 == 1)
 	{
-		if (IS_BIT_SET(Global_101688.f_20, 4))
+		if (IS_BIT_SET(Global_101893.f_20, 4))
 		{
 			func_687();
-			MISC::CLEAR_BIT(&(Global_101688.f_20), 4);
+			MISC::CLEAR_BIT(&(Global_101893.f_20), 4);
 		}
 	}
 	else
 	{
 		func_686();
-		MISC::SET_BIT(&(Global_101688.f_20), 4);
+		MISC::SET_BIT(&(Global_101893.f_20), 4);
 	}
 
 	return;
 }
 
-void func_686() // Position - 0x41C81 (269441)
+void func_686() // Position - 0x41D16 (269590)
 {
-	Global_23831.f_5 = 1;
+	Global_23992.f_5 = 1;
 	return;
 }
 
-void func_687() // Position - 0x41C8F (269455)
+void func_687() // Position - 0x41D24 (269604)
 {
-	Global_23831.f_5 = 0;
+	Global_23992.f_5 = 0;
 	return;
 }
 
-void func_688(BOOL bParam0) // Position - 0x41C9D (269469)
+void func_688(BOOL bParam0) // Position - 0x41D32 (269618)
 {
 	if (bParam0)
 	{
 		func_689();
 	
-		if (Global_21066.f_1 == 10 || Global_21066.f_1 == 9)
-			MISC::SET_BIT(&Global_8920, 16);
+		if (Global_21222.f_1 == 10 || Global_21222.f_1 == 9)
+			MISC::SET_BIT(&Global_9076, 16);
 	
-		Global_21066.f_1 = 1;
+		Global_21222.f_1 = 1;
 	
 		if (func_276(0))
 			func_484(0);
 	}
-	else if (Global_21066.f_1 == 1)
+	else if (Global_21222.f_1 == 1)
 	{
-		if (!(Global_21066.f_1 == 0))
-			Global_21066.f_1 = 3;
+		if (!(Global_21222.f_1 == 0))
+			Global_21222.f_1 = 3;
 	}
 
 	return;
 }
 
-void func_689() // Position - 0x41D00 (269568)
+void func_689() // Position - 0x41D95 (269717)
 {
-	if (Global_21066.f_1 == 9 || Global_21066.f_1 == 10)
+	if (Global_21222.f_1 == 9 || Global_21222.f_1 == 10)
 	{
-		Global_22478 = 0;
-		Global_22474 = 1;
+		Global_22638 = 0;
+		Global_22634 = 1;
 	}
 
 	return;
 }
 
-void func_690() // Position - 0x41D29 (269609)
+void func_690() // Position - 0x41DBE (269758)
 {
-	Global_95839 = 0;
-	Global_95840 = false;
+	Global_96044 = 0;
+	Global_96045 = false;
 	return;
 }
 
-BOOL func_691() // Position - 0x41D3B (269627)
+BOOL func_691() // Position - 0x41DD0 (269776)
 {
-	if (Global_101688 == 13 || Global_101688 == 10 || Global_101688 == 11 || Global_101688 == 12)
+	if (Global_101893 == 13 || Global_101893 == 10 || Global_101893 == 11 || Global_101893 == 12)
 		return false;
 
 	return true;
 }
 
-void func_692() // Position - 0x41D79 (269689)
+void func_692() // Position - 0x41E0E (269838)
 {
-	Global_101723 = 1;
+	Global_101928 = 1;
 
 	if (PLAYER::IS_PLAYER_BEING_ARRESTED(PLAYER::PLAYER_ID(), true))
 	{
-		if (MISC::IS_STRING_NULL_OR_EMPTY(&Global_79772))
+		if (MISC::IS_STRING_NULL_OR_EMPTY(&Global_79977))
 		{
 			switch (_GET_CURRENT_PLAYER_CHARACTER())
 			{
 				case CHAR_MICHAEL:
-					TEXT_LABEL_ASSIGN_STRING(&Global_79772, "CMN_MARRE" /*~s~Michael was arrested.*/, 16);
+					TEXT_LABEL_ASSIGN_STRING(&Global_79977, "CMN_MARRE" /*~s~Michael was arrested.*/, 16);
 					break;
 			
 				case CHAR_FRANKLIN:
-					TEXT_LABEL_ASSIGN_STRING(&Global_79772, "CMN_FARRE" /*~s~Franklin was arrested.*/, 16);
+					TEXT_LABEL_ASSIGN_STRING(&Global_79977, "CMN_FARRE" /*~s~Franklin was arrested.*/, 16);
 					break;
 			
 				case CHAR_TREVOR:
-					TEXT_LABEL_ASSIGN_STRING(&Global_79772, "CMN_TARRE" /*~s~Trevor was arrested.*/, 16);
+					TEXT_LABEL_ASSIGN_STRING(&Global_79977, "CMN_TARRE" /*~s~Trevor was arrested.*/, 16);
 					break;
 			}
 		
-			TEXT_LABEL_ASSIGN_STRING(&Global_79776, "", 16);
+			TEXT_LABEL_ASSIGN_STRING(&Global_79981, "", 16);
 		}
 	
-		Global_101723 = 0;
+		Global_101928 = 0;
 	}
 	else if (!PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 	{
-		if (MISC::IS_STRING_NULL_OR_EMPTY(&Global_79772))
+		if (MISC::IS_STRING_NULL_OR_EMPTY(&Global_79977))
 		{
 			switch (_GET_CURRENT_PLAYER_CHARACTER())
 			{
 				case CHAR_MICHAEL:
-					TEXT_LABEL_ASSIGN_STRING(&Global_79772, "CMN_MDIED" /*~s~Michael died.*/, 16);
+					TEXT_LABEL_ASSIGN_STRING(&Global_79977, "CMN_MDIED" /*~s~Michael died.*/, 16);
 					break;
 			
 				case CHAR_FRANKLIN:
-					TEXT_LABEL_ASSIGN_STRING(&Global_79772, "CMN_FDIED" /*~s~Franklin died.*/, 16);
+					TEXT_LABEL_ASSIGN_STRING(&Global_79977, "CMN_FDIED" /*~s~Franklin died.*/, 16);
 					break;
 			
 				case CHAR_TREVOR:
-					TEXT_LABEL_ASSIGN_STRING(&Global_79772, "CMN_TDIED" /*~s~Trevor died.*/, 16);
+					TEXT_LABEL_ASSIGN_STRING(&Global_79977, "CMN_TDIED" /*~s~Trevor died.*/, 16);
 					break;
 			}
 		
-			TEXT_LABEL_ASSIGN_STRING(&Global_79776, "", 16);
+			TEXT_LABEL_ASSIGN_STRING(&Global_79981, "", 16);
 		}
 	
-		Global_101723 = 0;
-		MISC::SET_BIT(&(Global_101688.f_20), 25);
+		Global_101928 = 0;
+		MISC::SET_BIT(&(Global_101893.f_20), 25);
 	}
 
 	return;
 }
 
-void func_693(char* sParam0) // Position - 0x41E6C (269932)
+void func_693(char* sParam0) // Position - 0x41F01 (270081)
 {
 	!MISC::IS_STRING_NULL_OR_EMPTY(sParam0);
 	return;
 }
 
-int func_694() // Position - 0x41E7E (269950)
+int func_694() // Position - 0x41F13 (270099)
 {
 	return PED::ADD_SCENARIO_BLOCKING_AREA(-309.1f, 6205.4f, 30f, -279.33f, 6217.98f, 40f, false, true, true, true, 1);
 }
 
-void func_695(var uParam0) // Position - 0x41EAD (269997)
+void func_695(var uParam0) // Position - 0x41F42 (270146)
 {
 	func_696(&(uParam0->f_28));
 	func_696(&(uParam0->f_35));
@@ -52898,7 +52926,7 @@ void func_695(var uParam0) // Position - 0x41EAD (269997)
 	return;
 }
 
-void func_696(var uParam0) // Position - 0x41ECD (270029)
+void func_696(var uParam0) // Position - 0x41F62 (270178)
 {
 	int i;
 
@@ -52913,7 +52941,7 @@ void func_696(var uParam0) // Position - 0x41ECD (270029)
 	return;
 }
 
-Hash func_697(eCharacter echParam0) // Position - 0x41F07 (270087)
+Hash func_697(eCharacter echParam0) // Position - 0x41F9C (270236)
 {
 	if (!func_17(echParam0))
 		return func_20(echParam0);

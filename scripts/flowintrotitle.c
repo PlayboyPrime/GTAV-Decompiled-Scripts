@@ -10,7 +10,7 @@ void main() // Position - 0x0 (0)
 		func_10();
 
 	STREAMING::SET_GAME_PAUSES_FOR_STREAMING(false);
-	MISC::CLEAR_BIT(&(Global_114135.f_10020.f_25), 1);
+	MISC::CLEAR_BIT(&(Global_114344.f_10020.f_25), 1);
 	func_7();
 	SCRIPT::SET_NO_LOADING_SCREEN(true);
 
@@ -38,7 +38,7 @@ void main() // Position - 0x0 (0)
 	{
 		func_7();
 	
-		if (!IS_BIT_SET(Global_114135.f_10020.f_25, 1))
+		if (!IS_BIT_SET(Global_114344.f_10020.f_25, 1))
 		{
 			GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(iLocal_0, 255, 255, 255, 255, 0);
 		
@@ -53,7 +53,7 @@ void main() // Position - 0x0 (0)
 			}
 			else if (MISC::GET_GAME_TIMER() > iLocal_1)
 			{
-				MISC::SET_BIT(&(Global_114135.f_10020.f_25), 1);
+				MISC::SET_BIT(&(Global_114344.f_10020.f_25), 1);
 			
 				if (MISC::HAS_GAME_INSTALLED_THIS_SESSION() || MISC::IS_PC_VERSION())
 				{
@@ -76,7 +76,7 @@ void main() // Position - 0x0 (0)
 
 void func_1() // Position - 0x13B (315)
 {
-	Global_101727 = 1;
+	Global_101932 = 1;
 	return;
 }
 
@@ -85,13 +85,13 @@ int func_2() // Position - 0x148 (328)
 	if (func_3(false))
 		return 0;
 
-	if (Global_101727.f_8)
-		if (Global_101727.f_10 > 0)
+	if (Global_101932.f_8)
+		if (Global_101932.f_10 > 0)
 			return 0;
-	else if (Global_101727.f_10 > 1)
+	else if (Global_101932.f_10 > 1)
 		return 0;
 
-	Global_101727.f_10 = Global_101727.f_10 + 1;
+	Global_101932.f_10 = Global_101932.f_10 + 1;
 	return 1;
 }
 
@@ -100,13 +100,13 @@ BOOL func_3(BOOL bParam0) // Position - 0x193 (403)
 	if (!bParam0 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("benchmark")) > 0)
 		return true;
 
-	return IS_BIT_SET(Global_79788, 0);
+	return IS_BIT_SET(Global_79993, 0);
 }
 
 void func_4(int iParam0, int iParam1) // Position - 0x1BB (443)
 {
-	Global_101727.f_7 = iParam0;
-	Global_101727.f_8 = iParam1;
+	Global_101932.f_7 = iParam0;
+	Global_101932.f_8 = iParam1;
 	return;
 }
 
@@ -155,13 +155,13 @@ void func_8() // Position - 0x268 (616)
 
 void func_9() // Position - 0x278 (632)
 {
-	Global_23831.f_134 = 1;
+	Global_23992.f_134 = 1;
 	return;
 }
 
 void func_10() // Position - 0x286 (646)
 {
-	MISC::SET_BIT(&(Global_114135.f_10020.f_25), 1);
+	MISC::SET_BIT(&(Global_114344.f_10020.f_25), 1);
 
 	if (iLocal_0 != 0)
 		GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_0);
