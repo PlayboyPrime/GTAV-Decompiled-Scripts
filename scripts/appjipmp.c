@@ -7405,9 +7405,9 @@ char* func_258(int iParam0, int iParam1) // Position - 0x8BA1 (35745)
 			
 				case 6:
 					if (*Global_262145.f_36747 == 0)
-						return "COM_SERIESR";
+						return "COM_SERIESR" /*Community Race Series*/;
 					else if (*Global_262145.f_36747 == 1)
-						return "COM_SERIESC";
+						return "COM_SERIESC" /*Community Combat Series*/;
 				
 					return "COM_SERIES" /*Community Series*/;
 			

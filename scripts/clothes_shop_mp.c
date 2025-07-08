@@ -57865,7 +57865,7 @@ BOOL func_420(var uParam0) // Position - 0x48177 (295287)
 						}
 						else
 						{
-							HUD::SET_WARNING_MESSAGE_WITH_HEADER("GLOBAL_ALERT_DEFAULT" /*Alert*/, "HUD_PERM" /*Your profile does not have the correct permissions to access this functionality.*/, instructionalKey2, 0, false, -1, 0, 0, true, 0);
+							HUD::SET_WARNING_MESSAGE_WITH_HEADER("GLOBAL_ALERT_DEFAULT" /*Alert*/, "HUD_PERM" /*Your profile does not have permission to access GTA Online.*/, instructionalKey2, 0, false, -1, 0, 0, true, 0);
 						}
 					
 						if (PAD::IS_CONTROL_JUST_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_ACCEPT))
@@ -58047,7 +58047,7 @@ BOOL func_421(int* piParam0, BOOL bParam1) // Position - 0x48490 (296080)
 			else if (npUnavailableReason == 5)
 				HUD::SET_WARNING_MESSAGE_WITH_HEADER("PM_INF_QMFT" /*Alert*/, "SCLB_NO_INT" /*No internet connection detected, establish a connection to access this feature.*/, instructionalKey, 0, false, -1, 0, 0, true, 0);
 			else if (!func_430())
-				HUD::SET_WARNING_MESSAGE_WITH_HEADER("PM_INF_QMFT" /*Alert*/, "SCLB_NO_ROS" /*Rockstar Games Online Services are unavailable right now. Please try again later.*/, instructionalKey, 0, false, -1, 0, 0, true, 0);
+				HUD::SET_WARNING_MESSAGE_WITH_HEADER("PM_INF_QMFT" /*Alert*/, "SCLB_NO_ROS" /*Rockstar Games Services are unavailable right now. Please try again later.*/, instructionalKey, 0, false, -1, 0, 0, true, 0);
 		
 			if (!IS_BIT_SET(*piParam0, 0))
 			{
@@ -66841,7 +66841,7 @@ char* func_499(const char* sParam0, BOOL bParam1) // Position - 0x5147F (332927)
 			return "SHOP_CONTENT_51" /*Agents of Sabotage*/;
 	
 		case 1026824822:
-			return "SHOP_CONTENT_52";
+			return "SHOP_CONTENT_52" /*Money Fronts*/;
 	}
 
 	switch (hashKey)
@@ -186094,7 +186094,7 @@ BOOL func_838() // Position - 0xFD89E (1038494)
 
 char* func_839() // Position - 0xFD8AE (1038510)
 {
-	return "PROF_CHK_UA";
+	return "PROF_CHK_UA" /*Unable to connect to Rockstar Games to check profanity.*/;
 }
 
 BOOL func_840() // Position - 0xFD8BB (1038523)

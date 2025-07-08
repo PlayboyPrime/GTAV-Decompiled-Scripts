@@ -118316,9 +118316,9 @@ char* func_852(Hash hParam0, BOOL bParam1) // Position - 0x8B95C (571740)
 	
 		case joaat("WEAPON_CERAMICPISTOL"):
 			if (bParam1)
-				return "WTU_CERPST";
+				return "WTU_CERPST" /*CERAMIC PISTOL*/;
 			else
-				return "WT_CERPST";
+				return "WT_CERPST" /*Ceramic Pistol*/;
 			break;
 	
 		case joaat("WEAPON_GADGETPISTOL"):
@@ -118337,9 +118337,9 @@ char* func_852(Hash hParam0, BOOL bParam1) // Position - 0x8B95C (571740)
 	
 		case joaat("WEAPON_COMBATSHOTGUN"):
 			if (bParam1)
-				return "WTU_CMBSHGN";
+				return "WTU_CMBSHGN" /*COMBAT SHOTGUN*/;
 			else
-				return "WT_CMBSHGN";
+				return "WT_CMBSHGN" /*Combat Shotgun*/;
 			break;
 	
 		case joaat("VEHICLE_WEAPON_TURRET_DINGHY5_50CAL"):
@@ -118498,9 +118498,9 @@ char* func_852(Hash hParam0, BOOL bParam1) // Position - 0x8B95C (571740)
 	
 		case joaat("WEAPON_BRIEFCASE"):
 			if (bParam1)
-				return "FMMC_WT_BRIEF";
+				return "FMMC_WT_BRIEF" /*Briefcase*/;
 			else
-				return "FMMC_WT_BRIEF";
+				return "FMMC_WT_BRIEF" /*Briefcase*/;
 			break;
 	
 		default:
@@ -201518,7 +201518,7 @@ void func_2099(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 		func_2130();
 		bLocal_2803 = false;
 	
-		if (!Global_1984722)
+		if (!Global_1984723)
 		{
 			func_1976();
 			func_1974();

@@ -4207,8 +4207,8 @@ void func_53(var uParam0) // Position - 0x4BDB (19419)
 	{
 		*uParam0 = 1;
 	
-		if (!_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("APPR_REG_BOSSF1"))
-			_DISPLAY_HELP_TEXT("APPR_REG_BOSSF1", -1);
+		if (!_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("APPR_REG_BOSSF1" /*Unavailable. The maximum number of VIPs, CEOs, and Club Presidents has been reached in this session.*/))
+			_DISPLAY_HELP_TEXT("APPR_REG_BOSSF1" /*Unavailable. The maximum number of VIPs, CEOs, and Club Presidents has been reached in this session.*/, -1);
 	}
 
 	return;

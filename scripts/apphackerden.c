@@ -18093,7 +18093,7 @@ BOOL IS_ROCKSTAR_DEV() // Position - 0x11CF2 (72946)
 
 char* func_426() // Position - 0x11D03 (72963)
 {
-	return "PROF_CHK_UA";
+	return "PROF_CHK_UA" /*Unable to connect to Rockstar Games to check profanity.*/;
 }
 
 BOOL func_427() // Position - 0x11D0F (72975)

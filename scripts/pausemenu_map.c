@@ -8323,15 +8323,15 @@ char* func_288(int iParam0) // Position - 0x9C8A (40074)
 			return "FHAN_ROLLOVER" /*Buckle up with co-pilot Oscar Guzman and take on one of the most infamous arms dealerships in Blaine County. But be warned, there are bigger problems than rival smugglers watching your trade routes. Much bigger...*/;
 	
 		case 29:
-			return "DLCC_TY25M_RC";
+			return "DLCC_TY25M_RC" /*Join Raf De Angelis and take control of San Andreas's biggest money laundering network.*/;
 	
 		case 31:
 		case 32:
 		case 30:
-			return "DLCC_TY25C_RC";
+			return "DLCC_TY25C_RC" /*Join Raf De Angelis and take control of San Andreas's biggest money laundering network.*/;
 	
 		case 33:
-			return "DLCC_MUSL_RC";
+			return "DLCC_MUSL_RC" /*The Music Locker offers the pure ecstasy of a sweaty all-nighter on the dancefloor with the scene's best DJs. Featuring Moodymann, Palms Trax, and Keinemusik.*/;
 	
 		default:
 		
@@ -8459,12 +8459,12 @@ char* func_290(int iParam0) // Position - 0x9EAA (40618)
 			return "DLCC_CFRAI_TY" /*Contact Mission*/;
 	
 		case 29:
-			return "DLCC_TY25M_TY";
+			return "DLCC_TY25M_TY" /*Business*/;
 	
 		case 31:
 		case 32:
 		case 30:
-			return "DLCC_TY25C_TY";
+			return "DLCC_TY25C_TY" /*Business*/;
 	
 		default:
 		
@@ -8570,7 +8570,7 @@ char* func_291(int iParam0) // Position - 0xA05C (41052)
 		case 31:
 		case 32:
 		case 30:
-			return "DLCC_TY25C_WS";
+			return "DLCC_TY25C_WS" /*Maze Bank Foreclosures*/;
 	
 		default:
 		
@@ -8674,13 +8674,13 @@ char* func_292(int iParam0) // Position - 0xA20E (41486)
 			return "";
 	
 		case 31:
-			return "DLCC_TY25C_HELI";
+			return "DLCC_TY25C_HELI" /*Higgins Helitours*/;
 	
 		case 32:
-			return "DLCC_TY25C_WEED";
+			return "DLCC_TY25C_WEED" /*Smoke on the Water*/;
 	
 		case 30:
-			return "DLCC_TY25C_CAR";
+			return "DLCC_TY25C_CAR" /*Hands On Car Wash*/;
 	
 		default:
 		
@@ -8857,12 +8857,12 @@ char* func_297(int iParam0) // Position - 0xA50C (42252)
 			return "CELL_OSCAR_G_N" /*Oscar*/;
 	
 		case 29:
-			return "DLCC_TY25M_CT";
+			return "DLCC_TY25M_CT" /*Martin Madrazo*/;
 	
 		case 31:
 		case 32:
 		case 30:
-			return "DLCC_TY25C_CT";
+			return "DLCC_TY25C_CT" /*Raf De Angelis*/;
 	
 		default:
 		
@@ -9072,15 +9072,15 @@ char* func_299(int iParam0) // Position - 0xA87D (43133)
 			return "DLCC_FHAN" /*Oscar Guzman Flies Again*/;
 	
 		case 29:
-			return "DLCC_TY25";
+			return "DLCC_TY25" /*Money Fronts*/;
 	
 		case 31:
 		case 32:
 		case 30:
-			return "DLCC_TY25";
+			return "DLCC_TY25" /*Money Fronts*/;
 	
 		case 33:
-			return "DLCC_MUSL";
+			return "DLCC_MUSL" /*The Music Locker*/;
 	
 		default:
 		
@@ -11123,11 +11123,11 @@ char* func_349(int iParam0) // Position - 0xD86B (55403)
 	
 		case 17:
 			if (*Global_262145.f_36747 == 0)
-				return "SIR_COMMUNR";
+				return "SIR_COMMUNR" /*Take on a series of the most innovative and challenging Races created by the GTA Online community and curated by Rockstar Games.*/;
 			else if (*Global_262145.f_36747 == 1)
-				return "SIR_COMMUNC";
+				return "SIR_COMMUNC" /*Battle it out with friends and foes in a selection of the best combat modes created by the GTA Online community and curated by Rockstar Games.*/;
 		
-			return "SIR_COMMUN" /*Test your skills to the limit in a series of white-knuckle races and other modes, created entirely by the Grand Theft Auto Online community. It's anyone's game...*/;
+			return "SIR_COMMUN" /*Test your skills in some of the most creative Races, Deathmatches, Survivals, and more designed entirely by the GTA Online community and curated by Rockstar Games.*/;
 	
 		case 18:
 			return "SIR_CAYO" /*Head to the beautiful, bloodstained shores of Cayo Perico for a welcome dose of sun, sea and unbridled mayhem.*/;
@@ -11681,9 +11681,9 @@ char* func_359(int iParam0) // Position - 0xE0AF (57519)
 	
 		case 17:
 			if (*Global_262145.f_36747 == 0)
-				return "SIN_COMMUNR";
+				return "SIN_COMMUNR" /*Community Race Series*/;
 			else if (*Global_262145.f_36747 == 1)
-				return "SIN_COMMUNC";
+				return "SIN_COMMUNC" /*Community Combat Series*/;
 		
 			return "SIN_COMMUN" /*Community Series*/;
 	

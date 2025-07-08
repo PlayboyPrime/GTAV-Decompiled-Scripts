@@ -26112,18 +26112,18 @@ int func_517(int iParam0, char* sParam1, int iParam2) // Position - 0x1F5B8 (128
 	switch (iParam0)
 	{
 		case 174:
-			str = "CWAS_PROP_ET";
-			str2 = "CWAS_PROP_ET";
+			str = "CWAS_PROP_ET" /*HANDS ON CAR WASH*/;
+			str2 = "CWAS_PROP_ET" /*HANDS ON CAR WASH*/;
 			break;
 	
 		case 175:
-			str = "WSHOP_PROP_ET";
-			str2 = "WSHOP_PROP_ET";
+			str = "WSHOP_PROP_ET" /*SMOKE ON THE WATER*/;
+			str2 = "WSHOP_PROP_ET" /*SMOKE ON THE WATER*/;
 			break;
 	
 		case 176:
-			str = "HELIT_PROP_ET";
-			str2 = "HELIT_PROP_ET";
+			str = "HELIT_PROP_ET" /*HIGGINS HELITOURS*/;
+			str2 = "HELIT_PROP_ET" /*HIGGINS HELITOURS*/;
 			break;
 	}
 
@@ -26203,13 +26203,13 @@ char* func_519(int iParam0) // Position - 0x1F75B (128859)
 	switch (iParam0)
 	{
 		case 1:
-			return "CWAS_NME_1";
+			return "CWAS_NME_1" /*HANDS ON CAR WASH*/;
 	
 		case 3:
-			return "WSHOP_NME_1";
+			return "WSHOP_NME_1" /*SMOKE ON THE WATER*/;
 	
 		case 2:
-			return "HELIT_NME_1";
+			return "HELIT_NME_1" /*HIGGINS HELITOURS*/;
 	
 		default:
 		
@@ -29818,24 +29818,24 @@ void func_684(int iParam0, char* sParam1, var uParam2, var uParam3, var uParam4)
 	switch (iParam0)
 	{
 		case 174:
-			TEXT_LABEL_ASSIGN_STRING(sParam1, "CWAS_EXT_T", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "CWAS_EXT_T" /*HANDS ON CAR WASH*/, 64);
 			*uParam3 = 2;
-			uParam2->[0] = "CWAS_E_O_0";
-			uParam2->[1] = "CWAS_E_O_1";
+			uParam2->[0] = "CWAS_E_O_0" /*Exit*/;
+			uParam2->[1] = "CWAS_E_O_1" /*All Exit*/;
 			break;
 	
 		case 175:
-			TEXT_LABEL_ASSIGN_STRING(sParam1, "WSHOP_EXT_T", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "WSHOP_EXT_T" /*SMOKE ON THE WATER*/, 64);
 			*uParam3 = 2;
-			uParam2->[0] = "WSHOP_E_O_0";
-			uParam2->[1] = "WSHOP_E_O_1";
+			uParam2->[0] = "WSHOP_E_O_0" /*Exit*/;
+			uParam2->[1] = "WSHOP_E_O_1" /*All Exit*/;
 			break;
 	
 		case 176:
-			TEXT_LABEL_ASSIGN_STRING(sParam1, "HELIT_EXT_T", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "HELIT_EXT_T" /*HIGGINS HELITOURS*/, 64);
 			*uParam3 = 2;
-			uParam2->[0] = "HELIT_E_O_0";
-			uParam2->[1] = "HELIT_E_O_1";
+			uParam2->[0] = "HELIT_E_O_0" /*Exit*/;
+			uParam2->[1] = "HELIT_E_O_1" /*All Exit*/;
 			break;
 	
 		default:
@@ -31319,13 +31319,13 @@ char* func_707(int iParam0, var uParam1, var uParam2, var uParam3) // Position -
 		switch (iParam0)
 		{
 			case 174:
-				return "CWAS_KICK_A";
+				return "CWAS_KICK_A" /*You no longer have access to the Hands On Car Wash.*/;
 		
 			case 176:
-				return "HELIT_KICK_A";
+				return "HELIT_KICK_A" /*You no longer have access to Higgins Helitours.*/;
 		
 			case 175:
-				return "WSHOP_KICK_A";
+				return "WSHOP_KICK_A" /*You no longer have access to Smoke on the Water.*/;
 		}
 	}
 
@@ -31334,13 +31334,13 @@ char* func_707(int iParam0, var uParam1, var uParam2, var uParam3) // Position -
 		switch (iParam0)
 		{
 			case 174:
-				return "CWAS_KICK_B";
+				return "CWAS_KICK_B" /*You no longer have access to the Hands On Car Wash as the owner has left the game.*/;
 		
 			case 176:
-				return "HELIT_KICK_B";
+				return "HELIT_KICK_B" /*You no longer have access to Higgins Helitours as the owner has left the game.*/;
 		
 			case 175:
-				return "WSHOP_KICK_B";
+				return "WSHOP_KICK_B" /*You no longer have access to Smoke on the Water as the owner has left the game.*/;
 		}
 	}
 
@@ -31349,13 +31349,13 @@ char* func_707(int iParam0, var uParam1, var uParam2, var uParam3) // Position -
 		switch (iParam0)
 		{
 			case 174:
-				return "CWAS_KICK_C";
+				return "CWAS_KICK_C" /*Owner has requested all to leave the Hands On Car Wash.*/;
 		
 			case 176:
-				return "HELIT_KICK_C";
+				return "HELIT_KICK_C" /*Owner has requested all to leave Higgins Helitours.*/;
 		
 			case 175:
-				return "WSHOP_KICK_C";
+				return "WSHOP_KICK_C" /*Owner has requested all to leave Smoke on the Water.*/;
 		}
 	}
 
@@ -31364,13 +31364,13 @@ char* func_707(int iParam0, var uParam1, var uParam2, var uParam3) // Position -
 		switch (iParam0)
 		{
 			case 174:
-				return "CWAS_KICK_D";
+				return "CWAS_KICK_D" /*You no longer have access to the Hands On Car Wash as you became the Beast.*/;
 		
 			case 176:
-				return "HELIT_KICK_D";
+				return "HELIT_KICK_D" /*You no longer have access to Higgins Helitours as you became the Beast.*/;
 		
 			case 175:
-				return "WSHOP_KICK_D";
+				return "WSHOP_KICK_D" /*You no longer have access to Smoke on the Water as you became the Beast.*/;
 		}
 	}
 
@@ -32148,15 +32148,15 @@ void func_746(int iParam0, char* sParam1, var uParam2, var uParam3, var uParam4)
 	switch (iParam0)
 	{
 		case 174:
-			TEXT_LABEL_ASSIGN_STRING(sParam1, "CWAS_PROP_ET", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "CWAS_PROP_ET" /*HANDS ON CAR WASH*/, 64);
 			break;
 	
 		case 176:
-			TEXT_LABEL_ASSIGN_STRING(sParam1, "HELIT_PROP_ET", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "HELIT_PROP_ET" /*HIGGINS HELITOURS*/, 64);
 			break;
 	
 		case 175:
-			TEXT_LABEL_ASSIGN_STRING(sParam1, "WSHOP_PROP_ET", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "WSHOP_PROP_ET" /*SMOKE ON THE WATER*/, 64);
 			break;
 	}
 
@@ -32281,19 +32281,19 @@ char* func_755(int iParam0, var uParam1, var uParam2) // Position - 0x275CC (161
 		switch (iParam0)
 		{
 			case 174:
-				return "SI_EXIT_BLCK34A";
+				return "SI_EXIT_BLCK34A" /*You can't leave the Hands On Car Wash while on call. You can cancel this via the Quick Join app on the phone.*/;
 		
 			case 176:
-				return "SI_EXIT_BLCK35A";
+				return "SI_EXIT_BLCK35A" /*You can't leave Higgins Helitours while on call. You can cancel this via the Quick Join app on the phone.*/;
 		
 			case 175:
-				return "SI_EXIT_BLCK36A";
+				return "SI_EXIT_BLCK36A" /*You can't leave Smoke on the Water while on call. You can cancel this via the Quick Join app on the phone.*/;
 		
 			default:
 			
 		}
 	
-		return "SI_EXIT_BLCK34A";
+		return "SI_EXIT_BLCK34A" /*You can't leave the Hands On Car Wash while on call. You can cancel this via the Quick Join app on the phone.*/;
 	}
 
 	return "";
@@ -32334,16 +32334,16 @@ char* func_760(int iParam0, var uParam1, var uParam2) // Position - 0x27691 (161
 		switch (iParam0)
 		{
 			case 174:
-				return "SI_ENTR_BLCK34A";
+				return "SI_ENTR_BLCK34A" /*You can't enter the Hands On Car Wash while on call. You can cancel this via the Quick Join app on the phone.*/;
 		
 			case 176:
-				return "SI_ENTR_BLCK35A";
+				return "SI_ENTR_BLCK35A" /*You can't enter Higgins Helitours while on call. You can cancel this via the Quick Join app on the phone.*/;
 		
 			case 175:
-				return "SI_ENTR_BLCK36A";
+				return "SI_ENTR_BLCK36A" /*You can't enter Smoke on the Water while on call. You can cancel this via the Quick Join app on the phone.*/;
 		}
 	
-		return "SI_ENTR_BLCK34A";
+		return "SI_ENTR_BLCK34A" /*You can't enter the Hands On Car Wash while on call. You can cancel this via the Quick Join app on the phone.*/;
 	}
 
 	if (func_213(PLAYER::PLAYER_ID(), false))
@@ -32360,43 +32360,43 @@ char* func_760(int iParam0, var uParam1, var uParam2) // Position - 0x27691 (161
 						switch (num)
 						{
 							case 192:
-								return "CWAS_BLCK_A";
+								return "CWAS_BLCK_A" /*You can't enter the Hands On Car Wash while resupplying another business.*/;
 						
 							case 190:
-								return "CWAS_BLCK_B";
+								return "CWAS_BLCK_B" /*You can't enter the Hands On Car Wash while selling goods from another business.*/;
 						
 							case 167:
-								return "CWAS_BLCK_C";
+								return "CWAS_BLCK_C" /*You can't enter the Hands On Car Wash while acquiring goods for a Warehouse.*/;
 						
 							case 168:
-								return "CWAS_BLCK_D";
+								return "CWAS_BLCK_D" /*You can't enter the Hands On Car Wash while selling goods from a Warehouse.*/;
 						
 							case 178:
-								return "CWAS_BLCK_E";
+								return "CWAS_BLCK_E" /*You can't enter the Hands On Car Wash while acquiring a vehicle for a Warehouse.*/;
 						
 							case 188:
-								return "CWAS_BLCK_F";
+								return "CWAS_BLCK_F" /*You can't enter the Hands On Car Wash while selling vehicles from a Warehouse.*/;
 						
 							case 225:
-								return "CWAS_BLCK_G";
+								return "CWAS_BLCK_G" /*You can't enter the Hands On Car Wash while acquiring goods for a Bunker.*/;
 						
 							case 226:
-								return "CWAS_BLCK_H";
+								return "CWAS_BLCK_H" /*You can't enter the Hands On Car Wash while selling goods from a Bunker.*/;
 						
 							case 229:
-								return "CWAS_BLCK_I";
+								return "CWAS_BLCK_I" /*You can't enter the Hands On Car Wash while acquiring goods for a Hangar.*/;
 						
 							case 230:
-								return "CWAS_BLCK_J";
+								return "CWAS_BLCK_J" /*You can't enter the Hands On Car Wash while selling goods from a Hangar.*/;
 						
 							case 237:
-								return "CWAS_BLCK_O";
+								return "CWAS_BLCK_O" /*You can't enter the Hands On Car Wash while taking part in Nightclub business.*/;
 						
 							case 243:
-								return "CWAS_BLCK_P";
+								return "CWAS_BLCK_P" /*You can't enter the Hands On Car Wash while working for Ms. Baker.*/;
 						
 							case 271:
-								return "CWAS_BLCK_U";
+								return "CWAS_BLCK_U" /*You can't enter the Hands On Car Wash while conducting Auto Shop business.*/;
 						
 							case 355:
 							case 354:
@@ -32404,7 +32404,7 @@ char* func_760(int iParam0, var uParam1, var uParam2) // Position - 0x27691 (161
 								return "";
 						
 							default:
-								return "CWAS_BLCK_X";
+								return "CWAS_BLCK_X" /*You can't enter the Hands On Car Wash while on a mission.*/;
 						}
 					}
 					else
@@ -32419,43 +32419,43 @@ char* func_760(int iParam0, var uParam1, var uParam2) // Position - 0x27691 (161
 						switch (num)
 						{
 							case 192:
-								return "HELIT_BLCK_A";
+								return "HELIT_BLCK_A" /*You can't enter Higgins Helitours while resupplying another business.*/;
 						
 							case 190:
-								return "HELIT_BLCK_B";
+								return "HELIT_BLCK_B" /*You can't enter Higgins Helitours while selling goods from another business.*/;
 						
 							case 167:
-								return "HELIT_BLCK_C";
+								return "HELIT_BLCK_C" /*You can't enter Higgins Helitours while acquiring goods for a Warehouse.*/;
 						
 							case 168:
-								return "HELIT_BLCK_D";
+								return "HELIT_BLCK_D" /*You can't enter Higgins Helitours while selling goods from a Warehouse.*/;
 						
 							case 178:
-								return "HELIT_BLCK_E";
+								return "HELIT_BLCK_E" /*You can't enter Higgins Helitours while acquiring a vehicle for a Warehouse.*/;
 						
 							case 188:
-								return "HELIT_BLCK_F";
+								return "HELIT_BLCK_F" /*You can't enter Higgins Helitours while selling vehicles from a Warehouse.*/;
 						
 							case 225:
-								return "HELIT_BLCK_G";
+								return "HELIT_BLCK_G" /*You can't enter Higgins Helitours while acquiring goods for a Bunker.*/;
 						
 							case 226:
-								return "HELIT_BLCK_H";
+								return "HELIT_BLCK_H" /*You can't enter Higgins Helitours while selling goods from a Bunker.*/;
 						
 							case 229:
-								return "HELIT_BLCK_I";
+								return "HELIT_BLCK_I" /*You can't enter Higgins Helitours while acquiring goods for a Hangar.*/;
 						
 							case 230:
-								return "HELIT_BLCK_J";
+								return "HELIT_BLCK_J" /*You can't enter Higgins Helitours while selling goods from a Hangar.*/;
 						
 							case 237:
-								return "HELIT_BLCK_O";
+								return "HELIT_BLCK_O" /*You can't enter Higgins Helitours while taking part in Nightclub business.*/;
 						
 							case 243:
-								return "HELIT_BLCK_P";
+								return "HELIT_BLCK_P" /*You can't enter Higgins Helitours while working for Ms. Baker.*/;
 						
 							case 271:
-								return "HELIT_BLCK_U";
+								return "HELIT_BLCK_U" /*You can't enter Higgins Helitours while conducting Auto Shop business.*/;
 						
 							case 357:
 							case 356:
@@ -32463,7 +32463,7 @@ char* func_760(int iParam0, var uParam1, var uParam2) // Position - 0x27691 (161
 								return "";
 						
 							default:
-								return "HELIT_BLCK_X";
+								return "HELIT_BLCK_X" /*You can't enter Higgins Helitours while on a mission.*/;
 						}
 					}
 					else
@@ -32478,43 +32478,43 @@ char* func_760(int iParam0, var uParam1, var uParam2) // Position - 0x27691 (161
 						switch (num)
 						{
 							case 192:
-								return "WSHOP_BLCK_A";
+								return "WSHOP_BLCK_A" /*You can't enter Smoke on the Water while resupplying another business.*/;
 						
 							case 190:
-								return "WSHOP_BLCK_B";
+								return "WSHOP_BLCK_B" /*You can't enter Smoke on the Water while selling goods from another business.*/;
 						
 							case 167:
-								return "WSHOP_BLCK_C";
+								return "WSHOP_BLCK_C" /*You can't enter Smoke on the Water while acquiring goods for a Warehouse.*/;
 						
 							case 168:
-								return "WSHOP_BLCK_D";
+								return "WSHOP_BLCK_D" /*You can't enter Smoke on the Water while selling goods from a Warehouse.*/;
 						
 							case 178:
-								return "WSHOP_BLCK_E";
+								return "WSHOP_BLCK_E" /*You can't enter Smoke on the Water while acquiring a vehicle for a Warehouse.*/;
 						
 							case 188:
-								return "WSHOP_BLCK_F";
+								return "WSHOP_BLCK_F" /*You can't enter Smoke on the Water while selling vehicles from a Warehouse.*/;
 						
 							case 225:
-								return "WSHOP_BLCK_G";
+								return "WSHOP_BLCK_G" /*You can't enter Smoke on the Water while acquiring goods for a Bunker.*/;
 						
 							case 226:
-								return "WSHOP_BLCK_H";
+								return "WSHOP_BLCK_H" /*You can't enter Smoke on the Water while selling goods from a Bunker.*/;
 						
 							case 229:
-								return "WSHOP_BLCK_I";
+								return "WSHOP_BLCK_I" /*You can't enter Smoke on the Water while acquiring goods for a Hangar.*/;
 						
 							case 230:
-								return "WSHOP_BLCK_J";
+								return "WSHOP_BLCK_J" /*You can't enter Smoke on the Water while selling goods from a Hangar.*/;
 						
 							case 237:
-								return "WSHOP_BLCK_O";
+								return "WSHOP_BLCK_O" /*You can't enter Smoke on the Water while taking part in Nightclub business.*/;
 						
 							case 243:
-								return "WSHOP_BLCK_P";
+								return "WSHOP_BLCK_P" /*You can't enter Smoke on the Water while working for Ms. Baker.*/;
 						
 							case 271:
-								return "WSHOP_BLCK_U";
+								return "WSHOP_BLCK_U" /*You can't enter Smoke on the Water while conducting Auto Shop business.*/;
 						
 							case 359:
 							case 358:
@@ -32522,7 +32522,7 @@ char* func_760(int iParam0, var uParam1, var uParam2) // Position - 0x27691 (161
 								return "";
 						
 							default:
-								return "WSHOP_BLCK_X";
+								return "WSHOP_BLCK_X" /*You can't enter Smoke on the Water while on a mission.*/;
 						}
 					}
 					else
@@ -32532,7 +32532,7 @@ char* func_760(int iParam0, var uParam1, var uParam2) // Position - 0x27691 (161
 					break;
 			}
 		
-			return "CWAS_BLCK_X";
+			return "CWAS_BLCK_X" /*You can't enter the Hands On Car Wash while on a mission.*/;
 		}
 	}
 
@@ -32541,16 +32541,16 @@ char* func_760(int iParam0, var uParam1, var uParam2) // Position - 0x27691 (161
 		switch (iParam0)
 		{
 			case 174:
-				return "CWAS_BLCK_K";
+				return "CWAS_BLCK_K" /*You can't enter the Hands On Car Wash with a prostitute.*/;
 		
 			case 176:
-				return "HELIT_BLCK_K";
+				return "HELIT_BLCK_K" /*You can't enter Higgins Helitours with a prostitute.*/;
 		
 			case 175:
-				return "WSHOP_BLCK_K";
+				return "WSHOP_BLCK_K" /*You can't enter Smoke on the Water with a prostitute.*/;
 		}
 	
-		return "CWAS_BLCK_K";
+		return "CWAS_BLCK_K" /*You can't enter the Hands On Car Wash with a prostitute.*/;
 	}
 
 	if (func_763())
@@ -32561,16 +32561,16 @@ char* func_760(int iParam0, var uParam1, var uParam2) // Position - 0x27691 (161
 		switch (iParam0)
 		{
 			case 174:
-				return "CWAS_BLCK_L";
+				return "CWAS_BLCK_L" /*You can't access the Hands On Car Wash as the Beast.*/;
 		
 			case 176:
-				return "HELIT_BLCK_L";
+				return "HELIT_BLCK_L" /*You can't access Higgins Helitours as the Beast.*/;
 		
 			case 175:
-				return "WSHOP_BLCK_L";
+				return "WSHOP_BLCK_L" /*You can't access Smoke on the Water as the Beast.*/;
 		}
 	
-		return "CWAS_BLCK_L";
+		return "CWAS_BLCK_L" /*You can't access the Hands On Car Wash as the Beast.*/;
 	}
 
 	if (func_736(PLAYER::PLAYER_PED_ID()))
@@ -32578,13 +32578,13 @@ char* func_760(int iParam0, var uParam1, var uParam2) // Position - 0x27691 (161
 		switch (iParam0)
 		{
 			case 174:
-				return "CWAS_BLCK_M";
+				return "CWAS_BLCK_M" /*You can't access the Hands On Car Wash while wearing the Ballistic Equipment.*/;
 		
 			case 176:
-				return "HELIT_BLCK_M";
+				return "HELIT_BLCK_M" /*You can't access Higgins Helitours while wearing the Ballistic Equipment.*/;
 		
 			case 175:
-				return "WSHOP_BLCK_M";
+				return "WSHOP_BLCK_M" /*You can't access Smoke on the Water while wearing the Ballistic Equipment.*/;
 		
 			default:
 			
@@ -33833,34 +33833,34 @@ char* func_839(int iParam0, int iParam1) // Position - 0x2920C (168460)
 			switch (iParam1)
 			{
 				case 0:
-					return "PIM_CWAS_INV_D";
+					return "PIM_CWAS_INV_D" /*Invite players to your Hands On Car Wash.*/;
 			
 				case 1:
-					return "PIM_CWAS_INV_M";
+					return "PIM_CWAS_INV_M" /*Invite to Hands On Car Wash*/;
 			
 				case 4:
-					return "PIM_CWAS_INV_T";
+					return "PIM_CWAS_INV_T" /*INVITE TO HANDS ON CAR WASH*/;
 			
 				case 13:
-					return "PIM_INV_CWAS";
+					return "PIM_INV_CWAS" /*Invite to Hands On Car Wash has been sent to ~a~.*/;
 			
 				case 14:
-					return "PIM_INV_A_T_CWAS";
+					return "PIM_INV_A_T_CWAS" /*Invite to Hands On Car Wash has been sent to all players.*/;
 			
 				case 15:
-					return "CELL_CWAS_INV";
+					return "CELL_CWAS_INV" /*Hey, come over to the Hands On Car Wash.*/;
 			
 				case 3:
-					return "PIM_CWAS_MAN_D1";
+					return "PIM_CWAS_MAN_D1" /*Manage the Hands On Car Wash.*/;
 			
 				case 21:
-					return "CELL_CWAS";
+					return "CELL_CWAS" /*Hands On Car Wash*/;
 			
 				case 2:
-					return "PIM_CWAS_MAN_M";
+					return "PIM_CWAS_MAN_M" /*Hands On Car Wash Management*/;
 			
 				case 22:
-					return "CWAS_BUY_SIGN";
+					return "CWAS_BUY_SIGN" /*Press ~INPUT_CONTEXT~ to purchase the Hands On Car Wash.*/;
 			
 				case 23:
 					return "MP_CWAS_DES_";
@@ -33874,34 +33874,34 @@ char* func_839(int iParam0, int iParam1) // Position - 0x2920C (168460)
 			switch (iParam1)
 			{
 				case 0:
-					return "PIM_WSHOP_INV_D";
+					return "PIM_WSHOP_INV_D" /*Invite players to your Smoke on the Water.*/;
 			
 				case 1:
-					return "PIM_WSHOP_INV_M";
+					return "PIM_WSHOP_INV_M" /*Invite to Smoke on the Water*/;
 			
 				case 4:
-					return "PIM_WSHOP_INV_T";
+					return "PIM_WSHOP_INV_T" /*INVITE TO SMOKE ON THE WATER*/;
 			
 				case 13:
-					return "PIM_INV_WSHOP";
+					return "PIM_INV_WSHOP" /*Invite to Smoke on the Water has been sent to ~a~.*/;
 			
 				case 14:
-					return "PIM_INV_A_T_WSHOP";
+					return "PIM_INV_A_T_WSHOP" /*Invite to Smoke on the Water has been sent to all players.*/;
 			
 				case 15:
-					return "CELL_WSHOP_INV";
+					return "CELL_WSHOP_INV" /*Hey, come over to Smoke on the Water.*/;
 			
 				case 3:
-					return "PIM_WSHOP_MAN_D1";
+					return "PIM_WSHOP_MAN_D1" /*Manage Smoke on the Water.*/;
 			
 				case 21:
-					return "CELL_WSHOP";
+					return "CELL_WSHOP" /*Smoke on the Water*/;
 			
 				case 2:
-					return "PIM_WSHOP_MAN_M";
+					return "PIM_WSHOP_MAN_M" /*Smoke on the Water Management*/;
 			
 				case 22:
-					return "WSHOP_BUY_SIGN";
+					return "WSHOP_BUY_SIGN" /*Press ~INPUT_CONTEXT~ to purchase Smoke on the Water.*/;
 			
 				case 23:
 					return "MP_WSHOP_DES_";
@@ -33915,34 +33915,34 @@ char* func_839(int iParam0, int iParam1) // Position - 0x2920C (168460)
 			switch (iParam1)
 			{
 				case 0:
-					return "PIM_HELIT_INV_D";
+					return "PIM_HELIT_INV_D" /*Invite players to your Higgins Helitours.*/;
 			
 				case 1:
-					return "PIM_HELIT_INV_M";
+					return "PIM_HELIT_INV_M" /*Invite to Higgins Helitours*/;
 			
 				case 4:
-					return "PIM_HELIT_INV_T";
+					return "PIM_HELIT_INV_T" /*INVITE TO HIGGINS HELITOURS*/;
 			
 				case 13:
-					return "PIM_INV_HELIT";
+					return "PIM_INV_HELIT" /*Invite to Higgins Helitours has been sent to ~a~.*/;
 			
 				case 14:
-					return "PIM_INV_A_T_HELIT";
+					return "PIM_INV_A_T_HELIT" /*Invite to Higgins Helitours has been sent to all players.*/;
 			
 				case 15:
-					return "CELL_HELIT_INV";
+					return "CELL_HELIT_INV" /*Hey, come over to Higgins Helitours.*/;
 			
 				case 3:
-					return "PIM_HELIT_MAN_D1";
+					return "PIM_HELIT_MAN_D1" /*Manage Higgins Helitours.*/;
 			
 				case 21:
-					return "CELL_HELIT";
+					return "CELL_HELIT" /*Higgins Helitours*/;
 			
 				case 2:
-					return "PIM_HELIT_MAN_M";
+					return "PIM_HELIT_MAN_M" /*Higgins Helitours Management*/;
 			
 				case 22:
-					return "HELIT_BUY_SIGN";
+					return "HELIT_BUY_SIGN" /*Press ~INPUT_CONTEXT~ to purchase Higgins Helitours.*/;
 			
 				case 23:
 					return "MP_HELIT_DES_";
@@ -265726,7 +265726,7 @@ int func_5218(var uParam0, var uParam1, var uParam2) // Position - 0x1724FF (151
 							if (MISC::IS_PC_VERSION())
 								if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 									if (VEHICLE::IS_VEHICLE_MODEL(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false), joaat("voltic2")) || VEHICLE::IS_VEHICLE_MODEL(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false), joaat("oppressor")))
-										if (_CONTEXT_IS_HELP_TEXT_BEING_DISPLAYED(uParam1->f_22.f_94, 0) || func_5230("GR_ENTERAOC" /*Press ~a~ to enter your Avenger.*/, "STRING") || func_5230("BASE_MOD_ENTER" /*~a~ Access the Facility Vehicle Workshop. ~n~ ~INPUT_CONTEXT_SECONDARY~ Enter your Avenger with this vehicle.*/, "STRING"))
+										if (_CONTEXT_IS_HELP_TEXT_BEING_DISPLAYED(uParam1->f_22.f_94, 0) || func_5230("GR_ENTERAOC" /*Press ~a~ to enter your Avenger.*/, "STRING") || func_5230("BASE_MOD_ENTER" /*~a~ Access the Facility Vehicle Workshop.~n~~INPUT_CONTEXT_SECONDARY~ Enter your Avenger with this vehicle.*/, "STRING"))
 											PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_VEH_ROCKET_BOOST, true);
 						
 							func_5229(true);
@@ -287294,7 +287294,7 @@ int func_5612(var uParam0, var uParam1, var uParam2) // Position - 0x197655 (166
 							if (MISC::IS_PC_VERSION())
 								if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 									if (VEHICLE::IS_VEHICLE_MODEL(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false), joaat("voltic2")) || VEHICLE::IS_VEHICLE_MODEL(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false), joaat("oppressor")))
-										if (_CONTEXT_IS_HELP_TEXT_BEING_DISPLAYED(uParam1->f_22.f_94, 0) || func_5230("GR_ENTERAOC" /*Press ~a~ to enter your Avenger.*/, "STRING") || func_5230("BASE_MOD_ENTER" /*~a~ Access the Facility Vehicle Workshop. ~n~ ~INPUT_CONTEXT_SECONDARY~ Enter your Avenger with this vehicle.*/, "STRING"))
+										if (_CONTEXT_IS_HELP_TEXT_BEING_DISPLAYED(uParam1->f_22.f_94, 0) || func_5230("GR_ENTERAOC" /*Press ~a~ to enter your Avenger.*/, "STRING") || func_5230("BASE_MOD_ENTER" /*~a~ Access the Facility Vehicle Workshop.~n~~INPUT_CONTEXT_SECONDARY~ Enter your Avenger with this vehicle.*/, "STRING"))
 											PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_VEH_ROCKET_BOOST, true);
 						
 							func_5229(true);
@@ -342292,7 +342292,7 @@ int func_6816(var uParam0) // Position - 0x1F3CBF (2047167)
 
 char* func_6817(var uParam0) // Position - 0x1F3CC9 (2047177)
 {
-	return "HTT_TXT_0";
+	return "HTT_TXT_0" /*Hey, why don't you show the tourists the "UFO" in town? It's probably just a weather balloon y'know, with trippy lights and freaky noises but maybe don't get too close... just in case.*/;
 }
 
 BOOL func_6818(var uParam0) // Position - 0x1F3CD6 (2047190)
@@ -342818,19 +342818,19 @@ char* func_6858(int iParam0) // Position - 0x1F4599 (2049433)
 	switch (iParam0)
 	{
 		case 0:
-			return "HTT_HLP_0";
+			return "HTT_HLP_0" /*Land at the pick-up point ~HUD_COLOUR_YELLOW~~BLIP_OBJECTIVE~~s~ and wait for the tourists to enter.*/;
 	
 		case 1:
-			return "HTT_HLP_1";
+			return "HTT_HLP_1" /*You must reduce your altitude to view the landmark at this location.*/;
 	
 		case 2:
-			return "HTT_HLP_2";
+			return "HTT_HLP_2" /*You must increase your altitude to view the landmark at this location.*/;
 	
 		case 3:
-			return "HTT_HLP_3";
+			return "HTT_HLP_3" /*~s~Press ~INPUT_VEH_CIN_CAM~ to focus on the landmark.*/;
 	
 		case 4:
-			return "HTT_HLP_4";
+			return "HTT_HLP_4" /*The Maverick ~HUD_COLOUR_BLUE~~BLIP_HELICOPTER~~s~ has been delivered nearby.*/;
 	
 		default:
 		
@@ -342916,7 +342916,7 @@ int func_6865(var uParam0, int iParam1, var uParam2) // Position - 0x1F4754 (204
 	switch (iParam1)
 	{
 		case 4:
-			_THEFEED_SHOW_MESSAGE("HTT_TCK_6L", false);
+			_THEFEED_SHOW_MESSAGE("HTT_TCK_6L" /*The Cops spooked the tourists.*/, false);
 			return 1;
 	}
 
@@ -343009,19 +343009,19 @@ char* func_6870(var uParam0) // Position - 0x1F4957 (2050391)
 	switch (*uParam0)
 	{
 		case 0:
-			return "HTT_TCK_0R";
+			return "HTT_TCK_0R" /*~a~ collected the Maverick.*/;
 	
 		case 1:
-			return "HTT_TCK_1R";
+			return "HTT_TCK_1R" /*~a~ picked up the tourists.*/;
 	
 		case 2:
-			return "HTT_TCK_2R";
+			return "HTT_TCK_2R" /*~a~ returned the tourists.*/;
 	
 		case 3:
 			return func_6871(uParam0);
 	
 		case 4:
-			return "HTT_TCK_6R";
+			return "HTT_TCK_6R" /*The Cops spooked the tourists.*/;
 	
 		default:
 		
@@ -343035,13 +343035,13 @@ char* func_6871(var uParam0) // Position - 0x1F49B2 (2050482)
 	switch (*uParam0)
 	{
 		case 0:
-			return "HTT_TCK_0L";
+			return "HTT_TCK_0L" /*You collected the Maverick.*/;
 	
 		case 1:
-			return "HTT_TCK_1L";
+			return "HTT_TCK_1L" /*You picked up the tourists.*/;
 	
 		case 2:
-			return "HTT_TCK_2L";
+			return "HTT_TCK_2L" /*You returned the tourists.*/;
 	
 		case 3:
 			if (func_6872())
@@ -343052,19 +343052,19 @@ char* func_6871(var uParam0) // Position - 0x1F49B2 (2050482)
 						switch (uParam0->f_1)
 						{
 							case 0:
-								return "HTT_TCK_300";
+								return "HTT_TCK_300" /*Landmark visited:~n~University of Los Santos*/;
 						
 							case 1:
-								return uLocal_2388.f_221.f_6 >= 15 ? "HTT_TCK_3ALT" : "HTT_TCK_301";
+								return uLocal_2388.f_221.f_6 >= 15 ? "HTT_TCK_3ALT" /*Landmark visited:~n~???*/ : "HTT_TCK_301" /*Landmark visited:~n~Land Act Dam*/;
 						
 							case 2:
-								return "HTT_TCK_302";
+								return "HTT_TCK_302" /*Landmark visited:~n~Sisyphus Theater*/;
 						
 							case 3:
-								return "HTT_TCK_303";
+								return "HTT_TCK_303" /*Landmark visited:~n~Backlot City*/;
 						
 							case 4:
-								return uLocal_2388.f_221.f_6 >= 16 ? "HTT_TCK_3ALT" : "HTT_TCK_304";
+								return uLocal_2388.f_221.f_6 >= 16 ? "HTT_TCK_3ALT" /*Landmark visited:~n~???*/ : "HTT_TCK_304" /*Landmark visited:~n~Legion Square*/;
 						
 							default:
 								break;
@@ -343075,19 +343075,19 @@ char* func_6871(var uParam0) // Position - 0x1F49B2 (2050482)
 						switch (uParam0->f_1)
 						{
 							case 0:
-								return uLocal_2388.f_221.f_6 >= 16 ? "HTT_TCK_3ALT" : "HTT_TCK_310";
+								return uLocal_2388.f_221.f_6 >= 16 ? "HTT_TCK_3ALT" /*Landmark visited:~n~???*/ : "HTT_TCK_310" /*Landmark visited:~n~Del Perro Pier*/;
 						
 							case 1:
-								return uLocal_2388.f_221.f_6 >= 15 ? "HTT_TCK_3ALT" : "HTT_TCK_311";
+								return uLocal_2388.f_221.f_6 >= 15 ? "HTT_TCK_3ALT" /*Landmark visited:~n~???*/ : "HTT_TCK_311" /*Landmark visited:~n~Galileo Observatory*/;
 						
 							case 2:
-								return "HTT_TCK_312";
+								return "HTT_TCK_312" /*Landmark visited:~n~Vinewood Bowl*/;
 						
 							case 3:
-								return "HTT_TCK_313";
+								return "HTT_TCK_313" /*Landmark visited:~n~Los Santos Golf Club*/;
 						
 							case 4:
-								return "HTT_TCK_314";
+								return "HTT_TCK_314" /*Landmark visited:~n~Marlowe Vineyards*/;
 						
 							default:
 								break;
@@ -343098,19 +343098,19 @@ char* func_6871(var uParam0) // Position - 0x1F49B2 (2050482)
 						switch (uParam0->f_1)
 						{
 							case 0:
-								return "HTT_TCK_320";
+								return "HTT_TCK_320" /*Landmark visited:~n~Muscle Sands Gym*/;
 						
 							case 1:
-								return "HTT_TCK_321";
+								return "HTT_TCK_321" /*Landmark visited:~n~Diamond Casino*/;
 						
 							case 2:
-								return uLocal_2388.f_221.f_6 >= 16 ? "HTT_TCK_3ALT" : "HTT_TCK_322";
+								return uLocal_2388.f_221.f_6 >= 16 ? "HTT_TCK_3ALT" /*Landmark visited:~n~???*/ : "HTT_TCK_322" /*Landmark visited:~n~Maze Bank Tower*/;
 						
 							case 3:
-								return "HTT_TCK_323";
+								return "HTT_TCK_323" /*Landmark visited:~n~Richman Mansion*/;
 						
 							case 4:
-								return "HTT_TCK_324";
+								return "HTT_TCK_324" /*Landmark visited:~n~Miriam Turner Overpass*/;
 						
 							default:
 								break;
@@ -343121,19 +343121,19 @@ char* func_6871(var uParam0) // Position - 0x1F49B2 (2050482)
 						switch (uParam0->f_1)
 						{
 							case 0:
-								return "HTT_TCK_330";
+								return "HTT_TCK_330" /*Landmark visited:~n~Hydro Plant*/;
 						
 							case 1:
-								return uLocal_2388.f_221.f_6 == 11 || uLocal_2388.f_221.f_6 == 14 ? "HTT_TCK_3ALT" : "HTT_TCK_331";
+								return uLocal_2388.f_221.f_6 == 11 || uLocal_2388.f_221.f_6 == 14 ? "HTT_TCK_3ALT" /*Landmark visited:~n~???*/ : "HTT_TCK_331" /*Landmark visited:~n~Palmer-Taylor Power Station*/;
 						
 							case 2:
-								return "HTT_TCK_332";
+								return "HTT_TCK_332" /*Landmark visited:~n~Redwood Lights Track*/;
 						
 							case 3:
-								return "HTT_TCK_333";
+								return "HTT_TCK_333" /*Landmark visited:~n~Abandoned Mine*/;
 						
 							case 4:
-								return "HTT_TCK_334";
+								return "HTT_TCK_334" /*Landmark visited:~n~Alamo Sea*/;
 						
 							default:
 								break;
@@ -343144,19 +343144,19 @@ char* func_6871(var uParam0) // Position - 0x1F49B2 (2050482)
 						switch (uParam0->f_1)
 						{
 							case 0:
-								return "HTT_TCK_340";
+								return "HTT_TCK_340" /*Landmark visited:~n~Jetsam Terminal*/;
 						
 							case 1:
-								return "HTT_TCK_341";
+								return "HTT_TCK_341" /*Landmark visited:~n~Maze Bank Arena*/;
 						
 							case 2:
-								return "HTT_TCK_342";
+								return "HTT_TCK_342" /*Landmark visited:~n~Los Santos City Hall*/;
 						
 							case 3:
-								return "HTT_TCK_343";
+								return "HTT_TCK_343" /*Landmark visited:~n~Betsy O'Neil Playhouse*/;
 						
 							case 4:
-								return "HTT_TCK_344";
+								return "HTT_TCK_344" /*Landmark visited:~n~Pisswasser Factory*/;
 						
 							default:
 								break;
@@ -343167,7 +343167,7 @@ char* func_6871(var uParam0) // Position - 0x1F49B2 (2050482)
 			break;
 	
 		case 4:
-			return "HTT_TCK_6L";
+			return "HTT_TCK_6L" /*The Cops spooked the tourists.*/;
 	}
 
 	return "";
@@ -343306,7 +343306,7 @@ void func_6884(int iParam0, var uParam1) // Position - 0x1F4F1D (2051869)
 
 char* func_6885(var uParam0) // Position - 0x1F4F63 (2051939)
 {
-	return "HTT_BLP_1";
+	return "HTT_BLP_1" /*Maverick*/;
 }
 
 int func_6886(var uParam0) // Position - 0x1F4F70 (2051952)
@@ -343342,11 +343342,11 @@ void func_6890(Player plParam0) // Position - 0x1F4FE9 (2052073)
 		return;
 
 	if (plParam0 == plLocal_2287)
-		_THEFEED_SHOW_MESSAGE("HTT_TCK_5L", false);
+		_THEFEED_SHOW_MESSAGE("HTT_TCK_5L" /*You destroyed the Maverick.*/, false);
 	else if (func_16(plParam0))
-		func_6892("HTT_TCK_5R", plParam0, false, false, false, true, false);
+		func_6892("HTT_TCK_5R" /*~a~ destroyed the Maverick.*/, plParam0, false, false, false, true, false);
 	else
-		_THEFEED_SHOW_MESSAGE("HTT_TCK_5", false);
+		_THEFEED_SHOW_MESSAGE("HTT_TCK_5" /*The Maverick was destroyed.*/, false);
 
 	func_6891(3);
 	return;
@@ -344088,9 +344088,9 @@ void func_6923(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 			if (!func_6860(2))
 			{
 				if (plParam14 == plLocal_2287)
-					_THEFEED_SHOW_MESSAGE("HTT_TCK_4L", false);
+					_THEFEED_SHOW_MESSAGE("HTT_TCK_4L" /*You killed a tourist.*/, false);
 				else if (func_16(plParam14))
-					func_6892("HTT_TCK_4R", plParam14, false, false, false, true, false);
+					func_6892("HTT_TCK_4R" /*~a~ killed a tourist.*/, plParam14, false, false, false, true, false);
 			
 				func_6891(2);
 			}
@@ -344146,7 +344146,7 @@ int func_6927(int iParam0, Ped pedParam1) // Position - 0x1F5FE3 (2056163)
 char* func_6928(int iParam0) // Position - 0x1F5FFE (2056190)
 {
 	if (func_6924(iParam0))
-		return "HTT_BLP_2";
+		return "HTT_BLP_2" /*Tourist*/;
 
 	return "";
 }
@@ -344713,7 +344713,7 @@ void func_6974() // Position - 0x1F69DD (2058717)
 			if (!HUD::DOES_BLIP_EXIST(uLocal_142[i]))
 			{
 				uLocal_142[i] = HUD::ADD_BLIP_FOR_COORD(uLocal_289.f_258.f_1[i /*9*/].f_2);
-				HUD::SET_BLIP_NAME_FROM_TEXT_FILE(uLocal_142[i], "HTT_BLP_0");
+				HUD::SET_BLIP_NAME_FROM_TEXT_FILE(uLocal_142[i], "HTT_BLP_0" /*Landmark*/);
 				HUD::SET_BLIP_PRIORITY(uLocal_142[i], 12);
 				func_4064(&uLocal_142[i], HUD_COLOUR_YELLOW);
 			
@@ -345700,7 +345700,7 @@ void func_7027() // Position - 0x1F7F02 (2064130)
 {
 	uLocal_289.f_331[0 /*6*/] = 1;
 	uLocal_289.f_331[0 /*6*/].f_2 = 5;
-	uLocal_289.f_331[0 /*6*/].f_1 = "HTT_BRH_0";
+	uLocal_289.f_331[0 /*6*/].f_1 = "HTT_BRH_0" /*LANDMARKS*/;
 	return;
 }
 
@@ -346266,11 +346266,11 @@ void func_7062() // Position - 0x1F897E (2066814)
 	if (!func_7063())
 		if (func_6862())
 			if (!_STOPWATCH_IS_INITIALIZED(&(uLocal_142.f_32)))
-				func_7058("HTT_OBJ_GTD", false);
+				func_7058("HTT_OBJ_GTD" /*Return the tourists to the ~HUD_COLOUR_YELLOW~pick-up point.~s~*/, false);
 			else
 				func_7032();
 		else
-			func_7058("HTT_OBJ_HGTD", false);
+			func_7058("HTT_OBJ_HGTD" /*Help return the tourists to the ~HUD_COLOUR_YELLOW~pick-up point.~s~*/, false);
 
 	return;
 }
@@ -346279,7 +346279,7 @@ BOOL func_7063() // Position - 0x1F89BF (2066879)
 {
 	if (!func_6959() && func_6819(0))
 	{
-		func_7058("HTT_OBJ_ENT", false);
+		func_7058("HTT_OBJ_ENT" /*Enter the ~HUD_COLOUR_BLUE~Maverick.~s~*/, false);
 		return true;
 	}
 
@@ -346298,13 +346298,13 @@ void func_7064() // Position - 0x1F89E8 (2066920)
 		if (func_6862())
 			if (!_STOPWATCH_IS_INITIALIZED(&(uLocal_142.f_32)))
 				if (uLocal_142.f_15 == -1)
-					func_7058("HTT_OBJ_GTL", false);
+					func_7058("HTT_OBJ_GTL" /*Fly the tourists to a ~HUD_COLOUR_YELLOW~landmark.~s~*/, false);
 				else
-					func_7058("HTT_OBJ_FOC", false);
+					func_7058("HTT_OBJ_FOC" /*Focus on the ~HUD_COLOUR_YELLOW~landmark.~s~*/, false);
 			else
 				func_7032();
 		else
-			func_7058("HTT_OBJ_HGTL", false);
+			func_7058("HTT_OBJ_HGTL" /*Help fly the tourists to a ~HUD_COLOUR_YELLOW~landmark.~s~*/, false);
 
 	return;
 }
@@ -346340,7 +346340,7 @@ void func_7068(int iParam0) // Position - 0x1F8A9E (2067102)
 void func_7069() // Position - 0x1F8AB9 (2067129)
 {
 	if (!func_7063())
-		func_7058("HTT_OBJ_PUT", false);
+		func_7058("HTT_OBJ_PUT" /*Wait for the ~HUD_COLOUR_BLUE~tourists~s~ to enter the Maverick.*/, false);
 
 	return;
 }
@@ -346353,15 +346353,15 @@ void func_7070() // Position - 0x1F8AD3 (2067155)
 		{
 			if (func_6861())
 			{
-				func_7058("HTT_OBJ_LAP", false);
+				func_7058("HTT_OBJ_LAP" /*Land at the ~HUD_COLOUR_YELLOW~pick-up point.~s~*/, false);
 				return;
 			}
 		
-			func_7058("HTT_OBJ_GTP", false);
+			func_7058("HTT_OBJ_GTP" /*Fly to the ~HUD_COLOUR_YELLOW~pick-up point.~s~*/, false);
 		}
 		else
 		{
-			func_7058("HTT_OBJ_HGTP", false);
+			func_7058("HTT_OBJ_HGTP" /*Help fly to the ~HUD_COLOUR_YELLOW~pick-up point.~s~*/, false);
 		}
 	}
 
@@ -370381,7 +370381,7 @@ char* func_7680() // Position - 0x21E55E (2221406)
 	switch (func_6808())
 	{
 		case 0:
-			return "HTT_SHRD_SF";
+			return "HTT_SHRD_SF" /*Failed to complete the tour*/;
 	
 		default:
 		
@@ -370395,7 +370395,7 @@ char* func_7681() // Position - 0x21E581 (2221441)
 	switch (func_6808())
 	{
 		case 0:
-			return "HTT_SHRD_TF";
+			return "HTT_SHRD_TF" /*MISSION OVER*/;
 	
 		default:
 		
@@ -370768,7 +370768,7 @@ char* func_7700() // Position - 0x21ED72 (2223474)
 	switch (func_6808())
 	{
 		case 0:
-			return "HTT_SHRD_SP";
+			return "HTT_SHRD_SP" /*Heat level reduced*/;
 	
 		default:
 		
@@ -370782,7 +370782,7 @@ char* func_7701() // Position - 0x21ED95 (2223509)
 	switch (func_6808())
 	{
 		case 0:
-			return "HTT_SHRD_TP";
+			return "HTT_SHRD_TP" /*HIGGINS HELITOURS*/;
 	
 		default:
 		
@@ -373057,9 +373057,9 @@ void func_7822() // Position - 0x2214A7 (2233511)
 		funcLocal_732.f_162();
 	
 		if (StackVal)
-			Global_1984716.f_3 = 1;
+			Global_1984717.f_3 = 1;
 		else
-			Global_1984716.f_3 = 0;
+			Global_1984717.f_3 = 0;
 	}
 
 	if (func_7824() && func_7823())
@@ -373081,14 +373081,14 @@ BOOL func_7824() // Position - 0x221510 (2233616)
 	if (Global_2707922.f_10)
 		return false;
 
-	if (Global_1984716.f_3)
+	if (Global_1984717.f_3)
 		return false;
 
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("gb_ie_delivery_cutscene")) > 0)
 		return false;
 
-	if (_STOPWATCH_IS_INITIALIZED(&Global_1984716))
-		return func_30(&Global_1984716, Global_1984716.f_2, false);
+	if (_STOPWATCH_IS_INITIALIZED(&Global_1984717))
+		return func_30(&Global_1984717, Global_1984717.f_2, false);
 
 	return false;
 }
@@ -385345,7 +385345,7 @@ char* func_8308() // Position - 0x230041 (2293825)
 	switch (func_6808())
 	{
 		case 0:
-			return "HTT_SHRD_SS";
+			return "HTT_SHRD_SS" /*Take a tour*/;
 	
 		default:
 		
@@ -385359,7 +385359,7 @@ char* func_8309() // Position - 0x230064 (2293860)
 	switch (func_6808())
 	{
 		case 0:
-			return "HTT_SHRD_TS";
+			return "HTT_SHRD_TS" /*HIGGINS HELITOURS*/;
 	
 		default:
 		
@@ -398129,22 +398129,22 @@ void func_8897(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3, Player plPa
 
 void func_8898(Player plParam0) // Position - 0x23EB1D (2353949)
 {
-	func_35(&Global_1984716, false, false);
+	func_35(&Global_1984717, false, false);
 
 	if (plParam0 != -1)
-		Global_1984716.f_2 = plParam0;
+		Global_1984717.f_2 = plParam0;
 	else
-		Global_1984716.f_2 = *Global_262145.f_36598;
+		Global_1984717.f_2 = *Global_262145.f_36598;
 
 	return;
 }
 
 int func_8899(int iParam0) // Position - 0x23EB50 (2354000)
 {
-	if (Global_1984720 == -2)
+	if (Global_1984721 == -2)
 		return 0;
 
-	if (Global_1984720 == iParam0)
+	if (Global_1984721 == iParam0)
 		return 0;
 
 	if (func_2893(iParam0) != 0)
@@ -427796,7 +427796,7 @@ void func_9447() // Position - 0x25F167 (2486631)
 {
 	var unk;
 
-	Global_1984716 = { unk };
+	Global_1984717 = { unk };
 	return;
 }
 

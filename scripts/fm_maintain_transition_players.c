@@ -39012,7 +39012,7 @@ char* func_314(Hash hParam0, int iParam1, int iParam2) // Position - 0x28343 (16
 			return "WT_PISTOLXM3";
 	
 		case joaat("PICKUP_WEAPON_CERAMICPISTOL"):
-			return "WT_CERPST";
+			return "WT_CERPST" /*Ceramic Pistol*/;
 	
 		case joaat("PICKUP_WEAPON_MICROSMG"):
 		case joaat("PICKUP_VEHICLE_WEAPON_MICROSMG"):
@@ -39086,7 +39086,7 @@ char* func_314(Hash hParam0, int iParam1, int iParam2) // Position - 0x28343 (16
 			return "WT_SG_ASL" /*Assault Shotgun*/;
 	
 		case joaat("PICKUP_WEAPON_COMBATSHOTGUN"):
-			return "WT_CMBSHGN";
+			return "WT_CMBSHGN" /*Combat Shotgun*/;
 	
 		case joaat("PICKUP_WEAPON_SNIPERRIFLE"):
 			return "WT_SNIP_RIF" /*Sniper Rifle*/;
@@ -40079,9 +40079,9 @@ char* func_315(Hash hParam0, BOOL bParam1) // Position - 0x28AB0 (166576)
 	
 		case joaat("WEAPON_CERAMICPISTOL"):
 			if (bParam1)
-				return "WTU_CERPST";
+				return "WTU_CERPST" /*CERAMIC PISTOL*/;
 			else
-				return "WT_CERPST";
+				return "WT_CERPST" /*Ceramic Pistol*/;
 			break;
 	
 		case joaat("WEAPON_GADGETPISTOL"):
@@ -40100,9 +40100,9 @@ char* func_315(Hash hParam0, BOOL bParam1) // Position - 0x28AB0 (166576)
 	
 		case joaat("WEAPON_COMBATSHOTGUN"):
 			if (bParam1)
-				return "WTU_CMBSHGN";
+				return "WTU_CMBSHGN" /*COMBAT SHOTGUN*/;
 			else
-				return "WT_CMBSHGN";
+				return "WT_CMBSHGN" /*Combat Shotgun*/;
 			break;
 	
 		case joaat("VEHICLE_WEAPON_TURRET_DINGHY5_50CAL"):
@@ -40261,9 +40261,9 @@ char* func_315(Hash hParam0, BOOL bParam1) // Position - 0x28AB0 (166576)
 	
 		case joaat("WEAPON_BRIEFCASE"):
 			if (bParam1)
-				return "FMMC_WT_BRIEF";
+				return "FMMC_WT_BRIEF" /*Briefcase*/;
 			else
-				return "FMMC_WT_BRIEF";
+				return "FMMC_WT_BRIEF" /*Briefcase*/;
 			break;
 	
 		default:

@@ -66197,13 +66197,13 @@ void func_311(int iParam0, int iParam1, float fParam2, float fParam3, const char
 			break;
 	
 		case 3:
-			HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT("FO_TWO_KM");
+			HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT("FO_TWO_KM" /*~1~.~1~ km*/);
 			HUD::ADD_TEXT_COMPONENT_INTEGER(iParam0);
 			HUD::ADD_TEXT_COMPONENT_INTEGER(iParam1);
 			break;
 	
 		case 4:
-			HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT("FO_TWO_MI");
+			HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT("FO_TWO_MI" /*~1~.~1~ mi*/);
 			HUD::ADD_TEXT_COMPONENT_INTEGER(iParam0);
 			HUD::ADD_TEXT_COMPONENT_INTEGER(iParam1);
 			break;
@@ -73660,9 +73660,9 @@ BOOL func_610(BOOL bParam0) // Position - 0x29E02 (171522)
 
 	if (NETWORK::NETWORK_HAS_VALID_ROS_CREDENTIALS() && !NETWORK::UGC_HAS_PERMISSION_TO_WRITE())
 		if (bParam0)
-			HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("FMMC_ENDPUBF" /*Alert*/, "FMMC_ENDPUBFP" /*~a~, "~a~", failed to publish. You are suspended from using this feature due to a violation of our Community Guidelines. ~n~ Please visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com/community-guidelines~s~ for more information.*/, 2, "", false, -1, 2, additionalTextInfoLine1, &(Global_4718592.f_131623), true, 0);
+			HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("FMMC_ENDPUBF" /*Alert*/, "FMMC_ENDPUBFP" /*~a~, "~a~", failed to publish. You are suspended from using this feature due to a violation of our Community Guidelines. ~n~ Please visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com/community-resources/guidelines~s~ for more information.*/, 2, "", false, -1, 2, additionalTextInfoLine1, &(Global_4718592.f_131623), true, 0);
 		else
-			HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("FMMC_ENDPUBF" /*Alert*/, "FMMC_ENDSAVFP" /*~a~, "~a~", failed to save. You are suspended from using this feature due to a violation of our Community Guidelines. ~n~ Please visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com/community-guidelines~s~ for more information.*/, 2, "", false, -1, 2, additionalTextInfoLine1, &(Global_4718592.f_131623), true, 0);
+			HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("FMMC_ENDPUBF" /*Alert*/, "FMMC_ENDSAVFP" /*~a~, "~a~", failed to save. You are suspended from using this feature due to a violation of our Community Guidelines. ~n~ Please visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com/community-resources/guidelines~s~ for more information.*/, 2, "", false, -1, 2, additionalTextInfoLine1, &(Global_4718592.f_131623), true, 0);
 	else if (bParam0)
 		HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("FMMC_ENDPUBF" /*Alert*/, "FMMC_ENDPUBF2" /*~a~, "~a~", failed to publish. The Rockstar cloud servers are unavailable right now. Please try again later.*/, 2, "", false, -1, 2, additionalTextInfoLine1, &(Global_4718592.f_131623), true, 0);
 	else
@@ -124444,9 +124444,9 @@ char* func_1106(Hash hParam0, BOOL bParam1) // Position - 0x971EC (618988)
 	
 		case joaat("WEAPON_CERAMICPISTOL"):
 			if (bParam1)
-				return "WTU_CERPST";
+				return "WTU_CERPST" /*CERAMIC PISTOL*/;
 			else
-				return "WT_CERPST";
+				return "WT_CERPST" /*Ceramic Pistol*/;
 			break;
 	
 		case joaat("WEAPON_GADGETPISTOL"):
@@ -124465,9 +124465,9 @@ char* func_1106(Hash hParam0, BOOL bParam1) // Position - 0x971EC (618988)
 	
 		case joaat("WEAPON_COMBATSHOTGUN"):
 			if (bParam1)
-				return "WTU_CMBSHGN";
+				return "WTU_CMBSHGN" /*COMBAT SHOTGUN*/;
 			else
-				return "WT_CMBSHGN";
+				return "WT_CMBSHGN" /*Combat Shotgun*/;
 			break;
 	
 		case joaat("VEHICLE_WEAPON_TURRET_DINGHY5_50CAL"):
@@ -124626,9 +124626,9 @@ char* func_1106(Hash hParam0, BOOL bParam1) // Position - 0x971EC (618988)
 	
 		case joaat("WEAPON_BRIEFCASE"):
 			if (bParam1)
-				return "FMMC_WT_BRIEF";
+				return "FMMC_WT_BRIEF" /*Briefcase*/;
 			else
-				return "FMMC_WT_BRIEF";
+				return "FMMC_WT_BRIEF" /*Briefcase*/;
 			break;
 	
 		default:
@@ -207189,14 +207189,14 @@ void func_1426(var uParam0, var uParam1, BOOL bParam2) // Position - 0xFD0B8 (10
 	if (!NETWORK::NETWORK_HAVE_ROS_MULTIPLAYER_PRIV() || !NETWORK::NETWORK_HAVE_ROS_CREATE_TICKET_PRIV() || NETWORK::NETWORK_HAVE_ROS_BANNED_PRIV())
 	{
 		entryHeader = "HUD_CONNPROB" /*alert*/;
-		entryLine2 = "HUD_QURETSP" /*Return to Grand Theft Auto V.*/;
+		entryLine2 = "HUD_QURETSP" /*Return to the Main Menu.*/;
 	
 		if (!NETWORK::NETWORK_HAVE_ROS_MULTIPLAYER_PRIV())
-			entryLine1 = "HUD_ROSBANNED" /*You have been banned from Grand Theft Auto Online.~n~Please visit rockstargames.com/community-guidelines for more information.*/;
+			entryLine1 = "HUD_ROSBANNED" /*You have been banned from Grand Theft Auto Online.~n~If you are a GTA+ Member, you will need to manually cancel your Membership.~n~Please visit rockstargames.com/community-resources/guidelines for more information.*/;
 		else if (!NETWORK::NETWORK_HAVE_ROS_CREATE_TICKET_PRIV())
-			entryLine1 = "HUD_SCSBANNED" /*You have been banned from using Rockstar Games Online Services and are not permitted to enter Grand Theft Auto Online.~n~Please visit rockstargames.com/community-guidelines for more information.*/;
+			entryLine1 = "HUD_SCSBANNED" /*You have been banned from using Rockstar Games Services and are not permitted to enter Grand Theft Auto Online.~n~If you are a GTA+ Member, you will need to manually cancel your Membership.~n~Please visit rockstargames.com/community-resources/guidelines for more information.*/;
 		else if (NETWORK::NETWORK_HAVE_ROS_BANNED_PRIV())
-			entryLine1 = "HUD_ROSBANNED" /*You have been banned from Grand Theft Auto Online.~n~Please visit rockstargames.com/community-guidelines for more information.*/;
+			entryLine1 = "HUD_ROSBANNED" /*You have been banned from Grand Theft Auto Online.~n~If you are a GTA+ Member, you will need to manually cancel your Membership.~n~Please visit rockstargames.com/community-resources/guidelines for more information.*/;
 	
 		banType = 0;
 	
@@ -207208,12 +207208,12 @@ void func_1426(var uParam0, var uParam1, BOOL bParam2) // Position - 0xFD0B8 (10
 	
 		if (!flag)
 		{
-			entryLine1 = "HUD_ROSBANPERM" /*You have been banned from Grand Theft Auto Online permanently.~n~Please visit rockstargames.com/community-guidelines for more information.*/;
+			entryLine1 = "HUD_ROSBANPERM" /*You have been banned from Grand Theft Auto Online permanently.~n~If you are a GTA+ Member, you will need to manually cancel your Membership.~n~Please visit rockstargames.com/community-resources/guidelines for more information.*/;
 			HUD::SET_WARNING_MESSAGE_WITH_HEADER(entryHeader, entryLine1, 2, 0, false, -1, 0, 0, true, 0);
 		}
 		else if (banType == 1)
 		{
-			entryLine1 = "HUD_ROSBANX" /*You have been suspended from Grand Theft Auto Online until ~a~.~n~Please visit rockstargames.com/community-guidelines for more information.*/;
+			entryLine1 = "HUD_ROSBANX" /*You have been suspended from Grand Theft Auto Online until ~a~.~n~Please visit rockstargames.com/community-resources/guidelines for more information.*/;
 			TEXT_LABEL_COPY(&additionalTextInfoLine1, { func_1427(&timeData) }, 6);
 			HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS(entryHeader, entryLine1, 2, entryLine2, false, -1, 1, &additionalTextInfoLine1, 0, true, 0);
 		}
@@ -214160,7 +214160,7 @@ BOOL func_1574(var uParam0, int* piParam1, var uParam2, BOOL bParam3, BOOL bPara
 
 char* func_1575() // Position - 0x107635 (1078837)
 {
-	return "PROF_CHK_UA";
+	return "PROF_CHK_UA" /*Unable to connect to Rockstar Games to check profanity.*/;
 }
 
 BOOL func_1576() // Position - 0x107642 (1078850)
@@ -249036,7 +249036,7 @@ char* func_2172(int iParam0) // Position - 0x148040 (1343552)
 			return "FMMC_COL1_47" /*Diamond Blue*/;
 	
 		case 48:
-			return "FMMC_COL1_48";
+			return "FMMC_COL1_48" /*Baby Blue*/;
 	
 		default:
 		
@@ -260517,7 +260517,7 @@ BOOL func_2345(int* piParam0, Hash hParam1, Hash hParam2, Hash hParam3, Hash hPa
 		if (func_2346(piParam0, hParam1, false))
 			return false;
 	
-		if (VEHICLE::_IS_VEHICLE_GEN9_EXCLUSIVE_MODEL(hParam1))
+		if (unk_0x6638C0F19DE692FE(hParam1))
 			return false;
 	}
 
@@ -278308,7 +278308,7 @@ struct<4> func_2654(int iParam0, BOOL bParam1) // Position - 0x17F79D (1570717)
 			if (bParam1)
 				TEXT_LABEL_ASSIGN_STRING(&unk, "FMMC_VHLU_36", 16);
 			else
-				TEXT_LABEL_ASSIGN_STRING(&unk, "FMMC_VHL_36", 16);
+				TEXT_LABEL_ASSIGN_STRING(&unk, "FMMC_VHL_36" /*Land Military*/, 16);
 			break;
 	}
 
@@ -353875,7 +353875,7 @@ char* func_4102(int iParam0) // Position - 0x214836 (2181174)
 	else if (iParam0 == 19)
 		return "FMMC_RSD_AGG";
 	else if (iParam0 == 20)
-		return "FMMC_RSD_DCU" /*Disable Catch Up*/;
+		return "FMMC_RSD_DCU" /*Disable Catchup*/;
 	else if (iParam0 == 21)
 		return "FMMC_RC_DCU";
 	else if (iParam0 == 22)

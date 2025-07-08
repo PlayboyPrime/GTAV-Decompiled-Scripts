@@ -10690,7 +10690,7 @@ void func_329(var uParam0) // Position - 0xCC39 (52281)
 						if (MISC::IS_PS3_VERSION() || func_110() || MISC::IS_PC_VERSION())
 							func_332(2, 217, "HEIST_IB_PSN" /*View Profile*/, uParam0, true, 365);
 						else if (MISC::IS_XBOX360_VERSION() || func_111())
-							func_331(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(FRONTEND_CONTROL, INPUT_FRONTEND_SELECT, true), "HEIST_IB_XBL" /*View gamer card*/, uParam0, 0);
+							func_331(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(FRONTEND_CONTROL, INPUT_FRONTEND_SELECT, true), "HEIST_IB_XBL" /*View Profile*/, uParam0, 0);
 						else
 							func_331(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(FRONTEND_CONTROL, INPUT_FRONTEND_SELECT, true), "HEIST_IB_PSNXBL", uParam0, 0);
 				
@@ -10746,7 +10746,7 @@ void func_329(var uParam0) // Position - 0xCC39 (52281)
 						if (MISC::IS_PS3_VERSION() || func_110() || MISC::IS_PC_VERSION())
 							func_332(2, 217, "HEIST_IB_PSN" /*View Profile*/, uParam0, true, 365);
 						else if (MISC::IS_XBOX360_VERSION() || func_111())
-							func_331(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(FRONTEND_CONTROL, INPUT_FRONTEND_SELECT, true), "HEIST_IB_XBL" /*View gamer card*/, uParam0, 0);
+							func_331(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(FRONTEND_CONTROL, INPUT_FRONTEND_SELECT, true), "HEIST_IB_XBL" /*View Profile*/, uParam0, 0);
 						else
 							func_331(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(FRONTEND_CONTROL, INPUT_FRONTEND_SELECT, true), "HEIST_IB_PSNXBL", uParam0, 0);
 				
@@ -10813,7 +10813,7 @@ void func_329(var uParam0) // Position - 0xCC39 (52281)
 						if (MISC::IS_PS3_VERSION() || func_110() || MISC::IS_PC_VERSION())
 							func_332(2, 217, "HEIST_IB_PSN" /*View Profile*/, uParam0, true, 365);
 						else if (MISC::IS_XBOX360_VERSION() || func_111())
-							func_331(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(FRONTEND_CONTROL, INPUT_FRONTEND_SELECT, true), "HEIST_IB_XBL" /*View gamer card*/, uParam0, 0);
+							func_331(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(FRONTEND_CONTROL, INPUT_FRONTEND_SELECT, true), "HEIST_IB_XBL" /*View Profile*/, uParam0, 0);
 						else
 							func_331(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(FRONTEND_CONTROL, INPUT_FRONTEND_SELECT, true), "HEIST_IB_PSNXBL", uParam0, 0);
 				
@@ -10869,7 +10869,7 @@ void func_329(var uParam0) // Position - 0xCC39 (52281)
 						if (MISC::IS_PS3_VERSION() || func_110() || MISC::IS_PC_VERSION())
 							func_332(2, 217, "HEIST_IB_PSN" /*View Profile*/, uParam0, true, 365);
 						else if (MISC::IS_XBOX360_VERSION() || func_111())
-							func_331(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(FRONTEND_CONTROL, INPUT_FRONTEND_SELECT, true), "HEIST_IB_XBL" /*View gamer card*/, uParam0, 0);
+							func_331(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(FRONTEND_CONTROL, INPUT_FRONTEND_SELECT, true), "HEIST_IB_XBL" /*View Profile*/, uParam0, 0);
 						else
 							func_331(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(FRONTEND_CONTROL, INPUT_FRONTEND_SELECT, true), "HEIST_IB_PSNXBL", uParam0, 0);
 				

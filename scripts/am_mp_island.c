@@ -126317,7 +126317,7 @@ void func_1467(var uParam0) // Position - 0xAB477 (701559)
 		func_1469(&(uParam0->f_675), false);
 	}
 
-	if (unk_0x18E474F40EF05F10() == 5)
+	if (PAD::_GET_GAMEPAD_TYPE() == 5)
 	{
 		if (!func_25(&(uParam0->f_390), 26))
 		{

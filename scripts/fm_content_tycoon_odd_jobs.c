@@ -27595,18 +27595,18 @@ int func_574(int iParam0, char* sParam1, int iParam2) // Position - 0x20E04 (134
 	switch (iParam0)
 	{
 		case 174:
-			str = "CWAS_PROP_ET";
-			str2 = "CWAS_PROP_ET";
+			str = "CWAS_PROP_ET" /*HANDS ON CAR WASH*/;
+			str2 = "CWAS_PROP_ET" /*HANDS ON CAR WASH*/;
 			break;
 	
 		case 175:
-			str = "WSHOP_PROP_ET";
-			str2 = "WSHOP_PROP_ET";
+			str = "WSHOP_PROP_ET" /*SMOKE ON THE WATER*/;
+			str2 = "WSHOP_PROP_ET" /*SMOKE ON THE WATER*/;
 			break;
 	
 		case 176:
-			str = "HELIT_PROP_ET";
-			str2 = "HELIT_PROP_ET";
+			str = "HELIT_PROP_ET" /*HIGGINS HELITOURS*/;
+			str2 = "HELIT_PROP_ET" /*HIGGINS HELITOURS*/;
 			break;
 	}
 
@@ -27686,13 +27686,13 @@ char* func_576(int iParam0) // Position - 0x20FA7 (135079)
 	switch (iParam0)
 	{
 		case 1:
-			return "CWAS_NME_1";
+			return "CWAS_NME_1" /*HANDS ON CAR WASH*/;
 	
 		case 3:
-			return "WSHOP_NME_1";
+			return "WSHOP_NME_1" /*SMOKE ON THE WATER*/;
 	
 		case 2:
-			return "HELIT_NME_1";
+			return "HELIT_NME_1" /*HIGGINS HELITOURS*/;
 	
 		default:
 		
@@ -31301,24 +31301,24 @@ void func_741(int iParam0, char* sParam1, var uParam2, var uParam3, var uParam4)
 	switch (iParam0)
 	{
 		case 174:
-			TEXT_LABEL_ASSIGN_STRING(sParam1, "CWAS_EXT_T", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "CWAS_EXT_T" /*HANDS ON CAR WASH*/, 64);
 			*uParam3 = 2;
-			uParam2->[0] = "CWAS_E_O_0";
-			uParam2->[1] = "CWAS_E_O_1";
+			uParam2->[0] = "CWAS_E_O_0" /*Exit*/;
+			uParam2->[1] = "CWAS_E_O_1" /*All Exit*/;
 			break;
 	
 		case 175:
-			TEXT_LABEL_ASSIGN_STRING(sParam1, "WSHOP_EXT_T", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "WSHOP_EXT_T" /*SMOKE ON THE WATER*/, 64);
 			*uParam3 = 2;
-			uParam2->[0] = "WSHOP_E_O_0";
-			uParam2->[1] = "WSHOP_E_O_1";
+			uParam2->[0] = "WSHOP_E_O_0" /*Exit*/;
+			uParam2->[1] = "WSHOP_E_O_1" /*All Exit*/;
 			break;
 	
 		case 176:
-			TEXT_LABEL_ASSIGN_STRING(sParam1, "HELIT_EXT_T", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "HELIT_EXT_T" /*HIGGINS HELITOURS*/, 64);
 			*uParam3 = 2;
-			uParam2->[0] = "HELIT_E_O_0";
-			uParam2->[1] = "HELIT_E_O_1";
+			uParam2->[0] = "HELIT_E_O_0" /*Exit*/;
+			uParam2->[1] = "HELIT_E_O_1" /*All Exit*/;
 			break;
 	
 		default:
@@ -32802,13 +32802,13 @@ char* func_764(int iParam0, var uParam1, var uParam2, var uParam3) // Position -
 		switch (iParam0)
 		{
 			case 174:
-				return "CWAS_KICK_A";
+				return "CWAS_KICK_A" /*You no longer have access to the Hands On Car Wash.*/;
 		
 			case 176:
-				return "HELIT_KICK_A";
+				return "HELIT_KICK_A" /*You no longer have access to Higgins Helitours.*/;
 		
 			case 175:
-				return "WSHOP_KICK_A";
+				return "WSHOP_KICK_A" /*You no longer have access to Smoke on the Water.*/;
 		}
 	}
 
@@ -32817,13 +32817,13 @@ char* func_764(int iParam0, var uParam1, var uParam2, var uParam3) // Position -
 		switch (iParam0)
 		{
 			case 174:
-				return "CWAS_KICK_B";
+				return "CWAS_KICK_B" /*You no longer have access to the Hands On Car Wash as the owner has left the game.*/;
 		
 			case 176:
-				return "HELIT_KICK_B";
+				return "HELIT_KICK_B" /*You no longer have access to Higgins Helitours as the owner has left the game.*/;
 		
 			case 175:
-				return "WSHOP_KICK_B";
+				return "WSHOP_KICK_B" /*You no longer have access to Smoke on the Water as the owner has left the game.*/;
 		}
 	}
 
@@ -32832,13 +32832,13 @@ char* func_764(int iParam0, var uParam1, var uParam2, var uParam3) // Position -
 		switch (iParam0)
 		{
 			case 174:
-				return "CWAS_KICK_C";
+				return "CWAS_KICK_C" /*Owner has requested all to leave the Hands On Car Wash.*/;
 		
 			case 176:
-				return "HELIT_KICK_C";
+				return "HELIT_KICK_C" /*Owner has requested all to leave Higgins Helitours.*/;
 		
 			case 175:
-				return "WSHOP_KICK_C";
+				return "WSHOP_KICK_C" /*Owner has requested all to leave Smoke on the Water.*/;
 		}
 	}
 
@@ -32847,13 +32847,13 @@ char* func_764(int iParam0, var uParam1, var uParam2, var uParam3) // Position -
 		switch (iParam0)
 		{
 			case 174:
-				return "CWAS_KICK_D";
+				return "CWAS_KICK_D" /*You no longer have access to the Hands On Car Wash as you became the Beast.*/;
 		
 			case 176:
-				return "HELIT_KICK_D";
+				return "HELIT_KICK_D" /*You no longer have access to Higgins Helitours as you became the Beast.*/;
 		
 			case 175:
-				return "WSHOP_KICK_D";
+				return "WSHOP_KICK_D" /*You no longer have access to Smoke on the Water as you became the Beast.*/;
 		}
 	}
 
@@ -33631,15 +33631,15 @@ void func_803(int iParam0, char* sParam1, var uParam2, var uParam3, var uParam4)
 	switch (iParam0)
 	{
 		case 174:
-			TEXT_LABEL_ASSIGN_STRING(sParam1, "CWAS_PROP_ET", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "CWAS_PROP_ET" /*HANDS ON CAR WASH*/, 64);
 			break;
 	
 		case 176:
-			TEXT_LABEL_ASSIGN_STRING(sParam1, "HELIT_PROP_ET", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "HELIT_PROP_ET" /*HIGGINS HELITOURS*/, 64);
 			break;
 	
 		case 175:
-			TEXT_LABEL_ASSIGN_STRING(sParam1, "WSHOP_PROP_ET", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "WSHOP_PROP_ET" /*SMOKE ON THE WATER*/, 64);
 			break;
 	}
 
@@ -33764,19 +33764,19 @@ char* func_812(int iParam0, var uParam1, var uParam2) // Position - 0x28E16 (167
 		switch (iParam0)
 		{
 			case 174:
-				return "SI_EXIT_BLCK34A";
+				return "SI_EXIT_BLCK34A" /*You can't leave the Hands On Car Wash while on call. You can cancel this via the Quick Join app on the phone.*/;
 		
 			case 176:
-				return "SI_EXIT_BLCK35A";
+				return "SI_EXIT_BLCK35A" /*You can't leave Higgins Helitours while on call. You can cancel this via the Quick Join app on the phone.*/;
 		
 			case 175:
-				return "SI_EXIT_BLCK36A";
+				return "SI_EXIT_BLCK36A" /*You can't leave Smoke on the Water while on call. You can cancel this via the Quick Join app on the phone.*/;
 		
 			default:
 			
 		}
 	
-		return "SI_EXIT_BLCK34A";
+		return "SI_EXIT_BLCK34A" /*You can't leave the Hands On Car Wash while on call. You can cancel this via the Quick Join app on the phone.*/;
 	}
 
 	return "";
@@ -33817,16 +33817,16 @@ char* func_817(int iParam0, var uParam1, var uParam2) // Position - 0x28EDB (167
 		switch (iParam0)
 		{
 			case 174:
-				return "SI_ENTR_BLCK34A";
+				return "SI_ENTR_BLCK34A" /*You can't enter the Hands On Car Wash while on call. You can cancel this via the Quick Join app on the phone.*/;
 		
 			case 176:
-				return "SI_ENTR_BLCK35A";
+				return "SI_ENTR_BLCK35A" /*You can't enter Higgins Helitours while on call. You can cancel this via the Quick Join app on the phone.*/;
 		
 			case 175:
-				return "SI_ENTR_BLCK36A";
+				return "SI_ENTR_BLCK36A" /*You can't enter Smoke on the Water while on call. You can cancel this via the Quick Join app on the phone.*/;
 		}
 	
-		return "SI_ENTR_BLCK34A";
+		return "SI_ENTR_BLCK34A" /*You can't enter the Hands On Car Wash while on call. You can cancel this via the Quick Join app on the phone.*/;
 	}
 
 	if (func_230(PLAYER::PLAYER_ID(), false))
@@ -33843,43 +33843,43 @@ char* func_817(int iParam0, var uParam1, var uParam2) // Position - 0x28EDB (167
 						switch (num)
 						{
 							case 192:
-								return "CWAS_BLCK_A";
+								return "CWAS_BLCK_A" /*You can't enter the Hands On Car Wash while resupplying another business.*/;
 						
 							case 190:
-								return "CWAS_BLCK_B";
+								return "CWAS_BLCK_B" /*You can't enter the Hands On Car Wash while selling goods from another business.*/;
 						
 							case 167:
-								return "CWAS_BLCK_C";
+								return "CWAS_BLCK_C" /*You can't enter the Hands On Car Wash while acquiring goods for a Warehouse.*/;
 						
 							case 168:
-								return "CWAS_BLCK_D";
+								return "CWAS_BLCK_D" /*You can't enter the Hands On Car Wash while selling goods from a Warehouse.*/;
 						
 							case 178:
-								return "CWAS_BLCK_E";
+								return "CWAS_BLCK_E" /*You can't enter the Hands On Car Wash while acquiring a vehicle for a Warehouse.*/;
 						
 							case 188:
-								return "CWAS_BLCK_F";
+								return "CWAS_BLCK_F" /*You can't enter the Hands On Car Wash while selling vehicles from a Warehouse.*/;
 						
 							case 225:
-								return "CWAS_BLCK_G";
+								return "CWAS_BLCK_G" /*You can't enter the Hands On Car Wash while acquiring goods for a Bunker.*/;
 						
 							case 226:
-								return "CWAS_BLCK_H";
+								return "CWAS_BLCK_H" /*You can't enter the Hands On Car Wash while selling goods from a Bunker.*/;
 						
 							case 229:
-								return "CWAS_BLCK_I";
+								return "CWAS_BLCK_I" /*You can't enter the Hands On Car Wash while acquiring goods for a Hangar.*/;
 						
 							case 230:
-								return "CWAS_BLCK_J";
+								return "CWAS_BLCK_J" /*You can't enter the Hands On Car Wash while selling goods from a Hangar.*/;
 						
 							case 237:
-								return "CWAS_BLCK_O";
+								return "CWAS_BLCK_O" /*You can't enter the Hands On Car Wash while taking part in Nightclub business.*/;
 						
 							case 243:
-								return "CWAS_BLCK_P";
+								return "CWAS_BLCK_P" /*You can't enter the Hands On Car Wash while working for Ms. Baker.*/;
 						
 							case 271:
-								return "CWAS_BLCK_U";
+								return "CWAS_BLCK_U" /*You can't enter the Hands On Car Wash while conducting Auto Shop business.*/;
 						
 							case 355:
 							case 354:
@@ -33887,7 +33887,7 @@ char* func_817(int iParam0, var uParam1, var uParam2) // Position - 0x28EDB (167
 								return "";
 						
 							default:
-								return "CWAS_BLCK_X";
+								return "CWAS_BLCK_X" /*You can't enter the Hands On Car Wash while on a mission.*/;
 						}
 					}
 					else
@@ -33902,43 +33902,43 @@ char* func_817(int iParam0, var uParam1, var uParam2) // Position - 0x28EDB (167
 						switch (num)
 						{
 							case 192:
-								return "HELIT_BLCK_A";
+								return "HELIT_BLCK_A" /*You can't enter Higgins Helitours while resupplying another business.*/;
 						
 							case 190:
-								return "HELIT_BLCK_B";
+								return "HELIT_BLCK_B" /*You can't enter Higgins Helitours while selling goods from another business.*/;
 						
 							case 167:
-								return "HELIT_BLCK_C";
+								return "HELIT_BLCK_C" /*You can't enter Higgins Helitours while acquiring goods for a Warehouse.*/;
 						
 							case 168:
-								return "HELIT_BLCK_D";
+								return "HELIT_BLCK_D" /*You can't enter Higgins Helitours while selling goods from a Warehouse.*/;
 						
 							case 178:
-								return "HELIT_BLCK_E";
+								return "HELIT_BLCK_E" /*You can't enter Higgins Helitours while acquiring a vehicle for a Warehouse.*/;
 						
 							case 188:
-								return "HELIT_BLCK_F";
+								return "HELIT_BLCK_F" /*You can't enter Higgins Helitours while selling vehicles from a Warehouse.*/;
 						
 							case 225:
-								return "HELIT_BLCK_G";
+								return "HELIT_BLCK_G" /*You can't enter Higgins Helitours while acquiring goods for a Bunker.*/;
 						
 							case 226:
-								return "HELIT_BLCK_H";
+								return "HELIT_BLCK_H" /*You can't enter Higgins Helitours while selling goods from a Bunker.*/;
 						
 							case 229:
-								return "HELIT_BLCK_I";
+								return "HELIT_BLCK_I" /*You can't enter Higgins Helitours while acquiring goods for a Hangar.*/;
 						
 							case 230:
-								return "HELIT_BLCK_J";
+								return "HELIT_BLCK_J" /*You can't enter Higgins Helitours while selling goods from a Hangar.*/;
 						
 							case 237:
-								return "HELIT_BLCK_O";
+								return "HELIT_BLCK_O" /*You can't enter Higgins Helitours while taking part in Nightclub business.*/;
 						
 							case 243:
-								return "HELIT_BLCK_P";
+								return "HELIT_BLCK_P" /*You can't enter Higgins Helitours while working for Ms. Baker.*/;
 						
 							case 271:
-								return "HELIT_BLCK_U";
+								return "HELIT_BLCK_U" /*You can't enter Higgins Helitours while conducting Auto Shop business.*/;
 						
 							case 357:
 							case 356:
@@ -33946,7 +33946,7 @@ char* func_817(int iParam0, var uParam1, var uParam2) // Position - 0x28EDB (167
 								return "";
 						
 							default:
-								return "HELIT_BLCK_X";
+								return "HELIT_BLCK_X" /*You can't enter Higgins Helitours while on a mission.*/;
 						}
 					}
 					else
@@ -33961,43 +33961,43 @@ char* func_817(int iParam0, var uParam1, var uParam2) // Position - 0x28EDB (167
 						switch (num)
 						{
 							case 192:
-								return "WSHOP_BLCK_A";
+								return "WSHOP_BLCK_A" /*You can't enter Smoke on the Water while resupplying another business.*/;
 						
 							case 190:
-								return "WSHOP_BLCK_B";
+								return "WSHOP_BLCK_B" /*You can't enter Smoke on the Water while selling goods from another business.*/;
 						
 							case 167:
-								return "WSHOP_BLCK_C";
+								return "WSHOP_BLCK_C" /*You can't enter Smoke on the Water while acquiring goods for a Warehouse.*/;
 						
 							case 168:
-								return "WSHOP_BLCK_D";
+								return "WSHOP_BLCK_D" /*You can't enter Smoke on the Water while selling goods from a Warehouse.*/;
 						
 							case 178:
-								return "WSHOP_BLCK_E";
+								return "WSHOP_BLCK_E" /*You can't enter Smoke on the Water while acquiring a vehicle for a Warehouse.*/;
 						
 							case 188:
-								return "WSHOP_BLCK_F";
+								return "WSHOP_BLCK_F" /*You can't enter Smoke on the Water while selling vehicles from a Warehouse.*/;
 						
 							case 225:
-								return "WSHOP_BLCK_G";
+								return "WSHOP_BLCK_G" /*You can't enter Smoke on the Water while acquiring goods for a Bunker.*/;
 						
 							case 226:
-								return "WSHOP_BLCK_H";
+								return "WSHOP_BLCK_H" /*You can't enter Smoke on the Water while selling goods from a Bunker.*/;
 						
 							case 229:
-								return "WSHOP_BLCK_I";
+								return "WSHOP_BLCK_I" /*You can't enter Smoke on the Water while acquiring goods for a Hangar.*/;
 						
 							case 230:
-								return "WSHOP_BLCK_J";
+								return "WSHOP_BLCK_J" /*You can't enter Smoke on the Water while selling goods from a Hangar.*/;
 						
 							case 237:
-								return "WSHOP_BLCK_O";
+								return "WSHOP_BLCK_O" /*You can't enter Smoke on the Water while taking part in Nightclub business.*/;
 						
 							case 243:
-								return "WSHOP_BLCK_P";
+								return "WSHOP_BLCK_P" /*You can't enter Smoke on the Water while working for Ms. Baker.*/;
 						
 							case 271:
-								return "WSHOP_BLCK_U";
+								return "WSHOP_BLCK_U" /*You can't enter Smoke on the Water while conducting Auto Shop business.*/;
 						
 							case 359:
 							case 358:
@@ -34005,7 +34005,7 @@ char* func_817(int iParam0, var uParam1, var uParam2) // Position - 0x28EDB (167
 								return "";
 						
 							default:
-								return "WSHOP_BLCK_X";
+								return "WSHOP_BLCK_X" /*You can't enter Smoke on the Water while on a mission.*/;
 						}
 					}
 					else
@@ -34015,7 +34015,7 @@ char* func_817(int iParam0, var uParam1, var uParam2) // Position - 0x28EDB (167
 					break;
 			}
 		
-			return "CWAS_BLCK_X";
+			return "CWAS_BLCK_X" /*You can't enter the Hands On Car Wash while on a mission.*/;
 		}
 	}
 
@@ -34024,16 +34024,16 @@ char* func_817(int iParam0, var uParam1, var uParam2) // Position - 0x28EDB (167
 		switch (iParam0)
 		{
 			case 174:
-				return "CWAS_BLCK_K";
+				return "CWAS_BLCK_K" /*You can't enter the Hands On Car Wash with a prostitute.*/;
 		
 			case 176:
-				return "HELIT_BLCK_K";
+				return "HELIT_BLCK_K" /*You can't enter Higgins Helitours with a prostitute.*/;
 		
 			case 175:
-				return "WSHOP_BLCK_K";
+				return "WSHOP_BLCK_K" /*You can't enter Smoke on the Water with a prostitute.*/;
 		}
 	
-		return "CWAS_BLCK_K";
+		return "CWAS_BLCK_K" /*You can't enter the Hands On Car Wash with a prostitute.*/;
 	}
 
 	if (func_820())
@@ -34044,16 +34044,16 @@ char* func_817(int iParam0, var uParam1, var uParam2) // Position - 0x28EDB (167
 		switch (iParam0)
 		{
 			case 174:
-				return "CWAS_BLCK_L";
+				return "CWAS_BLCK_L" /*You can't access the Hands On Car Wash as the Beast.*/;
 		
 			case 176:
-				return "HELIT_BLCK_L";
+				return "HELIT_BLCK_L" /*You can't access Higgins Helitours as the Beast.*/;
 		
 			case 175:
-				return "WSHOP_BLCK_L";
+				return "WSHOP_BLCK_L" /*You can't access Smoke on the Water as the Beast.*/;
 		}
 	
-		return "CWAS_BLCK_L";
+		return "CWAS_BLCK_L" /*You can't access the Hands On Car Wash as the Beast.*/;
 	}
 
 	if (func_793(PLAYER::PLAYER_PED_ID()))
@@ -34061,13 +34061,13 @@ char* func_817(int iParam0, var uParam1, var uParam2) // Position - 0x28EDB (167
 		switch (iParam0)
 		{
 			case 174:
-				return "CWAS_BLCK_M";
+				return "CWAS_BLCK_M" /*You can't access the Hands On Car Wash while wearing the Ballistic Equipment.*/;
 		
 			case 176:
-				return "HELIT_BLCK_M";
+				return "HELIT_BLCK_M" /*You can't access Higgins Helitours while wearing the Ballistic Equipment.*/;
 		
 			case 175:
-				return "WSHOP_BLCK_M";
+				return "WSHOP_BLCK_M" /*You can't access Smoke on the Water while wearing the Ballistic Equipment.*/;
 		
 			default:
 			
@@ -35316,34 +35316,34 @@ char* func_896(int iParam0, int iParam1) // Position - 0x2AA54 (174676)
 			switch (iParam1)
 			{
 				case 0:
-					return "PIM_CWAS_INV_D";
+					return "PIM_CWAS_INV_D" /*Invite players to your Hands On Car Wash.*/;
 			
 				case 1:
-					return "PIM_CWAS_INV_M";
+					return "PIM_CWAS_INV_M" /*Invite to Hands On Car Wash*/;
 			
 				case 4:
-					return "PIM_CWAS_INV_T";
+					return "PIM_CWAS_INV_T" /*INVITE TO HANDS ON CAR WASH*/;
 			
 				case 13:
-					return "PIM_INV_CWAS";
+					return "PIM_INV_CWAS" /*Invite to Hands On Car Wash has been sent to ~a~.*/;
 			
 				case 14:
-					return "PIM_INV_A_T_CWAS";
+					return "PIM_INV_A_T_CWAS" /*Invite to Hands On Car Wash has been sent to all players.*/;
 			
 				case 15:
-					return "CELL_CWAS_INV";
+					return "CELL_CWAS_INV" /*Hey, come over to the Hands On Car Wash.*/;
 			
 				case 3:
-					return "PIM_CWAS_MAN_D1";
+					return "PIM_CWAS_MAN_D1" /*Manage the Hands On Car Wash.*/;
 			
 				case 21:
-					return "CELL_CWAS";
+					return "CELL_CWAS" /*Hands On Car Wash*/;
 			
 				case 2:
-					return "PIM_CWAS_MAN_M";
+					return "PIM_CWAS_MAN_M" /*Hands On Car Wash Management*/;
 			
 				case 22:
-					return "CWAS_BUY_SIGN";
+					return "CWAS_BUY_SIGN" /*Press ~INPUT_CONTEXT~ to purchase the Hands On Car Wash.*/;
 			
 				case 23:
 					return "MP_CWAS_DES_";
@@ -35357,34 +35357,34 @@ char* func_896(int iParam0, int iParam1) // Position - 0x2AA54 (174676)
 			switch (iParam1)
 			{
 				case 0:
-					return "PIM_WSHOP_INV_D";
+					return "PIM_WSHOP_INV_D" /*Invite players to your Smoke on the Water.*/;
 			
 				case 1:
-					return "PIM_WSHOP_INV_M";
+					return "PIM_WSHOP_INV_M" /*Invite to Smoke on the Water*/;
 			
 				case 4:
-					return "PIM_WSHOP_INV_T";
+					return "PIM_WSHOP_INV_T" /*INVITE TO SMOKE ON THE WATER*/;
 			
 				case 13:
-					return "PIM_INV_WSHOP";
+					return "PIM_INV_WSHOP" /*Invite to Smoke on the Water has been sent to ~a~.*/;
 			
 				case 14:
-					return "PIM_INV_A_T_WSHOP";
+					return "PIM_INV_A_T_WSHOP" /*Invite to Smoke on the Water has been sent to all players.*/;
 			
 				case 15:
-					return "CELL_WSHOP_INV";
+					return "CELL_WSHOP_INV" /*Hey, come over to Smoke on the Water.*/;
 			
 				case 3:
-					return "PIM_WSHOP_MAN_D1";
+					return "PIM_WSHOP_MAN_D1" /*Manage Smoke on the Water.*/;
 			
 				case 21:
-					return "CELL_WSHOP";
+					return "CELL_WSHOP" /*Smoke on the Water*/;
 			
 				case 2:
-					return "PIM_WSHOP_MAN_M";
+					return "PIM_WSHOP_MAN_M" /*Smoke on the Water Management*/;
 			
 				case 22:
-					return "WSHOP_BUY_SIGN";
+					return "WSHOP_BUY_SIGN" /*Press ~INPUT_CONTEXT~ to purchase Smoke on the Water.*/;
 			
 				case 23:
 					return "MP_WSHOP_DES_";
@@ -35398,34 +35398,34 @@ char* func_896(int iParam0, int iParam1) // Position - 0x2AA54 (174676)
 			switch (iParam1)
 			{
 				case 0:
-					return "PIM_HELIT_INV_D";
+					return "PIM_HELIT_INV_D" /*Invite players to your Higgins Helitours.*/;
 			
 				case 1:
-					return "PIM_HELIT_INV_M";
+					return "PIM_HELIT_INV_M" /*Invite to Higgins Helitours*/;
 			
 				case 4:
-					return "PIM_HELIT_INV_T";
+					return "PIM_HELIT_INV_T" /*INVITE TO HIGGINS HELITOURS*/;
 			
 				case 13:
-					return "PIM_INV_HELIT";
+					return "PIM_INV_HELIT" /*Invite to Higgins Helitours has been sent to ~a~.*/;
 			
 				case 14:
-					return "PIM_INV_A_T_HELIT";
+					return "PIM_INV_A_T_HELIT" /*Invite to Higgins Helitours has been sent to all players.*/;
 			
 				case 15:
-					return "CELL_HELIT_INV";
+					return "CELL_HELIT_INV" /*Hey, come over to Higgins Helitours.*/;
 			
 				case 3:
-					return "PIM_HELIT_MAN_D1";
+					return "PIM_HELIT_MAN_D1" /*Manage Higgins Helitours.*/;
 			
 				case 21:
-					return "CELL_HELIT";
+					return "CELL_HELIT" /*Higgins Helitours*/;
 			
 				case 2:
-					return "PIM_HELIT_MAN_M";
+					return "PIM_HELIT_MAN_M" /*Higgins Helitours Management*/;
 			
 				case 22:
-					return "HELIT_BUY_SIGN";
+					return "HELIT_BUY_SIGN" /*Press ~INPUT_CONTEXT~ to purchase Higgins Helitours.*/;
 			
 				case 23:
 					return "MP_HELIT_DES_";
@@ -266949,7 +266949,7 @@ int func_5273(var uParam0, var uParam1, var uParam2) // Position - 0x173944 (152
 							if (MISC::IS_PC_VERSION())
 								if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 									if (VEHICLE::IS_VEHICLE_MODEL(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false), joaat("voltic2")) || VEHICLE::IS_VEHICLE_MODEL(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false), joaat("oppressor")))
-										if (_CONTEXT_IS_HELP_TEXT_BEING_DISPLAYED(uParam1->f_22.f_94, 0) || func_5285("GR_ENTERAOC" /*Press ~a~ to enter your Avenger.*/, "STRING") || func_5285("BASE_MOD_ENTER" /*~a~ Access the Facility Vehicle Workshop. ~n~ ~INPUT_CONTEXT_SECONDARY~ Enter your Avenger with this vehicle.*/, "STRING"))
+										if (_CONTEXT_IS_HELP_TEXT_BEING_DISPLAYED(uParam1->f_22.f_94, 0) || func_5285("GR_ENTERAOC" /*Press ~a~ to enter your Avenger.*/, "STRING") || func_5285("BASE_MOD_ENTER" /*~a~ Access the Facility Vehicle Workshop.~n~~INPUT_CONTEXT_SECONDARY~ Enter your Avenger with this vehicle.*/, "STRING"))
 											PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_VEH_ROCKET_BOOST, true);
 						
 							func_5284(true);
@@ -288517,7 +288517,7 @@ int func_5667(var uParam0, var uParam1, var uParam2) // Position - 0x198A0D (167
 							if (MISC::IS_PC_VERSION())
 								if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 									if (VEHICLE::IS_VEHICLE_MODEL(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false), joaat("voltic2")) || VEHICLE::IS_VEHICLE_MODEL(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false), joaat("oppressor")))
-										if (_CONTEXT_IS_HELP_TEXT_BEING_DISPLAYED(uParam1->f_22.f_94, 0) || func_5285("GR_ENTERAOC" /*Press ~a~ to enter your Avenger.*/, "STRING") || func_5285("BASE_MOD_ENTER" /*~a~ Access the Facility Vehicle Workshop. ~n~ ~INPUT_CONTEXT_SECONDARY~ Enter your Avenger with this vehicle.*/, "STRING"))
+										if (_CONTEXT_IS_HELP_TEXT_BEING_DISPLAYED(uParam1->f_22.f_94, 0) || func_5285("GR_ENTERAOC" /*Press ~a~ to enter your Avenger.*/, "STRING") || func_5285("BASE_MOD_ENTER" /*~a~ Access the Facility Vehicle Workshop.~n~~INPUT_CONTEXT_SECONDARY~ Enter your Avenger with this vehicle.*/, "STRING"))
 											PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_VEH_ROCKET_BOOST, true);
 						
 							func_5284(true);
@@ -344162,7 +344162,7 @@ char* func_6931(var uParam0) // Position - 0x1F58B8 (2054328)
 	switch (*uParam0)
 	{
 		case 0:
-			return "OJS_TKR_DLVR";
+			return "OJS_TKR_DLVR" /*You delivered the high-value goods.*/;
 	
 		default:
 		
@@ -344190,10 +344190,10 @@ char* func_6933() // Position - 0x1F58FA (2054394)
 	switch (func_6935())
 	{
 		case 0:
-			return func_6934("OJS_TXT_AMB_GS0", "OJS_TXT_AMB_GS1", "OJS_TXT_AMB_GS2");
+			return func_6934("OJS_TXT_AMB_GS0" /*WARNING: Hostiles incoming.*/, "OJS_TXT_AMB_GS1" /*ALERT: Enemy vehicles inbound.*/, "OJS_TXT_AMB_GS2" /*CAUTION: Potential combatants closing in.*/);
 	
 		case 1:
-			return func_6934("OJS_TXT_AMB_BC0", "OJS_TXT_AMB_BC1", "OJS_TXT_AMB_BC2");
+			return func_6934("OJS_TXT_AMB_BC0" /*WARNING: Enemies on your tail — coming in hot.*/, "OJS_TXT_AMB_BC1" /*ALERT: Saboteurs are nearing — prepare for attack.*/, "OJS_TXT_AMB_BC2" /*CAUTION: Armed thieves approaching — prepare to defend yourself.*/);
 	
 		default:
 		
@@ -344422,7 +344422,7 @@ void func_6955(int iParam0) // Position - 0x1F5C10 (2055184)
 
 void func_6956() // Position - 0x1F5C2F (2055215)
 {
-	func_6957("OJS_HELP_WARPED", func_6958(), -1);
+	func_6957("OJS_HELP_WARPED" /*The Stockade ~HUD_COLOUR_BLUE~~BLIP_GANG_VEHICLE~~s~ carrying the ~a~ has been moved to a more suitable location.*/, func_6958(), -1);
 	return;
 }
 
@@ -344439,19 +344439,19 @@ char* func_6958() // Position - 0x1F5C62 (2055266)
 	switch (iLocal_142.f_4)
 	{
 		case 0:
-			return "OJS_LN_CG";
+			return "OJS_LN_CG" /*counterfeit goods*/;
 	
 		case 1:
-			return "OJS_LN_T";
+			return "OJS_LN_T" /*tobacco*/;
 	
 		case 2:
-			return "OJS_LN_HAZG";
+			return "OJS_LN_HAZG" /*hazardous goods*/;
 	
 		case 3:
-			return "OJS_LN_A";
+			return "OJS_LN_A" /*antiques*/;
 	
 		case 4:
-			return "OJS_LN_J";
+			return "OJS_LN_J" /*jewelry*/;
 	
 		default:
 		
@@ -344506,7 +344506,7 @@ int func_6960(int iParam0) // Position - 0x1F5D48 (2055496)
 char* func_6961(int iParam0) // Position - 0x1F5D60 (2055520)
 {
 	if (func_6882(iParam0))
-		return "OJS_BLP_VEH";
+		return "OJS_BLP_VEH" /*Stockade*/;
 
 	return "";
 }
@@ -344516,10 +344516,10 @@ char* func_6962(int iParam0) // Position - 0x1F5D7D (2055549)
 	switch (iParam0)
 	{
 		case 0:
-			return "OJS_HLP_DLVR";
+			return "OJS_HLP_DLVR" /*Deliver the high-value goods to the destination ~HUD_COLOUR_YELLOW~~BLIP_OBJECTIVE~~s~ as safely as possible to receive full payment.*/;
 	
 		case 1:
-			return "OJS_HLP_DMG";
+			return "OJS_HLP_DMG" /*The high-value goods are fragile. The buyer will offer a reduced payment if the goods are damaged.*/;
 	
 		default:
 		
@@ -346020,11 +346020,11 @@ void func_7070() // Position - 0x1F77A7 (2062247)
 void func_7071() // Position - 0x1F77B7 (2062263)
 {
 	uLocal_289.f_632[0 /*6*/] = 2;
-	uLocal_289.f_632[0 /*6*/].f_1 = "OJM_HUD_QUIT";
+	uLocal_289.f_632[0 /*6*/].f_1 = "OJM_HUD_QUIT" /*QUIT*/;
 	uLocal_289.f_632[0 /*6*/].f_4 = 6;
 	uLocal_289.f_632[0 /*6*/].f_2 = 1500;
 	uLocal_289.f_632[0 /*6*/].f_3 = 8;
-	uLocal_289.f_632[1 /*6*/].f_1 = "OJM_HUD_PAY";
+	uLocal_289.f_632[1 /*6*/].f_1 = "OJM_HUD_PAY" /*PAYMENT*/;
 	uLocal_289.f_632[1 /*6*/].f_3 = 7;
 	uLocal_289.f_632[1 /*6*/] = 4;
 	return;
@@ -346116,13 +346116,13 @@ void func_7080(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	{
 		if (playerIndexFromPed == plLocal_2425)
 		{
-			_THEFEED_SHOW_MESSAGE("OJS_TKR_FAIL_L", false);
+			_THEFEED_SHOW_MESSAGE("OJS_TKR_FAIL_L" /*You destroyed the Stockade.*/, false);
 			return;
 		}
 	
 		if (playerIndexFromPed != _INVALID_PLAYER_INDEX() && _NETWORK_IS_PLAYER_VALID(playerIndexFromPed, false, true))
 		{
-			func_7081("OJS_TKR_FAIL_R", playerIndexFromPed, false, false, false, true, false);
+			func_7081("OJS_TKR_FAIL_R" /*~a~ destroyed the Stockade.*/, playerIndexFromPed, false, false, false, true, false);
 			return;
 		}
 	}
@@ -346903,7 +346903,7 @@ void func_7115(int iParam0, int iParam1) // Position - 0x1F88CB (2066635)
 
 void func_7116() // Position - 0x1F88F1 (2066673)
 {
-	func_7117("OJS_OBJ_ENTER", false);
+	func_7117("OJS_OBJ_ENTER" /*Enter the ~HUD_COLOUR_BLUE~Stockade.~s~*/, false);
 	return;
 }
 
@@ -347169,11 +347169,11 @@ void func_7129() // Position - 0x1F8DC0 (2067904)
 {
 	if (veLocal_2433 != func_6995())
 	{
-		func_7117("OJS_OBJ_ENTER", false);
+		func_7117("OJS_OBJ_ENTER" /*Enter the ~HUD_COLOUR_BLUE~Stockade.~s~*/, false);
 		return;
 	}
 
-	func_7130("OJS_OBJ_DLVR", func_6958(), false, 0);
+	func_7130("OJS_OBJ_DLVR" /*Deliver the ~a~ to the ~HUD_COLOUR_YELLOW~drop-off.~s~*/, func_6958(), false, 0);
 	return;
 }
 
@@ -347491,10 +347491,10 @@ char* func_7146() // Position - 0x1F934A (2069322)
 	switch (func_6935())
 	{
 		case 0:
-			return "OJS_HLP_LGINTRO";
+			return "OJS_HLP_LGINTRO" /*Gruppe Sechs ~BLIP_GRUPPE_SECHS~ requires goods to be transported securely. Successfully complete 5 deliveries to unlock a bonus reward.*/;
 	
 		case 1:
-			return "OJS_HLP_LBINTRO";
+			return "OJS_HLP_LBINTRO" /*Bobcat Security ~BLIP_BOBCAT_SECURITY~ requires goods to be transported securely. Successfully complete 5 deliveries to unlock a bonus reward.*/;
 	}
 
 	return "";
@@ -347516,9 +347516,9 @@ void func_7147(int iParam0, int iParam1) // Position - 0x1F9381 (2069377)
 char* func_7148() // Position - 0x1F93A7 (2069415)
 {
 	if (uLocal_2828[iLocal_2428 /*65*/].f_61.f_1 == 1)
-		return "OJM_SHRD_YQ";
+		return "OJM_SHRD_YQ" /*You quit the job*/;
 
-	return "OJS_SHRD_SF";
+	return "OJS_SHRD_SF" /*Failed to deliver the high-value goods*/;
 }
 
 char* func_7149() // Position - 0x1F93CC (2069452)
@@ -347529,11 +347529,11 @@ char* func_7149() // Position - 0x1F93CC (2069452)
 char* func_7150() // Position - 0x1F93D8 (2069464)
 {
 	if (func_6865() == 1)
-		return "OJS_SHRD_GS";
+		return "OJS_SHRD_GS" /*Gruppe Sechs*/;
 	else if (func_6865() == 2)
-		return "OJS_SHRD_BS";
+		return "OJS_SHRD_BS" /*Bobcat Security*/;
 
-	return "OJS_SHRD_TS";
+	return "OJS_SHRD_TS" /*SAFEGUARD*/;
 }
 
 void func_7151(int iParam0, int iParam1) // Position - 0x1F9408 (2069512)
@@ -347551,7 +347551,7 @@ void func_7151(int iParam0, int iParam1) // Position - 0x1F9408 (2069512)
 
 char* func_7152() // Position - 0x1F942E (2069550)
 {
-	return "OJS_SHRD_SS";
+	return "OJS_SHRD_SS" /*Deliver the high-value goods*/;
 }
 
 char* func_7153() // Position - 0x1F943B (2069563)
@@ -350359,25 +350359,25 @@ char* func_7311(BOOL bParam0) // Position - 0x1FCB01 (2083585)
 		switch (func_7273())
 		{
 			case 0:
-				return "OJM_C_CENTRALB";
+				return "OJM_C_CENTRALB" /*Central Los Santos Medical Center*/;
 		
 			case 1:
-				return "OJM_C_ZONAHB";
+				return "OJM_C_ZONAHB" /*Mount Zonah Medical Center*/;
 		
 			case 2:
-				return "OJM_C_PILLBOXB";
+				return "OJM_C_PILLBOXB" /*Pillbox Hill Medical Center*/;
 		
 			case 3:
-				return "OJM_C_FIACREB";
+				return "OJM_C_FIACREB" /*St. Fiacre Hospital*/;
 		
 			case 4:
-				return "OJM_C_BAYCAREB";
+				return "OJM_C_BAYCAREB" /*The Bay Care Center*/;
 		
 			case 5:
-				return "OJM_C_SANDYB";
+				return "OJM_C_SANDYB" /*Sandy Shores Medical Center*/;
 		
 			case 6:
-				return "OJM_C_ECLIPSEB";
+				return "OJM_C_ECLIPSEB" /*Eclipse Medical Tower*/;
 		
 			default:
 				goto 0xE3;
@@ -350388,25 +350388,25 @@ char* func_7311(BOOL bParam0) // Position - 0x1FCB01 (2083585)
 		switch (func_7273())
 		{
 			case 0:
-				return "OJM_C_CENTRAL";
+				return "OJM_C_CENTRAL" /*Central Los Santos Medical Center*/;
 		
 			case 1:
-				return "OJM_C_ZONAH";
+				return "OJM_C_ZONAH" /*Mount Zonah Medical Center*/;
 		
 			case 2:
-				return "OJM_C_PILLBOX";
+				return "OJM_C_PILLBOX" /*Pillbox Hill Medical Center*/;
 		
 			case 3:
-				return "OJM_C_FIACRE";
+				return "OJM_C_FIACRE" /*St. Fiacre Hospital*/;
 		
 			case 4:
-				return "OJM_C_BAYCARE";
+				return "OJM_C_BAYCARE" /*The Bay Care Center*/;
 		
 			case 5:
-				return "OJM_C_SANDY";
+				return "OJM_C_SANDY" /*Sandy Shores Medical Center*/;
 		
 			case 6:
-				return "OJM_C_ECLIPSE";
+				return "OJM_C_ECLIPSE" /*Eclipse Medical Tower*/;
 		
 			default:
 			
@@ -350429,22 +350429,22 @@ char* func_7313(int iParam0) // Position - 0x1FCC04 (2083844)
 	switch (iParam0)
 	{
 		case 0:
-			return func_7317("OJM_TXT_DLVR0A", "OJM_TXT_DLVR0B", "OJM_TXT_DLVR0C");
+			return func_7317("OJM_TXT_DLVR0A" /*A botched rhinoplasty has left Miranda Cowan unable to enjoy her usual dose of audition-fuel. Get some IV substitutes to ~a~ before she sulks and signs on to season 21 of Waning With The Stars.*/, "OJM_TXT_DLVR0B" /*Love Fist's new kazooist lost his breath right before the 5th reunion tour and only our special inhalers can get those decrepit lungs open again. Get to ~a~. His death may be overdue, but our payment won't be.*/, "OJM_TXT_DLVR0C" /*Fernando Martinez is at ~a~. His so-called doctors are baffled by his "perpetual stiffness", but we know a case of Priapol overdose when we see one. Only barely legal anaphrodisiacs can un-pitch that tent.*/);
 	
 		case 1:
-			return func_7314("OJM_TXT_DLVR1A", "OJM_TXT_DLVR1B");
+			return func_7314("OJM_TXT_DLVR1A" /*~a~ have failed to diagnose Donna the hair stylist's heightened aggression for what it really is: withdrawal. Get some heavy-duty equine tranquilizers to her stat.*/, "OJM_TXT_DLVR1B" /*A freak drowsiness epidemic has hit the obnoxious teen population. Who else will man the Taco Farmer tills or defecate round the back of Discount Store? They need medical motivation at ~a~ STAT.*/);
 	
 		case 2:
-			return func_7314("OJM_TXT_DLVR2A", "OJM_TXT_DLVR2B");
+			return func_7314("OJM_TXT_DLVR2A" /*Mrs. Phillips has gone AWOL and is holding up ~a~. The police aren't doing anything, and we can't arrest her, but we CAN restock their Deludamol that she's violently craving.*/, "OJM_TXT_DLVR2B" /*Mr. Jakowski's been experiencing higher than normal levels of anxiety. Medical "experts" at ~a~ are clueless, but we can spot dopamine-deficiency a mile away. Some downers will get him back to baseline.*/);
 	
 		case 3:
-			return func_7314("OJM_TXT_DLVR3A", "OJM_TXT_DLVR3B");
+			return func_7314("OJM_TXT_DLVR3A" /*Halfway there. Next up ~a~. Two dozen Snapmatic gymfluencers and faded Vinewood starlets reaching critical levels of anxiety. Several spritzes of anti-neurosis nasal spray should do the trick.*/, "OJM_TXT_DLVR3B" /*New state laws prevent doctors at ~a~ from prescribing appetite-suppressants to their nieces, so only we can help them with a medically assisted shot at Vinewood fame.*/);
 	
 		case 4:
-			return func_7314("OJM_TXT_DLVR4A", "OJM_TXT_DLVR4B");
+			return func_7314("OJM_TXT_DLVR4A" /*Talk about speed — we can practically smell the burning rubber. That or you've dipped into the next delivery for ~a~. That's for the terminally rich, bored and jonesing only. Hands off and keep it moving.*/, "OJM_TXT_DLVR4B" /*As the treatment facility for Vinewood's rich and ailing, ~a~ sure doesn't keep their mood-enhancers very well stocked. Go lift some dangerously low spirits — just don't forget to bill them.*/);
 	
 		case 5:
-			return func_7314("OJM_TXT_DLVR5A", "OJM_TXT_DLVR5B");
+			return func_7314("OJM_TXT_DLVR5A" /*The residents of Los Santos thank you — or they would, if they weren't narcotically incapable of gratitude. Your final stop is ~a~.*/, "OJM_TXT_DLVR5B" /*You've successfully intoxicated half of San Andreas' one percent. That's half a percent in total — great work. Next stop is ~a~ and then you can call it a day.*/);
 	
 		default:
 		
@@ -350469,34 +350469,34 @@ char* func_7315() // Position - 0x1FCCCE (2084046)
 	switch (func_7316())
 	{
 		case 0:
-			return "OJM_TXT_DLVRD0";
+			return "OJM_TXT_DLVRD0" /*Bahama Mamas next. Looks like someone needs something to keep the party going, if you know what I mean.*/;
 	
 		case 1:
-			return "OJM_TXT_DLVRD1";
+			return "OJM_TXT_DLVRD1" /*Get over to LSIA. A customer had their 'supply' seized before their flight, so needs a refill. He'll meet you in arrivals.*/;
 	
 		case 2:
-			return "OJM_TXT_DLVRD2";
+			return "OJM_TXT_DLVRD2" /*A high roller is in a 24h marathon poker tournament over at the Diamond and he needs something to keep him awake.*/;
 	
 		case 3:
-			return "OJM_TXT_DLVRD3";
+			return "OJM_TXT_DLVRD3" /*Next is the rehab center. A customer has relapsed and is in need of our services.*/;
 	
 		case 4:
-			return "OJM_TXT_DLVRD4";
+			return "OJM_TXT_DLVRD4" /*A frat boy is in need of our services over at the country club. Go deliver him the real stuff.*/;
 	
 		case 5:
-			return "OJM_TXT_DLVRD5";
+			return "OJM_TXT_DLVRD5" /*Our 'supplies' pair nicely with a red wine apparently, so head over to the vineyard and drop some off.*/;
 	
 		case 6:
-			return "OJM_TXT_DLVRD6";
+			return "OJM_TXT_DLVRD6" /*The guys over at Rebel Radio need to be wired to the moon to spin tracks it seems. Go over there and take them a delivery.*/;
 	
 		case 7:
-			return "OJM_TXT_DLVRD7";
+			return "OJM_TXT_DLVRD7" /*Drugs and bars go hand in hand. Someone over at Pitchers is in need of our services.*/;
 	
 		case 8:
-			return "OJM_TXT_DLVRD8";
+			return "OJM_TXT_DLVRD8" /*The owner of Muscle Sands wants to get his pump on, but needs the juice first. Go deliver him some.*/;
 	
 		case 9:
-			return "OJM_TXT_DLVRD9";
+			return "OJM_TXT_DLVRD9" /*Some kid is aiming for a new high score on Wizard's Ruin over at the Wonderama Arcade. Go give him the help he needs.*/;
 	
 		default:
 		
@@ -350869,13 +350869,13 @@ char* func_7339(var uParam0) // Position - 0x1FD52B (2086187)
 	switch (*uParam0)
 	{
 		case 0:
-			return "OJM_TKR_DLVR";
+			return "OJM_TKR_DLVR" /*QuickiePharm:~n~Deliveries: ~1~~n~Payment Received: $~1~~n~Total Earned: $~1~*/;
 	
 		case 1:
-			return "OJM_TKR_FAIL_0";
+			return "OJM_TKR_FAIL_0" /*QuickiePharm Over:~n~The supplies were destroyed.*/;
 	
 		case 2:
-			return "OJM_TKR_FAIL_1";
+			return "OJM_TKR_FAIL_1" /*QuickiePharm Over:~n~The time ran out.*/;
 	
 		default:
 		
@@ -350915,7 +350915,7 @@ void func_7343(int iParam0) // Position - 0x1FD5EB (2086379)
 
 void func_7344() // Position - 0x1FD60A (2086410)
 {
-	_DISPLAY_HELP_TEXT("OJM_HELP_WARPED", -1);
+	_DISPLAY_HELP_TEXT("OJM_HELP_WARPED" /*The Sentinel GTS ~HUD_COLOUR_BLUE~~BLIP_GANG_VEHICLE~~s~ carrying the supplies has been moved to a more suitable location.*/, -1);
 	return;
 }
 
@@ -350960,7 +350960,7 @@ int func_7345(int iParam0, var uParam1) // Position - 0x1FD61C (2086428)
 char* func_7346(int iParam0) // Position - 0x1FD707 (2086663)
 {
 	if (func_6882(iParam0))
-		return "OJM_BLP_VEH";
+		return "OJM_BLP_VEH" /*Medical Vehicle*/;
 
 	return "";
 }
@@ -350970,16 +350970,16 @@ char* func_7347(int iParam0) // Position - 0x1FD724 (2086692)
 	switch (iParam0)
 	{
 		case 0:
-			return "OJM_HLP_DLVR";
+			return "OJM_HLP_DLVR" /*Deliver the supplies to each destination as quickly and safely as possible to receive payment.*/;
 	
 		case 1:
-			return "OJM_HLP_DMG";
+			return "OJM_HLP_DMG" /*The medical supplies are fragile. Avoid taking too much damage when delivering it to the destination.*/;
 	
 		case 3:
-			return "OJM_HLP_EXITVEH";
+			return "OJM_HLP_EXITVEH" /*You must be on foot to deliver the medical supplies.*/;
 	
 		case 4:
-			return "OJM_HLP_QUIT";
+			return "OJM_HLP_QUIT" /*You can quit being a courier for QuickiePharm at any time by holding ~INPUT_VEH_EXIT~ or via the Job List on your phone.*/;
 	
 		default:
 		
@@ -351303,24 +351303,24 @@ void func_7368() // Position - 0x1FDD18 (2088216)
 void func_7369() // Position - 0x1FDD31 (2088241)
 {
 	uLocal_289.f_632[0 /*6*/] = 2;
-	uLocal_289.f_632[0 /*6*/].f_1 = "OJM_HUD_QUIT";
+	uLocal_289.f_632[0 /*6*/].f_1 = "OJM_HUD_QUIT" /*QUIT*/;
 	uLocal_289.f_632[0 /*6*/].f_4 = 6;
 	uLocal_289.f_632[0 /*6*/].f_2 = 1500;
 	uLocal_289.f_632[0 /*6*/].f_3 = 8;
-	uLocal_289.f_632[2 /*6*/].f_1 = "OJM_HUD_EQUIP";
+	uLocal_289.f_632[2 /*6*/].f_1 = "OJM_HUD_EQUIP" /*SUPPLIES*/;
 	uLocal_289.f_632[2 /*6*/].f_3 = 7;
 	uLocal_289.f_632[2 /*6*/] = 4;
 	uLocal_289.f_632[2 /*6*/].f_2 = 100;
-	uLocal_289.f_632[1 /*6*/].f_1 = "OJM_HUD_PAY";
+	uLocal_289.f_632[1 /*6*/].f_1 = "OJM_HUD_PAY" /*PAYMENT*/;
 	uLocal_289.f_632[1 /*6*/].f_3 = 6;
 	uLocal_289.f_632[1 /*6*/] = 4;
-	uLocal_289.f_632[3 /*6*/].f_1 = "OJM_HUD_TIME";
+	uLocal_289.f_632[3 /*6*/].f_1 = "OJM_HUD_TIME" /*TIME*/;
 	uLocal_289.f_632[3 /*6*/].f_3 = 5;
 	uLocal_289.f_632[3 /*6*/] = 6;
-	uLocal_289.f_632[4 /*6*/].f_1 = "OJM_HUD_DEL";
+	uLocal_289.f_632[4 /*6*/].f_1 = "OJM_HUD_DEL" /*DELIVERIES*/;
 	uLocal_289.f_632[4 /*6*/].f_3 = 4;
 	uLocal_289.f_632[4 /*6*/] = 1;
-	uLocal_289.f_632[5 /*6*/].f_1 = "OJM_HUD_TOTAL";
+	uLocal_289.f_632[5 /*6*/].f_1 = "OJM_HUD_TOTAL" /*TOTAL EARNED*/;
 	uLocal_289.f_632[5 /*6*/].f_3 = 3;
 	uLocal_289.f_632[5 /*6*/] = 4;
 	return;
@@ -351593,7 +351593,7 @@ int func_7381() // Position - 0x1FE616 (2090518)
 
 void func_7382() // Position - 0x1FE61F (2090527)
 {
-	func_7117("OJM_OBJ_ENTER", false);
+	func_7117("OJM_OBJ_ENTER" /*Enter the ~HUD_COLOUR_BLUE~Sentinel GTS.~s~*/, false);
 	return;
 }
 
@@ -351621,16 +351621,16 @@ char* func_7385(int iParam0) // Position - 0x1FE66A (2090602)
 	switch (iParam0)
 	{
 		case 0:
-			return "OJM_OBJ_DLVR_MC";
+			return "OJM_OBJ_DLVR_MC" /*Deliver the supplies to the ~HUD_COLOUR_YELLOW~medical center.~s~*/;
 	
 		case 1:
-			return "OJM_OBJ_DLVR_HP";
+			return "OJM_OBJ_DLVR_HP" /*Deliver the supplies to the ~HUD_COLOUR_YELLOW~hospital.~s~*/;
 	
 		case 2:
-			return "OJM_OBJ_DLVR_CC";
+			return "OJM_OBJ_DLVR_CC" /*Deliver the supplies to the ~HUD_COLOUR_YELLOW~care center.~s~*/;
 	
 		case 3:
-			return "OJM_OBJ_DLVR_MT";
+			return "OJM_OBJ_DLVR_MT" /*Deliver the supplies to the ~HUD_COLOUR_YELLOW~medical tower.~s~*/;
 	
 		default:
 		
@@ -351676,34 +351676,34 @@ char* func_7388() // Position - 0x1FE711 (2090769)
 	switch (func_7316())
 	{
 		case 0:
-			return "OJM_OBJ_DLVRD_0";
+			return "OJM_OBJ_DLVRD_0" /*Deliver the supplies to the ~HUD_COLOUR_YELLOW~nightclub.~s~*/;
 	
 		case 1:
-			return "OJM_OBJ_DLVRD_1";
+			return "OJM_OBJ_DLVRD_1" /*Deliver the supplies to the ~HUD_COLOUR_YELLOW~airport.~s~*/;
 	
 		case 2:
-			return "OJM_OBJ_DLVRD_2";
+			return "OJM_OBJ_DLVRD_2" /*Deliver the supplies to the ~HUD_COLOUR_YELLOW~casino.~s~*/;
 	
 		case 3:
-			return "OJM_OBJ_DLVRD_3";
+			return "OJM_OBJ_DLVRD_3" /*Deliver the supplies to the ~HUD_COLOUR_YELLOW~rehab center.~s~*/;
 	
 		case 4:
-			return "OJM_OBJ_DLVRD_4";
+			return "OJM_OBJ_DLVRD_4" /*Deliver the supplies to the ~HUD_COLOUR_YELLOW~country club.~s~*/;
 	
 		case 5:
-			return "OJM_OBJ_DLVRD_5";
+			return "OJM_OBJ_DLVRD_5" /*Deliver the supplies to the ~HUD_COLOUR_YELLOW~vineyard.~s~*/;
 	
 		case 6:
-			return "OJM_OBJ_DLVRD_6";
+			return "OJM_OBJ_DLVRD_6" /*Deliver the supplies to the ~HUD_COLOUR_YELLOW~radio station.~s~*/;
 	
 		case 7:
-			return "OJM_OBJ_DLVRD_7";
+			return "OJM_OBJ_DLVRD_7" /*Deliver the supplies to the ~HUD_COLOUR_YELLOW~bar.~s~*/;
 	
 		case 8:
-			return "OJM_OBJ_DLVRD_8";
+			return "OJM_OBJ_DLVRD_8" /*Deliver the supplies to the ~HUD_COLOUR_YELLOW~gym.~s~*/;
 	
 		case 9:
-			return "OJM_OBJ_DLVRD_9";
+			return "OJM_OBJ_DLVRD_9" /*Deliver the supplies to the ~HUD_COLOUR_YELLOW~arcade.~s~*/;
 	
 		default:
 		
@@ -351968,7 +351968,7 @@ Vector3 func_7405(int iParam0) // Position - 0x1FEB40 (2091840)
 
 char* func_7406() // Position - 0x1FEBFA (2092026)
 {
-	return "OJM_HLP_LINTRO";
+	return "OJM_HLP_LINTRO" /*QuickiePharm ~BLIP_HOSPITAL~ now requires couriers for medical supplies. Successfully complete all deliveries 5 times to unlock a bonus reward.*/;
 }
 
 void func_7407(int iParam0, function funcParam1, function funcParam2, function funcParam3) // Position - 0x1FEC07 (2092039)
@@ -352058,34 +352058,34 @@ char* func_7413(BOOL bParam0) // Position - 0x1FED9E (2092446)
 		switch (func_7316())
 		{
 			case 0:
-				return "OJM_D_BAHAMAB";
+				return "OJM_D_BAHAMAB" /*Bahama Mamas*/;
 		
 			case 1:
-				return "OJM_D_LSIAB";
+				return "OJM_D_LSIAB" /*LSIA*/;
 		
 			case 2:
-				return "OJM_D_CASINOB";
+				return "OJM_D_CASINOB" /*Diamond Casino*/;
 		
 			case 3:
-				return "OJM_D_REHABB";
+				return "OJM_D_REHABB" /*Parsons Rehab*/;
 		
 			case 4:
-				return "OJM_D_PBLUFFSB";
+				return "OJM_D_PBLUFFSB" /*Pacific Bluffs*/;
 		
 			case 5:
-				return "OJM_D_VINEYARDB";
+				return "OJM_D_VINEYARDB" /*Marlowe Vineyard*/;
 		
 			case 6:
-				return "OJM_D_RADIOB";
+				return "OJM_D_RADIOB" /*Rebel Radio*/;
 		
 			case 7:
-				return "OJM_D_PITCHERSB";
+				return "OJM_D_PITCHERSB" /*Pitchers*/;
 		
 			case 8:
-				return "OJM_D_MSANDSB";
+				return "OJM_D_MSANDSB" /*Muscle Sands*/;
 		
 			case 9:
-				return "OJM_D_ARCADEB";
+				return "OJM_D_ARCADEB" /*Wonderama Arcade*/;
 		
 			default:
 				goto 0x137;
@@ -352096,34 +352096,34 @@ char* func_7413(BOOL bParam0) // Position - 0x1FED9E (2092446)
 		switch (func_7316())
 		{
 			case 0:
-				return "OJM_D_BAHAMA";
+				return "OJM_D_BAHAMA" /*Bahama Mamas*/;
 		
 			case 1:
-				return "OJM_D_LSIA";
+				return "OJM_D_LSIA" /*LSIA*/;
 		
 			case 2:
-				return "OJM_D_CASINO";
+				return "OJM_D_CASINO" /*Diamond Casino*/;
 		
 			case 3:
-				return "OJM_D_REHAB";
+				return "OJM_D_REHAB" /*Parsons Rehab*/;
 		
 			case 4:
-				return "OJM_D_PBLUFFS";
+				return "OJM_D_PBLUFFS" /*Pacific Bluffs*/;
 		
 			case 5:
-				return "OJM_D_VINEYARD";
+				return "OJM_D_VINEYARD" /*Marlowe Vineyard*/;
 		
 			case 6:
-				return "OJM_D_RADIO";
+				return "OJM_D_RADIO" /*Rebel Radio*/;
 		
 			case 7:
-				return "OJM_D_PITCHERS";
+				return "OJM_D_PITCHERS" /*Pitchers*/;
 		
 			case 8:
-				return "OJM_D_MSANDS";
+				return "OJM_D_MSANDS" /*Muscle Sands*/;
 		
 			case 9:
-				return "OJM_D_ARCADE";
+				return "OJM_D_ARCADE" /*Wonderama Arcade*/;
 		
 			default:
 			
@@ -352136,24 +352136,24 @@ char* func_7413(BOOL bParam0) // Position - 0x1FED9E (2092446)
 char* func_7414() // Position - 0x1FEEDC (2092764)
 {
 	if (uLocal_2828[iLocal_2428 /*65*/].f_61.f_1 == 1)
-		return "OJM_SHRD_YQ";
+		return "OJM_SHRD_YQ" /*You quit the job*/;
 
-	return "OJM_SHRD_SP_F";
+	return "OJM_SHRD_SP_F" /*Failed to deliver the medical supplies*/;
 }
 
 char* func_7415() // Position - 0x1FEF01 (2092801)
 {
-	return "OJM_SHRD_TS";
+	return "OJM_SHRD_TS" /*QUICKIEPHARM*/;
 }
 
 char* func_7416() // Position - 0x1FEF0E (2092814)
 {
-	return "OJM_SHRD_SS";
+	return "OJM_SHRD_SS" /*Deliver the medical supplies*/;
 }
 
 char* func_7417() // Position - 0x1FEF1B (2092827)
 {
-	return "OJM_SHRD_TS";
+	return "OJM_SHRD_TS" /*QUICKIEPHARM*/;
 }
 
 BOOL func_7418() // Position - 0x1FEF28 (2092840)
@@ -379016,9 +379016,9 @@ void func_8192() // Position - 0x227FFA (2260986)
 		funcLocal_1023.f_162();
 	
 		if (StackVal)
-			Global_1984716.f_3 = 1;
+			Global_1984717.f_3 = 1;
 		else
-			Global_1984716.f_3 = 0;
+			Global_1984717.f_3 = 0;
 	}
 
 	if (func_8194() && func_8193())
@@ -379040,14 +379040,14 @@ BOOL func_8194() // Position - 0x228064 (2261092)
 	if (Global_2707922.f_10)
 		return false;
 
-	if (Global_1984716.f_3)
+	if (Global_1984717.f_3)
 		return false;
 
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("gb_ie_delivery_cutscene")) > 0)
 		return false;
 
-	if (_STOPWATCH_IS_INITIALIZED(&Global_1984716))
-		return func_30(&Global_1984716, Global_1984716.f_2, false);
+	if (_STOPWATCH_IS_INITIALIZED(&Global_1984717))
+		return func_30(&Global_1984717, Global_1984717.f_2, false);
 
 	return false;
 }
@@ -401012,22 +401012,22 @@ void func_9158(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3, int iParam4
 
 void func_9159(int iParam0) // Position - 0x241B46 (2366278)
 {
-	func_35(&Global_1984716, false, false);
+	func_35(&Global_1984717, false, false);
 
 	if (iParam0 != -1)
-		Global_1984716.f_2 = iParam0;
+		Global_1984717.f_2 = iParam0;
 	else
-		Global_1984716.f_2 = *Global_262145.f_36598;
+		Global_1984717.f_2 = *Global_262145.f_36598;
 
 	return;
 }
 
 int func_9160(int iParam0) // Position - 0x241B79 (2366329)
 {
-	if (Global_1984720 == -2)
+	if (Global_1984721 == -2)
 		return 0;
 
-	if (Global_1984720 == iParam0)
+	if (Global_1984721 == iParam0)
 		return 0;
 
 	if (func_2948(iParam0) != 0)
@@ -430891,7 +430891,7 @@ void func_9709() // Position - 0x262571 (2499953)
 {
 	var unk;
 
-	Global_1984716 = { unk };
+	Global_1984717 = { unk };
 	return;
 }
 

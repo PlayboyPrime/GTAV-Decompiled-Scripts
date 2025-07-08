@@ -3298,22 +3298,22 @@ void func_47() // Position - 0x25EB (9707)
 		switch (iLocal_295)
 		{
 			case 2:
-				TEXT_LABEL_ASSIGN_STRING(&entryLine1, "UI_FLOW_OP_MIGRATE_E1", 32);
+				TEXT_LABEL_ASSIGN_STRING(&entryLine1, "UI_FLOW_OP_MIGRATE_E1" /*A profile migration is currently in progress. Please try again later.*/, 32);
 				instructionalKey = 16;
 				break;
 		
 			case 3:
-				TEXT_LABEL_ASSIGN_STRING(&entryLine1, "UI_FLOW_OP_MIGRATE_E2", 32);
+				TEXT_LABEL_ASSIGN_STRING(&entryLine1, "UI_FLOW_OP_MIGRATE_E2" /*An error has occurred. Profile migration may not be available at this time. Please ensure the profile you wish to migrate is not currently signed in to GTA Online on Grand Theft Auto V Legacy.*/, 32);
 				instructionalKey = 16;
 				break;
 		
 			case 4:
-				TEXT_LABEL_ASSIGN_STRING(&entryLine1, "UI_FLOW_OP_MIGRATE_E3", 32);
+				TEXT_LABEL_ASSIGN_STRING(&entryLine1, "UI_FLOW_OP_MIGRATE_E3" /*You have no GTA Online profiles available.~n~Previously migrated profiles are not available to migrate again.*/, 32);
 				instructionalKey = 16;
 				break;
 		
 			case 5:
-				TEXT_LABEL_ASSIGN_STRING(&entryLine1, "UI_FLOW_OP_MIGRATE_W", 32);
+				TEXT_LABEL_ASSIGN_STRING(&entryLine1, "UI_FLOW_OP_MIGRATE_W" /*Are you sure you want to quit this session and migrate your profile?*/, 32);
 				instructionalKey = 18;
 				break;
 		
@@ -10089,14 +10089,14 @@ void func_355() // Position - 0xAE14 (44564)
 		
 			case 1:
 			case 10:
-				TEXT_LABEL_ASSIGN_STRING(&unk, "PM_MIGRATE" /*Character Transfer*/, 24);
+				TEXT_LABEL_ASSIGN_STRING(&unk, "PM_MIGRATE" /*Profile Migration*/, 24);
 			
 				if (!NETWORK::NETWORK_HAS_SOCIAL_CLUB_ACCOUNT())
-					TEXT_LABEL_ASSIGN_STRING(&unk7, "PM_MIGRATE_P1" /*Returning players can transfer their existing Grand Theft Auto Online characters and progression. ~n~~n~For further information please visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com/gtaonline~s~ ~n~~n~Press ~INPUT_FRONTEND_ACCEPT~ to visit Rockstar Games.*/, 32);
+					TEXT_LABEL_ASSIGN_STRING(&unk7, "PM_MIGRATE_P1" /*Returning players can migrate their existing Grand Theft Auto Online characters and progression to their PC.~n~~n~For further information please visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com/gtaonline~s~ ~n~~n~Press ~INPUT_FRONTEND_ACCEPT~ to visit Rockstar Games.*/, 32);
 				else if (func_385() == 101)
-					TEXT_LABEL_ASSIGN_STRING(&unk7, "HUD_ST_EBAN" /*Your Rockstar Games account is currently banned from Grand Theft Auto Online. You will not be able to transfer your character and progression data until the ban is lifted.*/, 32);
+					TEXT_LABEL_ASSIGN_STRING(&unk7, "HUD_ST_EBAN" /*Your Rockstar Games account is currently banned from Grand Theft Auto Online. You will not be able to migrate your GTA Online profile until the ban is lifted.~n~If you are a GTA+ Member, you will need to manually cancel your Membership.*/, 32);
 				else
-					TEXT_LABEL_ASSIGN_STRING(&unk7, "PM_MIGRATE_P" /*Returning players can transfer their existing Grand Theft Auto Online characters and progression. ~n~~n~For further information please visit ~HUD_COLOUR_SOCIAL_CLUB~http://rockstargames.com/gtaonline/charactertransfer~s~*/, 32);
+					TEXT_LABEL_ASSIGN_STRING(&unk7, "PM_MIGRATE_P" /*Returning players can migrate their existing Grand Theft Auto Online characters and progression to their PC.~n~~n~For further information please visit ~HUD_COLOUR_SOCIAL_CLUB~http://rockstargames.com/gtaonline/charactertransfer~s~*/, 32);
 				break;
 		
 			case 0:
@@ -10200,7 +10200,7 @@ void func_355() // Position - 0xAE14 (44564)
 		
 			case 13:
 				TEXT_LABEL_ASSIGN_STRING(&unk, "PM_SAFEALERT" /*Safety and Alerts*/, 24);
-				TEXT_LABEL_ASSIGN_STRING(&unk7, "PM_SAFEALERTBOD" /*Here you will find messages regarding your account, privacy notifications, policy changes, safety and other important updates.~n~~n~For more information and to learn about our foundation of fair play, respect, and player safety, please read our full Community Guidelines at rockstargames.com/community-guidelines.*/, 32);
+				TEXT_LABEL_ASSIGN_STRING(&unk7, "PM_SAFEALERTBOD" /*Here you will find messages regarding your account, privacy notifications, policy changes, safety and other important updates.~n~~n~For more information and to learn about our foundation of fair play, respect, and player safety, please read our full Community Guidelines at rockstargames.com/community-resources/guidelines.*/, 32);
 			
 				if (!IS_BIT_SET(Global_2740054.f_7148, 4))
 					MISC::SET_BIT(&(Global_2740054.f_7148), 4);
@@ -10221,14 +10221,14 @@ void func_355() // Position - 0xAE14 (44564)
 		
 			case 1:
 			case 10:
-				TEXT_LABEL_ASSIGN_STRING(&unk, "PM_MIGRATE" /*Character Transfer*/, 24);
+				TEXT_LABEL_ASSIGN_STRING(&unk, "PM_MIGRATE" /*Profile Migration*/, 24);
 			
 				if (!NETWORK::NETWORK_HAS_SOCIAL_CLUB_ACCOUNT())
-					TEXT_LABEL_ASSIGN_STRING(&unk7, "PM_MIGRATE_P1" /*Returning players can transfer their existing Grand Theft Auto Online characters and progression. ~n~~n~For further information please visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com/gtaonline~s~ ~n~~n~Press ~INPUT_FRONTEND_ACCEPT~ to visit Rockstar Games.*/, 32);
+					TEXT_LABEL_ASSIGN_STRING(&unk7, "PM_MIGRATE_P1" /*Returning players can migrate their existing Grand Theft Auto Online characters and progression to their PC.~n~~n~For further information please visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com/gtaonline~s~ ~n~~n~Press ~INPUT_FRONTEND_ACCEPT~ to visit Rockstar Games.*/, 32);
 				else if (func_385() == 101)
-					TEXT_LABEL_ASSIGN_STRING(&unk7, "HUD_ST_EBAN" /*Your Rockstar Games account is currently banned from Grand Theft Auto Online. You will not be able to transfer your character and progression data until the ban is lifted.*/, 32);
+					TEXT_LABEL_ASSIGN_STRING(&unk7, "HUD_ST_EBAN" /*Your Rockstar Games account is currently banned from Grand Theft Auto Online. You will not be able to migrate your GTA Online profile until the ban is lifted.~n~If you are a GTA+ Member, you will need to manually cancel your Membership.*/, 32);
 				else
-					TEXT_LABEL_ASSIGN_STRING(&unk7, "PM_MIGRATE_P" /*Returning players can transfer their existing Grand Theft Auto Online characters and progression. ~n~~n~For further information please visit ~HUD_COLOUR_SOCIAL_CLUB~http://rockstargames.com/gtaonline/charactertransfer~s~*/, 32);
+					TEXT_LABEL_ASSIGN_STRING(&unk7, "PM_MIGRATE_P" /*Returning players can migrate their existing Grand Theft Auto Online characters and progression to their PC.~n~~n~For further information please visit ~HUD_COLOUR_SOCIAL_CLUB~http://rockstargames.com/gtaonline/charactertransfer~s~*/, 32);
 				break;
 		
 			case 2:
@@ -10613,7 +10613,7 @@ void func_355() // Position - 0xAE14 (44564)
 							if (func_302())
 								TEXT_LABEL_ASSIGN_STRING(&unk7, "PM_INF_CPLB9" /*Save and upload your Playlist.~n~~n~Find your created Playlists under the 'My Playlists' menu or see them on ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com~s~*/, 32);
 							else
-								TEXT_LABEL_ASSIGN_STRING(&unk7, "PM_INF_CPLB9C" /*The Rockstar game services are unavailable right now. Please try again later.*/, 32);
+								TEXT_LABEL_ASSIGN_STRING(&unk7, "PM_INF_CPLB9C" /*Rockstar Games Services are unavailable right now. Please try again later.*/, 32);
 						}
 					}
 					else
@@ -13859,7 +13859,7 @@ void func_444() // Position - 0x10398 (66456)
 {
 	if (!LOBBY::LOBBY_AUTO_MULTIPLAYER_FREEMODE() && !NETWORK::GET_IS_LAUNCH_FROM_LIVE_AREA() && !NETWORK::GET_IS_LIVE_AREA_LAUNCH_WITH_CONTENT() && !func_303())
 	{
-		HUD::SET_WARNING_MESSAGE_WITH_HEADER("PCARD_SYNC_ERROR_TITLE" /*Alert*/, "PCARD_SYNC_ERROR" /*Rockstar Games Online Services are unavailable right now. Please try again later.*/, 2, 0, false, -1, 0, 0, true, 0);
+		HUD::SET_WARNING_MESSAGE_WITH_HEADER("PCARD_SYNC_ERROR_TITLE" /*Alert*/, "PCARD_SYNC_ERROR" /*Rockstar Games Services are unavailable right now. Please try again later.*/, 2, 0, false, -1, 0, 0, true, 0);
 	
 		if (PAD::IS_CONTROL_JUST_RELEASED(FRONTEND_CONTROL, INPUT_FRONTEND_ACCEPT) || NETWORK::NETWORK_SESSION_IS_AWAITING_INVITE_RESPONSE())
 		{
@@ -16711,9 +16711,9 @@ BOOL func_532(BOOL bParam0) // Position - 0x13E03 (81411)
 
 	if (NETWORK::NETWORK_HAS_VALID_ROS_CREDENTIALS() && !NETWORK::UGC_HAS_PERMISSION_TO_WRITE())
 		if (bParam0)
-			HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("FMMC_ENDPUBF" /*Alert*/, "FMMC_ENDPUBFP" /*~a~, "~a~", failed to publish. You are suspended from using this feature due to a violation of our Community Guidelines. ~n~ Please visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com/community-guidelines~s~ for more information.*/, 2, "", false, -1, 2, additionalTextInfoLine1, &(Global_4718592.f_131623), true, 0);
+			HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("FMMC_ENDPUBF" /*Alert*/, "FMMC_ENDPUBFP" /*~a~, "~a~", failed to publish. You are suspended from using this feature due to a violation of our Community Guidelines. ~n~ Please visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com/community-resources/guidelines~s~ for more information.*/, 2, "", false, -1, 2, additionalTextInfoLine1, &(Global_4718592.f_131623), true, 0);
 		else
-			HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("FMMC_ENDPUBF" /*Alert*/, "FMMC_ENDSAVFP" /*~a~, "~a~", failed to save. You are suspended from using this feature due to a violation of our Community Guidelines. ~n~ Please visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com/community-guidelines~s~ for more information.*/, 2, "", false, -1, 2, additionalTextInfoLine1, &(Global_4718592.f_131623), true, 0);
+			HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("FMMC_ENDPUBF" /*Alert*/, "FMMC_ENDSAVFP" /*~a~, "~a~", failed to save. You are suspended from using this feature due to a violation of our Community Guidelines. ~n~ Please visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com/community-resources/guidelines~s~ for more information.*/, 2, "", false, -1, 2, additionalTextInfoLine1, &(Global_4718592.f_131623), true, 0);
 	else if (bParam0)
 		HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("FMMC_ENDPUBF" /*Alert*/, "FMMC_ENDPUBF2" /*~a~, "~a~", failed to publish. The Rockstar cloud servers are unavailable right now. Please try again later.*/, 2, "", false, -1, 2, additionalTextInfoLine1, &(Global_4718592.f_131623), true, 0);
 	else
@@ -26974,7 +26974,7 @@ void func_650() // Position - 0x24CA7 (150695)
 			if (iLocal_299.f_4)
 				HUD::SET_WARNING_MESSAGE_WITH_HEADER("PM_COMPL" /*Complete*/, "PM_SAVED1" /*Your Playlist has been uploaded.*/, 2, 0, false, -1, 0, 0, true, 0);
 			else
-				HUD::SET_WARNING_MESSAGE_WITH_HEADER("PM_INF_QMFT" /*Alert*/, "PM_SAVED1N" /*Failed to save your Playlist. The Rockstar game services are unavailable right now. Please try again later.*/, 2, 0, false, -1, 0, 0, true, 0);
+				HUD::SET_WARNING_MESSAGE_WITH_HEADER("PM_INF_QMFT" /*Alert*/, "PM_SAVED1N" /*Failed to save your Playlist. Rockstar Games Services are unavailable right now. Please try again later.*/, 2, 0, false, -1, 0, 0, true, 0);
 		
 			if (PAD::IS_CONTROL_JUST_RELEASED(FRONTEND_CONTROL, INPUT_FRONTEND_ACCEPT) || NETWORK::NETWORK_SESSION_IS_AWAITING_INVITE_RESPONSE())
 			{
@@ -30031,7 +30031,7 @@ void func_720() // Position - 0x29159 (168281)
 		{
 			case 0:
 				if (!NETWORK::IS_COMMERCE_STORE_OPEN())
-					if (SOCIALCLUB::SC_PAUSE_NEWS_INIT_STARTER_PACK(func_389()))
+					if (unk_0xE4F6E8D07A2F0F51(func_389()))
 						iLocal_1273 = 1;
 				break;
 		
@@ -33250,7 +33250,7 @@ char* func_753(int iParam0) // Position - 0x2ED65 (191845)
 	switch (iParam0)
 	{
 		case -1:
-			return "UGC_FL_UNEX" /*The Rockstar game services are unavailable right now. Please try again later.*/;
+			return "UGC_FL_UNEX" /*Rockstar Games Services are unavailable right now. Please try again later.*/;
 	
 		case 0:
 			return "";
@@ -33298,7 +33298,7 @@ char* func_753(int iParam0) // Position - 0x2ED65 (191845)
 		
 	}
 
-	return "UGC_FL_UNEX" /*The Rockstar game services are unavailable right now. Please try again later.*/;
+	return "UGC_FL_UNEX" /*Rockstar Games Services are unavailable right now. Please try again later.*/;
 }
 
 char* func_754(int iParam0) // Position - 0x2EE3A (192058)
@@ -33326,7 +33326,7 @@ char* func_754(int iParam0) // Position - 0x2EE3A (192058)
 		else
 			return "CONT_FRIEN" /*Your profile only has permissions for friend content.*/;
 
-	return "CLOUD_LD_FL4" /*Unable to Join. The session you have tried to join is using content created by another player.*/;
+	return "CLOUD_LD_FL4" /*Unable to Join. There was an error loading the content in this session.*/;
 }
 
 BOOL func_755(int iParam0) // Position - 0x2EF05 (192261)
@@ -82092,7 +82092,7 @@ char* func_1428(int iParam0) // Position - 0x9607D (614525)
 					return "PIM_S_FHAN" /*McKenzie Field Hangar*/;
 			
 				case 41:
-					return "PIM_S_CWAS";
+					return "PIM_S_CWAS" /*Hands On Car Wash*/;
 			
 				case 0:
 				case 4:
@@ -91435,7 +91435,7 @@ void func_1740() // Position - 0xA3CA8 (670888)
 				{
 					if (func_299())
 					{
-						func_307(true, 0, 3, "HUD_LOADSCR_D" /*The Rockstar game services are temporarily unavailable.*/, "PM_DOPROT" /*GTA Online*/, 0, "", "", -1, 0, false);
+						func_307(true, 0, 3, "HUD_LOADSCR_D" /*Rockstar Games Services are temporarily unavailable.*/, "PM_DOPROT" /*GTA Online*/, 0, "", "", -1, 0, false);
 						MISC::SET_BIT(&iLocal_1070, 0);
 					
 						if (!HUD::PAUSE_MENU_IS_CONTEXT_ACTIVE(joaat("HIDE_ACCEPTBUTTON")))
@@ -91446,7 +91446,7 @@ void func_1740() // Position - 0xA3CA8 (670888)
 					}
 					else
 					{
-						func_307(true, 0, 3, "HUD_LOADMAIN" /*The Rockstar game services are temporarily unavailable due to maintenance.*/, "PM_DOPROT" /*GTA Online*/, 0, "", "", -1, 0, false);
+						func_307(true, 0, 3, "HUD_LOADMAIN" /*Rockstar Games Services are temporarily unavailable due to maintenance.*/, "PM_DOPROT" /*GTA Online*/, 0, "", "", -1, 0, false);
 						MISC::SET_BIT(&iLocal_1070, 0);
 					
 						if (!HUD::PAUSE_MENU_IS_CONTEXT_ACTIVE(joaat("HIDE_ACCEPTBUTTON")))
@@ -91458,7 +91458,7 @@ void func_1740() // Position - 0xA3CA8 (670888)
 				}
 				else if (num == 17)
 				{
-					func_307(true, 0, 3, "SCLB_NO_ROS" /*Rockstar Games Online Services are unavailable right now. Please try again later.*/, "PM_DOPROT" /*GTA Online*/, 0, "", "", -1, 0, false);
+					func_307(true, 0, 3, "SCLB_NO_ROS" /*Rockstar Games Services are unavailable right now. Please try again later.*/, "PM_DOPROT" /*GTA Online*/, 0, "", "", -1, 0, false);
 					MISC::SET_BIT(&iLocal_1070, 0);
 				
 					if (!HUD::PAUSE_MENU_IS_CONTEXT_ACTIVE(joaat("HIDE_ACCEPTBUTTON")))
@@ -91469,7 +91469,7 @@ void func_1740() // Position - 0xA3CA8 (670888)
 				}
 				else if (num == 18)
 				{
-					func_307(true, 0, 3, "SCLB_NO_ROS" /*Rockstar Games Online Services are unavailable right now. Please try again later.*/, "PM_DOPROT" /*GTA Online*/, 0, "", "", -1, 0, false);
+					func_307(true, 0, 3, "SCLB_NO_ROS" /*Rockstar Games Services are unavailable right now. Please try again later.*/, "PM_DOPROT" /*GTA Online*/, 0, "", "", -1, 0, false);
 					MISC::SET_BIT(&iLocal_1070, 0);
 				
 					if (!HUD::PAUSE_MENU_IS_CONTEXT_ACTIVE(joaat("HIDE_ACCEPTBUTTON")))
@@ -91528,7 +91528,7 @@ void func_1740() // Position - 0xA3CA8 (670888)
 		{
 			if (num == 3)
 			{
-				func_307(true, 0, 3, "HUD_LOADSCR_D" /*The Rockstar game services are temporarily unavailable.*/, "PM_DOPROT" /*GTA Online*/, 0, "", "", -1, 0, false);
+				func_307(true, 0, 3, "HUD_LOADSCR_D" /*Rockstar Games Services are temporarily unavailable.*/, "PM_DOPROT" /*GTA Online*/, 0, "", "", -1, 0, false);
 				MISC::SET_BIT(&iLocal_1070, 0);
 			
 				if (!HUD::PAUSE_MENU_IS_CONTEXT_ACTIVE(joaat("HIDE_ACCEPTBUTTON")))
@@ -91541,7 +91541,7 @@ void func_1740() // Position - 0xA3CA8 (670888)
 			{
 				if (func_299())
 				{
-					func_307(true, 0, 3, "HUD_LOADMAIN" /*The Rockstar game services are temporarily unavailable due to maintenance.*/, "PM_DOPROT" /*GTA Online*/, 0, "", "", -1, 0, false);
+					func_307(true, 0, 3, "HUD_LOADMAIN" /*Rockstar Games Services are temporarily unavailable due to maintenance.*/, "PM_DOPROT" /*GTA Online*/, 0, "", "", -1, 0, false);
 					MISC::SET_BIT(&iLocal_1070, 0);
 				
 					if (!HUD::PAUSE_MENU_IS_CONTEXT_ACTIVE(joaat("HIDE_ACCEPTBUTTON")))
@@ -91552,7 +91552,7 @@ void func_1740() // Position - 0xA3CA8 (670888)
 				}
 				else
 				{
-					func_307(true, 0, 3, "HUD_LOADMAIN" /*The Rockstar game services are temporarily unavailable due to maintenance.*/, "PM_DOPROT" /*GTA Online*/, 0, "", "", -1, 0, false);
+					func_307(true, 0, 3, "HUD_LOADMAIN" /*Rockstar Games Services are temporarily unavailable due to maintenance.*/, "PM_DOPROT" /*GTA Online*/, 0, "", "", -1, 0, false);
 					MISC::SET_BIT(&iLocal_1070, 0);
 				
 					if (!HUD::PAUSE_MENU_IS_CONTEXT_ACTIVE(joaat("HIDE_ACCEPTBUTTON")))
@@ -91564,7 +91564,7 @@ void func_1740() // Position - 0xA3CA8 (670888)
 			}
 			else if (num == 17)
 			{
-				func_307(true, 0, 3, "SCLB_NO_ROS" /*Rockstar Games Online Services are unavailable right now. Please try again later.*/, "PM_DOPROT" /*GTA Online*/, 0, "", "", -1, 0, false);
+				func_307(true, 0, 3, "SCLB_NO_ROS" /*Rockstar Games Services are unavailable right now. Please try again later.*/, "PM_DOPROT" /*GTA Online*/, 0, "", "", -1, 0, false);
 				MISC::SET_BIT(&iLocal_1070, 0);
 			
 				if (!HUD::PAUSE_MENU_IS_CONTEXT_ACTIVE(joaat("HIDE_ACCEPTBUTTON")))
@@ -91575,7 +91575,7 @@ void func_1740() // Position - 0xA3CA8 (670888)
 			}
 			else if (num == 18)
 			{
-				func_307(true, 0, 3, "SCLB_NO_ROS" /*Rockstar Games Online Services are unavailable right now. Please try again later.*/, "PM_DOPROT" /*GTA Online*/, 0, "", "", -1, 0, false);
+				func_307(true, 0, 3, "SCLB_NO_ROS" /*Rockstar Games Services are unavailable right now. Please try again later.*/, "PM_DOPROT" /*GTA Online*/, 0, "", "", -1, 0, false);
 				MISC::SET_BIT(&iLocal_1070, 0);
 			
 				if (!HUD::PAUSE_MENU_IS_CONTEXT_ACTIVE(joaat("HIDE_ACCEPTBUTTON")))
@@ -91679,13 +91679,13 @@ char* func_1741(int iParam0) // Position - 0xA43D7 (672727)
 					flag2 = true;
 		
 			if (flag3)
-				return "HUD_PERM" /*Your profile does not have the correct permissions to access this functionality.*/;
+				return "HUD_PERM" /*Your profile does not have permission to access GTA Online.*/;
 			else if (flag2)
 				return "HUD_XBGOLD";
 			else if (flag)
 				return "HUD_PSPLUS3" /*Press ~INPUT_FRONTEND_ACCEPT~ to join GTA Online.*/;
 			else
-				return "HUD_PERM" /*Your profile does not have the correct permissions to access this functionality.*/;
+				return "HUD_PERM" /*Your profile does not have permission to access GTA Online.*/;
 			break;
 	}
 
@@ -94077,10 +94077,10 @@ char* func_1780(int iParam0) // Position - 0xA8DD7 (691671)
 			return "PM_PANE_PICK" /*Account Picker*/;
 	
 		case 1:
-			return "PM_MIGRATE" /*Character Transfer*/;
+			return "PM_MIGRATE" /*Profile Migration*/;
 	
 		case 10:
-			return "PM_MIGRATE" /*Character Transfer*/;
+			return "PM_MIGRATE" /*Profile Migration*/;
 	
 		case 21:
 			return "PM_EXIT_GAME" /*Quit Game*/;
@@ -94298,7 +94298,7 @@ void func_1790() // Position - 0xA90D5 (692437)
 	if (flag)
 	{
 		if (MISC::ARE_STRINGS_EQUAL(string1, ""))
-			string1 = "UGC_FL_UNEX" /*The Rockstar game services are unavailable right now. Please try again later.*/;
+			string1 = "UGC_FL_UNEX" /*Rockstar Games Services are unavailable right now. Please try again later.*/;
 	
 		HUD::SET_WARNING_MESSAGE_WITH_HEADER("PCARD_SYNC_ERROR_TITLE" /*Alert*/, string1, 2, 0, false, -1, 0, 0, true, 0);
 	

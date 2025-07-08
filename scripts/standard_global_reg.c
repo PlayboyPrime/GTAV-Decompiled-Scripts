@@ -102023,10 +102023,10 @@ void func_682() // Position - 0x831F2 (537074)
 	func_689(204, 0, 1591, "CELL_OSCAR_G_N" /*Oscar*/, "CELL_OSCAR_G_P" /*CHAR_OSCAR2*/, "CELL_400" /*Contact*/, 180, 4, "NO_ANSMG", 7, 16, 0, 0, 0, "CELL_1063" /*2735550125*/, 4);
 	func_689(205, 0, 1050, "CELL_JODI_M_N" /*Jodi*/, "CELL_JODI_M_P" /*CHAR_JODI*/, "CELL_400" /*Contact*/, 181, 4, "NO_ANSMG", 7, 16, 0, 0, 0, "CELL_1063" /*2735550125*/, 4);
 	func_689(206, 0, 1050, "CELL_JOD_PAV_N" /*Garment Factory Conference*/, "CELL_JOD_PAV_P" /*CHAR_DEFAULT*/, "CELL_489" /*...*/, 182, 4, "NO_ANSMSG", 7, 16, 0, 0, 0, "CELL_1091" /*Unknown*/, 4);
-	func_689(207, 0, 850, "CELL_GRUPPE_S_N", "CELL_GRUPPE_S_P", "CELL_400" /*Contact*/, 183, 4, "NO_ANSMG", 7, 16, 0, 0, 0, "CELL_1063" /*2735550125*/, 4);
-	func_689(208, 0, 270, "CELL_BOBCAT_N", "CELL_BOBCAT_P", "CELL_400" /*Contact*/, 184, 4, "NO_ANSMG", 7, 16, 0, 0, 0, "CELL_1063" /*2735550125*/, 4);
-	func_689(209, 0, 1363, "CELL_MED_C_N", "CELL_MED_C_P", "CELL_400" /*Contact*/, 185, 4, "NO_ANSMG", 7, 16, 0, 0, 0, "CELL_1063" /*2735550125*/, 4);
-	func_689(210, 0, 1850, "CELL_RAF_N", "CELL_RAF_P", "CELL_400" /*Contact*/, 183, 4, "NO_ANSMG", 7, 16, 0, 0, 0, "CELL_1063" /*2735550125*/, 4);
+	func_689(207, 0, 850, "CELL_GRUPPE_S_N" /*Gruppe Sechs*/, "CELL_GRUPPE_S_P" /*CHAR_GRUPPE_SECHS_SECURITY*/, "CELL_400" /*Contact*/, 183, 4, "NO_ANSMG", 7, 16, 0, 0, 0, "CELL_1063" /*2735550125*/, 4);
+	func_689(208, 0, 270, "CELL_BOBCAT_N" /*Bobcat Security*/, "CELL_BOBCAT_P" /*CHAR_BOBCAT_SECURITY*/, "CELL_400" /*Contact*/, 184, 4, "NO_ANSMG", 7, 16, 0, 0, 0, "CELL_1063" /*2735550125*/, 4);
+	func_689(209, 0, 1363, "CELL_MED_C_N" /*QuickiePharm*/, "CELL_MED_C_P" /*CHAR_MEDICAL_COURIER*/, "CELL_400" /*Contact*/, 185, 4, "NO_ANSMG", 7, 16, 0, 0, 0, "CELL_1063" /*2735550125*/, 4);
+	func_689(210, 0, 1850, "CELL_RAF_N" /*Raf*/, "CELL_RAF_P" /*CHAR_SM25_RAF*/, "CELL_400" /*Contact*/, 183, 4, "NO_ANSMG", 7, 16, 0, 0, 0, "CELL_1063" /*2735550125*/, 4);
 	func_689(128, 0, 430, "CELL_130" /*Detonate*/, "CELL_330" /*CHAR_DETONATEBOMB*/, "CELL_430" /*Action*/, 125, 4, "NO_ANSMG", 7, 16, 0, 0, 0, "CELL_1091" /*Unknown*/, 4);
 	func_689(129, 0, 1020, "CELL_132" /*Jay Norris*/, "CELL_330" /*CHAR_DETONATEBOMB*/, "CELL_430" /*Action*/, 126, 4, "DET_APH1", 7, 16, 0, 0, 0, "CELL_1091" /*Unknown*/, 4);
 	func_689(130, 0, 560, "CELL_131" /*Emergency Services*/, "CELL_331" /*CHAR_CALL911*/, "CELL_431" /*Services*/, 127, 4, "NO_ANSMSG", 7, 16, 2, 2, 2, "CELL_9011" /*911*/, 4);

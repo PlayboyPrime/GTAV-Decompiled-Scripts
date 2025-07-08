@@ -35318,18 +35318,18 @@ int func_583(int iParam0, char* sParam1, int iParam2) // Position - 0x216FA (136
 	switch (iParam0)
 	{
 		case 174:
-			str = "CWAS_PROP_ET";
-			str2 = "CWAS_PROP_ET";
+			str = "CWAS_PROP_ET" /*HANDS ON CAR WASH*/;
+			str2 = "CWAS_PROP_ET" /*HANDS ON CAR WASH*/;
 			break;
 	
 		case 175:
-			str = "WSHOP_PROP_ET";
-			str2 = "WSHOP_PROP_ET";
+			str = "WSHOP_PROP_ET" /*SMOKE ON THE WATER*/;
+			str2 = "WSHOP_PROP_ET" /*SMOKE ON THE WATER*/;
 			break;
 	
 		case 176:
-			str = "HELIT_PROP_ET";
-			str2 = "HELIT_PROP_ET";
+			str = "HELIT_PROP_ET" /*HIGGINS HELITOURS*/;
+			str2 = "HELIT_PROP_ET" /*HIGGINS HELITOURS*/;
 			break;
 	}
 
@@ -35409,13 +35409,13 @@ char* func_585(int iParam0) // Position - 0x2189D (137373)
 	switch (iParam0)
 	{
 		case 1:
-			return "CWAS_NME_1";
+			return "CWAS_NME_1" /*HANDS ON CAR WASH*/;
 	
 		case 3:
-			return "WSHOP_NME_1";
+			return "WSHOP_NME_1" /*SMOKE ON THE WATER*/;
 	
 		case 2:
-			return "HELIT_NME_1";
+			return "HELIT_NME_1" /*HIGGINS HELITOURS*/;
 	
 		default:
 		
@@ -39024,24 +39024,24 @@ void func_750(int iParam0, char* sParam1, var uParam2, var uParam3, var uParam4)
 	switch (iParam0)
 	{
 		case 174:
-			TEXT_LABEL_ASSIGN_STRING(sParam1, "CWAS_EXT_T", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "CWAS_EXT_T" /*HANDS ON CAR WASH*/, 64);
 			*uParam3 = 2;
-			uParam2->[0] = "CWAS_E_O_0";
-			uParam2->[1] = "CWAS_E_O_1";
+			uParam2->[0] = "CWAS_E_O_0" /*Exit*/;
+			uParam2->[1] = "CWAS_E_O_1" /*All Exit*/;
 			break;
 	
 		case 175:
-			TEXT_LABEL_ASSIGN_STRING(sParam1, "WSHOP_EXT_T", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "WSHOP_EXT_T" /*SMOKE ON THE WATER*/, 64);
 			*uParam3 = 2;
-			uParam2->[0] = "WSHOP_E_O_0";
-			uParam2->[1] = "WSHOP_E_O_1";
+			uParam2->[0] = "WSHOP_E_O_0" /*Exit*/;
+			uParam2->[1] = "WSHOP_E_O_1" /*All Exit*/;
 			break;
 	
 		case 176:
-			TEXT_LABEL_ASSIGN_STRING(sParam1, "HELIT_EXT_T", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "HELIT_EXT_T" /*HIGGINS HELITOURS*/, 64);
 			*uParam3 = 2;
-			uParam2->[0] = "HELIT_E_O_0";
-			uParam2->[1] = "HELIT_E_O_1";
+			uParam2->[0] = "HELIT_E_O_0" /*Exit*/;
+			uParam2->[1] = "HELIT_E_O_1" /*All Exit*/;
 			break;
 	
 		default:
@@ -40525,13 +40525,13 @@ char* func_773(int iParam0, var uParam1, var uParam2, var uParam3) // Position -
 		switch (iParam0)
 		{
 			case 174:
-				return "CWAS_KICK_A";
+				return "CWAS_KICK_A" /*You no longer have access to the Hands On Car Wash.*/;
 		
 			case 176:
-				return "HELIT_KICK_A";
+				return "HELIT_KICK_A" /*You no longer have access to Higgins Helitours.*/;
 		
 			case 175:
-				return "WSHOP_KICK_A";
+				return "WSHOP_KICK_A" /*You no longer have access to Smoke on the Water.*/;
 		}
 	}
 
@@ -40540,13 +40540,13 @@ char* func_773(int iParam0, var uParam1, var uParam2, var uParam3) // Position -
 		switch (iParam0)
 		{
 			case 174:
-				return "CWAS_KICK_B";
+				return "CWAS_KICK_B" /*You no longer have access to the Hands On Car Wash as the owner has left the game.*/;
 		
 			case 176:
-				return "HELIT_KICK_B";
+				return "HELIT_KICK_B" /*You no longer have access to Higgins Helitours as the owner has left the game.*/;
 		
 			case 175:
-				return "WSHOP_KICK_B";
+				return "WSHOP_KICK_B" /*You no longer have access to Smoke on the Water as the owner has left the game.*/;
 		}
 	}
 
@@ -40555,13 +40555,13 @@ char* func_773(int iParam0, var uParam1, var uParam2, var uParam3) // Position -
 		switch (iParam0)
 		{
 			case 174:
-				return "CWAS_KICK_C";
+				return "CWAS_KICK_C" /*Owner has requested all to leave the Hands On Car Wash.*/;
 		
 			case 176:
-				return "HELIT_KICK_C";
+				return "HELIT_KICK_C" /*Owner has requested all to leave Higgins Helitours.*/;
 		
 			case 175:
-				return "WSHOP_KICK_C";
+				return "WSHOP_KICK_C" /*Owner has requested all to leave Smoke on the Water.*/;
 		}
 	}
 
@@ -40570,13 +40570,13 @@ char* func_773(int iParam0, var uParam1, var uParam2, var uParam3) // Position -
 		switch (iParam0)
 		{
 			case 174:
-				return "CWAS_KICK_D";
+				return "CWAS_KICK_D" /*You no longer have access to the Hands On Car Wash as you became the Beast.*/;
 		
 			case 176:
-				return "HELIT_KICK_D";
+				return "HELIT_KICK_D" /*You no longer have access to Higgins Helitours as you became the Beast.*/;
 		
 			case 175:
-				return "WSHOP_KICK_D";
+				return "WSHOP_KICK_D" /*You no longer have access to Smoke on the Water as you became the Beast.*/;
 		}
 	}
 
@@ -41354,15 +41354,15 @@ void func_812(int iParam0, char* sParam1, var uParam2, var uParam3, var uParam4)
 	switch (iParam0)
 	{
 		case 174:
-			TEXT_LABEL_ASSIGN_STRING(sParam1, "CWAS_PROP_ET", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "CWAS_PROP_ET" /*HANDS ON CAR WASH*/, 64);
 			break;
 	
 		case 176:
-			TEXT_LABEL_ASSIGN_STRING(sParam1, "HELIT_PROP_ET", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "HELIT_PROP_ET" /*HIGGINS HELITOURS*/, 64);
 			break;
 	
 		case 175:
-			TEXT_LABEL_ASSIGN_STRING(sParam1, "WSHOP_PROP_ET", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "WSHOP_PROP_ET" /*SMOKE ON THE WATER*/, 64);
 			break;
 	}
 
@@ -41487,19 +41487,19 @@ char* func_821(int iParam0, var uParam1, var uParam2) // Position - 0x2971D (169
 		switch (iParam0)
 		{
 			case 174:
-				return "SI_EXIT_BLCK34A";
+				return "SI_EXIT_BLCK34A" /*You can't leave the Hands On Car Wash while on call. You can cancel this via the Quick Join app on the phone.*/;
 		
 			case 176:
-				return "SI_EXIT_BLCK35A";
+				return "SI_EXIT_BLCK35A" /*You can't leave Higgins Helitours while on call. You can cancel this via the Quick Join app on the phone.*/;
 		
 			case 175:
-				return "SI_EXIT_BLCK36A";
+				return "SI_EXIT_BLCK36A" /*You can't leave Smoke on the Water while on call. You can cancel this via the Quick Join app on the phone.*/;
 		
 			default:
 			
 		}
 	
-		return "SI_EXIT_BLCK34A";
+		return "SI_EXIT_BLCK34A" /*You can't leave the Hands On Car Wash while on call. You can cancel this via the Quick Join app on the phone.*/;
 	}
 
 	return "";
@@ -41540,16 +41540,16 @@ char* func_826(int iParam0, var uParam1, var uParam2) // Position - 0x297E2 (169
 		switch (iParam0)
 		{
 			case 174:
-				return "SI_ENTR_BLCK34A";
+				return "SI_ENTR_BLCK34A" /*You can't enter the Hands On Car Wash while on call. You can cancel this via the Quick Join app on the phone.*/;
 		
 			case 176:
-				return "SI_ENTR_BLCK35A";
+				return "SI_ENTR_BLCK35A" /*You can't enter Higgins Helitours while on call. You can cancel this via the Quick Join app on the phone.*/;
 		
 			case 175:
-				return "SI_ENTR_BLCK36A";
+				return "SI_ENTR_BLCK36A" /*You can't enter Smoke on the Water while on call. You can cancel this via the Quick Join app on the phone.*/;
 		}
 	
-		return "SI_ENTR_BLCK34A";
+		return "SI_ENTR_BLCK34A" /*You can't enter the Hands On Car Wash while on call. You can cancel this via the Quick Join app on the phone.*/;
 	}
 
 	if (func_230(PLAYER::PLAYER_ID(), false))
@@ -41566,43 +41566,43 @@ char* func_826(int iParam0, var uParam1, var uParam2) // Position - 0x297E2 (169
 						switch (num)
 						{
 							case 192:
-								return "CWAS_BLCK_A";
+								return "CWAS_BLCK_A" /*You can't enter the Hands On Car Wash while resupplying another business.*/;
 						
 							case 190:
-								return "CWAS_BLCK_B";
+								return "CWAS_BLCK_B" /*You can't enter the Hands On Car Wash while selling goods from another business.*/;
 						
 							case 167:
-								return "CWAS_BLCK_C";
+								return "CWAS_BLCK_C" /*You can't enter the Hands On Car Wash while acquiring goods for a Warehouse.*/;
 						
 							case 168:
-								return "CWAS_BLCK_D";
+								return "CWAS_BLCK_D" /*You can't enter the Hands On Car Wash while selling goods from a Warehouse.*/;
 						
 							case 178:
-								return "CWAS_BLCK_E";
+								return "CWAS_BLCK_E" /*You can't enter the Hands On Car Wash while acquiring a vehicle for a Warehouse.*/;
 						
 							case 188:
-								return "CWAS_BLCK_F";
+								return "CWAS_BLCK_F" /*You can't enter the Hands On Car Wash while selling vehicles from a Warehouse.*/;
 						
 							case 225:
-								return "CWAS_BLCK_G";
+								return "CWAS_BLCK_G" /*You can't enter the Hands On Car Wash while acquiring goods for a Bunker.*/;
 						
 							case 226:
-								return "CWAS_BLCK_H";
+								return "CWAS_BLCK_H" /*You can't enter the Hands On Car Wash while selling goods from a Bunker.*/;
 						
 							case 229:
-								return "CWAS_BLCK_I";
+								return "CWAS_BLCK_I" /*You can't enter the Hands On Car Wash while acquiring goods for a Hangar.*/;
 						
 							case 230:
-								return "CWAS_BLCK_J";
+								return "CWAS_BLCK_J" /*You can't enter the Hands On Car Wash while selling goods from a Hangar.*/;
 						
 							case 237:
-								return "CWAS_BLCK_O";
+								return "CWAS_BLCK_O" /*You can't enter the Hands On Car Wash while taking part in Nightclub business.*/;
 						
 							case 243:
-								return "CWAS_BLCK_P";
+								return "CWAS_BLCK_P" /*You can't enter the Hands On Car Wash while working for Ms. Baker.*/;
 						
 							case 271:
-								return "CWAS_BLCK_U";
+								return "CWAS_BLCK_U" /*You can't enter the Hands On Car Wash while conducting Auto Shop business.*/;
 						
 							case 355:
 							case 354:
@@ -41610,7 +41610,7 @@ char* func_826(int iParam0, var uParam1, var uParam2) // Position - 0x297E2 (169
 								return "";
 						
 							default:
-								return "CWAS_BLCK_X";
+								return "CWAS_BLCK_X" /*You can't enter the Hands On Car Wash while on a mission.*/;
 						}
 					}
 					else
@@ -41625,43 +41625,43 @@ char* func_826(int iParam0, var uParam1, var uParam2) // Position - 0x297E2 (169
 						switch (num)
 						{
 							case 192:
-								return "HELIT_BLCK_A";
+								return "HELIT_BLCK_A" /*You can't enter Higgins Helitours while resupplying another business.*/;
 						
 							case 190:
-								return "HELIT_BLCK_B";
+								return "HELIT_BLCK_B" /*You can't enter Higgins Helitours while selling goods from another business.*/;
 						
 							case 167:
-								return "HELIT_BLCK_C";
+								return "HELIT_BLCK_C" /*You can't enter Higgins Helitours while acquiring goods for a Warehouse.*/;
 						
 							case 168:
-								return "HELIT_BLCK_D";
+								return "HELIT_BLCK_D" /*You can't enter Higgins Helitours while selling goods from a Warehouse.*/;
 						
 							case 178:
-								return "HELIT_BLCK_E";
+								return "HELIT_BLCK_E" /*You can't enter Higgins Helitours while acquiring a vehicle for a Warehouse.*/;
 						
 							case 188:
-								return "HELIT_BLCK_F";
+								return "HELIT_BLCK_F" /*You can't enter Higgins Helitours while selling vehicles from a Warehouse.*/;
 						
 							case 225:
-								return "HELIT_BLCK_G";
+								return "HELIT_BLCK_G" /*You can't enter Higgins Helitours while acquiring goods for a Bunker.*/;
 						
 							case 226:
-								return "HELIT_BLCK_H";
+								return "HELIT_BLCK_H" /*You can't enter Higgins Helitours while selling goods from a Bunker.*/;
 						
 							case 229:
-								return "HELIT_BLCK_I";
+								return "HELIT_BLCK_I" /*You can't enter Higgins Helitours while acquiring goods for a Hangar.*/;
 						
 							case 230:
-								return "HELIT_BLCK_J";
+								return "HELIT_BLCK_J" /*You can't enter Higgins Helitours while selling goods from a Hangar.*/;
 						
 							case 237:
-								return "HELIT_BLCK_O";
+								return "HELIT_BLCK_O" /*You can't enter Higgins Helitours while taking part in Nightclub business.*/;
 						
 							case 243:
-								return "HELIT_BLCK_P";
+								return "HELIT_BLCK_P" /*You can't enter Higgins Helitours while working for Ms. Baker.*/;
 						
 							case 271:
-								return "HELIT_BLCK_U";
+								return "HELIT_BLCK_U" /*You can't enter Higgins Helitours while conducting Auto Shop business.*/;
 						
 							case 357:
 							case 356:
@@ -41669,7 +41669,7 @@ char* func_826(int iParam0, var uParam1, var uParam2) // Position - 0x297E2 (169
 								return "";
 						
 							default:
-								return "HELIT_BLCK_X";
+								return "HELIT_BLCK_X" /*You can't enter Higgins Helitours while on a mission.*/;
 						}
 					}
 					else
@@ -41684,43 +41684,43 @@ char* func_826(int iParam0, var uParam1, var uParam2) // Position - 0x297E2 (169
 						switch (num)
 						{
 							case 192:
-								return "WSHOP_BLCK_A";
+								return "WSHOP_BLCK_A" /*You can't enter Smoke on the Water while resupplying another business.*/;
 						
 							case 190:
-								return "WSHOP_BLCK_B";
+								return "WSHOP_BLCK_B" /*You can't enter Smoke on the Water while selling goods from another business.*/;
 						
 							case 167:
-								return "WSHOP_BLCK_C";
+								return "WSHOP_BLCK_C" /*You can't enter Smoke on the Water while acquiring goods for a Warehouse.*/;
 						
 							case 168:
-								return "WSHOP_BLCK_D";
+								return "WSHOP_BLCK_D" /*You can't enter Smoke on the Water while selling goods from a Warehouse.*/;
 						
 							case 178:
-								return "WSHOP_BLCK_E";
+								return "WSHOP_BLCK_E" /*You can't enter Smoke on the Water while acquiring a vehicle for a Warehouse.*/;
 						
 							case 188:
-								return "WSHOP_BLCK_F";
+								return "WSHOP_BLCK_F" /*You can't enter Smoke on the Water while selling vehicles from a Warehouse.*/;
 						
 							case 225:
-								return "WSHOP_BLCK_G";
+								return "WSHOP_BLCK_G" /*You can't enter Smoke on the Water while acquiring goods for a Bunker.*/;
 						
 							case 226:
-								return "WSHOP_BLCK_H";
+								return "WSHOP_BLCK_H" /*You can't enter Smoke on the Water while selling goods from a Bunker.*/;
 						
 							case 229:
-								return "WSHOP_BLCK_I";
+								return "WSHOP_BLCK_I" /*You can't enter Smoke on the Water while acquiring goods for a Hangar.*/;
 						
 							case 230:
-								return "WSHOP_BLCK_J";
+								return "WSHOP_BLCK_J" /*You can't enter Smoke on the Water while selling goods from a Hangar.*/;
 						
 							case 237:
-								return "WSHOP_BLCK_O";
+								return "WSHOP_BLCK_O" /*You can't enter Smoke on the Water while taking part in Nightclub business.*/;
 						
 							case 243:
-								return "WSHOP_BLCK_P";
+								return "WSHOP_BLCK_P" /*You can't enter Smoke on the Water while working for Ms. Baker.*/;
 						
 							case 271:
-								return "WSHOP_BLCK_U";
+								return "WSHOP_BLCK_U" /*You can't enter Smoke on the Water while conducting Auto Shop business.*/;
 						
 							case 359:
 							case 358:
@@ -41728,7 +41728,7 @@ char* func_826(int iParam0, var uParam1, var uParam2) // Position - 0x297E2 (169
 								return "";
 						
 							default:
-								return "WSHOP_BLCK_X";
+								return "WSHOP_BLCK_X" /*You can't enter Smoke on the Water while on a mission.*/;
 						}
 					}
 					else
@@ -41738,7 +41738,7 @@ char* func_826(int iParam0, var uParam1, var uParam2) // Position - 0x297E2 (169
 					break;
 			}
 		
-			return "CWAS_BLCK_X";
+			return "CWAS_BLCK_X" /*You can't enter the Hands On Car Wash while on a mission.*/;
 		}
 	}
 
@@ -41747,16 +41747,16 @@ char* func_826(int iParam0, var uParam1, var uParam2) // Position - 0x297E2 (169
 		switch (iParam0)
 		{
 			case 174:
-				return "CWAS_BLCK_K";
+				return "CWAS_BLCK_K" /*You can't enter the Hands On Car Wash with a prostitute.*/;
 		
 			case 176:
-				return "HELIT_BLCK_K";
+				return "HELIT_BLCK_K" /*You can't enter Higgins Helitours with a prostitute.*/;
 		
 			case 175:
-				return "WSHOP_BLCK_K";
+				return "WSHOP_BLCK_K" /*You can't enter Smoke on the Water with a prostitute.*/;
 		}
 	
-		return "CWAS_BLCK_K";
+		return "CWAS_BLCK_K" /*You can't enter the Hands On Car Wash with a prostitute.*/;
 	}
 
 	if (func_829())
@@ -41767,16 +41767,16 @@ char* func_826(int iParam0, var uParam1, var uParam2) // Position - 0x297E2 (169
 		switch (iParam0)
 		{
 			case 174:
-				return "CWAS_BLCK_L";
+				return "CWAS_BLCK_L" /*You can't access the Hands On Car Wash as the Beast.*/;
 		
 			case 176:
-				return "HELIT_BLCK_L";
+				return "HELIT_BLCK_L" /*You can't access Higgins Helitours as the Beast.*/;
 		
 			case 175:
-				return "WSHOP_BLCK_L";
+				return "WSHOP_BLCK_L" /*You can't access Smoke on the Water as the Beast.*/;
 		}
 	
-		return "CWAS_BLCK_L";
+		return "CWAS_BLCK_L" /*You can't access the Hands On Car Wash as the Beast.*/;
 	}
 
 	if (func_802(PLAYER::PLAYER_PED_ID()))
@@ -41784,13 +41784,13 @@ char* func_826(int iParam0, var uParam1, var uParam2) // Position - 0x297E2 (169
 		switch (iParam0)
 		{
 			case 174:
-				return "CWAS_BLCK_M";
+				return "CWAS_BLCK_M" /*You can't access the Hands On Car Wash while wearing the Ballistic Equipment.*/;
 		
 			case 176:
-				return "HELIT_BLCK_M";
+				return "HELIT_BLCK_M" /*You can't access Higgins Helitours while wearing the Ballistic Equipment.*/;
 		
 			case 175:
-				return "WSHOP_BLCK_M";
+				return "WSHOP_BLCK_M" /*You can't access Smoke on the Water while wearing the Ballistic Equipment.*/;
 		
 			default:
 			
@@ -43039,34 +43039,34 @@ char* func_905(int iParam0, int iParam1) // Position - 0x2B35B (176987)
 			switch (iParam1)
 			{
 				case 0:
-					return "PIM_CWAS_INV_D";
+					return "PIM_CWAS_INV_D" /*Invite players to your Hands On Car Wash.*/;
 			
 				case 1:
-					return "PIM_CWAS_INV_M";
+					return "PIM_CWAS_INV_M" /*Invite to Hands On Car Wash*/;
 			
 				case 4:
-					return "PIM_CWAS_INV_T";
+					return "PIM_CWAS_INV_T" /*INVITE TO HANDS ON CAR WASH*/;
 			
 				case 13:
-					return "PIM_INV_CWAS";
+					return "PIM_INV_CWAS" /*Invite to Hands On Car Wash has been sent to ~a~.*/;
 			
 				case 14:
-					return "PIM_INV_A_T_CWAS";
+					return "PIM_INV_A_T_CWAS" /*Invite to Hands On Car Wash has been sent to all players.*/;
 			
 				case 15:
-					return "CELL_CWAS_INV";
+					return "CELL_CWAS_INV" /*Hey, come over to the Hands On Car Wash.*/;
 			
 				case 3:
-					return "PIM_CWAS_MAN_D1";
+					return "PIM_CWAS_MAN_D1" /*Manage the Hands On Car Wash.*/;
 			
 				case 21:
-					return "CELL_CWAS";
+					return "CELL_CWAS" /*Hands On Car Wash*/;
 			
 				case 2:
-					return "PIM_CWAS_MAN_M";
+					return "PIM_CWAS_MAN_M" /*Hands On Car Wash Management*/;
 			
 				case 22:
-					return "CWAS_BUY_SIGN";
+					return "CWAS_BUY_SIGN" /*Press ~INPUT_CONTEXT~ to purchase the Hands On Car Wash.*/;
 			
 				case 23:
 					return "MP_CWAS_DES_";
@@ -43080,34 +43080,34 @@ char* func_905(int iParam0, int iParam1) // Position - 0x2B35B (176987)
 			switch (iParam1)
 			{
 				case 0:
-					return "PIM_WSHOP_INV_D";
+					return "PIM_WSHOP_INV_D" /*Invite players to your Smoke on the Water.*/;
 			
 				case 1:
-					return "PIM_WSHOP_INV_M";
+					return "PIM_WSHOP_INV_M" /*Invite to Smoke on the Water*/;
 			
 				case 4:
-					return "PIM_WSHOP_INV_T";
+					return "PIM_WSHOP_INV_T" /*INVITE TO SMOKE ON THE WATER*/;
 			
 				case 13:
-					return "PIM_INV_WSHOP";
+					return "PIM_INV_WSHOP" /*Invite to Smoke on the Water has been sent to ~a~.*/;
 			
 				case 14:
-					return "PIM_INV_A_T_WSHOP";
+					return "PIM_INV_A_T_WSHOP" /*Invite to Smoke on the Water has been sent to all players.*/;
 			
 				case 15:
-					return "CELL_WSHOP_INV";
+					return "CELL_WSHOP_INV" /*Hey, come over to Smoke on the Water.*/;
 			
 				case 3:
-					return "PIM_WSHOP_MAN_D1";
+					return "PIM_WSHOP_MAN_D1" /*Manage Smoke on the Water.*/;
 			
 				case 21:
-					return "CELL_WSHOP";
+					return "CELL_WSHOP" /*Smoke on the Water*/;
 			
 				case 2:
-					return "PIM_WSHOP_MAN_M";
+					return "PIM_WSHOP_MAN_M" /*Smoke on the Water Management*/;
 			
 				case 22:
-					return "WSHOP_BUY_SIGN";
+					return "WSHOP_BUY_SIGN" /*Press ~INPUT_CONTEXT~ to purchase Smoke on the Water.*/;
 			
 				case 23:
 					return "MP_WSHOP_DES_";
@@ -43121,34 +43121,34 @@ char* func_905(int iParam0, int iParam1) // Position - 0x2B35B (176987)
 			switch (iParam1)
 			{
 				case 0:
-					return "PIM_HELIT_INV_D";
+					return "PIM_HELIT_INV_D" /*Invite players to your Higgins Helitours.*/;
 			
 				case 1:
-					return "PIM_HELIT_INV_M";
+					return "PIM_HELIT_INV_M" /*Invite to Higgins Helitours*/;
 			
 				case 4:
-					return "PIM_HELIT_INV_T";
+					return "PIM_HELIT_INV_T" /*INVITE TO HIGGINS HELITOURS*/;
 			
 				case 13:
-					return "PIM_INV_HELIT";
+					return "PIM_INV_HELIT" /*Invite to Higgins Helitours has been sent to ~a~.*/;
 			
 				case 14:
-					return "PIM_INV_A_T_HELIT";
+					return "PIM_INV_A_T_HELIT" /*Invite to Higgins Helitours has been sent to all players.*/;
 			
 				case 15:
-					return "CELL_HELIT_INV";
+					return "CELL_HELIT_INV" /*Hey, come over to Higgins Helitours.*/;
 			
 				case 3:
-					return "PIM_HELIT_MAN_D1";
+					return "PIM_HELIT_MAN_D1" /*Manage Higgins Helitours.*/;
 			
 				case 21:
-					return "CELL_HELIT";
+					return "CELL_HELIT" /*Higgins Helitours*/;
 			
 				case 2:
-					return "PIM_HELIT_MAN_M";
+					return "PIM_HELIT_MAN_M" /*Higgins Helitours Management*/;
 			
 				case 22:
-					return "HELIT_BUY_SIGN";
+					return "HELIT_BUY_SIGN" /*Press ~INPUT_CONTEXT~ to purchase Higgins Helitours.*/;
 			
 				case 23:
 					return "MP_HELIT_DES_";
@@ -274672,7 +274672,7 @@ int func_5282(var uParam0, var uParam1, var uParam2) // Position - 0x1748E7 (152
 							if (MISC::IS_PC_VERSION())
 								if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 									if (VEHICLE::IS_VEHICLE_MODEL(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false), joaat("voltic2")) || VEHICLE::IS_VEHICLE_MODEL(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false), joaat("oppressor")))
-										if (_CONTEXT_IS_HELP_TEXT_BEING_DISPLAYED(uParam1->f_22.f_94, 0) || func_5294("GR_ENTERAOC" /*Press ~a~ to enter your Avenger.*/, "STRING") || func_5294("BASE_MOD_ENTER" /*~a~ Access the Facility Vehicle Workshop. ~n~ ~INPUT_CONTEXT_SECONDARY~ Enter your Avenger with this vehicle.*/, "STRING"))
+										if (_CONTEXT_IS_HELP_TEXT_BEING_DISPLAYED(uParam1->f_22.f_94, 0) || func_5294("GR_ENTERAOC" /*Press ~a~ to enter your Avenger.*/, "STRING") || func_5294("BASE_MOD_ENTER" /*~a~ Access the Facility Vehicle Workshop.~n~~INPUT_CONTEXT_SECONDARY~ Enter your Avenger with this vehicle.*/, "STRING"))
 											PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_VEH_ROCKET_BOOST, true);
 						
 							func_5293(true);
@@ -296240,7 +296240,7 @@ int func_5676(var uParam0, var uParam1, var uParam2) // Position - 0x1999B2 (167
 							if (MISC::IS_PC_VERSION())
 								if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 									if (VEHICLE::IS_VEHICLE_MODEL(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false), joaat("voltic2")) || VEHICLE::IS_VEHICLE_MODEL(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false), joaat("oppressor")))
-										if (_CONTEXT_IS_HELP_TEXT_BEING_DISPLAYED(uParam1->f_22.f_94, 0) || func_5294("GR_ENTERAOC" /*Press ~a~ to enter your Avenger.*/, "STRING") || func_5294("BASE_MOD_ENTER" /*~a~ Access the Facility Vehicle Workshop. ~n~ ~INPUT_CONTEXT_SECONDARY~ Enter your Avenger with this vehicle.*/, "STRING"))
+										if (_CONTEXT_IS_HELP_TEXT_BEING_DISPLAYED(uParam1->f_22.f_94, 0) || func_5294("GR_ENTERAOC" /*Press ~a~ to enter your Avenger.*/, "STRING") || func_5294("BASE_MOD_ENTER" /*~a~ Access the Facility Vehicle Workshop.~n~~INPUT_CONTEXT_SECONDARY~ Enter your Avenger with this vehicle.*/, "STRING"))
 											PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_VEH_ROCKET_BOOST, true);
 						
 							func_5293(true);
@@ -352972,7 +352972,7 @@ void func_6973(int iParam0) // Position - 0x1F86AB (2066091)
 			else
 				num2 = 6;
 		
-			func_6974(num, "TYCST_UI_2", 0, 0, -1, 0, 3, 0, num2, 0, 0, 0, num2, 0, 0, 0, 0, -1);
+			func_6974(num, "TYCST_UI_2" /*DETONATION*/, 0, 0, -1, 0, 3, 0, num2, 0, 0, 0, num2, 0, 0, 0, 0, -1);
 			break;
 	}
 
@@ -355120,19 +355120,19 @@ char* func_7019(var uParam0) // Position - 0x1FB11E (2076958)
 	switch (func_7020(*uParam0))
 	{
 		case 0:
-			return "TYCST_TIK_2";
+			return "TYCST_TIK_2" /*~a~ collected charges.*/;
 	
 		case 1:
-			return "TYCST_TIK_4";
+			return "TYCST_TIK_4" /*~a~ stole some cash.*/;
 	
 		case 2:
-			return "TYCST_TIK_6";
+			return "TYCST_TIK_6" /*~a~ planted a charge.*/;
 	
 		case 3:
-			return "TYCST_TIK_8";
+			return "TYCST_TIK_8" /*~a~ delivered some cash.*/;
 	
 		case 4:
-			return "TYCST_TIK_10";
+			return "TYCST_TIK_10" /*~a~ delivered the cash.*/;
 	
 		default:
 		
@@ -355154,19 +355154,19 @@ char* func_7021(var uParam0) // Position - 0x1FB19A (2077082)
 	switch (func_7020(*uParam0))
 	{
 		case 0:
-			return "TYCST_TIK_1";
+			return "TYCST_TIK_1" /*You collected charges.*/;
 	
 		case 1:
-			return "TYCST_TIK_3";
+			return "TYCST_TIK_3" /*You stole some cash.*/;
 	
 		case 2:
-			return "TYCST_TIK_5";
+			return "TYCST_TIK_5" /*You planted a charge.*/;
 	
 		case 3:
-			return "TYCST_TIK_7";
+			return "TYCST_TIK_7" /*You delivered some cash.*/;
 	
 		case 4:
-			return "TYCST_TIK_9";
+			return "TYCST_TIK_9" /*You delivered the cash.*/;
 	
 		default:
 		
@@ -355200,13 +355200,13 @@ char* func_7023(int iParam0) // Position - 0x1FB245 (2077253)
 	switch (iParam0)
 	{
 		case 0:
-			return "TYCST_HLP_1";
+			return "TYCST_HLP_1" /*Open the washing machines ~HUD_COLOUR_GREEN~~BLIP_PRODUCTION_MONEY~~s~ to begin stealing the cash from inside.*/;
 	
 		case 1:
-			return "TYCST_HLP_3";
+			return "TYCST_HLP_3" /*Plant charges ~HUD_COLOUR_WHITE~~BLIP_EXPLOSIVE_CHARGE~~s~ to destroy the operation. A countdown timer will start when the last charge is placed.*/;
 	
 		case 2:
-			return "TYCST_HLP_4";
+			return "TYCST_HLP_4" /*Quickly exit the operation before the charges detonate.*/;
 	
 		default:
 		
@@ -355833,19 +355833,19 @@ char* func_7066(int iParam0) // Position - 0x1FBCE8 (2079976)
 	switch (iParam0)
 	{
 		case 3:
-			return "TYCST_INT_1";
+			return "TYCST_INT_1" /*Press ~INPUT_CONTEXT~ to collect the equipment.*/;
 	
 		case 0:
 		case 1:
 		case 2:
-			return "TYCST_INT_2";
+			return "TYCST_INT_2" /*Press ~INPUT_CONTEXT~ to open the washing machine.*/;
 	
 		case 4:
 		case 5:
-			return "TYCST_INT_3";
+			return "TYCST_INT_3" /*Press ~INPUT_CONTEXT~ to plant a charge.*/;
 	
 		case 6:
-			return "TYCST_INT_4";
+			return "TYCST_INT_4" /*Press ~INPUT_CONTEXT~ to open the trunk.*/;
 	
 		default:
 		
@@ -355931,19 +355931,19 @@ char* func_7071(int iParam0) // Position - 0x1FBE23 (2080291)
 	switch (iParam0)
 	{
 		case 3:
-			return "TYCST_UI_3";
+			return "TYCST_UI_3" /*Equipment*/;
 	
 		case 0:
 		case 1:
 		case 2:
-			return "TYCST_UI_4";
+			return "TYCST_UI_4" /*Washing Machine*/;
 	
 		case 4:
 		case 5:
-			return "TYCST_UI_6";
+			return "TYCST_UI_6" /*Charge Location*/;
 	
 		case 6:
-			return "TYCST_UI_7";
+			return "TYCST_UI_7" /*Emperor*/;
 	
 		default:
 		
@@ -356397,7 +356397,7 @@ char* func_7102(Player plParam0) // Position - 0x1FC71A (2082586)
 		return "";
 
 	if (uLocal_406.f_77.f_1[plParam0 /*21*/].f_14 == 0)
-		return "TYCST_UI_5";
+		return "TYCST_UI_5" /*Launderer*/;
 
 	return "";
 }
@@ -356758,7 +356758,7 @@ void func_7129() // Position - 0x1FCD65 (2084197)
 		}
 	
 		if (func_6972(plLocal_7058, true))
-			func_7131("TYCST_OBJ_10", false);
+			func_7131("TYCST_OBJ_10" /*Deliver the cash to the ~HUD_COLOUR_YELLOW~Hands On Car Wash.~s~*/, false);
 		else
 			func_7130();
 	}
@@ -356768,7 +356768,7 @@ void func_7129() // Position - 0x1FCD65 (2084197)
 
 void func_7130() // Position - 0x1FCDA7 (2084263)
 {
-	func_7131("TYCST_OBJ_11", false);
+	func_7131("TYCST_OBJ_11" /*Help deliver the cash to the ~HUD_COLOUR_YELLOW~Hands On Car Wash.~s~*/, false);
 	return;
 }
 
@@ -357063,7 +357063,7 @@ BOOL func_7145() // Position - 0x1FD2B6 (2085558)
 
 void func_7146() // Position - 0x1FD2E2 (2085602)
 {
-	func_7131("TYCST_OBJ_8", false);
+	func_7131("TYCST_OBJ_8" /*Exit the ~HUD_COLOUR_YELLOW~operation.~s~*/, false);
 	return;
 }
 
@@ -357106,7 +357106,7 @@ void func_7149() // Position - 0x1FD387 (2085767)
 void func_7150() // Position - 0x1FD3A1 (2085793)
 {
 	if (func_6916())
-		func_7131("TYCST_OBJ_7", false);
+		func_7131("TYCST_OBJ_7" /*Plant the charges.*/, false);
 	else
 		func_7151();
 
@@ -357115,14 +357115,14 @@ void func_7150() // Position - 0x1FD3A1 (2085793)
 
 void func_7151() // Position - 0x1FD3C1 (2085825)
 {
-	func_7131("TYCST_OBJ_5", false);
+	func_7131("TYCST_OBJ_5" /*Break into the ~HUD_COLOUR_YELLOW~rival operation.~s~*/, false);
 	return;
 }
 
 void func_7152() // Position - 0x1FD3D3 (2085843)
 {
 	if (func_6916())
-		func_7131("TYCST_OBJ_6", false);
+		func_7131("TYCST_OBJ_6" /*Steal the ~HUD_COLOUR_GREEN~cash.~s~*/, false);
 	else
 		func_7151();
 
@@ -357131,7 +357131,7 @@ void func_7152() // Position - 0x1FD3D3 (2085843)
 
 void func_7153() // Position - 0x1FD3F3 (2085875)
 {
-	func_7131("TYCST_OBJ_4", false);
+	func_7131("TYCST_OBJ_4" /*Take out the ~HUD_COLOUR_RED~rival launderers.~s~*/, false);
 	return;
 }
 
@@ -357143,7 +357143,7 @@ void func_7154() // Position - 0x1FD405 (2085893)
 		return;
 	}
 
-	func_7131("TYCST_OBJ_3", false);
+	func_7131("TYCST_OBJ_3" /*Go to the ~HUD_COLOUR_YELLOW~rival operation.~s~*/, false);
 	return;
 }
 
@@ -357156,16 +357156,16 @@ void func_7155() // Position - 0x1FD427 (2085927)
 	}
 
 	if (func_6971(plLocal_7062, 4) && NETWORK::NETWORK_GET_NUM_PARTICIPANTS() > 1)
-		func_7131("TYCST_OBJ_2", false);
+		func_7131("TYCST_OBJ_2" /*Wait for the team to collect the equipment.*/, false);
 	else
-		func_7131("TYCST_OBJ_1", false);
+		func_7131("TYCST_OBJ_1" /*Collect the ~HUD_COLOUR_GREEN~equipment.~s~*/, false);
 
 	return;
 }
 
 void func_7156() // Position - 0x1FD46C (2085996)
 {
-	func_7131("TYCST_OBJ_12", false);
+	func_7131("TYCST_OBJ_12" /*Open the trunk of the ~HUD_COLOUR_BLUE~Emperor.~s~*/, false);
 	return;
 }
 
@@ -357203,20 +357203,20 @@ void func_7159() // Position - 0x1FD4F1 (2086129)
 		return;
 	}
 
-	str = "TYC_GEN_GOTO";
+	str = "TYC_GEN_GOTO" /*Go to ~a~~y~.~s~*/;
 
 	switch (func_6899())
 	{
 		case 9:
-			str2 = "TYC_LOC_23";
+			str2 = "TYC_LOC_23" /*Rancho*/;
 			break;
 	
 		case 10:
-			str2 = "TYC_LOC_24";
+			str2 = "TYC_LOC_24" /*Textile City*/;
 			break;
 	
 		case 11:
-			str2 = "TYC_LOC_15";
+			str2 = "TYC_LOC_15" /*Del Perro*/;
 			break;
 	}
 
@@ -357422,7 +357422,7 @@ void func_7177() // Position - 0x1FD8AF (2087087)
 void func_7178() // Position - 0x1FD8D6 (2087126)
 {
 	uLocal_406.f_2561[0 /*6*/] = 2;
-	uLocal_406.f_2561[0 /*6*/].f_1 = "TYCST_UI_1";
+	uLocal_406.f_2561[0 /*6*/].f_1 = "TYCST_UI_1" /*CASH STOLEN*/;
 	uLocal_406.f_2561[0 /*6*/].f_4 = 18;
 	uLocal_406.f_2561[0 /*6*/].f_2 = 1000;
 	uLocal_406.f_2561[1 /*6*/] = 4;
@@ -358338,22 +358338,22 @@ char* func_7241(int iParam0) // Position - 0x1FEF94 (2092948)
 			switch (uLocal_7211.f_1271.f_11)
 			{
 				case 1:
-					return "TYCSC_TXT_1a";
+					return "TYCSC_TXT_1a" /*You're looking for this container.~n~~n~IMAGE ATTACHMENT ~nrt~ <img src='img://UPDT1_25_TEXT_CAR_WASH/UPDT1_25_TEXT_BLUE' vspace='0' width='252' height='128'/> ~nrt~*/;
 			
 				case 2:
-					return "TYCSC_TXT_1c";
+					return "TYCSC_TXT_1c" /*You're looking for this container.~n~~n~IMAGE ATTACHMENT ~nrt~ <img src='img://UPDT1_25_TEXT_CAR_WASH/UPDT1_25_TEXT_RED' vspace='0' width='252' height='128'/> ~nrt~*/;
 			
 				default:
 				
 			}
 		
-			return "TYCSC_TXT_1b";
+			return "TYCSC_TXT_1b" /*You're looking for this container.~n~~n~IMAGE ATTACHMENT ~nrt~ <img src='img://UPDT1_25_TEXT_CAR_WASH/UPDT1_25_TEXT_GREEN' vspace='0' width='252' height='128'/> ~nrt~*/;
 	
 		case 1:
 			if (func_7208(0))
-				return "TYCSC_TXT_2";
+				return "TYCSC_TXT_2" /*Yo. Thanks for the wheels. I'll take it from here.*/;
 		
-			return "TYCSC_TXT_3";
+			return "TYCSC_TXT_3" /*Hey, we got no free space to strip that car for extra parts. Don't sweat though. I'll dispose of it for you.*/;
 	
 		default:
 		
@@ -358405,25 +358405,25 @@ int func_7244(Player plParam0, int iParam1, var uParam2) // Position - 0x1FF070 
 	{
 		case 1:
 			if (plParam0 == plLocal_7058)
-				func_7270("TYCSC_TIK_3", func_7271(), HUD_COLOUR_PURE_WHITE, HUD_COLOUR_PURE_WHITE, false);
+				func_7270("TYCSC_TIK_3" /*You collected the ~a~.*/, func_7271(), HUD_COLOUR_PURE_WHITE, HUD_COLOUR_PURE_WHITE, false);
 			else if (_NETWORK_IS_PLAYER_VALID(plParam0, true, true))
-				func_7245("TYCSC_TIK_4", plParam0, func_7271(), HUD_COLOUR_PURE_WHITE, false, false);
+				func_7245("TYCSC_TIK_4" /*~a~ collected the ~a~.*/, plParam0, func_7271(), HUD_COLOUR_PURE_WHITE, false, false);
 		
 			return 1;
 	
 		case 2:
 			if (plParam0 == plLocal_7058)
-				func_7270("TYCSC_TIK_7", func_7271(), HUD_COLOUR_PURE_WHITE, HUD_COLOUR_PURE_WHITE, false);
+				func_7270("TYCSC_TIK_7" /*You stripped the ~a~.*/, func_7271(), HUD_COLOUR_PURE_WHITE, HUD_COLOUR_PURE_WHITE, false);
 			else if (_NETWORK_IS_PLAYER_VALID(plParam0, true, true))
-				func_7245("TYCSC_TIK_8", plParam0, func_7271(), HUD_COLOUR_PURE_WHITE, false, false);
+				func_7245("TYCSC_TIK_8" /*~a~ stripped the ~a~.*/, plParam0, func_7271(), HUD_COLOUR_PURE_WHITE, false, false);
 		
 			return 1;
 	
 		case 4:
 			if (plParam0 == plLocal_7058)
-				func_7270("TYCSC_TIK_9", func_7271(), HUD_COLOUR_PURE_WHITE, HUD_COLOUR_PURE_WHITE, false);
+				func_7270("TYCSC_TIK_9" /*You destroyed the ~a~.*/, func_7271(), HUD_COLOUR_PURE_WHITE, HUD_COLOUR_PURE_WHITE, false);
 			else if (_NETWORK_IS_PLAYER_VALID(plParam0, true, true))
-				func_7245("TYCSC_TIK_10", plParam0, func_7271(), HUD_COLOUR_PURE_WHITE, false, false);
+				func_7245("TYCSC_TIK_10" /*~a~ destroyed the ~a~.*/, plParam0, func_7271(), HUD_COLOUR_PURE_WHITE, false, false);
 		
 			return 1;
 	
@@ -359120,19 +359120,19 @@ char* func_7273(var uParam0) // Position - 0x1FFF62 (2096994)
 	switch (func_7272(*uParam0))
 	{
 		case 0:
-			return "TYCSC_TIK_2";
+			return "TYCSC_TIK_2" /*~a~ located the container.*/;
 	
 		case 1:
-			return "TYCSC_TIK_4";
+			return "TYCSC_TIK_4" /*~a~ collected the ~a~.*/;
 	
 		case 2:
-			return "TYCSC_TIK_8";
+			return "TYCSC_TIK_8" /*~a~ stripped the ~a~.*/;
 	
 		case 3:
-			return "TYCSC_TIK_6";
+			return "TYCSC_TIK_6" /*~a~ delivered the cash.*/;
 	
 		case 4:
-			return "TYCSC_TIK_10";
+			return "TYCSC_TIK_10" /*~a~ destroyed the ~a~.*/;
 	
 		default:
 		
@@ -359146,19 +359146,19 @@ char* func_7274(var uParam0) // Position - 0x1FFFC0 (2097088)
 	switch (func_7272(*uParam0))
 	{
 		case 0:
-			return "TYCSC_TIK_1";
+			return "TYCSC_TIK_1" /*You located the container.*/;
 	
 		case 1:
-			return "TYCSC_TIK_3";
+			return "TYCSC_TIK_3" /*You collected the ~a~.*/;
 	
 		case 2:
-			return "TYCSC_TIK_7";
+			return "TYCSC_TIK_7" /*You stripped the ~a~.*/;
 	
 		case 3:
-			return "TYCSC_TIK_5";
+			return "TYCSC_TIK_5" /*You delivered the cash.*/;
 	
 		case 4:
-			return "TYCSC_TIK_9";
+			return "TYCSC_TIK_9" /*You destroyed the ~a~.*/;
 	
 		default:
 		
@@ -359242,21 +359242,21 @@ char* func_7280(int iParam0) // Position - 0x20010F (2097423)
 	{
 		case 0:
 			if (func_7209())
-				return "TYCSC_HLP_2";
+				return "TYCSC_HLP_2" /*Take the vehicle to Hao ~HUD_COLOUR_YELLOW~~BLIP_OBJECTIVE~~s~ or the Salvage Yard ~HUD_COLOUR_YELLOW~~BLIP_SALVAGE_YARD~~s~ to strip the parts and secure the concealed cash.*/;
 		
-			return "TYCSC_HLP_1";
+			return "TYCSC_HLP_1" /*Take the vehicle to Hao ~HUD_COLOUR_YELLOW~~BLIP_OBJECTIVE~~s~ to strip the parts and secure the concealed cash.*/;
 	
 		case 1:
-			return "TYCSC_HLP_3";
+			return "TYCSC_HLP_3" /*The cash has been transferred from the ~a~ to your duffel bag.*/;
 	
 		case 2:
-			return "TYCSC_HLP_4";
+			return "TYCSC_HLP_4" /*Search the area ~HUD_COLOUR_YELLOW~~BLIP_FINDERS_KEEPERS~~s~ and use the image provided by Raf to locate the container.*/;
 	
 		case 3:
-			return "TYCSC_HLP_5";
+			return "TYCSC_HLP_5" /*Shoot the lock off the container ~HUD_COLOUR_GREEN~~BLIP_SHIPPING_CONTAINER~~s~ to access the car inside.*/;
 	
 		case 4:
-			return "TYCSC_HLP_6";
+			return "TYCSC_HLP_6" /*The ~a~ ~HUD_COLOUR_BLUE~~BLIP_GANG_VEHICLE~~s~ has been moved to a more suitable location.*/;
 	
 		default:
 		
@@ -359838,10 +359838,10 @@ char* func_7308(var uParam0) // Position - 0x200BF2 (2100210)
 	switch (num)
 	{
 		case 0:
-			return "TYCSC_UI_3";
+			return "TYCSC_UI_3" /*Hao*/;
 	
 		case 1:
-			return "TYCSC_UI_4";
+			return "TYCSC_UI_4" /*Salvage Yard*/;
 	
 		default:
 		
@@ -360324,7 +360324,7 @@ char* func_7333(int iParam0) // Position - 0x20134A (2102090)
 		case 0:
 		case 1:
 		case 2:
-			return "TYCSC_INT_1";
+			return "TYCSC_INT_1" /*Press ~INPUT_CONTEXT~ to open the container.*/;
 	
 		default:
 		
@@ -360388,7 +360388,7 @@ char* func_7338(int iParam0) // Position - 0x2013E6 (2102246)
 	switch (iParam0)
 	{
 		case 0:
-			return "TYCSC_UI_1";
+			return "TYCSC_UI_1" /*Container*/;
 	
 		default:
 		
@@ -361024,7 +361024,7 @@ void func_7384(Player plParam0) // Position - 0x202090 (2105488)
 
 void func_7385() // Position - 0x2020AF (2105519)
 {
-	func_7277("TYCSC_HLP_6", func_7271(), -1);
+	func_7277("TYCSC_HLP_6" /*The ~a~ ~HUD_COLOUR_BLUE~~BLIP_GANG_VEHICLE~~s~ has been moved to a more suitable location.*/, func_7271(), -1);
 	return;
 }
 
@@ -361357,11 +361357,11 @@ void func_7395(Player plParam0, var uParam1, var uParam2, var uParam3, var uPara
 			if (!func_6971(plLocal_7062, 21))
 			{
 				if (plParam14 == plLocal_7058)
-					func_7270("TYCSC_TIK_9", func_7271(), HUD_COLOUR_PURE_WHITE, HUD_COLOUR_PURE_WHITE, false);
+					func_7270("TYCSC_TIK_9" /*You destroyed the ~a~.*/, func_7271(), HUD_COLOUR_PURE_WHITE, HUD_COLOUR_PURE_WHITE, false);
 				else if (func_16(plParam14))
-					func_7245("TYCSC_TIK_10", plParam14, func_7271(), HUD_COLOUR_PURE_WHITE, false, false);
+					func_7245("TYCSC_TIK_10" /*~a~ destroyed the ~a~.*/, plParam14, func_7271(), HUD_COLOUR_PURE_WHITE, false, false);
 				else
-					func_7270("TYCSC_TIK_11", func_7271(), HUD_COLOUR_PURE_WHITE, HUD_COLOUR_PURE_WHITE, false);
+					func_7270("TYCSC_TIK_11" /*The ~a~ was destroyed.*/, func_7271(), HUD_COLOUR_PURE_WHITE, HUD_COLOUR_PURE_WHITE, false);
 			
 				func_7046(21);
 			}
@@ -362090,7 +362090,7 @@ BOOL func_7440() // Position - 0x20370D (2111245)
 
 void func_7441() // Position - 0x20371D (2111261)
 {
-	func_7131("TYCSC_OBJ_8", false);
+	func_7131("TYCSC_OBJ_8" /*Help deliver the cash to the ~HUD_COLOUR_YELLOW~Hands On Car Wash.~s~*/, false);
 	return;
 }
 
@@ -362124,7 +362124,7 @@ BOOL func_7444(Player plParam0) // Position - 0x203773 (2111347)
 
 void func_7445() // Position - 0x2037B4 (2111412)
 {
-	func_7131("TYCSC_OBJ_7", false);
+	func_7131("TYCSC_OBJ_7" /*Deliver the cash to the ~HUD_COLOUR_YELLOW~Hands On Car Wash.~s~*/, false);
 	return;
 }
 
@@ -362185,13 +362185,13 @@ void func_7453() // Position - 0x203885 (2111621)
 
 	if (func_7209())
 		if (func_7454())
-			func_7161("TYCSC_OBJ_6", func_7271(), false, 0);
+			func_7161("TYCSC_OBJ_6" /*Help take the ~a~ to a ~HUD_COLOUR_YELLOW~marked location.~s~*/, func_7271(), false, 0);
 		else
-			func_7161("TYCSC_OBJ_5", func_7271(), false, 0);
+			func_7161("TYCSC_OBJ_5" /*Take the ~a~ to a ~HUD_COLOUR_YELLOW~marked location.~s~*/, func_7271(), false, 0);
 	else if (func_7454())
-		func_7161("TYCSC_OBJ_4", func_7271(), false, 0);
+		func_7161("TYCSC_OBJ_4" /*Help take the ~a~ to ~HUD_COLOUR_YELLOW~Hao.~s~*/, func_7271(), false, 0);
 	else
-		func_7161("TYCSC_OBJ_3", func_7271(), false, 0);
+		func_7161("TYCSC_OBJ_3" /*Take the ~a~ to ~HUD_COLOUR_YELLOW~Hao.~s~*/, func_7271(), false, 0);
 
 	return;
 }
@@ -362227,7 +362227,7 @@ BOOL func_7456() // Position - 0x203970 (2111856)
 
 void func_7457() // Position - 0x203983 (2111875)
 {
-	func_7160("TYC_GEN_STEALT", func_7271(), 9, false);
+	func_7160("TYC_GEN_STEALT" /*Steal the ~a~.*/, func_7271(), 9, false);
 	return;
 }
 
@@ -362239,19 +362239,19 @@ void func_7458() // Position - 0x20399B (2111899)
 		return;
 	}
 
-	func_7131("TYCSC_OBJ_2", false);
+	func_7131("TYCSC_OBJ_2" /*Open the ~HUD_COLOUR_GREEN~container.~s~*/, false);
 	return;
 }
 
 void func_7459() // Position - 0x2039BF (2111935)
 {
-	func_7131("TYCSC_OBJ_10", false);
+	func_7131("TYCSC_OBJ_10" /*Shoot the lock off the ~HUD_COLOUR_GREEN~container.~s~*/, false);
 	return;
 }
 
 void func_7460() // Position - 0x2039D1 (2111953)
 {
-	func_7131("TYCSC_OBJ_1", false);
+	func_7131("TYCSC_OBJ_1" /*Search the ~HUD_COLOUR_YELLOW~area~s~ for the container.*/, false);
 	return;
 }
 
@@ -362265,12 +362265,12 @@ void func_7461() // Position - 0x2039E3 (2111971)
 		return;
 	}
 
-	str = "TYC_LOC_4";
+	str = "TYC_LOC_4" /*Terminal*/;
 
 	if (func_6899() != 6)
-		str = "TYC_LOC_5";
+		str = "TYC_LOC_5" /*Elysian Island*/;
 
-	func_7160("TYC_GEN_GOTO", str, 12, false);
+	func_7160("TYC_GEN_GOTO" /*Go to ~a~~y~.~s~*/, str, 12, false);
 	return;
 }
 
@@ -363384,10 +363384,10 @@ char* func_7545(var uParam0) // Position - 0x205554 (2118996)
 	switch (func_7546(*uParam0))
 	{
 		case 0:
-			return "TYCBC_TIK_2";
+			return "TYCBC_TIK_2" /*~a~ collected molotovs.*/;
 	
 		case 1:
-			return "TYCBC_TIK_4";
+			return "TYCBC_TIK_4" /*~a~ destroyed the van.*/;
 	
 		default:
 		
@@ -363409,10 +363409,10 @@ char* func_7547(var uParam0) // Position - 0x2055A6 (2119078)
 	switch (func_7546(*uParam0))
 	{
 		case 0:
-			return "TYCBC_TIK_1";
+			return "TYCBC_TIK_1" /*Equipment added:~n~Molotovs*/;
 	
 		case 1:
-			return "TYCBC_TIK_3";
+			return "TYCBC_TIK_3" /*You destroyed the van.*/;
 	
 		default:
 		
@@ -363449,16 +363449,16 @@ char* func_7549(int iParam0) // Position - 0x20564D (2119245)
 	switch (iParam0)
 	{
 		case 0:
-			return "TYCBC_HLP_3";
+			return "TYCBC_HLP_3" /*The Molotovs ~HUD_COLOUR_WHITE~~BLIP_WEAPON_MOLOTOV~~s~ sourced by Raf can be used to torch the rival operation.*/;
 	
 		case 1:
-			return "TYCBC_HLP_2";
+			return "TYCBC_HLP_2" /*Inhaling the smoke will affect your health.*/;
 	
 		case 2:
-			return "TYCBC_HLP_1";
+			return "TYCBC_HLP_1" /*Torch the fake cash ~HUD_COLOUR_RED~~BLIP_PRODUCTION_MONEY~~s~ by setting them alight with Molotovs or a Jerry Can.*/;
 	
 		case 3:
-			return "TYCBC_HLP_4";
+			return "TYCBC_HLP_4" /*Destroy the van ~HUD_COLOUR_RED~~BLIP_TEMP_4~~s~ carrying the last of the operation's fake cash.*/;
 	
 		default:
 		
@@ -363742,7 +363742,7 @@ char* func_7572(int iParam0) // Position - 0x205A53 (2120275)
 	switch (iParam0)
 	{
 		case 0:
-			return "TYCBC_INT_1";
+			return "TYCBC_INT_1" /*Press ~INPUT_CONTEXT~ to collect the Molotovs.*/;
 	
 		default:
 		
@@ -363806,7 +363806,7 @@ char* func_7577(int iParam0) // Position - 0x205AE1 (2120417)
 	switch (iParam0)
 	{
 		case 0:
-			return "TYCBC_UI_1";
+			return "TYCBC_UI_1" /*Molotovs*/;
 	
 		default:
 		
@@ -363962,7 +363962,7 @@ int func_7587(Player plParam0, var uParam1) // Position - 0x205CE1 (2120929)
 char* func_7588(Player plParam0) // Position - 0x205D00 (2120960)
 {
 	if (func_381(plParam0, 5))
-		return "TYCBC_UI_2";
+		return "TYCBC_UI_2" /*Fake Cash*/;
 
 	return "";
 }
@@ -364293,7 +364293,7 @@ int func_7608(Player plParam0) // Position - 0x2062FD (2122493)
 char* func_7609(Player plParam0) // Position - 0x206316 (2122518)
 {
 	if (plParam0 == func_7041(5))
-		return "TYCBC_UI_3";
+		return "TYCBC_UI_3" /*Van*/;
 
 	return "";
 }
@@ -364739,7 +364739,7 @@ void func_7647() // Position - 0x206B4C (2124620)
 	if (func_7496())
 		func_7655();
 	else if (func_7649(plLocal_7062))
-		func_7131("TYC_GEN_LEAVE", false);
+		func_7131("TYC_GEN_LEAVE" /*Leave the area.*/, false);
 	else if (func_85(true) && func_7648(plLocal_7058, false, true) > 1)
 		if (func_474(plLocal_7058, true))
 			func_7131("ASEV_PB_OT06B" /*Wait for your Motorcycle Club to leave the area.*/, false);
@@ -364855,7 +364855,7 @@ Vector3 func_7654(int iParam0) // Position - 0x206D9B (2125211)
 
 void func_7655() // Position - 0x206DCC (2125260)
 {
-	func_7131("TYCBC_OBJ_7", false);
+	func_7131("TYCBC_OBJ_7" /*Exit the ~HUD_COLOUR_YELLOW~operation.~s~*/, false);
 	return;
 }
 
@@ -364864,7 +364864,7 @@ void func_7656() // Position - 0x206DDE (2125278)
 	if (func_7496())
 		func_7655();
 	else if (func_6946(4))
-		func_7131("TYCBC_OBJ_1", false);
+		func_7131("TYCBC_OBJ_1" /*Destroy the ~HUD_COLOUR_RED~van.~s~*/, false);
 	else
 		func_7143();
 
@@ -364880,7 +364880,7 @@ void func_7657() // Position - 0x206E0D (2125325)
 	}
 
 	if (func_7496())
-		func_7131("TYCBC_OBJ_6", false);
+		func_7131("TYCBC_OBJ_6" /*Torch the ~HUD_COLOUR_RED~fake cash.~s~*/, false);
 	else
 		func_7658();
 
@@ -364889,13 +364889,13 @@ void func_7657() // Position - 0x206E0D (2125325)
 
 void func_7658() // Position - 0x206E3D (2125373)
 {
-	func_7131("TYCBC_OBJ_5", false);
+	func_7131("TYCBC_OBJ_5" /*Break into the ~HUD_COLOUR_YELLOW~rival operation.~s~*/, false);
 	return;
 }
 
 void func_7659() // Position - 0x206E4F (2125391)
 {
-	func_7131("TYCBC_OBJ_4", false);
+	func_7131("TYCBC_OBJ_4" /*Torch the ~HUD_COLOUR_RED~fake cash.~s~*/, false);
 	return;
 }
 
@@ -364913,7 +364913,7 @@ void func_7661() // Position - 0x206E6E (2125422)
 		return;
 	}
 
-	func_7131("TYCBC_OBJ_3", false);
+	func_7131("TYCBC_OBJ_3" /*Go to the ~HUD_COLOUR_YELLOW~rival operation.~s~*/, false);
 	return;
 }
 
@@ -365197,7 +365197,7 @@ char* func_7673() // Position - 0x2078B6 (2128054)
 
 void func_7674() // Position - 0x2078C3 (2128067)
 {
-	if (_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("TYCSS_HLP_2"))
+	if (_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("TYCSS_HLP_2" /*Press ~INPUT_VEH_HORN~ to honk the horn and signal the bank manager.*/))
 		HUD::CLEAR_HELP(true);
 
 	return;
@@ -370774,7 +370774,7 @@ void func_7736(int iParam0) // Position - 0x211989 (2169225)
 	switch (iParam0)
 	{
 		case 0:
-			func_7738(uLocal_7211.f_1271.f_4, 3, "TYCSS_UI_6", -1, 1, 2, 0, 0, 0, 0, 0, 1, true, 0, 255, 0);
+			func_7738(uLocal_7211.f_1271.f_4, 3, "TYCSS_UI_6" /*CASH COLLECTED*/, -1, 1, 2, 0, 0, 0, 0, 0, 1, true, 0, 255, 0);
 			break;
 	
 		case 1:
@@ -370790,9 +370790,9 @@ void func_7736(int iParam0) // Position - 0x211989 (2169225)
 				func_7737();
 			
 				if (num > 0)
-					func_6974(num, "TYCSS_UI_10", 0, 0, -1, 0, 3, 0, num2, 0, 0, 0, 0, 0, 0, 0, 0, -1);
+					func_6974(num, "TYCSS_UI_10" /*LOCKDOWN*/, 0, 0, -1, 0, 3, 0, num2, 0, 0, 0, 0, 0, 0, 0, 0, -1);
 				else
-					func_6974(0, "TYCSS_UI_10", 0, 0, -1, 0, 3, 0, num2, 0, 0, 0, 0, 0, 0, 0, 0, -1);
+					func_6974(0, "TYCSS_UI_10" /*LOCKDOWN*/, 0, 0, -1, 0, 3, 0, num2, 0, 0, 0, 0, 0, 0, 0, 0, -1);
 			}
 			break;
 	}
@@ -370904,22 +370904,22 @@ char* func_7742(var uParam0) // Position - 0x211C5C (2169948)
 	switch (func_7743(*uParam0))
 	{
 		case 0:
-			return "TYCSS_TIK_1b";
+			return "TYCSS_TIK_1b" /*~a~ changed into security gear.*/;
 	
 		case 2:
-			return "TYCSS_TIK_5";
+			return "TYCSS_TIK_5" /*~a~ collected a cash case.*/;
 	
 		case 1:
-			return "TYCSS_TIK_3";
+			return "TYCSS_TIK_3" /*~a~ delivered the cash.*/;
 	
 		case 3:
-			return "TYCSS_TIK_10";
+			return "TYCSS_TIK_10" /*The manager was spooked.*/;
 	
 		case 4:
-			return "TYCSS_TIK_9";
+			return "TYCSS_TIK_9" /*~a~ killed the manager.*/;
 	
 		case 5:
-			return "TYCSS_TIK_12";
+			return "TYCSS_TIK_12" /*~a~ destroyed the Stockade.*/;
 	
 		default:
 		
@@ -370941,22 +370941,22 @@ char* func_7744(var uParam0) // Position - 0x211CE6 (2170086)
 	switch (func_7743(*uParam0))
 	{
 		case 0:
-			return "TYCSS_TIK_1";
+			return "TYCSS_TIK_1" /*Equipment added:~n~Security Gear~n~Access Card*/;
 	
 		case 2:
-			return "TYCSS_TIK_4";
+			return "TYCSS_TIK_4" /*You collected a cash case.*/;
 	
 		case 1:
-			return "TYCSS_TIK_2";
+			return "TYCSS_TIK_2" /*You delivered the cash.*/;
 	
 		case 3:
-			return "TYCSS_TIK_10";
+			return "TYCSS_TIK_10" /*The manager was spooked.*/;
 	
 		case 4:
-			return "TYCSS_TIK_8";
+			return "TYCSS_TIK_8" /*You killed the manager.*/;
 	
 		case 5:
-			return "TYCSS_TIK_11";
+			return "TYCSS_TIK_11" /*You destroyed the Stockade.*/;
 	
 		default:
 		
@@ -370970,10 +370970,10 @@ char* func_7745(int iParam0) // Position - 0x211D52 (2170194)
 	switch (iParam0)
 	{
 		case 0:
-			return "TYCSS_TXT_1";
+			return "TYCSS_TXT_1" /*Eyes up. This town's loaded with opportunists looking to rob one of those things. You're driving a target on wheels.*/;
 	
 		case 1:
-			return "TYCSS_TXT_2";
+			return "TYCSS_TXT_2" /*When the cops put out an alert that a Stockade was stolen, the banks are gonna go into lockdown. You gotta do this fast.*/;
 	
 		default:
 		
@@ -371080,19 +371080,19 @@ char* func_7751(int iParam0) // Position - 0x211EBD (2170557)
 	switch (iParam0)
 	{
 		case 0:
-			return "TYCSS_HLP_1";
+			return "TYCSS_HLP_1" /*You will carry the cash until you return it to the Stockade.*/;
 	
 		case 1:
-			return "TYCSS_HLP_3";
+			return "TYCSS_HLP_3" /*Collect the cash ~HUD_COLOUR_GREEN~~BLIP_ASSAULT_PACKAGE~~s~ using your disguise to enter the back room of the bank.*/;
 	
 		case 2:
-			return "TYCSS_HLP_4";
+			return "TYCSS_HLP_4" /*Your weapons are holstered inside the bank to keep your disguise.*/;
 	
 		case 3:
-			return "TYCSS_HLP_5";
+			return "TYCSS_HLP_5" /*Insert the access card into the keypad ~HUD_COLOUR_WHITE~~BLIP_KEYPAD~~s~ to unlock the gate.*/;
 	
 		case 4:
-			return "TYCSS_HLP_6";
+			return "TYCSS_HLP_6" /*Collect the cash from all 3 banks before the Stockade is reported stolen and the banks go into lockdown.*/;
 	
 		default:
 		
@@ -371883,18 +371883,18 @@ char* func_7801(int iParam0) // Position - 0x212A86 (2173574)
 	switch (iParam0)
 	{
 		case 0:
-			return "TYCSS_INT_1";
+			return "TYCSS_INT_1" /*Press ~INPUT_CONTEXT~ to change into the security gear.*/;
 	
 		case 4:
-			return "TYCSS_INT_4";
+			return "TYCSS_INT_4" /*Press ~INPUT_CONTEXT~ to unlock the gate.*/;
 	
 		case 1:
 		case 2:
 		case 3:
 			if (func_7750())
-				return "TYCSS_INT_3";
+				return "TYCSS_INT_3" /*Press ~INPUT_CONTEXT~ to collect the cash.*/;
 		
-			return "TYCSS_INT_2";
+			return "TYCSS_INT_2" /*Press ~INPUT_CONTEXT~ to collect the cash from the bank manager.*/;
 	
 		default:
 		
@@ -372169,18 +372169,18 @@ char* func_7814(int iParam0) // Position - 0x212EAE (2174638)
 	switch (iParam0)
 	{
 		case 0:
-			return "TYCSS_UI_7";
+			return "TYCSS_UI_7" /*Security Gear*/;
 	
 		case 4:
-			return "TYCSS_UI_9";
+			return "TYCSS_UI_9" /*Keycard Reader*/;
 	
 		case 1:
 		case 2:
 		case 3:
 			if (func_7750())
-				return "TYCSS_UI_8";
+				return "TYCSS_UI_8" /*Cash*/;
 		
-			return "TYCSS_UI_3";
+			return "TYCSS_UI_3" /*Bank Manager*/;
 	
 		default:
 		
@@ -372891,7 +372891,7 @@ int func_7841(Player plParam0) // Position - 0x213E43 (2178627)
 char* func_7842(Player plParam0) // Position - 0x213E5D (2178653)
 {
 	if (plParam0 == func_7041(0))
-		return "TYCSS_UI_2";
+		return "TYCSS_UI_2" /*Stockade*/;
 
 	return "";
 }
@@ -373265,7 +373265,7 @@ int func_7870(Player plParam0) // Position - 0x2144A9 (2180265)
 char* func_7871(Player plParam0) // Position - 0x2144C0 (2180288)
 {
 	if (func_326(plParam0, 20))
-		return "TYCSS_UI_4";
+		return "TYCSS_UI_4" /*Security Guard*/;
 
 	return "";
 }
@@ -374073,14 +374073,14 @@ void func_7928() // Position - 0x2152B4 (2183860)
 		return;
 	}
 
-	if (!_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("TYCSS_HLP_2"))
+	if (!_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("TYCSS_HLP_2" /*Press ~INPUT_VEH_HORN~ to honk the horn and signal the bank manager.*/))
 	{
 		distanceBetweenCoords = MISC::GET_DISTANCE_BETWEEN_COORDS(uLocal_7063, uLocal_406.f_1599.f_1[3 /*11*/], true);
 	
 		if (distanceBetweenCoords >= 40f)
 			func_7674();
 		else
-			_DISPLAY_HELP_TEXT("TYCSS_HLP_2", -1);
+			_DISPLAY_HELP_TEXT("TYCSS_HLP_2" /*Press ~INPUT_VEH_HORN~ to honk the horn and signal the bank manager.*/, -1);
 	}
 
 	return;
@@ -374226,7 +374226,7 @@ void func_7938() // Position - 0x2155A0 (2184608)
 			if (!HUD::DOES_BLIP_EXIST(uLocal_142[i]))
 			{
 				uLocal_142[i] = HUD::ADD_BLIP_FOR_COORD(uLocal_406.f_1599.f_1[i + 1 /*11*/]);
-				HUD::SET_BLIP_NAME_FROM_TEXT_FILE(uLocal_142[i], "TYCSS_UI_5");
+				HUD::SET_BLIP_NAME_FROM_TEXT_FILE(uLocal_142[i], "TYCSS_UI_5" /*Bank*/);
 				HUD::SET_BLIP_PRIORITY(uLocal_142[i], 12);
 				func_4128(&uLocal_142[i], HUD_COLOUR_YELLOW);
 			}
@@ -375024,7 +375024,7 @@ BOOL func_7977(Player plParam0) // Position - 0x216788 (2189192)
 
 void func_7978() // Position - 0x21679E (2189214)
 {
-	func_7131("TYCSS_OBJ_9", false);
+	func_7131("TYCSS_OBJ_9" /*Help deliver the cash to the ~HUD_COLOUR_YELLOW~Hands On Car Wash.~s~*/, false);
 	return;
 }
 
@@ -375152,7 +375152,7 @@ void func_7989() // Position - 0x216A44 (2189892)
 
 void func_7990() // Position - 0x216A50 (2189904)
 {
-	func_7131("TYCSS_OBJ_8", false);
+	func_7131("TYCSS_OBJ_8" /*Deliver the cash to the ~HUD_COLOUR_YELLOW~Hands On Car Wash.~s~*/, false);
 	return;
 }
 
@@ -375192,9 +375192,9 @@ void func_7994() // Position - 0x216AC3 (2190019)
 	}
 
 	if (func_6972(plLocal_7058, true))
-		func_7131("TYCSS_OBJ_12", false);
+		func_7131("TYCSS_OBJ_12" /*Return to the ~HUD_COLOUR_BLUE~Stockade.~s~*/, false);
 	else
-		func_7131("TYCSS_OBJ_5", false);
+		func_7131("TYCSS_OBJ_5" /*Enter the ~HUD_COLOUR_BLUE~Stockade.~s~*/, false);
 
 	return;
 }
@@ -375207,7 +375207,7 @@ BOOL func_7995() // Position - 0x216AFF (2190079)
 void func_7996() // Position - 0x216B0C (2190092)
 {
 	if (func_7963())
-		func_7160("TYCSS_OBJ_10", "TYCSS_OBJ_10a", 6, false);
+		func_7160("TYCSS_OBJ_10" /*Escape the ~a~.*/, "TYCSS_OBJ_10a" /*ambush*/, 6, false);
 	else
 		func_8010();
 
@@ -375249,9 +375249,9 @@ void func_8000() // Position - 0x216B87 (2190215)
 	else if (func_8005())
 	{
 		if (func_7929())
-			func_7131("TYCSS_OBJ_11", false);
+			func_7131("TYCSS_OBJ_11" /*Signal the bank manager.*/, false);
 		else
-			func_8002("TYCSS_OBJ_13", func_7900(), 1, false);
+			func_8002("TYCSS_OBJ_13" /*Wait for ~a~ to signal the bank manager.*/, func_7900(), 1, false);
 	}
 	else
 	{
@@ -375269,7 +375269,7 @@ void func_8000() // Position - 0x216B87 (2190215)
 		if (func_7750())
 			func_8001();
 		else
-			func_7131("TYCSS_OBJ_6", false);
+			func_7131("TYCSS_OBJ_6" /*Collect the cash from the ~HUD_COLOUR_BLUE~bank manager.~s~*/, false);
 	}
 
 	return;
@@ -375277,7 +375277,7 @@ void func_8000() // Position - 0x216B87 (2190215)
 
 void func_8001() // Position - 0x216C11 (2190353)
 {
-	func_7131("TYCSS_OBJ_7", false);
+	func_7131("TYCSS_OBJ_7" /*Collect the ~HUD_COLOUR_GREEN~cash.~s~*/, false);
 	return;
 }
 
@@ -375363,12 +375363,12 @@ void func_8006() // Position - 0x216D91 (2190737)
 		return;
 	}
 
-	str = "TYC_GEN_GOTOA";
+	str = "TYC_GEN_GOTOA" /*Go to a ~a~~y~.~s~*/;
 
 	if (func_8007())
-		str = "TYC_GEN_GOTOT";
+		str = "TYC_GEN_GOTOT" /*Go to the ~a~~y~.~s~*/;
 
-	func_7160(str, "TYC_LOC_2", 12, false);
+	func_7160(str, "TYC_LOC_2" /*bank*/, 12, false);
 	return;
 }
 
@@ -375400,7 +375400,7 @@ void func_8010() // Position - 0x216E18 (2190872)
 
 void func_8011() // Position - 0x216E41 (2190913)
 {
-	func_7131("TYCSS_OBJ_4", false);
+	func_7131("TYCSS_OBJ_4" /*Wait for the team to enter the Stockade.*/, false);
 	return;
 }
 
@@ -375414,20 +375414,20 @@ void func_8013() // Position - 0x216E61 (2190945)
 	if (func_6971(plLocal_7062, 4) && NETWORK::NETWORK_GET_NUM_PARTICIPANTS() > 1)
 		func_8014();
 	else
-		func_7131("TYCSS_OBJ_2", false);
+		func_7131("TYCSS_OBJ_2" /*Change into the ~HUD_COLOUR_GREEN~security gear.~s~*/, false);
 
 	return;
 }
 
 void func_8014() // Position - 0x216E90 (2190992)
 {
-	func_7131("TYCSS_OBJ_3", false);
+	func_7131("TYCSS_OBJ_3" /*Wait for the team to change into the security gear.*/, false);
 	return;
 }
 
 void func_8015() // Position - 0x216EA2 (2191010)
 {
-	func_7131("TYCSS_OBJ_1", false);
+	func_7131("TYCSS_OBJ_1" /*Take out the ~HUD_COLOUR_RED~security.~s~*/, false);
 	return;
 }
 
@@ -375442,20 +375442,20 @@ void func_8016() // Position - 0x216EB4 (2191028)
 		return;
 	}
 
-	str = "TYC_GEN_GOTO";
+	str = "TYC_GEN_GOTO" /*Go to ~a~~y~.~s~*/;
 
 	switch (func_6899())
 	{
 		case 0:
-			str2 = "TYC_LOC_6";
+			str2 = "TYC_LOC_6" /*Strawberry*/;
 			break;
 	
 		case 1:
-			str2 = "TYC_LOC_4";
+			str2 = "TYC_LOC_4" /*Terminal*/;
 			break;
 	
 		case 2:
-			str2 = "TYC_LOC_7";
+			str2 = "TYC_LOC_7" /*Harmony*/;
 			break;
 	}
 
@@ -398807,16 +398807,16 @@ char* func_8631() // Position - 0x23B784 (2340740)
 	switch (func_6900())
 	{
 		case 0:
-			return "TYCSS_BM_4";
+			return "TYCSS_BM_4" /*Failed to deliver the cash*/;
 	
 		case 1:
-			return "TYCBC_BM_3";
+			return "TYCBC_BM_3" /*Failed to torch the rival operation*/;
 	
 		case 2:
-			return "TYCSS_BM_4";
+			return "TYCSS_BM_4" /*Failed to deliver the cash*/;
 	
 		case 3:
-			return "TYCSC_BM_2";
+			return "TYCSC_BM_2" /*Failed to steal the rival's cash*/;
 	
 		default:
 		
@@ -398827,7 +398827,7 @@ char* func_8631() // Position - 0x23B784 (2340740)
 
 char* func_8632() // Position - 0x23B7D1 (2340817)
 {
-	return "TYCCW_BM_2";
+	return "TYCCW_BM_2" /*MISSION OVER*/;
 }
 
 int _SHOW_BANNER(int iParam0, char* sParam1, char* sParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7) // Position - 0x23B7DE (2340830)
@@ -399194,16 +399194,16 @@ char* func_8651() // Position - 0x23BFAC (2342828)
 	switch (func_6900())
 	{
 		case 0:
-			return "TYCSS_BM_3";
+			return "TYCSS_BM_3" /*Cash delivered*/;
 	
 		case 1:
-			return "TYCBC_BM_2";
+			return "TYCBC_BM_2" /*Rival operation torched*/;
 	
 		case 2:
-			return "TYCSS_BM_3";
+			return "TYCSS_BM_3" /*Cash delivered*/;
 	
 		case 3:
-			return "TYCSC_BM_3";
+			return "TYCSC_BM_3" /*Cash delivered*/;
 	
 		default:
 		
@@ -399219,7 +399219,7 @@ char* func_8652() // Position - 0x23BFF9 (2342905)
 
 char* func_8653() // Position - 0x23C007 (2342919)
 {
-	return "TYCCW_BM_1";
+	return "TYCCW_BM_1" /*HANDS ON CAR WASH*/;
 }
 
 void func_8654() // Position - 0x23C014 (2342932)
@@ -413778,9 +413778,9 @@ void func_8923() // Position - 0x24DD88 (2416008)
 		funcLocal_3346.f_166();
 	
 		if (StackVal)
-			Global_1984716.f_3 = 1;
+			Global_1984717.f_3 = 1;
 		else
-			Global_1984716.f_3 = 0;
+			Global_1984717.f_3 = 0;
 	}
 
 	if (func_8925() && func_8924())
@@ -413802,14 +413802,14 @@ BOOL func_8925() // Position - 0x24DDF1 (2416113)
 	if (Global_2707922.f_10)
 		return false;
 
-	if (Global_1984716.f_3)
+	if (Global_1984717.f_3)
 		return false;
 
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("gb_ie_delivery_cutscene")) > 0)
 		return false;
 
-	if (_STOPWATCH_IS_INITIALIZED(&Global_1984716))
-		return func_30(&Global_1984716, Global_1984716.f_2, false);
+	if (_STOPWATCH_IS_INITIALIZED(&Global_1984717))
+		return func_30(&Global_1984717, Global_1984717.f_2, false);
 
 	return false;
 }
@@ -419525,7 +419525,7 @@ char* func_9173(Hash hParam0, int iParam1, int iParam2) // Position - 0x2546B1 (
 			return "WT_PISTOLXM3";
 	
 		case joaat("PICKUP_WEAPON_CERAMICPISTOL"):
-			return "WT_CERPST";
+			return "WT_CERPST" /*Ceramic Pistol*/;
 	
 		case joaat("PICKUP_WEAPON_MICROSMG"):
 		case joaat("PICKUP_VEHICLE_WEAPON_MICROSMG"):
@@ -419599,7 +419599,7 @@ char* func_9173(Hash hParam0, int iParam1, int iParam2) // Position - 0x2546B1 (
 			return "WT_SG_ASL" /*Assault Shotgun*/;
 	
 		case joaat("PICKUP_WEAPON_COMBATSHOTGUN"):
-			return "WT_CMBSHGN";
+			return "WT_CMBSHGN" /*Combat Shotgun*/;
 	
 		case joaat("PICKUP_WEAPON_SNIPERRIFLE"):
 			return "WT_SNIP_RIF" /*Sniper Rifle*/;
@@ -420592,9 +420592,9 @@ char* func_9174(Hash hParam0, BOOL bParam1) // Position - 0x254E8E (2444942)
 	
 		case joaat("WEAPON_CERAMICPISTOL"):
 			if (bParam1)
-				return "WTU_CERPST";
+				return "WTU_CERPST" /*CERAMIC PISTOL*/;
 			else
-				return "WT_CERPST";
+				return "WT_CERPST" /*Ceramic Pistol*/;
 			break;
 	
 		case joaat("WEAPON_GADGETPISTOL"):
@@ -420613,9 +420613,9 @@ char* func_9174(Hash hParam0, BOOL bParam1) // Position - 0x254E8E (2444942)
 	
 		case joaat("WEAPON_COMBATSHOTGUN"):
 			if (bParam1)
-				return "WTU_CMBSHGN";
+				return "WTU_CMBSHGN" /*COMBAT SHOTGUN*/;
 			else
-				return "WT_CMBSHGN";
+				return "WT_CMBSHGN" /*Combat Shotgun*/;
 			break;
 	
 		case joaat("VEHICLE_WEAPON_TURRET_DINGHY5_50CAL"):
@@ -420774,9 +420774,9 @@ char* func_9174(Hash hParam0, BOOL bParam1) // Position - 0x254E8E (2444942)
 	
 		case joaat("WEAPON_BRIEFCASE"):
 			if (bParam1)
-				return "FMMC_WT_BRIEF";
+				return "FMMC_WT_BRIEF" /*Briefcase*/;
 			else
-				return "FMMC_WT_BRIEF";
+				return "FMMC_WT_BRIEF" /*Briefcase*/;
 			break;
 	
 		default:
@@ -428037,16 +428037,16 @@ char* func_9489() // Position - 0x25ED9C (2485660)
 	switch (func_6900())
 	{
 		case 0:
-			return "TYCSS_BM_2";
+			return "TYCSS_BM_2" /*Recover the cash*/;
 	
 		case 1:
-			return "TYCBC_BM_1";
+			return "TYCBC_BM_1" /*Torch the rival operation*/;
 	
 		case 2:
-			return "TYCSS_BM_2";
+			return "TYCSS_BM_2" /*Recover the cash*/;
 	
 		case 3:
-			return "TYCSC_BM_1";
+			return "TYCSC_BM_1" /*Steal the rival's cash*/;
 	
 		default:
 		
@@ -430797,7 +430797,7 @@ void func_9618(int iParam0) // Position - 0x26237D (2499453)
 			else if (iParam0 == 3)
 				func_9619("MC_GRAB_10b", "MC_GRAB_10");
 			else if (iParam0 == 4)
-				func_9619("TYCST_HLP_2a", "TYCST_HLP_2b");
+				func_9619("TYCST_HLP_2a" /*Press ~INPUT_CURSOR_ACCEPT~ to begin grabbing the cash.~n~Tap ~INPUT_CURSOR_ACCEPT~ to grab it quickly.*/, "TYCST_HLP_2b" /*Press ~INPUT_FRONTEND_ACCEPT~ to begin grabbing the cash.~n~Tap ~INPUT_FRONTEND_ACCEPT~ to grab it quickly.*/);
 			break;
 	}
 
@@ -446545,22 +446545,22 @@ void func_10338(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3, Player plP
 
 void func_10339(Player plParam0) // Position - 0x275380 (2577280)
 {
-	func_35(&Global_1984716, false, false);
+	func_35(&Global_1984717, false, false);
 
 	if (plParam0 != -1)
-		Global_1984716.f_2 = plParam0;
+		Global_1984717.f_2 = plParam0;
 	else
-		Global_1984716.f_2 = *Global_262145.f_36598;
+		Global_1984717.f_2 = *Global_262145.f_36598;
 
 	return;
 }
 
 int func_10340(int iParam0) // Position - 0x2753B3 (2577331)
 {
-	if (Global_1984720 == -2)
+	if (Global_1984721 == -2)
 		return 0;
 
-	if (Global_1984720 == iParam0)
+	if (Global_1984721 == iParam0)
 		return 0;
 
 	if (func_2957(iParam0) != 0)
@@ -476878,7 +476878,7 @@ void func_10963() // Position - 0x296571 (2712945)
 {
 	var unk;
 
-	Global_1984716 = { unk };
+	Global_1984717 = { unk };
 	return;
 }
 

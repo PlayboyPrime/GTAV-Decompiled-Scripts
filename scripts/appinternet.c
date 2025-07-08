@@ -8386,9 +8386,9 @@ void func_132() // Position - 0x736A (29546)
 										flag2 = true;
 									}
 								}
-								else if (MISC::IS_STRING_NULL_OR_EMPTY(&(Global_76977.f_1)) || !MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHRE_PER"))
+								else if (MISC::IS_STRING_NULL_OR_EMPTY(&(Global_76977.f_1)) || !MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHRE_PER" /*Unlock Exclusive Clothing by purchasing this vehicle.*/))
 								{
-									func_8398("HELP_VEHRE_PER", 0, 0, 0, 0, 0);
+									func_8398("HELP_VEHRE_PER" /*Unlock Exclusive Clothing by purchasing this vehicle.*/, 0, 0, 0, 0, 0);
 									iLocal_703 = Global_78104 + 5000;
 									flag2 = true;
 								}
@@ -8397,7 +8397,7 @@ void func_132() // Position - 0x736A (29546)
 					
 						if (!flag2)
 						{
-							if (!MISC::IS_STRING_NULL_OR_EMPTY(&(Global_76977.f_1)) && MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_PASSIVE" /*Passive mode is disabled in this type of vehicle.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHRE" /*For a limited period, unlock Exclusive Clothing by purchasing this vehicle.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHRE_PER") || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHCH" /*Receive ~1~ Chips with all purchases of ~a~.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHSC" /*This car can be ordered for free with a Rockstar Games account. Sign up now at rockstargames.com.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHX17" /*This vehicle is available for free as a holiday gift from Rockstar.*/))
+							if (!MISC::IS_STRING_NULL_OR_EMPTY(&(Global_76977.f_1)) && MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_PASSIVE" /*Passive mode is disabled in this type of vehicle.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHRE" /*For a limited period, unlock Exclusive Clothing by purchasing this vehicle.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHRE_PER" /*Unlock Exclusive Clothing by purchasing this vehicle.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHCH" /*Receive ~1~ Chips with all purchases of ~a~.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHSC" /*This car can be ordered for free with a Rockstar Games account. Sign up now at rockstargames.com.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHX17" /*This vehicle is available for free as a holiday gift from Rockstar.*/))
 							{
 								if (HUD::IS_HELP_MESSAGE_BEING_DISPLAYED())
 									if (func_8370(&Global_76977))
@@ -8536,9 +8536,9 @@ void func_132() // Position - 0x736A (29546)
 										flag3 = true;
 									}
 								}
-								else if (MISC::IS_STRING_NULL_OR_EMPTY(&(Global_76977.f_1)) || !MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHRE_PER"))
+								else if (MISC::IS_STRING_NULL_OR_EMPTY(&(Global_76977.f_1)) || !MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHRE_PER" /*Unlock Exclusive Clothing by purchasing this vehicle.*/))
 								{
-									func_8398("HELP_VEHRE_PER", 0, 0, 0, 0, 0);
+									func_8398("HELP_VEHRE_PER" /*Unlock Exclusive Clothing by purchasing this vehicle.*/, 0, 0, 0, 0, 0);
 									iLocal_703 = Global_78104 + 7500;
 									flag3 = true;
 								}
@@ -8547,7 +8547,7 @@ void func_132() // Position - 0x736A (29546)
 					
 						if (!flag3)
 						{
-							if (!MISC::IS_STRING_NULL_OR_EMPTY(&(Global_76977.f_1)) && MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_PASSIVE" /*Passive mode is disabled in this type of vehicle.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHRE" /*For a limited period, unlock Exclusive Clothing by purchasing this vehicle.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHRE_PER") || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHCH" /*Receive ~1~ Chips with all purchases of ~a~.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHSC" /*This car can be ordered for free with a Rockstar Games account. Sign up now at rockstargames.com.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHX17" /*This vehicle is available for free as a holiday gift from Rockstar.*/))
+							if (!MISC::IS_STRING_NULL_OR_EMPTY(&(Global_76977.f_1)) && MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_PASSIVE" /*Passive mode is disabled in this type of vehicle.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHRE" /*For a limited period, unlock Exclusive Clothing by purchasing this vehicle.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHRE_PER" /*Unlock Exclusive Clothing by purchasing this vehicle.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHCH" /*Receive ~1~ Chips with all purchases of ~a~.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHSC" /*This car can be ordered for free with a Rockstar Games account. Sign up now at rockstargames.com.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHX17" /*This vehicle is available for free as a holiday gift from Rockstar.*/))
 							{
 								if (HUD::IS_HELP_MESSAGE_BEING_DISPLAYED())
 									if (func_8370(&Global_76977))
@@ -8667,7 +8667,7 @@ void func_132() // Position - 0x736A (29546)
 					{
 						if (!func_7454(PLAYER::PLAYER_ID()))
 						{
-							func_8398("HELP_WEB_SB_CW", 0, 1, 0, 0, 0);
+							func_8398("HELP_WEB_SB_CW" /*Owning the Hands On Car Wash will also boost the value of Product sold from a Counterfeit Cash Factory.*/, 0, 1, 0, 0, 0);
 							iLocal_703 = Global_78104 + 7500;
 						}
 					}
@@ -8675,7 +8675,7 @@ void func_132() // Position - 0x736A (29546)
 					{
 						if (!func_7453(PLAYER::PLAYER_ID()))
 						{
-							func_8398("HELP_WEB_SB_HH", 0, 1, 0, 0, 0);
+							func_8398("HELP_WEB_SB_HH" /*Owning Higgins Helitours will also boost the value of Cargo sold from a Hangar.*/, 0, 1, 0, 0, 0);
 							iLocal_703 = Global_78104 + 7500;
 						}
 					}
@@ -8683,13 +8683,13 @@ void func_132() // Position - 0x736A (29546)
 					{
 						if (!func_7452(PLAYER::PLAYER_ID()))
 						{
-							func_8398("HELP_WEB_SB_WS", 0, 1, 0, 0, 0);
+							func_8398("HELP_WEB_SB_WS" /*Owning Smoke on the Water will also boost the value of Product sold from a Weed Farm.*/, 0, 1, 0, 0, 0);
 							iLocal_703 = Global_78104 + 7500;
 						}
 					}
 					else if (HUD::IS_HELP_MESSAGE_BEING_DISPLAYED())
 					{
-						if (MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_NCLUBSTY" /*Please note: Your chosen style will be installed as you progress with the Nightclub setup.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_NCLUBLIG" /*Please note: Your chosen lighting option will be installed as you progress with the Nightclub setup.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_NCLUBDAN" /*Please note: Your dancers will arrive after the Nightclub has been set up.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_NCLUBICE" /*Please note: Dry Ice will be available after the Nightclub has been set up.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_WEB_SB_WS") || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_WEB_SB_HH") || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_WEB_SB_CW"))
+						if (MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_NCLUBSTY" /*Please note: Your chosen style will be installed as you progress with the Nightclub setup.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_NCLUBLIG" /*Please note: Your chosen lighting option will be installed as you progress with the Nightclub setup.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_NCLUBDAN" /*Please note: Your dancers will arrive after the Nightclub has been set up.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_NCLUBICE" /*Please note: Dry Ice will be available after the Nightclub has been set up.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_WEB_SB_WS" /*Owning Smoke on the Water will also boost the value of Product sold from a Weed Farm.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_WEB_SB_HH" /*Owning Higgins Helitours will also boost the value of Cargo sold from a Hangar.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_WEB_SB_CW" /*Owning the Hands On Car Wash will also boost the value of Product sold from a Counterfeit Cash Factory.*/))
 						{
 							if (func_8370(&Global_76977))
 							{
@@ -49450,18 +49450,18 @@ int func_349(int iParam0, char* sParam1, int iParam2) // Position - 0x32869 (206
 	switch (iParam0)
 	{
 		case 174:
-			str = "CWAS_PROP_ET";
-			str2 = "CWAS_PROP_ET";
+			str = "CWAS_PROP_ET" /*HANDS ON CAR WASH*/;
+			str2 = "CWAS_PROP_ET" /*HANDS ON CAR WASH*/;
 			break;
 	
 		case 175:
-			str = "WSHOP_PROP_ET";
-			str2 = "WSHOP_PROP_ET";
+			str = "WSHOP_PROP_ET" /*SMOKE ON THE WATER*/;
+			str2 = "WSHOP_PROP_ET" /*SMOKE ON THE WATER*/;
 			break;
 	
 		case 176:
-			str = "HELIT_PROP_ET";
-			str2 = "HELIT_PROP_ET";
+			str = "HELIT_PROP_ET" /*HIGGINS HELITOURS*/;
+			str2 = "HELIT_PROP_ET" /*HIGGINS HELITOURS*/;
 			break;
 	}
 
@@ -49541,13 +49541,13 @@ char* func_351(Hash hParam0) // Position - 0x32A0C (207372)
 	switch (hParam0)
 	{
 		case 1:
-			return "CWAS_NME_1";
+			return "CWAS_NME_1" /*HANDS ON CAR WASH*/;
 	
 		case 3:
-			return "WSHOP_NME_1";
+			return "WSHOP_NME_1" /*SMOKE ON THE WATER*/;
 	
 		case 2:
-			return "HELIT_NME_1";
+			return "HELIT_NME_1" /*HIGGINS HELITOURS*/;
 	
 		default:
 		
@@ -53021,24 +53021,24 @@ void func_515(int iParam0, char* sParam1, var uParam2, var uParam3, var uParam4)
 	switch (iParam0)
 	{
 		case 174:
-			TEXT_LABEL_ASSIGN_STRING(sParam1, "CWAS_EXT_T", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "CWAS_EXT_T" /*HANDS ON CAR WASH*/, 64);
 			*uParam3 = 2;
-			uParam2->[0] = "CWAS_E_O_0";
-			uParam2->[1] = "CWAS_E_O_1";
+			uParam2->[0] = "CWAS_E_O_0" /*Exit*/;
+			uParam2->[1] = "CWAS_E_O_1" /*All Exit*/;
 			break;
 	
 		case 175:
-			TEXT_LABEL_ASSIGN_STRING(sParam1, "WSHOP_EXT_T", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "WSHOP_EXT_T" /*SMOKE ON THE WATER*/, 64);
 			*uParam3 = 2;
-			uParam2->[0] = "WSHOP_E_O_0";
-			uParam2->[1] = "WSHOP_E_O_1";
+			uParam2->[0] = "WSHOP_E_O_0" /*Exit*/;
+			uParam2->[1] = "WSHOP_E_O_1" /*All Exit*/;
 			break;
 	
 		case 176:
-			TEXT_LABEL_ASSIGN_STRING(sParam1, "HELIT_EXT_T", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "HELIT_EXT_T" /*HIGGINS HELITOURS*/, 64);
 			*uParam3 = 2;
-			uParam2->[0] = "HELIT_E_O_0";
-			uParam2->[1] = "HELIT_E_O_1";
+			uParam2->[0] = "HELIT_E_O_0" /*Exit*/;
+			uParam2->[1] = "HELIT_E_O_1" /*All Exit*/;
 			break;
 	
 		default:
@@ -54569,13 +54569,13 @@ char* func_542(int iParam0, var uParam1, var uParam2, var uParam3) // Position -
 		switch (iParam0)
 		{
 			case 174:
-				return "CWAS_KICK_A";
+				return "CWAS_KICK_A" /*You no longer have access to the Hands On Car Wash.*/;
 		
 			case 176:
-				return "HELIT_KICK_A";
+				return "HELIT_KICK_A" /*You no longer have access to Higgins Helitours.*/;
 		
 			case 175:
-				return "WSHOP_KICK_A";
+				return "WSHOP_KICK_A" /*You no longer have access to Smoke on the Water.*/;
 		}
 	}
 
@@ -54584,13 +54584,13 @@ char* func_542(int iParam0, var uParam1, var uParam2, var uParam3) // Position -
 		switch (iParam0)
 		{
 			case 174:
-				return "CWAS_KICK_B";
+				return "CWAS_KICK_B" /*You no longer have access to the Hands On Car Wash as the owner has left the game.*/;
 		
 			case 176:
-				return "HELIT_KICK_B";
+				return "HELIT_KICK_B" /*You no longer have access to Higgins Helitours as the owner has left the game.*/;
 		
 			case 175:
-				return "WSHOP_KICK_B";
+				return "WSHOP_KICK_B" /*You no longer have access to Smoke on the Water as the owner has left the game.*/;
 		}
 	}
 
@@ -54599,13 +54599,13 @@ char* func_542(int iParam0, var uParam1, var uParam2, var uParam3) // Position -
 		switch (iParam0)
 		{
 			case 174:
-				return "CWAS_KICK_C";
+				return "CWAS_KICK_C" /*Owner has requested all to leave the Hands On Car Wash.*/;
 		
 			case 176:
-				return "HELIT_KICK_C";
+				return "HELIT_KICK_C" /*Owner has requested all to leave Higgins Helitours.*/;
 		
 			case 175:
-				return "WSHOP_KICK_C";
+				return "WSHOP_KICK_C" /*Owner has requested all to leave Smoke on the Water.*/;
 		}
 	}
 
@@ -54614,13 +54614,13 @@ char* func_542(int iParam0, var uParam1, var uParam2, var uParam3) // Position -
 		switch (iParam0)
 		{
 			case 174:
-				return "CWAS_KICK_D";
+				return "CWAS_KICK_D" /*You no longer have access to the Hands On Car Wash as you became the Beast.*/;
 		
 			case 176:
-				return "HELIT_KICK_D";
+				return "HELIT_KICK_D" /*You no longer have access to Higgins Helitours as you became the Beast.*/;
 		
 			case 175:
-				return "WSHOP_KICK_D";
+				return "WSHOP_KICK_D" /*You no longer have access to Smoke on the Water as you became the Beast.*/;
 		}
 	}
 
@@ -55543,15 +55543,15 @@ void func_591(int iParam0, char* sParam1, var uParam2, var uParam3, var uParam4)
 	switch (iParam0)
 	{
 		case 174:
-			TEXT_LABEL_ASSIGN_STRING(sParam1, "CWAS_PROP_ET", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "CWAS_PROP_ET" /*HANDS ON CAR WASH*/, 64);
 			break;
 	
 		case 176:
-			TEXT_LABEL_ASSIGN_STRING(sParam1, "HELIT_PROP_ET", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "HELIT_PROP_ET" /*HIGGINS HELITOURS*/, 64);
 			break;
 	
 		case 175:
-			TEXT_LABEL_ASSIGN_STRING(sParam1, "WSHOP_PROP_ET", 64);
+			TEXT_LABEL_ASSIGN_STRING(sParam1, "WSHOP_PROP_ET" /*SMOKE ON THE WATER*/, 64);
 			break;
 	}
 
@@ -55676,19 +55676,19 @@ char* func_600(int iParam0, var uParam1, var uParam2) // Position - 0x3A8D4 (239
 		switch (iParam0)
 		{
 			case 174:
-				return "SI_EXIT_BLCK34A";
+				return "SI_EXIT_BLCK34A" /*You can't leave the Hands On Car Wash while on call. You can cancel this via the Quick Join app on the phone.*/;
 		
 			case 176:
-				return "SI_EXIT_BLCK35A";
+				return "SI_EXIT_BLCK35A" /*You can't leave Higgins Helitours while on call. You can cancel this via the Quick Join app on the phone.*/;
 		
 			case 175:
-				return "SI_EXIT_BLCK36A";
+				return "SI_EXIT_BLCK36A" /*You can't leave Smoke on the Water while on call. You can cancel this via the Quick Join app on the phone.*/;
 		
 			default:
 			
 		}
 	
-		return "SI_EXIT_BLCK34A";
+		return "SI_EXIT_BLCK34A" /*You can't leave the Hands On Car Wash while on call. You can cancel this via the Quick Join app on the phone.*/;
 	}
 
 	return "";
@@ -55729,16 +55729,16 @@ char* func_605(int iParam0, var uParam1, var uParam2) // Position - 0x3A997 (240
 		switch (iParam0)
 		{
 			case 174:
-				return "SI_ENTR_BLCK34A";
+				return "SI_ENTR_BLCK34A" /*You can't enter the Hands On Car Wash while on call. You can cancel this via the Quick Join app on the phone.*/;
 		
 			case 176:
-				return "SI_ENTR_BLCK35A";
+				return "SI_ENTR_BLCK35A" /*You can't enter Higgins Helitours while on call. You can cancel this via the Quick Join app on the phone.*/;
 		
 			case 175:
-				return "SI_ENTR_BLCK36A";
+				return "SI_ENTR_BLCK36A" /*You can't enter Smoke on the Water while on call. You can cancel this via the Quick Join app on the phone.*/;
 		}
 	
-		return "SI_ENTR_BLCK34A";
+		return "SI_ENTR_BLCK34A" /*You can't enter the Hands On Car Wash while on call. You can cancel this via the Quick Join app on the phone.*/;
 	}
 
 	if (func_418(PLAYER::PLAYER_ID(), false))
@@ -55755,43 +55755,43 @@ char* func_605(int iParam0, var uParam1, var uParam2) // Position - 0x3A997 (240
 						switch (num)
 						{
 							case 192:
-								return "CWAS_BLCK_A";
+								return "CWAS_BLCK_A" /*You can't enter the Hands On Car Wash while resupplying another business.*/;
 						
 							case 190:
-								return "CWAS_BLCK_B";
+								return "CWAS_BLCK_B" /*You can't enter the Hands On Car Wash while selling goods from another business.*/;
 						
 							case 167:
-								return "CWAS_BLCK_C";
+								return "CWAS_BLCK_C" /*You can't enter the Hands On Car Wash while acquiring goods for a Warehouse.*/;
 						
 							case 168:
-								return "CWAS_BLCK_D";
+								return "CWAS_BLCK_D" /*You can't enter the Hands On Car Wash while selling goods from a Warehouse.*/;
 						
 							case 178:
-								return "CWAS_BLCK_E";
+								return "CWAS_BLCK_E" /*You can't enter the Hands On Car Wash while acquiring a vehicle for a Warehouse.*/;
 						
 							case 188:
-								return "CWAS_BLCK_F";
+								return "CWAS_BLCK_F" /*You can't enter the Hands On Car Wash while selling vehicles from a Warehouse.*/;
 						
 							case 225:
-								return "CWAS_BLCK_G";
+								return "CWAS_BLCK_G" /*You can't enter the Hands On Car Wash while acquiring goods for a Bunker.*/;
 						
 							case 226:
-								return "CWAS_BLCK_H";
+								return "CWAS_BLCK_H" /*You can't enter the Hands On Car Wash while selling goods from a Bunker.*/;
 						
 							case 229:
-								return "CWAS_BLCK_I";
+								return "CWAS_BLCK_I" /*You can't enter the Hands On Car Wash while acquiring goods for a Hangar.*/;
 						
 							case 230:
-								return "CWAS_BLCK_J";
+								return "CWAS_BLCK_J" /*You can't enter the Hands On Car Wash while selling goods from a Hangar.*/;
 						
 							case 237:
-								return "CWAS_BLCK_O";
+								return "CWAS_BLCK_O" /*You can't enter the Hands On Car Wash while taking part in Nightclub business.*/;
 						
 							case 243:
-								return "CWAS_BLCK_P";
+								return "CWAS_BLCK_P" /*You can't enter the Hands On Car Wash while working for Ms. Baker.*/;
 						
 							case 271:
-								return "CWAS_BLCK_U";
+								return "CWAS_BLCK_U" /*You can't enter the Hands On Car Wash while conducting Auto Shop business.*/;
 						
 							case 355:
 							case 354:
@@ -55799,7 +55799,7 @@ char* func_605(int iParam0, var uParam1, var uParam2) // Position - 0x3A997 (240
 								return "";
 						
 							default:
-								return "CWAS_BLCK_X";
+								return "CWAS_BLCK_X" /*You can't enter the Hands On Car Wash while on a mission.*/;
 						}
 					}
 					else
@@ -55814,43 +55814,43 @@ char* func_605(int iParam0, var uParam1, var uParam2) // Position - 0x3A997 (240
 						switch (num)
 						{
 							case 192:
-								return "HELIT_BLCK_A";
+								return "HELIT_BLCK_A" /*You can't enter Higgins Helitours while resupplying another business.*/;
 						
 							case 190:
-								return "HELIT_BLCK_B";
+								return "HELIT_BLCK_B" /*You can't enter Higgins Helitours while selling goods from another business.*/;
 						
 							case 167:
-								return "HELIT_BLCK_C";
+								return "HELIT_BLCK_C" /*You can't enter Higgins Helitours while acquiring goods for a Warehouse.*/;
 						
 							case 168:
-								return "HELIT_BLCK_D";
+								return "HELIT_BLCK_D" /*You can't enter Higgins Helitours while selling goods from a Warehouse.*/;
 						
 							case 178:
-								return "HELIT_BLCK_E";
+								return "HELIT_BLCK_E" /*You can't enter Higgins Helitours while acquiring a vehicle for a Warehouse.*/;
 						
 							case 188:
-								return "HELIT_BLCK_F";
+								return "HELIT_BLCK_F" /*You can't enter Higgins Helitours while selling vehicles from a Warehouse.*/;
 						
 							case 225:
-								return "HELIT_BLCK_G";
+								return "HELIT_BLCK_G" /*You can't enter Higgins Helitours while acquiring goods for a Bunker.*/;
 						
 							case 226:
-								return "HELIT_BLCK_H";
+								return "HELIT_BLCK_H" /*You can't enter Higgins Helitours while selling goods from a Bunker.*/;
 						
 							case 229:
-								return "HELIT_BLCK_I";
+								return "HELIT_BLCK_I" /*You can't enter Higgins Helitours while acquiring goods for a Hangar.*/;
 						
 							case 230:
-								return "HELIT_BLCK_J";
+								return "HELIT_BLCK_J" /*You can't enter Higgins Helitours while selling goods from a Hangar.*/;
 						
 							case 237:
-								return "HELIT_BLCK_O";
+								return "HELIT_BLCK_O" /*You can't enter Higgins Helitours while taking part in Nightclub business.*/;
 						
 							case 243:
-								return "HELIT_BLCK_P";
+								return "HELIT_BLCK_P" /*You can't enter Higgins Helitours while working for Ms. Baker.*/;
 						
 							case 271:
-								return "HELIT_BLCK_U";
+								return "HELIT_BLCK_U" /*You can't enter Higgins Helitours while conducting Auto Shop business.*/;
 						
 							case 357:
 							case 356:
@@ -55858,7 +55858,7 @@ char* func_605(int iParam0, var uParam1, var uParam2) // Position - 0x3A997 (240
 								return "";
 						
 							default:
-								return "HELIT_BLCK_X";
+								return "HELIT_BLCK_X" /*You can't enter Higgins Helitours while on a mission.*/;
 						}
 					}
 					else
@@ -55873,43 +55873,43 @@ char* func_605(int iParam0, var uParam1, var uParam2) // Position - 0x3A997 (240
 						switch (num)
 						{
 							case 192:
-								return "WSHOP_BLCK_A";
+								return "WSHOP_BLCK_A" /*You can't enter Smoke on the Water while resupplying another business.*/;
 						
 							case 190:
-								return "WSHOP_BLCK_B";
+								return "WSHOP_BLCK_B" /*You can't enter Smoke on the Water while selling goods from another business.*/;
 						
 							case 167:
-								return "WSHOP_BLCK_C";
+								return "WSHOP_BLCK_C" /*You can't enter Smoke on the Water while acquiring goods for a Warehouse.*/;
 						
 							case 168:
-								return "WSHOP_BLCK_D";
+								return "WSHOP_BLCK_D" /*You can't enter Smoke on the Water while selling goods from a Warehouse.*/;
 						
 							case 178:
-								return "WSHOP_BLCK_E";
+								return "WSHOP_BLCK_E" /*You can't enter Smoke on the Water while acquiring a vehicle for a Warehouse.*/;
 						
 							case 188:
-								return "WSHOP_BLCK_F";
+								return "WSHOP_BLCK_F" /*You can't enter Smoke on the Water while selling vehicles from a Warehouse.*/;
 						
 							case 225:
-								return "WSHOP_BLCK_G";
+								return "WSHOP_BLCK_G" /*You can't enter Smoke on the Water while acquiring goods for a Bunker.*/;
 						
 							case 226:
-								return "WSHOP_BLCK_H";
+								return "WSHOP_BLCK_H" /*You can't enter Smoke on the Water while selling goods from a Bunker.*/;
 						
 							case 229:
-								return "WSHOP_BLCK_I";
+								return "WSHOP_BLCK_I" /*You can't enter Smoke on the Water while acquiring goods for a Hangar.*/;
 						
 							case 230:
-								return "WSHOP_BLCK_J";
+								return "WSHOP_BLCK_J" /*You can't enter Smoke on the Water while selling goods from a Hangar.*/;
 						
 							case 237:
-								return "WSHOP_BLCK_O";
+								return "WSHOP_BLCK_O" /*You can't enter Smoke on the Water while taking part in Nightclub business.*/;
 						
 							case 243:
-								return "WSHOP_BLCK_P";
+								return "WSHOP_BLCK_P" /*You can't enter Smoke on the Water while working for Ms. Baker.*/;
 						
 							case 271:
-								return "WSHOP_BLCK_U";
+								return "WSHOP_BLCK_U" /*You can't enter Smoke on the Water while conducting Auto Shop business.*/;
 						
 							case 359:
 							case 358:
@@ -55917,7 +55917,7 @@ char* func_605(int iParam0, var uParam1, var uParam2) // Position - 0x3A997 (240
 								return "";
 						
 							default:
-								return "WSHOP_BLCK_X";
+								return "WSHOP_BLCK_X" /*You can't enter Smoke on the Water while on a mission.*/;
 						}
 					}
 					else
@@ -55927,7 +55927,7 @@ char* func_605(int iParam0, var uParam1, var uParam2) // Position - 0x3A997 (240
 					break;
 			}
 		
-			return "CWAS_BLCK_X";
+			return "CWAS_BLCK_X" /*You can't enter the Hands On Car Wash while on a mission.*/;
 		}
 	}
 
@@ -55936,16 +55936,16 @@ char* func_605(int iParam0, var uParam1, var uParam2) // Position - 0x3A997 (240
 		switch (iParam0)
 		{
 			case 174:
-				return "CWAS_BLCK_K";
+				return "CWAS_BLCK_K" /*You can't enter the Hands On Car Wash with a prostitute.*/;
 		
 			case 176:
-				return "HELIT_BLCK_K";
+				return "HELIT_BLCK_K" /*You can't enter Higgins Helitours with a prostitute.*/;
 		
 			case 175:
-				return "WSHOP_BLCK_K";
+				return "WSHOP_BLCK_K" /*You can't enter Smoke on the Water with a prostitute.*/;
 		}
 	
-		return "CWAS_BLCK_K";
+		return "CWAS_BLCK_K" /*You can't enter the Hands On Car Wash with a prostitute.*/;
 	}
 
 	if (func_608())
@@ -55956,16 +55956,16 @@ char* func_605(int iParam0, var uParam1, var uParam2) // Position - 0x3A997 (240
 		switch (iParam0)
 		{
 			case 174:
-				return "CWAS_BLCK_L";
+				return "CWAS_BLCK_L" /*You can't access the Hands On Car Wash as the Beast.*/;
 		
 			case 176:
-				return "HELIT_BLCK_L";
+				return "HELIT_BLCK_L" /*You can't access Higgins Helitours as the Beast.*/;
 		
 			case 175:
-				return "WSHOP_BLCK_L";
+				return "WSHOP_BLCK_L" /*You can't access Smoke on the Water as the Beast.*/;
 		}
 	
-		return "CWAS_BLCK_L";
+		return "CWAS_BLCK_L" /*You can't access the Hands On Car Wash as the Beast.*/;
 	}
 
 	if (func_579(PLAYER::PLAYER_PED_ID()))
@@ -55973,13 +55973,13 @@ char* func_605(int iParam0, var uParam1, var uParam2) // Position - 0x3A997 (240
 		switch (iParam0)
 		{
 			case 174:
-				return "CWAS_BLCK_M";
+				return "CWAS_BLCK_M" /*You can't access the Hands On Car Wash while wearing the Ballistic Equipment.*/;
 		
 			case 176:
-				return "HELIT_BLCK_M";
+				return "HELIT_BLCK_M" /*You can't access Higgins Helitours while wearing the Ballistic Equipment.*/;
 		
 			case 175:
-				return "WSHOP_BLCK_M";
+				return "WSHOP_BLCK_M" /*You can't access Smoke on the Water while wearing the Ballistic Equipment.*/;
 		
 			default:
 			
@@ -57234,34 +57234,34 @@ char* func_684(int iParam0, int iParam1) // Position - 0x3C50B (247051)
 			switch (iParam1)
 			{
 				case 0:
-					return "PIM_CWAS_INV_D";
+					return "PIM_CWAS_INV_D" /*Invite players to your Hands On Car Wash.*/;
 			
 				case 1:
-					return "PIM_CWAS_INV_M";
+					return "PIM_CWAS_INV_M" /*Invite to Hands On Car Wash*/;
 			
 				case 4:
-					return "PIM_CWAS_INV_T";
+					return "PIM_CWAS_INV_T" /*INVITE TO HANDS ON CAR WASH*/;
 			
 				case 13:
-					return "PIM_INV_CWAS";
+					return "PIM_INV_CWAS" /*Invite to Hands On Car Wash has been sent to ~a~.*/;
 			
 				case 14:
-					return "PIM_INV_A_T_CWAS";
+					return "PIM_INV_A_T_CWAS" /*Invite to Hands On Car Wash has been sent to all players.*/;
 			
 				case 15:
-					return "CELL_CWAS_INV";
+					return "CELL_CWAS_INV" /*Hey, come over to the Hands On Car Wash.*/;
 			
 				case 3:
-					return "PIM_CWAS_MAN_D1";
+					return "PIM_CWAS_MAN_D1" /*Manage the Hands On Car Wash.*/;
 			
 				case 21:
-					return "CELL_CWAS";
+					return "CELL_CWAS" /*Hands On Car Wash*/;
 			
 				case 2:
-					return "PIM_CWAS_MAN_M";
+					return "PIM_CWAS_MAN_M" /*Hands On Car Wash Management*/;
 			
 				case 22:
-					return "CWAS_BUY_SIGN";
+					return "CWAS_BUY_SIGN" /*Press ~INPUT_CONTEXT~ to purchase the Hands On Car Wash.*/;
 			
 				case 23:
 					return "MP_CWAS_DES_";
@@ -57275,34 +57275,34 @@ char* func_684(int iParam0, int iParam1) // Position - 0x3C50B (247051)
 			switch (iParam1)
 			{
 				case 0:
-					return "PIM_WSHOP_INV_D";
+					return "PIM_WSHOP_INV_D" /*Invite players to your Smoke on the Water.*/;
 			
 				case 1:
-					return "PIM_WSHOP_INV_M";
+					return "PIM_WSHOP_INV_M" /*Invite to Smoke on the Water*/;
 			
 				case 4:
-					return "PIM_WSHOP_INV_T";
+					return "PIM_WSHOP_INV_T" /*INVITE TO SMOKE ON THE WATER*/;
 			
 				case 13:
-					return "PIM_INV_WSHOP";
+					return "PIM_INV_WSHOP" /*Invite to Smoke on the Water has been sent to ~a~.*/;
 			
 				case 14:
-					return "PIM_INV_A_T_WSHOP";
+					return "PIM_INV_A_T_WSHOP" /*Invite to Smoke on the Water has been sent to all players.*/;
 			
 				case 15:
-					return "CELL_WSHOP_INV";
+					return "CELL_WSHOP_INV" /*Hey, come over to Smoke on the Water.*/;
 			
 				case 3:
-					return "PIM_WSHOP_MAN_D1";
+					return "PIM_WSHOP_MAN_D1" /*Manage Smoke on the Water.*/;
 			
 				case 21:
-					return "CELL_WSHOP";
+					return "CELL_WSHOP" /*Smoke on the Water*/;
 			
 				case 2:
-					return "PIM_WSHOP_MAN_M";
+					return "PIM_WSHOP_MAN_M" /*Smoke on the Water Management*/;
 			
 				case 22:
-					return "WSHOP_BUY_SIGN";
+					return "WSHOP_BUY_SIGN" /*Press ~INPUT_CONTEXT~ to purchase Smoke on the Water.*/;
 			
 				case 23:
 					return "MP_WSHOP_DES_";
@@ -57316,34 +57316,34 @@ char* func_684(int iParam0, int iParam1) // Position - 0x3C50B (247051)
 			switch (iParam1)
 			{
 				case 0:
-					return "PIM_HELIT_INV_D";
+					return "PIM_HELIT_INV_D" /*Invite players to your Higgins Helitours.*/;
 			
 				case 1:
-					return "PIM_HELIT_INV_M";
+					return "PIM_HELIT_INV_M" /*Invite to Higgins Helitours*/;
 			
 				case 4:
-					return "PIM_HELIT_INV_T";
+					return "PIM_HELIT_INV_T" /*INVITE TO HIGGINS HELITOURS*/;
 			
 				case 13:
-					return "PIM_INV_HELIT";
+					return "PIM_INV_HELIT" /*Invite to Higgins Helitours has been sent to ~a~.*/;
 			
 				case 14:
-					return "PIM_INV_A_T_HELIT";
+					return "PIM_INV_A_T_HELIT" /*Invite to Higgins Helitours has been sent to all players.*/;
 			
 				case 15:
-					return "CELL_HELIT_INV";
+					return "CELL_HELIT_INV" /*Hey, come over to Higgins Helitours.*/;
 			
 				case 3:
-					return "PIM_HELIT_MAN_D1";
+					return "PIM_HELIT_MAN_D1" /*Manage Higgins Helitours.*/;
 			
 				case 21:
-					return "CELL_HELIT";
+					return "CELL_HELIT" /*Higgins Helitours*/;
 			
 				case 2:
-					return "PIM_HELIT_MAN_M";
+					return "PIM_HELIT_MAN_M" /*Higgins Helitours Management*/;
 			
 				case 22:
-					return "HELIT_BUY_SIGN";
+					return "HELIT_BUY_SIGN" /*Press ~INPUT_CONTEXT~ to purchase Higgins Helitours.*/;
 			
 				case 23:
 					return "MP_HELIT_DES_";
@@ -276429,7 +276429,7 @@ int func_4985(var uParam0, var uParam1, var uParam2) // Position - 0x17A273 (154
 							if (MISC::IS_PC_VERSION())
 								if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 									if (VEHICLE::IS_VEHICLE_MODEL(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false), joaat("voltic2")) || VEHICLE::IS_VEHICLE_MODEL(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false), joaat("oppressor")))
-										if (_CONTEXT_IS_HELP_TEXT_BEING_DISPLAYED(uParam1->f_22.f_94, 0) || func_4997("GR_ENTERAOC" /*Press ~a~ to enter your Avenger.*/, "STRING") || func_4997("BASE_MOD_ENTER" /*~a~ Access the Facility Vehicle Workshop. ~n~ ~INPUT_CONTEXT_SECONDARY~ Enter your Avenger with this vehicle.*/, "STRING"))
+										if (_CONTEXT_IS_HELP_TEXT_BEING_DISPLAYED(uParam1->f_22.f_94, 0) || func_4997("GR_ENTERAOC" /*Press ~a~ to enter your Avenger.*/, "STRING") || func_4997("BASE_MOD_ENTER" /*~a~ Access the Facility Vehicle Workshop.~n~~INPUT_CONTEXT_SECONDARY~ Enter your Avenger with this vehicle.*/, "STRING"))
 											PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_VEH_ROCKET_BOOST, true);
 						
 							func_4996(true);
@@ -297978,7 +297978,7 @@ int func_5379(var uParam0, var uParam1, var uParam2) // Position - 0x19F2CB (170
 							if (MISC::IS_PC_VERSION())
 								if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 									if (VEHICLE::IS_VEHICLE_MODEL(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false), joaat("voltic2")) || VEHICLE::IS_VEHICLE_MODEL(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false), joaat("oppressor")))
-										if (_CONTEXT_IS_HELP_TEXT_BEING_DISPLAYED(uParam1->f_22.f_94, 0) || func_4997("GR_ENTERAOC" /*Press ~a~ to enter your Avenger.*/, "STRING") || func_4997("BASE_MOD_ENTER" /*~a~ Access the Facility Vehicle Workshop. ~n~ ~INPUT_CONTEXT_SECONDARY~ Enter your Avenger with this vehicle.*/, "STRING"))
+										if (_CONTEXT_IS_HELP_TEXT_BEING_DISPLAYED(uParam1->f_22.f_94, 0) || func_4997("GR_ENTERAOC" /*Press ~a~ to enter your Avenger.*/, "STRING") || func_4997("BASE_MOD_ENTER" /*~a~ Access the Facility Vehicle Workshop.~n~~INPUT_CONTEXT_SECONDARY~ Enter your Avenger with this vehicle.*/, "STRING"))
 											PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_VEH_ROCKET_BOOST, true);
 						
 							func_4996(true);
@@ -383361,9 +383361,9 @@ char* func_6969(Hash hParam0, BOOL bParam1) // Position - 0x218BCB (2198475)
 	
 		case joaat("WEAPON_CERAMICPISTOL"):
 			if (bParam1)
-				return "WTU_CERPST";
+				return "WTU_CERPST" /*CERAMIC PISTOL*/;
 			else
-				return "WT_CERPST";
+				return "WT_CERPST" /*Ceramic Pistol*/;
 			break;
 	
 		case joaat("WEAPON_GADGETPISTOL"):
@@ -383382,9 +383382,9 @@ char* func_6969(Hash hParam0, BOOL bParam1) // Position - 0x218BCB (2198475)
 	
 		case joaat("WEAPON_COMBATSHOTGUN"):
 			if (bParam1)
-				return "WTU_CMBSHGN";
+				return "WTU_CMBSHGN" /*COMBAT SHOTGUN*/;
 			else
-				return "WT_CMBSHGN";
+				return "WT_CMBSHGN" /*Combat Shotgun*/;
 			break;
 	
 		case joaat("VEHICLE_WEAPON_TURRET_DINGHY5_50CAL"):
@@ -383543,9 +383543,9 @@ char* func_6969(Hash hParam0, BOOL bParam1) // Position - 0x218BCB (2198475)
 	
 		case joaat("WEAPON_BRIEFCASE"):
 			if (bParam1)
-				return "FMMC_WT_BRIEF";
+				return "FMMC_WT_BRIEF" /*Briefcase*/;
 			else
-				return "FMMC_WT_BRIEF";
+				return "FMMC_WT_BRIEF" /*Briefcase*/;
 			break;
 	
 		default:
@@ -425084,7 +425084,7 @@ void func_7910(char* sParam0, int iParam1) // Position - 0x250B52 (2427730)
 	else if (iParam1 == 129)
 		TEXT_LABEL_ASSIGN_STRING(sParam0, "WIN22_GARNAME" /*Eclipse Blvd Garage*/, 16);
 	else if (iParam1 == 131)
-		TEXT_LABEL_ASSIGN_STRING(sParam0, "VPG_GARNAME", 16);
+		TEXT_LABEL_ASSIGN_STRING(sParam0, "VPG_GARNAME" /*The Vinewood Club Garage*/, 16);
 	else if (iParam1 == 132)
 		TEXT_LABEL_ASSIGN_STRING(sParam0, "BO_GARNAME" /*Bail Office*/, 16);
 	else if (iParam1 == 133)
@@ -488855,11 +488855,11 @@ void func_8466() // Position - 0x2A37A9 (2766761)
 {
 	if (IS_BIT_SET(Global_2697911, 12) || IS_BIT_SET(Global_2697911, 13))
 		if (!func_8467(2, -1) && !func_8467(3, -1))
-			_DISPLAY_HELP_TEXT("SB_MAZE_HELP1", -1);
+			_DISPLAY_HELP_TEXT("SB_MAZE_HELP1" /*Your money laundering operation can be expanded by purchasing:~n~- Higgins Helitours ~BLIP_HELITOURS_FOR_SALE~~n~- Smoke on the Water ~BLIP_SMOKE_SHOP_FOR_SALE~*/, -1);
 		else if (!func_8467(3, -1))
-			_DISPLAY_HELP_TEXT("SB_MAZE_HELP2", -1);
+			_DISPLAY_HELP_TEXT("SB_MAZE_HELP2" /*Your money laundering operation can be expanded by purchasing:~n~- Smoke on the Water ~BLIP_SMOKE_SHOP_FOR_SALE~*/, -1);
 		else if (!func_8467(2, -1))
-			_DISPLAY_HELP_TEXT("SB_MAZE_HELP3", -1);
+			_DISPLAY_HELP_TEXT("SB_MAZE_HELP3" /*Your money laundering operation can be expanded by purchasing:~n~- Higgins Helitours ~BLIP_HELITOURS_FOR_SALE~*/, -1);
 
 	Global_2697911 = -1;
 	return;
@@ -489239,13 +489239,13 @@ char* func_8472(int iParam0) // Position - 0x2A408E (2769038)
 	switch (iParam0)
 	{
 		case 1:
-			return "MP_HOCW_1";
+			return "MP_HOCW_1" /*Sometimes, in between the nightclubs and military aircraft hangars, you want something more down to earth to balance out your property index. Appropriating the mom'n'pop aesthetic is all the rage right now, and the Hands On Car Wash perfectly caters for that need. It's equipped with a small safe to discretely store your laundered revenue, a dual-entrance street level office, and even comes with a depressing office bed where you can sleep and cosplay as a soon-to-be divorcee!*/;
 	
 		case 3:
-			return "MP_SOTW_1";
+			return "MP_SOTW_1" /*Team workflow? Touching base? End of play? With Smoke on the Water you can say goodbye to corporate jargon and put your feet up, be your own boss, and spark up a generous amount of your own 100-percent legal product (and conduct your own revenue audits, too). The customers are chilled, the produce is good, and with Vespucci Beach right on your shopfront, the business will flow through the doors all by itself.*/;
 	
 		case 2:
-			return "MP_HH_1";
+			return "MP_HH_1" /*We assumed that no number of near misses, botched maneuvers or mid-flight collisions could incur the intervention of the LS Safety Board, but the previous owner of this property proved us wrong. Luckily for you, Higgins Helitours is now available. Revitalize the brand, summon your personal aircraft or carefully maintain a stream of untraceable laundered income — as long as you're not proven responsible for smoking wreckage raining down on LS, it's yours to keep.*/;
 	
 		default:
 		
@@ -518300,7 +518300,7 @@ BOOL func_8758() // Position - 0x2C7CAC (2915500)
 
 char* func_8759() // Position - 0x2C7CB8 (2915512)
 {
-	return "PROF_CHK_UA";
+	return "PROF_CHK_UA" /*Unable to connect to Rockstar Games to check profanity.*/;
 }
 
 BOOL func_8760() // Position - 0x2C7CC5 (2915525)
@@ -520318,7 +520318,7 @@ void func_8803(BOOL bParam0, BOOL bParam1) // Position - 0x2C9B63 (2923363)
 								}
 							}
 						
-							if (scaleformMovieMethodReturnValueInt == 0 && _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("HELP_VEHRE_PER"))
+							if (scaleformMovieMethodReturnValueInt == 0 && _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("HELP_VEHRE_PER" /*Unlock Exclusive Clothing by purchasing this vehicle.*/))
 							{
 								HUD::CLEAR_HELP(true);
 								flag2 = true;
@@ -520972,12 +520972,12 @@ void func_8803(BOOL bParam0, BOOL bParam1) // Position - 0x2C9B63 (2923363)
 									{
 										if (iLocal_707 == 363)
 										{
-											TEXT_LABEL_ASSIGN_STRING(&unk, "HELP_FDSE1hb" /*In order to purchase this vehicle at the Trade Price, you must fulfil the following criteria:~n~- Own a Hangar.~n~- Complete the Server Farm Setup mission.~n~*/, 16);
+											TEXT_LABEL_ASSIGN_STRING(&unk, "HELP_FDSE1hb" /*In order to purchase this vehicle at the Trade Price, you must fulfill the following criteria:~n~- Own a Hangar.~n~- Complete the Server Farm Setup mission.~n~*/, 16);
 											MISC::SET_BIT(&iLocal_1961, 4);
 										}
 										else if (iLocal_707 == 366)
 										{
-											TEXT_LABEL_ASSIGN_STRING(&unk, "HELP_FDSE1hh" /*In order to purchase this vehicle at the Trade Price, you must fulfil the following criteria:~n~- Own a Hangar.~n~- Complete the Air Defenses Setup mission.~n~*/, 16);
+											TEXT_LABEL_ASSIGN_STRING(&unk, "HELP_FDSE1hh" /*In order to purchase this vehicle at the Trade Price, you must fulfill the following criteria:~n~- Own a Hangar.~n~- Complete the Air Defenses Setup mission.~n~*/, 16);
 											MISC::SET_BIT(&iLocal_1961, 4);
 										}
 									}
@@ -521080,7 +521080,7 @@ void func_8803(BOOL bParam0, BOOL bParam1) // Position - 0x2C9B63 (2923363)
 													
 														case 483:
 															if (*Global_262145.f_36568)
-																TEXT_LABEL_ASSIGN_STRING(&unk, "HELP_CHSE2", 16);
+																TEXT_LABEL_ASSIGN_STRING(&unk, "HELP_CHSE2" /*In order to purchase this vehicle at the Trade Price, you must fulfill one of the following criteria:~n~- Complete The Diamond Casino Heist Finale as a leader with this vehicle selected.~n~- Complete a delivery for Gruppe Sechs.*/, 16);
 															else
 																TEXT_LABEL_ASSIGN_STRING(&unk, "HELP_CHSE1" /*Complete The Diamond Casino Heist Finale as a leader with this vehicle selected to unlock the Trade Price.*/, 16);
 															break;
@@ -521195,7 +521195,7 @@ void func_8803(BOOL bParam0, BOOL bParam1) // Position - 0x2C9B63 (2923363)
 													
 														case 483:
 															if (*Global_262145.f_36568)
-																TEXT_LABEL_ASSIGN_STRING(&unk, "HELP_CHSE2", 16);
+																TEXT_LABEL_ASSIGN_STRING(&unk, "HELP_CHSE2" /*In order to purchase this vehicle at the Trade Price, you must fulfill one of the following criteria:~n~- Complete The Diamond Casino Heist Finale as a leader with this vehicle selected.~n~- Complete a delivery for Gruppe Sechs.*/, 16);
 															else
 																TEXT_LABEL_ASSIGN_STRING(&unk, "HELP_CHSE1" /*Complete The Diamond Casino Heist Finale as a leader with this vehicle selected to unlock the Trade Price.*/, 16);
 															break;
@@ -521747,23 +521747,23 @@ void func_8803(BOOL bParam0, BOOL bParam1) // Position - 0x2C9B63 (2923363)
 													switch (iLocal_707)
 													{
 														case 633:
-															TEXT_LABEL_ASSIGN_STRING(&unk, "WEB_D_POLDOM10" /*In order to purchase this vehicle at the Trade Price, you must fulfill the following criteria:~n~- Complete Slush Fund as part of The Cluckin' Bell Farm Raid as leader.~n~- Complete Malicious Mischief as part of Dispatch Work.*/, 16);
+															TEXT_LABEL_ASSIGN_STRING(&unk, "WEB_D_POLDOM10" /*In order to purchase this vehicle at the Trade Price, you must fulfill one of the following criteria:~n~- Complete Slush Fund as part of The Cluckin' Bell Farm Raid as leader.~n~- Complete Malicious Mischief as part of Dispatch Work.*/, 16);
 															break;
 													
 														case 634:
-															TEXT_LABEL_ASSIGN_STRING(&unk, "WEB_D_POLDORADO" /*In order to purchase this vehicle at the Trade Price, you must fulfill the following criteria:~n~- Complete Slush Fund as part of The Cluckin' Bell Farm Raid as leader.~n~- Complete Officer Monitored as part of Dispatch Work.*/, 16);
+															TEXT_LABEL_ASSIGN_STRING(&unk, "WEB_D_POLDORADO" /*In order to purchase this vehicle at the Trade Price, you must fulfill one of the following criteria:~n~- Complete Slush Fund as part of The Cluckin' Bell Farm Raid as leader.~n~- Complete Officer Monitored as part of Dispatch Work.*/, 16);
 															break;
 													
 														case 635:
-															TEXT_LABEL_ASSIGN_STRING(&unk, "WEB_D_POLGREENW" /*In order to purchase this vehicle at the Trade Price, you must fulfill the following criteria:~n~- Complete Slush Fund as part of The Cluckin' Bell Farm Raid as leader.~n~- Complete 5 Dispatch Works.*/, 16);
+															TEXT_LABEL_ASSIGN_STRING(&unk, "WEB_D_POLGREENW" /*In order to purchase this vehicle at the Trade Price, you must fulfill one of the following criteria:~n~- Complete Slush Fund as part of The Cluckin' Bell Farm Raid as leader.~n~- Complete 5 Dispatch Works.*/, 16);
 															break;
 													
 														case 636:
-															TEXT_LABEL_ASSIGN_STRING(&unk, "WEB_D_POLIMP5" /*In order to purchase this vehicle at the Trade Price, you must fulfill the following criteria:~n~- Complete Slush Fund as part of The Cluckin' Bell Farm Raid as leader.~n~- Complete Possession for Sale as part of Dispatch Work.*/, 16);
+															TEXT_LABEL_ASSIGN_STRING(&unk, "WEB_D_POLIMP5" /*In order to purchase this vehicle at the Trade Price, you must fulfill one of the following criteria:~n~- Complete Slush Fund as part of The Cluckin' Bell Farm Raid as leader.~n~- Complete Possession for Sale as part of Dispatch Work.*/, 16);
 															break;
 													
 														case 637:
-															TEXT_LABEL_ASSIGN_STRING(&unk, "WEB_D_POLIMP6" /*In order to purchase this vehicle at the Trade Price, you must fulfill the following criteria:~n~- Complete Slush Fund as part of The Cluckin' Bell Farm Raid as leader.~n~- Complete Civil Disturbance as part of Dispatch Work.*/, 16);
+															TEXT_LABEL_ASSIGN_STRING(&unk, "WEB_D_POLIMP6" /*In order to purchase this vehicle at the Trade Price, you must fulfill one of the following criteria:~n~- Complete Slush Fund as part of The Cluckin' Bell Farm Raid as leader.~n~- Complete Civil Disturbance as part of Dispatch Work.*/, 16);
 															break;
 													}
 												}
@@ -521938,11 +521938,11 @@ void func_8803(BOOL bParam0, BOOL bParam1) // Position - 0x2C9B63 (2923363)
 													switch (iLocal_707)
 													{
 														case 664:
-															TEXT_LABEL_ASSIGN_STRING(&unk, "WEB_D_POLICEB2", 16);
+															TEXT_LABEL_ASSIGN_STRING(&unk, "WEB_D_POLICEB2" /*In order to purchase this vehicle at the Trade Price, you must fulfill the following criteria:~n~- Complete Slush Fund as part of The Cluckin' Bell Farm Raid as leader.~n~- Complete 3 different Dispatch Works.*/, 16);
 															break;
 													
 														case 665:
-															TEXT_LABEL_ASSIGN_STRING(&unk, "WEB_D_STOCKADE4", 16);
+															TEXT_LABEL_ASSIGN_STRING(&unk, "WEB_D_STOCKADE4" /*Complete a delivery for Bobcat Security to unlock the trade price for this vehicle.*/, 16);
 															break;
 													}
 												}
@@ -521954,7 +521954,7 @@ void func_8803(BOOL bParam0, BOOL bParam1) // Position - 0x2C9B63 (2923363)
 													switch (iLocal_707)
 													{
 														case 664:
-															TEXT_LABEL_ASSIGN_STRING(&unk, "WEB_U_POLICEB2", 16);
+															TEXT_LABEL_ASSIGN_STRING(&unk, "WEB_U_POLICEB2" /*In order to purchase the Police Bike, complete Slush Fund as part of The Cluckin' Bell Farm Raid as leader.*/, 16);
 															break;
 													}
 												}
@@ -521981,11 +521981,11 @@ void func_8803(BOOL bParam0, BOOL bParam1) // Position - 0x2C9B63 (2923363)
 													switch (iLocal_707)
 													{
 														case 676:
-															TEXT_LABEL_ASSIGN_STRING(&unk, "WEB_D_DL352", 16);
+															TEXT_LABEL_ASSIGN_STRING(&unk, "WEB_D_DL352" /*You must be a member of the LS Car Meet to purchase this vehicle.*/, 16);
 															break;
 													
 														case 668:
-															TEXT_LABEL_ASSIGN_STRING(&unk, "WEB_D_SENT5", 16);
+															TEXT_LABEL_ASSIGN_STRING(&unk, "WEB_D_SENT5" /*Complete all deliveries for QuickiePharm to unlock the trade price for this vehicle.*/, 16);
 															break;
 													}
 												}
@@ -522009,7 +522009,7 @@ void func_8803(BOOL bParam0, BOOL bParam1) // Position - 0x2C9B63 (2923363)
 													switch (iLocal_707)
 													{
 														case 668:
-															TEXT_LABEL_ASSIGN_STRING(&unk, "WEB_D_SENT5", 16);
+															TEXT_LABEL_ASSIGN_STRING(&unk, "WEB_D_SENT5" /*Complete all deliveries for QuickiePharm to unlock the trade price for this vehicle.*/, 16);
 															break;
 													}
 												}
@@ -522258,13 +522258,13 @@ void func_8803(BOOL bParam0, BOOL bParam1) // Position - 0x2C9B63 (2923363)
 									
 										if (!func_266(PLAYER::PLAYER_ID()))
 										{
-											TEXT_LABEL_ASSIGN_STRING(&unk, "HELP_WEAI0" /*In order to purchase this vehicle at the Trade Price, you must fulfil the following criteria:~n~- Own a Hangar.~n~- Complete ~1~ Air-Freight Steal missions as a Boss.*/, 16);
+											TEXT_LABEL_ASSIGN_STRING(&unk, "HELP_WEAI0" /*In order to purchase this vehicle at the Trade Price, you must fulfill the following criteria:~n~- Own a Hangar.~n~- Complete ~1~ Air-Freight Steal missions as a Boss.*/, 16);
 											num3 = 1;
 											num4 = func_8391(hash19);
 										}
 										else if (!func_8210(hash19))
 										{
-											TEXT_LABEL_ASSIGN_STRING(&unk, "HELP_WEAI1" /*In order to purchase this vehicle at the Trade Price, you must fulfil the following criteria:~n~- Complete ~1~ Air-Freight Steal missions as a Boss.*/, 16);
+											TEXT_LABEL_ASSIGN_STRING(&unk, "HELP_WEAI1" /*In order to purchase this vehicle at the Trade Price, you must fulfill the following criteria:~n~- Complete ~1~ Air-Freight Steal missions as a Boss.*/, 16);
 											num3 = 1;
 											num4 = func_8391(hash19);
 										}
@@ -522355,7 +522355,7 @@ void func_8803(BOOL bParam0, BOOL bParam1) // Position - 0x2C9B63 (2923363)
 		}
 	
 		if (flag2)
-			if (MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_PASSIVE" /*Passive mode is disabled in this type of vehicle.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHRE" /*For a limited period, unlock Exclusive Clothing by purchasing this vehicle.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHRE_PER") || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHSC" /*This car can be ordered for free with a Rockstar Games account. Sign up now at rockstargames.com.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHX17" /*This vehicle is available for free as a holiday gift from Rockstar.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "MBANKHELP" /*Go to foreclosures.maze-bank.com to purchase a variety of properties that will allow you to access new missions, businesses and Heists.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_NCLUBSTY" /*Please note: Your chosen style will be installed as you progress with the Nightclub setup.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_NCLUBLIG" /*Please note: Your chosen lighting option will be installed as you progress with the Nightclub setup.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_NCLUBDAN" /*Please note: Your dancers will arrive after the Nightclub has been set up.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_NCLUBICE" /*Please note: Dry Ice will be available after the Nightclub has been set up.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_AWSE0h") || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_CASWEB_0" /*Purchasing the Penthouse will add $500 to the daily property utility charge. Each additional expansion will add a further $100.*/) && IS_BIT_SET(iLocal_1961, 8) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_CASWEB_0B" /*Purchasing the Penthouse will add $500 to the daily property utility charge. Each additional expansion will add a further $100.~n~Please note that a membership does not allow you to play Casino games.*/) && IS_BIT_SET(iLocal_1961, 8) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHCH" /*Receive ~1~ Chips with all purchases of ~a~.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "ARCADEHELP" /*Purchase an Arcade ~BLIP_ARCADE~ to gain access to The Diamond Casino Heist.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "ARC_OPTIONS" /*Please note: Some of your chosen options will appear when the Arcade has been fully set up.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_ASHOPSTY" /*Please note: Your chosen style will be installed after you complete the Auto Shop setup.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_ASHOPTNT" /*Please note: Your chosen tint will be installed after you complete the Auto Shop setup.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_BKRCLNT" /*The Custom Bike Shop allows you to both modify personal bikes, and fix-up customer bikes to earn legitimate income.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_WEB_SB_CW") || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_WEB_SB_WS") || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_WEB_SB_HH"))
+			if (MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_PASSIVE" /*Passive mode is disabled in this type of vehicle.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHRE" /*For a limited period, unlock Exclusive Clothing by purchasing this vehicle.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHRE_PER" /*Unlock Exclusive Clothing by purchasing this vehicle.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHSC" /*This car can be ordered for free with a Rockstar Games account. Sign up now at rockstargames.com.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHX17" /*This vehicle is available for free as a holiday gift from Rockstar.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "MBANKHELP" /*Go to foreclosures.maze-bank.com to purchase a variety of properties that will allow you to access new missions, businesses and Heists.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_NCLUBSTY" /*Please note: Your chosen style will be installed as you progress with the Nightclub setup.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_NCLUBLIG" /*Please note: Your chosen lighting option will be installed as you progress with the Nightclub setup.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_NCLUBDAN" /*Please note: Your dancers will arrive after the Nightclub has been set up.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_NCLUBICE" /*Please note: Dry Ice will be available after the Nightclub has been set up.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_AWSE0h") || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_CASWEB_0" /*Purchasing the Penthouse will add $500 to the daily property utility charge. Each additional expansion will add a further $100.*/) && IS_BIT_SET(iLocal_1961, 8) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_CASWEB_0B" /*Purchasing the Penthouse will add $500 to the daily property utility charge. Each additional expansion will add a further $100.~n~Please note that a membership does not allow you to play Casino games.*/) && IS_BIT_SET(iLocal_1961, 8) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_VEHCH" /*Receive ~1~ Chips with all purchases of ~a~.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "ARCADEHELP" /*Purchase an Arcade ~BLIP_ARCADE~ to gain access to The Diamond Casino Heist.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "ARC_OPTIONS" /*Please note: Some of your chosen options will appear when the Arcade has been fully set up.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_ASHOPSTY" /*Please note: Your chosen style will be installed after you complete the Auto Shop setup.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_ASHOPTNT" /*Please note: Your chosen tint will be installed after you complete the Auto Shop setup.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_BKRCLNT" /*The Custom Bike Shop allows you to both modify personal bikes, and fix-up customer bikes to earn legitimate income.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_WEB_SB_CW" /*Owning the Hands On Car Wash will also boost the value of Product sold from a Counterfeit Cash Factory.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_WEB_SB_WS" /*Owning Smoke on the Water will also boost the value of Product sold from a Weed Farm.*/) || MISC::ARE_STRINGS_EQUAL(&(Global_76977.f_1), "HELP_WEB_SB_HH" /*Owning Higgins Helitours will also boost the value of Cargo sold from a Hangar.*/))
 				flag2 = false;
 	
 		if (flag2)
@@ -522987,15 +522987,15 @@ void func_8825(Hash hParam0, char* sParam1, BOOL bParam2, BOOL bParam3, BOOL bPa
 				switch (num3)
 				{
 					case 1:
-						TEXT_LABEL_ASSIGN_STRING(&unk33, "MP_HOCW_S_WAY", 24);
+						TEXT_LABEL_ASSIGN_STRING(&unk33, "MP_HOCW_S_WAY" /*A waypoint to the Hands On Car Wash has been added to your GPS.*/, 24);
 						break;
 				
 					case 2:
-						TEXT_LABEL_ASSIGN_STRING(&unk33, "MP_HH_S_WAY", 24);
+						TEXT_LABEL_ASSIGN_STRING(&unk33, "MP_HH_S_WAY" /*A waypoint to Higgins Helitours has been added to your GPS.*/, 24);
 						break;
 				
 					case 3:
-						TEXT_LABEL_ASSIGN_STRING(&unk33, "MP_SOTW_S_WAY", 24);
+						TEXT_LABEL_ASSIGN_STRING(&unk33, "MP_SOTW_S_WAY" /*A waypoint to the Smoke on the Water has been added to your GPS.*/, 24);
 						break;
 				}
 			}
@@ -523077,15 +523077,15 @@ void func_8825(Hash hParam0, char* sParam1, BOOL bParam2, BOOL bParam3, BOOL bPa
 				switch (num4)
 				{
 					case 1:
-						TEXT_LABEL_ASSIGN_STRING(&unk33, "MP_HOCW_S_WAYF", 24);
+						TEXT_LABEL_ASSIGN_STRING(&unk33, "MP_HOCW_S_WAYF" /*A waypoint could not be added for the Hands On Car Wash at this time.*/, 24);
 						break;
 				
 					case 2:
-						TEXT_LABEL_ASSIGN_STRING(&unk33, "MP_HH_S_WAYF", 24);
+						TEXT_LABEL_ASSIGN_STRING(&unk33, "MP_HH_S_WAYF" /*A waypoint could not be added for Higgins Helitours at this time.*/, 24);
 						break;
 				
 					case 3:
-						TEXT_LABEL_ASSIGN_STRING(&unk33, "MP_SOTW_S_WAYF", 24);
+						TEXT_LABEL_ASSIGN_STRING(&unk33, "MP_SOTW_S_WAYF" /*A waypoint could not be added for the Smoke on the Water at this time.*/, 24);
 						break;
 				}
 			}
@@ -524158,43 +524158,43 @@ BOOL func_8827(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, int iParam4
 				case 1:
 					if (bParam3)
 					{
-						TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HOCW_S_REN", 24);
+						TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HOCW_S_REN" /*Enjoy your renovated Hands On Car Wash!*/, 24);
 						return true;
 					}
 					else if (bParam2)
 					{
-						TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HOCW_S_BUY", 24);
+						TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HOCW_S_BUY" /*Congratulations on the purchase of your new Hands On Car Wash!*/, 24);
 						return true;
 					}
 				
 					switch (iParam4)
 					{
 						case 1:
-							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HOCW_F_BUY_1", 24);
+							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HOCW_F_BUY_1" /*You have not unlocked the Hands On Car Wash.*/, 24);
 							return true;
 					
 						case 2:
-							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HOCW_F_BUY_2", 24);
+							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HOCW_F_BUY_2" /*You don't have enough money to buy the Hands On Car Wash.*/, 24);
 							return true;
 					
 						case 3:
-							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HOCW_F_BUY_4", 24);
+							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HOCW_F_BUY_4" /*Purchasing the Hands On Car Wash will be unlocked after you meet Martin Madrazo at LSIA.*/, 24);
 							return true;
 					
 						case 5:
-							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HOCW_F_BUY_5", 24);
+							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HOCW_F_BUY_5" /*Purchase of the Hands On Car Wash has been canceled.*/, 24);
 							return true;
 					
 						case 6:
-							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HOCW_F_BUY_6", 24);
+							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HOCW_F_BUY_6" /*You can't purchase the Hands On Car Wash at this time.*/, 24);
 							return true;
 					
 						case 4:
-							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HOCW_F_BUY_6", 24);
+							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HOCW_F_BUY_6" /*You can't purchase the Hands On Car Wash at this time.*/, 24);
 							return true;
 					
 						case 7:
-							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HOCW_F_BUY_7", 24);
+							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HOCW_F_BUY_7" /*You can't renovate your Hands On Car Wash while players are playing "Race And Chase".*/, 24);
 							return true;
 					
 						case 8:
@@ -524206,43 +524206,43 @@ BOOL func_8827(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, int iParam4
 				case 3:
 					if (bParam3)
 					{
-						TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_SOTW_S_REN", 24);
+						TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_SOTW_S_REN" /*Enjoy your renovated Smoke on the Water!*/, 24);
 						return true;
 					}
 					else if (bParam2)
 					{
-						TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_SOTW_S_BUY", 24);
+						TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_SOTW_S_BUY" /*Congratulations on the purchase of your new Smoke on the Water!*/, 24);
 						return true;
 					}
 				
 					switch (iParam4)
 					{
 						case 1:
-							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_SOTW_F_BUY_1", 24);
+							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_SOTW_F_BUY_1" /*You have not unlocked Smoke on the Water.*/, 24);
 							return true;
 					
 						case 2:
-							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_SOTW_F_BUY_2", 24);
+							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_SOTW_F_BUY_2" /*You don't have enough money to buy Smoke on the Water.*/, 24);
 							return true;
 					
 						case 3:
-							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_SOTW_F_BUY_4", 24);
+							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_SOTW_F_BUY_4" /*You must own and visit your Hands On Car Wash to purchase Smoke on the Water.*/, 24);
 							return true;
 					
 						case 5:
-							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_SOTW_F_BUY_5", 24);
+							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_SOTW_F_BUY_5" /*Purchase of Smoke on the Water has been canceled.*/, 24);
 							return true;
 					
 						case 6:
-							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_SOTW_F_BUY_6", 24);
+							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_SOTW_F_BUY_6" /*You can't purchase Smoke on the Water at this time.*/, 24);
 							return true;
 					
 						case 4:
-							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_SOTW_F_BUY_6", 24);
+							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_SOTW_F_BUY_6" /*You can't purchase Smoke on the Water at this time.*/, 24);
 							return true;
 					
 						case 7:
-							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_SOTW_F_BUY_7", 24);
+							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_SOTW_F_BUY_7" /*You can't renovate your Smoke on the Water while players are playing "Race And Chase".*/, 24);
 							return true;
 					
 						case 8:
@@ -524254,43 +524254,43 @@ BOOL func_8827(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, int iParam4
 				case 2:
 					if (bParam3)
 					{
-						TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HH_S_REN", 24);
+						TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HH_S_REN" /*Enjoy your renovated Higgins Helitours!*/, 24);
 						return true;
 					}
 					else if (bParam2)
 					{
-						TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HH_S_BUY", 24);
+						TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HH_S_BUY" /*Congratulations on the purchase of your new Higgins Helitours!*/, 24);
 						return true;
 					}
 				
 					switch (iParam4)
 					{
 						case 1:
-							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HH_F_BUY_1", 24);
+							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HH_F_BUY_1" /*You have not unlocked Higgins Helitours.*/, 24);
 							return true;
 					
 						case 2:
-							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HH_F_BUY_2", 24);
+							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HH_F_BUY_2" /*You don't have enough money to buy Higgins Helitours.*/, 24);
 							return true;
 					
 						case 3:
-							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HH_F_BUY_4", 24);
+							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HH_F_BUY_4" /*You must own and visit your Hands On Car Wash to purchase Higgins Helitours.*/, 24);
 							return true;
 					
 						case 5:
-							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HH_F_BUY_5", 24);
+							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HH_F_BUY_5" /*Purchase of Higgins Helitours has been canceled.*/, 24);
 							return true;
 					
 						case 6:
-							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HH_F_BUY_6", 24);
+							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HH_F_BUY_6" /*You can't purchase Higgins Helitours at this time.*/, 24);
 							return true;
 					
 						case 4:
-							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HH_F_BUY_6", 24);
+							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HH_F_BUY_6" /*You can't purchase Higgins Helitours at this time.*/, 24);
 							return true;
 					
 						case 7:
-							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HH_F_BUY_7", 24);
+							TEXT_LABEL_ASSIGN_STRING(sParam5, "MP_HH_F_BUY_7" /*You can't renovate your Higgins Helitours while players are playing "Race And Chase".*/, 24);
 							return true;
 					
 						case 8:

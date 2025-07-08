@@ -9839,7 +9839,7 @@ BOOL func_410() // Position - 0xB602 (46594)
 
 char* func_411() // Position - 0xB612 (46610)
 {
-	return "PROF_CHK_UA";
+	return "PROF_CHK_UA" /*Unable to connect to Rockstar Games to check profanity.*/;
 }
 
 BOOL func_412() // Position - 0xB61E (46622)

@@ -98119,7 +98119,7 @@ int func_725() // Position - 0x783FF (492543)
 	}
 
 	entryHeader = "HUD_CONNPROB" /*alert*/;
-	entryLine1 = "SCLB_NO_ROS" /*Rockstar Games Online Services are unavailable right now. Please try again later.*/;
+	entryLine1 = "SCLB_NO_ROS" /*Rockstar Games Services are unavailable right now. Please try again later.*/;
 	entryLine2 = "HUD_RETURNSP" /*Return to the Main Menu*/;
 	func_712();
 	HUD::SET_WARNING_MESSAGE_WITH_HEADER(entryHeader, entryLine1, 2, entryLine2, false, -1, 0, 0, true, 0);
@@ -99980,12 +99980,12 @@ int func_803() // Position - 0x7AC32 (502834)
 	}
 
 	entryHeader = "HUD_CONNPROB" /*alert*/;
-	entryLine1 = "HUD_LOADMAIN" /*The Rockstar game services are temporarily unavailable due to maintenance.*/;
+	entryLine1 = "HUD_LOADMAIN" /*Rockstar Games Services are temporarily unavailable due to maintenance.*/;
 	entryLine2 = "HUD_RETURNSP" /*Return to the Main Menu*/;
 
 	if (func_115())
 	{
-		entryLine1 = "HUD_LOADSCR_D" /*The Rockstar game services are temporarily unavailable.*/;
+		entryLine1 = "HUD_LOADSCR_D" /*Rockstar Games Services are temporarily unavailable.*/;
 		entryLine2 = "HUD_RETURNSP" /*Return to the Main Menu*/;
 	}
 
@@ -100015,7 +100015,7 @@ int func_804() // Position - 0x7ACDA (503002)
 	}
 
 	entryHeader = "HUD_CONNPROB" /*alert*/;
-	entryLine1 = "HUD_PERM" /*Your profile does not have the correct permissions to access this functionality.*/;
+	entryLine1 = "HUD_PERM" /*Your profile does not have permission to access GTA Online.*/;
 	entryLine2 = "HUD_RETURNSP" /*Return to the Main Menu*/;
 	func_712();
 	HUD::SET_WARNING_MESSAGE_WITH_HEADER(entryHeader, entryLine1, 16384, entryLine2, false, -1, 0, 0, true, 0);
@@ -100193,8 +100193,8 @@ int func_810() // Position - 0x7AFA8 (503720)
 	}
 
 	entryHeader = "HUD_CONNPROB" /*alert*/;
-	entryLine1 = "HUD_CLOUDFAILMSG" /*Unable to connect to Rockstar Games Online Services. Please check your network connection and see ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~ for information about outages and maintenance schedules.*/;
-	entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+	entryLine1 = "HUD_CLOUDFAILMSG" /*Unable to connect to Rockstar Games Services. Please check your network connection and see ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~ for information about outages and maintenance schedules.*/;
+	entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 
 	if (func_290() != 4)
 		func_712();
@@ -100271,17 +100271,17 @@ int func_813() // Position - 0x7B0B7 (503991)
 	}
 
 	entryHeader = "HUD_CONNPROB" /*alert*/;
-	entryLine1 = "HUD_SCSBANNED" /*You have been banned from using Rockstar Games Online Services and are not permitted to enter Grand Theft Auto Online.~n~Please visit rockstargames.com/community-guidelines for more information.*/;
+	entryLine1 = "HUD_SCSBANNED" /*You have been banned from using Rockstar Games Services and are not permitted to enter Grand Theft Auto Online.~n~If you are a GTA+ Member, you will need to manually cancel your Membership.~n~Please visit rockstargames.com/community-resources/guidelines for more information.*/;
 	entryLine2 = "HUD_RETURNSP" /*Return to the Main Menu*/;
 
 	if (flag == false)
 	{
-		entryLine1 = "HUD_SCSBANPERM" /*You have been permanently banned from using Rockstar Games Online Services and are not permitted to enter Grand Theft Auto Online.~n~Please visit rockstargames.com/community-guidelines for more information.*/;
+		entryLine1 = "HUD_SCSBANPERM" /*You have been permanently banned from using Rockstar Games Services and are not permitted to enter Grand Theft Auto Online.~n~If you are a GTA+ Member, you will need to manually cancel your Membership.~n~Please visit rockstargames.com/community-resources/guidelines for more information.*/;
 		HUD::SET_WARNING_MESSAGE_WITH_HEADER(entryHeader, entryLine1, 16384, 0, false, -1, 0, 0, true, 0);
 	}
 	else if (banType == 1)
 	{
-		entryLine1 = "HUD_SCSBANX" /*You have been suspended from using Rockstar Games Online Services and are not permitted to enter Grand Theft Auto Online until ~a~.*/;
+		entryLine1 = "HUD_SCSBANX" /*You have been suspended from using Rockstar Games Services and are not permitted to enter Grand Theft Auto Online until ~a~.~n~If you are a GTA+ Member, you will need to manually cancel your Membership.*/;
 		TEXT_LABEL_COPY(&additionalTextInfoLine1, { func_814(&timeData) }, 6);
 		HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS(entryHeader, entryLine1, 16384, "", false, -1, 1, &additionalTextInfoLine1, 0, true, 0);
 	}
@@ -100605,7 +100605,7 @@ int func_821() // Position - 0x7B7C6 (505798)
 	}
 
 	entryHeader = "HUD_CONNPROB" /*alert*/;
-	entryLine1 = "HUD_PERM" /*Your profile does not have the correct permissions to access this functionality.*/;
+	entryLine1 = "HUD_PERM" /*Your profile does not have permission to access GTA Online.*/;
 	entryLine2 = "HUD_RETURNSP" /*Return to the Main Menu*/;
 	func_712();
 	HUD::SET_WARNING_MESSAGE_WITH_HEADER(entryHeader, entryLine1, 16384, entryLine2, false, -1, 0, 0, true, 0);

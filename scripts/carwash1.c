@@ -38005,7 +38005,7 @@ BOOL func_339(var uParam0, var uParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4
 		
 			if (!bParam2 && !uParam1->f_9 && !func_378(24))
 				if (iParam6 == 1 && func_345(PLAYER::PLAYER_ID()))
-					func_364(uParam1, "CWASH_RIDEHLP2");
+					func_364(uParam1, "CWASH_RIDEHLP2" /*Press ~INPUT_CONTEXT~ to use your Car Wash for free.*/);
 				else
 					func_357(uParam1, *uParam1, func_128(iParam6));
 		

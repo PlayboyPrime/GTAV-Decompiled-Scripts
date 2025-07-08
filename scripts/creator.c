@@ -105771,7 +105771,7 @@ BOOL func_624(int iParam0, BOOL bParam1) // Position - 0x72698 (468632)
 		else
 			additionalTextInfoLine1 = "FMMC_ENDMTYPES" /*Your Survival*/;
 
-	HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("FMMC_ALERT" /*Alert*/, "FMMC_ENDCOPY" /*~a~, '~a~', failed to copy. You are suspended from using this feature due to a violation of our Community Guidelines. ~n~ Please visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com/community-guidelines~s~ for more information.*/, 2, "", false, -1, 2, additionalTextInfoLine1, &additionalTextInfoLine2, true, 0);
+	HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("FMMC_ALERT" /*Alert*/, "FMMC_ENDCOPY" /*~a~, '~a~', failed to copy. You are suspended from using this feature due to a violation of our Community Guidelines. ~n~ Please visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com/community-resources/guidelines~s~ for more information.*/, 2, "", false, -1, 2, additionalTextInfoLine1, &additionalTextInfoLine2, true, 0);
 
 	if (PAD::IS_CONTROL_JUST_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_ACCEPT))
 	{
@@ -105977,7 +105977,7 @@ BOOL func_628(int iParam0, BOOL bParam1) // Position - 0x72B24 (469796)
 		else
 			additionalTextInfoLine1 = "FMMC_ENDMTYPES" /*Your Survival*/;
 
-	HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("FMMC_ALERT" /*Alert*/, "FMMC_ENDDEL" /*~a~, '~a~', failed to delete. You are suspended from using this feature due to a violation of our Community Guidelines. ~n~ Please visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com/community-guidelines~s~ for more information.*/, 2, "", false, -1, 2, additionalTextInfoLine1, &additionalTextInfoLine2, true, 0);
+	HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("FMMC_ALERT" /*Alert*/, "FMMC_ENDDEL" /*~a~, '~a~', failed to delete. You are suspended from using this feature due to a violation of our Community Guidelines. ~n~ Please visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com/community-resources/guidelines~s~ for more information.*/, 2, "", false, -1, 2, additionalTextInfoLine1, &additionalTextInfoLine2, true, 0);
 
 	if (PAD::IS_CONTROL_JUST_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_ACCEPT))
 	{
@@ -119943,14 +119943,14 @@ void func_959(var uParam0, var uParam1, BOOL bParam2) // Position - 0x8A767 (567
 	if (!NETWORK::NETWORK_HAVE_ROS_MULTIPLAYER_PRIV() || !NETWORK::NETWORK_HAVE_ROS_CREATE_TICKET_PRIV() || NETWORK::NETWORK_HAVE_ROS_BANNED_PRIV())
 	{
 		entryHeader = "HUD_CONNPROB" /*alert*/;
-		entryLine2 = "HUD_QURETSP" /*Return to Grand Theft Auto V.*/;
+		entryLine2 = "HUD_QURETSP" /*Return to the Main Menu.*/;
 	
 		if (!NETWORK::NETWORK_HAVE_ROS_MULTIPLAYER_PRIV())
-			entryLine1 = "HUD_ROSBANNED" /*You have been banned from Grand Theft Auto Online.~n~Please visit rockstargames.com/community-guidelines for more information.*/;
+			entryLine1 = "HUD_ROSBANNED" /*You have been banned from Grand Theft Auto Online.~n~If you are a GTA+ Member, you will need to manually cancel your Membership.~n~Please visit rockstargames.com/community-resources/guidelines for more information.*/;
 		else if (!NETWORK::NETWORK_HAVE_ROS_CREATE_TICKET_PRIV())
-			entryLine1 = "HUD_SCSBANNED" /*You have been banned from using Rockstar Games Online Services and are not permitted to enter Grand Theft Auto Online.~n~Please visit rockstargames.com/community-guidelines for more information.*/;
+			entryLine1 = "HUD_SCSBANNED" /*You have been banned from using Rockstar Games Services and are not permitted to enter Grand Theft Auto Online.~n~If you are a GTA+ Member, you will need to manually cancel your Membership.~n~Please visit rockstargames.com/community-resources/guidelines for more information.*/;
 		else if (NETWORK::NETWORK_HAVE_ROS_BANNED_PRIV())
-			entryLine1 = "HUD_ROSBANNED" /*You have been banned from Grand Theft Auto Online.~n~Please visit rockstargames.com/community-guidelines for more information.*/;
+			entryLine1 = "HUD_ROSBANNED" /*You have been banned from Grand Theft Auto Online.~n~If you are a GTA+ Member, you will need to manually cancel your Membership.~n~Please visit rockstargames.com/community-resources/guidelines for more information.*/;
 	
 		banType = 0;
 	
@@ -119962,12 +119962,12 @@ void func_959(var uParam0, var uParam1, BOOL bParam2) // Position - 0x8A767 (567
 	
 		if (!flag)
 		{
-			entryLine1 = "HUD_ROSBANPERM" /*You have been banned from Grand Theft Auto Online permanently.~n~Please visit rockstargames.com/community-guidelines for more information.*/;
+			entryLine1 = "HUD_ROSBANPERM" /*You have been banned from Grand Theft Auto Online permanently.~n~If you are a GTA+ Member, you will need to manually cancel your Membership.~n~Please visit rockstargames.com/community-resources/guidelines for more information.*/;
 			HUD::SET_WARNING_MESSAGE_WITH_HEADER(entryHeader, entryLine1, 2, 0, false, -1, 0, 0, true, 0);
 		}
 		else if (banType == 1)
 		{
-			entryLine1 = "HUD_ROSBANX" /*You have been suspended from Grand Theft Auto Online until ~a~.~n~Please visit rockstargames.com/community-guidelines for more information.*/;
+			entryLine1 = "HUD_ROSBANX" /*You have been suspended from Grand Theft Auto Online until ~a~.~n~Please visit rockstargames.com/community-resources/guidelines for more information.*/;
 			TEXT_LABEL_COPY(&additionalTextInfoLine1, { func_960(&timeData) }, 6);
 			HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS(entryHeader, entryLine1, 2, entryLine2, false, -1, 1, &additionalTextInfoLine1, 0, true, 0);
 		}
@@ -121669,7 +121669,7 @@ void func_1032() // Position - 0x8C83D (575549)
 			{
 				if (func_963() == true)
 				{
-					HUD::BEGIN_TEXT_COMMAND_THEFEED_POST("HUD_CLOUDUP" /*The connection to the Rockstar cloud servers has been restored. Please return to Grand Theft Auto V and re-enter GTA Online for restored cloud content and to re-enable saving.*/);
+					HUD::BEGIN_TEXT_COMMAND_THEFEED_POST("HUD_CLOUDUP" /*The connection to the Rockstar cloud servers has been restored. Please return to the Main Menu and re-enter GTA Online for restored cloud content and to re-enable saving.*/);
 					HUD::END_TEXT_COMMAND_THEFEED_POST_TICKER(true, true);
 					func_1039(1);
 				}

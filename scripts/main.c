@@ -106750,14 +106750,14 @@ BOOL func_756() // Position - 0x8C17D (573821)
 	if (Global_2707922.f_10)
 		return false;
 
-	if (Global_1984716.f_3)
+	if (Global_1984717.f_3)
 		return false;
 
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("gb_ie_delivery_cutscene")) > 0)
 		return false;
 
-	if (_STOPWATCH_IS_INITIALIZED(&Global_1984716))
-		return func_757(&Global_1984716, Global_1984716.f_2, false);
+	if (_STOPWATCH_IS_INITIALIZED(&Global_1984717))
+		return func_757(&Global_1984717, Global_1984717.f_2, false);
 
 	return false;
 }
@@ -110357,7 +110357,7 @@ char* func_863(int iParam0, int iParam1, int iParam2, int iParam3) // Position -
 					return "CELL_FHAN" /*McKenzie Field Hangar*/;
 			
 				case 32:
-					return "TYC_BUSNS";
+					return "TYC_BUSNS" /*Business*/;
 			}
 			break;
 	
@@ -110422,7 +110422,7 @@ char* func_863(int iParam0, int iParam1, int iParam2, int iParam3) // Position -
 	
 		default:
 			if (func_756())
-				return "FMC_QUIT";
+				return "FMC_QUIT" /*Quit current mission?*/;
 		
 			return "CELL_250" /*ERROR!*/;
 	}

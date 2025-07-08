@@ -14924,7 +14924,7 @@ BOOL func_253() // Position - 0x102EF (66287)
 
 char* func_254() // Position - 0x102FF (66303)
 {
-	return "PROF_CHK_UA";
+	return "PROF_CHK_UA" /*Unable to connect to Rockstar Games to check profanity.*/;
 }
 
 BOOL func_255() // Position - 0x1030B (66315)

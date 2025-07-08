@@ -1,5 +1,5 @@
 # GTAV-Decompiled-Scripts
-## Current Version: 3570
+## Current Version: 3586
 
 This is the Legacy version. [Click here to switch to the Enhanced version](https://github.com/PlayboyPrime/GTAV-Decompiled-Scripts/tree/enhanced)
 

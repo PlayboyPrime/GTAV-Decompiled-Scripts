@@ -109779,9 +109779,9 @@ char* func_967(Hash hParam0, BOOL bParam1) // Position - 0x8D207 (578055)
 	
 		case joaat("WEAPON_CERAMICPISTOL"):
 			if (bParam1)
-				return "WTU_CERPST";
+				return "WTU_CERPST" /*CERAMIC PISTOL*/;
 			else
-				return "WT_CERPST";
+				return "WT_CERPST" /*Ceramic Pistol*/;
 			break;
 	
 		case joaat("WEAPON_GADGETPISTOL"):
@@ -109800,9 +109800,9 @@ char* func_967(Hash hParam0, BOOL bParam1) // Position - 0x8D207 (578055)
 	
 		case joaat("WEAPON_COMBATSHOTGUN"):
 			if (bParam1)
-				return "WTU_CMBSHGN";
+				return "WTU_CMBSHGN" /*COMBAT SHOTGUN*/;
 			else
-				return "WT_CMBSHGN";
+				return "WT_CMBSHGN" /*Combat Shotgun*/;
 			break;
 	
 		case joaat("VEHICLE_WEAPON_TURRET_DINGHY5_50CAL"):
@@ -109961,9 +109961,9 @@ char* func_967(Hash hParam0, BOOL bParam1) // Position - 0x8D207 (578055)
 	
 		case joaat("WEAPON_BRIEFCASE"):
 			if (bParam1)
-				return "FMMC_WT_BRIEF";
+				return "FMMC_WT_BRIEF" /*Briefcase*/;
 			else
-				return "FMMC_WT_BRIEF";
+				return "FMMC_WT_BRIEF" /*Briefcase*/;
 			break;
 	
 		default:
@@ -114326,11 +114326,11 @@ void func_1056(int iParam0, var uParam1, int iParam2, BOOL bParam3, BOOL bParam4
 		if (!NETWORK::NETWORK_IS_SIGNED_ONLINE())
 			componentType = "SCLB_NOT_ONL" /*Sign in to view leaderboard data.*/;
 		else if (!NETWORK::NETWORK_HAS_VALID_ROS_CREDENTIALS())
-			componentType = "SCLB_NO_ROS" /*Rockstar Games Online Services are unavailable right now. Please try again later.*/;
+			componentType = "SCLB_NO_ROS" /*Rockstar Games Services are unavailable right now. Please try again later.*/;
 		else if (Global_2097536.f_2832 != 0)
 			componentType = "SCLB_READ_FAIL" /*Unable to retrieve leaderboard data. Please try again later.*/;
 		else
-			componentType = "HUD_PERM" /*Your profile does not have the correct permissions to access this functionality.*/;
+			componentType = "HUD_PERM" /*Your profile does not have permission to access GTA Online.*/;
 	
 		GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(componentType);
 		GRAPHICS::END_TEXT_COMMAND_UNPARSED_SCALEFORM_STRING();
@@ -139466,28 +139466,28 @@ char* func_1456(int iParam0, int iParam1) // Position - 0xB51AA (741802)
 			return "AWT_1069" /*Arms In Arms*/;
 	
 		case 150:
-			return "AWT_1070";
+			return "AWT_1070" /*Dog's Dinner*/;
 	
 		case 151:
-			return "AWT_1071";
+			return "AWT_1071" /*Licensed Professional*/;
 	
 		case 152:
-			return "AWT_1072";
+			return "AWT_1072" /*Cooking The Books*/;
 	
 		case 153:
-			return "AWT_1073";
+			return "AWT_1073" /*Squeaky Clean*/;
 	
 		case 154:
-			return "AWT_1074";
+			return "AWT_1074" /*QuickiePharm*/;
 	
 		case 155:
-			return "AWT_1075";
+			return "AWT_1075" /*Safeguard*/;
 	
 		case 156:
-			return "AWT_1076";
+			return "AWT_1076" /*Sunburned Survivor*/;
 	
 		case 157:
-			return "AWT_1077";
+			return "AWT_1077" /*Dancing With Death*/;
 	}
 
 	return "";

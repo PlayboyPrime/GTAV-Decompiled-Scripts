@@ -35141,7 +35141,7 @@ char* func_476(int iParam0) // Position - 0x28B3F (166719)
 			return "SAL_BUFFALO5" /*Buffalo EVX*/;
 	
 		case 1447690049:
-			return "SAL_STINGERTT" /*Itali GTO Stinger TT*/;
+			return "SAL_STINGERTT" /*Stinger TT*/;
 	
 		case 669204833:
 			return "SAL_VIRTUE" /*Virtue*/;
@@ -42091,7 +42091,7 @@ void func_619(char* sParam0, int iParam1) // Position - 0x32ECD (208589)
 	else if (iParam1 == 129)
 		TEXT_LABEL_ASSIGN_STRING(sParam0, "WIN22_GARNAME" /*Eclipse Blvd Garage*/, 16);
 	else if (iParam1 == 131)
-		TEXT_LABEL_ASSIGN_STRING(sParam0, "VPG_GARNAME", 16);
+		TEXT_LABEL_ASSIGN_STRING(sParam0, "VPG_GARNAME" /*The Vinewood Club Garage*/, 16);
 	else if (iParam1 == 132)
 		TEXT_LABEL_ASSIGN_STRING(sParam0, "BO_GARNAME" /*Bail Office*/, 16);
 	else if (iParam1 == 133)
@@ -65290,7 +65290,7 @@ void func_1016() // Position - 0x4FC85 (326789)
 		if (!func_682())
 			func_573("CAS_DIS_MAIN" /*Spin the Lucky Wheel for free once per day and get a prize.~n~~n~Prize Odds:~n~Podium Vehicle: 1 in 20~n~Vehicle Discount: 1 in 20~n~Mystery: 1 in 20~n~Clothing: 4 in 20~n~Chips: 4 in 20~n~Cash: 4 in 20~n~RP: 5 in 20*/, 0, 0);
 		else
-			func_573("CAS_DIS_MAINb", 0, 0);
+			func_573("CAS_DIS_MAINb" /*Spin the Lucky Wheel for free once per day and get a prize.~n~~n~You have already been awarded the current podium vehicle. RP will be awarded instead if you land on this prize again.~n~~n~Prize Odds:~n~Vehicle Discount: 1 in 20~n~Mystery: 1 in 20~n~Clothing: 4 in 20~n~Chips: 4 in 20~n~Cash: 4 in 20~n~RP: 6 in 20*/, 0, 0);
 	
 		func_1017();
 		func_516(true, -1, true, false, true, -1082130432, false, false, -1);

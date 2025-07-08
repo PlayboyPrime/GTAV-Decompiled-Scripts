@@ -853,7 +853,7 @@ void main() // Position - 0x0 (0)
 					HUD::SET_WARNING_MESSAGE_WITH_HEADER("CELL_CAM_ALERT" /*ALERT*/, "ERROR_NO_SC_CAMERAPHONE" /*Unable to save your Snapmatic photo as you are not signed up or logged in to ~HUD_COLOUR_SOCIAL_CLUB~Rockstar Games~s~.*/, iLocal_150, "", false, -1, "", "", true, 0);
 			
 				if (iLocal_153 == 6)
-					HUD::SET_WARNING_MESSAGE_WITH_HEADER("CELL_CAM_ALERT" /*ALERT*/, "SC_ERROR_BANNED" /*You have been banned from using Rockstar Games Online Services.*/, iLocal_150, "", false, -1, "", "", true, 0);
+					HUD::SET_WARNING_MESSAGE_WITH_HEADER("CELL_CAM_ALERT" /*ALERT*/, "SC_ERROR_BANNED" /*You have been banned from using Rockstar Games Services.~n~If you are a GTA+ Member, you will need to manually cancel your Membership.*/, iLocal_150, "", false, -1, "", "", true, 0);
 			
 				if (iLocal_153 == 3)
 					HUD::SET_WARNING_MESSAGE_WITH_HEADER("CELL_CAM_ALERT" /*ALERT*/, "ERROR_UPDATE_SC_CAMERAPHONE" /*Accept the latest Online Policies to save your Snapmatic photos to the Gallery. Log in or visit ~HUD_COLOUR_SOCIAL_CLUB~Rockstar Games~s~ for more information.*/, iLocal_150, "", false, -1, "", "", true, 0);
@@ -7462,7 +7462,7 @@ char* func_97() // Position - 0xC581 (50561)
 	if (func_101())
 		return "BH_SEND" /*Send to Jenette*/;
 	else if (func_98())
-		return "TYC_SEND";
+		return "TYC_SEND" /*Send to Raf*/;
 
 	return "CELL_286" /*Continue*/;
 }

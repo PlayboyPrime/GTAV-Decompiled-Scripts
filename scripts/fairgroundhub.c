@@ -450,7 +450,7 @@ BOOL func_1(var uParam0, var uParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4, 
 		
 			if (!uParam1->f_9)
 				if (MISC::GET_HASH_KEY(uParam0->[uParam1->f_12 /*24*/].f_5) == MISC::GET_HASH_KEY("Carwash1") && func_5(PLAYER::PLAYER_ID()))
-					func_24(uParam1, "CWASH_RIDEHLP2");
+					func_24(uParam1, "CWASH_RIDEHLP2" /*Press ~INPUT_CONTEXT~ to use your Car Wash for free.*/);
 				else
 					func_15(uParam1, *uParam1, uParam0->[uParam1->f_12 /*24*/].f_9);
 		

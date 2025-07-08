@@ -247128,22 +247128,22 @@ void func_3758(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3, int iParam4
 
 void func_3759(int iParam0) // Position - 0x144E6C (1330796)
 {
-	func_118(&Global_1984716, false, false);
+	func_118(&Global_1984717, false, false);
 
 	if (iParam0 != -1)
-		Global_1984716.f_2 = iParam0;
+		Global_1984717.f_2 = iParam0;
 	else
-		Global_1984716.f_2 = *Global_262145.f_36598;
+		Global_1984717.f_2 = *Global_262145.f_36598;
 
 	return;
 }
 
 int func_3760(int iParam0) // Position - 0x144E9F (1330847)
 {
-	if (Global_1984720 == -2)
+	if (Global_1984721 == -2)
 		return 0;
 
-	if (Global_1984720 == iParam0)
+	if (Global_1984721 == iParam0)
 		return 0;
 
 	if (func_3761(iParam0) != 0)
@@ -251814,14 +251814,14 @@ BOOL func_3882() // Position - 0x14A6F9 (1353465)
 	if (Global_2707922.f_10)
 		return false;
 
-	if (Global_1984716.f_3)
+	if (Global_1984717.f_3)
 		return false;
 
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("gb_ie_delivery_cutscene")) > 0)
 		return false;
 
-	if (_STOPWATCH_IS_INITIALIZED(&Global_1984716))
-		return func_47(&Global_1984716, Global_1984716.f_2, false);
+	if (_STOPWATCH_IS_INITIALIZED(&Global_1984717))
+		return func_47(&Global_1984717, Global_1984717.f_2, false);
 
 	return false;
 }
@@ -255000,7 +255000,7 @@ void func_3972() // Position - 0x14EEB3 (1371827)
 {
 	var unk;
 
-	Global_1984716 = { unk };
+	Global_1984717 = { unk };
 	return;
 }
 

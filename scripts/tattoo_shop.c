@@ -60355,7 +60355,7 @@ BOOL func_346(var uParam0) // Position - 0x44D85 (281989)
 						}
 						else
 						{
-							HUD::SET_WARNING_MESSAGE_WITH_HEADER("GLOBAL_ALERT_DEFAULT" /*Alert*/, "HUD_PERM" /*Your profile does not have the correct permissions to access this functionality.*/, instructionalKey2, 0, false, -1, 0, 0, true, 0);
+							HUD::SET_WARNING_MESSAGE_WITH_HEADER("GLOBAL_ALERT_DEFAULT" /*Alert*/, "HUD_PERM" /*Your profile does not have permission to access GTA Online.*/, instructionalKey2, 0, false, -1, 0, 0, true, 0);
 						}
 					
 						if (PAD::IS_CONTROL_JUST_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_ACCEPT))
@@ -60537,7 +60537,7 @@ BOOL func_347(int* piParam0, BOOL bParam1) // Position - 0x45094 (282772)
 			else if (npUnavailableReason == 5)
 				HUD::SET_WARNING_MESSAGE_WITH_HEADER("PM_INF_QMFT" /*Alert*/, "SCLB_NO_INT" /*No internet connection detected, establish a connection to access this feature.*/, instructionalKey, 0, false, -1, 0, 0, true, 0);
 			else if (!func_356())
-				HUD::SET_WARNING_MESSAGE_WITH_HEADER("PM_INF_QMFT" /*Alert*/, "SCLB_NO_ROS" /*Rockstar Games Online Services are unavailable right now. Please try again later.*/, instructionalKey, 0, false, -1, 0, 0, true, 0);
+				HUD::SET_WARNING_MESSAGE_WITH_HEADER("PM_INF_QMFT" /*Alert*/, "SCLB_NO_ROS" /*Rockstar Games Services are unavailable right now. Please try again later.*/, instructionalKey, 0, false, -1, 0, 0, true, 0);
 		
 			if (!IS_BIT_SET(*piParam0, 0))
 			{
@@ -62254,7 +62254,7 @@ char* func_378(const char* sParam0, BOOL bParam1) // Position - 0x46B7A (289658)
 			return "SHOP_CONTENT_51" /*Agents of Sabotage*/;
 	
 		case 1026824822:
-			return "SHOP_CONTENT_52";
+			return "SHOP_CONTENT_52" /*Money Fronts*/;
 	}
 
 	switch (hashKey)

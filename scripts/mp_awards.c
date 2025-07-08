@@ -2984,7 +2984,7 @@ void func_15(var uParam0) // Position - 0xED6 (3798)
 			func_25(17, "DLC223AWDPAGE" /*The Chop Shop*/, &Global_1673252);
 			func_25(18, "DLC124AWDPAGE" /*Bottom Dollar Bounties*/, &Global_1673252);
 			func_25(19, "DLC224AWDPAGE" /*Agents of Sabotage*/, &Global_1673252);
-			func_25(20, "DLC125AWDPAGE", &Global_1673252);
+			func_25(20, "DLC125AWDPAGE" /*Money Fronts*/, &Global_1673252);
 			func_25(21, "HUD_AWDLIST6b" /*Rewards*/, &Global_1673252);
 			func_16(&Global_1673252, func_24(&Global_1673252));
 		}
@@ -13369,7 +13369,7 @@ char* func_113(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position 
 			return "AWS_1026" /*Complete The Cluckin' Bell Farm Raid as leader to earn $250,000.*/;
 	
 		case 169:
-			return "AWS_1027" /*Complete The Cluckin' Bell Farm Raid as a goon to earn $250,000.*/;
+			return "AWS_1027" /*Complete The Cluckin' Bell Farm Raid as a Crew Member to earn $250,000.*/;
 	
 		case 170:
 			return "AWS_1028" /*Complete The Cluckin' Bell Farm Raid as leader using the stealth approach.*/;
@@ -13450,46 +13450,46 @@ char* func_113(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position 
 			return "AWS_1067" /*Complete The Titan Job as leader to earn $250,000.*/;
 	
 		case 195:
-			return "AWS_1068" /*Complete all Oscar Guzman Flies Again missions as a Crew Member to earn $100,000.*/;
+			return "AWS_1068" /*Complete The Titan Job as a Crew Member to earn $100,000.*/;
 	
 		case 196:
-			return "AWS_1078";
+			return "AWS_1078" /*Complete Liquid Market as leader.*/;
 	
 		case 197:
-			return "AWS_1079";
+			return "AWS_1079" /*Complete ROI as leader.*/;
 	
 		case 198:
-			return "AWS_1080";
+			return "AWS_1080" /*Complete Compound Interest as leader.*/;
 	
 		case 199:
-			return "AWS_1081";
+			return "AWS_1081" /*Complete Mutual Funds as leader.*/;
 	
 		case 200:
-			return "AWS_1082";
+			return "AWS_1082" /*Complete Current Liabilities as leader.*/;
 	
 		case 201:
-			return "AWS_1083";
+			return "AWS_1083" /*Find the target without any hints during Current Liabilities.*/;
 	
 		case 202:
-			return "AWS_1084";
+			return "AWS_1084" /*Complete The Monopoly as leader.*/;
 	
 		case 203:
-			return "AWS_1085";
+			return "AWS_1085" /*Steal all bonus loot in all Mr Faber Work.*/;
 	
 		case 204:
-			return "AWS_1086";
+			return "AWS_1086" /*Acquire Higgins Helitours or Smoke on the Water.*/;
 	
 		case 205:
-			return "AWS_1087";
+			return "AWS_1087" /*Find and collect all 10 Smoke on the Water Product in one day.*/;
 	
 		case 206:
-			return "AWS_1088";
+			return "AWS_1088" /*Complete all deliveries for QuickiePharm in under 10 minutes.*/;
 	
 		case 207:
-			return "AWS_1089";
+			return "AWS_1089" /*Take less than 10% damage transporting goods for Gruppe Sechs or Bobcat Security.*/;
 	
 		case 208:
-			return "AWS_1090";
+			return "AWS_1090" /*Take out each type of special undead in the Cayo Perico Survival.*/;
 	
 		default:
 		
@@ -14100,43 +14100,43 @@ char* func_114(int iParam0, int iParam1, BOOL bParam2) // Position - 0xEBF3 (604
 			return "AWT_1068" /*Permanent Contract*/;
 	
 		case 196:
-			return "AWT_1078";
+			return "AWT_1078" /*Liquid Market*/;
 	
 		case 197:
-			return "AWT_1079";
+			return "AWT_1079" /*ROI*/;
 	
 		case 198:
-			return "AWT_1080";
+			return "AWT_1080" /*Compound Interest*/;
 	
 		case 199:
-			return "AWT_1081";
+			return "AWT_1081" /*Mutual Funds*/;
 	
 		case 200:
-			return "AWT_1082";
+			return "AWT_1082" /*Current Liabilities*/;
 	
 		case 201:
-			return "AWT_1083";
+			return "AWT_1083" /*Gut Instinct*/;
 	
 		case 202:
-			return "AWT_1084";
+			return "AWT_1084" /*The Monopoly*/;
 	
 		case 203:
-			return "AWT_1085";
+			return "AWT_1085" /*Profit Maximization*/;
 	
 		case 204:
-			return "AWT_1086";
+			return "AWT_1086" /*Diversification*/;
 	
 		case 205:
-			return "AWT_1087";
+			return "AWT_1087" /*Kush Collector*/;
 	
 		case 206:
-			return "AWT_1088";
+			return "AWT_1088" /*First Responder*/;
 	
 		case 207:
-			return "AWT_1089";
+			return "AWT_1089" /*Ironclad*/;
 	
 		case 208:
-			return "AWT_1090";
+			return "AWT_1090" /*The Indiscriminator*/;
 	
 		default:
 		
@@ -16655,106 +16655,106 @@ char* func_121(int iParam0, int iParam1, int iParam2) // Position - 0x110A8 (698
 	
 		case 150:
 			if (iParam1 == 2)
-				return "AWS_1070a";
+				return "AWS_1070a" /*Distract 1 junkyard dog with dog food during Liquid Market.*/;
 			else if (iParam1 == 3)
-				return "AWS_1070b";
+				return "AWS_1070b" /*Distract 2 junkyard dogs with dog food during Liquid Market.*/;
 			else if (iParam1 == 4)
-				return "AWS_1070c";
+				return "AWS_1070c" /*Distract 3 junkyard dogs with dog food during Liquid Market.*/;
 			else if (iParam1 == 5)
-				return "AWS_1070d";
+				return "AWS_1070d" /*Distract 4 junkyard dogs with dog food during Liquid Market.*/;
 			else
-				return "AWS_1070a";
+				return "AWS_1070a" /*Distract 1 junkyard dog with dog food during Liquid Market.*/;
 			break;
 	
 		case 151:
 			if (iParam1 == 2)
-				return "AWS_1071a";
+				return "AWS_1071a" /*Reduce heat at the Hands On Car Wash, Smoke on the Water, or Higgins Helitours 5 times.*/;
 			else if (iParam1 == 3)
-				return "AWS_1071b";
+				return "AWS_1071b" /*Reduce heat at the Hands On Car Wash, Smoke on the Water, or Higgins Helitours 10 times.*/;
 			else if (iParam1 == 4)
-				return "AWS_1071c";
+				return "AWS_1071c" /*Reduce heat at the Hands On Car Wash, Smoke on the Water, or Higgins Helitours 15 times.*/;
 			else if (iParam1 == 5)
-				return "AWS_1071d";
+				return "AWS_1071d" /*Reduce heat at the Hands On Car Wash, Smoke on the Water, or Higgins Helitours 25 times.*/;
 			else
-				return "AWS_1071a";
+				return "AWS_1071a" /*Reduce heat at the Hands On Car Wash, Smoke on the Water, or Higgins Helitours 5 times.*/;
 			break;
 	
 		case 152:
 			if (iParam1 == 2)
-				return "AWS_1072a";
+				return "AWS_1072a" /*Earn $250,000 completing jobs at the Hands On Car Wash, Smoke on the Water, or Higgins Helitours.*/;
 			else if (iParam1 == 3)
-				return "AWS_1072b";
+				return "AWS_1072b" /*Earn $500,000 completing jobs at the Hands On Car Wash, Smoke on the Water, or Higgins Helitours.*/;
 			else if (iParam1 == 4)
-				return "AWS_1072c";
+				return "AWS_1072c" /*Earn $1,000,000 completing jobs at the Hands On Car Wash, Smoke on the Water, or Higgins Helitours.*/;
 			else if (iParam1 == 5)
-				return "AWS_1072d";
+				return "AWS_1072d" /*Earn $2,000,000 completing jobs at the Hands On Car Wash, Smoke on the Water, or Higgins Helitours.*/;
 			else
-				return "AWS_1072a";
+				return "AWS_1072a" /*Earn $250,000 completing jobs at the Hands On Car Wash, Smoke on the Water, or Higgins Helitours.*/;
 			break;
 	
 		case 153:
 			if (iParam1 == 2)
-				return "AWS_1073a";
+				return "AWS_1073a" /*Collect $50,000 in laundered income from the safe inside the Hands On Car Wash.*/;
 			else if (iParam1 == 3)
-				return "AWS_1073b";
+				return "AWS_1073b" /*Collect $100,000 in laundered income from the safe inside the Hands On Car Wash.*/;
 			else if (iParam1 == 4)
-				return "AWS_1073c";
+				return "AWS_1073c" /*Collect $200,000 in laundered income from the safe inside the Hands On Car Wash.*/;
 			else if (iParam1 == 5)
-				return "AWS_1073d";
+				return "AWS_1073d" /*Collect $500,000 in laundered income from the safe inside the Hands On Car Wash.*/;
 			else
-				return "AWS_1073a";
+				return "AWS_1073a" /*Collect $50,000 in laundered income from the safe inside the Hands On Car Wash.*/;
 			break;
 	
 		case 154:
 			if (iParam1 == 2)
-				return "AWS_1074a";
+				return "AWS_1074a" /*Complete all deliveries for QuickiePharm 5 times.*/;
 			else if (iParam1 == 3)
-				return "AWS_1074b";
+				return "AWS_1074b" /*Complete all deliveries for QuickiePharm 10 times.*/;
 			else if (iParam1 == 4)
-				return "AWS_1074c";
+				return "AWS_1074c" /*Complete all deliveries for QuickiePharm 15 times.*/;
 			else if (iParam1 == 5)
-				return "AWS_1074d";
+				return "AWS_1074d" /*Complete all deliveries for QuickiePharm 20 times.*/;
 			else
-				return "AWS_1074a";
+				return "AWS_1074a" /*Complete all deliveries for QuickiePharm 5 times.*/;
 			break;
 	
 		case 155:
 			if (iParam1 == 2)
-				return "AWS_1075a";
+				return "AWS_1075a" /*Make 5 deliveries for Gruppe Sechs or Bobcat Security.*/;
 			else if (iParam1 == 3)
-				return "AWS_1075b";
+				return "AWS_1075b" /*Make 10 deliveries for Gruppe Sechs or Bobcat Security.*/;
 			else if (iParam1 == 4)
-				return "AWS_1075c";
+				return "AWS_1075c" /*Make 15 deliveries for Gruppe Sechs or Bobcat Security.*/;
 			else if (iParam1 == 5)
-				return "AWS_1075d";
+				return "AWS_1075d" /*Make 20 deliveries for Gruppe Sechs or Bobcat Security.*/;
 			else
-				return "AWS_1075a";
+				return "AWS_1075a" /*Make 5 deliveries for Gruppe Sechs or Bobcat Security.*/;
 			break;
 	
 		case 156:
 			if (iParam1 == 2)
-				return "AWS_1076a";
+				return "AWS_1076a" /*Survive 5 waves in the Cayo Perico Survival.*/;
 			else if (iParam1 == 3)
-				return "AWS_1076b";
+				return "AWS_1076b" /*Survive 7 waves in the Cayo Perico Survival.*/;
 			else if (iParam1 == 4)
-				return "AWS_1076c";
+				return "AWS_1076c" /*Survive 10 waves in the Cayo Perico Survival.*/;
 			else if (iParam1 == 5)
-				return "AWS_1076d";
+				return "AWS_1076d" /*Survive 15 waves in the Cayo Perico Survival.*/;
 			else
-				return "AWS_1076a";
+				return "AWS_1076a" /*Survive 5 waves in the Cayo Perico Survival.*/;
 			break;
 	
 		case 157:
 			if (iParam1 == 2)
-				return "AWS_1077a";
+				return "AWS_1077a" /*Perform a dancing Action while the undead DJ is active for 5 seconds.*/;
 			else if (iParam1 == 3)
-				return "AWS_1077b";
+				return "AWS_1077b" /*Perform a dancing Action while the undead DJ is active for 10 seconds.*/;
 			else if (iParam1 == 4)
-				return "AWS_1077c";
+				return "AWS_1077c" /*Perform a dancing Action while the undead DJ is active for 30 seconds.*/;
 			else if (iParam1 == 5)
-				return "AWS_1077d";
+				return "AWS_1077d" /*Perform a dancing Action while the undead DJ is active for 60 seconds.*/;
 			else
-				return "AWS_1077a";
+				return "AWS_1077a" /*Perform a dancing Action while the undead DJ is active for 5 seconds.*/;
 			break;
 	}
 
@@ -17264,28 +17264,28 @@ char* func_122(int iParam0, int iParam1) // Position - 0x12827 (75815)
 			return "AWT_1069" /*Arms In Arms*/;
 	
 		case 150:
-			return "AWT_1070";
+			return "AWT_1070" /*Dog's Dinner*/;
 	
 		case 151:
-			return "AWT_1071";
+			return "AWT_1071" /*Licensed Professional*/;
 	
 		case 152:
-			return "AWT_1072";
+			return "AWT_1072" /*Cooking The Books*/;
 	
 		case 153:
-			return "AWT_1073";
+			return "AWT_1073" /*Squeaky Clean*/;
 	
 		case 154:
-			return "AWT_1074";
+			return "AWT_1074" /*QuickiePharm*/;
 	
 		case 155:
-			return "AWT_1075";
+			return "AWT_1075" /*Safeguard*/;
 	
 		case 156:
-			return "AWT_1076";
+			return "AWT_1076" /*Sunburned Survivor*/;
 	
 		case 157:
-			return "AWT_1077";
+			return "AWT_1077" /*Dancing With Death*/;
 	}
 
 	return "";

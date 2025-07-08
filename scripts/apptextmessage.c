@@ -5481,11 +5481,11 @@ void func_55() // Position - 0x3758 (14168)
 	}
 	else if (func_56(PLAYER::PLAYER_ID()) == 2)
 	{
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[44 /*6*/], "TYCSC_TXT_1a", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[44 /*6*/], "TYCSC_TXT_1a" /*You're looking for this container.~n~~n~IMAGE ATTACHMENT ~nrt~ <img src='img://UPDT1_25_TEXT_CAR_WASH/UPDT1_25_TEXT_BLUE' vspace='0' width='252' height='128'/> ~nrt~*/, 24);
 		TEXT_LABEL_ASSIGN_STRING(&uLocal_1193[44 /*6*/], "UPDT1_25_TEXT_CAR_WASH", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[45 /*6*/], "TYCSC_TXT_1b", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[45 /*6*/], "TYCSC_TXT_1b" /*You're looking for this container.~n~~n~IMAGE ATTACHMENT ~nrt~ <img src='img://UPDT1_25_TEXT_CAR_WASH/UPDT1_25_TEXT_GREEN' vspace='0' width='252' height='128'/> ~nrt~*/, 24);
 		TEXT_LABEL_ASSIGN_STRING(&uLocal_1193[45 /*6*/], "UPDT1_25_TEXT_CAR_WASH", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[46 /*6*/], "TYCSC_TXT_1c", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[46 /*6*/], "TYCSC_TXT_1c" /*You're looking for this container.~n~~n~IMAGE ATTACHMENT ~nrt~ <img src='img://UPDT1_25_TEXT_CAR_WASH/UPDT1_25_TEXT_RED' vspace='0' width='252' height='128'/> ~nrt~*/, 24);
 		TEXT_LABEL_ASSIGN_STRING(&uLocal_1193[46 /*6*/], "UPDT1_25_TEXT_CAR_WASH", 24);
 	}
 

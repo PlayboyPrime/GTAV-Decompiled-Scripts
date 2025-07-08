@@ -79588,22 +79588,22 @@ void func_975(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3, int iParam4,
 
 void func_976(int iParam0) // Position - 0x5EA87 (387719)
 {
-	func_252(&Global_1984716, false, false);
+	func_252(&Global_1984717, false, false);
 
 	if (iParam0 != -1)
-		Global_1984716.f_2 = iParam0;
+		Global_1984717.f_2 = iParam0;
 	else
-		Global_1984716.f_2 = *Global_262145.f_36598;
+		Global_1984717.f_2 = *Global_262145.f_36598;
 
 	return;
 }
 
 int func_977(int iParam0) // Position - 0x5EABA (387770)
 {
-	if (Global_1984720 == -2)
+	if (Global_1984721 == -2)
 		return 0;
 
-	if (Global_1984720 == iParam0)
+	if (Global_1984721 == iParam0)
 		return 0;
 
 	if (func_656(iParam0) != 0)
@@ -81566,7 +81566,7 @@ void func_1077() // Position - 0x60FE3 (397283)
 {
 	var unk;
 
-	Global_1984716 = { unk };
+	Global_1984717 = { unk };
 	return;
 }
 

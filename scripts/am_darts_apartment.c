@@ -68335,28 +68335,28 @@ char* func_877(int iParam0, int iParam1) // Position - 0x50271 (328305)
 			return "AWT_1069" /*Arms In Arms*/;
 	
 		case 150:
-			return "AWT_1070";
+			return "AWT_1070" /*Dog's Dinner*/;
 	
 		case 151:
-			return "AWT_1071";
+			return "AWT_1071" /*Licensed Professional*/;
 	
 		case 152:
-			return "AWT_1072";
+			return "AWT_1072" /*Cooking The Books*/;
 	
 		case 153:
-			return "AWT_1073";
+			return "AWT_1073" /*Squeaky Clean*/;
 	
 		case 154:
-			return "AWT_1074";
+			return "AWT_1074" /*QuickiePharm*/;
 	
 		case 155:
-			return "AWT_1075";
+			return "AWT_1075" /*Safeguard*/;
 	
 		case 156:
-			return "AWT_1076";
+			return "AWT_1076" /*Sunburned Survivor*/;
 	
 		case 157:
-			return "AWT_1077";
+			return "AWT_1077" /*Dancing With Death*/;
 	}
 
 	return "";

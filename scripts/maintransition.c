@@ -3318,8 +3318,8 @@ int func_16() // Position - 0xC93 (3219)
 	}
 
 	entryHeader = "HUD_CONNPROB" /*alert*/;
-	entryLine1 = "HUD_CLOUDFAILMSG" /*Unable to connect to Rockstar Games Online Services. Please check your network connection and see ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~ for information about outages and maintenance schedules.*/;
-	entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+	entryLine1 = "HUD_CLOUDFAILMSG" /*Unable to connect to Rockstar Games Services. Please check your network connection and see ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~ for information about outages and maintenance schedules.*/;
+	entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 
 	if (func_49() != 4)
 		func_17();
@@ -94695,7 +94695,7 @@ void func_408(var uParam0) // Position - 0x711C9 (463305)
 
 	func_439(uParam0);
 	entryHeader = "HUD_CONNPROB" /*alert*/;
-	entryLine1 = "HUD_STATDIRTY3" /*Your save data could not be loaded from the Rockstar cloud servers at this time. Please try again later. Returning to Grand Theft Auto V.*/;
+	entryLine1 = "HUD_STATDIRTY3" /*Your save data could not be downloaded from the Rockstar cloud servers at this time. Please try again later. Returning to the Main Menu.*/;
 	entryLine2 = "HUD_SAVETRA_INFO" /*For further information, please visit ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~.*/;
 	instructionalKey = 2;
 
@@ -97525,7 +97525,7 @@ void func_560(var uParam0) // Position - 0x74652 (476754)
 
 	func_557(&(uParam0->f_366), &(uParam0->f_395), false);
 	entryHeader = "HUD_CONNPROB" /*alert*/;
-	entryLine1 = "VOICECHAT_REVKD" /*You are suspended from using Voice and Text communication features due to a violation of our Community Guidelines.~n~~n~Please visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com/community-guidelines~s~ for more information.*/;
+	entryLine1 = "VOICECHAT_REVKD" /*You are suspended from using Voice and Text communication features due to a violation of our Community Guidelines.~n~~n~Please visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com/community-resources/guidelines~s~ for more information.*/;
 	instructionalKey = 2;
 
 	if (func_409(1) == false || func_406() == false)
@@ -97579,7 +97579,7 @@ void func_563(var uParam0) // Position - 0x74727 (476967)
 
 	func_557(&(uParam0->f_366), &(uParam0->f_395), false);
 	entryHeader = "HUD_CONNPROB" /*alert*/;
-	entryLine1 = "TEXTCHAT_REVKD" /*You are suspended from using Voice and Text communication features due to a violation of our Community Guidelines.~n~~n~Please visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com/community-guidelines~s~ for more information.*/;
+	entryLine1 = "TEXTCHAT_REVKD" /*You are suspended from using Voice and Text communication features due to a violation of our Community Guidelines.~n~~n~Please visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com/community-resources/guidelines~s~ for more information.*/;
 	instructionalKey = 2;
 
 	if (func_409(1) == false || func_406() == false)
@@ -97633,7 +97633,7 @@ void func_566(var uParam0) // Position - 0x747FC (477180)
 
 	func_557(&(uParam0->f_366), &(uParam0->f_395), false);
 	entryHeader = "WELCOME" /*Welcome*/;
-	entryLine1 = "RPOLICY1" /*Thank you for playing Grand Theft Auto Online.~n~~n~To help keep the experience fun for everyone, we encourage you to read our Community Guidelines: ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com/community-guidelines~s~.~n~~n~You can report violations of these guidelines in the ONLINE tab of the Pause Menu.*/;
+	entryLine1 = "RPOLICY1" /*Welcome to Grand Theft Auto Online.~n~~n~To learn more about our Community Guidelines, or how to update your account privacy and communication settings, visit ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com/community-resources~s~.~n~~n~Should you need to report a Community Guidelines violation, go to the ONLINE tab of the Pause Menu.*/;
 	instructionalKey = 18;
 
 	if (func_409(1) == false || func_406() == false)
@@ -97837,7 +97837,7 @@ void func_571(var uParam0) // Position - 0x74B82 (478082)
 	func_557(&(uParam0->f_366), &(uParam0->f_395), false);
 	entryHeader = "HUD_CONNPROB" /*alert*/;
 	entryLine1 = "HUD_MODINSTAL" /*You are attempting to access GTA Online servers with an altered version of the game.*/;
-	entryLine2 = "HUD_QURETSP" /*Return to Grand Theft Auto V.*/;
+	entryLine2 = "HUD_QURETSP" /*Return to the Main Menu.*/;
 	instructionalKey = 2;
 
 	if (func_409(1) == false)
@@ -97902,7 +97902,7 @@ void func_575(var uParam0) // Position - 0x74C6B (478315)
 	entryLine1 = "HUD_BLOCKER" /*An important update is required for GTA Online. Returning to Grand Theft Auto V and applying update.*/;
 
 	if (Global_2698029)
-		entryLine1 = "HUD_REBOOT" /*An important update is required for GTA Online. Returning to Grand Theft Auto V and applying update.*/;
+		entryLine1 = "HUD_REBOOT" /*An important update is required for GTA Online. Returning to the Main Menu and applying update.*/;
 
 	instructionalKey = 16384;
 
@@ -98408,7 +98408,7 @@ void func_585(var uParam0) // Position - 0x75535 (480565)
 	func_557(&(uParam0->f_366), &(uParam0->f_395), false);
 	entryHeader = "HUD_CONNPROB" /*alert*/;
 	entryLine1 = "CT_BAIL" /*There was an error processing your recent transaction.*/;
-	entryLine2 = "HUD_SPRETURNTRY" /*Please return to Grand Theft Auto V and try again later.*/;
+	entryLine2 = "HUD_SPRETURNTRY" /*Please return to the Main Menu and try again later.*/;
 	instructionalKey = 16384;
 
 	if (func_409(1) == false || func_406() == false)
@@ -98505,13 +98505,13 @@ void func_590(var uParam0) // Position - 0x7568D (480909)
 
 	if (Global_2698402 == 1)
 	{
-		entryHeader = "HUD_SERVCAN_TITLE" /*Unable to Transfer*/;
-		entryLine1 = "HUD_SERVCAN_TRANS" /*We are unable to transfer your character and progression data at this time. Your character transfer has been canceled. You can try again by re-entering GTA Online or by using the 'Character Transfer' option in the Online section of the Pause Menu. Would you like to continue to GTA Online?*/;
+		entryHeader = "HUD_SERVCAN_TITLE" /*Unable to Migrate*/;
+		entryLine1 = "HUD_SERVCAN_TRANS" /*We are unable to migrate your GTA Online profile at this time. Your profile migration has been canceled. You can try again by re-entering GTA Online or by using the 'Migrate Profile' option in the Online section of the Pause Menu. Would you like to continue to GTA Online?*/;
 	}
 	else if (Global_2698402 == 2)
 	{
 		entryHeader = "HUD_REVERT_TITLE" /*Data Reverted*/;
-		entryLine1 = "HUD_REVERT_TRANS" /*The transfer of your previous character and progression data is incomplete. Your GTA Online data has been reverted back to its original state. You can try again by re-entering GTA Online or by using the 'Character Transfer' option in the Online section of the Pause Menu. For more information, please visit ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~. Would you like to continue to GTA Online?*/;
+		entryLine1 = "HUD_REVERT_TRANS" /*The migration of your GTA Online profile is incomplete. Your GTA Online data has been reverted back to its original state. You can try again by re-entering GTA Online or by using the 'Profile Migration' option in the Online section of the Pause Menu. For more information, please visit ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~. Would you like to continue to GTA Online?*/;
 	}
 
 	instructionalKey = 36;
@@ -98845,7 +98845,7 @@ void func_607(var uParam0) // Position - 0x75B85 (482181)
 	func_557(&(uParam0->f_366), &(uParam0->f_395), false);
 	entryHeader = "HUD_CONNPROB" /*alert*/;
 	entryLine1 = "HUD_DISCON" /*The connection to Rockstar Games has been lost.*/;
-	entryLine2 = "HUD_QURETSP" /*Return to Grand Theft Auto V.*/;
+	entryLine2 = "HUD_QURETSP" /*Return to the Main Menu.*/;
 
 	if (func_4689() && NETWORK::NETWORK_IS_NP_AVAILABLE() == false && NETWORK::NETWORK_GET_NP_UNAVAILABLE_REASON() == 4)
 		entryLine1 = "HUD_PROFILECHNG" /*Please change to a profile with correct permissions.*/;
@@ -98942,7 +98942,7 @@ void func_614(var uParam0) // Position - 0x75D41 (482625)
 	func_557(&(uParam0->f_366), &(uParam0->f_395), false);
 	entryHeader = "HUD_CONNPROB" /*alert*/;
 	entryLine1 = "HUD_INITSESSFAIL" /*Unable to initiate communication with Rockstar game servers. Please try again and check ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~ for information about outages and scheduled maintenance. If the issue persists, please check out our GTA Online Connection Troubleshooting at ~HUD_COLOUR_SOCIAL_CLUB~http://rsg.ms/connect~s~.*/;
-	entryLine2 = "HUD_QURETSP" /*Return to Grand Theft Auto V.*/;
+	entryLine2 = "HUD_QURETSP" /*Return to the Main Menu.*/;
 
 	switch (Global_2699243.f_2)
 	{
@@ -98994,7 +98994,7 @@ void func_617(var uParam0) // Position - 0x75DEA (482794)
 	func_557(&(uParam0->f_366), &(uParam0->f_395), false);
 	entryHeader = "HUD_CONNPROB" /*alert*/;
 	entryLine1 = "HUD_LIVETUT" /*Failed to connect to the LiveTile content as you've not finished the GTA Online tutorial or are less than rank 3.*/;
-	entryLine2 = "HUD_QURETSP" /*Return to Grand Theft Auto V.*/;
+	entryLine2 = "HUD_QURETSP" /*Return to the Main Menu.*/;
 
 	if (func_619() && !func_618())
 		entryLine1 = "HUD_LIVEFAIL" /*Failed to connect to the LiveTile content.*/;
@@ -99060,7 +99060,7 @@ void func_623(var uParam0) // Position - 0x75ECD (483021)
 	func_557(&(uParam0->f_366), &(uParam0->f_395), false);
 	entryHeader = "HUD_CONNPROB" /*alert*/;
 	entryLine1 = "HUD_INVENTORY" /*Unable to retrieve character inventory data from Rockstar game servers. Please try again and check ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~ for information about outages and scheduled maintenance. If the issue persists, please check out our GTA Online Connection Troubleshooting at ~HUD_COLOUR_SOCIAL_CLUB~http://rsg.ms/connect~s~.*/;
-	entryLine2 = "HUD_QURETSP" /*Return to Grand Theft Auto V.*/;
+	entryLine2 = "HUD_QURETSP" /*Return to the Main Menu.*/;
 
 	switch (Global_2699237.f_5)
 	{
@@ -99111,7 +99111,7 @@ void func_626(var uParam0) // Position - 0x75F76 (483190)
 	func_557(&(uParam0->f_366), &(uParam0->f_395), false);
 	entryHeader = "HUD_CONNPROB" /*alert*/;
 	entryLine1 = "HUD_CATAGLOG" /*Failed to load the GTA Online Catalog files.*/;
-	entryLine2 = "HUD_QURETSP" /*Return to Grand Theft Auto V.*/;
+	entryLine2 = "HUD_QURETSP" /*Return to the Main Menu.*/;
 	HUD::SET_WARNING_MESSAGE_WITH_HEADER(entryHeader, entryLine1, 2, entryLine2, false, -1, 0, 0, true, 0);
 	return;
 }
@@ -99146,7 +99146,7 @@ void func_629(var uParam0) // Position - 0x75FF0 (483312)
 	func_557(&(uParam0->f_366), &(uParam0->f_395), false);
 	entryHeader = "HUD_CONNPROB" /*alert*/;
 	entryLine1 = "HUD_CONSTR" /*You entered suspend mode while trying to connect to GTA Online.*/;
-	entryLine2 = "HUD_QURETSP" /*Return to Grand Theft Auto V.*/;
+	entryLine2 = "HUD_QURETSP" /*Return to the Main Menu.*/;
 	HUD::SET_WARNING_MESSAGE_WITH_HEADER(entryHeader, entryLine1, 2, entryLine2, false, -1, 0, 0, true, 0);
 	return;
 }
@@ -99255,7 +99255,7 @@ void func_634(var uParam0) // Position - 0x76166 (483686)
 			break;
 	
 		case 1:
-			HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("HUD_CONNPROB" /*alert*/, "HUD_ST_PRECHK" /*You are logged in to Rockstar Games account ~a~. If you have existing Grand Theft Auto Online data associated with this Rockstar Games account, you may be able to transfer your previous characters and progress. You can start a new GTA Online game or transfer your previous characters and progress. The transfer option may be used now or accessed later via the Online section of the Pause Menu. Would you like to check if you have any previous GTA Online data eligible for transfer?*/, 36, 0, false, -1, 1, SOCIALCLUB::SC_ACCOUNT_INFO_GET_NICKNAME(), 0, true, 0);
+			HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("HUD_CONNPROB" /*alert*/, "HUD_ST_PRECHK" /*You are logged in to Rockstar Games account ~a~. If you have an existing Grand Theft Auto Online profile associated with this Rockstar Games account, you may be able to migrate your previous characters and progress. You can start a new GTA Online game or migrate your previous characters and progress. The migration option may be used now or accessed later via the Online section of the Pause Menu. Would you like to check if you have any previous GTA Online data eligible for migration?*/, 36, 0, false, -1, 1, SOCIALCLUB::SC_ACCOUNT_INFO_GET_NICKNAME(), 0, true, 0);
 		
 			if (func_36(INPUT_FRONTEND_ACCEPT))
 				func_692(2);
@@ -99742,7 +99742,7 @@ void func_634(var uParam0) // Position - 0x76166 (483686)
 	
 		case 47:
 			if (func_663())
-				HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("HUD_CONNPROB" /*alert*/, "HUD_ST_ALRED" /*Previous Grand Theft Auto Online characters and progression data associated with this Rockstar Games account has already been successfully transferred.  Only one set of data can be transferred; you cannot transfer any additional data to this account.*/, 2, "HUD_ST_ALRED2" /*If you have not already transferred your previous GTA Online characters and progression data and believe this is an error, please visit ~HUD_COLOUR_GREY~www.rockstargames.com/support.*/, false, -1, 0, 0, 0, true, 0);
+				HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("HUD_CONNPROB" /*alert*/, "HUD_ST_ALRED" /*Previous Grand Theft Auto Online characters and progression data associated with this Rockstar Games account has already been successfully migrated to this Rockstar Games account.  Only one set of data can be migrated; you cannot migrate any additional data to this account.*/, 2, "HUD_ST_ALRED2" /*If you have not already migrated your previous GTA Online characters and progression data and believe this is an error, please visit ~HUD_COLOUR_GREY~www.rockstargames.com/support.*/, false, -1, 0, 0, 0, true, 0);
 			else if (MISC::IS_PC_VERSION())
 				HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("HUD_CONNPROB" /*alert*/, "HUD_SAVETRA_FP" /*No previous Grand Theft Auto Online data is associated with your Rockstar Games account. To transfer your data, you must have an Xbox Live account or an account for PlayStation®Network with progress linked to your Rockstar Games account. Please check your account settings on ~HUD_COLOUR_SOCIAL_CLUB~rockstargames.com~s~ and ensure that your Xbox Live account or account for PlayStation®Network is currently linked to this Rockstar Games account. If you played GTA Online previously and believe this is an error, please visit ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~.*/, 2, 0, false, -1, 0, 0, 0, true, 0);
 			else
@@ -99754,11 +99754,11 @@ void func_634(var uParam0) // Position - 0x76166 (483686)
 	
 		case 48:
 			if (func_663())
-				HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("HUD_CONNPROB" /*alert*/, "HUD_ST_ALRED" /*Previous Grand Theft Auto Online characters and progression data associated with this Rockstar Games account has already been successfully transferred.  Only one set of data can be transferred; you cannot transfer any additional data to this account.*/, 2, "HUD_ST_ALRED2" /*If you have not already transferred your previous GTA Online characters and progression data and believe this is an error, please visit ~HUD_COLOUR_GREY~www.rockstargames.com/support.*/, false, -1, 0, 0, 0, true, 0);
+				HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("HUD_CONNPROB" /*alert*/, "HUD_ST_ALRED" /*Previous Grand Theft Auto Online characters and progression data associated with this Rockstar Games account has already been successfully migrated to this Rockstar Games account.  Only one set of data can be migrated; you cannot migrate any additional data to this account.*/, 2, "HUD_ST_ALRED2" /*If you have not already migrated your previous GTA Online characters and progression data and believe this is an error, please visit ~HUD_COLOUR_GREY~www.rockstargames.com/support.*/, false, -1, 0, 0, 0, true, 0);
 			else if (func_4737(2, 0) || func_4737(2, 1))
-				HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("HUD_CONNPROB" /*alert*/, "HUD_SAVETRA_FCCAN" /*The Rockstar cloud servers are unavailable right now. You will be returned to Grand Theft Auto V. You can try to transfer again later by accessing the 'Character Transfer' option in the Online section of the Pause Menu.*/, 2, 0, false, -1, 0, 0, 0, true, 0);
+				HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("HUD_CONNPROB" /*alert*/, "HUD_SAVETRA_FCCAN" /*The Rockstar cloud servers are unavailable right now. You will be returned to Grand Theft Auto V. You can try to migrate again later by accessing the 'Migrate Profile' option in the Online section of the Pause Menu.*/, 2, 0, false, -1, 0, 0, 0, true, 0);
 			else
-				HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("HUD_CONNPROB" /*alert*/, "HUD_SAVETRA_FC" /*The Rockstar cloud servers are unavailable right now. You will be returned to Grand Theft Auto V. You can try to transfer again later by re-entering GTA Online or by accessing the 'Character Transfer' option in the Online section of the Pause Menu.*/, 2, 0, false, -1, 0, 0, 0, true, 0);
+				HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("HUD_CONNPROB" /*alert*/, "HUD_SAVETRA_FC" /*The Rockstar cloud servers are unavailable right now. You will be returned to Grand Theft Auto V. You can try to migrate again later by re-entering GTA Online or by accessing the 'Migrate Profile' option in the Online section of the Pause Menu.*/, 2, 0, false, -1, 0, 0, 0, true, 0);
 		
 			if (func_36(INPUT_FRONTEND_ACCEPT))
 				if (func_663() || func_654())
@@ -99778,7 +99778,7 @@ void func_634(var uParam0) // Position - 0x76166 (483686)
 			break;
 	
 		case 36:
-			HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("HUD_CONNPROB" /*alert*/, "HUD_ST_ALRED" /*Previous Grand Theft Auto Online characters and progression data associated with this Rockstar Games account has already been successfully transferred.  Only one set of data can be transferred; you cannot transfer any additional data to this account.*/, 2, "HUD_ST_ALRED2" /*If you have not already transferred your previous GTA Online characters and progression data and believe this is an error, please visit ~HUD_COLOUR_GREY~www.rockstargames.com/support.*/, false, -1, 0, 0, 0, true, 0);
+			HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("HUD_CONNPROB" /*alert*/, "HUD_ST_ALRED" /*Previous Grand Theft Auto Online characters and progression data associated with this Rockstar Games account has already been successfully migrated to this Rockstar Games account.  Only one set of data can be migrated; you cannot migrate any additional data to this account.*/, 2, "HUD_ST_ALRED2" /*If you have not already migrated your previous GTA Online characters and progression data and believe this is an error, please visit ~HUD_COLOUR_GREY~www.rockstargames.com/support.*/, false, -1, 0, 0, 0, true, 0);
 		
 			if (func_36(INPUT_FRONTEND_ACCEPT))
 				func_692(51);
@@ -100151,7 +100151,7 @@ void func_634(var uParam0) // Position - 0x76166 (483686)
 			switch (STATS::STAT_MIGRATE_SAVEGAME_GET_STATUS())
 			{
 				case 13:
-					func_4721("HUD_PROGTROF" /*Transfer in progress. Do not turn off your system.*/);
+					func_4721("HUD_PROGTROF" /*Migration in progress. Do not turn off your system.*/);
 					break;
 			
 				case 14:
@@ -100159,14 +100159,14 @@ void func_634(var uParam0) // Position - 0x76166 (483686)
 					break;
 			
 				case 1:
-					HUD::SET_WARNING_MESSAGE_WITH_HEADER("HUD_ST_UATTF" /*unable to transfer*/, "HUD_SAVETRA_FS" /*Character transfer failed to complete as your Rockstar Games account is logged into an active game session on another system. Please ensure that none of your characters are in an active game session.*/, 2, "HUD_SAVETRA_FS1" /*You can try again by re-entering GTA Online or by using the 'Character Transfer' option in the Online section of the Pause Menu.*/, false, -1, 0, 0, true, 0);
+					HUD::SET_WARNING_MESSAGE_WITH_HEADER("HUD_ST_UATTF" /*unable to transfer*/, "HUD_SAVETRA_FS" /*Profile migration failed to complete as your Rockstar Games account is logged into an active game session on another system. Please ensure that none of your characters are in an active game session.*/, 2, "HUD_SAVETRA_FS1" /*You can try again by re-entering GTA Online or by using the 'Migrate Profile' option in the Online section of the Pause Menu.*/, false, -1, 0, 0, true, 0);
 				
 					if (func_36(INPUT_FRONTEND_ACCEPT))
 						func_692(50);
 					break;
 			
 				case 2:
-					HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("HUD_ST_UATTF" /*unable to transfer*/, "HUD_ST_ALRED" /*Previous Grand Theft Auto Online characters and progression data associated with this Rockstar Games account has already been successfully transferred.  Only one set of data can be transferred; you cannot transfer any additional data to this account.*/, 2, "HUD_ST_ALRED2" /*If you have not already transferred your previous GTA Online characters and progression data and believe this is an error, please visit ~HUD_COLOUR_GREY~www.rockstargames.com/support.*/, false, -1, 0, 0, 0, true, 0);
+					HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("HUD_ST_UATTF" /*unable to transfer*/, "HUD_ST_ALRED" /*Previous Grand Theft Auto Online characters and progression data associated with this Rockstar Games account has already been successfully migrated to this Rockstar Games account.  Only one set of data can be migrated; you cannot migrate any additional data to this account.*/, 2, "HUD_ST_ALRED2" /*If you have not already migrated your previous GTA Online characters and progression data and believe this is an error, please visit ~HUD_COLOUR_GREY~www.rockstargames.com/support.*/, false, -1, 0, 0, 0, true, 0);
 				
 					if (func_36(INPUT_FRONTEND_ACCEPT))
 						func_692(51);
@@ -100180,21 +100180,21 @@ void func_634(var uParam0) // Position - 0x76166 (483686)
 					break;
 			
 				case 5:
-					HUD::SET_WARNING_MESSAGE_WITH_HEADER("HUD_ST_EIPT" /*TRANSFER BLOCKED*/, "HUD_ST_EIP" /*We are unable to transfer your character and progression data at this time. Please note the message above and contact our Customer Support team at ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~ for assistance.*/, 2, "", false, -1, 0, 0, true, 0);
+					HUD::SET_WARNING_MESSAGE_WITH_HEADER("HUD_ST_EIPT" /*MIGRATION BLOCKED*/, "HUD_ST_EIP" /*We are unable to migrate your GTA Online profile at this time. Please note the message above and contact our Customer Support team at ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~ for assistance.*/, 2, "", false, -1, 0, 0, true, 0);
 				
 					if (func_36(INPUT_FRONTEND_ACCEPT))
 						func_692(50);
 					break;
 			
 				case 6:
-					HUD::SET_WARNING_MESSAGE_WITH_HEADER("HUD_ST_UATTF" /*unable to transfer*/, "HUD_ST_ECHE" /*You have been flagged as a Cheater. You will not be able to transfer your character and progression data until your Cheater flag expires. Cheaters are identified through a variety of methods including violations such as modding/hacking, exploiting, abusing the in-game economy, or otherwise interfering with the designed game experience. For more information about our policies, please see:*/, 2, "HUD_ST_ECHE1" /*~HUD_COLOUR_SOCIAL_CLUB~http://www.rockstargames.com/legal~s~ and ~HUD_COLOUR_SOCIAL_CLUB~http://www.rockstargames.com/conduct~s~~n~*/, false, -1, 0, 0, true, 0);
+					HUD::SET_WARNING_MESSAGE_WITH_HEADER("HUD_ST_UATTF" /*unable to transfer*/, "HUD_ST_ECHE" /*You have been flagged as a Cheater. You will not be able to migrate your GTA Online profile until your Cheater flag expires. Cheaters are identified through a variety of methods including violations such as modding/hacking, exploiting, abusing the in-game economy, or otherwise interfering with the designed game experience. For more information about our policies, please see:*/, 2, "HUD_ST_ECHE1" /*~HUD_COLOUR_SOCIAL_CLUB~http://www.rockstargames.com/legal~s~ and ~HUD_COLOUR_SOCIAL_CLUB~http://www.rockstargames.com/conduct~s~~n~*/, false, -1, 0, 0, true, 0);
 				
 					if (func_36(INPUT_FRONTEND_ACCEPT))
 						func_692(50);
 					break;
 			
 				case 7:
-					HUD::SET_WARNING_MESSAGE_WITH_HEADER("HUD_ST_UATTF" /*unable to transfer*/, "HUD_ST_EBAN" /*Your Rockstar Games account is currently banned from Grand Theft Auto Online. You will not be able to transfer your character and progression data until the ban is lifted.*/, 2, "HUD_ST_EBAN1" /*For more information, please visit ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support.~s~*/, false, -1, 0, 0, true, 0);
+					HUD::SET_WARNING_MESSAGE_WITH_HEADER("HUD_ST_UATTF" /*unable to transfer*/, "HUD_ST_EBAN" /*Your Rockstar Games account is currently banned from Grand Theft Auto Online. You will not be able to migrate your GTA Online profile until the ban is lifted.~n~If you are a GTA+ Member, you will need to manually cancel your Membership.*/, 2, "HUD_ST_EBAN1" /*For more information, please visit ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support.~s~*/, false, -1, 0, 0, true, 0);
 				
 					if (func_36(INPUT_FRONTEND_ACCEPT))
 						func_692(50);
@@ -100211,7 +100211,7 @@ void func_634(var uParam0) // Position - 0x76166 (483686)
 					if (Global_262145.f_4019 != 0)
 					{
 						additionalTextInfoLine1 = { func_646(Global_262145.f_4019) };
-						HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("HUD_ST_UATTF" /*unable to transfer*/, "HUD_ST_EADAT" /*We are unable to transfer your character and progression data because your Rockstar Games account was created too recently. Accounts created before ~a~ are eligible for data transfer.*/, 2, "", false, -1, 1, &additionalTextInfoLine1, 0, true, 0);
+						HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS("HUD_ST_UATTF" /*unable to transfer*/, "HUD_ST_EADAT" /*We are unable to migrate your GTA Online profile because your Rockstar Games account was created too recently. Accounts created before ~a~ are eligible for profile migration.*/, 2, "", false, -1, 1, &additionalTextInfoLine1, 0, true, 0);
 					
 						if (func_36(INPUT_FRONTEND_ACCEPT))
 							func_692(50);
@@ -100229,28 +100229,28 @@ void func_634(var uParam0) // Position - 0x76166 (483686)
 					break;
 			
 				case 10:
-					HUD::SET_WARNING_MESSAGE_WITH_HEADER("HUD_ST_UATTF" /*unable to transfer*/, "HUD_ST_EAAGE" /*We are unable to transfer your character and progression data as your Rockstar Games account was created too recently.*/, 2, 0, false, -1, 0, 0, true, 0);
+					HUD::SET_WARNING_MESSAGE_WITH_HEADER("HUD_ST_UATTF" /*unable to transfer*/, "HUD_ST_EAAGE" /*We are unable to migrate your GTA Online profile as your Rockstar Games account was created too recently.*/, 2, 0, false, -1, 0, 0, true, 0);
 				
 					if (func_36(INPUT_FRONTEND_ACCEPT))
 						func_692(50);
 					break;
 			
 				case 12:
-					HUD::SET_WARNING_MESSAGE_WITH_HEADER("HUD_ST_UATTF" /*unable to transfer*/, "HUD_ST_CASH" /*We are unable to transfer your character and progression data because an excessive amount of in-game money is associated with your account. For more information, please visit ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~.*/, 2, 0, false, -1, 0, 0, true, 0);
+					HUD::SET_WARNING_MESSAGE_WITH_HEADER("HUD_ST_UATTF" /*unable to transfer*/, "HUD_ST_CASH" /*We are unable to migrate your GTA Online profile because an excessive amount of in-game money is associated with your account. For more information, please visit ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~.*/, 2, 0, false, -1, 0, 0, true, 0);
 				
 					if (func_36(INPUT_FRONTEND_ACCEPT))
 						func_692(50);
 					break;
 			
 				case 11:
-					HUD::SET_WARNING_MESSAGE_WITH_HEADER("HUD_ST_UATTF" /*unable to transfer*/, "HUD_ST_DESTDON" /*We are unable to transfer your character and progression data because previous GTA Online character and progression data has already been transferred to this Rockstar Games account. Only one set of data can be transferred. If you believe this is an error, please visit ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~.*/, 2, 0, false, -1, 0, 0, true, 0);
+					HUD::SET_WARNING_MESSAGE_WITH_HEADER("HUD_ST_UATTF" /*unable to transfer*/, "HUD_ST_DESTDON" /*We are unable to migrate your GTA Online profile because previous GTA Online character and progression data has already been migrated to this Rockstar Games account. Only one profile can be migrated. If you believe this is an error, please visit ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~.*/, 2, 0, false, -1, 0, 0, true, 0);
 				
 					if (func_36(INPUT_FRONTEND_ACCEPT))
 						func_692(50);
 					break;
 			
 				default:
-					HUD::SET_WARNING_MESSAGE_WITH_HEADER("HUD_ST_UATTF" /*unable to transfer*/, "HUD_ST_FF" /*Previous Grand Theft Auto Online characters and progress are associated with this Rockstar Games account but we are unable to transfer your character and progression data at this time. Please contact our Customer Support team at ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~ for assistance.*/, 36, 0, false, -1, 0, 0, true, 0);
+					HUD::SET_WARNING_MESSAGE_WITH_HEADER("HUD_ST_UATTF" /*unable to transfer*/, "HUD_ST_FF" /*A previous GTA Online profile is associated with this Rockstar Games account, but we are unable to migrate your profile at this time. Please contact our Customer Support team at ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~ for assistance.*/, 36, 0, false, -1, 0, 0, true, 0);
 				
 					if (func_36(INPUT_FRONTEND_ACCEPT))
 					{
@@ -101739,14 +101739,14 @@ void func_696(var uParam0) // Position - 0x78FD0 (495568)
 	if (Global_2698403 == 1)
 	{
 		entryHeader = "HUD_CONNPROB" /*alert*/;
-		entryLine1 = "PM_H_D1_1" /*The Rockstar game services are unavailable right now.*/;
-		entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+		entryLine1 = "PM_H_D1_1" /*Rockstar Games Services are unavailable right now.*/;
+		entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 	}
 	else
 	{
 		entryHeader = "HUD_CONNPROB" /*alert*/;
 		entryLine1 = "HUD_SAVEMIGPOST2" /*Your character and progression data transfer request is still being processed. You cannot enter GTA Online until the transfer has completed. Please return to Grand Theft Auto V. Re-enter GTA Online later to check on the completion of the data transfer.*/;
-		entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+		entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 	}
 
 	instructionalKey = 2;
@@ -101790,7 +101790,7 @@ void func_698(var uParam0) // Position - 0x7908B (495755)
 
 	entryHeader = "HUD_CONNPROB" /*alert*/;
 	entryLine1 = "HUD_SAVEMIGPOST" /*Transfer still in progress, please return to GTAV and continue to wait; you can re-enter GTA Online later to see if the transfer has completed.*/;
-	entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+	entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 
 	switch (uParam0->f_1827)
 	{
@@ -101853,7 +101853,7 @@ void func_698(var uParam0) // Position - 0x7908B (495755)
 	
 		case 2:
 			GRAPHICS::DRAW_RECT(0.5f, 0.5f, 1f, 1f, 0, 0, 0, 255, false);
-			func_4721("HUD_TRANSCANCEL" /*Transfer cancellation in progress*/);
+			func_4721("HUD_TRANSCANCEL" /*Migration cancellation in progress*/);
 		
 			if (STATS::STAT_SAVE_MIGRATION_CANCEL_PENDING_OPERATION())
 				uParam0->f_1827 = uParam0->f_1827 + 1;
@@ -101864,7 +101864,7 @@ void func_698(var uParam0) // Position - 0x7908B (495755)
 	
 		case 3:
 			GRAPHICS::DRAW_RECT(0.5f, 0.5f, 1f, 1f, 0, 0, 0, 255, false);
-			func_4721("HUD_TRANSCANCEL" /*Transfer cancellation in progress*/);
+			func_4721("HUD_TRANSCANCEL" /*Migration cancellation in progress*/);
 		
 			switch (STATS::STAT_GET_CANCEL_SAVE_MIGRATION_STATUS())
 			{
@@ -101890,7 +101890,7 @@ void func_698(var uParam0) // Position - 0x7908B (495755)
 	
 		case 4:
 			entryHeader = "HUD_CONNPROB" /*alert*/;
-			entryLine1 = "HUD_TRANSCANCEL_F" /*Unable to cancel the character and progression data transfer at this time - please try again later. The transfer is still in progress. You will be returned to Grand Theft Auto V. Please re-enter GTA Online later to see if the transfer has completed.*/;
+			entryLine1 = "HUD_TRANSCANCEL_F" /*Unable to cancel the profile migration at this time - please try again later. The migration is still in progress. You will be returned to Grand Theft Auto V. Please re-enter GTA Online later to see if the migration has completed.*/;
 			entryLine2 = "";
 			instructionalKey = 2;
 			HUD::SET_WARNING_MESSAGE_WITH_HEADER(entryHeader, entryLine1, instructionalKey, 0, false, -1, 0, 0, true, 0);
@@ -101905,7 +101905,7 @@ void func_698(var uParam0) // Position - 0x7908B (495755)
 	
 		case 5:
 			entryHeader = "HUD_CANTIT" /*Canceled*/;
-			entryLine1 = "HUD_TRANSCANCEL_S" /*Your character and progression data transfer has been canceled. Would you like to enter Grand Theft Auto Online?*/;
+			entryLine1 = "HUD_TRANSCANCEL_S" /*Your profile migration has been canceled. Would you like to enter Grand Theft Auto Online?*/;
 			entryLine2 = "";
 			instructionalKey = 36;
 			HUD::SET_WARNING_MESSAGE_WITH_HEADER(entryHeader, entryLine1, instructionalKey, 0, false, -1, 0, 0, true, 0);
@@ -102014,7 +102014,7 @@ void func_703(var uParam0) // Position - 0x794A8 (496808)
 	func_557(&(uParam0->f_366), &(uParam0->f_395), false);
 	entryHeader = "HUD_SUCCESS" /*SUCCESS*/;
 	instructionalKey = 16384;
-	HUD::SET_WARNING_MESSAGE_WITH_HEADER(entryHeader, "HUD_BADORDER" /*A new downloadable content pack has been downloaded and installed.*/, instructionalKey, "HUD_BADORDERSUB" /*Returning to Grand Theft Auto V.*/, false, -1, 0, 0, true, 0);
+	HUD::SET_WARNING_MESSAGE_WITH_HEADER(entryHeader, "HUD_BADORDER" /*A new downloadable content pack has been downloaded and installed.*/, instructionalKey, "HUD_BADORDERSUB" /*Returning to the Main Menu.*/, false, -1, 0, 0, true, 0);
 	return;
 }
 
@@ -102062,7 +102062,7 @@ void func_706(var uParam0) // Position - 0x79566 (496998)
 	func_557(&(uParam0->f_366), &(uParam0->f_395), false);
 	entryHeader = "HUD_CONNPROB" /*alert*/;
 	instructionalKey = 16384;
-	HUD::SET_WARNING_MESSAGE_WITH_HEADER(entryHeader, "HUD_STATDIRTY3" /*Your save data could not be loaded from the Rockstar cloud servers at this time. Please try again later. Returning to Grand Theft Auto V.*/, instructionalKey, 0, false, -1, 0, 0, true, 0);
+	HUD::SET_WARNING_MESSAGE_WITH_HEADER(entryHeader, "HUD_STATDIRTY3" /*Your save data could not be downloaded from the Rockstar cloud servers at this time. Please try again later. Returning to the Main Menu.*/, instructionalKey, 0, false, -1, 0, 0, true, 0);
 	return;
 }
 
@@ -102096,8 +102096,8 @@ void func_709(var uParam0) // Position - 0x795D9 (497113)
 
 	func_557(&(uParam0->f_366), &(uParam0->f_395), false);
 	entryHeader = "HUD_CONNPROB" /*alert*/;
-	entryLine1 = "HUD_LOADMAIN" /*The Rockstar game services are temporarily unavailable due to maintenance.*/;
-	entryLine2 = "HUD_SPRETURNTRY" /*Please return to Grand Theft Auto V and try again later.*/;
+	entryLine1 = "HUD_LOADMAIN" /*Rockstar Games Services are temporarily unavailable due to maintenance.*/;
+	entryLine2 = "HUD_SPRETURNTRY" /*Please return to the Main Menu and try again later.*/;
 	func_711(&num);
 
 	if (num == 12)
@@ -102110,7 +102110,7 @@ void func_709(var uParam0) // Position - 0x795D9 (497113)
 	}
 	else if (func_710())
 	{
-		entryLine1 = "HUD_LOADSCR_D" /*The Rockstar game services are temporarily unavailable.*/;
+		entryLine1 = "HUD_LOADSCR_D" /*Rockstar Games Services are temporarily unavailable.*/;
 		entryLine2 = "HUD_RETURNSP" /*Return to the Main Menu*/;
 	}
 
@@ -102205,8 +102205,8 @@ void func_715(var uParam0) // Position - 0x79766 (497510)
 
 	func_557(&(uParam0->f_366), &(uParam0->f_395), false);
 	entryHeader = "HUD_CONNPROB" /*alert*/;
-	entryLine1 = "HUD_LOADMAIN" /*The Rockstar game services are temporarily unavailable due to maintenance.*/;
-	entryLine2 = "HUD_SPRETURNTRY" /*Please return to Grand Theft Auto V and try again later.*/;
+	entryLine1 = "HUD_LOADMAIN" /*Rockstar Games Services are temporarily unavailable due to maintenance.*/;
+	entryLine2 = "HUD_SPRETURNTRY" /*Please return to the Main Menu and try again later.*/;
 	func_711(&num);
 
 	if (num == 3)
@@ -102216,7 +102216,7 @@ void func_715(var uParam0) // Position - 0x79766 (497510)
 	}
 	else if (func_710())
 	{
-		entryLine1 = "HUD_LOADSCR_D" /*The Rockstar game services are temporarily unavailable.*/;
+		entryLine1 = "HUD_LOADSCR_D" /*Rockstar Games Services are temporarily unavailable.*/;
 		entryLine2 = "HUD_RETURNSP" /*Return to the Main Menu*/;
 	}
 
@@ -102283,14 +102283,14 @@ void func_719(var uParam0) // Position - 0x7988A (497802)
 
 	func_557(&(uParam0->f_366), &(uParam0->f_395), false);
 	entryHeader = "HUD_CONNPROB" /*alert*/;
-	entryLine2 = "HUD_QURETSP" /*Return to Grand Theft Auto V.*/;
+	entryLine2 = "HUD_QURETSP" /*Return to the Main Menu.*/;
 
 	if (NETWORK::NETWORK_HAVE_ROS_MULTIPLAYER_PRIV() == false)
 		entryLine1 = func_723(NETWORK::NETWORK_PLAYER_GET_CHEATER_REASON());
 	else if (NETWORK::NETWORK_HAVE_ROS_CREATE_TICKET_PRIV() == false)
-		entryLine1 = "HUD_SCSBANNED" /*You have been banned from using Rockstar Games Online Services and are not permitted to enter Grand Theft Auto Online.~n~Please visit rockstargames.com/community-guidelines for more information.*/;
+		entryLine1 = "HUD_SCSBANNED" /*You have been banned from using Rockstar Games Services and are not permitted to enter Grand Theft Auto Online.~n~If you are a GTA+ Member, you will need to manually cancel your Membership.~n~Please visit rockstargames.com/community-resources/guidelines for more information.*/;
 	else if (NETWORK::NETWORK_HAVE_ROS_BANNED_PRIV())
-		entryLine1 = "HUD_ROSBANNED" /*You have been banned from Grand Theft Auto Online.~n~Please visit rockstargames.com/community-guidelines for more information.*/;
+		entryLine1 = "HUD_ROSBANNED" /*You have been banned from Grand Theft Auto Online.~n~If you are a GTA+ Member, you will need to manually cancel your Membership.~n~Please visit rockstargames.com/community-resources/guidelines for more information.*/;
 
 	banType = 0;
 
@@ -102307,12 +102307,12 @@ void func_719(var uParam0) // Position - 0x7988A (497802)
 
 	if (flag == false)
 	{
-		entryLine1 = "HUD_ROSBANPERM" /*You have been banned from Grand Theft Auto Online permanently.~n~Please visit rockstargames.com/community-guidelines for more information.*/;
+		entryLine1 = "HUD_ROSBANPERM" /*You have been banned from Grand Theft Auto Online permanently.~n~If you are a GTA+ Member, you will need to manually cancel your Membership.~n~Please visit rockstargames.com/community-resources/guidelines for more information.*/;
 		HUD::SET_WARNING_MESSAGE_WITH_HEADER(entryHeader, entryLine1, instructionalKey, 0, false, -1, 0, 0, true, 0);
 	}
 	else if (banType == 1)
 	{
-		entryLine1 = "HUD_ROSBANX" /*You have been suspended from Grand Theft Auto Online until ~a~.~n~Please visit rockstargames.com/community-guidelines for more information.*/;
+		entryLine1 = "HUD_ROSBANX" /*You have been suspended from Grand Theft Auto Online until ~a~.~n~Please visit rockstargames.com/community-resources/guidelines for more information.*/;
 		TEXT_LABEL_COPY(&additionalTextInfoLine1, { func_720(&timeData) }, 6);
 		HUD::SET_WARNING_MESSAGE_WITH_HEADER_AND_SUBSTRING_FLAGS(entryHeader, entryLine1, instructionalKey, entryLine2, false, -1, 1, &additionalTextInfoLine1, 0, true, 0);
 	}
@@ -102500,13 +102500,13 @@ char* func_723(int iParam0) // Position - 0x79DBF (499135)
 	switch (iParam0)
 	{
 		case 0:
-			return "HUD_ROSBANNED" /*You have been banned from Grand Theft Auto Online.~n~Please visit rockstargames.com/community-guidelines for more information.*/;
+			return "HUD_ROSBANNED" /*You have been banned from Grand Theft Auto Online.~n~If you are a GTA+ Member, you will need to manually cancel your Membership.~n~Please visit rockstargames.com/community-resources/guidelines for more information.*/;
 	
 		default:
 		
 	}
 
-	return "HUD_ROSBANNED" /*You have been banned from Grand Theft Auto Online.~n~Please visit rockstargames.com/community-guidelines for more information.*/;
+	return "HUD_ROSBANNED" /*You have been banned from Grand Theft Auto Online.~n~If you are a GTA+ Member, you will need to manually cancel your Membership.~n~Please visit rockstargames.com/community-resources/guidelines for more information.*/;
 }
 
 void func_724() // Position - 0x79DE1 (499169)
@@ -102581,7 +102581,7 @@ void func_729(var uParam0) // Position - 0x79F18 (499480)
 	func_557(&(uParam0->f_366), &(uParam0->f_395), false);
 	entryHeader = "HUD_CONNPROB" /*alert*/;
 	entryLine1 = "HUD_MPBAILMESG" /*Connection to the session lost due to an unknown network error.*/;
-	entryLine2 = "HUD_SPRETURNTRY" /*Please return to Grand Theft Auto V and try again later.*/;
+	entryLine2 = "HUD_SPRETURNTRY" /*Please return to the Main Menu and try again later.*/;
 
 	switch (func_731())
 	{
@@ -103417,13 +103417,13 @@ void func_771(var uParam0, int iParam1) // Position - 0x7AF26 (503590)
 
 	func_557(&(uParam0->f_366), &(uParam0->f_395), false);
 	entryHeader = "HUD_CONNPROB" /*alert*/;
-	entryLine1 = "HUD_CLOUDOFFLIN" /*Rockstar Games Online Services are unavailable right now.*/;
+	entryLine1 = "HUD_CLOUDOFFLIN" /*Rockstar Games Services are unavailable right now.*/;
 	entryLine2 = "CONT_SURE" /*Are you sure you would like to proceed?*/;
 	flag = true;
 
 	if (uParam0->f_1828[0])
 	{
-		entryLine1 = "HUD_CLOUDOFFLIN" /*Rockstar Games Online Services are unavailable right now.*/;
+		entryLine1 = "HUD_CLOUDOFFLIN" /*Rockstar Games Services are unavailable right now.*/;
 	}
 	else if (uParam0->f_1828[1])
 	{
@@ -103470,10 +103470,10 @@ void func_771(var uParam0, int iParam1) // Position - 0x7AF26 (503590)
 	}
 	else if (uParam0->f_1828[8])
 	{
-		if (MISC::IS_PC_VERSION() && MISC::_IS_XBOXPC_VERSION() && NETWORK::_NETWORK_MULTIPLAYER_CROSSPLAY_NOT_ALLOWED())
-			entryLine1 = "HUD_PERM_XBOX_CROSSPLAY";
+		if (MISC::IS_PC_VERSION() && MISC::_IS_XBOXPC_VERSION() && unk_0xA6BC0D9BCF9662FA())
+			entryLine1 = "HUD_PERM_XBOX_CROSSPLAY" /*Your Xbox account does not have permission for cross-network play.*/;
 		else
-			entryLine1 = "HUD_PERM" /*Your profile does not have the correct permissions to access this functionality.*/;
+			entryLine1 = "HUD_PERM" /*Your profile does not have permission to access GTA Online.*/;
 	
 		entryLine2 = "HUD_RETURNSP" /*Return to the Main Menu*/;
 	}
@@ -103483,7 +103483,7 @@ void func_771(var uParam0, int iParam1) // Position - 0x7AF26 (503590)
 	if (uParam0->f_1828[0])
 	{
 		instructionalKey = 16384;
-		entryLine2 = "HUD_SPRETURNTRY" /*Please return to Grand Theft Auto V and try again later.*/;
+		entryLine2 = "HUD_SPRETURNTRY" /*Please return to the Main Menu and try again later.*/;
 	}
 
 	if (uParam0->f_1828[7])
@@ -111679,8 +111679,8 @@ void func_914(var uParam0) // Position - 0x87903 (555267)
 
 	func_557(&(uParam0->f_366), &(uParam0->f_395), false);
 	entryHeader = "HUD_CONNPROB" /*alert*/;
-	entryLine1 = "HUD_CLOUDONLIN" /*The Rockstar game services are now available.*/;
-	HUD::SET_WARNING_MESSAGE_WITH_HEADER(entryHeader, entryLine1, 2, "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/, false, -1, 0, 0, true, 0);
+	entryLine1 = "HUD_CLOUDONLIN" /*Rockstar Games Services are now available.*/;
+	HUD::SET_WARNING_MESSAGE_WITH_HEADER(entryHeader, entryLine1, 2, "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/, false, -1, 0, 0, true, 0);
 	return;
 }
 
@@ -111781,13 +111781,13 @@ void func_920(var uParam0) // Position - 0x87AD7 (555735)
 
 	func_557(&(uParam0->f_366), &(uParam0->f_395), false);
 	entryHeader = "HUD_CONNPROB" /*alert*/;
-	entryLine1 = "HUD_CLOUDFAILMSG" /*Unable to connect to Rockstar Games Online Services. Please check your network connection and see ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~ for information about outages and maintenance schedules.*/;
+	entryLine1 = "HUD_CLOUDFAILMSG" /*Unable to connect to Rockstar Games Services. Please check your network connection and see ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~ for information about outages and maintenance schedules.*/;
 	entryLine2 = "HUD_TRYAGAIN" /*Please try again later.*/;
 
 	if (func_921())
 	{
-		entryLine1 = "HUD_SAVEFAILMSG" /*Unable to connect to Rockstar Games Online Services to load player data.*/;
-		entryLine2 = "HUD_SPRETURNTRY" /*Please return to Grand Theft Auto V and try again later.*/;
+		entryLine1 = "HUD_SAVEFAILMSG" /*Unable to connect to Rockstar Games Services to load player data.*/;
+		entryLine2 = "HUD_SPRETURNTRY" /*Please return to the Main Menu and try again later.*/;
 	}
 
 	instructionalKey = 16384;
@@ -113438,7 +113438,7 @@ void func_965(var uParam0) // Position - 0x89833 (563251)
 			{
 				entryHeader = "HUD_CONNPROB" /*alert*/;
 				entryLine1 = "DELETESAVEFAIL" /*Rockstar cloud save error while deleting your character.*/;
-				entryLine2 = "HUD_SPRETURNTRY" /*Please return to Grand Theft Auto V and try again later.*/;
+				entryLine2 = "HUD_SPRETURNTRY" /*Please return to the Main Menu and try again later.*/;
 				HUD::SET_WARNING_MESSAGE_WITH_HEADER(entryHeader, entryLine1, 2, entryLine2, false, -1, 0, 0, true, 0);
 			}
 			else if (uParam0->f_1828[0] == 1)
@@ -113606,8 +113606,8 @@ void func_970(var uParam0) // Position - 0x89E00 (564736)
 		{
 			case 0:
 				entryHeader = "HUD_CONNPROB" /*alert*/;
-				entryLine1 = "HUD_CLOUDOFFLIN" /*Rockstar Games Online Services are unavailable right now.*/;
-				entryLine2 = "HUD_SPRETURNTRY" /*Please return to Grand Theft Auto V and try again later.*/;
+				entryLine1 = "HUD_CLOUDOFFLIN" /*Rockstar Games Services are unavailable right now.*/;
+				entryLine2 = "HUD_SPRETURNTRY" /*Please return to the Main Menu and try again later.*/;
 			
 				if (func_409(1))
 					instructionalKey = 16448;
@@ -113645,8 +113645,8 @@ void func_970(var uParam0) // Position - 0x89E00 (564736)
 		
 			default:
 				entryHeader = "HUD_CONNPROB" /*alert*/;
-				entryLine1 = "HUD_CLOUDOFFLIN" /*Rockstar Games Online Services are unavailable right now.*/;
-				entryLine2 = "HUD_SPRETURNTRY" /*Please return to Grand Theft Auto V and try again later.*/;
+				entryLine1 = "HUD_CLOUDOFFLIN" /*Rockstar Games Services are unavailable right now.*/;
+				entryLine2 = "HUD_SPRETURNTRY" /*Please return to the Main Menu and try again later.*/;
 			
 				if (func_409(1))
 					instructionalKey = 16448;
@@ -113664,7 +113664,7 @@ void func_970(var uParam0) // Position - 0x89E00 (564736)
 			case 2:
 				entryHeader = "HUD_CONNPROB" /*alert*/;
 				entryLine1 = "DELETESAVEFAIL" /*Rockstar cloud save error while deleting your character.*/;
-				entryLine2 = "HUD_SPRETURNTRY" /*Please return to Grand Theft Auto V and try again later.*/;
+				entryLine2 = "HUD_SPRETURNTRY" /*Please return to the Main Menu and try again later.*/;
 				HUD::SET_WARNING_MESSAGE_WITH_HEADER(entryHeader, entryLine1, 2, entryLine2, false, -1, 0, 0, true, 0);
 				break;
 		
@@ -114117,7 +114117,7 @@ void func_990(var uParam0) // Position - 0x8A5AB (566699)
 	func_557(&(uParam0->f_366), &(uParam0->f_395), false);
 	entryHeader = "HUD_CONNPROB" /*alert*/;
 	entryLine1 = "HUD_KICKRES" /*Kicked from the session for being idle too long.*/;
-	entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+	entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 
 	if (func_989())
 	{
@@ -114135,7 +114135,7 @@ void func_990(var uParam0) // Position - 0x8A5AB (566699)
 		entryLine1 = "HUD_KICKRES2" /*You have been classed as a cheater.*/;
 
 	if (func_991())
-		entryLine1 = "HUD_LOADMAIN" /*The Rockstar game services are temporarily unavailable due to maintenance.*/;
+		entryLine1 = "HUD_LOADMAIN" /*Rockstar Games Services are temporarily unavailable due to maintenance.*/;
 
 	instructionalKey = 16384;
 
@@ -114557,7 +114557,7 @@ void func_1026(var uParam0) // Position - 0x8AC41 (568385)
 
 	func_557(&(uParam0->f_366), &(uParam0->f_395), false);
 	entryHeader = "HUD_CONNPROB" /*alert*/;
-	entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+	entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 
 	switch (Global_1574672)
 	{
@@ -114573,47 +114573,47 @@ void func_1026(var uParam0) // Position - 0x8AC41 (568385)
 			if (NETWORK::NETWORK_IS_CABLE_CONNECTED() == false || Global_1574672.f_1 == 806359040)
 			{
 				joinFailReason = "HUD_PLUGPU" /*Internet connection has been lost, re-establish connection to play GTA Online.*/;
-				entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+				entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 			}
 			else if (NETWORK::NETWORK_IS_SIGNED_IN() == false || Global_1574672.f_1 == 806354944)
 			{
-				entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+				entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 				joinFailReason = "HUD_BAIL2" /*A sign-in change has occurred.*/;
 			}
 			else if (MISC::IS_XBOX360_VERSION() || func_520())
 			{
-				entryLine2 = "HUD_RE_ENTER" /*Please return to Grand Theft Auto V.*/;
+				entryLine2 = "HUD_RE_ENTER" /*Please return to the Main Menu.*/;
 				joinFailReason = "HUD_RESIGN" /*You were logged out of Rockstar Games.*/;
 			}
 			else if (MISC::IS_PS3_VERSION() || func_4689())
 			{
-				entryLine2 = "HUD_RE_ENTER" /*Please return to Grand Theft Auto V.*/;
+				entryLine2 = "HUD_RE_ENTER" /*Please return to the Main Menu.*/;
 				joinFailReason = "HUD_RESIGN" /*You were logged out of Rockstar Games.*/;
 			}
 			else
 			{
-				entryLine2 = "HUD_RE_ENTER" /*Please return to Grand Theft Auto V.*/;
+				entryLine2 = "HUD_RE_ENTER" /*Please return to the Main Menu.*/;
 				joinFailReason = "HUD_RESIGN" /*You were logged out of Rockstar Games.*/;
 			}
 			break;
 	
 		case 3:
-			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 			joinFailReason = "HUD_BAIL3" /*New content has been installed.*/;
 			break;
 	
 		case 4:
-			entryLine2 = "HUD_SPRETURNTRY" /*Please return to Grand Theft Auto V and try again later.*/;
+			entryLine2 = "HUD_SPRETURNTRY" /*Please return to the Main Menu and try again later.*/;
 			joinFailReason = "HUD_BAIL4" /*Failed to find a compatible GTA Online session.*/;
 			break;
 	
 		case 5:
-			entryLine2 = "HUD_SPRETURNTRY" /*Please return to Grand Theft Auto V and try again later.*/;
+			entryLine2 = "HUD_SPRETURNTRY" /*Please return to the Main Menu and try again later.*/;
 			joinFailReason = "HUD_BAIL5" /*Failed to host a GTA Online session.*/;
 			break;
 	
 		case 6:
-			entryLine2 = "HUD_SPRETURNTRY" /*Please return to Grand Theft Auto V and try again later.*/;
+			entryLine2 = "HUD_SPRETURNTRY" /*Please return to the Main Menu and try again later.*/;
 		
 			if (Global_1574672.f_1 == 271626240)
 				joinFailReason = NETWORK::_NETWORK_INVITE_GET_JOIN_FAIL_REASON();
@@ -114627,74 +114627,74 @@ void func_1026(var uParam0) // Position - 0x8AC41 (568385)
 	
 		case 7:
 			joinFailReason = "HUD_BAIL7" /*Failed to start the active GTA Online session.*/;
-			entryLine2 = "HUD_SPRETURNTRY" /*Please return to Grand Theft Auto V and try again later.*/;
+			entryLine2 = "HUD_SPRETURNTRY" /*Please return to the Main Menu and try again later.*/;
 			break;
 	
 		case 8:
 			joinFailReason = "HUD_BAIL8" /*Failed to host an active GTA Online session.*/;
-			entryLine2 = "HUD_SPRETURNTRY" /*Please return to Grand Theft Auto V and try again later.*/;
+			entryLine2 = "HUD_SPRETURNTRY" /*Please return to the Main Menu and try again later.*/;
 			break;
 	
 		case 9:
 			joinFailReason = "HUD_BAIL9" /*Connection to the session host has been lost. Unable to determine a new host. The GTA Online session will be terminated.*/;
-			entryLine2 = "HUD_SPRETURNTRY" /*Please return to Grand Theft Auto V and try again later.*/;
+			entryLine2 = "HUD_SPRETURNTRY" /*Please return to the Main Menu and try again later.*/;
 			break;
 	
 		case 10:
 			joinFailReason = "HUD_BAIL10" /*Failed to host a GTA Online party.*/;
-			entryLine2 = "HUD_SPRETURNTRY" /*Please return to Grand Theft Auto V and try again later.*/;
+			entryLine2 = "HUD_SPRETURNTRY" /*Please return to the Main Menu and try again later.*/;
 			break;
 	
 		case 11:
 			joinFailReason = "HUD_BAIL11" /*Failed to join intended GTA Online party.*/;
-			entryLine2 = "HUD_SPRETURNTRY" /*Please return to Grand Theft Auto V and try again later.*/;
+			entryLine2 = "HUD_SPRETURNTRY" /*Please return to the Main Menu and try again later.*/;
 			break;
 	
 		case 12:
 			joinFailReason = "HUD_BAIL12" /*Timed out joining GTA Online.*/;
-			entryLine2 = "HUD_SPRETURNTRY" /*Please return to Grand Theft Auto V and try again later.*/;
+			entryLine2 = "HUD_SPRETURNTRY" /*Please return to the Main Menu and try again later.*/;
 			break;
 	
 		case 13:
 			joinFailReason = "HUD_BAIL13" /*Connection to the active GTA Online session lost due to an unknown network error.*/;
-			entryLine2 = "HUD_SPRETURNTRY" /*Please return to Grand Theft Auto V and try again later.*/;
+			entryLine2 = "HUD_SPRETURNTRY" /*Please return to the Main Menu and try again later.*/;
 			break;
 	
 		case 14:
 			joinFailReason = "HUD_BAIL14" /*Timed out when launching the activity.*/;
-			entryLine2 = "HUD_SPRETURNTRY" /*Please return to Grand Theft Auto V and try again later.*/;
+			entryLine2 = "HUD_SPRETURNTRY" /*Please return to the Main Menu and try again later.*/;
 			break;
 	
 		case 15:
 			joinFailReason = "HUD_BAIL15" /*Timed out when leaving the active GTA Online session.*/;
-			entryLine2 = "HUD_SPRETURNTRY" /*Please return to Grand Theft Auto V and try again later.*/;
+			entryLine2 = "HUD_SPRETURNTRY" /*Please return to the Main Menu and try again later.*/;
 			break;
 	
 		case 16:
 			joinFailReason = "HUD_BAIL16" /*Timed out when matchmaking for a compatible GTA Online session to join.*/;
-			entryLine2 = "HUD_SPRETURNTRY" /*Please return to Grand Theft Auto V and try again later.*/;
+			entryLine2 = "HUD_SPRETURNTRY" /*Please return to the Main Menu and try again later.*/;
 			break;
 	
 		case 19:
-			joinFailReason = "HUD_ROSBANNED" /*You have been banned from Grand Theft Auto Online.~n~Please visit rockstargames.com/community-guidelines for more information.*/;
-			entryLine2 = "HUD_QURETSP" /*Return to Grand Theft Auto V.*/;
+			joinFailReason = "HUD_ROSBANNED" /*You have been banned from Grand Theft Auto Online.~n~If you are a GTA+ Member, you will need to manually cancel your Membership.~n~Please visit rockstargames.com/community-resources/guidelines for more information.*/;
+			entryLine2 = "HUD_QURETSP" /*Return to the Main Menu.*/;
 			break;
 	
 		case 20:
 			joinFailReason = "HUD_MM_FAIL" /*The Rockstar Matchmaking Service has failed to find a suitable match.*/;
-			entryLine2 = "HUD_QURETSP" /*Return to Grand Theft Auto V.*/;
+			entryLine2 = "HUD_QURETSP" /*Return to the Main Menu.*/;
 			break;
 	
 		case 21:
 			joinFailReason = "HUD_BAIL_REVOKED" /*You have been removed from GTA Online as you do not have the correct permissions.*/;
-			entryLine2 = "HUD_QURETSP" /*Return to Grand Theft Auto V.*/;
+			entryLine2 = "HUD_QURETSP" /*Return to the Main Menu.*/;
 			break;
 	
 		case 22:
 			if (func_520())
 			{
 				joinFailReason = "HUD_BAIL_SUSPEND" /*You have been removed from GTA Online as the game was in a suspended state too long.*/;
-				entryLine2 = "HUD_QURETSP" /*Return to Grand Theft Auto V.*/;
+				entryLine2 = "HUD_QURETSP" /*Return to the Main Menu.*/;
 			}
 			else if (func_4689())
 			{
@@ -114703,7 +114703,7 @@ void func_1026(var uParam0) // Position - 0x8AC41 (568385)
 			else
 			{
 				joinFailReason = "HUD_RESIGN" /*You were logged out of Rockstar Games.*/;
-				entryLine2 = "HUD_QURETSP" /*Return to Grand Theft Auto V.*/;
+				entryLine2 = "HUD_QURETSP" /*Return to the Main Menu.*/;
 			}
 			break;
 	
@@ -114720,11 +114720,11 @@ void func_1026(var uParam0) // Position - 0x8AC41 (568385)
 			break;
 	
 		case 26:
-			joinFailReason = "HUD_S_RF_FAILED" /*The GTA Online session is unable to receive updates from Rockstar Games Online Services. Please try again and check ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~ for information about outages and scheduled maintenance. If the issue persists, please check out our GTA Online Connection Troubleshooting at ~HUD_COLOUR_SOCIAL_CLUB~http://rsg.ms/connect~s~.*/;
+			joinFailReason = "HUD_S_RF_FAILED" /*The GTA Online session is unable to receive updates from Rockstar Games Services. Please try again and check ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~ for information about outages and scheduled maintenance. If the issue persists, please check out our GTA Online Connection Troubleshooting at ~HUD_COLOUR_SOCIAL_CLUB~http://rsg.ms/connect~s~.*/;
 			break;
 	
 		case 27:
-			joinFailReason = "HUD_S_RS_FAILED" /*The GTA Online session is unable to restart the session from Rockstar Games Online Services. Please try again and check ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~ for information about outages and scheduled maintenance. If the issue persists, please check out our GTA Online Connection Troubleshooting at ~HUD_COLOUR_SOCIAL_CLUB~http://rsg.ms/connect~s~.*/;
+			joinFailReason = "HUD_S_RS_FAILED" /*The GTA Online session is unable to restart the session from Rockstar Games Services. Please try again and check ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~ for information about outages and scheduled maintenance. If the issue persists, please check out our GTA Online Connection Troubleshooting at ~HUD_COLOUR_SOCIAL_CLUB~http://rsg.ms/connect~s~.*/;
 			break;
 	
 		case 28:
@@ -114736,7 +114736,7 @@ void func_1026(var uParam0) // Position - 0x8AC41 (568385)
 			break;
 	
 		case 30:
-			joinFailReason = "HUD_G_S_HEART" /*The game is unable to communicate with Rockstar Games Online Services. Please try again and check ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~ for information about outages and scheduled maintenance. If the issue persists, please check out our GTA Online Connection Troubleshooting at ~HUD_COLOUR_SOCIAL_CLUB~http://rsg.ms/connect~s~.*/;
+			joinFailReason = "HUD_G_S_HEART" /*The game is unable to communicate with Rockstar Games Services. Please try again and check ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~ for information about outages and scheduled maintenance. If the issue persists, please check out our GTA Online Connection Troubleshooting at ~HUD_COLOUR_SOCIAL_CLUB~http://rsg.ms/connect~s~.*/;
 			break;
 	
 		case 31:
@@ -114899,7 +114899,7 @@ void func_1026(var uParam0) // Position - 0x8AC41 (568385)
 	if (func_1027())
 	{
 		joinFailReason = "HUD_BAILFM" /*There has been an error with this session.*/;
-		entryLine2 = "HUD_SPRETURNTRYNOW" /*Please return to Grand Theft Auto V and try again.*/;
+		entryLine2 = "HUD_SPRETURNTRYNOW" /*Please return to the Main Menu and try again.*/;
 	}
 
 	instructionalKey = 16384;
@@ -115217,37 +115217,37 @@ void func_1041(var uParam0) // Position - 0x8B728 (571176)
 			if (Global_1574622.f_5 == false && NETWORK::NETWORK_IS_SIGNED_IN() == true && Global_1574622.f_6 == false)
 			{
 				entryLine1 = "HUD_DISCON" /*The connection to Rockstar Games has been lost.*/;
-				entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+				entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 				instructionalKey = 2;
 			}
 			else if (Global_1574622.f_4 == 0 || Global_1574622.f_2 == 1 && Global_1574622.f_6 == false)
 			{
 				entryLine1 = "HUD_MPDISCONNECT" /*You were signed out and disconnected from network features.*/;
-				entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+				entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 				instructionalKey = 2;
 			}
 			else if (Global_1574622.f_6)
 			{
 				entryLine1 = "HUD_ANOTHER" /*You have been logged out of Rockstar Games because another person logged in using your gamer profile.*/;
-				entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+				entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 				instructionalKey = 2;
 			}
 			else if (func_910() == false)
 			{
-				entryLine1 = "HUD_PERM" /*Your profile does not have the correct permissions to access this functionality.*/;
+				entryLine1 = "HUD_PERM" /*Your profile does not have permission to access GTA Online.*/;
 				entryLine2 = "HUD_PROFILECHNG" /*Please change to a profile with correct permissions.*/;
 				instructionalKey = 2;
 			}
 			else if (!Global_1574622.f_3 && Global_1574622.f_5)
 			{
 				entryLine1 = "HUD_DISCON" /*The connection to Rockstar Games has been lost.*/;
-				entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+				entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 				instructionalKey = 2;
 			}
 			else
 			{
 				entryLine1 = "HUD_DISCON" /*The connection to Rockstar Games has been lost.*/;
-				entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+				entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 				instructionalKey = 2;
 			}
 		}
@@ -115256,26 +115256,26 @@ void func_1041(var uParam0) // Position - 0x8B728 (571176)
 			if (func_4689() && NETWORK::NETWORK_IS_NP_AVAILABLE() == false && NETWORK::NETWORK_GET_NP_UNAVAILABLE_REASON() == 5)
 			{
 				entryLine1 = "HUD_PLUGPU" /*Internet connection has been lost, re-establish connection to play GTA Online.*/;
-				entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+				entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 				instructionalKey = 2;
 				uParam0->f_1828[0] = 1;
 			}
 			else if (Global_1574622.f_5 == false && NETWORK::NETWORK_IS_SIGNED_IN() == true && Global_1574622.f_6 == false)
 			{
 				entryLine1 = "HUD_DISCON" /*The connection to Rockstar Games has been lost.*/;
-				entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+				entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 				instructionalKey = 2;
 			
 				if (func_4689())
 				{
 					if (NETWORK::NETWORK_IS_LOGGED_IN_TO_PSN() == false && NETWORK::NETWORK_GET_NP_UNAVAILABLE_REASON() != 3)
 					{
-						entryLine1 = "HUD_PLUGPU2" /*You have lost connection to the internet. You will be unable to access any network features without restoring your internet connection. Please return to Grand Theft Auto V.*/;
+						entryLine1 = "HUD_PLUGPU2" /*You have lost connection to the internet. You will be unable to access any network features without restoring your internet connection. Please return to the Main Menu.*/;
 						entryLine2 = "";
 					}
 					else if (Global_1574622.f_7 == 1)
 					{
-						entryLine1 = "HUD_PLUGPU2" /*You have lost connection to the internet. You will be unable to access any network features without restoring your internet connection. Please return to Grand Theft Auto V.*/;
+						entryLine1 = "HUD_PLUGPU2" /*You have lost connection to the internet. You will be unable to access any network features without restoring your internet connection. Please return to the Main Menu.*/;
 					}
 					else if (NETWORK::NETWORK_IS_SIGNED_ONLINE() == false)
 					{
@@ -115283,7 +115283,7 @@ void func_1041(var uParam0) // Position - 0x8B728 (571176)
 					}
 					else if (NETWORK::NETWORK_IS_CONNETED_TO_NP_PRESENCE() == false)
 					{
-						entryLine1 = "HUD_PLUGPU2" /*You have lost connection to the internet. You will be unable to access any network features without restoring your internet connection. Please return to Grand Theft Auto V.*/;
+						entryLine1 = "HUD_PLUGPU2" /*You have lost connection to the internet. You will be unable to access any network features without restoring your internet connection. Please return to the Main Menu.*/;
 						entryLine2 = "";
 					}
 				}
@@ -115297,7 +115297,7 @@ void func_1041(var uParam0) // Position - 0x8B728 (571176)
 			else if (Global_1574622.f_4 == 0 || Global_1574622.f_2 == 1 && Global_1574622.f_6 == false)
 			{
 				entryLine1 = "HUD_MPDISCONNECT" /*You were signed out and disconnected from network features.*/;
-				entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+				entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 				instructionalKey = 2;
 			
 				if (func_4689() && NETWORK::NETWORK_IS_CABLE_CONNECTED() == false)
@@ -115309,62 +115309,62 @@ void func_1041(var uParam0) // Position - 0x8B728 (571176)
 			else if (Global_1574622.f_6)
 			{
 				entryLine1 = "HUD_ANOTHER" /*You have been logged out of Rockstar Games because another person logged in using your gamer profile.*/;
-				entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+				entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 				instructionalKey = 2;
 			}
 			else if (func_910() == false)
 			{
-				entryLine1 = "HUD_PERM" /*Your profile does not have the correct permissions to access this functionality.*/;
+				entryLine1 = "HUD_PERM" /*Your profile does not have permission to access GTA Online.*/;
 				entryLine2 = "HUD_PROFILECHNG" /*Please change to a profile with correct permissions.*/;
 				instructionalKey = 2;
 			}
 			else if (!Global_1574622.f_3 && Global_1574622.f_5)
 			{
 				entryLine1 = "HUD_DISCON" /*The connection to Rockstar Games has been lost.*/;
-				entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+				entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 				instructionalKey = 2;
 			}
 			else
 			{
 				entryLine1 = "HUD_DISCON" /*The connection to Rockstar Games has been lost.*/;
-				entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+				entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 				instructionalKey = 2;
 			}
 		}
 		else if (Global_1574622.f_5 == false && Global_1574622.f_6 == false)
 		{
 			entryLine1 = "HUD_DISCON" /*The connection to Rockstar Games has been lost.*/;
-			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 			instructionalKey = 2;
 		}
 		else if (Global_1574622.f_4 == 0 || Global_1574622.f_2 == 1 && Global_1574622.f_6 == false)
 		{
 			entryLine1 = "HUD_MPDISCONNECT" /*You were signed out and disconnected from network features.*/;
-			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 			instructionalKey = 2;
 		}
 		else if (Global_1574622.f_6)
 		{
 			entryLine1 = "HUD_ANOTHER" /*You have been logged out of Rockstar Games because another person logged in using your gamer profile.*/;
-			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 			instructionalKey = 2;
 		}
 		else if (func_910() == false)
 		{
-			entryLine1 = "HUD_PERM" /*Your profile does not have the correct permissions to access this functionality.*/;
+			entryLine1 = "HUD_PERM" /*Your profile does not have permission to access GTA Online.*/;
 			entryLine2 = "HUD_PROFILECHNG" /*Please change to a profile with correct permissions.*/;
 			instructionalKey = 2;
 		}
 		else if (!Global_1574622.f_3 && Global_1574622.f_5)
 		{
 			entryLine1 = "HUD_DISCON" /*The connection to Rockstar Games has been lost.*/;
-			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 			instructionalKey = 2;
 		}
 		else
 		{
 			entryLine1 = "HUD_DISCON" /*The connection to Rockstar Games has been lost.*/;
-			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 			instructionalKey = 2;
 		}
 	}
@@ -115373,7 +115373,7 @@ void func_1041(var uParam0) // Position - 0x8B728 (571176)
 		if (Global_1574622.f_5 == false && NETWORK::NETWORK_IS_SIGNED_IN() == true)
 		{
 			entryLine1 = "HUD_DISCON" /*The connection to Rockstar Games has been lost.*/;
-			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 			instructionalKey = 2;
 		}
 		else if (func_1043())
@@ -115382,31 +115382,31 @@ void func_1041(var uParam0) // Position - 0x8B728 (571176)
 		else if (Global_1574622.f_4 == 1 && Global_1574622.f_6 == false && Global_1574622.f_3 == false && Global_1574622.f_2 == 1 && Global_1574622.f_5 == true && NETWORK::NETWORK_IS_SIGNED_ONLINE() == true && func_910() == true)
 		{
 			entryLine1 = "HUD_CONNECTION" /*Connection to the game session was lost.*/;
-			entryLine2 = "HUD_SPRETURNTRYNOW" /*Please return to Grand Theft Auto V and try again.*/;
+			entryLine2 = "HUD_SPRETURNTRYNOW" /*Please return to the Main Menu and try again.*/;
 			instructionalKey = 2;
 		}
 		else if (Global_1574622.f_4 == 0 || Global_1574622.f_2 == 1 && Global_1574622.f_6 == false)
 		{
 			entryLine1 = "HUD_CONNT" /*Log in to Rockstar Games to play GTA Online.*/;
-			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 			instructionalKey = 2;
 		}
 		else if (Global_1574622.f_6)
 		{
 			entryLine1 = "HUD_ANOTHER" /*You have been logged out of Rockstar Games because another person logged in using your gamer profile.*/;
-			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 			instructionalKey = 2;
 		}
 		else if (func_910() == false)
 		{
-			entryLine1 = "HUD_PERM" /*Your profile does not have the correct permissions to access this functionality.*/;
+			entryLine1 = "HUD_PERM" /*Your profile does not have permission to access GTA Online.*/;
 			entryLine2 = "HUD_PROFILECHNG" /*Please change to a profile with correct permissions.*/;
 			instructionalKey = 2;
 		}
 		else
 		{
 			entryLine1 = "HUD_DISCON" /*The connection to Rockstar Games has been lost.*/;
-			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 			instructionalKey = 2;
 		}
 	}
@@ -115415,7 +115415,7 @@ void func_1041(var uParam0) // Position - 0x8B728 (571176)
 		if (Global_1574622.f_5 == false && NETWORK::NETWORK_IS_SIGNED_IN() == true)
 		{
 			entryLine1 = "HUD_DISCON" /*The connection to Rockstar Games has been lost.*/;
-			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 			instructionalKey = 2;
 		
 			if (func_4689() && NETWORK::NETWORK_IS_CABLE_CONNECTED() == false)
@@ -115439,13 +115439,13 @@ void func_1041(var uParam0) // Position - 0x8B728 (571176)
 		else if (Global_1574622.f_4 == 1 && Global_1574622.f_6 == false && Global_1574622.f_3 == false && Global_1574622.f_2 == 1 && Global_1574622.f_5 == true && NETWORK::NETWORK_IS_SIGNED_ONLINE() == true && func_910() == true)
 		{
 			entryLine1 = "HUD_CONNECTION" /*Connection to the game session was lost.*/;
-			entryLine2 = "HUD_SPRETURNTRYNOW" /*Please return to Grand Theft Auto V and try again.*/;
+			entryLine2 = "HUD_SPRETURNTRYNOW" /*Please return to the Main Menu and try again.*/;
 			instructionalKey = 2;
 		}
 		else if (Global_1574622.f_4 == 0 || Global_1574622.f_2 == 1 && Global_1574622.f_6 == false)
 		{
 			entryLine1 = "HUD_MPDISCONNECT" /*You were signed out and disconnected from network features.*/;
-			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 			instructionalKey = 2;
 		
 			if (func_4689() && NETWORK::NETWORK_IS_CABLE_CONNECTED() == false)
@@ -115457,56 +115457,56 @@ void func_1041(var uParam0) // Position - 0x8B728 (571176)
 		else if (Global_1574622.f_6)
 		{
 			entryLine1 = "HUD_ANOTHER" /*You have been logged out of Rockstar Games because another person logged in using your gamer profile.*/;
-			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 			instructionalKey = 2;
 		}
 		else if (func_910() == false)
 		{
-			entryLine1 = "HUD_PERM" /*Your profile does not have the correct permissions to access this functionality.*/;
+			entryLine1 = "HUD_PERM" /*Your profile does not have permission to access GTA Online.*/;
 			entryLine2 = "HUD_PROFILECHNG" /*Please change to a profile with correct permissions.*/;
 			instructionalKey = 2;
 		}
 		else
 		{
 			entryLine1 = "HUD_DISCON" /*The connection to Rockstar Games has been lost.*/;
-			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 			instructionalKey = 2;
 		}
 	}
 	else if (Global_1574622.f_5 == false)
 	{
 		entryLine1 = "HUD_DISCON" /*The connection to Rockstar Games has been lost.*/;
-		entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+		entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 		instructionalKey = 2;
 	}
 	else if (Global_1574622.f_4 == 1 && Global_1574622.f_6 == false && Global_1574622.f_3 == false && Global_1574622.f_2 == 1 && Global_1574622.f_5 == true && NETWORK::NETWORK_IS_SIGNED_ONLINE() == true && func_910() == true)
 	{
 		entryLine1 = "HUD_CONNECTION" /*Connection to the game session was lost.*/;
-		entryLine2 = "HUD_SPRETURNTRYNOW" /*Please return to Grand Theft Auto V and try again.*/;
+		entryLine2 = "HUD_SPRETURNTRYNOW" /*Please return to the Main Menu and try again.*/;
 		instructionalKey = 2;
 	}
 	else if (Global_1574622.f_4 == 0 || Global_1574622.f_2 == 1 && Global_1574622.f_6 == false)
 	{
 		entryLine1 = "HUD_MPDISCONNECT" /*You were signed out and disconnected from network features.*/;
-		entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+		entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 		instructionalKey = 2;
 	}
 	else if (Global_1574622.f_6)
 	{
 		entryLine1 = "HUD_ANOTHER" /*You have been logged out of Rockstar Games because another person logged in using your gamer profile.*/;
-		entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+		entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 		instructionalKey = 2;
 	}
 	else if (func_910() == false)
 	{
-		entryLine1 = "HUD_PERM" /*Your profile does not have the correct permissions to access this functionality.*/;
+		entryLine1 = "HUD_PERM" /*Your profile does not have permission to access GTA Online.*/;
 		entryLine2 = "HUD_PROFILECHNG" /*Please change to a profile with correct permissions.*/;
 		instructionalKey = 2;
 	}
 	else
 	{
 		entryLine1 = "HUD_DISCON" /*The connection to Rockstar Games has been lost.*/;
-		entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+		entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 		instructionalKey = 2;
 	}
 
@@ -115704,8 +115704,8 @@ void func_1050(var uParam0) // Position - 0x8C369 (574313)
 	{
 		if (NETWORK::NETWORK_HAS_VALID_ROS_CREDENTIALS() == false)
 		{
-			entryLine1 = "HUD_CLOUDOFFLIN" /*Rockstar Games Online Services are unavailable right now.*/;
-			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+			entryLine1 = "HUD_CLOUDOFFLIN" /*Rockstar Games Services are unavailable right now.*/;
+			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 			instructionalKey = 2;
 		}
 		else if (func_520() && NETWORK::NETWORK_HAVE_PLATFORM_SUBSCRIPTION() == false)
@@ -115716,14 +115716,14 @@ void func_1050(var uParam0) // Position - 0x8C369 (574313)
 		}
 		else if (func_910() == false)
 		{
-			entryLine1 = "HUD_PERM" /*Your profile does not have the correct permissions to access this functionality.*/;
+			entryLine1 = "HUD_PERM" /*Your profile does not have permission to access GTA Online.*/;
 			entryLine2 = "HUD_PROFILECHNG" /*Please change to a profile with correct permissions.*/;
 			instructionalKey = 2;
 		}
 		else
 		{
 			entryLine1 = "HUD_DISCON" /*The connection to Rockstar Games has been lost.*/;
-			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 			instructionalKey = 2;
 		}
 	}
@@ -115731,8 +115731,8 @@ void func_1050(var uParam0) // Position - 0x8C369 (574313)
 	{
 		if (NETWORK::NETWORK_HAS_VALID_ROS_CREDENTIALS() == false)
 		{
-			entryLine1 = "HUD_CLOUDOFFLIN" /*Rockstar Games Online Services are unavailable right now.*/;
-			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+			entryLine1 = "HUD_CLOUDOFFLIN" /*Rockstar Games Services are unavailable right now.*/;
+			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 			instructionalKey = 2;
 		}
 		else if (func_4689() && NETWORK::NETWORK_HAVE_PLATFORM_SUBSCRIPTION() == false)
@@ -115743,33 +115743,33 @@ void func_1050(var uParam0) // Position - 0x8C369 (574313)
 		}
 		else if (func_910() == false)
 		{
-			entryLine1 = "HUD_PERM" /*Your profile does not have the correct permissions to access this functionality.*/;
+			entryLine1 = "HUD_PERM" /*Your profile does not have permission to access GTA Online.*/;
 			entryLine2 = "HUD_PROFILECHNG" /*Please change to a profile with correct permissions.*/;
 			instructionalKey = 2;
 		}
 		else
 		{
 			entryLine1 = "HUD_DISCON" /*The connection to Rockstar Games has been lost.*/;
-			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+			entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 			instructionalKey = 2;
 		}
 	}
 	else if (NETWORK::NETWORK_HAS_VALID_ROS_CREDENTIALS() == false)
 	{
-		entryLine1 = "HUD_CLOUDOFFLIN" /*Rockstar Games Online Services are unavailable right now.*/;
-		entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+		entryLine1 = "HUD_CLOUDOFFLIN" /*Rockstar Games Services are unavailable right now.*/;
+		entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 		instructionalKey = 2;
 	}
 	else if (func_910() == false)
 	{
-		entryLine1 = "HUD_PERM" /*Your profile does not have the correct permissions to access this functionality.*/;
+		entryLine1 = "HUD_PERM" /*Your profile does not have permission to access GTA Online.*/;
 		entryLine2 = "HUD_PROFILECHNG" /*Please change to a profile with correct permissions.*/;
 		instructionalKey = 2;
 	}
 	else
 	{
 		entryLine1 = "HUD_DISCON" /*The connection to Rockstar Games has been lost.*/;
-		entryLine2 = "HUD_SPRETRNFRSH" /*Please return to Grand Theft Auto V.*/;
+		entryLine2 = "HUD_SPRETRNFRSH" /*Please return to the Main Menu.*/;
 		instructionalKey = 2;
 	}
 
@@ -120312,15 +120312,15 @@ void func_1207(var uParam0) // Position - 0x9249E (599198)
 					break;
 			
 				case 11:
-					HUD::SET_WARNING_MESSAGE_WITH_HEADER("HUD_CONNPROB" /*alert*/, "DELETELOADFAIL" /*Rockstar cloud load failed while deleting your character.*/, 2, "HUD_SPRETURNTRY" /*Please return to Grand Theft Auto V and try again later.*/, false, -1, 0, 0, true, 0);
+					HUD::SET_WARNING_MESSAGE_WITH_HEADER("HUD_CONNPROB" /*alert*/, "DELETELOADFAIL" /*Rockstar cloud load failed while deleting your character.*/, 2, "HUD_SPRETURNTRY" /*Please return to the Main Menu and try again later.*/, false, -1, 0, 0, true, 0);
 					break;
 			
 				case 12:
-					HUD::SET_WARNING_MESSAGE_WITH_HEADER("HUD_CONNPROB" /*alert*/, "DELETESAVEFAIL" /*Rockstar cloud save error while deleting your character.*/, 2, "HUD_SPRETURNTRY" /*Please return to Grand Theft Auto V and try again later.*/, false, -1, 0, 0, true, 0);
+					HUD::SET_WARNING_MESSAGE_WITH_HEADER("HUD_CONNPROB" /*alert*/, "DELETESAVEFAIL" /*Rockstar cloud save error while deleting your character.*/, 2, "HUD_SPRETURNTRY" /*Please return to the Main Menu and try again later.*/, false, -1, 0, 0, true, 0);
 					break;
 			
 				case 13:
-					HUD::SET_WARNING_MESSAGE_WITH_HEADER("HUD_CONNPROB" /*alert*/, "DELETEERRFAIL" /*Rockstar cloud error while deleting your character.*/, 2, "HUD_SPRETURNTRY" /*Please return to Grand Theft Auto V and try again later.*/, false, -1, 0, 0, true, 0);
+					HUD::SET_WARNING_MESSAGE_WITH_HEADER("HUD_CONNPROB" /*alert*/, "DELETEERRFAIL" /*Rockstar cloud error while deleting your character.*/, 2, "HUD_SPRETURNTRY" /*Please return to the Main Menu and try again later.*/, false, -1, 0, 0, true, 0);
 					break;
 			
 				default:
@@ -121940,8 +121940,8 @@ void func_1270(var uParam0) // Position - 0x941CC (606668)
 
 	func_557(&(uParam0->f_366), &(uParam0->f_395), false);
 	entryHeader = "HUD_CONNPROB" /*alert*/;
-	entryLine1 = "HUD_COMPATCLOD" /*Rockstar Games Online Services have failed to sync files to play GTA Online.*/;
-	entryLine2 = "HUD_SPRETURNTRY" /*Please return to Grand Theft Auto V and try again later.*/;
+	entryLine1 = "HUD_COMPATCLOD" /*Rockstar Games Services have failed to sync files to play GTA Online.*/;
+	entryLine2 = "HUD_SPRETURNTRY" /*Please return to the Main Menu and try again later.*/;
 	HUD::SET_WARNING_MESSAGE_WITH_HEADER(entryHeader, entryLine1, 2, entryLine2, false, -1, 0, 0, true, 0);
 	return;
 }
@@ -122015,7 +122015,7 @@ void func_1275(var uParam0) // Position - 0x942DF (606943)
 
 	func_557(&(uParam0->f_366), &(uParam0->f_395), false);
 	entryHeader = "HUD_CONNPROB" /*alert*/;
-	entryLine1 = "HUD_COMBATPACKT" /*Timed out when checking current compatibility pack configuration. Please return to Grand Theft Auto V.*/;
+	entryLine1 = "HUD_COMBATPACKT" /*Timed out when checking current compatibility pack configuration. Please return to the Main Menu.*/;
 	entryLine2 = "";
 	HUD::SET_WARNING_MESSAGE_WITH_HEADER(entryHeader, entryLine1, 2, entryLine2, false, -1, 0, 0, true, 0);
 	return;
@@ -134960,7 +134960,7 @@ BOOL func_1487(var uParam0, var uParam1, int* piParam2, var uParam3, int iParam4
 			break;
 	
 		case 3:
-			HUD::SET_WARNING_MESSAGE_WITH_HEADER("HUD_CONNPROB" /*alert*/, "HUD_PROFERR" /*There has been an error saving this name. The Rockstar game services are currently unavailable. Please try again later.*/, 2, 0, false, -1, 0, 0, true, 0);
+			HUD::SET_WARNING_MESSAGE_WITH_HEADER("HUD_CONNPROB" /*alert*/, "HUD_PROFERR" /*There has been an error saving this name. Rockstar Games Services are currently unavailable. Please try again later.*/, 2, 0, false, -1, 0, 0, true, 0);
 		
 			if (HUD::BUSYSPINNER_IS_ON())
 				HUD::BUSYSPINNER_OFF();
@@ -179944,9 +179944,9 @@ char* func_2299(Hash hParam0, BOOL bParam1) // Position - 0xD8E3A (888378)
 	
 		case joaat("WEAPON_CERAMICPISTOL"):
 			if (bParam1)
-				return "WTU_CERPST";
+				return "WTU_CERPST" /*CERAMIC PISTOL*/;
 			else
-				return "WT_CERPST";
+				return "WT_CERPST" /*Ceramic Pistol*/;
 			break;
 	
 		case joaat("WEAPON_GADGETPISTOL"):
@@ -179965,9 +179965,9 @@ char* func_2299(Hash hParam0, BOOL bParam1) // Position - 0xD8E3A (888378)
 	
 		case joaat("WEAPON_COMBATSHOTGUN"):
 			if (bParam1)
-				return "WTU_CMBSHGN";
+				return "WTU_CMBSHGN" /*COMBAT SHOTGUN*/;
 			else
-				return "WT_CMBSHGN";
+				return "WT_CMBSHGN" /*Combat Shotgun*/;
 			break;
 	
 		case joaat("VEHICLE_WEAPON_TURRET_DINGHY5_50CAL"):
@@ -180126,9 +180126,9 @@ char* func_2299(Hash hParam0, BOOL bParam1) // Position - 0xD8E3A (888378)
 	
 		case joaat("WEAPON_BRIEFCASE"):
 			if (bParam1)
-				return "FMMC_WT_BRIEF";
+				return "FMMC_WT_BRIEF" /*Briefcase*/;
 			else
-				return "FMMC_WT_BRIEF";
+				return "FMMC_WT_BRIEF" /*Briefcase*/;
 			break;
 	
 		default:
@@ -276808,12 +276808,12 @@ int func_4053() // Position - 0x16F583 (1504643)
 	}
 
 	entryHeader = "HUD_CONNPROB" /*alert*/;
-	entryLine1 = "HUD_LOADMAIN" /*The Rockstar game services are temporarily unavailable due to maintenance.*/;
+	entryLine1 = "HUD_LOADMAIN" /*Rockstar Games Services are temporarily unavailable due to maintenance.*/;
 	entryLine2 = "HUD_RETURNSP" /*Return to the Main Menu*/;
 
 	if (func_710())
 	{
-		entryLine1 = "HUD_LOADSCR_D" /*The Rockstar game services are temporarily unavailable.*/;
+		entryLine1 = "HUD_LOADSCR_D" /*Rockstar Games Services are temporarily unavailable.*/;
 		entryLine2 = "HUD_RETURNSP" /*Return to the Main Menu*/;
 	}
 

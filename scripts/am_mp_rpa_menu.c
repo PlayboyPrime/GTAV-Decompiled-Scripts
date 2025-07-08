@@ -3648,11 +3648,11 @@ void func_61() // Position - 0x523A (21050)
 				case 5:
 					if (!func_64())
 						if (IS_BIT_SET(iLocal_125, 7))
-							func_63("RPA_MENU_O6_D1", 0, 0);
+							func_63("RPA_MENU_O6_D1" /*You don't own any suitable Pegasus vehicles for this location.*/, 0, 0);
 						else
-							func_63("RPA_MENU_06_D2", 0, 0);
+							func_63("RPA_MENU_06_D2" /*Pegasus is currently unavailable at this location.*/, 0, 0);
 					else
-						func_63("RPA_MENU_O6_D", 0, 0);
+						func_63("RPA_MENU_O6_D" /*Request a suitable Pegasus vehicle at this location.*/, 0, 0);
 					break;
 			}
 		}
@@ -3662,26 +3662,26 @@ void func_61() // Position - 0x523A (21050)
 			{
 				case 1:
 					if (func_64())
-						func_63("RPA_MENU_O4_D", 0, 0);
+						func_63("RPA_MENU_O4_D" /*Request your Personal Helicopter at this location.*/, 0, 0);
 					else
-						func_63("RPA_MENU_O4_D1", 0, 0);
+						func_63("RPA_MENU_O4_D1" /*You don't own any suitable Personal Helicopters for this location.*/, 0, 0);
 					break;
 			
 				case 4:
 					if (func_64())
-						func_63("RPA_MENU_O5_D", 0, 0);
+						func_63("RPA_MENU_O5_D" /*Request the Higgins Helitours Maverick.*/, 0, 0);
 					else
-						func_63("RPA_MENU_O5_D1", 0, 0);
+						func_63("RPA_MENU_O5_D1" /*The Higgins Helitours Maverick is currently unavailable.*/, 0, 0);
 					break;
 			
 				case 5:
 					if (!func_64())
 						if (IS_BIT_SET(iLocal_125, 7))
-							func_63("RPA_MENU_O6_D1", 0, 0);
+							func_63("RPA_MENU_O6_D1" /*You don't own any suitable Pegasus vehicles for this location.*/, 0, 0);
 						else
-							func_63("RPA_MENU_06_D2", 0, 0);
+							func_63("RPA_MENU_06_D2" /*Pegasus is currently unavailable at this location.*/, 0, 0);
 					else
-						func_63("RPA_MENU_O6_D", 0, 0);
+						func_63("RPA_MENU_O6_D" /*Request a suitable Pegasus vehicle at this location.*/, 0, 0);
 					break;
 			}
 		}
@@ -3822,7 +3822,7 @@ void func_69() // Position - 0x55E5 (21989)
 		if (Global_1983799.f_3 == 173)
 			func_71(INPUT_FRONTEND_ACCEPT, "RPA_MENU_K1" /*Runway*/, -1, false);
 		else if (Global_1983799.f_3 == 176)
-			func_71(INPUT_FRONTEND_ACCEPT, "RPA_MENU_K3", -1, false);
+			func_71(INPUT_FRONTEND_ACCEPT, "RPA_MENU_K3" /*Helipad*/, -1, false);
 	
 		if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL))
 		{
@@ -3990,7 +3990,7 @@ void func_74() // Position - 0x59DD (23005)
 
 	if (iLocal_126 == 0)
 	{
-		func_280("RPA_MENU_T" /*Request Aircraft*/);
+		func_280("RPA_MENU_T" /*REQUEST AIRCRAFT*/);
 	
 		if (Global_1983799.f_3 == 173)
 		{
@@ -4011,17 +4011,17 @@ void func_74() // Position - 0x59DD (23005)
 				{
 					if (func_278(flag, flag2))
 					{
-						func_46(1, "RPA_MENU_O6", 0, true, 0, false, 0);
+						func_46(1, "RPA_MENU_O6" /*Pegasus*/, 0, true, 0, false, 0);
 					}
 					else
 					{
-						func_46(1, "RPA_MENU_O6", 0, false, 0, false, 0);
+						func_46(1, "RPA_MENU_O6" /*Pegasus*/, 0, false, 0, false, 0);
 						MISC::SET_BIT(&iLocal_125, 7);
 					}
 				}
 				else
 				{
-					func_46(1, "RPA_MENU_O6", 0, false, 0, false, 0);
+					func_46(1, "RPA_MENU_O6" /*Pegasus*/, 0, false, 0, false, 0);
 				}
 			
 				uLocal_120[num] = 5;
@@ -4063,9 +4063,9 @@ void func_74() // Position - 0x59DD (23005)
 			flag4 = true;
 		
 			if (func_279(flag3, flag4))
-				func_46(0, "RPA_MENU_O4", 0, true, 0, false, 0);
+				func_46(0, "RPA_MENU_O4" /*Personal Helicopter*/, 0, true, 0, false, 0);
 			else
-				func_46(0, "RPA_MENU_O4", 0, false, 0, false, 0);
+				func_46(0, "RPA_MENU_O4" /*Personal Helicopter*/, 0, false, 0, false, 0);
 		
 			uLocal_120[num] = 1;
 			num = num + 1;
@@ -4076,17 +4076,17 @@ void func_74() // Position - 0x59DD (23005)
 				{
 					if (func_278(flag3, flag4))
 					{
-						func_46(1, "RPA_MENU_O6", 0, true, 0, false, 0);
+						func_46(1, "RPA_MENU_O6" /*Pegasus*/, 0, true, 0, false, 0);
 					}
 					else
 					{
-						func_46(1, "RPA_MENU_O6", 0, false, 0, false, 0);
+						func_46(1, "RPA_MENU_O6" /*Pegasus*/, 0, false, 0, false, 0);
 						MISC::SET_BIT(&iLocal_125, 7);
 					}
 				}
 				else
 				{
-					func_46(1, "RPA_MENU_O6", 0, false, 0, false, 0);
+					func_46(1, "RPA_MENU_O6" /*Pegasus*/, 0, false, 0, false, 0);
 				}
 			
 				uLocal_120[num] = 5;
@@ -4094,9 +4094,9 @@ void func_74() // Position - 0x59DD (23005)
 			}
 		
 			if (!*Global_262145.f_36708)
-				func_46(2, "RPA_MENU_O5", 0, true, 0, false, 0);
+				func_46(2, "RPA_MENU_O5" /*Higgins Maverick*/, 0, true, 0, false, 0);
 			else
-				func_46(2, "RPA_MENU_O5", 0, false, 0, false, 0);
+				func_46(2, "RPA_MENU_O5" /*Higgins Maverick*/, 0, false, 0, false, 0);
 		
 			uLocal_120[num] = 4;
 			num = num + 1;
@@ -4105,7 +4105,7 @@ void func_74() // Position - 0x59DD (23005)
 	}
 	else if (iLocal_126 == 1)
 	{
-		func_280("RPA_MENU_T" /*Request Aircraft*/);
+		func_280("RPA_MENU_T" /*REQUEST AIRCRAFT*/);
 	
 		if (Global_1983799.f_3 == 173)
 			iLocal_140 = func_205(true, false);
@@ -4114,7 +4114,7 @@ void func_74() // Position - 0x59DD (23005)
 	}
 	else if (iLocal_126 == 2)
 	{
-		func_280("RPA_MENU_T2");
+		func_280("RPA_MENU_T2" /*PEGASUS*/);
 	
 		if (Global_1983799.f_3 == 173)
 			iLocal_140 = func_75(true, false);

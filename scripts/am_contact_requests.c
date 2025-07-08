@@ -16086,18 +16086,18 @@ void func_380() // Position - 0x13078 (77944)
 			switch (iLocal_153.f_181.f_69)
 			{
 				case 0:
-					func_343("RAF_VIEW_0", 0, 0);
+					func_343("RAF_VIEW_0" /*Start work for Hands On Car Wash.~n~Current heat level: ~1~%.~n~Collectable work earnings: $~1~.*/, 0, 0);
 					func_294(func_394(1));
 					func_294(func_392(PLAYER::PLAYER_ID()));
 					break;
 			
 				case 1:
-					func_343("RAF_VIEW_1", 0, 0);
+					func_343("RAF_VIEW_1" /*Start work for Higgins Helitours.~n~Current heat level: ~1~%.*/, 0, 0);
 					func_294(func_394(2));
 					break;
 			
 				case 2:
-					func_343("RAF_VIEW_2", 0, 0);
+					func_343("RAF_VIEW_2" /*Start work for Smoke on the Water.~n~Current heat level: ~1~%.*/, 0, 0);
 					func_294(func_394(3));
 					break;
 			}
@@ -16110,15 +16110,15 @@ void func_380() // Position - 0x13078 (77944)
 					switch (iLocal_1892)
 					{
 						case 0:
-							func_343("TYCM_FM_0_D", 0, 0);
+							func_343("TYCM_FM_0_D" /*Wash customer cars to reduce heat at the Hands On Car Wash.*/, 0, 0);
 							break;
 					
 						case 1:
-							func_343("TYCM_FM_1_D", 0, 0);
+							func_343("TYCM_FM_1_D" /*Take tourists on a helicopter tour of Los Santos to reduce heat at Higgins Helitours.*/, 0, 0);
 							break;
 					
 						case 2:
-							func_343("TYCM_FM_2_D", 0, 0);
+							func_343("TYCM_FM_2_D" /*Deliver weed orders to customers to reduce heat at Smoke on the Water.*/, 0, 0);
 							break;
 					}
 					break;
@@ -16127,15 +16127,15 @@ void func_380() // Position - 0x13078 (77944)
 					switch (iLocal_1892)
 					{
 						case 0:
-							func_343("TYCM_FM_W_D0", 0, 0);
+							func_343("TYCM_FM_W_D0" /*Request work from Raf. Payment will take a short time to be laundered before it can be collected from your car wash.~n~~n~Current heat level: ~1~%.*/, 0, 0);
 							break;
 					
 						case 1:
-							func_343("TYCM_FM_W_D1", 0, 0);
+							func_343("TYCM_FM_W_D1" /*Request work from Raf. Payment will take a short time to be laundered before it can be collected from your car wash.~n~~n~Current heat level: ~1~%.*/, 0, 0);
 							break;
 					
 						case 2:
-							func_343("TYCM_FM_W_D2", 0, 0);
+							func_343("TYCM_FM_W_D2" /*Request work from Raf. Payment will take a short time to be laundered before it can be collected from your car wash.~n~~n~Current heat level: ~1~%.*/, 0, 0);
 							break;
 					}
 				
@@ -16149,15 +16149,15 @@ void func_380() // Position - 0x13078 (77944)
 		switch (iLocal_153.f_181.f_69)
 		{
 			case 0:
-				func_343("RAF_VIEWNA_0", 0, 0);
+				func_343("RAF_VIEWNA_0" /*You do not own Hands On Car Wash. Go to foreclosures.maze-bank.com to purchase this business.*/, 0, 0);
 				break;
 		
 			case 1:
-				func_343("RAF_VIEWNA_1", 0, 0);
+				func_343("RAF_VIEWNA_1" /*You do not own Higgins Helitours. Go to foreclosures.maze-bank.com to purchase this business.*/, 0, 0);
 				break;
 		
 			case 2:
-				func_343("RAF_VIEWNA_2", 0, 0);
+				func_343("RAF_VIEWNA_2" /*You do not own Smoke on the Water. Go to foreclosures.maze-bank.com to purchase this business.*/, 0, 0);
 				break;
 		}
 	}
@@ -16167,38 +16167,38 @@ void func_380() // Position - 0x13078 (77944)
 		{
 			case 0:
 				if (func_390(func_391(), false, true))
-					func_343("TYCM_NA_COOLD", 0, 0);
+					func_343("TYCM_NA_COOLD" /*Unavailable. There is a short delay before you can take on more work.*/, 0, 0);
 				else
-					func_343("TYCM_NA", 0, 0);
+					func_343("TYCM_NA" /*This request is not currently available.*/, 0, 0);
 				break;
 		
 			case 1:
 				if (func_389(PLAYER::PLAYER_ID()))
 				{
-					func_343("TYCM_NA_DUF", 0, 0);
+					func_343("TYCM_NA_DUF" /*Unavailable. Collect your laundered cash to start another job.*/, 0, 0);
 				}
 				else if (func_390(func_391(), false, false))
 				{
-					func_343("TYCM_NA_COOLD", 0, 0);
+					func_343("TYCM_NA_COOLD" /*Unavailable. There is a short delay before you can take on more work.*/, 0, 0);
 				}
 				else if (!func_383())
 				{
-					func_343("TYCM_NA", 0, 0);
+					func_343("TYCM_NA" /*This request is not currently available.*/, 0, 0);
 				}
 				else if (!func_381())
 				{
 					switch (iLocal_1892)
 					{
 						case 0:
-							func_343("TYCM_NA_HEAT0", 0, 0);
+							func_343("TYCM_NA_HEAT0" /*Unavailable. Reduce the heat on the business by completing Car Wash.*/, 0, 0);
 							break;
 					
 						case 1:
-							func_343("TYCM_NA_HEAT1", 0, 0);
+							func_343("TYCM_NA_HEAT1" /*Unavailable. Reduce the heat on the business by completing Helicopter Tour.*/, 0, 0);
 							break;
 					
 						case 2:
-							func_343("TYCM_NA_HEAT2", 0, 0);
+							func_343("TYCM_NA_HEAT2" /*Unavailable. Reduce the heat on the business by completing Weed Delivery.*/, 0, 0);
 							break;
 					}
 				}
@@ -16461,11 +16461,11 @@ void func_399() // Position - 0x13720 (79648)
 
 	if (!bLocal_1891)
 	{
-		func_63(num, "TYCM_SMBUS_0", 0, func_405(1), 0, false, 0);
+		func_63(num, "TYCM_SMBUS_0" /*Hands On Car Wash*/, 0, func_405(1), 0, false, 0);
 		num = num + 1;
-		func_63(num, "TYCM_SMBUS_1", 0, func_405(2), 0, false, 0);
+		func_63(num, "TYCM_SMBUS_1" /*Higgins Helitours*/, 0, func_405(2), 0, false, 0);
 		num = num + 1;
-		func_63(num, "TYCM_SMBUS_2", 0, func_405(3), 0, false, 0);
+		func_63(num, "TYCM_SMBUS_2" /*Smoke on the Water*/, 0, func_405(3), 0, false, 0);
 	}
 	else
 	{
@@ -16612,20 +16612,20 @@ char* func_404(BOOL bParam0) // Position - 0x13B0A (80650)
 		switch (iLocal_1892)
 		{
 			case 0:
-				return "TYCM_FM_0";
+				return "TYCM_FM_0" /*Car Wash*/;
 		
 			case 1:
-				return "TYCM_FM_1";
+				return "TYCM_FM_1" /*Helicopter Tour*/;
 		
 			case 2:
-				return "TYCM_FM_2";
+				return "TYCM_FM_2" /*Weed Delivery*/;
 		
 			default:
 			
 		}
 	}
 
-	return "TYCM_FM_WORK";
+	return "TYCM_FM_WORK" /*Money Laundering*/;
 }
 
 BOOL func_405(int iParam0) // Position - 0x13B4A (80714)
@@ -16652,20 +16652,20 @@ char* func_407() // Position - 0x13B8F (80783)
 		switch (iLocal_1892)
 		{
 			case 0:
-				return "RAF_TITLE_0";
+				return "RAF_TITLE_0" /*HANDS ON CAR WASH*/;
 		
 			case 1:
-				return "RAF_TITLE_1";
+				return "RAF_TITLE_1" /*HIGGINS HELITOURS*/;
 		
 			case 2:
-				return "RAF_TITLE_2";
+				return "RAF_TITLE_2" /*SMOKE ON THE WATER*/;
 		
 			default:
 			
 		}
 	}
 
-	return "RAF_TITLE";
+	return "RAF_TITLE" /*RAF*/;
 }
 
 void func_408() // Position - 0x13BD0 (80848)
@@ -42604,7 +42604,7 @@ BOOL func_1040() // Position - 0x3057C (198012)
 
 char* func_1041() // Position - 0x30588 (198024)
 {
-	return "PROF_CHK_UA";
+	return "PROF_CHK_UA" /*Unable to connect to Rockstar Games to check profanity.*/;
 }
 
 BOOL func_1042() // Position - 0x30594 (198036)
@@ -65515,7 +65515,7 @@ void func_1167() // Position - 0x4B667 (308839)
 					else if (j == 29)
 						TEXT_LABEL_ASSIGN_STRING(&unk35, "WIN22_GARNAME" /*Eclipse Blvd Garage*/, 24);
 					else if (j == 30)
-						TEXT_LABEL_ASSIGN_STRING(&unk35, "VPG_GARNAME", 24);
+						TEXT_LABEL_ASSIGN_STRING(&unk35, "VPG_GARNAME" /*The Vinewood Club Garage*/, 24);
 					else if (j == 31)
 						TEXT_LABEL_ASSIGN_STRING(&unk35, "BO_GARNAME" /*Bail Office*/, 24);
 					else if (j == 32)

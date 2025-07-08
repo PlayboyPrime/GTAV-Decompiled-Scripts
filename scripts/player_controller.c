@@ -29145,7 +29145,7 @@ void func_93() // Position - 0x22B64 (142180)
 					if (!IS_BIT_SET(Global_114344.f_668.f_1321, 8))
 						if (func_98())
 							if (!func_94())
-								func_140(&(Global_114344.f_668.f_1321), 8, "CONT_HEISTS" /*Bottom Dollar Bounties is now available in Grand Theft Auto Online.*/);
+								func_140(&(Global_114344.f_668.f_1321), 8, "CONT_HEISTS" /*Money Fronts is now available in Grand Theft Auto Online.*/);
 					break;
 			
 				case 14:

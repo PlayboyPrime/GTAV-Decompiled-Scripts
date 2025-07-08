@@ -201340,7 +201340,7 @@ const char* func_2035(int iParam0) // Position - 0x11BC36 (1162294)
 	
 		case 34:
 			if (entityModel == joaat("HARDY") || entityModel == -401558446)
-				return "TOP_PLAT_M";
+				return "TOP_PLAT_M" /*Plate Mounting*/;
 			break;
 	
 		case 40:
@@ -206710,7 +206710,7 @@ BOOL func_2117() // Position - 0x124E5C (1199708)
 
 char* func_2118() // Position - 0x124E6C (1199724)
 {
-	return "PROF_CHK_UA";
+	return "PROF_CHK_UA" /*Unable to connect to Rockstar Games to check profanity.*/;
 }
 
 BOOL func_2119() // Position - 0x124E79 (1199737)
@@ -209439,16 +209439,16 @@ void func_2143(BOOL bParam0) // Position - 0x128312 (1213202)
 						func_133("CMOD_HCK_CONF4" /*Are you sure you want to install the Master Control Terminal?*/, 0, 0);
 				else if (iLocal_755.f_119.f_1 == 0)
 					if (!func_2200(false))
-						func_133("CMOD_HCK_D1" /*Upgrade the Terrorbyte with the Collectible Scanner.*/, 0, 0);
+						func_133("CMOD_HCK_D1" /*Locate collectibles hidden around Los Santos and Blaine County.*/, 0, 0);
 				else if (iLocal_755.f_119.f_1 == 1)
 					if (!func_2198(false))
-						func_133("CMOD_HCK_D2" /*Upgrade the Terrorbyte with Silent Running.*/, 0, 0);
+						func_133("CMOD_HCK_D2" /*Hide the Terrorbyte from enemy radars when stationary.*/, 0, 0);
 				else if (iLocal_755.f_119.f_1 == 2)
 					if (!func_2198(false))
-						func_133("CMOD_HCK_D3" /*Upgrade the Terrorbyte with the Missile Lock-On Jammer.*/, 0, 0);
+						func_133("CMOD_HCK_D3" /*Protect the Terrorbyte from missile lock-on.*/, 0, 0);
 				else if (iLocal_755.f_119.f_1 == 3)
 					if (!func_1535())
-						func_133("CMOD_HCK_D4" /*Upgrade the Terrorbyte with the Master Control Terminal.*/, 0, 0);
+						func_133("CMOD_HCK_D4" /*Remotely manage a variety of owned businesses from the Terrorbyte's touchscreen computer.*/, 0, 0);
 
 	if (iLocal_755.f_446 == 61 || iLocal_755.f_446 == 103 && iLocal_755.f_119.f_1 != -1 && iLocal_755.f_471[iLocal_755.f_119.f_1] == -99 && func_3796() && Global_262145.f_19040)
 		func_133("CMOD_LOCK_SM", 0, 0);
@@ -213441,7 +213441,7 @@ char* func_2192(const char* sParam0, BOOL bParam1) // Position - 0x12F976 (12435
 			return "SHOP_CONTENT_51" /*Agents of Sabotage*/;
 	
 		case 1026824822:
-			return "SHOP_CONTENT_52";
+			return "SHOP_CONTENT_52" /*Money Fronts*/;
 	}
 
 	switch (hashKey)
@@ -239993,7 +239993,7 @@ char* func_2404(int iParam0) // Position - 0x15A1F1 (1417713)
 	
 		case 34:
 			if (entityModel == -401558446 || entityModel == joaat("HARDY"))
-				return "CMM_PLTP_T";
+				return "CMM_PLTP_T" /*PLATE MOUNTING*/;
 		
 			return "CMOD_PLH_T";
 	
@@ -241964,7 +241964,7 @@ char* func_2413(int iParam0, BOOL bParam1) // Position - 0x15EA2B (1436203)
 	
 		case 80:
 			if (entityModel == joaat("monstrociti"))
-				return "CMOD_SKIDPL_S";
+				return "CMOD_SKIDPL_S" /*Stock Skid Plate*/;
 			break;
 	
 		case 79:
@@ -242127,7 +242127,7 @@ char* func_2413(int iParam0, BOOL bParam1) // Position - 0x15EA2B (1436203)
 			if (joaat("TOP_LSPOIL") == MISC::GET_HASH_KEY(VEHICLE::GET_MOD_SLOT_NAME(iLocal_755.f_409, 25)))
 				return "CMOD_LSPO_0" /*None*/;
 			else if (entityModel == -401558446 || entityModel == joaat("HARDY"))
-				return "CMOD_PLTP_0";
+				return "CMOD_PLTP_0" /*Stock Plate Mounting*/;
 			else
 				return "CMOD_DEF_PH" /*Stock Plate Holder*/;
 			break;
@@ -254237,7 +254237,7 @@ void func_2600(char* sParam0, int iParam1) // Position - 0x17203C (1515580)
 	else if (iParam1 == 129)
 		TEXT_LABEL_ASSIGN_STRING(sParam0, "WIN22_GARNAME" /*Eclipse Blvd Garage*/, 16);
 	else if (iParam1 == 131)
-		TEXT_LABEL_ASSIGN_STRING(sParam0, "VPG_GARNAME", 16);
+		TEXT_LABEL_ASSIGN_STRING(sParam0, "VPG_GARNAME" /*The Vinewood Club Garage*/, 16);
 	else if (iParam1 == 132)
 		TEXT_LABEL_ASSIGN_STRING(sParam0, "BO_GARNAME" /*Bail Office*/, 16);
 	else if (iParam1 == 133)
@@ -254511,16 +254511,16 @@ char* func_2617(int iParam0) // Position - 0x17275B (1517403)
 	switch (iParam0)
 	{
 		case 0:
-			return "CMOD_HCK_D1" /*Upgrade the Terrorbyte with the Collectible Scanner.*/;
+			return "CMOD_HCK_D1" /*Locate collectibles hidden around Los Santos and Blaine County.*/;
 	
 		case 1:
-			return "CMOD_HCK_D2" /*Upgrade the Terrorbyte with Silent Running.*/;
+			return "CMOD_HCK_D2" /*Hide the Terrorbyte from enemy radars when stationary.*/;
 	
 		case 2:
-			return "CMOD_HCK_D3" /*Upgrade the Terrorbyte with the Missile Lock-On Jammer.*/;
+			return "CMOD_HCK_D3" /*Protect the Terrorbyte from missile lock-on.*/;
 	
 		case 3:
-			return "CMOD_HCK_D4" /*Upgrade the Terrorbyte with the Master Control Terminal.*/;
+			return "CMOD_HCK_D4" /*Remotely manage a variety of owned businesses from the Terrorbyte's touchscreen computer.*/;
 	
 		default:
 		
@@ -256413,7 +256413,7 @@ char* func_2635(int iParam0) // Position - 0x173F3D (1523517)
 			if (joaat("TOP_LSPOIL") == MISC::GET_HASH_KEY(VEHICLE::GET_MOD_SLOT_NAME(iLocal_755.f_409, 25)))
 				return "CMM_LSPO_D" /*Custom lip spoiler.*/;
 			else if (entityModel == joaat("HARDY") || entityModel == -401558446)
-				return "CMM_PLTP_D";
+				return "CMM_PLTP_D" /*Custom plate mounting.*/;
 			else
 				return "CMOD_MOD_49_D" /*Plate holder options.*/;
 			break;
@@ -263499,7 +263499,7 @@ void func_2690() // Position - 0x1823D2 (1582034)
 					TEXT_LABEL_APPEND_INT(&unk, i, 16);
 				
 					if (func_2691(13, i) && func_1922(iLocal_755.f_409) && i == 4)
-						TEXT_LABEL_ASSIGN_STRING(&unk, "CMOD_TRAN_HSW", 16);
+						TEXT_LABEL_ASSIGN_STRING(&unk, "CMOD_TRAN_HSW" /*HSW Transmission*/, 16);
 				
 					func_2286(i, &unk, 0, true);
 					func_2401(i, func_1862(func_1701(iLocal_755.f_447, false, 0), i, 0, &unk, false, 0), 0);
@@ -263776,24 +263776,24 @@ void func_2692() // Position - 0x182AD0 (1583824)
 						{
 							case joaat("deveste"):
 								if (i == 2)
-									TEXT_LABEL_ASSIGN_STRING(&unk, "CMOD_SUS_HSW", 16);
+									TEXT_LABEL_ASSIGN_STRING(&unk, "CMOD_SUS_HSW" /*HSW Suspension*/, 16);
 								break;
 						
 							case joaat("brioso"):
 							case joaat("ignus2"):
 							case joaat("astron2"):
 								if (i == 4)
-									TEXT_LABEL_ASSIGN_STRING(&unk, "CMOD_SUS_HSW", 16);
+									TEXT_LABEL_ASSIGN_STRING(&unk, "CMOD_SUS_HSW" /*HSW Suspension*/, 16);
 								break;
 						
 							case joaat("turismo2"):
 								if (i == 1)
-									TEXT_LABEL_ASSIGN_STRING(&unk, "CMOD_SUS_HSW", 16);
+									TEXT_LABEL_ASSIGN_STRING(&unk, "CMOD_SUS_HSW" /*HSW Suspension*/, 16);
 								break;
 						
 							default:
 								if (i == 5)
-									TEXT_LABEL_ASSIGN_STRING(&unk, "CMOD_SUS_HSW", 16);
+									TEXT_LABEL_ASSIGN_STRING(&unk, "CMOD_SUS_HSW" /*HSW Suspension*/, 16);
 								break;
 						}
 					}
@@ -264560,7 +264560,7 @@ void func_2696() // Position - 0x1841BF (1589695)
 						if (ENTITY::GET_ENTITY_MODEL(iLocal_755.f_409) == joaat("granger2"))
 							TEXT_LABEL_ASSIGN_STRING(&unk, "CMOD_DEF_FM" /*Stock Mudguards*/, 16);
 						else if (ENTITY::GET_ENTITY_MODEL(iLocal_755.f_409) == joaat("monstrociti") || ENTITY::GET_ENTITY_MODEL(iLocal_755.f_409) == joaat("nebula") || ENTITY::GET_ENTITY_MODEL(iLocal_755.f_409) == 1690421418)
-							TEXT_LABEL_ASSIGN_STRING(&unk, "CMOD_VEH_MUD", 16);
+							TEXT_LABEL_ASSIGN_STRING(&unk, "CMOD_VEH_MUD" /*Stock Mudguards*/, 16);
 						else
 							TEXT_LABEL_ASSIGN_STRING(&unk, "CMOD_COL6_2", 16);
 					else if (joaat("TOP_SSTEP") == MISC::GET_HASH_KEY(VEHICLE::GET_MOD_SLOT_NAME(iLocal_755.f_409, 3)))
@@ -275247,7 +275247,7 @@ void func_2782() // Position - 0x196F7F (1666943)
 					TEXT_LABEL_APPEND_INT(&unk, i + 1, 16);
 				
 					if (!func_108(iLocal_755.f_409, 11, i) && func_35() && func_1922(iLocal_755.f_409) && i == 5)
-						TEXT_LABEL_ASSIGN_STRING(&unk, "CMOD_ENG_HSW", 16);
+						TEXT_LABEL_ASSIGN_STRING(&unk, "CMOD_ENG_HSW" /*HSW Engine Tune*/, 16);
 				
 					func_2286(i, &unk, 0, true);
 					func_2401(i, func_1862(func_1701(iLocal_755.f_447, false, 0), i, 0, &unk, false, 0), 0);
@@ -279863,7 +279863,7 @@ void func_2798() // Position - 0x19F8B5 (1702069)
 				
 					if (func_2691(12, i) && func_1922(iLocal_755.f_409))
 						if (i == 4)
-							TEXT_LABEL_ASSIGN_STRING(&unk, "CMOD_BRA_HSW", 16);
+							TEXT_LABEL_ASSIGN_STRING(&unk, "CMOD_BRA_HSW" /*HSW Brakes*/, 16);
 				
 					func_2401(i, func_1862(func_1701(iLocal_755.f_447, false, 0), i, 0, &unk, false, 0), 0);
 					func_2286(i, &unk, 0, true);
@@ -290171,7 +290171,7 @@ BOOL func_2960(var uParam0) // Position - 0x1AEE26 (1764902)
 						}
 						else
 						{
-							HUD::SET_WARNING_MESSAGE_WITH_HEADER("GLOBAL_ALERT_DEFAULT" /*Alert*/, "HUD_PERM" /*Your profile does not have the correct permissions to access this functionality.*/, instructionalKey2, 0, false, -1, 0, 0, true, 0);
+							HUD::SET_WARNING_MESSAGE_WITH_HEADER("GLOBAL_ALERT_DEFAULT" /*Alert*/, "HUD_PERM" /*Your profile does not have permission to access GTA Online.*/, instructionalKey2, 0, false, -1, 0, 0, true, 0);
 						}
 					
 						if (PAD::IS_CONTROL_JUST_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_ACCEPT))
@@ -290353,7 +290353,7 @@ BOOL func_2961(int* piParam0, BOOL bParam1) // Position - 0x1AF145 (1765701)
 			else if (npUnavailableReason == 5)
 				HUD::SET_WARNING_MESSAGE_WITH_HEADER("PM_INF_QMFT" /*Alert*/, "SCLB_NO_INT" /*No internet connection detected, establish a connection to access this feature.*/, instructionalKey, 0, false, -1, 0, 0, true, 0);
 			else if (!func_2115())
-				HUD::SET_WARNING_MESSAGE_WITH_HEADER("PM_INF_QMFT" /*Alert*/, "SCLB_NO_ROS" /*Rockstar Games Online Services are unavailable right now. Please try again later.*/, instructionalKey, 0, false, -1, 0, 0, true, 0);
+				HUD::SET_WARNING_MESSAGE_WITH_HEADER("PM_INF_QMFT" /*Alert*/, "SCLB_NO_ROS" /*Rockstar Games Services are unavailable right now. Please try again later.*/, instructionalKey, 0, false, -1, 0, 0, true, 0);
 		
 			if (!IS_BIT_SET(*piParam0, 0))
 			{
@@ -323780,7 +323780,7 @@ void func_3368() // Position - 0x1E1A42 (1972802)
 						else if (func_77())
 						{
 							if (func_1208(PLAYER::PLAYER_ID()) && !func_3423(PLAYER::PLAYER_ID()) && !func_3422(ENTITY::GET_ENTITY_MODEL(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false))) && func_2212(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false)))
-								string2 = "BASE_MOD_ENTER" /*~a~ Access the Facility Vehicle Workshop. ~n~ ~INPUT_CONTEXT_SECONDARY~ Enter your Avenger with this vehicle.*/;
+								string2 = "BASE_MOD_ENTER" /*~a~ Access the Facility Vehicle Workshop.~n~~INPUT_CONTEXT_SECONDARY~ Enter your Avenger with this vehicle.*/;
 							else
 								string2 = "BASE_MOD_TRIGG" /*Press ~a~ to access the Facility Vehicle Workshop.*/;
 						}

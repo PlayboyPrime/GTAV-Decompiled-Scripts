@@ -31945,7 +31945,7 @@ void func_912(var uParam0) // Position - 0x24312 (148242)
 					if (MISC::IS_PS3_VERSION() || func_220() || MISC::IS_PC_VERSION())
 						func_916(2, 217, "HEIST_IB_PSN" /*View Profile*/, &(uParam0->f_1497), true, 365);
 					else if (MISC::IS_XBOX360_VERSION() || func_221())
-						func_913(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(FRONTEND_CONTROL, INPUT_FRONTEND_SELECT, true), "HEIST_IB_XBL" /*View gamer card*/, &(uParam0->f_1497), 0);
+						func_913(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(FRONTEND_CONTROL, INPUT_FRONTEND_SELECT, true), "HEIST_IB_XBL" /*View Profile*/, &(uParam0->f_1497), 0);
 					else
 						func_913(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(FRONTEND_CONTROL, INPUT_FRONTEND_SELECT, true), "HEIST_IB_PSNXBL", &(uParam0->f_1497), 0);
 				break;

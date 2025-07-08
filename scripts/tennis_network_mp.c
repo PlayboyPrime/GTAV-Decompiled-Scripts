@@ -50167,13 +50167,13 @@ void func_392(int iParam0, int iParam1, float fParam2, float fParam3, const char
 			break;
 	
 		case 3:
-			HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT("FO_TWO_KM");
+			HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT("FO_TWO_KM" /*~1~.~1~ km*/);
 			HUD::ADD_TEXT_COMPONENT_INTEGER(iParam0);
 			HUD::ADD_TEXT_COMPONENT_INTEGER(iParam1);
 			break;
 	
 		case 4:
-			HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT("FO_TWO_MI");
+			HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT("FO_TWO_MI" /*~1~.~1~ mi*/);
 			HUD::ADD_TEXT_COMPONENT_INTEGER(iParam0);
 			HUD::ADD_TEXT_COMPONENT_INTEGER(iParam1);
 			break;
@@ -129353,28 +129353,28 @@ char* func_1444(int iParam0, int iParam1) // Position - 0x9F65E (652894)
 			return "AWT_1069" /*Arms In Arms*/;
 	
 		case 150:
-			return "AWT_1070";
+			return "AWT_1070" /*Dog's Dinner*/;
 	
 		case 151:
-			return "AWT_1071";
+			return "AWT_1071" /*Licensed Professional*/;
 	
 		case 152:
-			return "AWT_1072";
+			return "AWT_1072" /*Cooking The Books*/;
 	
 		case 153:
-			return "AWT_1073";
+			return "AWT_1073" /*Squeaky Clean*/;
 	
 		case 154:
-			return "AWT_1074";
+			return "AWT_1074" /*QuickiePharm*/;
 	
 		case 155:
-			return "AWT_1075";
+			return "AWT_1075" /*Safeguard*/;
 	
 		case 156:
-			return "AWT_1076";
+			return "AWT_1076" /*Sunburned Survivor*/;
 	
 		case 157:
-			return "AWT_1077";
+			return "AWT_1077" /*Dancing With Death*/;
 	}
 
 	return "";

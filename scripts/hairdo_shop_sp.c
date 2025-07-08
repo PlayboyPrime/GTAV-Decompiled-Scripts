@@ -46875,7 +46875,7 @@ BOOL func_367(var uParam0) // Position - 0x46790 (288656)
 						}
 						else
 						{
-							HUD::SET_WARNING_MESSAGE_WITH_HEADER("GLOBAL_ALERT_DEFAULT" /*Alert*/, "HUD_PERM" /*Your profile does not have the correct permissions to access this functionality.*/, instructionalKey2, 0, false, -1, 0, 0, true, 0);
+							HUD::SET_WARNING_MESSAGE_WITH_HEADER("GLOBAL_ALERT_DEFAULT" /*Alert*/, "HUD_PERM" /*Your profile does not have permission to access GTA Online.*/, instructionalKey2, 0, false, -1, 0, 0, true, 0);
 						}
 					
 						if (PAD::IS_CONTROL_JUST_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_ACCEPT))
@@ -47057,7 +47057,7 @@ BOOL func_368(int* piParam0, BOOL bParam1) // Position - 0x46A9B (289435)
 			else if (npUnavailableReason == 5)
 				HUD::SET_WARNING_MESSAGE_WITH_HEADER("PM_INF_QMFT" /*Alert*/, "SCLB_NO_INT" /*No internet connection detected, establish a connection to access this feature.*/, instructionalKey, 0, false, -1, 0, 0, true, 0);
 			else if (!func_377())
-				HUD::SET_WARNING_MESSAGE_WITH_HEADER("PM_INF_QMFT" /*Alert*/, "SCLB_NO_ROS" /*Rockstar Games Online Services are unavailable right now. Please try again later.*/, instructionalKey, 0, false, -1, 0, 0, true, 0);
+				HUD::SET_WARNING_MESSAGE_WITH_HEADER("PM_INF_QMFT" /*Alert*/, "SCLB_NO_ROS" /*Rockstar Games Services are unavailable right now. Please try again later.*/, instructionalKey, 0, false, -1, 0, 0, true, 0);
 		
 			if (!IS_BIT_SET(*piParam0, 0))
 			{
@@ -48441,7 +48441,7 @@ char* func_392(const char* sParam0, BOOL bParam1) // Position - 0x480CC (295116)
 			return "SHOP_CONTENT_51" /*Agents of Sabotage*/;
 	
 		case 1026824822:
-			return "SHOP_CONTENT_52";
+			return "SHOP_CONTENT_52" /*Money Fronts*/;
 	}
 
 	switch (hashKey)
@@ -123777,7 +123777,7 @@ void func_1035(var uParam0) // Position - 0xA5DEA (679402)
 	else if (func_1057(PLAYER::PLAYER_PED_ID()) || func_1056(PLAYER::PLAYER_PED_ID()) && NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && flag6)
 	{
 		if (!HUD::IS_HELP_MESSAGE_BEING_DISPLAYED() || func_1065("SHOP_NONE" /*~a~ is unavailable.*/, func_384(*uParam0, 0, false)))
-			func_1058("SHOP_OUTF_CNONE", func_384(*uParam0, 0, false));
+			func_1058("SHOP_OUTF_CNONE" /*You are not able to change hairstyles while wearing this outfit.*/, func_384(*uParam0, 0, false));
 	}
 	else if (flag4)
 	{
