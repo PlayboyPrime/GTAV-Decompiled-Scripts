@@ -98,30 +98,30 @@
 	var uLocal_96 = 0;
 	var uLocal_97 = 0;
 	var uLocal_98 = 0;
-	var uLocal_99 = 0;
+	var uLocal_99 = -1;
 	var uLocal_100 = 0;
-	var uLocal_101 = -1;
+	var uLocal_101 = 0;
 	var uLocal_102 = 0;
 	var uLocal_103 = 0;
 	var uLocal_104 = 0;
 	var uLocal_105 = 0;
 	var uLocal_106 = 0;
 	var uLocal_107 = 0;
-	var uLocal_108 = 0;
-	var uLocal_109 = 0;
+	var uLocal_108 = -2;
+	var uLocal_109 = -2;
 	var uLocal_110 = -2;
-	var uLocal_111 = -2;
-	var uLocal_112 = -2;
-	var uLocal_113 = 5;
+	var uLocal_111 = 5;
+	var uLocal_112 = 0;
+	var uLocal_113 = 0;
 	var uLocal_114 = 0;
 	var uLocal_115 = 0;
 	var uLocal_116 = 0;
-	var uLocal_117 = 0;
+	var uLocal_117 = 2;
 	var uLocal_118 = 0;
-	var uLocal_119 = 2;
-	var uLocal_120 = 0;
+	var uLocal_119 = 0;
+	var uLocal_120 = 2;
 	var uLocal_121 = 0;
-	var uLocal_122 = 2;
+	var uLocal_122 = 0;
 	var uLocal_123 = 0;
 	var uLocal_124 = 0;
 	var uLocal_125 = 0;
@@ -138,8 +138,6 @@
 	var uLocal_136 = 0;
 	var uLocal_137 = 0;
 	var uLocal_138 = 0;
-	var uLocal_139 = 0;
-	var uLocal_140 = 0;
 #endregion
 
 void main() // Position - 0x0 (0)
@@ -267,13 +265,13 @@ BOOL _DOES_EVENT_OF_TYPE_EXIST(int iParam0) // Position - 0x1D1 (465)
 
 BOOL func_5() // Position - 0x1E8 (488)
 {
-	return Global_2684748.f_695;
+	return Global_2684745.f_695;
 }
 
 BOOL func_6(BOOL bParam0) // Position - 0x1F7 (503)
 {
 	bParam0;
-	return Global_1575060;
+	return Global_1575058;
 }
 
 void func_7() // Position - 0x208 (520)
