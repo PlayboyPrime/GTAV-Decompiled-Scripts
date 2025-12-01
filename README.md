@@ -1,3 +1,6 @@
+> [!IMPORTANT]  
+> I am not going to update this anymore because I dont want to waste +200gb storage when I dont even play the game.
+
 # GTAV-Decompiled-Scripts
 ## Current Version: 889.22
 
